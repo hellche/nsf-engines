@@ -1,0 +1,996 @@
+work_id,authors,venue
+W4295078843,"Lovell, J. T., Sreedasyam, A., Schranz, M. E., Wilson, M. A., Carlson, J. W., Harkess, A., Emms, D., Goodstein, D., & Schmutz, J.",eLife
+W4393219011,"Healey, A. L., Garsmeur, O., Lovell, J. T., Shu, S., Sreedasyam, A., Jenkins, J. W., Plott, C., Piperidis, N., Pompidor, N., Llaca, V., Metcalfe, C. J., Doležel, J., Cápal, P., Carlson, J. W., Hoarau, J., Hervouet, C., Zini, C., Diévart, A., Lipzen, A., ... D’Hont, A.",Nature
+W4294052681,"Marchant, D. B., Chen, G. J., Cai, S., Chen, F., Schafran, P., Jenkins, J. W., Shu, S., Plott, C., Webber, J., Lovell, J. T., He, G., Sandor, L., Williams, M. E., Rajasekar, S., Healey, A. L., Barry, K., Zhang, Y., Sessa, E. B., Dhakal, R. R., ... Chen, Z.",Nature Plants
+W4312113788,"Craig, R. J., Gallaher, S. D., Shu, S., Salomé, P. A., Jenkins, J. W., Blaby, C., Purvine, S. O., O’Donnell, S., Barry, K., Grimwood, J., Strenkert, D., Kropat, J., Daum, C. G., Yoshinaga, Y., Goodstein, D. M., Vallon, O., Schmutz, J., & Merchant, S.",The Plant Cell
+W3189339620,"Bansode, A., Barde, M., Asafu‐Adjaye, O., Patil, V., Hinkle, J., Via, B. K., Adhikari, S., Adamczyk, A. J., Farag, R., Elder, T., Labbé, N., & Auad, M. L.",ACS Sustainable Chemistry & Engineering
+W4306894174,"Zhao, X., Oyedeji, O. A., Webb, E., Wasti, S., Bhagia, S., Hinton, H. E., Li, K., Kim, K., Wang, Y., Zhu, H., Vaidya, U. K., Labbé, N., Tekinalp, H., Gallego, N. C., Pu, Y., Ragauskas, A. J., & Ozcan, S.",Composites Part C Open Access
+W4323664653,"Kanbargi, N. S., Hoskins, D., Gupta, S., Yu, Z., Shin, Y., Qiao, Y., Merkel, D. R., Bowland, C. C., Labbé, N., Simmons, K. L., & Naskar, A. K.",European Polymer Journal
+W4213039229,"Shelley, H., Annaji, M., Grant, M., Fasina, O., & Babu, R. J.",Journal of Ocular Pharmacology and Therapeutics
+W4391426546,"Alrbyawi, H., Annaji, M., Fasina, O., Palakurthi, S., Boddu, S. H. S., Hassan, N. A. G. M., Tiwari, A. K., Suryawanshi, A. S., & Babu, R. J.",AAPS PharmSciTech
+W4392561438,"Annaji, M., Mita, N., Poudel, I., Boddu, S. H. S., Fasina, O., & Babu, R. J.",Bioengineering
+W4295182289,"Kandhola, G., Djioleu, A. C., Rajan, K., Batta‐Mpouma, J., Labbé, N., Sakon, J., Babst, B. A., Ghosh, A., Carrier, D. J., & Kim, J.",Cellulose
+W4411772646,"Zhou, Z., Merrill, L., Zhao, X., Saedi, S., Labbé, N., Wang, T., Meyer, H. M., Wasti, S., & Wang, S.",Composites Part B Engineering
+W4412785216,"Zhang, C., Poudel, I., Mita, N., Kang, X., Annaji, M., Lee, S., Panizzi, P. R., Shamsaei, N., Fasina, O., Babu, R. J., & Arnold, R. D.",Pharmaceutics
+W4309717830,"Poudel, I., Annaji, M., Wibowo, F. S., Arnold, R. D., Fasina, O., Via, B. K., Rangari, V. K., Peresin, M. S., Smith, F., Dhanasekaran, M., Tiwari, A. K., & Babu, R. J.",International Journal of Molecular Sciences
+W3212022176,"Martin, M. Z., Brice, D. J., Martin, S., André, N., & Labbé, N.",Spectrochimica Acta Part B Atomic Spectroscopy
+W4206585605,"Tumuluru, J. S., Rajan, K., Hamilton, C. Y., Pope, C., Rials, T. G., McCord, J., Labbé, N., & André, N. O.",Frontiers in Energy Research
+W4283579912,"Rajan, K., Kim, K., Elder, T., Naskar, A. K., & Labbé, N.",ACS Sustainable Chemistry & Engineering
+W4363675558,"Zhou, Z., Rajan, K., Young, T. M., Labbé, N., & Wang, S.",Industrial Crops and Products
+W4366977589,"Molina, E. A. R., Vook, T., Sagues, W. J., Kim, K., Labbé, N., Park, S., & Kelley, S. S.",ACS Sustainable Chemistry & Engineering
+W4404877742,"Zhou, Z., Rajan, K., Saedi, S., Labbé, N., Li, M., Wang, W., & Wang, S.",ACS Sustainable Chemistry & Engineering
+W4391831037,"Zhou, Z., Rajan, K., Labbé, N., & Wang, S.",Industrial Crops and Products
+W4410947172,"Mita, N., Kang, X., Chen, P., Fasina, O., Howard, S., Bowden, A., McMullen, R. J., Suryawanshi, A. S., & Babu, R. J.",AAPS PharmSciTech
+W4417187254,"Li, P., Yu, T. “., Labbé, N., Abdoulmoumine, N. H., Garcia-Perez, M., Hoyt, K. P., & English, B. C.",Biomass and Bioenergy
+W4386835826,"Yoo, J. Y., McSkimming, D. I., Rajan, K., Sarkar, A., Labbé, N., Groër, M., & Menon, U.",Life
+W4309467256,"Annaji, M., Mita, N., Rangari, S., Aldawsari, M. F., Alsaqr, A., Poudel, I., Fasina, O., & Babu, R. J.",AAPS PharmSciTech
+W4391880108,"Bediako, B. B. A., Li, M., Houston, A., Vilmercati, P., Mannella, N., Labbé, N., & Abdoulmoumine, N. H.",ChemSusChem
+W3216500960,"Robertson, K. A., English, B. C., Clark, C. D., Thompson, J. M., Jensen, K. L., Menard, R. J., & Labbé, N.",Energies
+W4390083052,"Eberhardt, T. L., Kim, K., Labbé, N., & Samuelson, L. J.",European Journal of Wood and Wood Products
+W4387246629,"Annaji, M., Mita, N., Heard, J., Kang, X., Poudel, I., Fasina, O., Baskaran, P., Boddu, S. H. S., Tiwari, A. K., Chen, P., Lyman, C., & Babu, R. J.",AAPS PharmSciTech
+W7128920164,"Popoola, T. O., Chakraborty, D., Ray, P., Prasad, R., Torbert, H. A., Watts, D. B., & Fasina, O.",Environmental Technology & Innovation
+W4361221748,"Annamraju, A., Rajan, K., Zuo, X., Long, B. K., Pingali, S. V., Elder, T., & Labbé, N.",Biomacromolecules
+W3207818219,"Kim, K., Voothuluru, P., Hamilton, C. Y., McCord, J., Tamang, B., Cunningham, M. W., Eberhardt, T. L., Rials, T. G., & Labbé, N.",Biomass and Bioenergy
+W4383555006,"Voothuluru, P., Hamilton, C. Y., Kim, K., Beason, J., McCord, J., Rousseau, R. J., Muchero, W., Rials, T. G., & Labbé, N.",GCB Bioenergy
+W4416716911,"Poudel, I., Mita, N., Scherer, J., Annaji, M., Kang, X., Fasina, O., Tiwari, A. K., & Babu, R. J.",Pharmaceutical Research
+W7119509459,"Annaji, M., Poudel, I., Mita, N., Zhang, C., Yeasmin, H., Lee, S., Panizzi, P. R., Arnold, R. D., Kaddoumi, A., Shamsaei, N., Farnum, B. H., Fasina, O., & Babu, R. J.",AAPS PharmSciTech
+W7128423297,"Zaw, K. S. K., Kamboj, G., Kim, K., Rajan, K., Labbé, N., & Nair, S.",ACS Sustainable Resource Management
+W7155642469,"Renninger, H. J., Himes, A., Siegert, C. M., Shafqat, W., Drager, A. P., Labbé, N., Kim, K., & Hamilton, C. Y.",Biomass and Bioenergy
+W4307674387,"Labbé, N.",OSTI OAI (U.S. Department of Energy Office of Scientific and Technical Information)
+W4403117528,"Biology, C. S. U. F. C. C. (. S. D. o. R. a. R., Windom, B., (EERE), O. o. S. T. B. T. O. (. U. O. o. E. E. a. R. E., Labbé, N., McEnally, C. S., Reardon, K. F., Quinn, J., Foust, T. D., & Zdanowicz, A. J.",OSTI OAI (U.S. Department of Energy Office of Scientific and Technical Information)
+W4393315602,"Bansode, A., Erramuspe, I. B. V., Villarreal, L., Hahn, B., Via, B. K., David, A. E., Labbé, N., & Auad, M. L.",Preprints.org
+W4200587343,"Rials, T. G., McDonald, T. P., Taylor, S. E., Gallagher, T. V., Labbe, N., Fasina, O., Adhikari, S., Young, T. M., Tumuluru, J. S., Jackson, S. W., Kelley, S., Park, S., English, B., & Yu, E.",OSTI OAI (U.S. Department of Energy Office of Scientific and Technical Information)
+W4221076597,"Oginni, O. J., & Fasina, O.",Biofuels
+W4285594665,"Camfield, E., Bowman, A., Choi, J. M., Gwinn, K. D., Labbé, N., Rajan, K., Ownley, B. H., Moustaïd‐Moussa, N., & D'Souza, D. H.",Journal of Food Science
+W4414067020,"Rihn, A., Labbé, N., Bajgain, P., Rajan, K., Kamboj, G., Jackson, S., Tiller, K. H., & Jensen, K. L.",Journal of Agricultural and Applied Economics
+W4417286051,"Yonguep, E., Mason, H., Fasina, O., & Adhikari, S.",Journal of the ASABE
+W7119136322,"Rihn, A., Bajgain, P., Labbé, N., & Kamboj, G.",Journal of Agriculture and Food Research
+W7160623251,"(SC), B. E. S. (. U. O. o. S., Labbé, N., & States), U. o. C. B. C. (.",OSTI OAI (U.S. Department of Energy Office of Scientific and Technical Information)
+W7160697533,"Kamboj, G., Rajan, K., Kim, K., Bediako, B. B. A., Ahmadi, S., Zaw, K. S. K., Stein, G. E., Nair, S., Wang, S. H., Elder, T., & Labbé, N.",Bioresource Technology
+W7162581664,"Rihn, A., Labbé, N., Kamboj, G., Jensen, K. L., Rajan, K., Tiller, K., & Jackson, S.",NA
+W7165483758,"Hu, X., Khan, F. A., Tabler, T., Labbé, N., & Lin, J.","Food, Nutrition and Health."
+W4220789952,"Zhuang, Y., Wang, X., Li, X., Hu, J., Fan, L., Landis, J. B., Cannon, S. B., Grimwood, J., Schmutz, J., Jackson, S. A., Doyle, J. J., Zhang, X. S., Zhang, D., & Ma, J.",Nature Plants
+W4319310847,"Healey, A. L., Piatkowski, B. T., Lovell, J. T., Sreedasyam, A., Carey, S. B., Mamidi, S., Shu, S., Plott, C., Jenkins, J. W., Lawrence, T. J., Aguero, B., Carrell, A. A., Nieto‐Lugilde, M., Talag, J., Duffy, A. M., Jawdy, S. S., Carter, K., Boston, L., Jones, T., ... Shaw, A. J.",Nature Plants
+W4391258818,"Ma, X., Vanneste, S., Chang, J., Ambrosino, L., Barry, K., Bayer, T., Bobrov, A. A., Boston, L., Campbell, J. E., Chen, H., Chiusano, M. L., Dattolo, E., Grimwood, J., He, G., Jenkins, J. W., Khachaturyan, M., Marín‐Guirao, L., Mesterházy, A., Danish‐Daniel, M., ... Peer, Y. V. d.",Nature Plants
+W4385442185,"Sreedasyam, A., Plott, C., Hossain, M. S., Lovell, J. T., Grimwood, J., Jenkins, J. W., Daum, C. G., Barry, K., Carlson, J. W., Shu, S., Phillips, J. L., Amirebrahimi, M., Zane, M., Wang, M., Goodstein, D., Haas, F. B., Hiß, M., Perroud, P., Jawdy, S. S., ... Schmutz, J.",Nucleic Acids Research
+W3216151578,"Carrell, A. A., Veličković, D., Lawrence, T. J., Bowen, B. P., Louie, K., Carper, D. L., Chu, R., Mitchell, H. D., Orr, G., Markillie, L. M., Jawdy, S. S., Grimwood, J., Shaw, A. J., Schmutz, J., Northen, T. R., Anderton, C., Pelletier, D. A., & Weston, D. J.",The ISME Journal
+W4381550366,"Devos, K. M., Qi, P., Bahri, B. A., Gimode, D. M., Jenike, K. M., Josiah, S. M., Lule, D., Lux, T. M., Martínez-Bello, L., Pendergast, T. H., Plott, C., Saha, D., Sidhu, G. S., Sreedasyam, A., Wang, X., Wang, H., Wright, H. C., Zhao, J., Deshpande, S., ... Odeny, D. A.",Nature Communications
+W4366442061,"Edwards, J. A., Saran, U. B., Bonnette, J. E., MacQueen, A., Yin, J., Nguyen, T. u., Schmutz, J., Grimwood, J., Pennacchio, L. A., Daum, C. G., Rio, T. G. d., Fritschi, F., Lowry, D. B., & Juenger, T.",Current Biology
+W4221066915,"Carrell, A. A., Lawrence, T. J., Cabugao, K. G. M., Carper, D. L., Pelletier, D. A., Lee, J. H., Jawdy, S. S., Grimwood, J., Schmutz, J., Hanson, P. J., Shaw, A. J., & Weston, D. J.",New Phytologist
+W4281286344,"Marian, I. M., Vonk, P. J., Valdes, I. D., Barry, K., Bostock, B., Carver, A., Daum, C. G., Lerner, H., Lipzen, A., Park, H., Schuller, M. B. P., Tegelaar, M., Tritt, A., Schmutz, J., Grimwood, J., Lugones, L. G., Choi, I., Wösten, H. A. B., Grigoriev, I. V., & Ohm, R. A.",mBio
+W4390941771,"Bredeson, J. V., Mudd, A. B., Medina-Ruiz, S., Mitros, T., Smith, O. K., Miller, K. E., Lyons, J. B., Batra, S. S., Park, J., Berkoff, K. C., Plott, C., Grimwood, J., Schmutz, J., Aguirre-Figueroa, G., Khokha, M. K., Lane, M., Philipp, I., Laslo, M., Hanken, J., ... Rokhsar, D. S.",Nature Communications
+W4384926108,"Yu, L., Khachaturyan, M., Matschiner, M., Healey, A. L., Bauer, D. M., Cameron, B. B., Cusson, M., Duffy, J. E., Fodrie, F. J., Gill, D., Grimwood, J., Hori, M., Hovel, K. A., Hughes, A. R., Jahnke, M., Jenkins, J. W., Keymanesh, K., Kruschel, C., Mamidi, S., ... Reusch, T. B. H.",Nature Plants
+W4399181825,"Sreedasyam, A., Lovell, J. T., Mamidi, S., Khanal, S., Jenkins, J. W., Plott, C., Bryan, K. B., Li, Z., Shu, S., Carlson, J. W., Goodstein, D., Santiago, L. M. D., Kirkbride, R. C., Calleja, S., Campbell, B. T., Koebernick, J., Dever, J. K., Scheffler, J., Pauli, D., ... Schmutz, J.",Nature Plants
+W4311250088,"Sun, G., Wase, N. V., Shu, S., Jenkins, J. W., Zhou, B., Torres‐Rodríguez, J. V., Chen, C., Sandor, L., Plott, C., Yoshinga, Y., Daum, C. G., Qi, P., Barry, K., Lipzen, A., Berry, L., Pedersen, C., Gottilla, T., Foltz, A. E., Yu, H., ... Schnable, J. C.",Nature Communications
+W4386504034,"Zhou, R., Jenkins, J. W., Zeng, Y., Shu, S., Jang, H., Harding, S. A., Williams, M. E., Plott, C., Barry, K., Koriabine, M., Amirebrahimi, M., Talag, J., Rajasekar, S., Grimwood, J., Schmitz, R. J., Dawe, R. K., Schmutz, J., & Tsai, C.",The Plant Journal
+W4225384823,"Carey, S. B., Lovell, J. T., Jenkins, J. W., Leebens‐Mack, J., Schmutz, J., Wilson, M. A., & Harkess, A.",Cell Genomics
+W4400921832,"Jo, S., El‐Demerdash, A., Owen, C., Srivastava, V., Wu, D., Kikuchi, S., Reed, J., Hodgson, H., Harkess, A., Shu, S., Plott, C., Jenkins, J. W., Williams, M. E., Boston, L., Lacchini, E., Qu, T., Goossens, A., Grimwood, J., Schmutz, J., ... Osbourn, A.",Nature Chemical Biology
+W4402536706,"Espina, M. J. C., Lovell, J. T., Jenkins, J. W., Shu, S., Sreedasyam, A., Jordan, B. D., Webber, J., Boston, L., Brůna, T., Talag, J., Goodstein, D., Grimwood, J., Stacey, G. S., Cannon, S. B., Lorenz, A. J., Schmutz, J., & Stupar, R. M.",The Plant Journal
+W4407661183,"Beaulieu, C., Libourel, C., Mbadinga, D. L. M., Mahboubi, K. E., Hoey, D. J., Greiff, G. R. L., Keller, J., Girou, C., Clemente, H. S., Diop, S. I., Amblard, E., Castel, B., Théron, A., Cauet, S., Rodde, N., Zachgo, S., Halpape, W., Meierhenrich, A., Laker, B., ... Delaux, P.",Nature Genetics
+W4402533765,"Steindorff, A. S., Pontes, M. V. A., Robinson, A., Andreopoulos, B., LaButti, K. M., Kuo, A., Mondo, S. J., Riley, R. W., Otillar, R., Haridas, S., Lipzen, A., Grimwood, J., Schmutz, J., Clum, A., Reid, I. D., Moisan, M., Butler, G., Nguyen, T. T. M., Dewar, K., ... Grigoriev, I. V.",Communications Biology
+W4404668401,"Carey, S. B., Akozbek, L. M., Lovell, J. T., Jenkins, J. W., Healey, A. L., Shu, S., Grabowski, P., Yocca, A. E., Stewart, A., Jones, T., Barry, K., Rajasekar, S., Talag, J., Scutt, C. P., Lowry, P. P., Munzinger, J., Knox, E. B., Soltis, D. E., Soltis, P. S., ... Harkess, A.",Nature Plants
+W4321499087,"Huang, M. F., Robbins, K. R., Li, Y., Umanzor, S., Marty-Rivera, M., Bailey, D. L., Aydlett, M., Schmutz, J., Grimwood, J., Yarish, C., Lindell, S. R., & Jannink, J.",Frontiers in Marine Science
+W7135053733,"Morris, G. P., Harder, A. M., Healey, A. L., McLaughlin, C. M., Rifkin, J. L., Cruet-Burgos, C. M., Jenkins, J. W., Shu, S., Spiekerman, J. J., VanGessel, C. J., Agnew, E., Audebert, A., Barry, K., Baxter, I. R., Beurier, G., Boston, L. B., Boyles, R. E., Brady, S. M., Bunting, V. M., ... Lovell, J. T.",Nature
+W4415184966,"Garsmeur, O., Rio, S., Pompidor, N., Lipzen, A., Hervouet, C., Durand, T., Daum, C. G., Yoshinaga, Y., Butterfield, M., Sanchez, A., Piperidis, G., Lincoln, N. K., Hale, A. L., Hoarau, J., Terajima, Y., Lakshmanan, P., Sacks, E. J., Sharma, S., Vitrac, M., ... D’Hont, A.",Cell
+W4412577980,"Lovell, J. T., Walstead, R., Lawrence, A., Stark-Dykema, E. R., Farnitano, M. C., Harder, A. M., Brůna, T., Barry, K., Goodstein, D., Jenkins, J., Lipzen, A., Boston, L., Webber, J., Chovatia, M., Eichenberger, J., Talag, J., Grimwood, J., Schmutz, J., Kelly, J. K., ... Willis, J. H.",Molecular Ecology Resources
+W3188377838,"Cole, B., Bergmann, D. C., Blaby, C., Blaby, I. K., Bouchard, K. E., Brady, S. M., Ciobanu, D., Coleman‐Derr, D., Leiboff, S., Mortimer, J. C., Nobori, T., Rhee, S. Y., Schmutz, J., Simmons, B. A., Singh, A. K., Sinha, N. R., Vogel, J. P., O’Malley, R. C., Visel, A., & Dickel, D. E.",Communications Biology
+W4311795228,"Dorrell, R. G., Kuo, A., Füssy, Z., Richardson, E., Salamov, A. A., Zarevski, N., Freyria, N. J., Ibarbalz, F. M., Jenkins, J. W., Karlusich, J. J. P., Steindorff, A. S., Edgar, R. E., Handley, L. H., Lail, K., Lipzen, A., Lombard, V., McFarlane, J., Nef, C., Vanclová, A. M. G. N., ... Lovejoy, C.",Life Science Alliance
+W4221049798,"Bewg, W. P., Harding, S. A., Engle, N. L., Vaidya, B. N., Zhou, R., Reeves, J., Horn, T. W., Joshee, N., Jenkins, J. W., Shu, S., Barry, K., Yoshinaga, Y., Grimwood, J., Schmitz, R. J., Schmutz, J., Tschaplinski, T. J., & Tsai, C.",PLANT PHYSIOLOGY
+W4226179731,"Muleta, K. T., Felderhoff, T. J., Winans, N. D., Walstead, R., Charles, J. R., Armstrong, J. S., Mamidi, S., Plott, C., Vogel, J. P., Lemaux, P. G., Mockler, T. C., Grimwood, J., Schmutz, J., Pressoir, G., & Morris, G. P.",Science Advances
+W4220786274,"McClean, P. E., Lee, R., Howe, K., Osborne, C., Grimwood, J., Levy, S. A., Haugrud, A. R. P., Plott, C., Robinson, M., Skiba, R. M., Tanha, T., Zamani, M., Thannhauser, T. W., Glahn, R. P., Schmutz, J., Osorno, J. M., & Miklas, P. N.",Frontiers in Plant Science
+W4291825819,"Shaw, A. J., Piatkowski, B. T., Duffy, A. M., Aguero, B., Imwattana, K., Nieto‐Lugilde, M., Healey, A. L., Weston, D. J., Patel, M. N., Schmutz, J., Grimwood, J., Yavitt, J. B., Hassel, K., Stenøien, H. K., Flatberg, K. I., Bickford, C. P., & Hicks, K. A.",New Phytologist
+W4390986516,"Li, C., Wickell, D., Kuo, L., Chen, X., Nie, B., Liao, X., Peng, D., Ji, J., Jenkins, J. W., Williams, M., Shu, S., Plott, C., Barry, K., Rajasekar, S., Grimwood, J., Han, X., Sun, S., Hou, Z., He, W., ... Wang, L.",Proceedings of the National Academy of Sciences
+W4304480846,"Scarlett, V. T., Lovell, J. T., Shao, M., Phillips, J. L., Shu, S., Lusinska, J., Goodstein, D. M., Jenkins, J. W., Grimwood, J., Barry, K., Chalhoub, B., Schmutz, J., Hasterok, R., Catalán, P., & Vogel, J. P.",Genetics
+W4386726956,"Kapoor, B., Jenkins, J. W., Schmutz, J., Zhebentyayeva, T. N., Külheim, C., Coggeshall, M. V., Heim, C., Lasky, J. R., Leites, L. P., Islam‐Faridi, N., Romero‐Severson, J., DeLeo, V. L., Lucas, S. M., Lazić, D., Gailing, O., Carlson, J. E., & Staton, M. E.",G3 Genes Genomes Genetics
+W4288038051,"Sandercock, A. M., Westbrook, J. W., Zhang, Q., Johnson, H. A., Saielli, T. M., Scrivani, J. A., Fitzsimmons, S. F., Collins, K., Perkins, M. T., Craddock, J. H., Schmutz, J., Grimwood, J., & Holliday, J. A.",Molecular Ecology
+W4223906914,"Napier, J. D., Grabowski, P., Lovell, J. T., Bonnette, J. E., Mamidi, S., Gomez-Hughes, M. J., VanWallendael, A., Weng, X., Handley, L. H., Kim, M. K., Boe, A. R., Fay, P. A., Fritschi, F., JASTROW, J. D., Lloyd‐Reilley, J., Lowry, D. B., Matamala, R., Mitchell, R. B., Jr., F. M. R., ... Juenger, T.",Proceedings of the National Academy of Sciences
+W4312094991,"Liu, D., Tang, D., Xie, M., Zhang, J., Zhai, L., Mao, J., Luo, C., Lipzen, A., Zhang, Y., Savage, E., Yuan, G., Guo, H., Tadesse, D., Hu, R., Jawdy, S. S., Cheng, H., Li, L., Yer, H., Clark, M. M., ... Yang, X.",PLANT PHYSIOLOGY
+W4404962711,"Feyissa, B. A., Becker, E. M. d., Salesse‐Smith, C. E., Shu, M., Zhang, J., Yates, T. B., Xie, M., De, K., Gotarkar, D., Chen, M. S. S., Jawdy, S. S., Carper, D. L., Barry, K., Schmutz, J., Weston, D. J., Abraham, P. E., Tsai, C., Morrell‐Falvey, J. L., Taylor, G., ... Muchero, W.",Developmental Cell
+W4404416927,"Bird, K. A., Brock, J. R., Grabowski, P., Harder, A. M., Healy, A. L., Shu, S., Barry, K., Boston, L., Daum, C. G., Guo, J., Lipzen, A., Walstead, R., Grimwood, J., Schmutz, J., Lu, C., Comai, L., McKay, J., Pires, J. C., Edger, P. P., ... Kliebenstein, D. J.",Genetics
+W4410379560,"DeWeese, K., Molano, G., Calhoun, S., Lipzen, A., Jenkins, J., Williams, M. E., Plott, C., Talag, J., Grimwood, J., Jannink, J., Grigoriev, I. V., Schmutz, J., Yarish, C., Nuzhdin, S. V., & Lindell, S. R.",Frontiers in Genetics
+W4414595337,"Füssy, Z., Lampe, R. H., Arrigo, K. R., Barry, K., Brisbin, M. M., Brussaard, C. P. D., Decelle, J., Vargas, C. d., DiTullio, G. R., Elbourne, L. D. H., Frischer, M. E., Goodstein, D. M., Grigoriev, I. V., Hayes, R. D., Healey, A. L., James, C. C., Jenkins, J. W., Juéry, C., Kumar, M., ... Allen, A. E.",Nature Communications
+W4404621941,"Stupar, R. M., Locke, A. M., Allen, D. K., Stacey, M. G., Ma, J., Weiss, J., Nelson, R. T., Hudson, M. E., Joshi, T., Li, Z., Song, Q., Jedlicka, J., MacIntosh, G. C., Grant, D., Parrott, W. A., Clemente, T. E., Stacey, G. S., An, Y. C., Aponte-Rivera, J. L., ... O’Rourke, J. A.",The Plant Genome
+W7128706106,"Westbrook, J. W., Malukiewicz, J., Zhang, Q., Sreedasyam, A., Jenkins, J. W., Lakoba, V. T., Fitzsimmons, S. F., Clief, J. V., Collins, K., Hoy, S., Stark, C. J., Graboski, L. E., Jenkins, E. V., Saielli, T. M., Jarrett, B. T., Wigfield, L., Kerwien, L. M., Wilbur, C., Sandercock, A. M., ... Lovell, J. T.",Science
+W4409152231,"Potente, G., Yasui, Y., Shimokawa, E., Jenkins, J. W., Walstead, R., Grimwood, J., Schmutz, J., Leebens‐Mack, J., Brůna, T., Kaur, N., Lee, R., Zama, S., Tanaka, T., Umeya, Y., Kawamura, S., Yamato, K. T., Yamaguchi, K., Shigenobu, S., Shimamura, M., ... Szövényi, P.",Cell Reports
+W3183330881,"Kumar, S., Ruggles, A., Logan, S., Mazarakis, A., Thomas, T., Bates, M., Grosse, C., Reed, D., Li, Z., Grimwood, J., Schmutz, J., & Saski, C. A.",Plants
+W3197293688,"Yates, T. B., Feng, K., Zhang, J., Singan, V. R., Jawdy, S. S., Ranjan, P., Abraham, P. E., Barry, K., Lipzen, A., Pan, C., Schmutz, J., Chen, J., Tuskan, G. A., & Muchero, W.",Genome Biology and Evolution
+W4385230755,"Yao, T., Zhang, J., Yates, T. B., Shrestha, H. K., Engle, N. L., Ployet, R., John, C., Feng, K., Bewg, W. P., Chen, M. S. S., Lu, H., Harding, S. A., Qiao, Z., Jawdy, S. S., Shu, M., Yuan, W., Mozaffari, K., Harman-Ware, A. E., Happs, R. M., ... Muchero, W.",New Phytologist
+W3205381875,"Melton, A. E., Beck, J. D., Galla, S. J., Jenkins, J. W., Handley, L. H., Kim, M. G., Grimwood, J., Schmutz, J., Richardson, B. A., Serpe, M. D., Novak, S. J., & Buerki, S.",Ecology and Evolution
+W4386954594,"Bhaskara, G. B., Haque, T., Bonnette, J. E., Napier, J. D., Bauer, D., Schmutz, J., & Juenger, T.",Molecular Biology and Evolution
+W7203830905,"Takeda, Y., Moore, B. M., Holden, S., Morris, J. S., Deb, S. K., Sanders, C., El‐Azaz, J., Barrett, M. D., Lorence, D. H., Oliveira, M. V. V. d., Havranek, W., Grimwood, J., Williams, M. E., Boston, L. B., Jenkins, J. W., Plott, C., Shu, S., Barry, K., Goodstein, D. M., ... Maeda, H. A.",Science
+W4384945797,"Piatkowski, B. T., Weston, D. J., Aguero, B., Duffy, A. M., Imwattana, K., Healey, A. L., Schmutz, J., & Shaw, A. J.",Annals of Botany
+W4387966973,"Li, L., Gordon, S., Liu, L., Sade, N., Lovell, J. T., Wilhelmi, M. d. M. R., Singan, V. R., Sreedasyam, A., Hestrin, R., Phillips, J. L., Hernandez, B., Barry, K., Shu, S., Jenkins, J. W., Schmutz, J., Goodstein, D. M., Thilmony, R., Blumwald, E., & Vogel, J. P.",G3 Genes Genomes Genetics
+W4386944172,"Jiao, S., Mamidi, S., Chamberlin, M. A., Beatty, M. K., Thatcher, S., Simcox, K. D., Maina, F., Wang‐Nan, H., Johal, G. S., Heetland, L., Marla, S., Meeley, R. B., Schmutz, J., Morris, G. P., & Multani, D. S.",New Phytologist
+W4362604417,"Weng, X., Song, H., Sreedasyam, A., Haque, T., Zhang, L., Chen, C., Yoshinaga, Y., Williams, M. E., O’Malley, R. C., Grimwood, J., Schmutz, J., & Juenger, T.",PLANT PHYSIOLOGY
+W4409432180,"Parris, S., Lovell, J. T., Ding, F., Zhang, Z., Olvey, J., Olvey, M., Schmutz, J., Grimwood, J., Sreedasyam, A., Kumar, S., Li, Z., Joshi, P., Jenkins, J. W., Plott, C., Stewart, A., Webber, J., Stiller, W. N., Jones, D. C., & Saski, C. A.",The Plant Journal
+W7164183454,"Lee, H. O., Stai, J., Xu, Q., Hewavithana, T., Soman, P., Batra, R., Liu, A., Jordan, B. D., Walstead, R., Jenkins, J. W., Williams, M., Webber, J., Grimwood, J., Lovell, J. T., Brůna, T., Shu, S., Keymanesh, K., Eichenberger, J., Schmutz, J., ... Cannon, S. B.",The Plant Journal
+W7148633046,"Bird, K. A., Rifkin, J. L., McLaughlin, C. M., Harder, A. M., Basnet, P., Katz, E., Brůna, T., Barry, K., Boston, L., Daum, C. G., Guo, J., Lipzen, A., Plott, C., Jenkins, J. W., Walstead, R., Rajasekar, S., Talag, J., Frels, K. A., Greenham, K., ... Kliebenstein, D. J.",New Phytologist
+W4322720251,"Otte, A., Winder, J. C., Deng, L., Schmutz, J., Jenkins, J. W., Grigoriev, I. V., Hopes, A., & Möck, T.",Journal of Phycology
+W4310938191,"Mattoon, E. M., McHargue, W., Bailey, C. E., Zhang, N., Chen, C., Eckhardt, J., Daum, C. G., Zane, M., Pennacchio, C., Schmutz, J., O’Malley, R. C., Cheng, J., & Zhang, R.",Plant Cell & Environment
+W4385680799,"Zhao, Y., Zheng, X., Tabima, J. F., Zhu, S., Søndreli, K. L., Hundley, H. N., Bauer, D. M., Barry, K., Zhang, Y., Schmutz, J., Wang, Y., LeBoldus, J. M., & Xiong, Q.",Molecular Plant-Microbe Interactions
+W4316928481,"Tilhou, N. W., Poudel, H. P., Lovell, J. T., Mamidi, S., Schmutz, J., Daum, C. G., Zane, M., Yoshinaga, Y., Lipzen, A., & Casler, M. D.",G3 Genes Genomes Genetics
+W4406633350,"Feyissa, B. A., Becker, E. M. d., Salesse‐Smith, C. E., Shu, M., Zhang, J., Yates, T. B., Xie, M., De, K., Gotarkar, D., Chen, M. S., Jawdy, S. S., Carper, D. L., Barry, K., Schmutz, J., Weston, D. J., Abraham, P. E., Tsai, C., Morrell‐Falvey, J. L., Taylor, G., ... Muchero, W.",Developmental Cell
+W7127160578,"Cole, B., Zhang, W., Shi, J., Wang, H., Baker, C. R., Varoquaux, N., Hollingsworth, J., Hutmacher, R., Dahlberg, J. A., Pierroz, G., Barry, K., Singan, V. R., Yoshinaga, Y., Daum, C. G., Zane, M., Blow, M. J., O’Malley, R. C., Shu, S., Jenkins, J. W., ... Vogel, J. P.",The Plant Journal
+W4410901525,"Lötter, A., Brůna, T., Duong, T. A., Barry, K., Lipzen, A., Daum, C. G., Yoshinaga, Y., Grimwood, J., Jenkins, J. W., Talag, J., Borevitz, J., Lovell, J. T., Schmutz, J., Wegrzyn, J., & Myburg, A. A.",G3 Genes Genomes Genetics
+W4285743729,"Petlewski, A. R., Hauser, D. A., Kim, M., Schmutz, J., Grimwood, J., & Li, F.",Frontiers in Plant Science
+W4292254061,"Hu, R., Zhang, J., Jawdy, S. S., Sreedasyam, A., Lipzen, A., Wang, M., Ng, V., Daum, C. G., Keymanesh, K., Liu, D., Lu, H., Ranjan, P., Chen, J., Muchero, W., Tschaplinski, T. J., Tuskan, G. A., Schmutz, J., & Yang, X.",Journal of Plant Physiology
+W4404573171,"Bhattarai, G., Rhein, H. S., Sreedasyam, A., Lovell, J. T., Khanal, S., Grimwood, J., Schmutz, J., Jenkins, J. W., Chee, P. W., Pisani, C., Randall, J. J., & Conner, P. J.",PLoS ONE
+W4385898787,"Davidson, R. B., Coletti, M. A., Gao, M., Piatkowski, B. T., Sreedasyam, A., Quadir, F., Weston, D. J., Schmutz, J., Cheng, J., Skolnick, J., Parks, J. M., & Sedova, A.",Bioinformatics
+W4405189060,"Hu, R., Zhang, J., Jawdy, S. S., Sreedasyam, A., Lipzen, A., Wang, M., Ng, V., Daum, C. G., Keymanesh, K., Liu, D., Hu, A., Chen, J., Tuskan, G. A., Schmutz, J., & Yang, X.",Plants
+W4410798176,"Jin, H., Park, A., Sreedasyam, A., Li, G., Ge, Y., Swaminathan, K., Schmutz, J., Clemente, T. E., Schnable, J. C., & Yang, J.",Genomics Communications
+W4415781991,"Marks, R. A., Lovell, J. T., Carey, S. B., Pas, L. V. D., Chimukuche, N. M., Brůna, T., Plott, C., Webber, J., Lipzen, A., Yan, J., Bauer, D. M., Bentley, J., Talag, J., McLaughlin, C. M., Barry, K., Grimwood, J., Jenkins, J. W., Schmutz, J., Harkess, A., ... Farrant, J. M.",New Phytologist
+W4321003543,"Rhein, H. S., Sreedasyam, A., Cooke, P. H., Velasco‐Cruz, C., Grimwood, J., Schmutz, J., Jenkins, J. W., Kumar, S., Song, M. J., Heerema, R. J., Grauke, L. J., & Randall, J. J.",PLoS ONE
+W4402114161,"Grabowski, P., Dang, P. M., Jenkins, J. W., Sreedasyam, A., Webber, J., Lamb, M. C., Zhang, Q., Sanz‐Sáez, Á., Feng, Y., Bunting, V. M., Talag, J., Clevenger, J. P., Ozias‐Akins, P., Holbrook, C. C., Chu, Y., Grimwood, J., Schmutz, J., Chen, C. Y., & Lovell, J. T.",G3 Genes Genomes Genetics
+W7126084047,"Hu, R., Jawdy, S. S., Sreedasyam, A., Lipzen, A., Wang, M., Ng, V., Daum, C. G., Keymanesh, K., Liu, D., Hu, A., Pasha, A., Provart, N. J., Borland, A. M., Tschaplinski, T. J., Tuskan, G. A., Schmutz, J., & Yang, X.",International Journal of Molecular Sciences
+W7131123434,"Rössner, L., Rössner, C., Kong, D., Lotz, D., Weisert, A., Yamada, Y., Sato, F., Davies, K. M., Rupp, O., Fuchs, J., Baldwin, E. A., Lovell, J. T., McKain, M. R., Barry, K., Brůna, T., Talag, J., Jenkins, J. W., Walstead, R., Grimwood, J., ... Becker, A.",The Plant Cell
+W7163806934,"Kainer, D., Martin, S., Hopp, D., Mosher, S., Tschaplinski, T. J., Hyatt, P. D., Martin, M. Z., LeBoldus, J. M., Søndreli, K. L., Busby, P. E., Shu, M., Barry, K., Schmutz, J., Furches, A., Zhao, N., Jacobson, D., Chen, J., Pavicic, M., Ranjan, P., ... Garvin, M. R.",Forestry Research
+W7167820676,"Souza, R. S., Clevenger, J. P., Jenkins, J. W., Korani, W., Schmutz, J., Grimwood, J., Plott, C., Brandvain, Y. J., Turner, M. K., Miller, A. J., Hulke, B. S., Nastasi, L. F., Murrell, E. G., Handley, L. H., Webber, J., Boston, L. B., Woeltjen, S., Rubin, M. J., Trana, B., ... Tassel, D. L. V.",Nature Communications
+W4402634527,"Hiatt, S. M., Lawlor, J. M., Handley, L. H., Latner, D. R., Bonnstetter, Z. T., Finnila, C. R., Thompson, M. L., Boston, L. B., Williams, M. E., Rodríguez-Nunez, I., Jenkins, J. W., Kelley, W. V., Bebin, E. M., Lopez, M. A., Hurst, A., Korf, B. R., Schmutz, J., Grimwood, J., & Cooper, G. M.",Genome Research
+W4295949800,"Shalev, T. J., El‐Dien, O. G., Yuen, M. M. S., Shengqiang, S., Jackman, S. D., Warren, R. L., Coombe, L., Merwe, L. v. d., Stewart, A., Boston, L. B., Plott, C., Jenkins, J. W., He, G., Yan, J., Yan, M., Guo, J. Q., Breinholt, J. W., Neves, L. G., Grimwood, J., ... Bohlmann, J.",Genome Research
+W4396935812,"Parrott, W. A., (SC), U. O. o. S., Assmann, S., Gordon-Kamm, W. J., Schmutz, J., Veena, V., & Young, M. M.",OSTI OAI (U.S. Department of Energy Office of Scientific and Technical Information)
+W7116657552,"Grabowski, P., McLaughlin, C. M., Rifkin, J. L., Jenkins, J. J., Hilton, A. E., Rhein, H. S., Cervantes, K., Ishimori, M., Sreedasyam, A., Plott, C., Webber, J., Bentley, N., Bhattarai, G., Gabriel, P. O., Harmon, A., Kubenka, K., Bock, C. H., Chatwin, W., Conner, P. J., ... Lovell, J. T.",bioRxiv (Cold Spring Harbor Laboratory)
+W4297676838,"Lovell, J. T., Sreedasyam, A., Schranz, M. E., Wilson, M. A., Carlson, J. W., Harkess, A., Emms, D., Goodstein, D. M., & Schmutz, J.",eLife
+W4407079095,"Westbrook, J. W., Malukiewicz, J., Sreedasyam, A., Jenkins, J. W., Zhang, Q., Lakoba, V. T., Fitzsimmons, S. F., Clief, J. V., Collins, K., Hoy, S., Stark, C. J., Grabowski, L., Jenkins, E., Saielli, T. M., Jarrett, B. J. M., Wigfield, L., Kerwien, L. M., Wilbur, C., Sandercock, A. M., ... Lovell, J. T.",bioRxiv (Cold Spring Harbor Laboratory)
+W4298146520,"Dorrell, R. G., Kuo, A., Füssy, Z., Richardson, E., Salamov, A. A., Zarevski, N., Freyria, N. J., Ibarbalz, F. M., Jenkins, J. W., Karlusich, J. J. P., Steindorff, A. S., Edgar, R. E., Handley, L. H., Lail, K., Lipzen, A., Lombard, V., McFarlane, J., Nef, C., Vanclová, A. M. G. N., ... Lovejoy, C.",NA
+W4394271794,"Healey, A. L., Piatkowski, B. T., Lovell, J. T., Sreedasyam, A., Carey, S. B., Mamidi, S., Shu, S., Plott, C., Jenkins, J. W., Lawrence, T. J., Aguero, B., Carrell, A. A., Nieto‐Lugilde, M., Talag, J., Duffy, A. M., Jawdy, S. S., Carter, K., Boston, L., Jones, T., ... Shaw, A. J.",Figshare
+W4396743182,"Dam, K. K. v., Schmutz, J., Fangan, K., Gregurick, S. K., Segrè, D., Schlosser, C. A., Bond‐Lamberty, B., Fridlind, A. M., Niyogi, D., & Weisenhorn, P. B.",OSTI OAI (U.S. Department of Energy Office of Scientific and Technical Information)
+W4399245016,"Masonbrink, R. E., Maier, T. R., Muppirala, U. K., Seetharam, A. S., Lord, É., Juvale, P. S., Schmutz, J., Johnson, N. T., Korkin, D., Mitchum, M. G., Mimee, B., Akker, S. E. d., Hudson, M. E., Severin, A. J., & Baum, T. J.",BMC Genomics
+W4408840307,"Wu, X., Epstein, R., Esfahanian, M., Gautam, B., Griffiths, M., Pérez, J. F., Barry, K., Lipzen, A., Daum, C. G., Yoshinaga, Y., Abeyratne, C. R., Akhmetov, Z., Arana, S. T., Bayliss, R., Borphukan, B., Brusa, A., Chhetri, H. B., Combs‐Giroir, R., Czech, L., ... Expósito‐Alonso, M.",bioRxiv (Cold Spring Harbor Laboratory)
+W4410890695,"Lee, J. H., Carrell, A. A., Piatkowski, B. T., Carper, D. L., Gunter, L. E., Jawdy, S. S., Carter, K., Doktycz, M. J., Abraham, P. E., Schmutz, J., Lovell, J. T., Healey, A. L., Pelletier, D. A., & Weston, D. J.",bioRxiv (Cold Spring Harbor Laboratory)
+W4416759110,"Phillips, A. R., AuBuchon‐Elder, T., Barry, K., Stitzer, M. C., Buckler, E. S., Bukowski, R., Cameron, B. B., Cryan, E. P., Forrestel, E. J., Grabowski, P., Grimwood, J., Jenkins, J. W., Shu, S., Lipzen, A., Lovell, J. T., Minx, P. J., Porter, J., Runcie, D. E., Schmutz, J., ... Ross‐Ibarra, J.",bioRxiv (Cold Spring Harbor Laboratory)
+W7161590189,"Lovell, J. T., Rhein, H. S., Sreedasyam, A., Bentley, N., Klein, P. G., Chatwin, W., Padgitt‐Cobb, L. K., Harder, A. M., Grabowski, P., Carey, S. B., Harkess, A., Jenkins, J. W., McLaughlin, C. M., Plott, C., Rifkin, J. L., Song, J., Webber, J., Williams, M., Grimwood, J., ... Randall, J. J.",bioRxiv (Cold Spring Harbor Laboratory)
+W4220656607,"Hiatt, S. M., Lawlor, J. M., Handley, L. H., Bonnstetter, Z. T., Jenkins, J. W., Lovell, J. T., Holt, J., Finnila, C. R., Thompson, M. L., Latner, D. R., Partridge, C., Plott, C., Boston, L. B., Williams, M. E., Bowling, K. M., Grimwood, J., Schmutz, J., & Cooper, G. M.",Genetics in Medicine
+W4385635193,"Yu, L., Khachaturyan, M., Matschiner, M., Healey, A. L., Bauer, D. M., Cameron, B. B., Cusson, M., Duffy, J. E., Fodrie, F. J., Gill, D., Grimwood, J., Hori, M., Hovel, K. A., Hughes, A. R., Jahnke, M., Jenkins, J. W., Keymanesh, K., Kruschel, C., Mamidi, S., ... Reusch, T. B. H.",Nature Plants
+W4396742786,"Reguera, G., Bellamy, M. B., Brock, T., Fischetti, R. F., Henry, H., Laiakis, E., Miller, A., Preston, R., Morton, L., Snijders, A. M., Schmutz, J., Sowa, M. B., Stevens, R. L., Tourassi, G. D., & Dam, K. K. v.",OSTI OAI (U.S. Department of Energy Office of Scientific and Technical Information)
+W4399474500,"Pakrasi, H. B., Ajo-Franklin, C. M., Donner, L. J., Argüeso, C., González, J. E., Prather, K. L. J., Assmann, S. M., Hungate, B. A., Schmutz, J., Basso, B., Juenger, T., Segrè, D., Blanchard, J. L., Liu, X., Shupe, M. D., Chiao, S., Marshall, W. F., Delamere, J. S., Pawlowska, T. E., ... Fridlind, A. M.",OSTI OAI (U.S. Department of Energy Office of Scientific and Technical Information)
+W4412401964,"Kainer, D., Martin, S., Hopp, D., Mosher, S., Tschaplinski, T. J., Hyatt, P. D., Martin, M. Z., LeBoldus, J. M., Søndreli, K. L., Busby, P. E., Shu, M., Barry, K., Schmutz, J., Furches, A., Zhao, N., Jacobson, D., Chen, J. G., Pavicic, M., Ranjan, P., ... Garvin, M. R.",bioRxiv (Cold Spring Harbor Laboratory)
+W7161829687,"Glenn, P. D., McKinley, B. A., Barry, K., Schmutz, J., & Mullet, J. E.",The Plant Journal
+W7162797104,"Tarabai, H., Schmutz, J., Jenkins, J. W., Mamerto, A., Kubová, M., Barry, K., Lail, K., Savage, E., Brůna, T., Grimwood, J., Williams, M., Waters, E. R., & Mandáková, T. M.",Zenodo (CERN European Organization for Nuclear Research)
+W7164202457,"Belaffif, M. B., Zwiener, M., Sreedasyam, A., Battu, G., Ji, Z., Hirannaiah, P., Manjunatha, S., Grzybowski, M., Myler, S., Dietz, B., Grimwood, J., Ge, Y., Schmutz, J., Schnable, J. C., & Swaminathan, K.",Research Square
+W7165172044,"Rio, S., Gauthier, F., Garsmeur, O., Piperidis, G., Hoarau, J., Serino, G., Torres, R. C., Joshi, S. V., Terajima, Y., López‐Gerena, J., Perera, M. F., Stoute, A., Badaloo, G., DongLiang, H., Barry, K., Schmutz, J., Mary‐Huard, T., & D’Hont, A.",Genome biology
+W7168132993,"Seah, B. K. B., Shaikhutdinov, N., DeMontigny, W. C., Lasek‐Nesselquist, E., Emmerich, C., Sprecher, B. N., Kuo, A., Jenkins, J. W., Lipzen, A., Barry, K., Grimwood, J., Schmutz, J., Plott, C., Talag, J., Grigoriev, I. V., Archibald, J. M., Lynch, M., Delwiche, C. F., Moeller, H. V., ... Swart, E. C.",bioRxiv (Cold Spring Harbor Laboratory)
+W4390777424,"Forfora, N., Azuaje, I., Vivas, K. A., Vera, R. E., Brito, A., Venditti, R. A., Kelley, S. S., Tu, Q., Woodley, A. L., & González, R.",Journal of Cleaner Production
+W4409280632,"Lendewig, M., Márquez, R., Franco, J., Vera, R. E., Vivas, K. A., Forfora, N., Venditti, R. A., & González, R.",Chemosphere
+W4308308628,"Vera, R. E., Suarez, A., Zambrano, F., Márquez, R., Bedard, J., Vivas, K. A., Pifano, A., Farrell, M. J., Ankeny, M., Jameel, H., & González, R.",Resources Conservation and Recycling
+W4390587635,"Frazier, R., Vivas, K. A., Azuaje, I., Vera, R. E., Pifano, A., Forfora, N., Jameel, H., Ford, E., Pawlak, J. J., Venditti, R. A., & González, R.",Journal of Bioresources and Bioproducts
+W4295206907,"Vera, R. E., Zambrano, F., Suarez, A., Pifano, A., Márquez, R., Farrell, M. J., Ankeny, M., Jameel, H., & González, R.",Cleaner and Circular Bioeconomy
+W4200083062,"Ji, Y., Waters, S., Lim, E., Lang, A. W., Ciesielski, P. N., Shofner, M. L., Reynolds, J. R., & Meredith, J. C.",ACS Sustainable Chemistry & Engineering
+W4384204723,"Ji, Y., Shen, D. E., Lu, Y., Schueneman, G. T., Shofner, M. L., & Meredith, J. C.",ACS Sustainable Chemistry & Engineering
+W4383197839,"Schaible, M. J., Sjolund, K., Ryan, E. A., Shofner, M. L., Reynolds, J. R., Linsey, J., & Orlando, T. M.",Acta Astronautica
+W4382601438,"Ryan, E. A., Seibers, Z. D., Reynolds, J. R., & Shofner, M. L.",ACS Applied Polymer Materials
+W4391322383,"Ryan, E. A., Seibers, Z. D., Reynolds, J. R., & Shofner, M. L.",Journal of Applied Polymer Science
+W4292148691,"Fu, Q., Shofner, M. L., Sinquefield, S. A., & Nair, S.",ACS Sustainable Chemistry & Engineering
+W4385856729,"Zaw, K. S. K., Ma, C., Wang, Z., Shofner, M. L., & Nair, S.",Chemical Engineering Science
+W3201907871,"Dogan-Guner, E. M., Schueneman, G. T., Shofner, M. L., & Meredith, J. C.",Cellulose
+W4296844619,"Ji, Y., Shen, D. E., Young, E. K., Goins, C. L., Reynolds, J. R., Shofner, M. L., & Meredith, J. C.",Materials Advances
+W4392003610,"Fu, Q., Avendano, M., Bentley, J. A., Tran, Q., Shofner, M. L., Sinquefield, S. A., Realff, M. J., & Nair, S.",ACS Sustainable Chemistry & Engineering
+W4298119803,"Verma, P., Wagner, K. B., Griffin, A. C., & Shofner, M. L.",physica status solidi (b)
+W4381806190,"Shofner, M. L., & Tennyson, A. G.",Materials Advances
+W4387494570,"SCOTT, C. M., Sinquefield, S. A., Wang, Z., Shofner, M. L., & Nair, S.",TAPPI Journal
+W4406321134,"Blackman, M. A., Shofner, M. L., & Chatham, C. A.",ACS Applied Polymer Materials
+W4412456145,"Zaw, K. S. K., Ma, C., Shofner, M. L., & Nair, S.",Journal of Membrane Science
+W4413997313,"Scifoni, L., Pacelli, F. I., Schaible, M. J., Ryan, E. A., Sip, Y. Y. L., Zhai, L., Linsey, J., Shofner, M. L., Orlando, T. M., & Romero-Calvo, Á.",Acta Astronautica
+W4200483853,"Dogan-Guner, E. M., Schork, F. J., Brownell, S., Schueneman, G. T., Shofner, M. L., & Meredith, J. C.",Polymer
+W4381510996,"Irvin, C. W., Satam, C. C., Shial, K., Verma, P., Arroyo, N. B., Meredith, J. C., & Shofner, M. L.",Journal of Applied Polymer Science
+W4412150667,"Ryan, E. A., Raia, N. E., Reynolds, J. R., & Shofner, M. L.",ACS Applied Polymer Materials
+W4408854494,"Rubaiya, F., Shofner, M. L., & Garten, L. M.",ACS Omega
+W4409968462,"Sonker, M., Zaw, K. S. K., Dhruve, H. P., Abbaszadeh, M., Garell, M., Salerno, M. B., Hatzell, M. C., Shofner, M. L., & Nair, S.",AIChE Journal
+W4285167014,"Verma, P., Smith, C. L., Griffin, A. C., & Shofner, M. L.",Materials Advances
+W4417293132,"Fagbemi, S., Ji, Y., Rhone, J. J., Rubaiya, F., Meredith, J. C., Shofner, M. L., & Harris, T. A. L.",Advanced Materials Interfaces
+W7128902561,"Pacelli, F. I., Scifoni, L., Schaible, M. J., Ryan, E. A., Onal, I. E., Shofner, M. L., Orlando, T. M., & Romero-Calvo, Á.",Acta Astronautica
+W4407927883,"Verma, P., Griffin, A. C., & Shofner, M. L.",physica status solidi (b)
+W4406067824,"Pelse, I., Seibers, Z. D., Reynolds, J. R., & Shofner, M. L.",Journal of Applied Polymer Science
+W4417137134,"Yu, X., Rhone, J. J., Meredith, J. C., Shofner, M. L., & Harris, T. A. L.",Progress in Organic Coatings
+W4229002370,"Verma, P., Smith, C. L., Griffin, A. C., & Shofner, M. L.",Engineering Research Express
+W4405892967,"Fagbemi, S., Rhone, J. J., Yu, X., Meredith, J. C., Shofner, M. L., Vuong, S., Einsla, B. R., Einsla, M. L., Accardo, J., Upshur, M. A., & Harris, T. A. L.",NA
+W4408965220,"Blackman, M., Shofner, M. L., & Chatham, C. A.",OSTI OAI (U.S. Department of Energy Office of Scientific and Technical Information)
+W7141062028,"DOE, Blackman, M., EM, Shofner, M. L., & Chatham, C. A.",OSTI OAI (U.S. Department of Energy Office of Scientific and Technical Information)
+W7168144866,"Lötter, A., Brůna, T., Zama, S., Pierneef, R., Barry, K., Lipzen, A., Daum, C. G., Yoshinaga, Y., Grimwood, J., Boston, L., Williams, M., Jenkins, J. W., Plott, C., Talag, J., Padgitt‐Cobb, L. K., Borevitz, J., Naidoo, S., Lovell, J. T., Schmutz, J., ... Myburg, A. A.",Research Square
+W7170046384,"Chen, C., Sancho, R., Campos, M. R., Contreras‐Moreira, B., Schmutz, J., Jenkins, J. W., Barry, K., Lipzen, A., Koriabine, M., Eichenberger, J., Lei, L., Vogel, J. P., Marais, D. L. D., & Catalán, P.",bioRxiv (Cold Spring Harbor Laboratory)
+W7171402854,"Ricono, A. M., Myers, Z., Schoenecker, D., Menon, A., Such, D., Hazen, A., Wise, A., Brůna, T., Jenkins, J. W., Plott, C., Webber, J., Boston, L., Shu, S., Qiu, Y., Barry, K., Nwakama, C. K., Grimwood, J., Schmutz, J., Lovell, J. T., & Greenham, K.",bioRxiv (Cold Spring Harbor Laboratory)
+W7202296469,"Onal, I. E., Scifoni, L., Orlando, T. M., Romero-Calvo, Á., Linsey, J., & Shofner, M. L.",IEEE International Conference on Flexible and Printable Sensors and Systems (FLEPS)
+W7204863707,"Rio, S., Gauthier, F., Garsmeur, O., Piperidis, G., Hoarau, J., Serino, G., Torres, R. C., Joshi, S. V., Terajima, Y., López‐Gerena, J., Perera, M. F., Stoute, A., Badaloo, G., Huang, D., Barry, K., Schmutz, J., Mary‐Huard, T., & D’Hont, A.",Figshare
+W7204889318,"Möck, T., Bilcke, G., Flaum, E., Fu, S., Hoch, L., Moog, K., Rijsdijk, N., Ruck, E. C., Bishop, I. W., Duchêne, C., Gilbertson, R., Hopes, A., Johns, C., Manfellotto, F., Roberts, W. R., Belshaw, N. J., Chandola, U., Chaerle, P., Chepurnova, O., ... Kuo, A.",PLoS Biology
+W7204921722,"Rio, S., Gauthier, F., Garsmeur, O., Piperidis, G., Hoarau, J., Serino, G., Torres, R. C., Joshi, S. V., Terajima, Y., López‐Gerena, J., Perera, M. F., Stoute, A., Badaloo, G., Huang, D., Barry, K., Schmutz, J., Mary‐Huard, T., & D’Hont, A.",Figshare
+W7204923236,"Rio, S., Gauthier, F., Garsmeur, O., Piperidis, G., Hoarau, J., Serino, G., Torres, R. C., Joshi, S. V., Terajima, Y., López‐Gerena, J., Perera, M. F., Stoute, A., Badaloo, G., Huang, D., Barry, K., Schmutz, J., Mary‐Huard, T., & D’Hont, A.",Figshare
+W7204927182,"Rio, S., Gauthier, F., Garsmeur, O., Piperidis, G., Hoarau, J., Serino, G., Torres, R. C., Joshi, S. V., Terajima, Y., López‐Gerena, J., Perera, M. F., Stoute, A., Badaloo, G., Huang, D., Barry, K., Schmutz, J., Mary‐Huard, T., & D’Hont, A.",Figshare
+W7214074159,"Onal, I. E., Ryan, E. A., Scifoni, L., Orlando, T. M., Romero-Calvo, Á., Linsey, J., & Shofner, M. L.",Advanced Materials Interfaces
+W7223850073,"Elfarargi, A. F., Zhang, L., Healey, A. L., Bonnette, J. E., Sreedasyam, A., Saran, U. B., Jenkins, J. W., Lowry, D. B., Lovell, J. T., Barry, K., Boston, L. B., Guo, J. Q., Talag, J., Zaman, S., Grimwood, J., Schmutz, J., & Juenger, T.",bioRxiv (Cold Spring Harbor Laboratory)
+W7224087525,"Bhardwaj, R., Grimwood, J., Plott, C., Amar, S., Nardi, F. D., Vo, B. T., Jenkins, J. W., Schneeberger, K., Schmutz, J., Schaefer, H., Tribsch, A., & Johannes, F. M.",bioRxiv (Cold Spring Harbor Laboratory)
+W7225100235,"Devireddy, A. R., Yao, T., De, K., Bewg, P., Zhang, J., Feyissa, B. A., Ployet, R., Jawdy, S. S., Engle, N. L., Rodríguez, M., Martin, M. Z., Weston, D. J., Tsai, C., Yoshinaga, Y., Daum, C., Shu, M., Tschaplinski, T. J., Barry, K., Lipzen, A., ... Chen, J.",Plant Stress
+W7225696812,"Zaw, K. S. K., Yutthasaksunthorn, N., Venkataraman, A., Shofner, M. L., & Nair, S.",ACS Engineering Au
+W4409717227,"BARRIOS, N. A., Márquez, R., Trovagunta, R., Tolosa, L. I., Suarez, A., Zambrano, F., González, R., Pal, L., & Hubbe, M. A.",Advances in Colloid and Interface Science
+W4392350373,"Forfora, N., Azuaje, I., KANIPE, T. A., Gonzalez, J. A., Lendewig, M., Urdaneta, I., Venditti, R. A., González, R., & Argyropoulos, D. S.",Cleaner Environmental Systems
+W4400623618,"Trovagunta, R., Márquez, R., Tolosa, L. I., BARRIOS, N. A., Zambrano, F., Suarez, A., Pal, L., González, R., & Hubbe, M. A.",Advances in Colloid and Interface Science
+W4223923823,"Kwon, S., Zambrano, M. C., Venditti, R. A., Frazier, R., Zambrano, F., González, R., & Pawlak, J. J.",Environmental Science and Pollution Research
+W4411260783,"Lendewig, M., Márquez, R., Franco, J., Vera, R. E., Vivas, K. A., Forfora, N., Venditti, R. A., & González, R.",Resources Conservation and Recycling
+W3193929897,"Zambrano, F., Márquez, R., Jameel, H., Venditti, R. A., & González, R.",Resources Conservation and Recycling
+W4229024415,"Pawlak, J. J., Frazier, R., Vera, R. E., Wang, Y., & González, R.",BioResources
+W4298132807,"Schoubroeck, S. V., Chacon, L., Reynolds, A. M., Lavoine, N., Hakovirta, M., González, R., Passel, S. V., & Venditti, R. A.",Resources Conservation and Recycling
+W4388193266,"Vera, R. E., Vivas, K. A., Urdaneta, F., Franco, J., Sun, R., Forfora, N., Frazier, R., Gongora, S., Saloni, D. E., Fenn, L., Zhu, J. Y., Chang, H., Jameel, H., & González, R.",Journal of Cleaner Production
+W4394566671,"Vivas, K. A., Vera, R. E., Dasmohapatra, S., Márquez, R., Schoubroeck, S. V., Forfora, N., Azuaje, A. J., Phillips, R., Jameel, H., Delborne, J., Saloni, D. E., Venditti, R. A., & González, R.",Logistics
+W4290628218,"Suarez, A., Ford, E., Venditti, R. A., Kelley, S. S., Saloni, D. E., & González, R.",Resources Conservation and Recycling
+W4367835717,"Vera, R. E., Zambrano, F., Márquez, R., Vivas, K. A., Forfora, N., Bedard, J., Farrell, M. J., Ankeny, M., Pal, L., Jameel, H., & González, R.",Chemical Engineering Journal
+W4400571493,"Frazier, R., Lendewig, M., Vera, R. E., Vivas, K. A., Forfora, N., Azuaje, I., Reynolds, A. M., Venditti, R. A., Pawlak, J. J., Ford, E., & González, R.",Journal of Bioresources and Bioproducts
+W4401732627,"Urdaneta, F., Kumar, R. S., Márquez, R., Vera, R. E., Franco, J., Urdaneta, I., Saloni, D. E., Venditti, R. A., Pawlak, J. J., Jameel, H., & González, R.",Industrial Crops and Products
+W4320498220,"Suarez, A., Ford, E., Venditti, R. A., Kelley, S. S., Saloni, D. E., & González, R.",Journal of Cleaner Production
+W4297338599,"Zambrano, F., Márquez, R., Vera, R. E., Jameel, H., Venditti, R. A., & González, R.",ACS Sustainable Chemistry & Engineering
+W4404593064,"Hidalgo‐Salazar, M. A., Aguirre, J. P. C., Román, A. J., González, R., Vera, R. E., & Osswald, T. A.",Polymer Composites
+W4409988473,"Viitala, R., Miettinen, M., Márquez, R., Hämäläinen, A., Karhinen, A., BARRIOS, N. A., González, R., Pal, L., Jameel, H., & Holmberg, K.",Renewable and Sustainable Energy Reviews
+W4403711883,"Vera, R. E., Vivas, K. A., Forfora, N., Márquez, R., Urdaneta, I., Frazier, R., Assis, C. A. d., Assis, T. d., Treasure, T. H., Farrell, M. J., Ankeny, M., Saloni, D. E., Pal, L., Jameel, H., & González, R.",Chemical Engineering Journal
+W4405149143,"Azuaje, I., Forfora, N., Urdaneta, I., Ortega, R., Frazier, R., Vera, R. E., Vivas, K. A., Dessbesell, L., Venditti, R. A., Jameel, H., Tu, Q., Lan, K., Márquez, R., Lizundia, E., Kelley, S. S., & González, R.",Resources Conservation and Recycling
+W4400041026,"Vivas, K. A., Pifano, A., Vera, R. E., Urdaneta, F., Urdaneta, I., Forfora, N., Assis, C. A. d., Phillips, R., Dasmohapatra, S., Saloni, D. E., Venditti, R. A., & González, R.",Biofuels Bioproducts and Biorefining
+W4410441933,"Urdaneta, F., Meza, L., Márquez, R., Franco, J., Vera, R. E., Urdaneta, I., Parrish, C., Saloni, D. E., Pawlak, J. J., Jameel, H., & González, R.",Cellulose
+W4407597268,"Cruz, D., Park, H., Tiller, P. S., Kumar, A., González, R., Mittal, A., Johnson, D. K., & Park, S.",Chemical Engineering Journal
+W4283661801,"Kumar, R. S., Zambrano, F., Peszlen, I. M., Venditti, R. A., Pawlak, J. J., Jameel, H., & González, R.",Cellulose
+W4286491616,"Márquez, R., Zwilling, J. D., Zambrano, F., Tolosa, L. I., Marquez, M. E., Venditti, R. A., Jameel, H., & González, R.",Journal of Surfactants and Detergents
+W4399496683,"Vivas, K. A., Vera, R. E., Phillips, R., Forfora, N., Azuaje, I., Zering, K. D., Chang, H., Delborne, J., Saloni, D. E., Dasmohapatra, S., Barbieri, C., Venditti, R. A., Márquez, R., & González, R.",Biofuels Bioproducts and Biorefining
+W4410881503,"Franco, J., Urdaneta, F., Cordoba, Y., Meza, L., Urdaneta, I., Jameel, H., & González, R.",Industrial Crops and Products
+W4403971759,"Ortega, R., Forfora, N., Urdaneta, I., Azuaje, I., Vivas, K. A., Vera, R. E., Franco, J., Frazier, R., Assis, C. A. d., Saloni, D. E., Jameel, H., Venditti, R. A., & González, R.",Cleaner Environmental Systems
+W7155210546,"Lendewig, M., Forfora, N., Márquez, R., Enriquez-Medina, I., Franco, J., Cordoba, Y., Urdaneta, F., Morizet-Davis, J., Frazier, R., Pawlak, J. J., Venditti, R. A., Jameel, H., & González, R.",Progress in Materials Science
+W4206182478,"Frazier, R., Zambrano, F., Pawlak, J. J., & González, R.",The International Journal of Advanced Manufacturing Technology
+W4367179973,"Brito, A., Suarez, A., Pifano, A., Reisinger, L. W., Wright, J. A., Saloni, D. E., Kelley, S. S., González, R., Venditti, R. A., & Jameel, H.",BioResources
+W7160432040,"Forfora, N., Zhang, X., Houtman, C. J., Gleisner, R., Kitin, P., Fishwild, S. J., Begel, M., Pan, X., Kim, H., González, R., & Zhu, J.",Green Chemistry
+W4404902006,"Urdaneta, I., Vera, R. E., Márquez, R., Vivas, K. A., Urdaneta, F., Gongora, S., Frazier, R., Franco, J., Cordoba, Y., Jameel, H., Viitala, R., Harbec, G., Carette, J., Pawlak, J. J., & González, R.",Cellulose
+W4408129705,"Cruz, D., Park, H., Tiller, P. S., González, R., Mittal, A., Johnson, D. K., & Park, S.",Journal of environmental chemical engineering
+W4291227637,"Frazier, R., Zambrano, F., Pawlak, J. J., Peszlen, I. M., Welsford, D., & González, R.",Cellulose
+W4306369141,"Londoño-Zuluaga, C., Jameel, H., González, R., Nellenbach, K. A., Brown, A. C., Yang, G., & Lucia, L. A.",Fibers
+W4323659861,"Zwilling, J. D., Whitham, J. M., Zambrano, F., Pifano, A., Grunden, A. M., Jameel, H., Venditti, R. A., & González, R.",Heliyon
+W4410025724,"Franco, J., Bastidas, J. C., Jameel, H., & González, R.",BioResources
+W7154988455,"Forfora, N., Ortega, R., Urdaneta, I., Azuaje, I., Frazier, R., Lendewig, M., Jameel, H., Venditti, R. A., Hummel, M., & González, R.",Sustainability
+W7220716059,"Urdaneta, F., Márquez, R., Viitala, R., Franco, J., Urdaneta, I., Saloni, D. E., Pawlak, J. J., Jameel, H., & González, R.",ACS Omega
+W4399882857,"Londoño-Zuluaga, C., Jameel, H., González, R., Yang, G., & Lucia, L. A.",Physchem
+W4415751651,"Vera, R. E., Vivas, K. A., Márquez, R., Urdaneta, F., González, R., & Jameel, H.",Springer eBooks
+W4411162913,"Frazier, R., Lendewig, M., Urdaneta, F., Franco, J., Nayeem, J., Dominguez, A., Ford, E., Pawlak, J. J., Venditti, R. A., Rojas, O. J., & González, R.",SSRN Electronic Journal
+W7131654715,"Trovagunta, R., Márquez, R., Tolosa, L. I., BARRIOS, N. A., Zambrano, F., Suarez, A., Pal, L., González, R., & Hubbe, M. A.",Advances in Colloid and Interface Science
+W4392772801,"Londoño-Zuluaga, C., Jameel, H., González, R., Yang, G., & Lucia, L. A.",Universal Journal of Green Chemistry
+W4407307241,"Azuaje, I., González, R., Ekvall, T., Gaudreault, C., Dessbesell, L., Tu, Q., & Lizundia, E.",BioResources
+W4416123420,"Frazier, R., Lendewig, M., Urdaneta, F., Franco, J., Nayeem, J., Dominguez, A., Ford, E., Pawlak, J. J., Venditti, R. A., Rojas, O. J., & González, R.",Research Square
+W7127111277,"Ortega, R., Forfora, N., Dorado, I., Urdaneta, I., Azuaje, I., Jameel, H., Venditti, R. A., Tu, Q., & González, R.",BioResources
+W7165653586,"Brito, A., Khan, A., Suarez, A., González, R., Venditti, R. A., & Jameel, H.",BioResources
+W7214789977,"Moran, A., Franco, J., Urdaneta, F., Salas, M., Reynolds, A. M., Forfora, N., Gongora, S., Jameel, H., Venditti, R. A., & González, R.",BioResources
+W4408699309,"Munk, L., Boutt, D. F., Butler, K. L., Russo, A. A., Jenckes, J., Moran, B. J., & Kirshen, A.",Economic Geology
+W4200050745,"Coffey, D. M., Munk, L., Ibarra, D. E., Butler, K. L., Boutt, D. F., & Jenckes, J.",Geochemistry Geophysics Geosystems
+W4285097818,"Moran, B., Boutt, D. F., McKnight, S., Jenckes, J., Munk, L., Corkran, D., & Kirshen, A.",Earth s Future
+W4408526179,"Putzolu, F., Armstrong, R., Benson, T. R., Boutt, D. F., Butler, K. L., Dolgopolova, A. V., Herrington, R. J., Ibarra, D. E., & Munk, L.",Economic Geology
+W4410121113,"Butler, K. L., Munk, L., Boutt, D. F., Morris, N., Kennedy, J., Saha, P., Blake, M. R., Custado, M. J., & Ibarra, D. E.",Economic Geology
+W4408873099,"Kirshen, A., Moran, B., Munk, L., Russo, A. A., McKnight, S., Jenckes, J., Corkran, D., Bresee, M., & Boutt, D. F.",Communications Earth & Environment
+W4411895711,"McKinley, P. C., Wilber, M. M., & Whitney, E.",Sustainability
+W3215507604,"Dhyani, A., Pike, C. D., Braid, J. L., Whitney, E., Burnham, L., & Tuteja, A.",Advanced Materials Technologies
+W4210561142,"Schmidt, J. I., Johnson, B., Huntington, H. P., & Whitney, E.",The Science of The Total Environment
+W4365597395,"Jenckes, J., Munk, L., Ibarra, D. E., Boutt, D. F., Fellman, J. B., & Hood, E. W.",Water Resources Research
+W4392348211,"Muñoz, S. D., Jenckes, J., Ramos, E. J., Munk, L., & Ibarra, D. E.",Journal of Geophysical Research Earth Surface
+W4410922382,"Ingebritsen, S. E., Weis, P., Bodnar, R. J., Boutt, D. F., & Munk, L.",Hydrogeology Journal
+W4311138031,"Rashedin, M., Johnson, B., Dev, S., Whitney, E., Schmidt, J. I., Madden, D., & Aggarwal, S.",ACS ES&T Water
+W4414205025,"Corkran, D., Boutt, D. F., Munk, L., Moran, B., McKnight, S., Jenckes, J., & Kirshen, A.",Water Resources Research
+W4200493777,"Jenckes, J., Ibarra, D. E., & Munk, L.",Geophysical Research Letters
+W3195926506,"Chamberlin, M. J., Sambor, D. J., Karenzi, J., Wies, R. W., & Whitney, E.",Sustainability
+W4362455670,"McKnight, S., Boutt, D. F., Munk, L., & Moran, B.",Water Resources Research
+W4281572349,"Mauck, N., Pruitt, S. W., & Zhang, W.",Global Finance Journal
+W4361284161,"Gagnon, C., Butler, K. L., Gaviria, E., Terrazas, A., Gao, A., Bhattacharya, T., Boutt, D. F., Munk, L., & Ibarra, D. E.",Geological Society of America Bulletin
+W4383499358,"Russo, A. A., Boutt, D. F., Munk, L., & Jenckes, J.",Water Resources Research
+W4387307485,"Schloemer, J., Munk, L., & Iken, K. B.",Estuaries and Coasts
+W4392806529,"Jenckes, J., Muñoz, S. D., Ibarra, D. E., Boutt, D. F., & Munk, L.",Journal of Geophysical Research Earth Surface
+W4393560212,"Moran, B., Boutt, D. F., Munk, L., & Fisher, J.",PLOS Water
+W4400591253,"Russo, A. A., Jenckes, J., Boutt, D. F., Munk, J. K., Kirshen, A., & Munk, L.",Hydrological Processes
+W4409788539,"Fellman, J. B., Hood, E. W., Munk, L., Jenckes, J., Whitney, E. J., & Klein, E. S.",Communications Earth & Environment
+W4220783470,"Bolt, G., Wilber, M. M., Huang, D., Sambor, D. J., Aggarwal, S., & Whitney, E.",Sustainability
+W4399566069,"Bhattacharya, T., Brennan, P. R., Ibarra, D. E., Gagnon, C. A., Butler, K. L., Terrazas, A., Miller, S., Munk, L., Boutt, D. F., Feng, R., Bullinger, S. N., & Weisbeck, L.",Quaternary Science Reviews
+W4400089517,"Huang, L., Aarons, S. M., Koffman, B. G., Cheng, W., Hanschka, L., Munk, L., Jenckes, J., Norris, E. D., & Arendt, C. A.",ACS Earth and Space Chemistry
+W4300818399,"Wilber, M. M., Whitney, E., & Haupert, C.",IEEE PES/IAS PowerAfrica Conference (PowerAfrica)
+W4400873347,"Krieger, K., & Mauck, N.",Sustainability
+W4281619523,"Schmidt, J. I., Huntington, H. P., Whitney, E., Huang, D., Wies, R. W., & Aggarwal, S.",Frontiers in Climate
+W4417218412,"Cawood, A. J., Ferrill, D. A., Rangel-Landeros, I. A., Butler, K. L., Sickmann, Z. T., Blake, M. R., Ibarra, D. E., Swanson, B., Munk, L., Boutt, D. F., Stockli, L. D., Stockli, D. F., & Gagnon, C. A.",Abstracts with programs - Geological Society of America
+W7118441830,"Clark, J., Krieger, K., & Mauck, N.",Sustainability
+W4367679414,"Krieger, K., & Mauck, N.",Applied Economics Letters
+W4391169931,"Lambert, S. L., Krieger, K., & Mauck, N.",International Journal of Financial Studies
+W4405680075,"Whitney, E., Alaska, S. o., EXP, Office, U. A. E., Koleva, M. N., Kilcher, L., & Raun, J.",OSTI OAI (U.S. Department of Energy Office of Scientific and Technical Information)
+W3214175269,"Moran, B., Boutt, D. F., McKnight, S., Jenckes, J., Munk, L., Corkran, D., & Kirshen, A.",Scholarworks (University of Massachusetts Amherst)
+W4362731788,"Moran, B., Boutt, D. F., Munk, L., & Fisher, J.",Research Square
+W4353090571,"Anderson, B. S., Mauck, N., & Salzsieder, L.",Cogent Economics & Finance
+W4391406733,"Manna, N., Mauck, N., & Shank, C. A.",SSRN Electronic Journal
+W4399887411,"Krieger, K., Lambert, S. L., Mauck, N., & Turemis, A.",SSRN Electronic Journal
+W4409466017,"Mauck, N., Pruitt, S. W., & Zhang, W.",SSRN Electronic Journal
+W4410846249,"Krieger, K., Mauck, N., Lambert, S. L., & Turemis, A.",SSRN Electronic Journal
+W4412836569,"Manna, N., Mauck, N., & Shank, C. A.",SSRN Electronic Journal
+W7129080624,"Stein, J. S., Whitney, E., Tonita, E. M., Granlund, A., Lindh, M., Augusto, A., Øgaard, M. B., Jensen, A. R., Lu, S. M., Pike, C., Jouttijärvi, S., Wilber, M. M., Toal, H., Manni, M., Ovaitt, S., & Peterson, A. M.",NA
+W7132820120,"(EERE), U. O. o. E. E. a. R. E., Stein, J. S., States), S. N. L. A. N. (., Whitney, E., Tonita, E. M., Granlund, A., Lindh, M., Augusto, A., Øgaard, M. B., Jensen, A. R., Lu, S. M., Pike, C., Jouttijärvi, S., Wilber, M. M., Toal, H., Manni, M., Ovaitt, S., & Peterson, A. M.",OSTI OAI (U.S. Department of Energy Office of Scientific and Technical Information)
+W7160330449,"Kilcher, L., Whitney, E., & Colt, S.",Routledge eBooks
+W7162397908,"Clark, J., Kuipers, D. R., & Mauck, N.",Cogent Economics & Finance
+W7214796039,"Urdaneta, F., Márquez, R., Moran, A., Enriquez-Medina, I., Mozumder, D., Urdaneta, I., Pawlak, J. J., Jameel, H., Saloni, D. E., & González, R.",BioResources
+W7223802274,"Franco, J., Urdaneta, F., Sun, H., Cordoba, Y., Ortega, R., Saha, S., Yeh, T., Jameel, H., & González, R.",Journal of Bioresources and Bioproducts
+W4286007528,"Cooperdock, E. H. G., Hofmann, F., Collins, R. M., Carrera, A., Takase, A., & Celestian, A. J.",Geochronology
+W4411044155,"Fitzenreiter, R., Ernstson, K., Kletetschka, G., LeCompte, M. A., Moore, C. R., Kennett, J. P., Bizimis, M., Hofmann, F., Takáč, M., Adedeji, A. V., Witwer, T., Chouinard, J., Perez, J. P., Young, M. D., Eaton, T. M., Valente, M. J., Lanning, D. B., Rapoport, Y., Ellison, K., ... West, A.",Airbursts and Cratering Impacts
+W4403327511,"Regan, S. P., Holland, M. E., Waldien, T. S., Miller, M., Taylor, P., Kylander-Clark, A. R., Marble, S., & Hofmann, F.",Geology
+W4409391918,"Rojas, A., Cooperdock, E. H. G., Hofmann, F., & Lackey, J. S.",Tectonics
+W4292332866,"Cox, S. E., Miller, H. B. D., Hofmann, F., & Farley, K. A.",Geochronology
+W4400882750,"Moran, B., Boutt, D. F., Munk, L., & Fisher, J.",PLOS Water
+W4408182584,"Johnson, M. A., Jenckes, J., Munk, L., & Konar, B. H.",SSRN Electronic Journal
+W7162076623,"Muñoz, S. D., Laurence, S., Piccione, G. G., Esenther, S. E., Ramos, E., Jenckes, J., Munk, L., & Ibarra, D. E.",Zenodo (CERN European Organization for Nuclear Research)
+W3204594527,"Hofmann, F.",NA
+W4205691340,"Cox, S. E., Miller, H. B. D., Hofmann, F., & Farley, K. A.",NA
+W4220965440,"Cooperdock, E. H. G., Hofmann, F., Collins, R. M., Carrera, A., Takase, A., & Celestian, A. J.",NA
+W4312285163,"McKnight, S., Jenckes, J., Boutt, D. F., Munk, L., Moran, B., Corkran, D., & Kirshen, A.",Abstracts with programs - Geological Society of America
+W4312290032,"Russo, A. A., Jenckes, J., Munk, L., & Boutt, D. F.",Abstracts with programs - Geological Society of America
+W4312366595,"Butler, K., Munk, L., Munk, L., Munk, L., Gagnon, C., Gagnon, C., Gagnon, C., Boutt, D. F., Boutt, D. F., Boutt, D. F., Moran, B. J., Moran, B. J., Moran, B. J., McKnight, S., McKnight, S., McKnight, S., Huntington, K. W., Huntington, K. W., Huntington, K. W., ... Ibarra, D. E.",Abstracts with programs - Geological Society of America
+W4312548221,"Jenckes, J., Munk, L., Boutt, D. F., & Moran, B. J.",Abstracts with programs - Geological Society of America
+W4312556908,"Jenckes, J., Russo, A. A., Munk, L., & Boutt, D. F.",Abstracts with programs - Geological Society of America
+W4312556922,"Munk, L., & Boutt, D. F.",Abstracts with programs - Geological Society of America
+W4312580221,"Cooperdock, E. H. G., Hofmann, F., Collins, R. M., Carrera, A., Takase, A., & Celestian, A. J.",Goldschmidt Abstracts
+W4312628577,"Gagnon, C., Miller, S., Miller, S., Butler, K., Butler, K., Boutt, D. F., Boutt, D. F., Munk, L., Munk, L., Ibarra, D. E., & Ibarra, D. E.",Abstracts with programs - Geological Society of America
+W4312809739,"Kirshen, A., Boutt, D. F., Munk, L., Moran, B. J., McKnight, S., Corkran, D., & Jenckes, J.",Abstracts with programs - Geological Society of America
+W4312831907,"Regan, S. P., Marble, S., Williams, M. L., Roeske, S. M., & Hofmann, F.",Abstracts with programs - Geological Society of America
+W4312950784,"Geosciences, U., Moran, B. J., Boutt, D. F., Munk, L., Jenckes, J., & McKnight, S.",Abstracts with programs - Geological Society of America
+W4312970789,"Russo, A. A., Jenckes, J., Munk, L., Boutt, D. F., Kirshen, A., & Munk, J.",Abstracts with programs - Geological Society of America
+W4312971854,"Corkran, D., Boutt, D. F., Moran, B. J., Munk, L., McKnight, S., Kirshen, A., & Jenckes, J.",Abstracts with programs - Geological Society of America
+W4320082584,"Ibarra, D. E., Munk, L., Gagnon, C., Chang, N., Jenckes, J., Moran, B. J., Boutt, D. F., Emproto, C. R., & Benson, T.",Abstracts with programs - Geological Society of America
+W4388417016,"McKnight, S., Jenckes, J., Boutt, D. F., Moran, B., Munk, L., Corkran, D., & Kirshen, A.",Research Square
+W4389359482,"Butler, K. L., Munk, L., Munk, L., Boutt, D. F., Boutt, D. F., Kennedy, J., Kennedy, J., Morris, N., Morris, N., Blake, M. R., Blake, M. R., Ibarra, D. E., & Ibarra, D. E.",Abstracts with programs - Geological Society of America
+W4399186433,"Munk, L., & Boutt, D. F.",EAGE Annual Conference & Exhibition
+W4403504662,"Hamilton, G., Reusch, D. N., Wieland, L., Robert, W., Felch, M. M., Munk, L., & Bradley, D. C.",Abstracts with programs - Geological Society of America
+W4403857192,"Benson, T. R., Butler, K. L., Butler, K. L., Boutt, D. F., Boutt, D. F., Hemming, S. R., Hemming, S. R., Munk, L., Munk, L., Rasbury, E. T., Rasbury, E. T., Aramayo, L., Aramayo, L., Bongiovanni, A., Bongiovanni, A., Castro, I., Castro, I., Fava, L., Fava, L., ... Wooton, K. M.",Abstracts with programs - Geological Society of America
+W4403858029,"Muñoz, S. D., Smith, L. C., Smith, L. C., Piccione, G. G., Piccione, G. G., Ramos, E. J., Ramos, E. J., Esenther, S. E., Esenther, S. E., Jenckes, J., Jenckes, J., Munk, L., Munk, L., Ibarra, D. E., & Ibarra, D. E.",Abstracts with programs - Geological Society of America
+W4403858191,"Blake, M. R., Butler, K. L., Munk, L., Boutt, D. F., Morris, N., Kennedy, J., Saha, P., Ibarra, D. E., & Custado, M. J.",Abstracts with programs - Geological Society of America
+W4409345040,"Coombs, M., Carling, G. T., Munk, L., Jenckes, J., Bickmore, B. R., Rey, K. A., Thompson, A. N., Fernández, D. P., Bergstrom, A. J., & Gomez, T.",Frontiers in Water
+W4411146556,"Blake, M. R., Munk, L., Boutt, D. F., Morris, N., Kennedy, J., Saha, P., Ibarra, D. E., Custado, M. J., & Butler, K. L.",Abstracts with programs - Geological Society of America
+W4414232542,"McKnight, S., Jenckes, J., Boutt, D. F., Moran, B., Munk, L., Corkran, D., & Kirshen, A.",Research Square
+W4417217382,"DeShong, T., Boutt, D. F., Benson, T. R., Butler, K. L., Munk, L., & Gibbons, L.",Abstracts with programs - Geological Society of America
+W4417217767,"Pennington, R., Butler, K., McCaffrey, O. F., Ibarra, D. E., Munk, L., & Boutt, D. F.",Abstracts with programs - Geological Society of America
+W4417217907,"Blake, M. R., Butler, K. L., Morris, N., Saha, P., Kennedy, J., Ibarra, D. E., Munk, L., & Boutt, D. F.",Abstracts with programs - Geological Society of America
+W4417218261,"Rangel-Landeros, I. A., Cawood, A. J., Butler, K. L., Sickmann, Z. T., Blake, M. R., Swanson, B., Ibarra, D. E., Gagnon, C. A., Munk, L., Boutt, D. F., Ferrill, D. A., & Smart, K. J.",Abstracts with programs - Geological Society of America
+W7124277511,"Boutt, D. F., Huba, J. C., Munk, L., & Butler, K. L.",Hydrology
+W7147116857,"Cawood, A. J., Ferrill, D. A., Rangel-Landeros, I. A., Butler, K. L., Ibarra, D. E., Sickmann, Z. T., Blake, M. R., Swanson, B., Smart, K. J., Munk, L., Boutt, D. F., Stockli, L. D., Stockli, D. F., & Gagnon, C. A.",NA
+W7163735089,"Muñoz, S. D., Smith, L. C., Piccione, G. G., Esenther, S. E., Ramos, E. J., Jenckes, J., Munk, L., & Ibarra, D. E.",Geophysical Research Letters
+W7167886922,"Blake, M., Butler, K., Munk, L., Boutt, D. F., Morris, N., Kennedy, J., Saha, P., Serotta, J., Tompkins, H., Williams, G., Vengosh, A., Evaristo, J., & Ibarra, D. E.",Applied Geochemistry
+W7172536796,"Brandhuber, M., DiMento, B. P., Gerrish, H., Jenckes, J., Russo, A. A., Grond, K., Munk, L., Iken, K. B., & Tomco, P. L.",Marine Environmental Research
+W7203737689,"Cawood, A. J., Ferrill, D. A., Rangel-Landeros, I. A., Butler, K. L., Ibarra, D. E., Sickmann, Z. T., Blake, M. R., Swanson, B., Smart, K. J., Munk, L., Boutt, D. F., Stockli, L. D., Stockli, D. F., & Gagnon, C. A.",Solid Earth
+W7213344691,"Redman, Z. C., Matyas, W., Jenckes, J., Bien-Aime, R., Russo, A. A., & Munk, L.",Water
+W7224938435,"McCaffrey, O. F., Butler, K. L., Benson, T. R., Ibarra, D. E., Williams, G. D. Z., Boutt, D. F., Hutchison, F. G., Rasbury, E. T., Wooton, K. M., Hatton, K., & Munk, L.",Ore Geology Reviews
+W7225106602,"Butler, K. L., Blake, M. R., Ibarra, D., Morris, N., Kennedy, J., Saha, P., Munk, L., Boutt, D., Williams, G. D. Z., Vengosh, A., & Evaristo, J.",Goldschmidt Abstracts
+W7225878648,"Jenckes, J., Russo, A. A., Munk, L., Munk, J., Boutt, D. F., & Gabriel, A.",Abstracts with programs - Geological Society of America
+W7225894322,"Jenckes, J., Russo, A. A., Muñoz, S., Munk, J., & Munk, L.",Abstracts with programs - Geological Society of America
+W4389939255,"Pietruszka, D. K., Hanchar, J. M., Tornos, F., Wirth, R., Graham, N. A., Severin, K. P., Velasco, F., Steele‐MacInnis, M., & Bain, W. M.",Nature Communications
+W4322488738,"Case, G., Karl, S. M., Regan, S. P., Johnson, C. A., Ellison, E. T., Caine, J. S., Holm‐Denoma, C. S., Pianowski, L. S., & Marsh, J.",Mineralium Deposita
+W4226277639,"Benowitz, J. A., Roeske, S. M., Regan, S. P., Waldien, T. S., Elliott, J., & O’Sullivan, P.",Geosphere
+W4365457877,"Newell, D. L., Benowitz, J. A., Regan, S. P., & Hiett, C. D.",Geology
+W3194879241,"Regan, S. P., Benowitz, J. A., Waldien, T. S., Holland, M. E., Roeske, S. M., O’Sullivan, P., & Layer, P. W.",Terra Nova
+W3164148323,"Graham, N. A., Larsen, J. F., Tasa, K. Y., deGraffenried, R., Cashman, K. V., & McCartney, K.",Earth and Planetary Science Letters
+W3205076946,"Loewen, M. W., Dietterich, H. R., Graham, N. A., & Izbekov, P.",Bulletin of Volcanology
+W4318317714,"Moshrefzadeh, J., Izbekov, P., Loewen, M. W., Larsen, J. F., & Regan, S. P.",Journal of Volcanology and Geothermal Research
+W4281727244,"Regan, S. P., Williams, M. L., Zieman, L. J., Chiarenzelli, J., Jercinovic, M. J., Cousens, B. L., Webber, J. R., & Aspler, L. B.",Precambrian Research
+W4312336853,"Condit, C. B., Bonamici, C. E., Guevara, V. E., Williams, M. L., Karlstrom, K. E., Aikin, N., Regan, S. P., & Roberts, N. M.",Abstracts with programs - Geological Society of America
+W4408545648,"Peck, W. H., Regan, S. P., Blum, T. B., Valley, J. W., & Timothy, S. C.",Journal of Petrology
+W7155408130,"Lee, D. W. J., Plank, T., Ding, S., Mutch, E., Moussallam, Y., Moshrefzadeh, J., Graham, N. A., & Larsen, J.",Earth and Planetary Science Letters
+W3189678324,"Wildland, A., Wypych, A., Regan, S. P., & Holland, M. E.",NA
+W4212876361,"Twelker, E., Newberry, R. J., Wypych, A., Naibert, T., Wildland, A., Sicard, K. R., Regan, S. P., Athey, J., Wyatt, W., & Lopez, J.",NA
+W4387305312,"Loewen, M. W., Wallace, K. L., Lubbers, J. E., Ruth, D. C. S., Izbekov, P., Larsen, J. F., & Graham, N. A.",NA
+W4386468195,"Gavel, M., Regan, S. P., Holland, M., Wildland, A., Wypych, A., Naibert, T., & Twelker, E.",NA
+W4403438185,"Truskowski, C., Walser, S. L., Larsen, M. C., Nicolazzo, J., Gillis, R. J., Bull, K. F., Regan, S. P., Darrow, M. M., & Montayne, S.",NA
+W4206900437,"Gavel, M., Wypych, A., Naibert, T., Avirett, D., Barrera, M., Hubbard, A., Newberry, R. J., Regan, S. P., Twelker, E., Wildland, A., & Wyatt, W.",NA
+W4403361103,"Truskowski, C., Gillis, R. J., Bull, K. F., & Regan, S. P.",NA
+W4406134694,"Wypych, A., Naibert, T., Newberry, R. J., Twelker, E., Gavel, M. M., Wildland, A., Szumigala, D. J., Regan, S. P., Avirett, D., Barrera, M., Bernard, C., Blackwell, N., Fessenden, S., Harvey, D., Hubbard, A., Masterman, S., Muller, I., Turner, M., & Wyatt, W.",NA
+W4416186272,"Larsen, M. C., Bull, K. F., Truskowski, C., Walser, S. L., Regan, S. P., Gillis, R. J., Nicolazzo, J., & Darrow, M. M.",NA
+W4207063953,"Gavel, M., Wypych, A., Naibert, T., Avirett, D., Barrera, M., Hubbard, A., Newberry, R. J., Regan, S. P., Twelker, E., Wildland, A., & Wyatt, W.",NA
+W4213238450,"Chiarenzelli, J. R., Regan, S. P., Lupulescu, M. V., Peck, W., & Hanchar, J. M.",Precambrian Research
+W4226226387,"Peck, W., Regan, S. P., & Timothy, S. C.",Abstracts with programs - Geological Society of America
+W4313117887,"Hofmann, F., Cooperdock, E. H. G., & McDermott, R. J.",Abstracts with programs - Geological Society of America
+W4389357281,"Cassady, V., Petryshyn, V. A., Bernhard, J. M., Hofmann, F., Berelson, W., Cooperdock, E. H. G., & Corsetti, F. A.",Abstracts with programs - Geological Society of America
+W4392655087,"Ludat, A. L., Friedrich, A., Hofmann, F., Bolhar, R., & Hahn, T.",EGU General Assembly Conference Abstracts
+W4403857270,"Cassady, V., Petryshyn, V. A., Bernhard, J. M., Hofmann, F., Celestian, A. J., Berelson, W., Cooperdock, E. H. G., Bottjer, D. J., & Corsetti, F. A.",Abstracts with programs - Geological Society of America
+W4403857516,"Rojas, A., Cooperdock, E. H. G., Hofmann, F., & Lackey, J. S.",Abstracts with programs - Geological Society of America
+W4403857610,"Regan, S. P., Miller, M., Holland, M., Waldien, T. S., Kylander-Clark, A. R., Taylor, P., & Hofmann, F.",Abstracts with programs - Geological Society of America
+W4403858148,"Hofmann, F., Cooperdock, E. H. G., & McDermott, R. J.",Abstracts with programs - Geological Society of America
+W4403858519,"Ludat, A. L., Friedrich, A., Hofmann, F., Bolhar, R., Hahn, T., Dusingizimana, M. W., Aßbichler, D., & Zwingmann, H.",Abstracts with programs - Geological Society of America
+W4408444787,"Ludat, A. L., Aßbichler, D., Friedrich, A., Hofmann, F., Bolhar, R., Hahn, T., & Zwingmann, H.",EGU General Assembly Conference Abstracts
+W4410841770,"Wasser, V. K., Izbekov, P., Lopez, T. M., Graham, N. A., & Moshrefzadeh, J.",Geology
+W4411146646,"Regan, S. P., Roeske, S. M., Schmitz, M. D., Miller, M., Marble, S., & Hofmann, F.",Abstracts with programs - Geological Society of America
+W4411148016,"Miller, M., Regan, S. P., Patton, A., Waldien, T. S., Taylor, P., Kylander-Clark, A. R., & Graham, N. A.",Abstracts with programs - Geological Society of America
+W4417217232,"deGraffenried, R., Colombier, M., Graham, N. A., & Cáceres, F.",Abstracts with programs - Geological Society of America
+W4417217370,"Talbot, I., Hofmann, F., Acosta, M. D., & Treeck, C. J. V.",Abstracts with programs - Geological Society of America
+W4417217837,"Acosta, M. D., Descutner, K., Hofmann, F., Talbot, I., Eastman, K. A., Griffith, A., & Reed, M. H.",Abstracts with programs - Geological Society of America
+W4417219112,"Regan, S. P., Schmitz, M. D., Roeske, S. M., Marble, S., Hofmann, F., & Patton, A.",Abstracts with programs - Geological Society of America
+W7150984834,"Kimbrough, D. L., Grove, M. J., Camp, V. E., Hofmann, F., & Greene, K.",Geology
+W7153541409,"Jaeggi-Castagno, J., Guereschi, A. B., Martino, R., Hofmann, F., & Regan, S. P.",Journal of South American Earth Sciences
+W7164742473,"Jaeggi-Castagno, J., Guereschi, A. B., Martino, R., Hofmann, F., & Regan, S. P.",Journal of South American Earth Sciences
+W7166817848,"Moshrefzadeh, J., Naibert, T., Hofmann, F., Newberry, R. J., Twelker, E., & Buchanan, J.",NA
+W7225863967,"Patton, A., Regan, S., Waldien, T. S., & Hofmann, F.",Abstracts with programs - Geological Society of America
+W7225872459,"Acosta, M. D., Nayda, T., Hofmann, F., Talbot, I., Larimer, D., & Treek, C. V.",Abstracts with programs - Geological Society of America
+W7225873033,"Alaska, S. o., Gillis, R., Regan, S. P., Hofmann, F., O’Sullivan, P., & Schmitz, M.",Abstracts with programs - Geological Society of America
+W7225882696,"Regan, S. P., Hofmann, F., Schmitz, M., Gillis, R., Waldien, T. S., Johnson, S., Condit, C. B., & Muller, V.",Abstracts with programs - Geological Society of America
+W7225905529,"Hofmann, F., Regan, S. P., Patton, A., & Aeo, R.",Abstracts with programs - Geological Society of America
+W7225911050,"Kimbrough, D. L., Grove, M. J., Camp, V., Hofmann, F., & Green, K.",Abstracts with programs - Geological Society of America
+W4307966547,"Demessie, A. A., Park, Y., Singh, P., Moses, A. S., Korzun, T., Sabei, F. Y., Albarqi, H. A., Campos, L., Wyatt, C. R., Farsad, K., Dhagat, P., Sun, C., Taratula, O. R., & Taratula, O.",Small Methods
+W4407709297,"Jander, A., Dhagat, P., & Rivard, C.",Journal of Applied Physics
+W4416976212,"Rivard, C., Jander, A., & Dhagat, P.",npj Spintronics
+W4318829305,"Zhao, B., Karpiak, B., Hoque, M. A., Dhagat, P., & Dash, S. P.",Journal of Physics D Applied Physics
+W4310490268,"Bira, N., Dhagat, P., & Davidson, J. R.",Frontiers in Materials
+W4400555191,"Nichols, D. M., Berg, J. G., Taniguchi, T., Watanabe, K., Dhagat, P., Deshpande, V. V., Jander, A., & Minot, E. D.",Journal of Applied Physics
+W4379409314,"Gokhale, V. J., Jander, A., Downey, B. P., Dhagat, P., Mack, S., Katzer, D. S., Roussos, J., & Meyer, D. J.",IEEE Transactions on Ultrasonics Ferroelectrics and Frequency Control
+W4213274777,"Bira, N., Dhagat, P., & Davidson, J. R.",Smart Materials and Structures
+W4403390484,"Rivard, C., Jander, A., & Dhagat, P.",IEEE Magnetics Letters
+W4403014696,"Masood, K. I., Raich, R., Jander, A., & Dhagat, P.",Journal of Magnetism and Magnetic Materials
+W4412824453,"Rivard, C., Jander, A., & Dhagat, P.",Applied Physics Letters
+W4413020016,"Aislinn, P. J., Winchell, A. J., Lambertson, E., Moret, P., Zuehlsdorff, T. J., Elsaesser, N., Huurman, J., Rodriguez, A. I. S., Sofer, Z., Dhagat, P., & Ostroverkhova, O.",MRS Advances
+W4311347332,"Demessie, A. A., Park, Y., Singh, P., Moses, A. S., Korzun, T., Sabei, F. Y., Albarqi, H. A., Campos, L., Wyatt, C. R., Farsad, K., Dhagat, P., Sun, C., Taratula, O. R., & Taratula, O.",Small Methods
+W4404688581,"Masood, K., Jander, A., & Dhagat, P.",IEEE Transactions on Magnetics
+W4226469181,"Valentino, D. W., Chiarenzelli, J. R., Orndorff, W. D., Regan, S. P., & Valentino, J. D.",Abstracts with programs - Geological Society of America
+W4312238168,"Pedrick, F., Roeske, S. M., Regan, S. P., & Grant, B.",Abstracts with programs - Geological Society of America
+W4312238636,"McDermott, R. J., Kreiner, D. C., Jones, J. V., & Regan, S. P.",Abstracts with programs - Geological Society of America
+W4312335022,"Muller, I., Regan, S. P., Holland, M. E., & Suhey, J.",Abstracts with programs - Geological Society of America
+W4312442309,"Wildland, A., Regan, S. P., Twelker, E., Wypych, A., Naibert, T., & Holland, M.",Abstracts with programs - Geological Society of America
+W4312642558,"Unaffilated, Benowitz, J. A., Regan, S. P., Elder, W., & Newell, D. L.",Abstracts with programs - Geological Society of America
+W4312722223,"Holland, M., Regan, S. P., Daniel, C. G., & Doe, M. F.",Abstracts with programs - Geological Society of America
+W4312742826,"Regan, S. P., Marble, S., Nordman, L., & Benowitz, J. A.",Abstracts with programs - Geological Society of America
+W4377078609,"Survey, U. G., Walsh, G. J., Valley, P. M., Regan, S. P., Geer, P. S., Merschat, A., Suarez, K., Aleinikoff, J. N., & McAleer, R. J.",Abstracts with programs - Geological Society of America
+W4389353268,"Holland, M., Regan, S. P., Twelker, E., Wypych, A., Wildland, A., & Gavel, M. M.",Abstracts with programs - Geological Society of America
+W4389354007,"Dumond, G., Joshi, G., Gonçalves, P., Mahan, K. H., Regan, S. P., Williams, M., & Jercinovic, M. J.",Abstracts with programs - Geological Society of America
+W4389358190,"Marble, S., Regan, S. P., Schmitz, M. D., Roeske, S. M., Costigan, J., Nordman, L., & Capps, D. M.",Abstracts with programs - Geological Society of America
+W4389358474,"McDermott, R. J., Kreiner, D. C., Jones, J., & Regan, S. P.",Abstracts with programs - Geological Society of America
+W4389582617,"Newell, D. L., Benowitz, J. A., Regan, S. P., & Hiett, C. D.",Goldschmidt Abstracts
+W4403057210,"Regan, S. P., & al., e.",NA
+W4403220844,"Regan, S. P., & al., e.",NA
+W4403449267,"Regan, S. P., Marble, S., Roeske, S. M., Schmitz, M. D., Miller, M., & Costigan, J.",Abstracts with programs - Geological Society of America
+W4403449473,"Case, G., & Regan, S. P.",Abstracts with programs - Geological Society of America
+W4403481130,"Marble, S., Regan, S. P., Roeske, S. M., & Nordman, L.",Abstracts with programs - Geological Society of America
+W4403481361,"Roeske, S. M., Grant, B., Waldien, T. S., & Regan, S. P.",Abstracts with programs - Geological Society of America
+W4403506599,"Survey, U. G., Walsh, G. J., Valley, P. M., Deasy, R. T., Merschat, A., Aleinikoff, J. N., McAleer, R. J., & Regan, S. P.",Abstracts with programs - Geological Society of America
+W4403856928,"Waldien, T. S., Regan, S. P., Murray, B., Miller, M., & Costigan, J.",Abstracts with programs - Geological Society of America
+W4403857503,"Holland, M. E., Mohr, M. T., Regan, S. P., Paquette, L., Schmitz, M. D., & Chiarenzelli, J. R.",Abstracts with programs - Geological Society of America
+W4407579241,"Carter, M. W., Spears, D. B., Latane, V. M., Crider, E. A., Weinmann, B. R., Mangum, H. E., McAleer, R. J., Horton, J. W., Shah, A. K., & Regan, S. P.",Scientific investigations map
+W4411146758,"Sternhagen, S., Holland, M., & Regan, S. P.",Abstracts with programs - Geological Society of America
+W4411147723,"Peck, W., Regan, S. P., Blum, T. B., Valley, J. W., & Timothy, S. C.",Abstracts with programs - Geological Society of America
+W4412437301,"Buchanan, J., Gavel, M., Barrera, M., Regan, S. P., & Newberry, R. J.",NA
+W4415250376,"Waldien, T. S., Regan, S. P., & Housen, B.",NA
+W4416186262,"Larsen, M. C., Regan, S. P., Gillis, R. J., Nicolazzo, J., Darrow, M. M., Bull, K. F., Walser, S. L., & Truskowski, C.",NA
+W4417217108,"Norwood, L., Regan, S. P., Acosta, M. D., Broman, B., Nieuwenhuyse, R. V., & Kylander-Clark, A. R.",Abstracts with programs - Geological Society of America
+W4417217794,"Waldien, T. S., & Regan, S. P.",Abstracts with programs - Geological Society of America
+W7125375472,"Walsh, G. J., Regan, S. P., Geer, P. S., Merschat, A., Suarez, K., McAleer, R. J., Walton, M. S., & Crider, E. A.",Scientific investigations map
+W7131132175,"Holland, M. E., & Regan, S. P.",NA
+W7138997657,"Holland, M. E., & Regan, S. P.",Geosphere
+W7155552671,"McDermott, R. G., Kreiner, D. C., Jones, J. V., Regan, S. P., Metcalf, J. R., & Flowers, R. M.",Chemical Geology
+W7162806967,"Naibert, T., Buchanan, J., Wilson, K., Regan, S. P., Truskowski, C., Szumigala, D. J., & Norwood, L.",NA
+W4220894910,"Chen, G., Pine, D. S., Brotman, M. A., Smith, A. R., Cox, R. W., Taylor, P. A., & Haller, S. P.",NeuroImage
+W4310286392,"Hansen, A., & Cox, R. W.",Routledge eBooks
+W4399597750,"Reynolds, R. C., Glen, D., Chen, G., Saad, Z. S., Cox, R. W., & Taylor, P. A.",Imaging Neuroscience
+W4409583349,"Sadiq, M. F., Naqvi, M. W., Çetin, B., Adeyanju, E. D., Daniels, J. L., & Uduebor, M.",Transportation Geotechnics
+W3210230948,"Chen, G., Pine, D. S., Brotman, M. A., Smith, A. R., Cox, R. W., & Haller, S. P.",NeuroImage
+W4285504812,"Chen, G., Taylor, P. A., Stoddard, J., Cox, R. W., Bandettini, P. A., & Pessoa, L.",Aperture Neuro
+W4315640531,"Sadiq, M. F., Naqvi, M. W., Çetin, B., & Daniels, J. L.",Transportation Research Record Journal of the Transportation Research Board
+W4292604294,"Awaysheh, A., Bonet, R., & Ortega, J.",Production and Operations Management
+W4400643209,"Taylor, P. A., Glen, D., Chen, G., Cox, R. W., Hanayik, T., Rorden, C., Nielson, D. M., Rajendra, J. K., & Reynolds, R. C.",Imaging Neuroscience
+W4390457723,"Uduebor, M., Daniels, J. L., Saulick, Y., Naqvi, M. W., & Çetin, B.",International Journal of Geotechnical Engineering
+W4385445121,"Uduebor, M., Daniels, J. L., Adeyanju, E. D., Sadiq, M. F., & Çetin, B.",International Journal of Geotechnical Engineering
+W4360614542,"Naqvi, M. W., Sadiq, M. F., Çetin, B., Uduebor, M., & Daniels, J. L.",ASCE Geo-Congress
+W4360614539,"Malisher, M. L., Daniels, J. L., Uduebor, M., & Saulick, Y.",ASCE Geo-Congress
+W4385185353,"Freitas, K. A. d., Flynn, B. B., Paiva, E. L., & Awaysheh, A.",International Journal of Operations & Production Management
+W4393118176,"Flynn, P. J., Awaysheh, A., Bliese, P. D., & Flynn, B. B.",Journal of Management
+W4401880061,"Pelto, C. M., Aggarwal, R., Ahan, R., Armstrong, M., Bebek, M., Blount, M. A., Chowdhury, S., Chuah, J., Connor, C., DeBonis, T. J., Dhayal, B., Dougless, A., Gokhale, S., Jain, A., Javvaji, V., Kamisetty, K., Kim, G., Kpetehoto, J., Kuan, C., ... Natarajan, S.",IEEE Symposium on VLSI Technology and Circuits (VLSI Technology and Circuits)
+W4391792405,"Awaysheh, A., Narayanan, S., & Jacobs, B. W.",Production and Operations Management
+W4412086122,"Naqvi, M. W., Sadiq, M. F., Çetin, B., Uduebor, M., & Daniels, J. L.",Cold Regions Science and Technology
+W4220714651,"Naqvi, M. W., Sadiq, M. F., Çetin, B., Uduebor, M., & Daniels, J. L.",ASCE Geo-Congress
+W4220999970,"Brooks, T., Daniels, J. L., Uduebor, M., Çetin, B., & Naqvi, M. W.",ASCE Geo-Congress
+W4293765144,"Uduebor, M., Adeyanju, E. D., Saulick, Y., Daniels, J. L., & Çetin, B.",ASCE International Conference on Transportation and Development (ICTD)
+W4220671267,"Uduebor, M., Daniels, J. L., Naqvi, M. W., & Çetin, B.",ASCE Geo-Congress
+W4380485037,"Uduebor, M., Adeyanju, E. D., Saulick, Y., Daniels, J. L., & Çetin, B.",ASCE International Airfield and Highway Pavements Conference
+W4385962017,"Saulick, Y., Malisher, M. L., Familusi, A., & Daniels, J. L.",Geotechnical Testing Journal
+W4312190943,"Farmer, N. M., Tuason, R. T. S., Kazmi, N., Flynn, S. L., Mitchell, V. M., Middleton, K. R., Cox, R. W., Franklin, K., Gordon, T., Baginski, A. M., & Wallen, G. R.",BMC Medical Research Methodology
+W4396773150,"Naqvi, M. W., Sadiq, M. F., Çetin, B., Uduebor, M., & Daniels, J. L.",Cold Regions Engineering
+W4407996242,"Naqvi, M. W., Sadiq, M. F., Çetin, B., & Daniels, J. L.",Geotechnical Frontiers
+W4411616624,"Naqvi, M. W., Sadiq, M. F., Çetin, B., & Daniels, J. L.",Transportation Research Record Journal of the Transportation Research Board
+W4396615465,"Uduebor, M., Familusi, A., Saulick, Y., Daniels, J. L., & Çetin, B.",International Foundations Congress and Equipment Expo (IFCEE)
+W3212350995,"Daniels, J. L., Langley, W. G., Uduebor, M., & Çetin, B.",Geo-Extreme
+W4220838865,"Chen, G., Taylor, P. A., Stoddard, J., Cox, R. W., Bandettini, P. A., & Pessoa, L.",Aperture Neuro
+W4399608609,"Adeyanju, E. D., Uduebor, M., Saulick, Y., Daniels, J. L., & Çetin, B.",ASCE International Conference on Transportation and Development (ICTD)
+W4317602992,"Youner, E. R., Cox, R. W., & Zapanta, P. E.",Cureus
+W4411643138,"Adeyanju, E. D., Saulick, Y., Daniels, J. L., Familusi, A., Ogunro, V. O., & Çetin, B.",Transportation Geotechnics
+W4399608613,"Adeyanju, E. D., Saulick, Y., Ogunro, T. V., Daniels, J. L., & Çetin, B.",ASCE International Conference on Transportation and Development (ICTD)
+W4415444032,"Saenz, A., Ostroverkhova, O., & Dhagat, P.",IEEE Journal on Exploratory Solid-State Computational Devices and Circuits
+W7123722472,"Jander, A., Dhagat, P., Cate, R., & Storksdieck, M.",IEEE Frontiers in Education Conference (FIE)
+W7171824060,"Uduebor, M., Daniels, J. L., Ogunro, V. O., & Saulick, Y.",Geotechnical and Geological Engineering
+W7172273615,"Prakasan, L., Dhagat, P., Kandadai, N., & Subbaraman, H.",IEEE Journal on Flexible Electronics
+W4386823834,"Gokhale, V. J., Downey, B. P., Dhagat, P., Jander, A., Mack, S., Katzer, D. S., Roussos, J., & Meyer, D.","Solid-State Sensors, Actuators, and Microsystems Workshop (Hilton Head Workshop)"
+W4386429370,"Dhagat, P., Gokhale, V. J., Jander, A., Downey, B. P., Rivard, C., Mack, S., Katzer, D. S., Roussos, J., & Meyer, D. J.",IEEE International Magnetic Conference - Short Papers (INTERMAG Short Papers)
+W4404043391,"Adeyanju, E. D., Bautista, E., Lanotte, M., Daniels, J. L., & Çetin, B.",SSRN Electronic Journal
+W4411027778,"Adeyanju, E. D., Saulick, Y., Uduebor, M., Daniels, J. L., Çetin, B., & Sadiq, M. F.",SSRN Electronic Journal
+W4415692815,"Uduebor, M., Daniels, J. L., Naqvi, M. W., & Çetin, B.",Geo-Extreme
+W4417198774,"Adeyanju, E. D., Bautista, E., Lanotte, M., Daniels, J. L., & Çetin, B.",Transportation Research Record Journal of the Transportation Research Board
+W7133828767,"Uduebor, M., Ogunro, V. O., & Daniels, J. L.",ASCE Geo-Congress
+W7162680865,"Jander, A., Dhagat, P., Rivard, C., & Pohlmann, B.",NA
+W7163535481,"Uduebor, M., Daniels, J. L., Naqvi, M. W., & Cetin, B.",International Journal of Pavement Engineering
+W7203912763,"Dhagat, P., Cate, R., Najim, N., & Storksdieck, M.",ASEE Annual Conference & Exposition
+W7221796977,"Mostafavi, S., & Cox, R. W.",arXiv (Cornell University)
+W4390904004,"Kacena, M. A., Plotkin, L. I., & Fehrenbacher, J. C.",Current Osteoporosis Reports
+W3203609493,"Awosanya, O. D., Dalloul, C. E., Blosser, R. J., Dadwal, U. C., Carozza, M., Boschen, K. E., Klemsz, M. J., Johnston, N. A., Bruzzaniti, A., Robinson, C. M., Srour, E. F., & Kacena, M. A.",Bone
+W4390979923,"Parker, R. S., Nazzal, M. K., Morris, A. J., Fehrenbacher, J. C., White, F. A., Kacena, M. A., & Natoli, R. M.",Current Osteoporosis Reports
+W4223553726,"You, X., Dadwal, U. C., Lenburg, M. E., Kacena, M. A., & Charles, J. F.",mSystems
+W4390889485,"Creecy, A., Awosanya, O. D., Harris, A., Qiao, X., Ozanne, M. V., Toepp, A. J., Kacena, M. A., & McCune, T. R.",Current Osteoporosis Reports
+W3200364674,"Mijit, M., Caston, R. A., Gampala, S., Fishel, M. L., Fehrenbacher, J. C., & Kelley, M. R.",Journal of Cellular Signaling
+W4390812034,"Awosanya, O. D., Harris, A., Creecy, A., Qiao, X., Toepp, A. J., McCune, T. R., Kacena, M. A., & Ozanne, M. V.",Current Osteoporosis Reports
+W4390979694,"Harris, A., Creecy, A., Awosanya, O. D., McCune, T. R., Ozanne, M. V., Toepp, A. J., Kacena, M. A., & Qiao, X.",Current Osteoporosis Reports
+W3193120023,"Fehrenbacher, J. C., & McCarson, K. E.",Current Protocols
+W4390893018,"Margetts, T. J., Karnik, S. J., Wang, H. S., Plotkin, L. I., Oblak, A. L., Fehrenbacher, J. C., Kacena, M. A., & Movilă, A.",Current Osteoporosis Reports
+W4391684907,"Margetts, T. J., Wang, H. S., Karnik, S. J., Plotkin, L. I., Movilă, A., Oblak, A. L., Fehrenbacher, J. C., & Kacena, M. A.",Current Osteoporosis Reports
+W4390975730,"Wang, H. S., Karnik, S. J., Margetts, T. J., Plotkin, L. I., Movilă, A., Fehrenbacher, J. C., Kacena, M. A., & Oblak, A. L.",Current Osteoporosis Reports
+W4220853854,"Li, W., Syed, F., Yu, R., Yang, J., Xia, Y., Relich, R. F., Russell, P. M., Zhang, S., Khalili, M., Huang, L., Kacena, M. A., Zheng, X., & Yu, Q.",Frontiers in Immunology
+W3201598665,"Chitwood, J. R., Chakraborty, N., Hammamieh, R., Moe, S. M., Chen, N. X., Kacena, M. A., & Natoli, R. M.",Biomarkers
+W4283171352,"Awosanya, O. D., Dadwal, U. C., Imel, E. A., Yu, Q., & Kacena, M. A.",Current Osteoporosis Reports
+W4390839025,"Nazzal, M. K., Morris, A. J., Parker, R. S., White, F. A., Natoli, R. M., Fehrenbacher, J. C., & Kacena, M. A.",Current Osteoporosis Reports
+W4297884013,"Behrouzi, A., Kelley, M. R., & Fehrenbacher, J. C.",Journal of Cellular Signaling
+W4390975058,"Morris, A. J., Parker, R. S., Nazzal, M. K., Natoli, R. M., Fehrenbacher, J. C., Kacena, M. A., & White, F. A.",Current Osteoporosis Reports
+W4289517562,"Alentado, V. J., Knox, A. M., Staut, C. d. A., McGuire, A. C., Chitwood, J. R., Mostardo, S. L., Shaikh, M. Z., Blosser, R. J., Dadwal, U. C., Chu, T. G., Collier, C. D., Li, J., Liu, Z., Kacena, M. A., & Natoli, R. M.",Frontiers in Endocrinology
+W4391384059,"Nazzal, M. K., Morris, A. J., Parker, R. S., White, F. A., Natoli, R. M., Kacena, M. A., & Fehrenbacher, J. C.",Current Osteoporosis Reports
+W3199504914,"Battina, H. L., Alentado, V. J., Srour, E. F., Moliterno, A. R., & Kacena, M. A.",Experimental Hematology
+W4404217450,"You, X., Yan, J., Herzog, J., Nobakhti, S., Campbell, R., Hoke, A. V., Hammamieh, R., Sartor, R. B., Shefelbine, S. J., Kacena, M. A., Chakraborty, N., & Charles, J. F.",Bone Research
+W4405558671,"Xia, H., Jerde, T. J., & Fehrenbacher, J. C.",Frontiers in Molecular Neuroscience
+W4410619037,"Azees, P. A. A., Rajesh, R., Block, T. J., Dean, D. D., Yeh, C., Capitano, M. L., Kacena, M. A., Chen, X., & Marinković, M.",Current Osteoporosis Reports
+W4293397146,"Xie, J., Klemsz, M. J., Kacena, M. A., Sandusky, G. E., Zhang, X., & Kaplan, M. H.",Journal of Medical Virology
+W4386435103,"Ho, A., Ngala, B., Yamada, C., Garcia, C., Duarte, C. L., Akkaoui, J., Ciolac, D., Nusbaum, A., Kochen, W. R., Efremova, D., Groppa, S. A., Nathanson, L., Bissel, S. J., Oblak, A. L., Kacena, M. A., & Movilă, A.",Biomedicine & Pharmacotherapy
+W4211124640,"Behrouzi, A., Xia, H., Thompson, E. L., Kelley, M. R., & Fehrenbacher, J. C.",International Journal of Molecular Sciences
+W4391321515,"Karnik, S. J., Margetts, T. J., Wang, H. S., Movilă, A., Oblak, A. L., Fehrenbacher, J. C., Kacena, M. A., & Plotkin, L. I.",Current Osteoporosis Reports
+W4391581618,"Xiong, X., Huo, Q., Li, K., Cui, C., Chang, C., Park, C., Ku, B., Hong, C., Lim, H., Pandya, P. H., Saadatzadeh, M. R., Bijangi‐Vishehsaraei, K., Lin, C., Kacena, M. A., Pollok, K. E., Chen, A. B., Liu, J., Thompson, W. R., Li, X., ... Yokota, H.",Theranostics
+W3166140515,"Cunningham, G. M., Shen, F., Wu, X., Cantor, E., Gardner, L., Philips, S., Jiang, G., Bales, C. L., Tan, Z., Liu, Y., Wan, J., Fehrenbacher, J. C., & Schneider, B. P.",PLoS Genetics
+W4388060296,"Awaysheh, A., Klassen, R. D., Shafiq, A., & Johnson, P. F.",Supply Chain Management An International Journal
+W4402652277,"Awaysheh, A., & Flynn, B. B.",Production and Operations Management
+W7203442515,"Awaysheh, A., Chen, C. J., & Wu, O. Q.",Management Science
+W4412708421,"Ganguly, U., Margetts, T. J., Varner, W., Nazzal, M. K., Parker, R. S., Xia, H., Morris, A. J., Warsame, A., Mostardo, S. L., Yadav, K., Blosser, R. J., Gergely, I., Tucker, A., Karnik, S. J., Li, J., Waning, D. L., Creecy, A., Fehrenbacher, J. C., & Kacena, M. A.",Bone
+W7124981377,"Ajrouch, A., Khalifeh, Y., Beirat, A. F., Alhaffar, D., Karkash, A., Aljaras, R., Ali, A. H., Pettit, N., Willis, D. R., Champion, V. L., Carter‐Harris, L., Awaysheh, A., & Okuyemi, K. S.",Cancer Medicine
+W4211012109,"Behrouzi, A., & Fehrenbacher, J. C.",Elsevier eBooks
+W4386990235,"Totten, D. J., Awaysheh, A., & Ramakrishnan, V. R.",International Forum of Allergy & Rhinology
+W4390739417,"Parker, R., Varner, W., Nazzal, M. K., Creecy, A., Karnik, S. J., Blosser, R. J., Scott, E. A., Harris, A., Morris, A. J., Wang, H. S., Margetts, T. J., Dragisic, M. V., Ganguly, U., Fehrenbacher, J. C., Fischer, K. D., Movilă, A., Oblak, A. L., Hathaway‐Schrader, J. D., & Kacena, M. A.",Proceedings of IMPRS
+W4390739587,"Wang, H. S., Scott, E. M., Nazzal, M. K., Varner, W., Parker, R. S., Margetts, T. J., Harris, A., Morris, A. J., Karnik, S. J., Blosser, R. J., Creecy, A., Mostardo, S. L., Dragisic, M. V., Fehrenbacher, J. C., Fischer, K. D., Movilă, A., Oblak, A. L., & Kacena, M. A.",Proceedings of IMPRS
+W4390753224,"Harris, A., Morris, A. J., Varner, W., Parker, R., Nazzal, M. K., Creecy, A., Karnik, S. J., Blosser, R. J., Scott, E., Wang, H., Margetts, T. J., Dragisic, M. V., Ganguly, U., Fehrenbacher, J. C., White, F. A., Hathaway‐Schrader, J. D., & Kacena, M. A.",Proceedings of IMPRS
+W4390753576,"Morris, A. J., Ganguly, U., Margetts, T. J., Varner, W., Tucker, A., Harris, A., Nazzal, M. K., Parker, R. S., Wang, H., Karnik, S. J., Blosser, R. J., Gergely, I., Nguyen, N., White, F. A., Fehrenbacher, J. C., & Kacena, M. A.",Proceedings of IMPRS
+W4391174521,"Iadarola, M. J., Sapio, M. R., Loydpierson, A. J., Mervis, C. Β., Fehrenbacher, J. C., Vasko, M. R., Maric, D., Eisenberg, D. P., Nash, T. A., Kippenhan, J. S., Garvey, M. H., Mannes, A. J., Gregory, M. D., & Berman, K. F.",JCI Insight
+W4394836700,"Flynn, P. J., Awaysheh, A., Bliese, P. D., & Flynn, B. B.",SSRN Electronic Journal
+W4413576883,"Awaysheh, A.",The Conversation
+W4413911389,"Ray, C., Ulrich, M., Awaysheh, A., Bliese, P. D., & Nyberg, A. J.",Journal of Applied Psychology
+W7141294363,"Ajrouch, A., Pettit, N., Imhausen-Slaughter, D., Sears, C. R., Champion, V. L., Ramly, E., Carter‐Harris, L., Awaysheh, A., Rissing, S. M., Hanna, N. H., Ballinger, T. J., Jalal, S. I., Durm, G. A., & Okuyemi, K. S.",Journal of the National Comprehensive Cancer Network
+W7167670725,"Ding, H., Zhai, C., & Awaysheh, A.",SSRN Electronic Journal
+W7171679233,"Jeon, D., Awaysheh, A., Chen, C. J., & Wu, O. Q.",SSRN Electronic Journal
+W7197003064,"Ganguly, U., Margetts, T. J., Varner, W., Nazzal, M. K., Parker, R. S., Xia, H., Morris, A. J., Warsame, A., Yadav, K., Blosser, R. J., Tucker, A., Karnik, S. J., Li, J., Creecy, A., Waning, D. L., Fehrenbacher, J. C., & Kacena, M. A.",Military Medicine
+W7223956098,"Creecy, A., Waning, D. L., Khurram, I., Warsame, A., Blosser, R. J., Karnik, S. J., Xu, J., Yamada, C., Smith, D. K., Oblak, A. L., Fehrenbacher, J. C., Movilă, A., Kacena, M. A., & Huot, J. R.",GeroScience
+W4293380136,"Li, K., Sun, X., Li, H., Ma, H., Zhou, M., Minami, K., Tamari, K., Ogawa, K., Pandya, P. H., Saadatzadeh, M. R., Kacena, M. A., Pollok, K. E., Li, B., & Yokota, H.",Genes & Diseases
+W4378533478,"Karnik, S. J., Nazzal, M. K., Kacena, M. A., & Bruzzaniti, A.",Calcified Tissue International
+W4392545544,"Mohamad, S., Koussa, R. E., Ghosh, J., Blosser, R. J., Gunawan, A. M., Layer, J. H., Zhang, C., Karnik, S. J., Davé, U. P., Kacena, M. A., & Srour, E. F.",Stem Cell Reports
+W4328049082,"Li, K., Huo, Q., Dimmitt, N. H., Qu, G., Bao, J., Pandya, P. H., Saadatzadeh, M. R., Bijangi‐Vishehsaraei, K., Kacena, M. A., Pollok, K. E., Lin, C., Li, B., & Yokota, H.",eLife
+W4412165527,"Jang, Y., Lopas, L. A., Foley, D. S., McKinley, T. O., Mullis, B., Collier, C. D., Liu, Z., Kacena, M. A., & Natoli, R. M.",Journal of Bone and Joint Surgery
+W3194852178,"Knox, A. M., McGuire, A. C., Natoli, R. M., Kacena, M. A., & Collier, C. D.",Journal of Orthopaedic Research®
+W3207273673,"Dadwal, U. C., Bhatti, F., Awosanya, O. D., Staut, C. d. A., Nagaraj, R. U., Perugini, A. J., Tewari, N. P., Valuch, C. R., Sun, S., Mendenhall, S. K., Zhou, D., Mostardo, S. L., Blosser, R. J., Li, J., & Kacena, M. A.",International Journal of Molecular Sciences
+W4376955534,"Smith, J. A., Nguyen, T., Karnik, S. J., Davis, B. C., Al-Juboori, M., Kacena, M. A., Obukhov, A. G., & White, F. A.",Journal of Neuroimmunology
+W4327551558,"McKinley, T. O., Natoli, R. M., Janakiram, N. B., Warden, S. J., Fuchs, R. K., Gunderson, Z. J., Diggins, N., Sun, S., Kolettis, G., Goldman, S. M., Dearth, C. L., Mendenhall, S. K., Staut, C. d. A., Kacena, M. A., & Corona, B. T.",Journal of Orthopaedic Research®
+W4404557719,"Childress, P., Nielsen, J. J., Bemenderfer, T. B., Dadwal, U. C., Chakraborty, N., Harris, J. S., Bethel, M., Alvarez, M. B., Tucker, A., Wessel, A. R., Millikan, P. D., Wilhite, J. H., Engle, A., Brinker, A., Rytlewski, J. D., Scofield, D. C., Griffin, K., Shelley, W. C., Manikowski, K. J., ... Kacena, M. A.",Journal of Bone and Mineral Research
+W4404916948,"Gautam, A., Chakraborty, N., Dimitrov, G. I., Hoke, A. V., Miller, S., Swift, K. A., Sowe, B., Conley, C., Kacena, M. A., & Hammamieh, R.",PLoS ONE
+W4409371967,"Karnik, S. J., Gulbronson, C. J., Jordan, P. C., Kanumuri, R., Ramdas, B., Kumar, R., Hartman, M. L., Khurram, I., Brown, D. M., Pollok, K. E., Singh, P., Kapur, R., & Kacena, M. A.",Leukemia
+W3195448258,"Dadwal, U. C., Bhatti, F., Awosanya, O. D., Nagaraj, R. U., Perugini, A. J., Sun, S., Valuch, C. R., Staut, C. d. A., Mendenhall, S. K., Tewari, N. P., Mostardo, S. L., Nazzal, M. K., Battina, H. L., Zhou, D., Kanagasabapathy, D., Blosser, R. J., Mulcrone, P. L., Li, J., & Kacena, M. A.",The FASEB Journal
+W4292373070,"Campos, M. S., Volpon, J. B., Ximenez, J. P. B., Franttini, A. P., Dalloul, C. E., Sousa‐Neto, M. D., Silva, R. A., Kacena, M. A., & Zamarioli, A.",Frontiers in Endocrinology
+W4291465541,"Zamarioli, A., Adam, G., Maupin, K. A., Childress, P., Brinker, A., Ximenez, J. P. B., Chakraborty, N., Gautam, A., Hammamieh, R., & Kacena, M. A.",Frontiers in Endocrinology
+W4293275808,"Alam, I., Gerard-O’Riley, R. L., Acton, D., Hardman, S. L., Murphy, M., Alvarez, M. B., Blosser, R. J., Sinn, A. L., Srour, E. F., Kacena, M. A., & Econs, M. J.",The FASEB Journal
+W3201657577,"McKinley, T. O., Childress, P., Jewell, E., Griffin, K., Wininger, A. E., Tucker, A., Adam, G., Savaglio, M. K., Warden, S. J., Fuchs, R. K., Natoli, R. M., Shively, K. D., Anglen, J. O., Chu, T. G., & Kacena, M. A.",Military Medicine
+W4387515900,"Cui, C., Huo, Q., Xiong, X., Li, K., Ma, P., Qiang, G., Pandya, P. H., Saadatzadeh, M. R., Bijangi‐Vishehsaraei, K., Kacena, M. A., Aryal, U. K., Pollok, K. E., Li, B., & Yokota, H.",PubMed Central
+W4293770801,"Perini, M. M. d. L., Valuch, C. R., Dadwal, U. C., Awosanya, O. D., Mostardo, S. L., Blosser, R. J., Knox, A. M., McGuire, A. C., Battina, H. L., Nazzal, M. K., Kacena, M. A., & Li, J.",Frontiers in Endocrinology
+W4393005301,"Mohamad, S., & Kacena, M. A.",Methods in molecular biology
+W4307188311,"Morozov, A., Nirca, V., Victorova, A., Poppert, S., Frickmann, H., Yamada, C., Kacena, M. A., Rata, S., & Movilă, A.",Viruses
+W4404631815,"Nazzal, M. K., Battina, H. L., Tewari, N. P., Mostardo, S. L., Nagaraj, R. U., Zhou, D., Awosanya, O. D., Majety, S. K., Samson, S., Blosser, R. J., Dadwal, U. C., Mulcrone, P. L., & Kacena, M. A.",Aging
+W4393265425,"Zamarioli, A., Kacena, M. A., & Volpon, J. B.",Frontiers in Endocrinology
+W4200013515,"Hux, N. P., Nielson, J. l., Staut, C. d. A., Alentado, V. J., Elsayed, A., Dalloul, C. E., Zike, S., Tewari, N. P., Nazzal, M. K., Battina, H. L., Brinker, A., Shaikh, M., Myers, S., Blosser, R. J., Dadwal, U. C., Li, J., Low, S. A., Low, P. S., & Kacena, M. A.",Proceedings of IMPRS
+W4200346398,"Elsayed, A., Nielsen, J. J., Taylor, N., Al-Juboori, M., Staut, C. d. A., Alentado, V. J., Hux, N. P., Dalloul, C. E., Zike, S., Tewari, N. P., Nazzal, M. K., Battina, H. L., Brinker, A., Shaikh, M., Myers, S., Blosser, R. J., Dadwal, U. C., Niedrauer, M., Low, S. A., ... Kacena, M. A.",Proceedings of IMPRS
+W4200532454,"Tewari, N. P., Kanagasabapathy, D., Blosser, R. J., Srour, E. F., Bruzzaniti, A., & Kacena, M. A.",Proceedings of IMPRS
+W4200582981,"Zike, S., Nielsen, J. J., Staut, C. d. A., Alentado, V. J., Dadwal, U. C., Dalloul, C. E., Elsayed, A., Hux, N. P., Tewari, N. P., Shaikh, M., Myers, S., Nazzal, M. K., Battina, H. L., Blosser, R. J., Li, J., Low, S. A., Niedrauer, M., Low, P. S., & Kacena, M. A.",Proceedings of IMPRS
+W4206042816,"Hernon, C., Elsayed, A., Vicente, R. M., Zamarioli, A., Kacena, M. A., & Lowery, J. W.",Journal of Rehabilitation Therapy
+W4297609690,"Rivadeneira, F., Loder, R. T., McGuire, A. C., Chitwood, J. R., Duffy, K., Civitelli, R., Kacena, M. A., & Westendorf, J. J.",Publons reviews and discussion
+W4318148416,"Majety, S. K., Zike, S., Staut, C. d. A., Alentado, V. J., Mostardo, S. L., Nazzal, M. K., Blosser, R. J., & Kacena, M. A.",Proceedings of IMPRS
+W4318162378,"Hartman, M. L., Karnik, S. J., Khurram, I., Gulbronson, C. J., Dunn, K. W., Srour, E. F., & Kacena, M. A.",Proceedings of IMPRS
+W4318162629,"Chen, L., Lamb, N., Tucker, A., Nazzal, M. K., Mostardo, S. L., Awosanya, O. D., Blosser, R. J., Liu, Z., & Kacena, M. A.",Proceedings of IMPRS
+W4319303651,"Lamb, N., Luster, T. G., Chen, L., Zhang, W., Tucker, A., Nazzal, M. K., Gates, K., Alakhras, N. S., Chu, M., Pajulas, A., Blosser, R. J., Kaplan, M. H., Kacena, M. A., & McKinley, T. O.",Proceedings of IMPRS
+W4353002900,"Li, K., Huo, Q., Dimmitt, N. H., Qu, G., Bao, J., Pandya, P. H., Saadatzadeh, M. R., Bijangi‐Vishehsaraei, K., Kacena, M. A., Pollok, K. E., Lin, C., Li, B., & Yokota, H.",eLife
+W4361823562,"Xu, L., Mohammad, K. S., Wu, H., Crean, C., Poteat, B. A., Cheng, Y., Cardoso, A. A., Machal, C., Hanenberg, H., Abonour, R., Kacena, M. A., Chirgwin, J. M., Suvannasankha, A., & Srour, E. F.",NA
+W4361875392,"Xu, L., Mohammad, K. S., Wu, H., Crean, C., Poteat, B. A., Cheng, Y., Cardoso, A. A., Machal, C., Hanenberg, H., Abonour, R., Kacena, M. A., Chirgwin, J. M., Suvannasankha, A., & Srour, E. F.",NA
+W4361875403,"Xu, L., Mohammad, K. S., Wu, H., Crean, C., Poteat, B. A., Cheng, Y., Cardoso, A. A., Machal, C., Hanenberg, H., Abonour, R., Kacena, M. A., Chirgwin, J. M., Suvannasankha, A., & Srour, E. F.",NA
+W4361972279,"Xu, L., Mohammad, K. S., Wu, H., Crean, C., Poteat, B. A., Cheng, Y., Cardoso, A. A., Machal, C., Hanenberg, H., Abonour, R., Kacena, M. A., Chirgwin, J. M., Suvannasankha, A., & Srour, E. F.",NA
+W4362421764,"Xu, L., Mohammad, K. S., Wu, H., Crean, C., Poteat, B. A., Cheng, Y., Cardoso, A. A., Machal, C., Hanenberg, H., Abonour, R., Kacena, M. A., Chirgwin, J. M., Suvannasankha, A., & Srour, E. F.",NA
+W4390753459,"Nazzal, M. K., Battina, H. L., Tewari, N. P., Mostardo, S. L., Nagaraj, R. U., Awosanya, O. D., Majety, S. K., McGuire, A. C., Samson, S., Blosser, R. J., Dadwal, U. C., Mohamad, S., Srour, E. F., Bruzzaniti, A., & Kacena, M. A.",Proceedings of IMPRS
+W4392685127,"Xu, L., Mohammad, K. S., Wu, H., Crean, C., Poteat, B. A., Cheng, Y., Cardoso, A. A., Machal, C., Hanenberg, H., Abonour, R., Kacena, M. A., Chirgwin, J. M., Suvannasankha, A., & Srour, E. F.",NA
+W4403834059,"McCune, T. R., Ozanne, M. V., Qiao, X., Toepp, A. J., & Kacena, M. A.",Journal of the American Society of Nephrology
+W4409499592,"Hesselbrock, T. J., Karnik, S. J., Mostardo, S. L., Maupin, K. A., Li, J., Bruzzaniti, A., & Kacena, M. A.",Proceedings of IMPRS
+W4413445499,"Parish, C. R., Chen, J., Mostardo, S. L., Karnik, S. J., Blosser, R. J., Gergely, I., Wang, N., Natoli, R. M., & Kacena, M. A.",Proceedings of IMPRS
+W4413445744,"Burke, I. M., Creecy, A., Karnik, S. J., Awosanya, O. D., Hesselbrock, T. J., Mostardo, S. L., Yadav, K., Blosser, R. J., Singh, P., Bruzzaniti, A., & Kacena, M. A.",Proceedings of IMPRS
+W7147331005,"Nagesh, N., Creecy, A., Karnik, S. J., Blosser, R. J., Yadav, K., Mostardo, S. L., Meyer, T. B., Fischer, K., Oblak, A. L., & Kacena, M. A.",Proceedings of IMPRS
+W7147676384,"Fontaine, M., Creecy, A., Li, J., Ganguly, U., Britton, S., Karnik, S. J., Blosser, R. J., Yadav, K., Mostardo, S. L., & Kacena, M. A.",Proceedings of IMPRS
+W7149447214,"Ho, A., Ngala, B., Yamada, C., Garcia, C., Duarte, C. L., Akkaoui, J., Ciolac, D., Nusbaum, A., Kochen, W. R., Efremova, D., Groppa, S. A., Nathanson, L., Bissel, S. J., Oblak, A. L., Kacena, M. A., & Movilă, A.",Biomedicine & Pharmacotherapy
+W7160286680,"Lopas, L. A., Jang, Y., Liu, Z., Slaven, J. E., Arnold, J. C., Haller, J. M., Marchand, L. S., Mau, M., Kacena, M. A., & Natoli, R. M.",Journal of Bone and Joint Surgery
+W7203779748,"Quinlan, C., Karnik, S. J., Gulbronson, C. J., Kacena, M. A., & Marinkovic, M.",JBMR Plus
+W4389173155,"Benisty, H., Barson, D. G., Moberly, A. H., Lohani, S., Tang, L., Coifman, R. R., Crair, M. C., Mishne, G., Cardin, J. A., & Higley, M. J.",Nature Neuroscience
+W4396546156,"Shaw, W. J., Kidder, M. K., Bare, S. R., Delferro, M., Morris, J. R., Toma, F. M., Senanayake, S. D., Autrey, T. S., Biddinger, E. J., Boettcher, S. W., Bowden, M., Britt, P. F., Brown, R. C., Bullock, R. M., Chen, J. G., Daniel, C., Dorhout, P. K., Efroymson, R. A., Gaffney, K. J., ... Walton, K. S.",Nature Reviews Chemistry
+W4312210901,"Sharifi, S., Reuel, N. F., Kallmyer, N. E., Sun, E., Landry, M. P., & Mahmoudi, M.",ACS Nano
+W4390572022,"Vafaii, H., Mandino, F., Desrosiers-Grégoire, G., O’Connor, D. A., Markicevic, M., Shen, X., Ge, X., Hermán, P., Hyder, F., Papademetris, X., Chakravarty, M. M., Crair, M. C., Constable, R. T., Lake, E. M. R., & Pessoa, L.",Nature Communications
+W4401606984,"Matsumoto, N., Barson, D. G., Liang, L., & Crair, M. C.",Science
+W4324129024,"Carr, A. R., Chan, Y. J., & Reuel, N. F.",ACS Sensors
+W4308307846,"O’Connor, D. A., Mandino, F., Shen, X., Horien, C. L., Ge, X., Hermán, P., Hyder, F., Crair, M. C., Papademetris, X., Lake, E., & Constable, R. T.",NeuroImage
+W4309728671,"Srivastava, R., Bhardwaj, S., Kumar, A., Singhal, R., Scanley, J., Broadbridge, C. C., & Gupta, R. K.",Nanomaterials
+W4407884145,"DeSpenza, T., Kiziltug, E., Allington, G., Barson, D. G., McGee, S., O’Connor, D. A., Robert, S. M., Mekbib, K. Y., Nanda, P., Greenberg, A. B., Singh, A. K., Duy, P. Q., Mandino, F., Zhao, S., Lynn, A. Y., Reeves, B. C., Marlier, A., Getz, S. A., Nelson-Williams, C. J., ... Kahle, K. T.",Nature Neuroscience
+W4414346186,"Kopp, R. E., Lippel, P. H., Teutonico, R. A., Crowl, T. A., Dorhout, P. K., Han, S. W., Harvey, E., Krosby, M., Newman, J., Thomas, R. M., & Tolstoy, M.",BioScience
+W4389503626,"Singhal, R., Sadowski, T., Chaudhary, M., Tucci, R. V., Scanley, J., Patel, R., Patel, P. K., Gagnon, S., Koni, A., Singhal, K., LeMaire, P. K., Sharma, R. K., Singh, B. P., & Broadbridge, C. C.",Materials Science for Energy Technologies
+W4322007887,"Hamlen, K. R., Jackson, D., Bievenue, L., Voight, A. M., & Sridhar, N.",ACM Transactions on Computing Education
+W3213245849,"Lees‐Shepard, J. B., Flint, K. A., Fisher, M. C., Omi, M., Richard, K. E., Antony, M., Chen, P. J., Yadav, S., Threadgill, D. W., Maihle, N. J., & Dealy, C. N.",Developmental Dynamics
+W4389241061,"Bhardwaj, S., Srivastava, R., Mageto, T., Reddy, S., Dawsey, T., Kumar, A., Singhal, R., Scanley, J., Broadbridge, C. C., & Gupta, R. K.",Energy Storage
+W4310332443,"Mishra, S. K., Hermán, P., Crair, M. C., Constable, R. T., Walsh, J. J., Akif, A., Verhagen, J. V., & Hyder, F.",Nanoscale
+W3212400308,"Agan, M. L., Joseph, R., Rivera-Figueroa, A., Chan, B. C., O’Connor, A. R., Ondrechen, M. J., Jones, W. E., Dorhout, P. K., & Kimble-Hill, A. C.",Journal of Chemical Education
+W4306247779,"Chen, P., Wang, K., Mehta, S., O’Brien, M. H., Dealy, C. N., Dutra, E. H., & Yadav, S.",Cartilage
+W4389473973,"Singhal, R., Thorne, D., Chaudhary, M., Kumar, A., Bhardwaj, S., Abazi, R., Colon, A., Gupta, R. K., Scanley, J., Broadbridge, C. C., Singh, B. P., LeMaire, P. K., & Sharma, R. K.",AIP Advances
+W4399347259,"Vanegas, S. O., Zaki, A., Dealy, C. N., & Kinsey, S. G.",Journal of Pharmacology and Experimental Therapeutics
+W4413247309,"Chaudhary, M., Oyelola, L. J., Glidden, T., Broadbridge, C. C., LeMaire, P. K., Sharma, R. K., Singh, V., Sahi, V., & Singhal, R.",Journal of Solid State Electrochemistry
+W4300576855,"Singhal, R., Saini, B., Kiehnle-Benitez, M., Sadowski, T., Broadbridge, C. C., Scanley, J., LeMaire, P. K., & Sharma, R. K.",AIP Advances
+W4307854071,"Jain, F., Broadbridge, C. C., Gherasimova, M., & Tang, H.",Selected topics in electornics and systems
+W4388694523,"Zhang, K., Su, A., Wang, Y., & Crair, M. C.",bioRxiv (Cold Spring Harbor Laboratory)
+W4312448874,"Srivastava, R., Bhardwaj, S., Kumar, A., Singhal, R., Scanley, J., Broadbridge, C. C., & Gupta, R. K.",SSRN Electronic Journal
+W4320179259,"Wang, Y., Su, A., Jin, J., Barson, D. G., & Crair, M. C.",bioRxiv (Cold Spring Harbor Laboratory)
+W3212447238,"Sahoo, S., Dekel, D. R., Marić, R., & Alpay, P.",ECS Meeting Abstracts
+W4200282233,"Kashamolla, M. R., Leseman, Z. C., Savkar, A. A., & Murphy, K.",NA
+W4206779594,"Dorhout, P. K.",Merrill Series on The Research Mission of Public Universities
+W4292826529,"Jain, F., Broadbridge, C. C., Gherasimova, M., & Tang, H.",International Journal of High Speed Electronics and Systems
+W4311845815,"Jain, F., Broadbridge, C. C., Gherasimova, M., & Tang, H.",Selected topics in electornics and systems
+W4311845876,"Jain, F., Broadbridge, C. C., Gherasimova, M., & Tang, H.",Selected topics in electornics and systems
+W4324345684,"Dorhout, P. K.",Merrill Series on The Research Mission of Public Universities
+W4361741353,"Singhal, R., Thorne, D., Chaudhary, M., Bhardwaj, S., Abazi, R., Gupta, R. K., Scanley, J., Broadbridge, C. C., Singh, B., LeMaire, P. K., & Sharma, R. K.",SSRN Electronic Journal
+W4385065254,"Jain, F., Broadbridge, C. C., Gherasimova, M., & Tang, H.",International Journal of High Speed Electronics and Systems
+W4385555062,"Mandino, F., Horien, C. L., Shen, X., O’Connor, D. A., Ge, X., Hermán, P., Qu, A., Onofrey, J. A., Crair, M. C., Papademetris, X., Constable, R. T., & Lake, E. M. R.","Proceedings on CD-ROM - International Society for Magnetic Resonance in Medicine. Scientific Meeting and Exhibition/Proceedings of the International Society for Magnetic Resonance in Medicine, Scientific Meeting and Exhibition"
+W4386140736,"Jain, F., Broadbridge, C. C., Gherasimova, M., & Tang, H. X.",Selected topics in electornics and systems
+W4386140946,"Jain, F., Broadbridge, C. C., Gherasimova, M., & Tang, H.",Selected topics in electornics and systems
+W4392437419,"Yu, J., Féger, L., Nayak, S. K., Zaki, A., Tanner, D., Coste, S., Barré, M., Alpay, P., Bousquet, É., Lacorre, P., & Janolin, P.",HAL
+W4400297170,"Jain, F., Broadbridge, C. C., Gherasimova, M., & Tang, H.",Selected topics in electornics and systems
+W4401570388,"Mandino, F., Shen, X., Desrosiers-Grégoire, G., O’Connor, D. A., Mukherjee, B., DeLuca, K., Hamodi, A. S., Owens, A., Ha, Y., Qu, A., Onofrey, J. A., Papademetris, X., Chakravarty, M. M., Crair, M. C., Strittmatter, S. M., & Lake, E. M. R.","Proceedings on CD-ROM - International Society for Magnetic Resonance in Medicine. Scientific Meeting and Exhibition/Proceedings of the International Society for Magnetic Resonance in Medicine, Scientific Meeting and Exhibition"
+W4405055547,"Jain, F., Broadbridge, C. C., Gherasimova, M., & Tang, H.",Selected topics in electornics and systems
+W4405055623,"Jain, F., Broadbridge, C. C., Gherasimova, M., & Tang, H.",Selected topics in electornics and systems
+W4405535474,"Kopp, R. E., Tolstoy, M., Crowl, T. A., Han, S., Dorhout, P. K., Krosby, M., Teutonico, R. A., Lippel, P. H., Newman, J., & Harvey, E.",NA
+W4414296922,"Yakovenko, S., Herrick, E., Olesh, E. V., & Brandmeir, C. L.",Research Square
+W4414309258,"Jain, F., Broadbridge, C. C., Gherasimova, M., & Tang, H.",Selected topics in electornics and systems
+W4416979446,"Kolpak, A. M., Walker, F. J., Reiner, J. W., Segal, Y., Su, D., Sawicki, M., Broadbridge, C. C., Zhang, Z., Zhu, Y., Ahn, C., & Ismail‐Beigi, S.",WORLD SCIENTIFIC eBooks
+W7139166018,"Sridhar, N., & Goodsett, M.",EngagedScholarship @ Cleveland State University (Cleveland State University)
+W7161163157,"Pattnaik, T., Alpay, P., & Ozuguzel, U.",Zenodo (CERN European Organization for Nuclear Research)
+W7169836847,"Kopp, R. E., Lippel, P. H., Teutonico, R. A., Crowl, T. A., Dorhout, P. K., Han, S., Harvey, E., Krosby, M., Newman, J., & Tolstoy, M.",BioScience
+W7204241444,"Hu, R., Chen, J., O’Neill, D. C., Gergely, I., Parish, C. R., Mostardo, S. L., Jafry, M., Lin, M., Natoli, R. M., Kacena, M. A., & Wang, N.",IEEE Transactions on Biomedical Engineering
+W4386045965,"Kuo, M., Raffaelle, J. F., Waller, E. M., Varaljay, V. A., Wagner, D. N., Kelley‐Loughnane, N., & Reuel, N. F.",ACS Nano
+W4221049088,"Carr, A. R., Dopp, J. L., Wu, K., Mousavi, P. S., Jo, Y. R., McNeley, C. E., Lynch, Z. T., Pardee, K., Green, A. A., & Reuel, N. F.",ACS Sensors
+W4200337607,"Agarwal, S., Kallmyer, N. E., Vang, D. X., Ramirez, A. V., Islam, M. M., Hillier, A. C., Halverson, L. J., & Reuel, N. F.",Analytical Chemistry
+W4285243865,"Roy, S., Chan, Y. J., Reuel, N. F., & Neihart, N.",IEEE Transactions on Instrumentation and Measurement
+W4394010097,"Chan, Y. J., Anwar, N., & Reuel, N. F.",Sensors and Actuators A Physical
+W3160757099,"Ferdous, S., Dopp, J. L., & Reuel, N. F.",AIChE Journal
+W4376617007,"Yadav, A., Kelich, P., Kallmyer, N. E., Reuel, N. F., & Vuković, L.",ACS Applied Materials & Interfaces
+W4392208005,"Ahsan, A., Wagner, D. N., Varaljay, V. A., Roman, V. A., Kelley‐Loughnane, N., & Reuel, N. F.",Synthetic Biology
+W3216050229,"Chan, Y. J., Carr, A. R., Roy, S., Washburn, C. M., Neihart, N., & Reuel, N. F.",Sensors and Actuators A Physical
+W4399158031,"Ferdous, S., Shihab, I. F., Chowdhury, R., & Reuel, N. F.",Biotechnology and Bioengineering
+W4293581494,"Ferdous, S., Shihab, I. F., & Reuel, N. F.",Biochemical Engineering Journal
+W4404985219,"Hejazi, S., Ahsan, A., Kashani, S., Tameiv, D., & Reuel, N. F.",PLoS ONE
+W4405889694,"Kuo, M., & Reuel, N. F.",Nano Letters
+W4417332362,"Uthravalli, S. H., Ferdous, S., Hess, J. M., & Reuel, N. F.",Biotechnology and Bioengineering
+W4384153672,"Godin, R., Hejazi, S., & Reuel, N. F.",Advanced Sensor Research
+W4410356305,"Hejazi, S., Godin, R., Jurasic, V., & Reuel, N. F.",Analytical Chemistry
+W4403028778,"Parada, R. J., Pomerantz, M., Savich, G. R., & Vogt, A.",NA
+W4403892058,"Elhambakhsh, A., Abbasi, M., Dutter, C. R., McDaniel, M. D., VanVeller, B., Hillier, A. C., & Reuel, N. F.",ACS Applied Materials & Interfaces
+W4405449452,"Hejazi, S., Masud, N., Hasib, M. H. H., Bertrand, C., Sarkar, A., & Reuel, N. F.",Advanced Materials Interfaces
+W4386818173,"Kallmyer, N. E., Agarwal, S., Eeg, D., Khor, R., Roby, N., Ramirez, A. V., Hillier, A. C., & Reuel, N. F.",ACS Applied Materials & Interfaces
+W4389383679,"Islam, M. M., Hossen, M. M., Adjasoo, J., Palo, P. E., Bendickson, L., Kallmyer, N. E., Reuel, N. F., Nilsen‐Hamilton, M., Koschny, T., & Hillier, A. C.",The Journal of Physical Chemistry C
+W7164898731,"Lange, B., Godin, R., Schnicker, N., Wadas, T. J., & Reuel, N. F.",ACS Synthetic Biology
+W4294281365,"Beierle, A. M., Quinn, C. H., Markert, H. R., Carr, A. R., Marayati, R., Bownes, L. V., Hutchins, S. C., Stewart, J. E., Hill, B. C., Ohlmeyer, M. H. J., Reuel, N. F., & Beierle, E. A.",ACS Omega
+W4308082422,"Vogt, A.",SPIE Optics Education and Outreach
+W4308082447,"Micali, R., & Vogt, A.",SPIE Optics Education and Outreach
+W3208528399,"Vogt, A., & Micali, R.",Education and Training in Optics and Photonics
+W4399855469,"Chan, Y. J., Dileep, D., Rothstein, S. M., Cochran, E. W., & Reuel, N. F.",Advanced Science
+W4411592795,"Godin, R., Hejazi, S., Lange, B., Aldamak, B., & Reuel, N. F.",bioRxiv (Cold Spring Harbor Laboratory)
+W4384408262,"Ferdous, S., Shihab, I. F., Chowdhury, R., & Reuel, N. F.",bioRxiv (Cold Spring Harbor Laboratory)
+W4406364265,"Ferdous, S., Gupta, P., Teoh, Y. C., Sajeevan, K. A., SR, V., Hainlin, K., Reuel, N. F., Qamhiyah, A. Z., Aluru, N. R., Kumar, M., & Chowdhury, R.",bioRxiv (Cold Spring Harbor Laboratory)
+W3131866256,"Gansemer‐Topf, A. M., Li, Q., Jiang, S., Kremer, G. E. O., Reuel, N. F., & Mort, R.",ASEE North Midwest Section Conference
+W3133190949,"Jiang, S., Gansemer‐Topf, A. M., Reuel, N. F., Kremer, G. E. O., Li, Q., & Mort, R.",ASEE North Midwest Section Conference
+W3214065543,"Gansemer‐Topf, A. M., Jiang, S., Reuel, N. F., Kremer, G. E. O., Li, Q., Mort, R., & Chen, D.",ASEE Midwest Section Conference
+W4283767333,"Vogt, A.",Education and Training in Optics and Photonics
+W4293256486,"Vogt, A.",SPIE eBooks
+W4307612982,"Reuel, N. F.",OSTI OAI (U.S. Department of Energy Office of Scientific and Technical Information)
+W4382363146,"Vogt, A.",Education and Training in Optics and Photonics
+W4386326717,"Reuel, N. F., Ferdous, S., Shihab, I. F., & Chowdhury, R.",NA
+W4386855336,"Reuel, N. F., & Kallmyer, N. E.",ECS Meeting Abstracts
+W4389155776,"Vogt, A., Webster, M., Pomerantz, M., Maali, H., & Adams, K.",Optifab
+W4399773962,"Smith, P. E. J., Dopp, J. L., Reuel, N. F., & Oza, J. P.",CRC Press eBooks
+W4401285665,"Liang, Y., Li, Q., Kremer, G. E. O., Reuel, N. F., Gansemer‐Topf, A. M., & Jiang, S.",ASEE Annual Conference & Exposition
+W4408302269,"Kuo, M., & Reuel, N. F.",Nano Letters
+W4412541795,"Reuel, N. F., Kuo, M., & Hejazi, S.",ECS Meeting Abstracts
+W7116346418,"Roy, S., Rothstein, S., Shervheim, A., Chan, Y. J., Greenwalt, C., Neihart, N., Juarez, J., Turner, P. A., Lewis, A., Dunkerley, N., Welch, D., Wilson, J., Fick, D., & Reuel, N. F.",Cytotherapy
+W7128928665,"Hejazi, S., Lange, B., Noroozi, K., Jurasic, V., Jarboe, L. R., & Reuel, N. F.",Small
+W7160850833,"Kuo, M., Wendel, A. J., & Reuel, N. F.",ACS Applied Nano Materials
+W7203796011,"Carr, A. R., & Reuel, N. F.",NA
+W7213735589,"Li, M., Witzenburg, L., Peck, R., Nouri, H., Reuel, N. F., & Tabei, A.",UNI ScholarWorks (University of Northern Iowa)
+W7223025760,"Pourazgomi, H. N., & Reuel, N. F.",Zenodo (CERN European Organization for Nuclear Research)
+W4310120962,"Panuski, C., Christen, I., Minkov, M., Brabec, C., Trajtenberg‐Mills, S., Griffiths, A. D., McKendry, J. J. D., Leake, G., Coleman, D. J., Tran, C., Louis, J. S., Mucci, J., Horvath, C., Westwood‐Bachman, J. N., Preble, S. F., Dawson, M. D., Strain, M. J., Fanto, M. L., & Englund, D. R.",Nature Photonics
+W4294766881,"Rizzo, A. J., Daudlin, S., Novick, A., James, A. E., Gopal, V., Murthy, V., Cheng, Q., Kim, B. Y., Ji, X., Okawachi, Y., Niekerk, M. v., Deenadayalan, V., Leake, G., Fanto, M. L., Preble, S. F., Lipson, M. F., Gaeta, A. L., & Bergman, K.",IEEE Journal of Selected Topics in Quantum Electronics
+W4413139419,"Parsons, R., Jang, K., Wang, Y., Novick, A., Smith, A. M., Tison, C. C., Gebregiorgis, Y., Deenadayalan, V., Niekerk, M. v., Carpenter, L. G., Ngai, T., Leake, G., Coleman, D. J., Meng, X. Z., Preble, S. F., Fanto, M. L., Bergman, K., & Rizzo, A. J.",Scientific Reports
+W7117235572,"Xu, Z., König, J. L. K., Cataldo, A., Yadgirkar, R., Krishna, G., Deenadayalan, V., Zwiller, V., Preble, S. F., Bergholtz, E. J., Gao, J., & Elshaari, A. W.",Light Science & Applications
+W3197462022,"Gong, Z., Serafini, J. R., Yang, F., Preble, S. F., & Yao, J.",Physical Review Applied
+W4385365190,"Rizzo, A. J., Deenadayalan, V., Niekerk, M. v., Leake, G., Tison, C. C., Novick, A., Coleman, D. J., Bergman, K., Preble, S. F., & Fanto, M. L.",Conference on Lasers and Electro-Optics
+W4385949174,"Mikulics, M., Adam, R., Chen, G., Chakraborty, D., Cheng, J., Pericolo, A., Komissarov, I., Bürgler, D. E., Heidtfeld, S. F., Serafini, J. R., Preble, S. F., Sobolewski, R., Schneider, C. M., Mayer, J., & Hardtdegen, H. H.",Crystals
+W4297796308,"Niekerk, M. v., Deenadalayan, V., Rizzo, A. J., Leake, G., Coleman, D. J., Tison, C. C., Fanto, M. L., Bergman, K., & Preble, S. F.",Conference on Lasers and Electro-Optics
+W4296128969,"Niekerk, M. v., Rizzo, A. J., Rivera, H. A. R., Leake, G., Coleman, D. J., Tison, C. C., Fanto, M. L., Bergman, K., & Preble, S. F.",Neuromorphic Computing and Engineering
+W4408877306,"Znati, S. A., Abrand, A., Deenadayalan, V., Powell, E., Hirschman, K. D., Preble, S. F., & Mohseni, P. K.",Journal of Electronic Materials
+W4412909283,"Jia, Z., Rubio, H., Neim, L., Park, J., Preble, S. F., & Kanté, B.",Optics Letters
+W4300716601,"Monteleone, J. A., Niekerk, M. v., Ciminelli, M., Leake, G., Coleman, D. J., Fanto, M. L., & Preble, S. F.","Quantum Nanophotonic Materials, Devices, and Systems"
+W4385354550,"Preble, S. F., Bergman, B., Carpenter, L. G., Chrostowski, L., Dikshit, A. A., Fanto, M. L., Lin, W., Niekerk, M. v., Uddin, M. R., & Sundaram, V. S. S.",Elsevier eBooks
+W4390059951,"Manfreda-Schulz, E., Elliot, J. D., Niekerk, M. v., Proctor, D., Ciminelli, M., Palone, T., Tison, C. C., Fanto, M. L., Preble, S. F., & Howland, G. A.",Optica Quantum
+W4409088168,"Sundaram, V. S. S., Manfreda-Schulz, E., Hawthorne, T., Roberts, T., Palone, T., Deenadayalan, V., Ciminelli, M., Battle, P. R., Leake, G., Coleman, D. J., Fanto, M. L., Vamivakas, A. N., Howland, G. A., & Preble, S. F.",Optica Quantum
+W4411708758,"He, X., Patel, J. A., Pennington, G., McGarvey, P., Niekerk, M. v., Preble, S. F., & Cárdenas, J.",Optics Express
+W4408664346,"Yao, P. L., Konkol, M. R., Deenadayalan, V., Newkirk, C., Kabra, Y., Rasel, M. O. F., Ciminelli, M., Preble, S. F., & Prather, D. W.",Optical Interconnects and Packaging
+W7160703051,"Krishna, G., Gao, J., O’Brien, S., Yadgirkar, R., Deenadayalan, V., Preble, S. F., Zwiller, V., & Elshaari, A. W.",Nature Communications
+W4221051102,"Murthy, V., Rizzo, A. J., Leake, G., Mehta, N., Novick, A., Daudlin, S., Haatnik, M., Niekerk, M. v., Fanto, M. L., Coleman, D. J., Preble, S. F., & Bergman, K.","Laser Resonators, Microresonators, and Beam Control"
+W4387266022,"Neim, L., Yovanovich, A. G., Bartholomew, J., Deenadayalan, V., Ciminelli, M., Palone, T., Niekerk, M. v., Song, M., Nauriyal, A., Notaroš, J., Serna, S., Cárdenas, J., Brown, T., Agarwal, A., Saini, S., & Preble, S. F.",Applied Optics
+W4221060367,"McNulty, K. J., Niekerk, M. v., Deenadayalan, V., Errando-Herranz, C., Pruessner, M. W., Fanto, M. L., & Preble, S. F.",SPIE Silicon Photonics
+W4400034123,"Deenadayalan, V., Thornton, E., Nelson, G. T., McGarvey, P., King, J. D., Patel, J. M., Bickford, J. R., Mitchell, M., Chrostowski, L., Shekhar, S., Kemal, J. N., Skacel, S. T., Ciminelli, M., & Preble, S. F.",IEEE Electronic Components and Technology Conference (ECTC)
+W4290714164,"Niekerk, M. v., Cheng, C., Leake, G., Coleman, D. J., Fanto, M. L., & Preble, S. F.",Conference on Lasers and Electro-Optics
+W4408664576,"Stine, C., Deenadayalan, V., Ciminelli, M., Palone, T., Wieand, B., Creazzo, T. A., Shayan, K., Preble, S. F., & Prather, D. W.",Optical Interconnects and Packaging
+W4411688277,"Nelson, G. T., O'Callaghan, J. R., McDonough, C., Preble, S. F., Morrissey, P. E., Striemer, C. C., O'Brien, P., & Harame, D. L.",IEEE Electronic Components and Technology Conference (ECTC)
+W4297796388,"Sundaram, V. S. S., Manfreda-Schulz, E., Stievater, T. H., Tyndall, N. F., Palone, T., Deenadayalan, V., Tison, C. C., Smith, Z., Hucul, D., Howland, G. A., Fanto, M. L., & Preble, S. F.",Conference on Lasers and Electro-Optics
+W4320147795,"Deenadayalan, V., Yin, P., Fanto, M. L., Leake, G., Coleman, D. J., & Preble, S. F.",Frontiers in Optics
+W4399420156,"Sundaram, V. S. S., Monteleone, J. A., Fittos, V., Niekerk, M. v., Ciminelli, M., Leake, G., Coleman, D. J., Fanto, M. L., Howland, G. A., & Preble, S. F.","SPIE Quantum Information Science, Sensing, and Computation"
+W4402269000,"Gebregiorgis, Y., Rizzo, A. J., Deenadayalan, V., Niekerk, M. v., Leake, G., Tison, C. C., Novick, A., Coleman, D. J., Bergman, K., Fanto, M. L., & Preble, S. F.",Conference on Lasers and Electro-Optics
+W4417162987,"Sheridan, E., Barton, N. J., Birrittella, R. J., Nehra, V., Smith, Z. M., Tison, C. C., Smith, A. M., Dharanibalan, S., Bedi, V., Hucul, D., Kyle, B., Nadeau, C., Draper, M., Heinig, J. W., Scott, F., Scales, R., Brownell, A., Preble, S. F., Schneeloch, J., ... Telesca, D. A.",arXiv (Cornell University)
+W4313528730,"Panuski, C., Christen, I., Minkov, M., Brabec, C., Trajtenberg‐Mills, S., Griffiths, A. D., McKendry, J. J. D., Leake, G., Coleman, D. J., Tran, C., Louis, J. S., Mucci, J., Horvath, C., Westwood‐Bachman, J. N., Preble, S. F., Dawson, M. D., Strain, M. J., Fanto, M. L., & Englund, D. R.",Nature Photonics
+W3198814967,"Preble, S. F.",Photonics for Quantum (PfQ)
+W3211946684,"Serafini, J. R., Niekerk, M. v., Fanto, M. L., & Preble, S. F.",IEEE Photonics Conference
+W4280631678,"Sigillito, A. J., Covey, J. P., Fink, J. M., Petersson, K. D., & Preble, S. F.",Applied Physics Letters
+W4289780541,"Manfreda-Schulz, E., Elliot, J. D., Niekerk, M. v., Tison, C. C., Fanto, M. L., Preble, S. F., & Howland, G. A.",Quantum 2.0 Conference and Exhibition
+W4290715532,"Panuski, C., Christen, I., Trajtenberg‐Mills, S., Brabec, C., Minkov, M., Griffiths, A. D., McKendry, J. J. D., Leake, G., Coleman, D. J., Tran, C., Louis, J. S., Mucci, J., Horvath, C., Westwood‐Bachman, J. N., Preble, S. F., Dawson, M. D., Fanto, M. L., Strain, M. J., & Englund, D. R.",Conference on Lasers and Electro-Optics
+W4294536994,"Niekerk, M. v., Rizzo, A. J., Rubio, H., Leake, G., Coleman, D. J., Tison, C. C., Fanto, M. L., Bergman, K., & Preble, S. F.",Publons reviews and discussion
+W4294537085,"Niekerk, M. v., Rizzo, A. J., Rubio, H., Leake, G., Coleman, D. J., Tison, C. C., Fanto, M. L., Bergman, K., & Preble, S. F.",Publons reviews and discussion
+W4320147598,"Sundaram, V. S. S., Manfreda-Schulz, E., Palone, T., Deenadayalan, V., Howland, G. A., & Preble, S. F.",Frontiers in Optics
+W4320147809,"Yovanovich, A. G., & Preble, S. F.",Frontiers in Optics
+W4320147933,"Manfreda-Schulz, E., Elliot, J. D., Niekerk, M. v., Proctor, D., Tison, C. C., Fanto, M. L., Preble, S. F., & Howland, G. A.",Frontiers in Optics
+W4320150285,"Rivera, H. A. R., Niekerk, M. v., & Preble, S. F.",Frontiers in Optics
+W4389399006,"Vogt, A.",Optifab
+W4400290617,"Vogt, A.",Optical Engineering
+W4401636215,"Helfer, A. N., Savich, G. R., Lamendola, S. D., Binicewicz, H., Almekinder, A. K., Stone, L. A., Noonan, S., & Vogt, A.",NA
+W4403027502,"Vogt, A., Pomerantz, M., & Clement, J.",NA
+W4416966463,"Parada, R. J., Pomerantz, M., Savich, G. R., & Vogt, A.",Optifab
+W4416967206,"Lamendola, S. D., Pomerantz, M., & Vogt, A.",Optifab
+W7203927830,"Savich, G. R., Parada, R. J., Sparks, C., & Vogt, A.",SPIE Optics Education and Outreach
+W7222933862,"Vogt, A.",SPIE Optics Education and Outreach
+W4308997301,"Alemán-Castañeda, L. A., Feng, Y., Gutiérrez–Cuevas, R., Herrera, I., Brown, T. G., Brasselet, S., & Alonso, M. A.",Journal of the Optical Society of America A
+W4395048889,"Ge, L. K., Tuniz, A., Sterke, C. M. d., Zavislan, J. M., Brown, T. G., Martin, S., & Martínez-Martín, D.",Advanced Sensor Research
+W4391248235,"Spiecker, D., & Brown, T. G.",Optical Modeling and Performance Predictions
+W4416157497,"Spiecker, D., & Brown, T. G.",Optical Engineering
+W3202580819,"Howard, T. V., & Brown, T. G.",NA
+W3195759716,"Larrategui, M. T., Zhang, Y., Brown, T. G., & Ellis, J. D.",Optics Letters
+W4388929433,"Howard, T. V., Sukovaty, I. Z., & Brown, T. G.",Journal of Optical Microsystems
+W4392971063,"Kruschwitz, J. D., Brown, T. G., & Zavislan, J. M.",Optical Engineering
+W4403026712,"Howard, T. V., & Brown, T. G.",Optical Modeling and Performance Predictions
+W4403026867,"Spiecker, D., & Brown, T. G.",Optical Modeling and Performance Predictions
+W4406812228,"Howard, T. V., & Brown, T. G.",SPIE Silicon Photonics
+W4408693676,"Sukovaty, I. Z., Howard, T. V., & Brown, T. G.",SPIE Silicon Photonics
+W3192177497,"Carney, P. S., & Brown, T. G.",Tribute to James C. Wyant: The Extraordinaire in Optical Metrology and Optics Education
+W4214836059,"Brown, T. G., & Howard, T. V.",Three-Dimensional and Multidimensional Microscopy: Image Acquisition and Processing
+W4315631377,"Howard, T. V., & Brown, T. G.",Emerging Applications in Silicon Photonics
+W4320147495,"Howard, T. V., & Brown, T. G.",Frontiers in Optics
+W4320147653,"Larrategui, M. T., Ellis, J. D., & Brown, T. G.",Frontiers in Optics
+W4320150784,"Niekerk, M. v., Rizzo, A. J., Rivera, H. A. R., Leake, G., Coleman, D. J., Tison, C. C., Fanto, M. L., Bergman, K., & Preble, S. F.",Frontiers in Optics
+W4324028140,"Howard, T. V., & Brown, T. G.",SPIE Silicon Photonics
+W4324330101,"Feng, Y., Alemán-Castañeda, L. A., Gutiérrez–Cuevas, R., Herrera, I., Brown, T. G., Brasselet, S., & Alonso, M. A.",Three-Dimensional and Multidimensional Microscopy: Image Acquisition and Processing
+W4324330389,"Howard, T. V., & Brown, T. G.",Three-Dimensional and Multidimensional Microscopy: Image Acquisition and Processing
+W4382362533,"Kruschwitz, J. D., Brown, T. G., & Zavislan, J. M.",Education and Training in Optics and Photonics
+W4385343267,"Abel, S., Ahn, D., Akulova, Y. A., Yoo, S. J. B., Bergman, B., Bergman, K., Bian, Y., Bogaerts, W., Boning, D. S., Bowers, J. E., Cai, P., Calabretta, N., Carmean, D., Carpenter, L. G., Chandran, S., Cheng, Q., Chrostowski, L., Chu, T., Dobbelaere, P. D., ... Zhang, W.",Elsevier eBooks
+W4385359698,"Sundaram, V. S. S., Manfreda-Schulz, E., Deenadayalan, V., Hawthorne, T., Slezak, B. R., Roberts, T., Palone, T., Ciminelli, M., Battle, P. R., Howland, G. A., & Preble, S. F.",Conference on Lasers and Electro-Optics
+W4385367240,"Rivera, H. A. R., & Preble, S. F.",Conference on Lasers and Electro-Optics
+W4389584451,"Gebregiorgis, Y., Monteleone, J. A., Howland, G. A., Yao, P. L., Prather, D. W., & Preble, S. F.",Frontiers in Optics
+W4392680982,"Howard, T. V., & Brown, T. G.",Three-Dimensional and Multidimensional Microscopy: Image Acquisition and Processing
+W4399419717,"Preble, S. F.","SPIE Quantum Information Science, Sensing, and Computation"
+W4399419731,"Manfreda-Schulz, E., Deenadayalan, V., Ciminelli, M., Palone, T., Preble, S. F., & Howland, G. A.","SPIE Quantum Information Science, Sensing, and Computation"
+W4399420211,"Craft, C. L., Alsing, P. M., Barton, N. J., Brownell, A., Deenadayalan, V., Fanto, M. L., Howland, G. A., Hucul, D., Klug, A., Macalik, M., Manfreda-Schulz, E., Percevault, G., Porto, N. L., Preble, S. F., Rizzo, A. J., Scalzi, K., Schneeloch, J., Sheridan, E., Sundaram, V. S. S., ... Soderberg, K.","SPIE Quantum Information Science, Sensing, and Computation"
+W4401575325,"Potter, M., Holz, E., Demblowski, L. A., Hunkar, K., Anazodo, U., Preble, S. F., & Asllani, I.","Proceedings on CD-ROM - International Society for Magnetic Resonance in Medicine. Scientific Meeting and Exhibition/Proceedings of the International Society for Magnetic Resonance in Medicine, Scientific Meeting and Exhibition"
+W4402258764,"Rizzo, A. J., Thornton, E., Vo, T., Carpenter, L. G., Kar, S., Leake, G., Smith, A. M., Tison, C. C., Coleman, D. J., Preble, S. F., & Fanto, M. L.",Conference on Lasers and Electro-Optics
+W4402265144,"Sundaram, V. S. S., Deenadayalan, V., Palone, T., Fanto, M. L., Howland, G. A., & Preble, S. F.",Conference on Lasers and Electro-Optics
+W4402969873,"Dowdell, D. R., & Brown, T. G.",NA
+W4403059237,"Jia, Z., Rivera, H. A. R., Neim, L., Park, J., Preble, S. F., & Kanté, B.",Photonic Computing: From Materials and Devices to Systems and Applications
+W4406789504,"Dikshit, A. A., Wallner, J., Uddin, M. R., Mann, J. A., Aiello, A. F., Carpenter, L. G., Antohe, A. O., Leake, G., McDonough, C., Timalsina, Y. P., Tyndall, N. F., Pruessner, M. W., Stievater, T. H., Rizzo, A. J., Fanto, M. L., Tison, C. C., Smith, A. M., Birrittella, R. J., Manfreda-Schulz, E., ... Harame, D. L.",SPIE Silicon Photonics
+W4408701535,"Preble, S. F.",Frontiers in Biological Detection: From Nanosensors to Systems
+W4410885611,"Preble, S. F.","SPIE Quantum Information Science, Sensing, and Computation"
+W4414278718,"Geer, R. E., & Preble, S. F.",Optical Design Automation
+W4414313936,"Sundaram, V. S. S., Ardekani, H., Manfreda-Schulz, E., Lachner, B., Ollis, T., Johnson, R., Deenadayalan, V., Palone, T., Ciminelli, M., Preble, S. F., & Vamivakas, A. N.",Conference on Lasers and Electro-Optics
+W4414324171,"Neim, L., Rivera, H. A. R., Niekerk, M. v., Zhao, Z., Qin, Y., Ni, K., Das, T., & Preble, S. F.",Conference on Lasers and Electro-Optics
+W4414324498,"Deenadayalan, V., & Preble, S. F.",Conference on Lasers and Electro-Optics
+W7130404361,"Deenadayalan, V., Nelson, G. T., Bickford, J. R., Kemal, J. N., & Preble, S. F.",Journal of Optical Microsystems
+W7134922805,"Rasel, M. O. F., Kabra, Y., Yao, P. L., Hossain, M. J., Shi, S., Creazzo, T. A., Konkol, M. R., Cullen, C. J., Deenadayalan, V., Newkirk, C., Ciminelli, M., Preble, S. F., & Prather, D. W.",Optics Express
+W7140192487,"Rivera, H. A. R., Neim, L., Deenadayalan, V., & Preble, S. F.",Nature Communications
+W7157328537,"Zelaya, K., Friedman, J., Rivera, H. A. R., Preble, S. F., & Miri, M.",arXiv (Cornell University)
+W7161758617,"Rivera, H. A. R., Neim, L., Deenadayalan, V., & Preble, S. F.",Figshare
+W7164567237,"Preble, S. F.","SPIE Quantum Information Science, Sensing, and Computation"
+W7171532701,"Rivera, H. A. R., Neim, L., & Preble, S. F.",Conference on Lasers and Electro-Optics
+W7225454558,"Coleto, A. G., Crawford-Eng, H., Dahl, T. J., Shapiro, M., Schnuck, M., Walsh, K. J., Lipkowitz, S. T., Pruessner, M. W., Tyndall, N. F., Bouchard, J. N., Antohe, A. O., Kar, S., O'Mullan, P. J., Hurley, C. D., Hedlesky, P., Sundaram, V. S. S., Preble, S. F., McComber, K. A., Eakin, J., ... Notaroš, J.",Nanophotonics
+W4291111820,"Abu-Shawareb, H., Acree, R. L., Adams, P. A., Adams, J. J., Addis, B., Aden, R., Adrian, P. J., Afeyan, B. B., Aggleton, M., Aghaian, L., Aguirre, A., Aikens, D., Akre, J., Albert, F., Albrecht, M., Albright, B. J., Albritton, J., Alcala, J., Alday, C. L., ... Bickel, R.",Physical Review Letters
+W4391530715,"Abu-Shawareb, H., Acree, R. L., Adams, P. A., Adams, J. J., Addis, B., Aden, R., Adrian, P. J., Afeyan, B. B., Aggleton, M., Aghaian, L., Aguirre, A., Aikens, D., Akre, J., Albert, F., Albrecht, M., Albright, B. J., Albritton, J., Alcala, J., Alday, C. L., ... Bettenhausen, R. C.",Physical Review Letters
+W4379016383,"Schroeder, C. B., Albert, F., Benedetti, C., Bromage, J., Bruhwiler, D., Bulanov, S. S., Campbell, E. M., Cook, N. M., Cros, B., Downer, M. C., Esarey, E. H., Froula, D. H., Fuchs, M., Geddes, C. G. R., Gessner, S., Gonsalves, A. J., Hogan, M., Hooker, S. M., Huebl, A., ... Zuegel, J. D.",Journal of Instrumentation
+W4388930611,"Bai, X., Luo, Y., Jiang, L., Gupta, A., Kaveti, P., Singh, H., & Ostadabbas, S.",ACM Journal on Autonomous Transportation Systems
+W4416749036,"Zhang, Z., Gupta, A., Jiang, H., & Singh, H.",IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS)
+W4410631840,"Froula, D. H., Dorrer, C., Colaïtis, A., Edgell, D. H., Follett, R. K., Hill, E. M., Igumenshchev, I. V., Milder, A. L., Palastro, J. P., Shah, R. C., Solodov, A. A., Turnbull, D., Goncharov, V. N., Regan, S. P., Sorce, C., Zuegel, J. D., & Deeney, C.",Physics of Plasmas
+W4386023880,"Kiani, L., Zhou, T., Bahk, S., Bromage, J., Bruhwiler, D., Campbell, E. M., Chang, Z., Chowdhury, E., Downer, M. C., Du, Q., Esarey, E. H., Galvanauskas, A., Galvin, T., Haefner, C., Hoffmann, D., Joshi, C., Kanskar, M., Lu, W., Menoni, C. S., ... Geddes, C. G. R.",Journal of Instrumentation
+W4295074135,"Lee, C., DeGrandpre, M. D., Guthrie, J. D., Hill, V. J., Kwok, R., Morison, J., Cox, C., Singh, H., Stanton, T. P., & Wilkinson, J.",Oceanography
+W4386824802,"Kaveti, P., Vaidyanathan, S. N., Chelvan, A. T., & Singh, H.",IEEE Robotics and Automation Letters
+W4403222707,"Kling, M. F., Menoni, C. S., Geddes, C. G. R., Galvanauskas, A., Albert, F., Kiani, L., Chini, M., Baker, L. R., Nelson, K. A., Young, L., Moses, J., Carbajo, S., Demos, S. G., Dollar, F. J., Schumacher, D. W., Tsai, J. Y., Fry, A. R., & Zuegel, J. D.",Journal of Optics
+W4405786896,"Zhang, Z., Jiang, H., & Singh, H.",IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS)
+W4312561237,"Luo, R., Wang, C., Schwarm, E., Keil, C., Mendoza, E., Kaveti, P., Alt, S., Singh, H., Padır, T., & Whitney, J. P.",IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS)
+W4387123825,"Kaveti, P., Gupta, A., Giaya, D., Karp, M., Keil, C., Nir, J. S., Zhang, Z., & Singh, H.",IEEE International Conference on Automation Science and Engineering (CASE)
+W3216868458,"Begishev, I. A., Bagnoud, V., Bahk, S., Bittle, W. A., Brent, G., Cuffney, R., Dorrer, C., Froula, D. H., Haberberger, D., Mileham, C., Nilson, P. M., Okishev, A. V., Shaw, J., III, M. J. S., Stillman, C., Stöeckl, C., Turnbull, D., Wager, B., Zuegel, J. D., & Bromage, J.",Applied Optics
+W4405785459,"Keil, C., Gupta, A., Kaveti, P., & Singh, H.",IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS)
+W4410982297,"Bromage, J., Bahk, S., Barczys, M., Bolognesi, A., Dorrer, C., Ekanayake, N., Feng, C., Hill, E. M., Jeon, C., Krieger, M., Kruschwitz, B. E., Kwiatkowski, J., Power, E., Webb, B., & Zuegel, J. D.","High-power, High-energy Lasers, and Ultrafast Optical Technologies"
+W4414430859,"Shevtsov, S., Mireles, M., Kafka, K. R. P., Stehlík, M., Kozlov, A. A., Lei, Y., Svirko, Y. P., Zuegel, J. D., Kazansky, P. G., & Demos, S. G.",Optics Express
+W4225602207,"Pawlik, J. R., Armstrong, R. A., Farrington, S., Reed, J. K., Rivero‐Calle, S., Singh, H., Walker, B. K., & White, J. W.",Marine Ecology Progress Series
+W4401414909,"Kaveti, P., Giamou, M., Singh, H., & Rosen, D. M.",Proceedings - IEEE International Conference on Robotics and Automation/Proceedings
+W4378470691,"Zhang, Z., Kaveti, P., Singh, H., Powell, A., Fruh, E. L., & Clarke, M. E.",Frontiers in Marine Science
+W4402661261,"Meyers, J. C., Sayre-McCord, T., Zhang, Z., & Singh, H.",IEEE transactions on field robotics.
+W3211128116,"Campbell, M. D., Huddleston, A., Somerton, D. A., Clarke, M. E., Wakefield, W. W., Murawski, S. A., Taylor, C. F., Singh, H., Girdhar, Y., & Yoklavich, M. M.",Fishery Bulletin
+W3214193809,"Kaveti, P., Nir, J. S., & Singh, H.",IEEE International Conference on Multisensor Fusion and Integration for Intelligent Systems (MFI)
+W4305072045,"Power, E., Bucht, S., Kafka, K. R. P., Bromage, J., & Zuegel, J. D.",Optics Express
+W4381248871,"Begishev, I. A., Dorrer, C., Bahk, S., Bucht, S., Feng, C., Guardalben, M. J., Jeon, C., Mileham, C., Roides, R. G., Spilatro, M. A., Webb, B., Weiner, D., Zuegel, J. D., & Bromage, J.",Optics Express
+W4324134059,"Spilatro, M. A., Bittle, W. A., Bock, M., Carofanello, Z., Dorrer, C., Hill, E. M., Landis, N., & Zuegel, J. D.",NA
+W4385315003,"Dyer, G. M., Galtier, E. C., Cunningham, E. F., Curry, C. B., Fletcher, L. B., Fiúza, F., Glenzer, S. H., Gleason, A. E., Nagler, B., Lee, H. J., Khaghani, D., Gauthier, M., Conder, A. D., Martinez, M. D., LaFortune, K. N., Hardin, C. L., Arnold, B., Yang, S., Greenberg, M., ... Fry, A. R.",Conference on Lasers and Electro-Optics
+W4309957274,"PIAZZA, A. D., Willingale, L., & Zuegel, J. D.",arXiv (Cornell University)
+W4410885149,"Begishev, I. A., Bromage, J., & Zuegel, J. D.",Laser Technology for Defense and Security
+W3208408546,"Carlson, K., Marozas, J. A., & Zuegel, J. D.",Bulletin of the American Physical Society
+W4323790606,"Power, E., Bucht, S., Bromage, J., & Zuegel, J. D.",Optica Advanced Photonics Congress
+W4385367304,"Power, E., Bucht, S., Bromage, J., & Zuegel, J. D.",Conference on Lasers and Electro-Optics
+W4403026548,"Feng, Y., Lin, C., Alemán-Castañeda, L. A., Brown, T. G., & Alonso, M. A.",Optical Modeling and Performance Predictions
+W4405527194,"Begishev, I. A., Dorrer, C., Bromage, J., & Zuegel, J. D.","Optica Laser Congress (ASSL, LAC, LS&C)"
+W4405623959,"Begishev, I. A., & Zuegel, J. D.",Optics Communications
+W4408594396,"Feng, Y., Alemán-Castañeda, L. A., Alonso, M. A., & Brown, T. G.",Three-Dimensional and Multidimensional Microscopy: Image Acquisition and Processing
+W4409880905,"Dorrer, C., Bolognesi, A., Bozarth, M., Campbell, A., Ekanayake, N., Gibney, K., Herman, S., Hill, E. M., Meyers, M. M., Sampat, S., Spilatro, M. A., Weiner, D., & Zuegel, J. D.",High Power Lasers for Fusion Research
+W4409881064,"Sampat, S., Bolognesi, A., Ekanayake, N., Gibney, K., Hill, E. M., Kruschwitz, B. E., Meyers, M. M., Spilatro, M. A., Zuegel, J. D., & Dorrer, C.",High Power Lasers for Fusion Research
+W4414265123,"Feng, Y., Alemán-Castañeda, L. A., Brown, T. G., & Alonso, M. A.",Optical Modeling and Performance Predictions
+W4415337855,"Spiecker, D., & Brown, T. G.",Optical Engineering
+W4416259105,"Howard, T. V., Alonso, M. A., & Brown, T. G.",Journal of Modern Optics
+W4416800601,"Streeter, A., Agnello, S., Bernier, L., Butterfield, G., Carrier, N., Chan, B., Chung, J., Chung, R., Fisher, Y., Frisicano, R., Zelezny, M., Maynard, A., Garand, D., Gibney, K., Hettrick, J., Hill, E., Kruschwitz, B. E., Mitchell, G., Nelson, D., ... Zuegel, J. D.",IEEE International Conference on Plasma Science (ICOPS)
+W7128072083,"Spiecker, D., & Brown, T. G.",Optical Engineering
+W7128531991,"Herrera, I., Feng, S., Alemán-Castañeda, L. A., Brown, T. G., Brasselet, S., & Alonso, M. A.",Springer eBooks
+W7133507362,"Dorrer, C., Bolognesi, A., Bozarth, M., Campbell, A., Dean, R., Ekanayake, N., Gibney, K., Herman, S. M., Hill, E. M., Meyers, M. T., Sampat, S., Spilatro, M. A., Weiner, D., & Zuegel, J. D.",Nonlinear Frequency Generation and Conversion: Materials and Devices
+W7133552344,"Feng, Y. S., Alemán-Castañeda, L. A., Brown, T. G., & Alonso, M. A.",Three-Dimensional and Multidimensional Microscopy: Image Acquisition and Processing
+W7135807959,"Spiecker, D., & Brown, T. G.",UR Research (University of Rochester)
+W7171569848,"Dorrer, C., Bolognesi, A., Bozarth, M., Campbell, A., Dean, R., Ekanayake, N., Gibney, K., Herman, S., Hill, E. M., Meyers, M., Sampat, S., Spilatro, M. A., Weiner, D., & Zuegel, J. D.",Conference on Lasers and Electro-Optics
+W7171734660,"Dorrer, C., Hill, E. M., Sampat, S., Bolognesi, A., Ekanayake, N., Gibney, K., Dean, R., Rigatti, A. L., Spilatro, M. A., Weiner, D., & Zuegel, J. D.",Optics Express
+W7202394908,"Zuegel, J. D., PIAZZA, A. D., Krushelnick, K. M., & Margarone, D.",Physics of Plasmas
+W4385672310,"Geoffroy, M., Bouchard, C., Flores, H., Robert, D., Gjøsæter, H., Hoover, C., Hop, H., Hussey, N. E., Nahrgang, J., Steiner, N. S., Bender, M. L., Berge, J., Castellani, G., Chernova, N. V., Copeman, L. A., David, C., Deary, A. L., Divoky, G. J., Dolgov, A. V., ... Walkusz, W.",Elementa Science of the Anthropocene
+W4214926794,"Lefebvre, K. A., Fachon, E., Bowers, E. K., Kimmel, D. G., Snyder, J. A., Stimmelmayr, R., Grebmeier, J. M., Kibler, S., Hardison, D. R., Anderson, D. M., Kulis, D. M., Murphy, J., Gann, J. C., Cooper, D. W., Eisner, L. B., Duffy‐Anderson, J. T., Sheffield, G. G., Pickart, R. S., Mounsey, A., ... Siddon, E. C.",Harmful Algae
+W4313296011,"Casey, F., Churchill, J. H., Cowles, G. W., Pugh, T. L., Wahle, R. A., Stokesbury, K. D. E., & Glenn, R.",Fisheries Oceanography
+W4365479386,"Axler, K. E., Goldstein, E. D., Nielsen, J. M., Deary, A. L., & Duffy‐Anderson, J. T.",Global Change Biology
+W3198972055,"Deary, A. L., Vestfals, C. D., Mueter, F. J., Logerwell, E., Goldstein, E. D., Stabeno, P. J., Danielson, S. L., Hopcroft, R. R., & Duffy‐Anderson, J. T.",Polar Biology
+W4385303562,"Laurel, B. J., Abookire, A. A., Barbeaux, S. J., Almeida, L. Z., Copeman, L. A., Duffy‐Anderson, J. T., Hurst, T. P., Litzow, M. A., Kristiansen, T., Miller, J. A., Palsson, W. A., Rooney, S. C., Thalmann, H. L., & Rogers, L. A.",Fish and Fisheries
+W4394761555,"Chen, C., Zhao, L., Lin, H., He, P., Li, S., Wu, Z., Qi, J., Xu, Q., Stokesbury, K. D. E., & Wang, L.",Progress In Oceanography
+W4200025775,"Litzow, M. A., Malick, M. J., Abookire, A. A., Duffy‐Anderson, J. T., Laurel, B. J., Ressler, P. H., & Rogers, L. A.",Scientific Reports
+W4307540166,"Delargy, A. J., Blackadder, L., Bloor, I. S., McMinn, C., Rudders, D. B., Szostek, C. L., Dobby, H., Kangas, M. I., Stewart, B. D., Williams, J. R., & Stokesbury, K. D. E.",Reviews in Fisheries Science & Aquaculture
+W4284962027,"Stokesbury, K. D. E., Fay, G., & Griffin, R. M.",ICES Journal of Marine Science
+W4384831275,"Goldstein, E. D., McCabe, R. M., Rogers, M. C., Deary, A. L., & Duffy‐Anderson, J. T.",Progress In Oceanography
+W4385923412,"Baker, M. R., Alverson, R., Christiansen, R., Criddle, K. R., Eilertsen, D., Foy, R. J., Gauvin, J. R., Goodman, S. E., Habegger, L., Harris, B. P., Kimball, N., Mercer, A. J. M., Poulsen, E., Robinson, M., Rusin, J. D., Skinner, R., Sparrevohn, C. R., Stokesbury, K. D. E., & Sykes, D. R.",Frontiers in Marine Science
+W4313362647,"Tran, M. A., Fay, G., Stewart, B. D., & Stokesbury, K. D. E.",Journal of Shellfish Research
+W4210747663,"Litzow, M. A., Abookire, A. A., Duffy‐Anderson, J. T., Laurel, B. J., Malick, M. J., & Rogers, L. A.",Fisheries Research
+W4310153765,"Spear, A. H., Andrews, A. G., Duffy‐Anderson, J. T., Jarvis, T., Kimmel, D. G., & McKelvey, D. R.",Fisheries Oceanography
+W4388271863,"Stokesbury, K. D. E., Cassidy, K., & Lowery, T. M.",Marine and Coastal Fisheries
+W4401008033,"Stokesbury, K. D. E., Bethoney, N. D., Restrepo, F., & Harris, B. P.",Fisheries Oceanography
+W4206697045,"Tabisola, H., Duffy‐Anderson, J. T., Mordy, C. W., & Stabeno, P. J.",Oceanography
+W4377013012,"Silva, T. L., Breault, T. A., Lowery, T. M., Calabrese, N. M., Stokesbury, K. D. E., Wiley, D. N., & Fay, G.",Fisheries Research
+W4394862874,"Manore, C., Fenn, A. J., & Singh, H.",IEEE Journal on Miniaturization for Air and Space Systems
+W4414930967,"Wise, E., Kaveti, P., Chen, Q., Wang, W., Singh, H., Kelly, J. W., Rosen, D. M., & Giamou, M.",The International Journal of Robotics Research
+W4405172300,"Harris, B. P., Sethi, S. A., Restrepo, F., Grabowski, J. H., & Stokesbury, K. D. E.",Biological Conservation
+W4406867656,"Vanderstichel, R. V., Boyd, C., Delargy, A. J., Lego, C. A., Mosher, J., Penney, C., Sarty, M., & Stokesbury, K. D. E.",Marine Ecology Progress Series
+W4212798142,"Nir, J. S., Deming, B., & Singh, H.",MTS/IEEE OCEANS Conference (OCEANS)
+W4406566484,"Duffy‐Anderson, J. T., Deary, A. L., Juanes, F., & Pape, O. L.",Elsevier eBooks
+W7114768288,"Papalia, A., Sanderson, N., Han, H., Yang, H., Singh, H., & Everett, M.",Proceedings - IEEE International Conference on Robotics and Automation/Proceedings
+W7154736942,"Goldstein, E. D., Axler, K. E., Lamb, J. F., Rogers, M. C., & Duffy‐Anderson, J. T.",Continental Shelf Research
+W7163549821,"Esson, D., Dierking, J., Phillips, B., Oswald, J. N., Zhang, M. M., Kurinchi-Vendhan, R., Pinheiro, M., Acenas, I., Rost, T., Freitas, R., Prieler, M., Dubbeld, J., Radeta, M., Semedo, S. M. V., Singh, H., Kumar, V., Varini, F., Torre, P. d. l., Motsenbocker, B. E., ... Canning‐Clode, J.",Trends Open
+W7213987002,"Kenney, M. A., Kopp, R. E., Samaras, C., Alberti, M., Angell, S. Y., Burney, J. A., Cunliff, C., Duffy‐Anderson, J. T., Fischer, L. W., Frey, S. D., Hicke, J. A., Howard, P. H., Jerolleman, A., Kirchhoff, C. J., Koebele, E. A., Mahowald, N. M., Misarti, N., Pearson, D. L., Phillips, A. A., ... Keith, L.",Earth s Future
+W4375868929,"Bai, X., Jiang, L., Luo, Y., Gupta, A., Kaveti, P., Singh, H., & Ostadabbas, S.",IEEE International Conference on Acoustics Speech and Signal Processing
+W4200186937,"Ferm, N. C., Duffy‐Anderson, J. T., & Hurst, T. P.",Fishery Bulletin
+W4213160622,"Shah, V., Nir, J. S., Kaveti, P., & Singh, H.",MTS/IEEE OCEANS Conference (OCEANS)
+W4415308990,"Papalia, A., Dawson, C., L., A. L., Bayomi, N., Champenois, B., Cho, J., Cai, L., DelPreto, J., Edwards, K. M., Githinji, B., Hickert, C., Jayawardana, V., Matthew, K., Raghavan, S., David, R., Salimi, S., Shi, J., Sudhakar, S., Wang, Y., ... Singh, H.",arXiv (Cornell University)
+W4379474788,"Luo, Y., Bai, X., Jiang, L., Gupta, A., Mortin, E., Singh, H., & Ostadabbas, S.",arXiv (Cornell University)
+W4417118567,"Kaveti, P., Waldum, A. G., Singh, H., & Ludvigsen, M.",arXiv (Cornell University)
+W4383468787,"Gupta, A., Xie, Y., Singh, H., & Jiang, H.",arXiv (Cornell University)
+W4393100178,"Nir, J. S., Giaya, D., & Singh, H.",arXiv (Cornell University)
+W2264815985,"Singh, H., Roman, C., Pizarro, O. R., Foley, B., Eustic, R., & Can, A.",Princeton University Press eBooks
+W4200240727,"Ferm, N. C., Duffy‐Anderson, J. T., & Hurst, T. P.",Fishery Bulletin
+W4220884749,"Lindeman, M., Straneo, F., Singh, H., Cenedese, C., Sutherland, D., Schild, K. M., & Duncan, D.",EGU General Assembly Conference Abstracts
+W4221058611,"Maksym, T., Mei, M. J., Wever, N., Trujillo, E., Leonard, K., Ackley, S. F., Weissling, B., Williams, G. D., & Singh, H.",EGU General Assembly Conference Abstracts
+W4378765464,"Asjad, S., Gupta, A., & Singh, H.",arXiv (Cornell University)
+W4406566498,"Acolas, M., Alfonso, S., Almada, F., Andersson, L., Arregui, I., Arrizabalaga, H., Assis, C. A., Barbut, L., Bastardie, F., Batista, M. I., Bégout, M., Benhaïm, D., Berg, F., Bernardo, C. P., Bertucci, F., Bessa, E., Brito, C., Brosset, P., Brown, E. J., ... Zucchetta, M.",Elsevier eBooks
+W4412569958,"Singh, H., Leonard, J. J., & Roman, C.",IEEE Journal of Oceanic Engineering
+W4416748683,"Gupta, A., Giaya, D., Annadanam, V. R., Diddi, M., Jiang, H., & Singh, H.",IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS)
+W7162550586,"Gupta, A., Wang, H., Saunders, C., RoyChowdhury, A., Singh, H., & Jiang, H.",International Conference on 3D Vision (3DV)
+W7206171983,"Gallimore, E., Schneider, T., Benjamin, M. R., Singh, H., Vandor, I., & Giaya, D.",MBLWHOI Library Dataverse
+W7214041781,"Kenney, M. A., Kopp, R. E., Samaras, C., Alberti, M., Angell, S. Y., Burney, J. A., Cunliff, C., Duffy‐Anderson, J. T., Fischer, L. W., Frey, S. D., Hicke, J. A., Howard, P. H., Jerolleman, A., Kirchhoff, C. J., Koebele, E. A., Mahowald, N. M., Misarti, N., Pearson, D. L., Phillips, A. A., ... Kim, H.",Bulletin of the American Meteorological Society
+W7214045234,"Sanderson, N. R., Fishberg, A., Han, H., Yang, H., How, J. P., Singh, H., Everett, M., & Papalia, A.",arXiv (Cornell University)
+W7215038893,"Jean, C., Mijin, J., Volenec, J. J., Cunliff, C., Gray, S. A., Domingue, S. J., Barbato, M., Phillips, A. A., A, R. L. W., Council, D., Ortiz‐Bobea, A., Pearson, D. L., McConnell, K., Tate, E., Duffy‐Anderson, J. T., Sonnerup, R. E., Ghitis, E., Ricke, K., Hultman, N., ... Alexander, A. J.",UNC Libraries
+W4313880060,"Guo, X., Puritz, J. B., Wang, Z., Proestou, D. A., Allen, S. K., Small, J. M., VERBYLA, K. L., Zhao, H., Haggard, J., Chriss, N., Zeng, D., Lundgren, K. M., Allam, B., Bushek, D., G, M. G., Hare, M. P., Hollenbeck, C. M., Peyre, J. F. L., Liu, M., ... Wilbur, A. E.",Marine Biotechnology
+W4220866025,"Witkop, E. M., Proestou, D. A., & G, M. G.",BMC Genomics
+W4286560520,"Oulhen, N., Byrne, M., Duffin, P. J., G, M. G., Hewson, I., Hodin, J., Konar, B. H., Lipp, E. K., Miner, B. G., Newton, A. L., Schiebelhut, L. M., Smolowitz, R. M., Wahltinez, S. J., Wessel, G. M., Work, T. M., Zaki, H. A., & Wares, J. P.",Biological Bulletin
+W4367054102,"Puritz, J. B., Guo, X., Hare, M. P., He, Y., Hillier, L., Jin, S., Liu, M., Lotterhos, K. E., Minx, P., Modak, T. H., Proestou, D. A., Rice, E. S., Tomlinson, C., Warren, W. C., Witkop, E. M., Zhao, H., & G, M. G.",Molecular Ecology Resources
+W4292478806,"Piesz, J., Scro, A. K., Corbett, R., Lundgren, K. M., Smolowitz, R. M., & G, M. G.",Diseases of Aquatic Organisms
+W4205671225,"Witkop, E. M., Wikfors, G. H., Proestou, D. A., Lundgren, K. M., Sullivan, M. E., & G, M. G.",Developmental & Comparative Immunology
+W4391179513,"Takyi, E., Stevick, R. J., Witkop, E. M., Gregg, L. S., Chesler-Poole, A. B., Small, J. M., White, M. M., Hudson, R., Giray, C., Rowley, D. C., Nelson, D. R., & G, M. G.",Aquaculture
+W4406084650,"Carrasquillo, A. L., Proestou, D. A., Hudson, R., Preziosi, B. M., & G, M. G.",Journal of Shellfish Research
+W4367315938,"Takyi, E., LaPorte, J. P., Sohn, S., Stevick, R. J., Witkop, E. M., Gregg, L. S., Chesler-Poole, A. B., Small, J. M., White, M. M., Giray, C., Rowley, D. C., Nelson, D. R., & G, M. G.",Aquaculture Fish and Fisheries
+W4399697574,"Haskell, H., Suckling, C. C., G, M. G., McMahon, K. W., Preziosi, B. M., & Davies, A. J.",Journal of Experimental Marine Biology and Ecology
+W4403552332,"G, M. G., Andrews, J. S., Coppersmith, J., Guidry, M. E., Houtz, A., Mills, B., Murphy, M., Nelson, D. R., & Rowley, D. C.",Elsevier eBooks
+W7131869598,"Gbadebo, O. S., Masibag, A. G., Rosario, M. E., He, R., Ye, Y., G, M. G., Wu, Q., & Rowley, D. C.",ACS Chemical Biology
+W4414062463,"Calabrese, N. M., Merhoff, S. L., Norton, H. L., & Stokesbury, K. D. E.",Marine and Coastal Fisheries
+W7146975590,"Smith, S., Wilbur, A. E., Samson, J. S., Flor, Y. T. D. L., G, M. G., Ushijima, B., & Noble, R. T.",Frontiers in Marine Science
+W4317475996,"LaPorte, J. P., Spinard, E. J., Cavanagh, D., G, M. G., Rowley, D. C., Mekalanos, J. J., Mittraparp‐arthorn, P., & Nelson, D. R.",Microbiology Resource Announcements
+W4409653993,"Delargy, A. J., Cassidy, K. S., Lisi, A. D., & Stokesbury, K. D. E.",Fisheries Research
+W4416319918,"Zavell, M. D., Calabrese, N. M., Delargy, A. J., Merhoff, S. L., Morgan, B. A., Painten, A. E., Shumway, S. E., Wachala, S. N., & Stokesbury, K. D. E.",Marine and Coastal Fisheries
+W4294053626,"Puritz, J. B., Zhao, H., Guo, X., Hare, M. P., He, Y., Peyre, J. F. L., Lotterhos, K. E., Lundgren, K. M., Modak, T. H., Proestou, D. A., Rawson, P. D., Robledo, J. A. F., Weedop, K. B., Witkop, E. M., & G, M. G.",bioRxiv (Cold Spring Harbor Laboratory)
+W4282840821,"Abreu, A. M., Bentil, H., Okronipa, H., Fiorella, K. J., Vadiveloo, M. K., G, M. G., Whewell, A., Adu‐Afarwuah, S., & Oaks, B. M.",Current Developments in Nutrition
+W4367396072,"Takyi, E., LaPorte, J. P., Sohn, S., Stevick, R. J., Witkop, E. M., Gregg, L. S., Chesler-Poole, A. B., Small, J. M., White, M. M., Giray, C., Rowley, D. C., Nelson, D. R., & G, M. G.",Publons reviews and discussion
+W4394068050,"Witkop, E. M., Proestou, D. A., & G, M. G.",Figshare
+W4394116195,"Witkop, E. M., Proestou, D. A., & G, M. G.",Figshare
+W4394131913,"Witkop, E. M., Proestou, D. A., & G, M. G.",Figshare
+W4394210161,"Witkop, E. M., Proestou, D. A., & G, M. G.",Figshare
+W4394268262,"Witkop, E. M., Proestou, D. A., & G, M. G.",Figshare
+W4394292345,"Witkop, E. M., Proestou, D. A., & G, M. G.",Figshare
+W4394342576,"Witkop, E. M., Proestou, D. A., & G, M. G.",Figshare
+W4394417407,"Witkop, E. M., Proestou, D. A., & G, M. G.",Figshare
+W4394443921,"Witkop, E. M., Proestou, D. A., & G, M. G.",Figshare
+W4394463813,"Witkop, E. M., Proestou, D. A., & G, M. G.",Figshare
+W4394518517,"Witkop, E. M., Proestou, D. A., & G, M. G.",Figshare
+W4394529289,"Witkop, E. M., Proestou, D. A., & G, M. G.",Figshare
+W4394533898,"Witkop, E. M., Proestou, D. A., & G, M. G.",Figshare
+W4394542110,"Witkop, E. M., Proestou, D. A., & G, M. G.",Figshare
+W4403551360,"G, M. G., Carrasquillo, A. L., Clays, S., Hudson, R., Miller, J. L., Samson, J. S., Sasnita, S., & Rowley, D. C.",Elsevier eBooks
+W4403551537,"Andrews, J. S., Antoniadou, C., Arzul, I., Baker, S. M., Bidault, A., Bower, S. M., Bushek, D., Canier, L., Carnegie, R. B., Carrasquillo, A. L., Carroll, J. M., CHINTIROGLOU, C. C., Chollet, B., Clays, S., Coppersmith, J., Dill-Okubo, J. A., Garcia, C., G, M. G., Guidry, M. E., ... Smolowitz, R. M.",Elsevier eBooks
+W4405536711,"Carriveau, R., D., G. S., Sant, T., Jochen, B., Stokesbury, K. D. E., Niezrecki, C., Bill, H., Sydney, C., & Naomi, P.",Journal of Physics Conference Series
+W4415937747,"Samson, J. S., Rowley, D. C., & G, M. G.",Journal of Shellfish Research
+W7128904473,"Calabrese, N. M., Merhoff, S. L., Norton, H. L., & Stokesbury, K. D. E.",Figshare
+W7128913155,"Calabrese, N. M., Merhoff, S. L., Norton, H. L., & Stokesbury, K. D. E.",Reviews in Fisheries Science & Aquaculture
+W7128921792,"Calabrese, N. M., Merhoff, S. L., Norton, H. L., & Stokesbury, K. D. E.",Reviews in Fisheries Science & Aquaculture
+W7128926843,"Calabrese, N. M., Merhoff, S. L., Norton, H. L., & Stokesbury, K. D. E.",Figshare
+W7139985635,"Takyi, E., LaPorte, J. P., Sohn, S., Stevick, R. J., Witkop, M. M., Giray, C., Rowley, D. C., Nelson, D. R., & G, M. G.",William & Mary School of Arts & Sciences
+W7139997408,"Calabrese, N. M., Merhoff, S. L., Norton, H. L., & Stokesbury, K. D. E.",Journal of Visualized Experiments
+W7160191863,"Bakner, D. L., Richard, N. L., Müller, M. S., Paton, P. W. C., G, M. G., & McWilliams, S. R.",Aquaculture Environment Interactions
+W7160826600,"Zavell, M. D., Mnich, A., Shumway, S. E., & Stokesbury, K. D. E.",Journal of Shellfish Research
+W7165001004,"Calabrese, N. M., Merhoff, S. L., Norton, H. L., & Stokesbury, K. D. E.",Marine and Coastal Fisheries
+W7167592983,"Hamilton, A. P., Moseman‐Valtierra, S. M., G, M. G., & Abdul‐Aziz, O. I.",Marine Ecology Progress Series
+W7167802372,"Delargy, A. J., Lego, C. A., Lisi, A. D., & Stokesbury, K. D. E.",Marine Ecology Progress Series
+W7168241143,"Calabrese, N. M., Delargy, A. J., & Stokesbury, K. D. E.",ICES Journal of Marine Science
+W4400361402,"Buck, B. H., Bjelland, H. V., Bockus, A. B., Chambers, M. D., Costa-Pierce, B. A., Dewhurst, T., Ferreira, J. G., Føre, H. M., Fredriksson, D. W., Goseberg, N., Holmyard, J., Isbert, W., Krause, G., Markus, T., Papandroulakis, N., Sclodnick, T., Silkes, B., Strand, Å., Troell, M. F., ... Heasman, K. G.",Frontiers in Aquaculture
+W4393253323,"Moscicki, Z., Swift, M. R., Dewhurst, T., MacNicoll, M. T., Chambers, M. D., Tsukrov, I. I., Fredriksson, D. W., Lynn, P. S., Landon, M. E., Zotter, B., & MacAdam, N.",Aquacultural Engineering
+W4403961463,"Heasman, K. G., Scott, N., Sclodnick, T., Chambers, M. D., Costa-Pierce, B. A., Dewhurst, T., Isbert, W., & Buck, B. H.",Frontiers in Aquaculture
+W4390587035,"Chambers, M. D., Coogan, M., Doherty, M., & Howell, H.",Aquaculture
+W4406712310,"Gonzalez, S. T., Li, Y., Aydlett, M., Bailey, D. L., Kerr, H., Doall, M. H., Gobler, C. J., Chambers, M. D., Jannink, J., Yarish, C., & Lindell, S. R.",Aquaculture
+W4411273586,"Ghasemi, R., Doko, G., Petrik, M., Wosnik, M., Lu, Z., Foster, D. L., & Mo, W.",Resources Conservation and Recycling
+W4308963410,"Tatel, C. E., Lyndgaard, S. F., Kanfer, R., & Melkers, J. E.",Journal of Learning Analytics
+W4224261012,"Wengrove, M. E., Schipper, M. A. D., Lippmann, T. C., & Foster, D. L.",Geomorphology
+W4353032802,"Melkers, J. E., Woolley, R., & Kreth, Q.",Edward Elgar Publishing eBooks
+W4401883892,"Heasman, K. G., Sclodnick, T., Goseberg, N., Scott, N., Chambers, M. D., Dewhurst, T., Rickerich, S., Føre, H. M., & Buck, B. H.",Frontiers in Aquaculture
+W4399923302,"Lyndgaard, S. F., Tatel, C. E., Pham, V., Melkers, J. E., & Kanfer, R.",International Journal of Lifelong Education
+W4404106385,"Zhu, L., Patwary, M. M. R., Sunny, R. C., Tsukrov, I. I., Chambers, M. D., & Fredriksson, D. W.",Ocean Engineering
+W4404276525,"Sclodnick, T., Chambers, M. D., Costa-Pierce, B. A., Dewhurst, T., Goseberg, N., Heasman, K. G., Isbert, W., Krause, G., Wieczorek, D., Markus, T., & Buck, B. H.",Frontiers in Aquaculture
+W4413905835,"DeVoe, S. R., Wengrove, M. E., Foster, D. L., & Hagan, D. S.",Journal of Geophysical Research Oceans
+W4396533060,"Moscicki, Z., Swift, M. R., Dewhurst, T., MacNicoll, M. T., Fredriksson, D. W., Chambers, M. D., & Tsukrov, I. I.",Ocean Engineering
+W4391954067,"Marry, M., & Foster, D. L.",Journal of Geophysical Research Oceans
+W4403580401,"Qi, Z., Lyndgaard, S. F., Melkers, J. E., & Kanfer, R.",Applied Cognitive Psychology
+W4408081492,"Chambers, M. D., Doherty, M., Coogan, M., Rillahan, C., DeCew, J. C., Lader, P. F., & Howell, W. H.",Aquaculture
+W4409645093,"Du, L., Tirado, M. M., & Melkers, J. E.",Journal of Diversity in Higher Education
+W4280542890,"Isett, K. R., Doshi, A., Rosenblum, S., Eller, W., Hicks, D. M., Melkers, J. E., & Group, t. N. D. P. C.",PLoS ONE
+W4386850079,"Ghasemi, R., Wosnik, M., Foster, D. L., & Mo, W.",Sustainability
+W4403531719,"Sunny, R. C., Fredriksson, D. W., Tsukrov, I. I., Zhu, L., Bowden, M., Chambers, M. D., & Silkes, B.",Aquacultural Engineering
+W4380372884,"Melkers, J. E., Reale, E., & Leeuwen, T. N. v.",Research Evaluation
+W4404688668,"Gitelman, L., Moscicki, Z., Patwary, M. M. R., Zhu, L., Chambers, M. D., Fredriksson, D. W., Swift, M. R., & Tsukrov, I. I.",MTS/IEEE OCEANS Conference (OCEANS)
+W4411306703,"Sunny, R. C., Fredriksson, D. W., Tsukrov, I. I., Zhu, L., Bowden, M., Chambers, M. D., & Silkes, B.",Aquacultural Engineering
+W4417077852,"Anthony, H., Jieshu, W., Du, L., Melkers, J. E., & Varshil, S.",arXiv (Cornell University)
+W4293077453,"Lyndgaard, S. F., Tatel, C. E., Kanfer, R., Melkers, J. E., & Sabree, J.",EdArXiv (OSF Preprints)
+W4376612236,"Pham, V., Melkers, J. E., & Tirado, M. M.","International Conference on Science, Technology and Innovation Indicators (STI)"
+W4377087628,"Du, L., Melkers, J. E., & Tirado, M. M.","International Conference on Science, Technology and Innovation Indicators (STI)"
+W4385699735,"Tsukrov, I. I., Knysh, A., Dewhurst, T., Moscicki, Z., Fredriksson, D. W., & Chambers, M. D.",International Conference on Computational Methods in Marine Engineering (MARINE)
+W4386239923,"Victoria, P., Tirado, M. M., & Melkers, J. E.",Zenodo (CERN European Organization for Nuclear Research)
+W4390282197,"Doherty, M., Fairchild, E. A., & Chambers, M. D.",SSRN Electronic Journal
+W4394088230,"Ghasemi, R., Wosnik, M., Foster, D. L., & Mo, W.",Figshare
+W4402896554,"Martin, E., Neefus, C. D., Coogan, M., Fredriksson, D. W., & Chambers, M. D.",SSRN Electronic Journal
+W4407226468,"Chambers, M. D., Coogan, M., Doherty, M., Rillahan, C., Lader, P. F., & Howell, W. H.",Frontiers in Aquaculture
+W4407400374,"DeVoe, S. R., Wengrove, M. E., Foster, D. L., & Hagan, D. S.",NA
+W4407400382,"DeVoe, S. R., Foster, D. L., Wengrove, M. E., & Hagan, D. S.",NA
+W4413389802,"Amekudzi-Kennedy, A., Webster, D. R., Zerbe, E., Burns, S., Hunter, M., Melkers, J. E., Blum, T. C., & Haas, K.",ASEE Annual Conference & Exposition
+W4416622173,"Patwary, M. M. R., Zhu, L., Sunny, R., Chambers, M. D., Fredriksson, D. W., & Tsukrov, I. I.",International Conference on Computational Methods in Marine Engineering (MARINE)
+W7143291023,"Munroe, D. M., Foster, D. L., Ambrose, A. F., Shinn, J. P., & Marquardt, S.",Frontiers in Ecology and Evolution
+W7204449880,"Samson, J. S., Murphy, S. E., Rowley, D. C., & G, M. G.",SSRN Electronic Journal
+W7212218901,"Satkowski, S., Proestou, D. A., G, M. G., Brianik, C. J., Allam, B., Dunne, J., Rawson, P. D., Ratcliff, S., Jamieson, J., Coÿne, P., O’Hala, A., & Guo, X.",SSRN Electronic Journal
+W7221752525,"Lyndgaard, S. F., Tatel, C. E. T. C. E., Kanfer, R. K. R., Melkers, J. E., & Sabree, J. C. S. J. C.",Computer-Based Learning in Context
+W7223656260,"Hamilton, A. P., Moseman‐Valtierra, S. M., G, M. G., & Abdul‐Aziz, O. I.",Marine Ecology Progress Series
+W7225115365,"Gall, M., & Melkers, J. E.",Springer eBooks

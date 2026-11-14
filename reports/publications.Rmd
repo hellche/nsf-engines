@@ -17,8 +17,17 @@ library(dplyr); library(readr); library(knitr); library(here); library(stringr)
 rd <- \(f) read_csv(here("data", "processed", f), show_col_types = FALSE)
 engines <- rd("engines.csv") |> arrange(engine_name)
 people  <- rd("people_roles_evidence.csv") |> filter(in_team)
-wp      <- rd("works_people.csv")
+wp      <- rd("works_people.csv") |> left_join(rd("works_details.csv"), by = "work_id")
 slug <- \(x) str_replace_all(str_to_lower(x), "[^a-z0-9]+", "-")
+esc  <- htmltools::htmlEscape
+# APA-style reference: Authors (Year). Title. *Venue*.
+apa_ref <- function(w) {
+  title <- str_squish(coalesce(w$title, "[untitled]"))
+  title <- if_else(str_detect(title, "[.?!]$"), title, paste0(title, "."))
+  paste0(if_else(is.na(w$authors), "", paste0(esc(w$authors), " ")),
+         "(", w$year, "). ", esc(title),
+         if_else(is.na(w$venue), "", paste0(" <i>", esc(w$venue), "</i>.")))
+}
 ```
 
 OpenAlex works of Engine team members, published since the start of each Engine's search window
@@ -44,9 +53,7 @@ for (i in seq_len(nrow(engines))) {
   cat(sprintf("%d team members, %d works (%d distinct; %d distinct in Engine topics).\n\n", nrow(pe), nrow(we), n_distinct(we$work_id), n_distinct(we$work_id[we$in_engine_topics %in% TRUE])))
   for (j in seq_len(nrow(pe))) {
     w <- we |> filter(person_id == pe$person_id[j]) |> arrange(desc(year), desc(cited_by))
-    url <- if_else(is.na(w$doi), paste0("https://openalex.org/", w$work_id), w$doi)
-    tab <- tibble(Year = w$year,
-                  Title = sprintf('<a href="%s">%s</a>', url, htmltools::htmlEscape(w$title)),
+    tab <- tibble(Reference = apa_ref(w),
                   Type = w$type, Citations = w$cited_by,
                   `In Engine topics` = if_else(w$in_engine_topics, "yes", ""))
     # Organisation from the Engine site; if that names the Engine itself (or is missing),
