@@ -21,8 +21,6 @@ choices <- read_csv(here("data", "manual", "tech_topic_choice.csv"), show_col_ty
 esc <- htmltools::htmlEscape
 ```
 
-How each step of the [pipeline](pipeline.html) is done.
-
 ## Technology profile {#technology-profile}
 
 The technology profile states what each Engine works on in two vocabularies: OpenAlex topics (for papers) and

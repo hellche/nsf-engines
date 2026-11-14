@@ -17,9 +17,6 @@ library(here)
 svg_file <- here("nsf_engines_pipeline_v2.svg")
 ```
 
-How the knowledge base of each Engine is built, step by step. Linked boxes lead to the
-[Methodology](methodology.html) page.
-
 *Page in progress.*
 
 <style>
@@ -33,7 +30,13 @@ How the knowledge base of each Engine is built, step by step. Linked boxes lead 
 # Inline SVG (not <img>) so its labels can be links; blank lines would end pandoc's raw HTML block
 if (file.exists(svg_file)) {
   svg <- readLines(svg_file, warn = FALSE, encoding = "UTF-8")
-  cat(svg[nzchar(trimws(svg))], sep = "\n")
+  svg <- svg[nzchar(trimws(svg))]
+  # Not shown on the site (the file itself is unchanged): the "Граница: ..." banner and the "v2" badges
+  # with their legend. Each banner / badge text comes right after its own <rect>.
+  drop_text <- grepl(">Граница:<|>v2</text>|>новое в v2<", svg)
+  drop_rect <- c(drop_text[-1], FALSE) & grepl("^<rect ", svg) & !grepl('class="', svg)
+  svg <- sub(" \\(v2\\)</title>", "</title>", svg)
+  cat(svg[!(drop_text | drop_rect)], sep = "\n")
 } else {
   cat("<p><i>Diagram file nsf_engines_pipeline_v2.svg not found.</i></p>")
 }
