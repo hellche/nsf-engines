@@ -13,130 +13,46 @@ output:
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = FALSE, message = FALSE, warning = FALSE)
 invisible(Sys.setlocale("LC_CTYPE", "en_US.UTF-8"))  # else cat() writes non-ASCII as <U+2010> under the C locale
-library(dplyr); library(readr); library(knitr); library(here); library(stringr)
+library(here)
 svg_file <- here("nsf_engines_pipeline_v2.svg")
-profile  <- read_csv(here("data", "processed", "tech_profile.csv"), show_col_types = FALSE)
-choices  <- read_csv(here("data", "manual", "tech_topic_choice.csv"), show_col_types = FALSE)
-esc <- htmltools::htmlEscape
 ```
 
-How the knowledge base of each Engine is built, step by step.
+How the knowledge base of each Engine is built, step by step. Linked boxes lead to the
+[Methodology](methodology.html) page.
 
 *Page in progress.*
 
 <style>
   .pipeline-svg svg { width: 100%; height: auto; }
-  .pipeline-svg .clickable { cursor: pointer; }
-  .pipeline-svg .clickable rect { transition: fill .15s; }
-  .pipeline-svg .clickable:hover rect, .pipeline-svg .clickable.hover rect { fill: #fff3c4 !important; }
-  .pipeline-hint { font-size: 13px; color: #555; }
-  .pipeline-hint span { background: #fff3c4; padding: 0 4px; border: 1px solid #e0c96a; }
-  #m-profile .modal-dialog { width: 92%; max-width: 1100px; }
-  #m-profile .modal-body { font-size: 14px; }
-  #m-profile select { margin: 4px 0 10px; }
+  .pipeline-svg a text { fill: #1a5fb4; text-decoration: underline; }
+  .pipeline-svg a:hover text { fill: #0b3d7a; }
 </style>
-
-<p class="pipeline-hint">Схема (v2). Блоки, по которым можно кликнуть, подсвечиваются при наведении:
-<span>Профиль технологии</span>, <span>Технология</span>.</p>
 
 <div class="pipeline-svg">
 ```{r diagram, results = "asis"}
-# Inline SVG (not <img>) so its boxes can take clicks; blank lines would end pandoc's raw HTML block
+# Inline SVG (not <img>) so its labels can be links; blank lines would end pandoc's raw HTML block
 if (file.exists(svg_file)) {
   svg <- readLines(svg_file, warn = FALSE, encoding = "UTF-8")
   cat(svg[nzchar(trimws(svg))], sep = "\n")
 } else {
-  cat("<p><i>Файл схемы nsf_engines_pipeline_v2.svg не найден.</i></p>")
+  cat("<p><i>Diagram file nsf_engines_pipeline_v2.svg not found.</i></p>")
 }
 ```
-</div>
-
-<!-- Methodology window for the technology profile (Bootstrap modal) -->
-<div class="modal fade" id="m-profile" tabindex="-1" role="dialog">
-<div class="modal-dialog" role="document"><div class="modal-content">
-<div class="modal-header">
-<button type="button" class="close" data-dismiss="modal" aria-label="Закрыть"><span aria-hidden="true">&times;</span></button>
-<h4 class="modal-title">Профиль технологии: как он построен</h4>
-</div>
-<div class="modal-body">
-
-Профиль технологии описывает, чем занимается Engine, на двух языках: темами OpenAlex (для публикаций) и классами CPC (для патентов). Он строится из текста самого гранта NSF, а не из сайта Engine.
-
-1. **Утверждения.** Для каждого Engine записано 3–5 коротких утверждений о технологии. Первое всегда из названия гранта (аббревиатура раскрыта по аннотации; у IMPACT название неинформативно, это отмечено). Остальные из технической части аннотации NSF. У каждого утверждения сохранена дословная цитата. Файл: `data/manual/tech_statements.csv`.
-2. **Темы OpenAlex.** Каждое утверждение отдельно отправляется в классификатор OpenAlex `/text/topics` ($0.01 за вызов). Аннотацию целиком не классифицируем: для NEO-SMART вся аннотация получает тему «Regional resilience and development», то есть описание программы, а не технологии. Сохраняются три лучших кандидата; берётся первый, если в `data/manual/tech_topic_choice.csv` не записан другой выбор с причиной (таких случаев `r nrow(choices)`).
-3. **Классы CPC.** Для каждого утверждения коды CPC подобраны вручную на уровне подкласса (например, C22B) или основной группы (B29B17) и проверены по выданным патентам USPTO 2024–2025: сколько патентов с этим кодом во всех США и сколько с изобретателем в штатах Engine. Код, у которого в регионе почти нет патентов, виден сразу.
-4. **Как профиль используется дальше.** Работа считается «в темах Engine», если хотя бы одна из трёх её тем OpenAlex совпадает с темой профиля. Патент считается «в профиле», если хотя бы один его код CPC входит в профиль. Отсюда региональные патенты в профиле, коэффициент локализации (LQ) и сравнение со штатами США.
-
-Итого: `r n_distinct(profile$engine_name)` Engines, `r nrow(profile)` утверждений (`r sum(profile$source == "title")` из названий, `r sum(profile$source == "abstract")` из аннотаций).
-
-**Профиль конкретного Engine:**
-
-```{r profile-tables, results = "asis"}
-engines <- sort(unique(profile$engine_name))
-cat('<select id="profile-engine" class="form-control" style="width:auto">\n')
-cat(paste0('<option value="', seq_along(engines), '">', esc(engines), "</option>", collapse = "\n"), "\n</select>\n")
-fmt_cpc <- function(cpc, us, reg) {
-  if (is.na(cpc)) return("")
-  codes <- str_split_1(cpc, ";\\s*")
-  n_us  <- setNames(str_extract(str_split_1(coalesce(us, ""), ";\\s*"), "\\d+$"),
-                    str_remove(str_split_1(coalesce(us, ""), ";\\s*"), ":.*$"))
-  n_reg <- setNames(str_extract(str_split_1(coalesce(reg, ""), ";\\s*"), "\\d+$"),
-                    str_remove(str_split_1(coalesce(reg, ""), ";\\s*"), ":.*$"))
-  paste(sprintf("%s (%s / %s)", codes, coalesce(n_us[codes], "?"), coalesce(n_reg[codes], "?")), collapse = "<br>")
-}
-for (k in seq_along(engines)) {
-  p <- profile |> filter(engine_name == engines[k]) |> arrange(item)
-  tab <- tibble(`№` = p$item,
-                `Источник` = if_else(p$source == "title", "название", "аннотация"),
-                `Утверждение` = esc(p$statement),
-                `Цитата из гранта` = paste0("<i>", esc(str_trunc(coalesce(p$quote, ""), 220)), "</i>"),
-                `Тема OpenAlex (подобласть)` = paste0(esc(p$topic), "<br><span style='color:#666'>",
-                                                      esc(p$subfield), "</span>"),
-                `CPC (патенты США / в регионе, 2024–25)` = mapply(fmt_cpc, p$cpc, p$cpc_patents_us_2024_25,
-                                                                  p$cpc_patents_region_2024_25))
-  cat(sprintf('<div class="profile-engine" data-k="%d"%s>\n', k, if (k > 1) ' style="display:none"' else ""))
-  print(kable(tab, format = "html", escape = FALSE, table.attr = 'class="table table-condensed"'))
-  cat("</div>\n")
-}
-```
-
-</div>
-<div class="modal-footer"><button type="button" class="btn btn-default" data-dismiss="modal">Закрыть</button></div>
-</div></div>
 </div>
 
 <script>
-// Make diagram boxes clickable by their label: the box is the <rect> just before the label,
-// the block is that rect and the texts up to the next rect or path.
+// Box labels that link to the Methodology page (found by their text, so a redrawn diagram keeps the links)
 (function () {
-  var targets = { "Профиль технологии": "#m-profile", "Технология": "#m-profile" };
+  var links = { "Профиль технологии": "methodology.html#technology-profile" };
   var svg = document.querySelector(".pipeline-svg svg");
   if (!svg) return;
   svg.querySelectorAll("text").forEach(function (t) {
-    var modal = targets[t.textContent.trim()];
-    if (!modal) return;
-    var rect = t.previousElementSibling;
-    while (rect && rect.tagName.toLowerCase() !== "rect") rect = rect.previousElementSibling;
-    if (!rect) return;
-    var g = document.createElementNS("http://www.w3.org/2000/svg", "g");
-    g.setAttribute("class", "clickable");
-    var title = document.createElementNS("http://www.w3.org/2000/svg", "title");
-    title.textContent = "Как это сделано";
-    g.appendChild(title);
-    rect.parentNode.insertBefore(g, rect);
-    var el = rect;
-    do {
-      var next = el.nextElementSibling;
-      g.appendChild(el);
-      el = next;
-    } while (el && el.tagName.toLowerCase() === "text");
-    g.addEventListener("click", function () { $(modal).modal("show"); });
-  });
-  var sel = document.getElementById("profile-engine");
-  if (sel) sel.addEventListener("change", function () {
-    document.querySelectorAll(".profile-engine").forEach(function (d) {
-      d.style.display = d.getAttribute("data-k") === sel.value ? "" : "none";
-    });
+    var href = links[t.textContent.trim()];
+    if (!href) return;
+    var a = document.createElementNS("http://www.w3.org/2000/svg", "a");
+    a.setAttribute("href", href);
+    t.parentNode.insertBefore(a, t);
+    a.appendChild(t);
   });
 })();
 </script>

@@ -1,0 +1,76 @@
+---
+title: "Methodology"
+output:
+  html_document:
+    theme: flatly
+    self_contained: true
+    toc: true
+    toc_float: true
+    css: style.css
+    includes:
+      before_body: _navbar.html
+      after_body: _tables.html
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE, message = FALSE, warning = FALSE)
+invisible(Sys.setlocale("LC_CTYPE", "en_US.UTF-8"))  # else cat() writes non-ASCII as <U+2010> under the C locale
+library(dplyr); library(readr); library(knitr); library(here); library(stringr)
+profile <- read_csv(here("data", "processed", "tech_profile.csv"), show_col_types = FALSE)
+choices <- read_csv(here("data", "manual", "tech_topic_choice.csv"), show_col_types = FALSE)
+esc <- htmltools::htmlEscape
+```
+
+How each step of the [pipeline](pipeline.html) is done.
+
+## Technology profile {#technology-profile}
+
+The technology profile states what each Engine works on in two vocabularies: OpenAlex topics (for papers) and
+CPC classes (for patents). It is built from the text of the NSF grant itself, not from the Engine's website.
+
+1. **Statements.** Each Engine gets 3-5 short statements about its technology. The first always comes from
+   the grant title (the acronym expanded from the abstract; IMPACT's title is not informative, which is noted).
+   The others come from the technical part of the NSF abstract. Every statement keeps a verbatim quote.
+   File: `data/manual/tech_statements.csv`.
+2. **OpenAlex topics.** Each statement is classified on its own with the OpenAlex `/text/topics` classifier
+   ($0.01 per call). Whole abstracts are not classified: the full NEO-SMART abstract gets the topic
+   "Regional resilience and development", which describes the programme, not the technology. The top three
+   candidates are kept; rank 1 is used unless `data/manual/tech_topic_choice.csv` records another choice with
+   its reason (`r nrow(choices)` cases).
+3. **CPC classes.** CPC codes are chosen by hand for each statement, at subclass level (e.g. C22B) or main
+   group (B29B17), and checked against USPTO grants of 2024-2025: patents with the code in the whole US and
+   with an inventor in the Engine's states. A code with almost no patents in the region shows up at once.
+4. **How the profile is used.** A paper is *in the Engine's topics* when at least one of its three OpenAlex
+   topics is a profile topic. A patent is *in the profile* when at least one of its CPC codes is a profile code.
+   These give the regional patents in the profile, the location quotient (LQ) and the comparison with US states.
+
+In total: `r n_distinct(profile$engine_name)` Engines, `r nrow(profile)` statements
+(`r sum(profile$source == "title")` from titles, `r sum(profile$source == "abstract")` from abstracts).
+
+### Profile of each Engine {.tabset .tabset-pills}
+
+```{r profile-tables, results = "asis"}
+# "C22B; C22C" + "C22B:688; C22C:2757" + "C22B:10; C22C:61" -> "C22B (688 / 10)<br>C22C (2757 / 61)"
+fmt_cpc <- function(cpc, us, reg) {
+  if (is.na(cpc)) return("")
+  codes <- str_split_1(cpc, ";\\s*")
+  counts <- function(x) { v <- str_split_1(coalesce(x, ""), ";\\s*")
+                          setNames(str_extract(v, "\\d+$"), str_remove(v, ":.*$")) }
+  n_us <- counts(us); n_reg <- counts(reg)
+  paste(sprintf("%s (%s / %s)", codes, coalesce(n_us[codes], "?"), coalesce(n_reg[codes], "?")), collapse = "<br>")
+}
+for (e in sort(unique(profile$engine_name))) {
+  p <- profile |> filter(engine_name == e) |> arrange(item)
+  tab <- tibble(`#` = p$item,
+                Source = p$source,
+                Statement = esc(p$statement),
+                `Quote from the grant` = paste0("<i>", esc(str_trunc(coalesce(p$quote, ""), 220)), "</i>"),
+                `OpenAlex topic (subfield)` = paste0(esc(p$topic), "<br><span style='color:#666'>",
+                                                     esc(p$subfield), "</span>"),
+                `CPC (US / region patents, 2024-25)` = mapply(fmt_cpc, p$cpc, p$cpc_patents_us_2024_25,
+                                                              p$cpc_patents_region_2024_25))
+  cat(sprintf("#### %s\n\n", e))
+  print(kable(tab, format = "html", escape = FALSE, table.attr = 'class="table table-condensed"'))
+  cat("\n\n")
+}
+```

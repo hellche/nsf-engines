@@ -17,6 +17,7 @@
   <a class="brand" href="index.html">NSF Regional Innovation Engines, Cohort 2</a>
   <div class="links">
     <a href="pipeline.html">Pipeline</a>
+    <a href="methodology.html">Methodology</a>
     <a href="index.html">12 Engines</a>
     <a href="publications.html">Publications</a>
     <a href="patents.html">Patents</a>
@@ -30,7 +31,7 @@
     for (var i = 1; i < navs.length; i++) navs[i].remove();
     document.body.insertBefore(navs[0], document.body.firstChild);
     var page = location.pathname.split("/").pop() || "index.html";
-    if (["index.html", "pipeline.html", "publications.html", "patents.html"].indexOf(page) < 0) return;
+    if (["index.html", "pipeline.html", "methodology.html", "publications.html", "patents.html"].indexOf(page) < 0) return;
     document.querySelectorAll(".site-nav .links a").forEach(function (a) {
       if (a.getAttribute("href") === page) a.classList.add("active");
     });
