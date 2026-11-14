@@ -64,6 +64,7 @@
   }
 
   document.querySelectorAll(".main-container table").forEach(function (t) {
+    if (t.closest(".no-sort")) return;  // e.g. a comparison table: rows are steps, not records
     makeSortable(t);
     addSearch(t);
   });

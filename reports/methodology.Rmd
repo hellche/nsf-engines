@@ -32,8 +32,31 @@ svg_v23 <- here("tech_profile_v2_procedure.svg")
 for each Engine by embedding similarity to the grant text (SPECTER2 for topics, PatentSBERTa for CPC), so
 that nothing is left out by hand. They differ only in the input: v2 uses every sentence of the grant title
 and abstract; v3 uses only the science and technology fragments extracted from them, word for word, with a
-fixed prompt. A manual choice of the top 5 topics and codes per Engine follows. Version 1 (below) was an
-earlier manual choice and is shown for reference, not as a benchmark. The diagram labels are in Russian.
+fixed prompt. Version 1 (below) was an earlier manual choice and is shown for reference, not as a
+benchmark. Version 3.1 (planned) completes version 3: it adds the selection step, which neither v2 nor v3
+has yet, and fixes the problems found in the review of their rankings. The diagram labels are in Russian.
+
+### Versions compared {#versions-compared}
+
+::: {.no-sort}
+
+| Step | v1 (on this site) | v2 | v3 | v3.1 (planned) |
+|---|---|---|---|---|
+| Source | NSF grant title and abstract | same | same | same |
+| Splitting into technologies | by hand: 3-5 statements per Engine (48 in total), each with a verbatim quote | none: every sentence on its own, including sentences on the region and workforce | none: 123 science and technology fragments extracted with a fixed prompt, checked to be verbatim | fragments from a revised prompt (no industries of application, no generic qualities such as "resilience"), each labelled with one of the grant's 3-5 technologies |
+| Candidates: OpenAlex topics | top 3 of the OpenAlex `/text/topics` classifier per statement | all 4,516 topics | same | same |
+| Candidates: CPC | chosen by hand; subclasses (C22B) and main groups (B29B17) mixed | all 9,867 main groups (subclass and group titles) | same | all main groups, with the titles of their first-level subgroups; indexing groups (2000+, /99) dropped or down-weighted |
+| Scoring | classifier score; no score for CPC | embedding cosine (SPECTER2 for topics, PatentSBERTa for CPC), mean-centred; the Engine's name masked as "the Engine" | same | same, with "Engine" removed rather than inserted (PatentSBERTa reads it as a motor) |
+| Selection | the classifier's first topic, sometimes the second by hand, with a stated reason | not done: rankings only | not done: rankings only | per technology, near-duplicates removed (MMR); **core**: 2-3 topics and 2-3 CPC codes per technology, checked by eye; **broad profile**: everything above one relevance threshold, with no limit on the number of CPC codes |
+| Check against data | patents per CPC code (US and region, 2024-25), so that no code is empty | none | none | share of the team's works and patents in the profile; coverage of US patents; metrics for both the core and the broad profile |
+| Status | used for all metrics on this site | rankings done | rankings done | planned |
+
+:::
+
+The profile describes what the grant says the Engine does. Data are used only to check it, not to choose it:
+choosing codes by the number of regional patents would make the region's Patent LQ high by construction.
+
+### Procedure of versions 2 and 3
 
 <div class="method-svg">
 ```{r diagram-v23, results = "asis"}
