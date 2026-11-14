@@ -41,7 +41,7 @@ for (i in seq_len(nrow(engines))) {
     cat("No team member has a reliable OpenAlex match with works since the window start.\n\n")
     next
   }
-  cat(sprintf("%d team members, %d works (%d distinct).\n\n", nrow(pe), nrow(we), n_distinct(we$work_id)))
+  cat(sprintf("%d team members, %d works (%d distinct; %d distinct in Engine topics).\n\n", nrow(pe), nrow(we), n_distinct(we$work_id), n_distinct(we$work_id[we$in_engine_topics %in% TRUE])))
   for (j in seq_len(nrow(pe))) {
     w <- we |> filter(person_id == pe$person_id[j]) |> arrange(desc(year), desc(cited_by))
     url <- if_else(is.na(w$doi), paste0("https://openalex.org/", w$work_id), w$doi)
@@ -50,9 +50,10 @@ for (i in seq_len(nrow(engines))) {
                   Type = w$type, Citations = w$cited_by,
                   `In Engine topics` = if_else(w$in_engine_topics, "yes", ""))
     org <- coalesce(pe$org_site[j], pe$last_inst[j], "")
-    cat(sprintf('<details id="works-%s"><summary><b>%s</b>%s: %d works</summary>\n\n',
+    cat(sprintf('<details id="works-%s"><summary><b>%s</b>%s: %d works (%d in Engine topics)</summary>\n\n',
                 pe$person_id[j], htmltools::htmlEscape(pe$name[j]),
-                if (nzchar(org)) paste0(", ", htmltools::htmlEscape(org)) else "", nrow(w)))
+                if (nzchar(org)) paste0(", ", htmltools::htmlEscape(org)) else "", nrow(w),
+                sum(w$in_engine_topics, na.rm = TRUE)))
     print(kable(tab, format = "html", escape = FALSE, table.attr = 'class="table table-condensed"'))
     cat("\n</details>\n\n")
   }
