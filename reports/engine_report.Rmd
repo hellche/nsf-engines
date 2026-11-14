@@ -97,7 +97,7 @@ people |>
             Title = str_trunc(coalesce(title_site, ""), 60),
             Organisation = str_trunc(coalesce(org_site, ""), 40),
             `Works since window` = case_when(
-              !is.na(n_listed) ~ sprintf('<a class="works-link" href="#works-%s">%d</a>', person_id, n_listed),
+              !is.na(n_listed) ~ sprintf("[%d](publications.html#works-%s)", n_listed, person_id),
               coalesce(reliable, FALSE) & !coalesce(check_merged, FALSE) ~ "0",
               coalesce(reliable, FALSE) ~ as.character(works_5y),
               TRUE ~ "-"),
@@ -108,37 +108,8 @@ people |>
   kable()
 ```
 
-Publication counts are shown only where the OpenAlex author matches both the name and the person's current organisation. The OpenAlex link is given only for these reliable matches, and not for profiles flagged as possibly merging several namesakes. *Site* links to the page of the Engine's website where the person is named. Click a number of works to see the list.
+Publication counts are shown only where the OpenAlex author matches both the name and the person's current organisation. The OpenAlex link is given only for these reliable matches, and not for profiles flagged as possibly merging several namesakes. *Site* links to the page of the Engine's website where the person is named. Click a number of works to see the list on the [Publications](publications.html) page.
 
-```{r people-works, results = "asis"}
-if (nrow(wp) > 0) {
-  cat("### Works of team members\n\n")
-  cat("OpenAlex works published since", format(as.Date(eng$window_from), "%B %Y"),
-      "(the window start), for team members with a reliable author match.",
-      "Click a name to open the list.\n\n")
-  for (p in people$person_id[!is.na(people$n_listed)]) {
-    w <- wp |> filter(person_id == p) |> arrange(desc(year), desc(cited_by))
-    url <- if_else(is.na(w$doi), paste0("https://openalex.org/", w$work_id), w$doi)
-    tab <- tibble(Year = w$year,
-                  Title = sprintf('<a href="%s">%s</a>', url, htmltools::htmlEscape(w$title)),
-                  Type = w$type, Citations = w$cited_by,
-                  `In Engine topics` = if_else(w$in_engine_topics, "yes", ""))
-    cat(sprintf('<details id="works-%s"><summary><b>%s</b>: %d works</summary>\n\n', p,
-                htmltools::htmlEscape(w$name[1]), nrow(w)))
-    print(kable(tab, format = "html", escape = FALSE, table.attr = 'class="table table-condensed"'))
-    cat("\n</details>\n\n")
-  }
-  cat('<script>
-document.addEventListener("click", function (e) {
-  var a = e.target.closest("a.works-link"); if (!a) return;
-  var d = document.getElementById(a.getAttribute("href").slice(1)); if (d) d.open = true;
-});
-if (location.hash.indexOf("#works-") === 0) {
-  var d0 = document.getElementById(location.hash.slice(1)); if (d0) d0.open = true;
-}
-</script>\n')
-}
-```
 
 ## Partners
 

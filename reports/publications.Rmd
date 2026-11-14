@@ -1,0 +1,76 @@
+---
+title: "Publications of Engine team members"
+date: "Data retrieved `r format(Sys.Date(), '%B %d, %Y')`"
+output:
+  html_document:
+    theme: flatly
+    self_contained: true
+    css: style.css
+    includes:
+      before_body: _navbar.html
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE, message = FALSE, warning = FALSE)
+invisible(Sys.setlocale("LC_CTYPE", "en_US.UTF-8"))  # else cat() writes non-ASCII as <U+2010> under the C locale
+library(dplyr); library(readr); library(knitr); library(here); library(stringr)
+rd <- \(f) read_csv(here("data", "processed", f), show_col_types = FALSE)
+engines <- rd("engines.csv") |> arrange(engine_name)
+people  <- rd("people_roles_evidence.csv") |> filter(in_team)
+wp      <- rd("works_people.csv")
+slug <- \(x) str_replace_all(str_to_lower(x), "[^a-z0-9]+", "-")
+```
+
+OpenAlex works of Engine team members, published since the start of each Engine's search window
+(five years before the award). Only people with a reliable OpenAlex author match are included: the name
+and the person's current organisation both match, and the profile is not flagged as merging namesakes.
+Choose an Engine, then click a name to open the list.
+
+## Engines {.tabset .tabset-pills}
+
+```{r engines, results = "asis"}
+for (i in seq_len(nrow(engines))) {
+  e  <- engines$engine_name[i]
+  we <- wp |> filter(engine_name == e)
+  pe <- people |> filter(engine_name == e, person_id %in% we$person_id) |>
+    left_join(count(we, person_id, name = "n"), by = "person_id") |> arrange(desc(n))
+  cat(sprintf("### %s\n\n", e))
+  cat(sprintf("[%s Engine page](%s.html). Window start: %s. ", e, slug(e),
+              format(as.Date(engines$window_from[i]), "%B %Y")))
+  if (nrow(pe) == 0) {
+    cat("No team member has a reliable OpenAlex match with works since the window start.\n\n")
+    next
+  }
+  cat(sprintf("%d team members, %d works (%d distinct).\n\n", nrow(pe), nrow(we), n_distinct(we$work_id)))
+  for (j in seq_len(nrow(pe))) {
+    w <- we |> filter(person_id == pe$person_id[j]) |> arrange(desc(year), desc(cited_by))
+    url <- if_else(is.na(w$doi), paste0("https://openalex.org/", w$work_id), w$doi)
+    tab <- tibble(Year = w$year,
+                  Title = sprintf('<a href="%s">%s</a>', url, htmltools::htmlEscape(w$title)),
+                  Type = w$type, Citations = w$cited_by,
+                  `In Engine topics` = if_else(w$in_engine_topics, "yes", ""))
+    org <- coalesce(pe$org_site[j], pe$last_inst[j], "")
+    cat(sprintf('<details id="works-%s"><summary><b>%s</b>%s: %d works</summary>\n\n',
+                pe$person_id[j], htmltools::htmlEscape(pe$name[j]),
+                if (nzchar(org)) paste0(", ", htmltools::htmlEscape(org)) else "", nrow(w)))
+    print(kable(tab, format = "html", escape = FALSE, table.attr = 'class="table table-condensed"'))
+    cat("\n</details>\n\n")
+  }
+}
+```
+
+<script>
+// A link like publications.html#works-<person_id> opens that Engine's tab and that person's list
+// (run after rmarkdown has built the tabs, and again when only the #hash changes)
+function openWorksFromHash() {
+  if (location.hash.indexOf("#works-") !== 0) return;
+  var d = document.getElementById(location.hash.slice(1));
+  if (!d) return;
+  var pane = $(d).closest(".tab-pane");
+  if (pane.length) $('a[href="#' + pane.attr("id") + '"]').tab("show");
+  d.open = true;
+  setTimeout(function () { d.scrollIntoView(); }, 50);
+}
+window.addEventListener("load", function () { setTimeout(openWorksFromHash, 0); });
+window.addEventListener("hashchange", openWorksFromHash);
+</script>

@@ -1,4 +1,4 @@
-# Step 8. Render the per-Engine reports, the pipeline page and the index page into docs/ (GitHub Pages)
+# Step 8. Render the per-Engine reports, the pipeline, publications and index pages into docs/ (GitHub Pages)
 #
 # Usage: Rscript R/08_render_site.R            all Engines
 #        ONLY_ENGINE=NEO-SMART Rscript R/08_render_site.R
@@ -22,9 +22,10 @@ for (e in engines) {
          output_file = paste0(slug(e), ".html"), output_dir = out_dir,
          intermediates_dir = tempdir(), envir = new.env(), quiet = TRUE)
 }
-render(here("reports", "pipeline.Rmd"), output_file = "pipeline.html", output_dir = out_dir,
-       intermediates_dir = tempdir(), envir = new.env(), quiet = TRUE)
-render(here("reports", "index.Rmd"), output_file = "index.html", output_dir = out_dir,
-       intermediates_dir = tempdir(), envir = new.env(), quiet = TRUE)
+for (page in c("pipeline", "publications", "index")) {
+  message("Rendering ", page)
+  render(here("reports", paste0(page, ".Rmd")), output_file = paste0(page, ".html"), output_dir = out_dir,
+         intermediates_dir = tempdir(), envir = new.env(), quiet = TRUE)
+}
 file.create(file.path(out_dir, ".nojekyll"))
 message("Site written to ", out_dir)
