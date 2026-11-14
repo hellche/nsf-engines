@@ -20,7 +20,7 @@ knitr::opts_chunk$set(echo = FALSE, message = FALSE, warning = FALSE, fig.width 
 library(dplyr); library(tidyr); library(stringr); library(readr); library(ggplot2); library(knitr); library(here)
 rd <- \(f) read_csv(here("data", "processed", f), show_col_types = FALSE)
 E  <- params$engine
-eng      <- rd("engines.csv") |> filter(engine_name == E)
+eng      <- rd("engines.csv") |> filter(engine_name == E) |> mutate(award_id = as.character(award_id))
 m        <- rd("metrics_engine.csv") |> filter(engine_name == E)
 people   <- rd("people_roles_evidence.csv") |> filter(engine_name == E, in_team)
 partners <- rd("partners.csv") |> filter(engine_name == E)
