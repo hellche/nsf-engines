@@ -18,6 +18,8 @@ m <- read_csv(here("data", "processed", "metrics_engine.csv"), show_col_types = 
 slug <- \(x) str_replace_all(str_to_lower(x), "[^a-z0-9]+", "-")
 ```
 
+# Привет
+
 Twelve NSF Regional Innovation Engines started in 2026. For each one this site traces the people named by NSF and by the Engine, its partners, and the papers and patents of its knowledge base, from five years before the award onward.
 
 ```{r table}
