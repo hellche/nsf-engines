@@ -1882,17 +1882,17 @@ intensification in steel and chemical production</td>
 </tr>
 </tbody>
 </table>
-<table style="width:100%;">
+<table>
 <colgroup>
-<col width="12%" />
-<col width="8%" />
 <col width="9%" />
-<col width="26%" />
-<col width="12%" />
-<col width="14%" />
 <col width="6%" />
-<col width="3%" />
-<col width="6%" />
+<col width="7%" />
+<col width="20%" />
+<col width="9%" />
+<col width="35%" />
+<col width="4%" />
+<col width="2%" />
+<col width="5%" />
 </colgroup>
 <thead>
 <tr class="header">
@@ -1936,7 +1936,7 @@ intensification in steel and chemical production</td>
 <td align="left">PI</td>
 <td align="left">CEO</td>
 <td align="left">RETI Consortium</td>
-<td align="left">3</td>
+<td align="left"><a class="works-link" href="#works-reti__erienne-olesh">1</a></td>
 <td align="left">4</td>
 <td align="left"><a href="https://reticonsortium.org/about-us/">page</a></td>
 <td align="left"><a href="https://openalex.org/A5005509559">profile</a></td>
@@ -2002,7 +2002,68 @@ intensification in steel and chemical production</td>
 both the name and the person’s current organisation. The OpenAlex link
 is given only for these reliable matches, and not for profiles flagged
 as possibly merging several namesakes. <em>Site</em> links to the page
-of the Engine’s website where the person is named.</p>
+of the Engine’s website where the person is named. Click a number of
+works to see the list.</p>
+<div id="works-of-team-members" class="section level3">
+<h3>Works of team members</h3>
+<p>OpenAlex works published since August 2021 (the window start), for
+team members with a reliable author match. Click a name to open the
+list.</p>
+<details id="works-reti__erienne-olesh">
+<summary>
+<b>Erienne Olesh</b>: 1 works
+</summary>
+<table class="table table-condensed">
+<thead>
+<tr>
+<th style="text-align:right;">
+Year
+</th>
+<th style="text-align:left;">
+Title
+</th>
+<th style="text-align:left;">
+Type
+</th>
+<th style="text-align:right;">
+Citations
+</th>
+<th style="text-align:left;">
+In Engine topics
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:right;">
+2025
+</td>
+<td style="text-align:left;">
+<a href="https://doi.org/10.21203/rs.3.rs-7594824/v1">Precise limb-speed
+afference reveals rhythmogenic drive modality and declines with age</a>
+</td>
+<td style="text-align:left;">
+preprint
+</td>
+<td style="text-align:right;">
+0
+</td>
+<td style="text-align:left;">
+</td>
+</tr>
+</tbody>
+</table>
+</details>
+<script>
+document.addEventListener("click", function (e) {
+  var a = e.target.closest("a.works-link"); if (!a) return;
+  var d = document.getElementById(a.getAttribute("href").slice(1)); if (d) d.open = true;
+});
+if (location.hash.indexOf("#works-") === 0) {
+  var d0 = document.getElementById(location.hash.slice(1)); if (d0) d0.open = true;
+}
+</script>
+</div>
 </div>
 <div id="partners" class="section level2">
 <h2>Partners</h2>

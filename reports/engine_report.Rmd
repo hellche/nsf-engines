@@ -31,6 +31,8 @@ lq       <- rd("metrics_lq_cpc.csv") |> filter(engine_name == E)
 top_asg  <- rd("metrics_top_assignees.csv") |> filter(engine_name == E)
 pe       <- rd("patents_engine.csv") |> filter(engine_name == E)
 wi       <- rd("works_institutions.csv") |> filter(engine_name == E)
+wp       <- rd("works_people.csv") |> filter(engine_name == E)
+people   <- people |> left_join(count(wp, person_id, name = "n_listed"), by = "person_id")
 na0 <- \(x) ifelse(is.na(x), 0, x)
 theme_set(theme_minimal(base_size = 12))
 ```
@@ -94,7 +96,11 @@ people |>
             `On NSF award` = if_else(in_nsf, coalesce(role_nsf, ""), ""),
             Title = str_trunc(coalesce(title_site, ""), 60),
             Organisation = str_trunc(coalesce(org_site, ""), 40),
-            `Works since window` = if_else(coalesce(reliable, FALSE), as.character(works_5y), "-"),
+            `Works since window` = case_when(
+              !is.na(n_listed) ~ sprintf('<a class="works-link" href="#works-%s">%d</a>', person_id, n_listed),
+              coalesce(reliable, FALSE) & !coalesce(check_merged, FALSE) ~ "0",
+              coalesce(reliable, FALSE) ~ as.character(works_5y),
+              TRUE ~ "-"),
             `h-index` = if_else(coalesce(reliable, FALSE), as.character(h_index), "-"),
             Site = if_else(is.na(site_url), "", sprintf("[page](%s)", site_url)),
             OpenAlex = if_else(coalesce(reliable, FALSE) & !coalesce(check_merged, FALSE) & !is.na(oa_id),
@@ -102,7 +108,37 @@ people |>
   kable()
 ```
 
-Publication counts are shown only where the OpenAlex author matches both the name and the person's current organisation. The OpenAlex link is given only for these reliable matches, and not for profiles flagged as possibly merging several namesakes. *Site* links to the page of the Engine's website where the person is named.
+Publication counts are shown only where the OpenAlex author matches both the name and the person's current organisation. The OpenAlex link is given only for these reliable matches, and not for profiles flagged as possibly merging several namesakes. *Site* links to the page of the Engine's website where the person is named. Click a number of works to see the list.
+
+```{r people-works, results = "asis"}
+if (nrow(wp) > 0) {
+  cat("### Works of team members\n\n")
+  cat("OpenAlex works published since", format(as.Date(eng$window_from), "%B %Y"),
+      "(the window start), for team members with a reliable author match.",
+      "Click a name to open the list.\n\n")
+  for (p in people$person_id[!is.na(people$n_listed)]) {
+    w <- wp |> filter(person_id == p) |> arrange(desc(year), desc(cited_by))
+    url <- if_else(is.na(w$doi), paste0("https://openalex.org/", w$work_id), w$doi)
+    tab <- tibble(Year = w$year,
+                  Title = sprintf('<a href="%s">%s</a>', url, htmltools::htmlEscape(w$title)),
+                  Type = w$type, Citations = w$cited_by,
+                  `In Engine topics` = if_else(w$in_engine_topics, "yes", ""))
+    cat(sprintf('<details id="works-%s"><summary><b>%s</b>: %d works</summary>\n\n', p,
+                htmltools::htmlEscape(w$name[1]), nrow(w)))
+    print(kable(tab, format = "html", escape = FALSE, table.attr = 'class="table table-condensed"'))
+    cat("\n</details>\n\n")
+  }
+  cat('<script>
+document.addEventListener("click", function (e) {
+  var a = e.target.closest("a.works-link"); if (!a) return;
+  var d = document.getElementById(a.getAttribute("href").slice(1)); if (d) d.open = true;
+});
+if (location.hash.indexOf("#works-") === 0) {
+  var d0 = document.getElementById(location.hash.slice(1)); if (d0) d0.open = true;
+}
+</script>\n')
+}
+```
 
 ## Partners
 
