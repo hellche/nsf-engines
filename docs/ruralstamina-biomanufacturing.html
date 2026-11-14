@@ -2345,6 +2345,7 @@ table th.sort-desc::after { content: " \25BC"; color: #000; }
   }
 
   document.querySelectorAll(".main-container table").forEach(function (t) {
+    if (t.closest(".no-sort")) return;  // e.g. a comparison table: rows are steps, not records
     makeSortable(t);
     addSearch(t);
   });
