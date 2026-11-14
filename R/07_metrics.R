@@ -9,7 +9,8 @@
 #
 # Location quotient (patents, 2021-2025 grants):
 #   LQ = (region patents with the code / all region patents) / (US patents with the code / all US patents)
-#   A patent belongs to a region if at least one inventor lives in the Engine's states (PatentsView).
+#   A patent belongs to a region if at least one inventor lives in the Engine's region (PatentsView):
+#   its counties where known (NEO-SMART, STELLAR), otherwise its states (data/manual/engine_regions.csv).
 
 library(dplyr)
 library(tidyr)
@@ -29,11 +30,6 @@ profile  <- rd("tech_profile.csv")
 wp       <- rd("works_people.csv")
 wi       <- rd("works_institutions.csv")
 pe       <- rd("patents_engine.csv")
-
-engine_states <- list(BRIDGES = c("AL", "TN"), "Critical Materials Crossroads" = c("MO", "KS"),
-  "Critical Mineral Accelerator" = "AK", FAST = "OR", "Grid Modernization" = c("NC", "SC"), IMPACT = "IN",
-  "NEO-SMART" = "OH", "Quantum Technologies" = "CT", RETI = c("WV", "PA"),
-  "RuralSTAMINA Biomanufacturing" = c("IA", "NE"), STELLAR = "NY", Seafood = c("ME", "NH", "MA", "RI"))
 
 # ---- People and partners ---------------------------------------------------------------------------
 
@@ -100,18 +96,18 @@ cpc_tbl <- bind_rows(
   read_parquet(file.path(patent_dir, "2021_23", "cpc_21_23.parquet"))) |>
   distinct()
 
-inv_states <- map_dfr(c(file.path(patent_dir, "2021_23", "inventors_pv_21_23.parquet"),
-                        file.path(patent_dir, "inventors_pv_24_25.parquet")),
-                      \(f) read_parquet(f, col_select = c("publication_number", "state", "country"))) |>
-  filter(country == "US", !is.na(state)) |> distinct(patent_id = publication_number, state)
+source(here("R", "regions.R"))
+inv_geo  <- load_inventor_geo(patent_dir)                    # US inventors with state and county
+reg_pat  <- in_region(inv_geo) |> distinct(engine_name, patent_id)
+region_ids_of <- \(e) reg_pat$patent_id[reg_pat$engine_name == e]
 
-us_ids  <- unique(inv_states$patent_id)
+us_ids  <- unique(inv_geo$patent_id)
 n_us    <- length(us_ids)
 codes <- profile |> select(engine_name, item, cpc) |> filter(!is.na(cpc)) |>
   separate_longer_delim(cpc, delim = ";") |> mutate(cpc = str_trim(cpc)) |> distinct(engine_name, cpc)
 
 lq <- pmap_dfr(codes, function(engine_name, cpc) {
-  region_ids <- unique(inv_states$patent_id[inv_states$state %in% engine_states[[engine_name]]])
+  region_ids <- region_ids_of(engine_name)
   code_ids   <- unique(if (nchar(cpc) == 4) cpc_tbl$patent_id[cpc_tbl$cpc_subclass == cpc] else
                          cpc_tbl$patent_id[cpc_tbl$cpc_main == cpc])
   code_us    <- intersect(code_ids, us_ids)
@@ -122,11 +118,11 @@ lq <- pmap_dfr(codes, function(engine_name, cpc) {
 }) |> arrange(engine_name, desc(lq))
 
 # profile-level LQ: all profile codes together (a patent counts once)
-lq_profile <- map_dfr(names(engine_states), \(e) {
+lq_profile <- map_dfr(unique(reg_pat$engine_name), \(e) {
   cc <- codes$cpc[codes$engine_name == e]
   if (!length(cc)) return(tibble(engine_name = e, lq_profile = NA_real_))
   code_ids   <- unique(cpc_tbl$patent_id[cpc_tbl$cpc_subclass %in% cc[nchar(cc) == 4] | cpc_tbl$cpc_main %in% cc[nchar(cc) > 4]])
-  region_ids <- unique(inv_states$patent_id[inv_states$state %in% engine_states[[e]]])
+  region_ids <- region_ids_of(e)
   tibble(engine_name = e,
          region_share_us_profile = round(length(intersect(code_ids, region_ids)) / length(intersect(code_ids, us_ids)), 4),
          lq_profile = round((length(intersect(code_ids, region_ids)) / length(region_ids)) /

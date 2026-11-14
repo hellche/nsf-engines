@@ -142,10 +142,43 @@ top_asg |> transmute(Assignee = assignee, `Regional patents in profile` = n) |> 
 
 Partner-owned patents invented in the region: `r m$pat_partner_region`, of which `r m$pat_partner_region_tech` (`r scales::percent(m$share_partner_region_in_tech, accuracy = 0.1)`) fall in the Engine's technology profile.
 
+## Competition
+
+```{r comp-load}
+comp_st <- rd("competition_states.csv") |> filter(engine_name == E)
+comp_ct <- rd("competition_countries.csv") |> filter(engine_name == E)
+comp_pp <- rd("competition_papers.csv") |> filter(engine_name == E)
+reg_row <- comp_st |> filter(state == "ENGINE REGION")
+```
+
+With `r reg_row$patents` patents in the technology profile (2021-2025 grants), the Engine's region would rank **`r reg_row$rank_patents`** among US states; its specialisation (LQ) is `r reg_row$lq`.
+
+```{r comp-states, fig.height=4.5}
+comp_st |> filter(state != "ENGINE REGION") |> slice_max(patents, n = 12) |>
+  bind_rows(reg_row |> mutate(state = "Engine region")) |>
+  mutate(state = reorder(state, patents), own = state == "Engine region" | in_engine_states) |>
+  ggplot(aes(patents, state, fill = own)) + geom_col() +
+  geom_text(aes(label = sprintf("LQ %.2f", lq)), hjust = -0.1, size = 3) +
+  scale_fill_manual(values = c(`TRUE` = "#e6550d", `FALSE` = "#9ecae1"), guide = "none") +
+  scale_x_continuous(expand = expansion(mult = c(0, 0.2))) +
+  labs(x = "Patents in the technology profile, 2021-2025 grants", y = NULL,
+       title = "Leading US states vs the Engine's region", subtitle = "Orange: the Engine's region and its state(s)")
+```
+
+```{r comp-countries}
+left_join(
+  comp_ct |> transmute(Country = country, `Share of US patents in profile` = scales::percent(share, 0.1)),
+  comp_pp |> transmute(Country = country, `Share of world papers in topics` = scales::percent(share, 0.1)),
+  by = "Country") |>
+  head(10) |> kable()
+```
+
+Patents: inventor countries on US grants in the profile (a patent counts for every country of its inventors). Papers: author countries of OpenAlex works in the Engine's topics since the window start.
+
 ## Data and limitations
 
 - People: PIs and Co-PIs from the NSF Award API; leadership listed on the Engine's website. Roles come from titles and organisations, revised with OpenAlex evidence.
 - Partners: as listed on the Engine's website, plus organisations of team members. Some Engines publish partner logos without names.
-- Region: the Engine's states (state-level proxy). Engines that serve part of a state are compared with the whole state.
+- Region: the Engine's counties where the list is known (NEO-SMART: 18 Northeast Ohio counties; STELLAR: 11 counties from the NSF abstract), otherwise its states (state-level proxy).
 - Papers: OpenAlex; partner papers are restricted to the Engine's OpenAlex topics.
 - Patents: USPTO grants 2021-2025; inventor locations from PatentsView; pre-grant publications are not included.

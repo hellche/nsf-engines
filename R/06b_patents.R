@@ -1,9 +1,9 @@
 # Step 6b. Patents of the knowledge base (local USPTO grant files)
 #
 # Three layers per Engine (a patent can be in several):
-#   region_tech       an inventor lives in the Engine's states AND a CPC code is in the Engine's profile (step 5)
+#   region_tech       an inventor lives in the Engine's region (counties or states) AND a CPC code is in the Engine's profile (step 5)
 #   partner_assignee  an assignee is one of the Engine's partners (step 4), any technology
-#   team_inventor     an inventor is one of the Engine's people (step 2), living in the Engine's states
+#   team_inventor     an inventor is one of the Engine's people (step 2), living in the Engine's region
 #
 # Input:  PATENT_DIR/patents_<year>_full_slim.parquet, PATENT_DIR/raw/cpc_official_24_25.tsv
 #         data/processed/tech_profile.csv, partners.csv, people_roles_evidence.csv
@@ -27,11 +27,9 @@ profile  <- read_csv(here("data", "processed", "tech_profile.csv"), show_col_typ
 partners <- read_csv(here("data", "processed", "partners.csv"), show_col_types = FALSE)
 people   <- read_csv(here("data", "processed", "people_roles_evidence.csv"), show_col_types = FALSE)
 
-engine_states <- list(BRIDGES = c("AL", "TN"), "Critical Materials Crossroads" = c("MO", "KS"),
-  "Critical Mineral Accelerator" = "AK", FAST = "OR", "Grid Modernization" = c("NC", "SC"), IMPACT = "IN",
-  "NEO-SMART" = "OH", "Quantum Technologies" = "CT", RETI = c("WV", "PA"),
-  "RuralSTAMINA Biomanufacturing" = c("IA", "NE"), STELLAR = "NY", Seafood = c("ME", "NH", "MA", "RI"))
-all_states <- unique(unlist(engine_states))
+source(here("R", "regions.R"))      # Engine regions (counties where known, else states) + inventor geography
+regions <- load_regions()
+engine_names <- unique(regions$engine_name)
 
 # ---- Load patents ---------------------------------------------------------------------------------
 
@@ -45,18 +43,11 @@ pat <- map_dfr(patent_years, \(y) read_parquet(file.path(patent_dir, sprintf("pa
 # made from patents_<year>_labeled.zip); CPC from PatentsView g_cpc_current (2021_23/cpc_21_23.parquet)
 old_dir <- file.path(patent_dir, "2021_23")
 old_files <- list.files(old_dir, pattern = "^patents_20(21|22|23)_slim\\.parquet$", full.names = TRUE)
-# PatentsView subsets for the same grants (made from g_inventor/g_assignee_disambiguated):
-# one row per inventor with city/state/country, and disambiguated assignee organisations
-# Inventors with locations from PatentsView for ALL years (the same source keeps years comparable):
-# 2021_23/inventors_pv_21_23.parquet and inventors_pv_24_25.parquet (made from g_inventor_disambiguated +
-# g_location_disambiguated). The parsed location strings of the 2024-2025 files list each city once,
-# so they cannot be aligned with inventors for ~45% of patents; they are only a fallback.
-pv_inv_files <- c(file.path(old_dir, "inventors_pv_21_23.parquet"), file.path(patent_dir, "inventors_pv_24_25.parquet"))
+# Inventors with state and county from PatentsView for ALL years (inventors_pv_21_25_geo.parquet, built from
+# g_inventor_disambiguated + g_location_disambiguated): one source keeps the years comparable. The parsed
+# location strings of the 2024-2025 files list each city once and cannot be aligned with inventors.
+pv_inv <- load_inventor_geo(patent_dir)
 pv_asg_file <- file.path(old_dir, "assignees_pv_21_23.parquet")
-pv_inv <- map_dfr(pv_inv_files[file.exists(pv_inv_files)], \(f)
-  read_parquet(f, col_select = c("publication_number", "name_first", "name_last", "state", "country"))) |>
-  transmute(patent_id = publication_number, name = str_squish(paste(name_first, name_last)),
-            state = if_else(country == "US", state, NA_character_))
 pv_asg <- if (file.exists(pv_asg_file)) read_parquet(pv_asg_file) |>
   filter(!is.na(organization), organization != "") |>
   group_by(patent_id = publication_number) |>
@@ -80,33 +71,23 @@ if (file.exists(file.path(old_dir, "cpc_21_23.parquet"))) {
   cpc <- bind_rows(cpc, read_parquet(file.path(old_dir, "cpc_21_23.parquet"))) |> distinct()
 }
 
-# Inventors in long form with their state (inventors and locations are aligned by position)
-inv <- pat |>
-  select(patent_id, inventors, inventor_locations) |>
-  mutate(name = str_split(inventors, ";\\s*"), loc = str_split(inventor_locations, ";\\s*")) |>
-  select(-inventors, -inventor_locations) |>
-  filter(lengths(name) == lengths(loc)) |>
-  unnest_longer(c(name, loc)) |>
-  mutate(state = str_match(loc, "-([A-Z]{2})-US$")[, 2]) |>
-  select(patent_id, name, state) |>
-  filter(!patent_id %in% pv_inv$patent_id) |>          # parsed strings only where PatentsView has no record
-  bind_rows(pv_inv) |>
-  filter(state %in% all_states)
+# Inventors located in each Engine's region (one row per inventor x Engine)
+inv <- in_region(pv_inv, regions)
 
 # ---- 1. region_tech ---------------------------------------------------------------------------------
 
 codes <- profile |> select(engine_name, cpc) |> filter(!is.na(cpc)) |>
   separate_longer_delim(cpc, delim = ";") |> mutate(cpc = str_trim(cpc)) |> distinct()
 
-region_tech <- map_dfr(names(engine_states), \(e) {
+region_tech <- map_dfr(engine_names, \(e) {
   cc <- codes$cpc[codes$engine_name == e]
   if (!length(cc)) return(NULL)
   hits <- cpc |> filter(cpc_subclass %in% cc[nchar(cc) == 4] | cpc_main %in% cc[nchar(cc) > 4]) |>
     mutate(code = if_else(cpc_subclass %in% cc, cpc_subclass, cpc_main)) |>
     group_by(patent_id) |> summarise(cpc_matched = paste(unique(code), collapse = "; "), .groups = "drop")
-  in_region <- inv |> filter(state %in% engine_states[[e]]) |>
+  reg <- inv |> filter(engine_name == e) |>
     group_by(patent_id) |> summarise(n_inventors_region = n(), .groups = "drop")
-  inner_join(hits, in_region, by = "patent_id") |> mutate(engine_name = e, region_tech = TRUE)
+  inner_join(hits, reg, by = "patent_id") |> mutate(engine_name = e, region_tech = TRUE)
 })
 
 # ---- 2. partner_assignee ------------------------------------------------------------------------------
@@ -151,9 +132,9 @@ team <- people |> filter(in_team) |> select(engine_name, person_id, name) |>
   bind_cols(first_last(people$name[people$in_team]))
 inv_n <- inv |> bind_cols(first_last(inv$name))
 
-team_inventor <- map_dfr(names(engine_states), \(e) {
-  t <- team |> filter(engine_name == e)
-  inv_n |> filter(state %in% engine_states[[e]]) |>
+team_inventor <- map_dfr(engine_names, \(e) {
+  t <- team |> filter(engine_name == e) |> select(-engine_name)
+  inv_n |> filter(engine_name == e) |> select(-engine_name) |>
     inner_join(t, by = "last", suffix = c("_inv", "_team"), relationship = "many-to-many") |>
     # full first name, or one is the start of the other ("rob"/"robert"); a first initial alone gives
     # false pairs (Claudia Reuter vs Charles Reuter)
@@ -178,7 +159,7 @@ patents_engine <- region_tech |>
 # tech match for partner and team patents too
 tech_flag <- region_tech |> select(engine_name, patent_id) |> mutate(x = TRUE)
 patents_engine <- patents_engine |>
-  left_join(map_dfr(names(engine_states), \(e) {
+  left_join(map_dfr(engine_names, \(e) {
     cc <- codes$cpc[codes$engine_name == e]
     cpc |> filter(cpc_subclass %in% cc[nchar(cc) == 4] | cpc_main %in% cc[nchar(cc) > 4]) |>
       distinct(patent_id) |> mutate(engine_name = e, in_tech_profile = TRUE)
@@ -186,9 +167,8 @@ patents_engine <- patents_engine |>
   mutate(in_tech_profile = coalesce(in_tech_profile, FALSE)) |>
   select(-n_inventors_region)
 
-# inventors living in the Engine's states, for every patent (partner patents are often filed elsewhere)
-region_inv <- map_dfr(names(engine_states), \(e) inv |> filter(state %in% engine_states[[e]]) |>
-  count(patent_id, name = "n_inventors_region") |> mutate(engine_name = e))
+# inventors living in the Engine's region, for every patent (partner patents are often filed elsewhere)
+region_inv <- inv |> count(engine_name, patent_id, name = "n_inventors_region")
 patents_engine <- patents_engine |>
   left_join(region_inv, by = c("engine_name", "patent_id")) |>
   mutate(n_inventors_region = if_else(has_location, coalesce(n_inventors_region, 0L), NA_integer_),

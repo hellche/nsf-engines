@@ -1,0 +1,181 @@
+engine_name,country,patents,share
+BRIDGES,US,21596,0.54
+BRIDGES,JP,6569,0.164
+BRIDGES,CN,2194,0.055
+BRIDGES,KR,2105,0.053
+BRIDGES,DE,1834,0.046
+BRIDGES,CA,1417,0.035
+BRIDGES,FR,1037,0.026
+BRIDGES,GB,824,0.021
+BRIDGES,IN,786,0.02
+BRIDGES,NL,721,0.018
+BRIDGES,IL,459,0.011
+BRIDGES,CH,450,0.011
+BRIDGES,IT,426,0.011
+BRIDGES,TW,424,0.011
+BRIDGES,BE,392,0.01
+Critical Materials Crossroads,US,4432,0.519
+Critical Materials Crossroads,JP,818,0.096
+Critical Materials Crossroads,CN,662,0.077
+Critical Materials Crossroads,DE,524,0.061
+Critical Materials Crossroads,CA,359,0.042
+Critical Materials Crossroads,KR,357,0.042
+Critical Materials Crossroads,GB,268,0.031
+Critical Materials Crossroads,FR,228,0.027
+Critical Materials Crossroads,IN,215,0.025
+Critical Materials Crossroads,SA,162,0.019
+Critical Materials Crossroads,AU,133,0.016
+Critical Materials Crossroads,IL,119,0.014
+Critical Materials Crossroads,NL,117,0.014
+Critical Materials Crossroads,IT,109,0.013
+Critical Materials Crossroads,BE,104,0.012
+Critical Mineral Accelerator,US,48292,0.612
+Critical Mineral Accelerator,CN,6201,0.079
+Critical Mineral Accelerator,IN,5335,0.068
+Critical Mineral Accelerator,JP,4325,0.055
+Critical Mineral Accelerator,KR,3607,0.046
+Critical Mineral Accelerator,CA,3106,0.039
+Critical Mineral Accelerator,GB,2964,0.038
+Critical Mineral Accelerator,DE,2633,0.033
+Critical Mineral Accelerator,IL,2430,0.031
+Critical Mineral Accelerator,FR,1451,0.018
+Critical Mineral Accelerator,CH,1123,0.014
+Critical Mineral Accelerator,TW,952,0.012
+Critical Mineral Accelerator,IE,794,0.01
+Critical Mineral Accelerator,AU,731,0.009
+Critical Mineral Accelerator,SG,674,0.009
+FAST,US,32622,0.318
+FAST,JP,19722,0.192
+FAST,TW,19719,0.192
+FAST,KR,11674,0.114
+FAST,CN,9284,0.091
+FAST,DE,4180,0.041
+FAST,FR,1495,0.015
+FAST,IN,1420,0.014
+FAST,GB,1126,0.011
+FAST,CA,1074,0.01
+FAST,SG,969,0.009
+FAST,IL,863,0.008
+FAST,AT,815,0.008
+FAST,BE,741,0.007
+FAST,NL,682,0.007
+Grid Modernization,US,35715,0.597
+Grid Modernization,JP,4783,0.08
+Grid Modernization,CN,4022,0.067
+Grid Modernization,IN,3402,0.057
+Grid Modernization,DE,2415,0.04
+Grid Modernization,GB,2324,0.039
+Grid Modernization,IL,2277,0.038
+Grid Modernization,CA,2225,0.037
+Grid Modernization,KR,2008,0.034
+Grid Modernization,FR,1214,0.02
+Grid Modernization,TW,802,0.013
+Grid Modernization,SE,613,0.01
+Grid Modernization,CH,591,0.01
+Grid Modernization,AU,443,0.007
+Grid Modernization,IE,419,0.007
+IMPACT,US,91335,0.605
+IMPACT,JP,12224,0.081
+IMPACT,CN,9866,0.065
+IMPACT,DE,7556,0.05
+IMPACT,KR,5720,0.038
+IMPACT,GB,4952,0.033
+IMPACT,FR,4320,0.029
+IMPACT,IL,4169,0.028
+IMPACT,CA,4020,0.027
+IMPACT,CH,3370,0.022
+IMPACT,IN,2942,0.019
+IMPACT,TW,2452,0.016
+IMPACT,NL,1753,0.012
+IMPACT,AU,1545,0.01
+IMPACT,IT,1523,0.01
+NEO-SMART,US,10153,0.345
+NEO-SMART,JP,8423,0.287
+NEO-SMART,KR,2515,0.086
+NEO-SMART,CN,2147,0.073
+NEO-SMART,DE,1898,0.065
+NEO-SMART,FR,1037,0.035
+NEO-SMART,CA,707,0.024
+NEO-SMART,GB,580,0.02
+NEO-SMART,TW,524,0.018
+NEO-SMART,BE,457,0.016
+NEO-SMART,CH,413,0.014
+NEO-SMART,NL,393,0.013
+NEO-SMART,IT,316,0.011
+NEO-SMART,SE,299,0.01
+NEO-SMART,IN,268,0.009
+Quantum Technologies,US,24939,0.538
+Quantum Technologies,CN,3770,0.081
+Quantum Technologies,JP,3594,0.078
+Quantum Technologies,DE,2540,0.055
+Quantum Technologies,TW,2161,0.047
+Quantum Technologies,GB,2096,0.045
+Quantum Technologies,CA,1900,0.041
+Quantum Technologies,KR,1828,0.039
+Quantum Technologies,IN,1785,0.038
+Quantum Technologies,IL,1298,0.028
+Quantum Technologies,FR,1169,0.025
+Quantum Technologies,CH,669,0.014
+Quantum Technologies,NL,509,0.011
+Quantum Technologies,IT,429,0.009
+Quantum Technologies,IE,343,0.007
+RETI,US,20101,0.387
+RETI,JP,9706,0.187
+RETI,KR,6663,0.128
+RETI,CN,5267,0.101
+RETI,DE,3330,0.064
+RETI,FR,1238,0.024
+RETI,GB,1199,0.023
+RETI,CA,1171,0.023
+RETI,SA,1070,0.021
+RETI,IN,808,0.016
+RETI,TW,675,0.013
+RETI,IL,460,0.009
+RETI,NL,398,0.008
+RETI,SE,398,0.008
+RETI,BE,395,0.008
+RuralSTAMINA Biomanufacturing,US,22159,0.606
+RuralSTAMINA Biomanufacturing,JP,2801,0.077
+RuralSTAMINA Biomanufacturing,CN,2526,0.069
+RuralSTAMINA Biomanufacturing,DE,2206,0.06
+RuralSTAMINA Biomanufacturing,KR,1372,0.038
+RuralSTAMINA Biomanufacturing,GB,1329,0.036
+RuralSTAMINA Biomanufacturing,CA,1079,0.03
+RuralSTAMINA Biomanufacturing,FR,1034,0.028
+RuralSTAMINA Biomanufacturing,NL,697,0.019
+RuralSTAMINA Biomanufacturing,DK,642,0.018
+RuralSTAMINA Biomanufacturing,CH,595,0.016
+RuralSTAMINA Biomanufacturing,IL,568,0.016
+RuralSTAMINA Biomanufacturing,IN,472,0.013
+RuralSTAMINA Biomanufacturing,AU,416,0.011
+RuralSTAMINA Biomanufacturing,TW,374,0.01
+STELLAR,US,23330,0.382
+STELLAR,JP,13607,0.223
+STELLAR,CN,5735,0.094
+STELLAR,KR,4932,0.081
+STELLAR,TW,4078,0.067
+STELLAR,DE,3633,0.059
+STELLAR,GB,1396,0.023
+STELLAR,CA,1266,0.021
+STELLAR,IL,1215,0.02
+STELLAR,FR,1093,0.018
+STELLAR,CH,669,0.011
+STELLAR,NL,630,0.01
+STELLAR,BE,509,0.008
+STELLAR,IN,376,0.006
+STELLAR,FI,354,0.006
+Seafood,US,33443,0.679
+Seafood,JP,4028,0.082
+Seafood,IN,2610,0.053
+Seafood,CN,2265,0.046
+Seafood,CA,1826,0.037
+Seafood,GB,1524,0.031
+Seafood,KR,1361,0.028
+Seafood,DE,1327,0.027
+Seafood,IL,1019,0.021
+Seafood,FR,609,0.012
+Seafood,AU,547,0.011
+Seafood,CH,381,0.008
+Seafood,IE,369,0.007
+Seafood,NL,308,0.006
+Seafood,SE,268,0.005

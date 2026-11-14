@@ -1,0 +1,181 @@
+engine_name,country,country_name,works,share
+BRIDGES,IN,India,52348,0.17
+BRIDGES,CN,China,49399,0.16
+BRIDGES,ID,Indonesia,22910,0.074
+BRIDGES,US,United States,17751,0.058
+BRIDGES,BR,Brazil,10412,0.034
+BRIDGES,MY,Malaysia,7670,0.025
+BRIDGES,FR,France,6178,0.02
+BRIDGES,TR,Turkey,5873,0.019
+BRIDGES,IT,Italy,5761,0.019
+BRIDGES,GB,United Kingdom,5734,0.019
+BRIDGES,DE,Germany,5627,0.018
+BRIDGES,ES,Spain,5054,0.016
+BRIDGES,JP,Japan,4677,0.015
+BRIDGES,KR,South Korea,4598,0.015
+BRIDGES,TH,Thailand,4557,0.015
+Critical Materials Crossroads,CN,China,39772,0.33
+Critical Materials Crossroads,US,United States,8564,0.071
+Critical Materials Crossroads,RU,Russia,5768,0.048
+Critical Materials Crossroads,IN,India,4977,0.041
+Critical Materials Crossroads,DE,Germany,4503,0.037
+Critical Materials Crossroads,JP,Japan,3800,0.032
+Critical Materials Crossroads,GB,United Kingdom,3221,0.027
+Critical Materials Crossroads,FR,France,3001,0.025
+Critical Materials Crossroads,KR,South Korea,2942,0.024
+Critical Materials Crossroads,AU,Australia,2658,0.022
+Critical Materials Crossroads,CA,Canada,2525,0.021
+Critical Materials Crossroads,ID,Indonesia,1928,0.016
+Critical Materials Crossroads,IT,Italy,1818,0.015
+Critical Materials Crossroads,IR,Iran,1775,0.015
+Critical Materials Crossroads,UA,Ukraine,1668,0.014
+Critical Mineral Accelerator,CN,China,31822,0.292
+Critical Mineral Accelerator,US,United States,8284,0.076
+Critical Mineral Accelerator,IN,India,4192,0.039
+Critical Mineral Accelerator,RU,Russia,3844,0.035
+Critical Mineral Accelerator,DE,Germany,3508,0.032
+Critical Mineral Accelerator,AU,Australia,3462,0.032
+Critical Mineral Accelerator,CA,Canada,2983,0.027
+Critical Mineral Accelerator,ID,Indonesia,2913,0.027
+Critical Mineral Accelerator,FR,France,2778,0.026
+Critical Mineral Accelerator,GB,United Kingdom,2512,0.023
+Critical Mineral Accelerator,KR,South Korea,2125,0.02
+Critical Mineral Accelerator,BR,Brazil,2068,0.019
+Critical Mineral Accelerator,JP,Japan,2043,0.019
+Critical Mineral Accelerator,IR,Iran,1985,0.018
+Critical Mineral Accelerator,ES,Spain,1929,0.018
+FAST,CN,China,52683,0.331
+FAST,US,United States,15008,0.094
+FAST,IN,India,12423,0.078
+FAST,KR,South Korea,7286,0.046
+FAST,DE,Germany,6140,0.039
+FAST,JP,Japan,4736,0.03
+FAST,FR,France,4582,0.029
+FAST,GB,United Kingdom,3734,0.023
+FAST,TW,Taiwan,3274,0.021
+FAST,RU,Russia,3165,0.02
+FAST,IT,Italy,3067,0.019
+FAST,CA,Canada,2713,0.017
+FAST,BR,Brazil,2005,0.013
+FAST,HK,Hong Kong,1794,0.011
+FAST,ES,Spain,1742,0.011
+Grid Modernization,CN,China,54885,0.281
+Grid Modernization,IN,India,20772,0.106
+Grid Modernization,US,United States,16169,0.083
+Grid Modernization,ID,Indonesia,8444,0.043
+Grid Modernization,GB,United Kingdom,4555,0.023
+Grid Modernization,DE,Germany,4403,0.023
+Grid Modernization,JP,Japan,4184,0.021
+Grid Modernization,RU,Russia,4165,0.021
+Grid Modernization,BR,Brazil,4087,0.021
+Grid Modernization,CA,Canada,3500,0.018
+Grid Modernization,IT,Italy,3441,0.018
+Grid Modernization,KR,South Korea,3431,0.018
+Grid Modernization,IR,Iran,3316,0.017
+Grid Modernization,FR,France,2778,0.014
+Grid Modernization,ES,Spain,2667,0.014
+IMPACT,US,United States,70646,0.185
+IMPACT,CN,China,41976,0.11
+IMPACT,IN,India,27293,0.071
+IMPACT,GB,United Kingdom,21512,0.056
+IMPACT,DE,Germany,15764,0.041
+IMPACT,IT,Italy,10880,0.028
+IMPACT,CA,Canada,10255,0.027
+IMPACT,TR,Turkey,9461,0.025
+IMPACT,AU,Australia,9121,0.024
+IMPACT,JP,Japan,9035,0.024
+IMPACT,FR,France,8087,0.021
+IMPACT,BR,Brazil,7481,0.02
+IMPACT,ES,Spain,7393,0.019
+IMPACT,ID,Indonesia,6831,0.018
+IMPACT,KR,South Korea,6650,0.017
+NEO-SMART,CN,China,78548,0.251
+NEO-SMART,US,United States,33122,0.106
+NEO-SMART,IN,India,17220,0.055
+NEO-SMART,DE,Germany,11707,0.037
+NEO-SMART,JP,Japan,9852,0.032
+NEO-SMART,RU,Russia,9451,0.03
+NEO-SMART,GB,United Kingdom,8966,0.029
+NEO-SMART,KR,South Korea,7878,0.025
+NEO-SMART,ID,Indonesia,7612,0.024
+NEO-SMART,FR,France,7580,0.024
+NEO-SMART,SA,Saudi Arabia,6410,0.021
+NEO-SMART,CA,Canada,5686,0.018
+NEO-SMART,IT,Italy,4930,0.016
+NEO-SMART,TR,Turkey,4640,0.015
+NEO-SMART,IR,Iran,4631,0.015
+Quantum Technologies,US,United States,26355,0.173
+Quantum Technologies,CN,China,23647,0.155
+Quantum Technologies,IN,India,10364,0.068
+Quantum Technologies,DE,Germany,10118,0.066
+Quantum Technologies,GB,United Kingdom,7575,0.05
+Quantum Technologies,JP,Japan,6596,0.043
+Quantum Technologies,IT,Italy,5424,0.036
+Quantum Technologies,FR,France,5293,0.035
+Quantum Technologies,CA,Canada,4598,0.03
+Quantum Technologies,ES,Spain,3948,0.026
+Quantum Technologies,KR,South Korea,2857,0.019
+Quantum Technologies,AU,Australia,2843,0.019
+Quantum Technologies,RU,Russia,2516,0.017
+Quantum Technologies,CH,Switzerland,2504,0.016
+Quantum Technologies,PL,Poland,2112,0.014
+RETI,CN,China,48830,0.372
+RETI,US,United States,10403,0.079
+RETI,IN,India,7473,0.057
+RETI,RU,Russia,4374,0.033
+RETI,DE,Germany,3943,0.03
+RETI,JP,Japan,3546,0.027
+RETI,KR,South Korea,3235,0.025
+RETI,GB,United Kingdom,3099,0.024
+RETI,ID,Indonesia,2524,0.019
+RETI,FR,France,2439,0.019
+RETI,BR,Brazil,2315,0.018
+RETI,AU,Australia,1964,0.015
+RETI,CA,Canada,1951,0.015
+RETI,IT,Italy,1916,0.015
+RETI,IR,Iran,1869,0.014
+RuralSTAMINA Biomanufacturing,CN,China,56311,0.348
+RuralSTAMINA Biomanufacturing,US,United States,13436,0.083
+RuralSTAMINA Biomanufacturing,IN,India,9008,0.056
+RuralSTAMINA Biomanufacturing,DE,Germany,6890,0.043
+RuralSTAMINA Biomanufacturing,GB,United Kingdom,5019,0.031
+RuralSTAMINA Biomanufacturing,FR,France,4494,0.028
+RuralSTAMINA Biomanufacturing,KR,South Korea,4200,0.026
+RuralSTAMINA Biomanufacturing,CA,Canada,3071,0.019
+RuralSTAMINA Biomanufacturing,IT,Italy,3006,0.019
+RuralSTAMINA Biomanufacturing,BR,Brazil,2968,0.018
+RuralSTAMINA Biomanufacturing,JP,Japan,2904,0.018
+RuralSTAMINA Biomanufacturing,RU,Russia,2643,0.016
+RuralSTAMINA Biomanufacturing,ES,Spain,2534,0.016
+RuralSTAMINA Biomanufacturing,AU,Australia,1827,0.011
+RuralSTAMINA Biomanufacturing,NL,Netherlands,1731,0.011
+STELLAR,CN,China,21778,0.283
+STELLAR,US,United States,10080,0.131
+STELLAR,DE,Germany,4192,0.054
+STELLAR,JP,Japan,3838,0.05
+STELLAR,IN,India,3076,0.04
+STELLAR,FR,France,3063,0.04
+STELLAR,RU,Russia,2556,0.033
+STELLAR,GB,United Kingdom,2426,0.032
+STELLAR,CA,Canada,1913,0.025
+STELLAR,IT,Italy,1850,0.024
+STELLAR,KR,South Korea,1797,0.023
+STELLAR,TW,Taiwan,1523,0.02
+STELLAR,AU,Australia,1231,0.016
+STELLAR,ES,Spain,1208,0.016
+STELLAR,NL,Netherlands,1120,0.015
+Seafood,ID,Indonesia,16595,0.119
+Seafood,CN,China,13704,0.098
+Seafood,US,United States,13683,0.098
+Seafood,IN,India,11046,0.079
+Seafood,GB,United Kingdom,4998,0.036
+Seafood,CA,Canada,4507,0.032
+Seafood,FR,France,4247,0.03
+Seafood,ES,Spain,3675,0.026
+Seafood,BR,Brazil,3653,0.026
+Seafood,AU,Australia,3634,0.026
+Seafood,RU,Russia,3369,0.024
+Seafood,IT,Italy,3019,0.022
+Seafood,DE,Germany,2963,0.021
+Seafood,JP,Japan,2869,0.021
+Seafood,NO,Norway,2773,0.02

@@ -1,0 +1,48 @@
+engine_name,state,county,level,source
+NEO-SMART,OH,Ashland,county,"NSF abstract: 18 counties of Northeast Ohio (Cleveland-Elyria, Akron, Canton-Massillon, Youngstown-Warren-Boardman MSAs); county list = standard 18-county Northeast Ohio definition (core.ac.uk/download/269432862.pdf)"
+NEO-SMART,OH,Ashtabula,county,same
+NEO-SMART,OH,Columbiana,county,same
+NEO-SMART,OH,Cuyahoga,county,same
+NEO-SMART,OH,Erie,county,same
+NEO-SMART,OH,Geauga,county,same
+NEO-SMART,OH,Huron,county,same
+NEO-SMART,OH,Lake,county,same
+NEO-SMART,OH,Lorain,county,same
+NEO-SMART,OH,Mahoning,county,same
+NEO-SMART,OH,Medina,county,same
+NEO-SMART,OH,Portage,county,same
+NEO-SMART,OH,Richland,county,same
+NEO-SMART,OH,Stark,county,same
+NEO-SMART,OH,Summit,county,same
+NEO-SMART,OH,Trumbull,county,same
+NEO-SMART,OH,Tuscarawas,county,same
+NEO-SMART,OH,Wayne,county,same
+STELLAR,NY,Monroe,county,"NSF abstract: eleven counties (Monroe, Livingston, Ontario, Orleans, Seneca, Wayne, Genesee, Wyoming, Yates, Steuben, Allegany)"
+STELLAR,NY,Livingston,county,same
+STELLAR,NY,Ontario,county,same
+STELLAR,NY,Orleans,county,same
+STELLAR,NY,Seneca,county,same
+STELLAR,NY,Wayne,county,same
+STELLAR,NY,Genesee,county,same
+STELLAR,NY,Wyoming,county,same
+STELLAR,NY,Yates,county,same
+STELLAR,NY,Steuben,county,same
+STELLAR,NY,Allegany,county,same
+BRIDGES,AL,,state,"state proxy: abstract names Alabama and Tennessee, no county list"
+BRIDGES,TN,,state,same
+Critical Materials Crossroads,MO,,state,"state proxy: Kansas City region, no county list found"
+Critical Materials Crossroads,KS,,state,same
+Critical Mineral Accelerator,AK,,state,abstract: state of Alaska
+FAST,OR,,state,"state proxy: abstract says 12 counties, list not found"
+Grid Modernization,NC,,state,"state proxy: abstract says 36 counties in NC and SC, list not found"
+Grid Modernization,SC,,state,same
+IMPACT,IN,,state,abstract: Indiana
+Quantum Technologies,CT,,state,abstract: region of service is the state of Connecticut
+RETI,WV,,state,"state proxy: West Virginia and western Pennsylvania (all of PA used)"
+RETI,PA,,state,same
+RuralSTAMINA Biomanufacturing,IA,,state,abstract: all 192 counties in Iowa and Nebraska
+RuralSTAMINA Biomanufacturing,NE,,state,same
+Seafood,ME,,state,"abstract: Maine, New Hampshire, Massachusetts, Rhode Island"
+Seafood,NH,,state,same
+Seafood,MA,,state,same
+Seafood,RI,,state,same
