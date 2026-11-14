@@ -7,6 +7,7 @@ output:
     css: style.css
     includes:
       before_body: _navbar.html
+      after_body: _tables.html
 ---
 
 How the knowledge base of each Engine is built, step by step.

@@ -3,8 +3,8 @@
 # Looks up the works already listed in step 6a by their OpenAlex id, so the lists themselves do not change.
 #
 # Input:  data/processed/works_people.csv
-# Output: data/raw/openalex_works/details_people.json   cached API results
-#         data/processed/works_details.csv              one row per work: authors (APA style), venue
+# Output: data/raw/openalex_works/details_people.json   cached API results (delete to refresh)
+#         data/processed/works_details.csv              one row per work: authors (APA style), author names and ids, venue
 #
 # Cost: one request per 50 works, about 20 requests ($0.002).
 
@@ -41,19 +41,27 @@ apa_name <- function(x) {
   initials <- str_sub(str_remove_all(head(parts, -1), "[.]"), 1, 1)
   paste0(tail(parts, 1), ", ", paste0(initials, ".", collapse = " "))
 }
+# APA author list from names already in "Last, F." form; names may carry markup (e.g. bold)
 apa_authors <- function(names) {
   n <- length(names)
   if (n == 0) return(NA_character_)
-  names <- map_chr(names, apa_name)
   if (n == 1) return(names)
   if (n > max_names) return(paste0(paste(names[1:(max_names - 1)], collapse = ", "), ", ... ", names[n]))
   paste0(paste(names[-n], collapse = ", "), ", & ", names[n])
 }
 
+# One string from a JSON field; missing values come back as "" (cached nulls are read as empty lists)
+chr1 <- \(x) if (is.character(x) && length(x) == 1) x else ""
+
+# author_names / author_ids: all authors in order, "; "-separated, so a report can mark one of them
 details <- map_dfr(raw, function(w) {
-  tibble(work_id = str_remove(w$id, "https://openalex.org/"),
-         authors = apa_authors(map_chr(w$authorships %||% list(), \(a) a$author$display_name %||% "")),
-         venue   = w$primary_location$source$display_name %||% NA_character_)
+  au    <- w$authorships %||% list()
+  names <- map_chr(au, \(a) apa_name(chr1(a$author$display_name)))
+  tibble(work_id      = str_remove(w$id, "https://openalex.org/"),
+         authors      = apa_authors(names),
+         author_names = paste(names, collapse = "; "),
+         author_ids   = paste(map_chr(au, \(a) str_remove(chr1(a$author$id), "https://openalex.org/")), collapse = "; "),
+         venue        = na_if(chr1(w$primary_location$source$display_name), ""))
 }) |> distinct(work_id, .keep_all = TRUE)
 
 write_csv(details, here("data", "processed", "works_details.csv"))

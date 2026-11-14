@@ -2345,6 +2345,77 @@ PatentsView; pre-grant publications are not included.</li>
 </ul>
 </div>
 
+<!-- Sortable columns and a search box for site tables (included via `includes: after_body`) -->
+<style>
+table th.sortable { cursor: pointer; user-select: none; white-space: normal; }
+table th.sortable::after { content: " \2195"; color: #bbb; font-weight: normal; }
+table th.sort-asc::after { content: " \25B2"; color: #000; }
+table th.sort-desc::after { content: " \25BC"; color: #000; }
+.table-search { margin: 6px 0 8px; display: flex; gap: 8px; align-items: center; font-size: 13px; }
+.table-search input { width: 260px; max-width: 100%; padding: 3px 8px; border: 1px solid #999; border-radius: 3px; }
+.table-search .count { color: #666; }
+</style>
+<script>
+(function () {
+  var MIN_ROWS_FOR_SEARCH = 10;
+
+  // A cell as a number ("1,234", "20.4%", "4.52"), or null if it is not one
+  function num(text) {
+    var t = text.replace(/[,%\s]/g, "");
+    return t !== "" && !isNaN(t) ? parseFloat(t) : null;
+  }
+  function cellText(row, i) { return row.cells[i] ? row.cells[i].textContent.trim() : ""; }
+
+  function makeSortable(table) {
+    var head = table.tHead && table.tHead.rows[table.tHead.rows.length - 1];
+    var body = table.tBodies[0];
+    if (!head || !body || body.rows.length < 2) return;
+    Array.prototype.forEach.call(head.cells, function (th, i) {
+      th.classList.add("sortable");
+      th.title = "Sort";
+      th.addEventListener("click", function () {
+        var desc = th.classList.contains("sort-asc");  // second click: descending
+        Array.prototype.forEach.call(head.cells, function (c) { c.classList.remove("sort-asc", "sort-desc"); });
+        th.classList.add(desc ? "sort-desc" : "sort-asc");
+        var rows = Array.prototype.slice.call(body.rows);
+        var numeric = rows.every(function (r) { var t = cellText(r, i); return t === "" || t === "-" || num(t) !== null; });
+        rows.sort(function (a, b) {
+          var x = cellText(a, i), y = cellText(b, i);
+          var ex = x === "" || x === "-", ey = y === "" || y === "-";
+          if (ex || ey) return ex === ey ? 0 : ex ? 1 : -1;  // empty cells always last
+          var r = numeric ? num(x) - num(y) : x.localeCompare(y, undefined, { sensitivity: "base" });
+          return desc ? -r : r;
+        });
+        rows.forEach(function (r) { body.appendChild(r); });
+      });
+    });
+  }
+
+  function addSearch(table) {
+    var body = table.tBodies[0];
+    if (!body || body.rows.length <= MIN_ROWS_FOR_SEARCH) return;
+    var box = document.createElement("div");
+    box.className = "table-search";
+    box.innerHTML = '<input type="search" placeholder="Search this table"><span class="count"></span>';
+    table.parentNode.insertBefore(box, table);
+    var input = box.querySelector("input"), count = box.querySelector(".count");
+    input.addEventListener("input", function () {
+      var q = input.value.trim().toLowerCase(), shown = 0;
+      Array.prototype.forEach.call(body.rows, function (r) {
+        var hit = !q || r.textContent.toLowerCase().indexOf(q) >= 0;
+        r.style.display = hit ? "" : "none";
+        if (hit) shown++;
+      });
+      count.textContent = q ? shown + " of " + body.rows.length + " rows" : "";
+    });
+  }
+
+  document.querySelectorAll(".main-container table").forEach(function (t) {
+    makeSortable(t);
+    addSearch(t);
+  });
+})();
+</script>
 
 
 </div>
