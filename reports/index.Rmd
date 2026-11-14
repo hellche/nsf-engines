@@ -5,6 +5,8 @@ output:
   html_document:
     theme: flatly
     self_contained: true
+    includes:
+      before_body: _navbar.html
 ---
 
 ```{r setup, include=FALSE}

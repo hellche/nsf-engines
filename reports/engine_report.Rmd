@@ -8,6 +8,8 @@ output:
     toc_float: true
     theme: flatly
     self_contained: true
+    includes:
+      before_body: _navbar.html
 params:
   engine: "NEO-SMART"
 ---

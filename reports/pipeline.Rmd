@@ -1,0 +1,13 @@
+---
+title: "Pipeline"
+output:
+  html_document:
+    theme: flatly
+    self_contained: true
+    includes:
+      before_body: _navbar.html
+---
+
+How the knowledge base of each Engine is built, step by step.
+
+*Page in progress.*
