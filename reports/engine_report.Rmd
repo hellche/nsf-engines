@@ -95,11 +95,14 @@ people |>
             Title = str_trunc(coalesce(title_site, ""), 60),
             Organisation = str_trunc(coalesce(org_site, ""), 40),
             `Works since window` = if_else(coalesce(reliable, FALSE), as.character(works_5y), "-"),
-            `h-index` = if_else(coalesce(reliable, FALSE), as.character(h_index), "-")) |>
+            `h-index` = if_else(coalesce(reliable, FALSE), as.character(h_index), "-"),
+            Site = if_else(is.na(site_url), "", sprintf("[page](%s)", site_url)),
+            OpenAlex = if_else(coalesce(reliable, FALSE) & !coalesce(check_merged, FALSE) & !is.na(oa_id),
+                               sprintf("[profile](https://openalex.org/%s)", oa_id), "")) |>
   kable()
 ```
 
-Publication counts are shown only where the OpenAlex author matches both the name and the person's current organisation.
+Publication counts are shown only where the OpenAlex author matches both the name and the person's current organisation. The OpenAlex link is given only for these reliable matches, and not for profiles flagged as possibly merging several namesakes. *Site* links to the page of the Engine's website where the person is named.
 
 ## Partners
 
