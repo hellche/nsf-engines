@@ -49,11 +49,20 @@ for (i in seq_len(nrow(engines))) {
                   Title = sprintf('<a href="%s">%s</a>', url, htmltools::htmlEscape(w$title)),
                   Type = w$type, Citations = w$cited_by,
                   `In Engine topics` = if_else(w$in_engine_topics, "yes", ""))
-    org <- coalesce(pe$org_site[j], pe$last_inst[j], "")
-    cat(sprintf('<details id="works-%s"><summary><b>%s</b>%s: %d works (%d in Engine topics)</summary>\n\n',
+    # Organisation from the Engine site; if that names the Engine itself (or is missing),
+    # the person's current institution in OpenAlex (a university if there is one)
+    org <- str_remove(coalesce(pe$org_site[j], ""), "\\s*\\(implied\\)$")
+    is_engine <- org == "" || org == e || coalesce(pe$org_type[j], "") == "engine" ||
+      str_detect(org, regex("\\bengine\\b|\\bconsortium\\b", ignore_case = TRUE))
+    if (is_engine && !is.na(pe$last_inst[j])) {
+      inst <- str_split_1(pe$last_inst[j], ";\\s*")
+      univ <- str_detect(inst, "University") & !str_detect(inst, "Hospital|Medical Center")
+      org  <- c(inst[univ], inst[!univ])[1]  # a university first
+    }
+    cat(sprintf('<details id="works-%s"><summary><b>%s</b>%s: %d %s (%d in Engine topics)</summary>\n\n',
                 pe$person_id[j], htmltools::htmlEscape(pe$name[j]),
                 if (nzchar(org)) paste0(", ", htmltools::htmlEscape(org)) else "", nrow(w),
-                sum(w$in_engine_topics, na.rm = TRUE)))
+                if (nrow(w) == 1) "work" else "works", sum(w$in_engine_topics, na.rm = TRUE)))
     print(kable(tab, format = "html", escape = FALSE, table.attr = 'class="table table-condensed"'))
     cat("\n</details>\n\n")
   }
