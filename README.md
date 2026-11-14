@@ -1,3 +1,6 @@
+notes: https://claude.ai/artifact/98b6rkHwQDfqcGjXGGEXoQ#8bb85fd6-3522
+
+
 # NSF Regional Innovation Engines: knowledge base of each Engine
 
 Reproducible pipeline that finds the scientific and technological base of each NSF Regional Innovation
