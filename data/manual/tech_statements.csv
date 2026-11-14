@@ -1,0 +1,49 @@
+engine_name,item,source,statement,quote,cpc
+BRIDGES,1,title,Biobased manufacturing of materials and products from locally grown biomass,"Biobased Rural Innovation for Domestic Growth and Economic Security (BRIDGES) Engine ... advancing domestic biobased manufacturing using locally grown resources",C08H; C08L97
+BRIDGES,2,abstract,"Perennial grasses miscanthus and switchgrass as feedstock for advanced manufacturing","integrating low-input perennial grasses, such as miscanthus and switchgrass, into advanced manufacturing systems",A01H; D21C
+BRIDGES,3,abstract,"Biobased materials for automotive parts, construction materials and packaging","supply materials and products for the automotive, construction materials, and packaging sectors",C04B18; B65D65; C08L
+BRIDGES,4,abstract,Digital twins and AI decision support for crop design and manufacturing efficiency,"digital twins and AI-enabled decision-support systems, to optimize crop design, manufacturing efficiency, and supply-chain performance",G06Q50; G05B17
+Critical Materials Crossroads,1,title,Critical materials production and refining,"Critical Materials Crossroads ... onshore critical materials production capacity",C22B
+Critical Materials Crossroads,2,abstract,Domestic metal refining at industrial scale,"domestic metal refining and advanced materials production capacity, each on the order of 100,000 tons annually",C22B; C25C
+Critical Materials Crossroads,3,abstract,"Materials processing scale-up with continuous flow processing, in-line monitoring and data-driven process control","Advanced manufacturing methods, including continuous flow processing, in-line monitoring, and data-driven process control",B01J19; G05B13
+Critical Mineral Accelerator,1,title,"Critical mineral exploration, extraction, recovery and production","Critical Mineral Accelerator ... improve the discovery, evaluation, extraction, recovery, and production of critical minerals",C22B; G01V
+Critical Mineral Accelerator,2,abstract,"AI-based mineral discovery integrating geological, geochemical, geophysical and remote-sensing data, including metal-isotope geochemistry","integrating geological, geochemical, geophysical, remote-sensing, and legacy data into AI-based systems, including metal-isotope geochemical approaches to identify concealed mineral deposits",G01V; G06N
+Critical Mineral Accelerator,3,abstract,"Recovery of critical minerals from low-grade ore and mine waste by bio-based extraction and mineral processing","advance recovery methods for primary resources and mine waste through materials characterization, bio-based extraction, and mineral processing",C22B3; B03D
+FAST,1,title,Advanced semiconductor technology,"Frontiers of Advanced Semiconductor Technology (FAST) Engine",H01L; H10D
+FAST,2,abstract,AI-enabled automatic process control for semiconductor manufacturing,"AI-enabled Automatic Process Control concept will leverage AI to improve the quality, performance, and affordability of advanced semiconductors",H01L21; G05B19
+FAST,3,abstract,Design and manufacturing of advanced logic chips,"reshore design and manufacturing of the world's most advanced logic chips",G06F30; H01L21
+Grid Modernization,1,title,Electric power grid modernization,"Carolinas Engine for Grid Modernization ... develop, deploy, and manufacture critical grid technologies",H02J3
+Grid Modernization,2,abstract,Grid-edge automation of power distribution networks,"Key technology areas include grid-edge automation",H02J13; Y04S
+Grid Modernization,3,abstract,Solid state and hybrid power transformers,"solid state and hybrid transformers",H02M5; H01F27
+Grid Modernization,4,abstract,Cybersecurity of the electric grid,"solutions that enhance grid cybersecurity",H04L63; Y04S40
+Grid Modernization,5,abstract,Advanced construction techniques for nuclear power plants,"advanced techniques for nuclear construction",G21C; G21D
+IMPACT,1,abstract,Prevention diagnosis and treatment of musculoskeletal injury and disease,"Title not informative (IMPACT is not expanded); abstract: new ways to prevent, diagnose, treat, and manufacture solutions for MSK conditions",A61F2; A61B17
+IMPACT,2,abstract,Orthopedic devices and implants,"advance orthopedic devices, biologics, diagnostics, manufacturing processes, and AI-enabled tools",A61F2; A61B17
+IMPACT,3,abstract,Biologics and drug development for bone and joint disorders,"orthopedic devices, biologics ... drug development",A61K; A61P19
+IMPACT,4,abstract,"AI tools using medical imaging, electronic health records and biospecimens for musculoskeletal diagnostics","leverage multimodal data, including imaging, electronic health records, biospecimens, and outcomes data ... AI-enabled tools",G16H50; G06T7
+NEO-SMART,1,title,Advanced materials manufacturing technology,"Northeast Ohio Strengthening Manufacturing for American Resilience through Technology ... restoring U.S. leadership in advanced materials and manufacturing",
+NEO-SMART,2,abstract,"Metals production, processing, recovery and recycling","three interconnected materials systems - metals, polymers, and chemicals and coatings ... from sourcing and feedstock development through production, processing, recovery",C22B; C22C
+NEO-SMART,3,abstract,"Polymers: feedstock development, processing, reprocessing and recycling of plastics","polymers ... sourcing and feedstock development through production, processing, recovery",C08J; B29B17
+NEO-SMART,4,abstract,Chemicals and coatings: development and durability of industrial coatings,"chemicals and coatings ... product durability",C09D; C23F
+NEO-SMART,5,abstract,AI/ML and computational methods that accelerate materials design,"emerging AI/ML and computational methods that accelerate materials design and life cycle assessment",G16C60
+Quantum Technologies,1,title,Quantum technologies and quantum information science,"NSF Quantum Technologies Engine in Connecticut ... based on quantum information science and relevant technologies",G06N10; B82Y10
+Quantum Technologies,2,abstract,Quantum computing hardware and algorithms,"quantum communications, quantum sensing, and quantum computing",G06N10
+Quantum Technologies,3,abstract,Quantum sensing and quantum metrology,"quantum communications, quantum sensing, and quantum computing",G01R33; G01N24
+Quantum Technologies,4,abstract,Quantum communications and quantum cryptography,"quantum communications, quantum sensing, and quantum computing",H04L9; H04B10
+RETI,1,title,Resilient energy infrastructure and electric grid reliability for industry,"Resilient Energy Technology and Infrastructure (RETI) Consortium addresses ... the reliability of the U.S. electrical grid",H02J3
+RETI,2,abstract,"Machine learning grid management, digital twins and secure control systems","machine learning-enabled grid management, digital twin platforms for real-time situational awareness, and secure control systems",G05B13; Y04S
+RETI,3,abstract,Energy storage with advanced batteries and solid oxide fuel cells,"energy storage systems based on advanced batteries and solid oxide fuel cells",H01M10; H01M8
+RETI,4,abstract,"Hydrogen-based iron reduction, catalysis and process intensification in steel and chemical production","hydrogen-based iron reduction, novel catalytic systems, and process intensification aimed at reducing energy use in chemical and steel production",C21B13; B01J
+RuralSTAMINA Biomanufacturing,1,title,Biomanufacturing of value-added bioproducts from agricultural feedstocks,"RuralSTAMINA Biomanufacturing Engine ... transforming agricultural feedstocks into a wide range of value-added bioproducts",C12P
+RuralSTAMINA Biomanufacturing,2,abstract,Engineered microorganisms for biomanufacturing of new products,"developing enabling technologies such as new microorganisms for biomanufacturing of new value-added products",C12N
+RuralSTAMINA Biomanufacturing,3,abstract,Scale-up of biomanufacturing and fermentation processes,"predictable and reliable scaling up of biomanufacturing processes for commercialization",C12M
+RuralSTAMINA Biomanufacturing,4,abstract,Sensors and AI tools for biomanufacturing process optimization,"designing and deploying sensors and AI tools for biomanufacturing process optimization",C12Q3; G05B13
+STELLAR,1,title,Lasers and laser applications,"Science, Technology, and Engineering for Lasers and Laser Applications Research (STELLAR) Engine",H01S
+STELLAR,2,abstract,Precision optics and optical imaging,"the area's globally recognized precision-optics and imaging expertise",G02B
+STELLAR,3,abstract,Photonics and integrated photonic devices,"strong capabilities in photonics and laser technologies ... Optics, Photonics, Imaging, and Lasers (OPI+L)",G02B6; H01S5
+STELLAR,4,abstract,Manufacturing of laser components and systems,"strengthen domestic laser component and system manufacturing",B23K26; H01S3
+Seafood,1,title,"Seafood harvesting, processing and supply chain technology","Seafood Engine ... introduce synergistic technological innovations at the harvest, processing, distribution, and marketing stages",A22C25; A01K61
+Seafood,2,abstract,Ocean observation technologies to map and predict fishery and aquaculture resources,"New ocean observation technologies have the power to efficiently map, characterize, and predict seafood resources and their environments",A01K79; G01S15
+Seafood,3,abstract,"Sensors, AI and data visualization for decision-making in fishing and aquaculture","Sensor technologies, AI and other advanced analytics, and novel data visualizations can improve domain awareness and decision-making",A01K61; G06Q50
+Seafood,4,abstract,"Seafood processing, waste stream utilization and cold chain technologies","new and downscaled processing technologies ... Waste stream utilization ... Cold chain technologies",A22C25; A23B4; A23L17
+Seafood,5,abstract,Seafood traceability technologies,"Traceability technologies can also help to reach new consumers and markets",G06Q10

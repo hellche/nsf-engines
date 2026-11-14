@@ -1,0 +1,13 @@
+engine_name,partners_url,retrieved,completeness
+BRIDGES,https://www.bridgesengine.org/collaborators/,2026-11-14,"Only the 5 coalition leads are named; the page reports 42 industry, 18 academic, 10 commercialization partners and 15 stakeholder groups as logo images without names"
+Critical Materials Crossroads,https://www.crit-mat.org/cmc-partners/,2026-11-14,Complete directory by category (about 290 entries with repeats)
+Critical Mineral Accelerator,https://engine.alaska.edu/partners/,2026-11-14,Complete (46 organisations)
+FAST,https://fast-engine.org/fast-partners/,2026-11-14,Complete (100 partners + 14 core partner logos)
+Grid Modernization,https://carolinasgridengine.com/about-us/,2026-11-14,"Not available: the page reports ""100+ committed partners"" without names; only governance board organisations are named"
+IMPACT,https://mskimpact.org/,2026-11-14,Not available: partner sections render logos only (no names in the page source)
+NEO-SMART,https://neosmartengine.org/partners/,2026-11-14,Complete (74 organisations)
+Quantum Technologies,https://www.quantumct.org/about-quantumct/,2026-11-14,Not available: no partner list; organisations of board and planning committee members are used instead
+RETI,https://reticonsortium.org/about-us/,2026-11-14,Complete logo wall (77 logos; names from alt text)
+RuralSTAMINA Biomanufacturing,https://ruralstamina.org/,2026-11-14,Core partners only (7)
+Seafood,https://seafoodengine.org/,2026-11-14,Not available: core partners carousel renders without names
+STELLAR,https://stellarlasers.org/collaborators/,2026-11-14,Complete (76 collaborators + 8 coalition leadership organisations; names from logo files)

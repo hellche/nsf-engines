@@ -1,0 +1,145 @@
+engine_name,item,statement,rank,topic_id,topic,score,subfield_id,subfield,field
+BRIDGES,1,Biobased manufacturing of materials and products from locally grown biomass,1,T13240,Bioeconomy and Sustainability Development,0.375,subfields/1100,General Agricultural and Biological Sciences,Agricultural and Biological Sciences
+BRIDGES,1,Biobased manufacturing of materials and products from locally grown biomass,2,T10171,Biofuel production and bioconversion,0.343,subfields/2204,Biomedical Engineering,Engineering
+BRIDGES,1,Biobased manufacturing of materials and products from locally grown biomass,3,T11009,Catalysis for Biomass Conversion,0.11,subfields/1503,Catalysis,Chemical Engineering
+BRIDGES,2,Perennial grasses miscanthus and switchgrass as feedstock for advanced manufacturing,1,T12003,Bioenergy crop production and management,0.672,subfields/1102,Agronomy and Crop Science,Agricultural and Biological Sciences
+BRIDGES,2,Perennial grasses miscanthus and switchgrass as feedstock for advanced manufacturing,2,T10171,Biofuel production and bioconversion,0.291,subfields/2204,Biomedical Engineering,Engineering
+BRIDGES,2,Perennial grasses miscanthus and switchgrass as feedstock for advanced manufacturing,3,T11009,Catalysis for Biomass Conversion,0.007,subfields/1503,Catalysis,Chemical Engineering
+BRIDGES,3,"Biobased materials for automotive parts, construction materials and packaging",1,T10513,Natural Fiber Reinforced Composites,0.529,subfields/2507,Polymers and Plastics,Materials Science
+BRIDGES,3,"Biobased materials for automotive parts, construction materials and packaging",2,T10661,biodegradable polymer synthesis and properties,0.413,subfields/2502,Biomaterials,Materials Science
+BRIDGES,3,"Biobased materials for automotive parts, construction materials and packaging",3,T10610,Advanced Cellulose Research Studies,0.016,subfields/2502,Biomaterials,Materials Science
+BRIDGES,4,Digital twins and AI decision support for crop design and manufacturing efficiency,1,T10763,Digital Transformation in Industry,0.879,subfields/2209,Industrial and Manufacturing Engineering,Engineering
+BRIDGES,4,Digital twins and AI decision support for crop design and manufacturing efficiency,2,T10616,Smart Agriculture and AI,0.086,subfields/1110,Plant Science,Agricultural and Biological Sciences
+BRIDGES,4,Digital twins and AI decision support for crop design and manufacturing efficiency,3,T14260,Impact of AI and Big Data on Business and Society,0.011,subfields/1803,Management Science and Operations Research,Decision Sciences
+Critical Materials Crossroads,1,Critical materials production and refining,1,T11091,Extraction and Separation Processes,0.987,subfields/2506,Metals and Alloys,Materials Science
+Critical Materials Crossroads,1,Critical materials production and refining,2,T11933,Mining and Resource Management,0.002,subfields/2308,"Management, Monitoring, Policy and Law",Environmental Science
+Critical Materials Crossroads,1,Critical materials production and refining,3,T11126,Metallurgical Processes and Thermodynamics,0.001,subfields/2506,Metals and Alloys,Materials Science
+Critical Materials Crossroads,2,Domestic metal refining at industrial scale,1,T11126,Metallurgical Processes and Thermodynamics,0.88,subfields/2506,Metals and Alloys,Materials Science
+Critical Materials Crossroads,2,Domestic metal refining at industrial scale,2,T11091,Extraction and Separation Processes,0.079,subfields/2506,Metals and Alloys,Materials Science
+Critical Materials Crossroads,2,Domestic metal refining at industrial scale,3,T13742,Metallurgy and Cultural Artifacts,0.011,subfields/3302,Archeology,Social Sciences
+Critical Materials Crossroads,3,"Materials processing scale-up with continuous flow processing, in-line monitoring and data-driven process control",1,T11407,Innovative Microfluidic and Catalytic Techniques Innovation,0.883,subfields/1507,Fluid Flow and Transfer Processes,Chemical Engineering
+Critical Materials Crossroads,3,"Materials processing scale-up with continuous flow processing, in-line monitoring and data-driven process control",2,T11948,Machine Learning in Materials Science,0.018,subfields/2505,Materials Chemistry,Materials Science
+Critical Materials Crossroads,3,"Materials processing scale-up with continuous flow processing, in-line monitoring and data-driven process control",3,T12282,Mineral Processing and Grinding,0.01,subfields/2210,Mechanical Engineering,Engineering
+Critical Mineral Accelerator,1,"Critical mineral exploration, extraction, recovery and production",1,T11091,Extraction and Separation Processes,0.962,subfields/2506,Metals and Alloys,Materials Science
+Critical Mineral Accelerator,1,"Critical mineral exploration, extraction, recovery and production",2,T11933,Mining and Resource Management,0.011,subfields/2308,"Management, Monitoring, Policy and Law",Environmental Science
+Critical Mineral Accelerator,1,"Critical mineral exploration, extraction, recovery and production",3,T12282,Mineral Processing and Grinding,0.007,subfields/2210,Mechanical Engineering,Engineering
+Critical Mineral Accelerator,2,"AI-based mineral discovery integrating geological, geochemical, geophysical and remote-sensing data, including metal-isotope geochemistry",1,T12157,Geochemistry and Geologic Mapping,0.999,subfields/1906,Geochemistry and Petrology,Earth and Planetary Sciences
+Critical Mineral Accelerator,2,"AI-based mineral discovery integrating geological, geochemical, geophysical and remote-sensing data, including metal-isotope geochemistry",2,T11948,Machine Learning in Materials Science,0,subfields/2505,Materials Chemistry,Materials Science
+Critical Mineral Accelerator,2,"AI-based mineral discovery integrating geological, geochemical, geophysical and remote-sensing data, including metal-isotope geochemistry",3,T13067,Geological Modeling and Analysis,0,subfields/1907,Geology,Earth and Planetary Sciences
+Critical Mineral Accelerator,3,Recovery of critical minerals from low-grade ore and mine waste by bio-based extraction and mineral processing,1,T11073,Metal Extraction and Bioleaching,0.958,subfields/2506,Metals and Alloys,Materials Science
+Critical Mineral Accelerator,3,Recovery of critical minerals from low-grade ore and mine waste by bio-based extraction and mineral processing,2,T11091,Extraction and Separation Processes,0.031,subfields/2506,Metals and Alloys,Materials Science
+Critical Mineral Accelerator,3,Recovery of critical minerals from low-grade ore and mine waste by bio-based extraction and mineral processing,3,T12282,Mineral Processing and Grinding,0.002,subfields/2210,Mechanical Engineering,Engineering
+FAST,1,Advanced semiconductor technology,1,T10472,Semiconductor materials and devices,0.464,subfields/2208,Electrical and Electronic Engineering,Engineering
+FAST,1,Advanced semiconductor technology,2,T10558,Advancements in Semiconductor Devices and Circuit Design,0.364,subfields/2208,Electrical and Electronic Engineering,Engineering
+FAST,1,Advanced semiconductor technology,3,T11853,Semiconductor materials and interfaces,0.06,subfields/2504,"Electronic, Optical and Magnetic Materials",Materials Science
+FAST,2,AI-enabled automatic process control for semiconductor manufacturing,1,T10876,Fault Detection and Control Systems,0.498,subfields/2207,Control and Systems Engineering,Engineering
+FAST,2,AI-enabled automatic process control for semiconductor manufacturing,2,T14474,Industrial Technology and Control Systems,0.216,subfields/2207,Control and Systems Engineering,Engineering
+FAST,2,AI-enabled automatic process control for semiconductor manufacturing,3,T10791,Advanced Control Systems Optimization,0.05,subfields/2207,Control and Systems Engineering,Engineering
+FAST,3,Design and manufacturing of advanced logic chips,1,T11522,VLSI and FPGA Design Techniques,0.487,subfields/2208,Electrical and Electronic Engineering,Engineering
+FAST,3,Design and manufacturing of advanced logic chips,2,T10558,Advancements in Semiconductor Devices and Circuit Design,0.25,subfields/2208,Electrical and Electronic Engineering,Engineering
+FAST,3,Design and manufacturing of advanced logic chips,3,T10363,Low-power high-performance VLSI design,0.154,subfields/2208,Electrical and Electronic Engineering,Engineering
+Grid Modernization,1,Electric power grid modernization,1,T12451,Smart Grid and Power Systems,0.961,subfields/2208,Electrical and Electronic Engineering,Engineering
+Grid Modernization,1,Electric power grid modernization,2,T10305,Power System Optimization and Stability,0.013,subfields/2208,Electrical and Electronic Engineering,Engineering
+Grid Modernization,1,Electric power grid modernization,3,T14444,Power Systems and Renewable Energy,0.008,subfields/2102,Energy Engineering and Power Technology,Energy
+Grid Modernization,2,Grid-edge automation of power distribution networks,1,T12451,Smart Grid and Power Systems,0.74,subfields/2208,Electrical and Electronic Engineering,Engineering
+Grid Modernization,2,Grid-edge automation of power distribution networks,2,T10454,Optimal Power Flow Distribution,0.186,subfields/2208,Electrical and Electronic Engineering,Engineering
+Grid Modernization,2,Grid-edge automation of power distribution networks,3,T10223,Microgrid Control and Optimization,0.038,subfields/2207,Control and Systems Engineering,Engineering
+Grid Modernization,3,Solid state and hybrid power transformers,1,T10175,Advanced DC-DC Converters,0.859,subfields/2208,Electrical and Electronic Engineering,Engineering
+Grid Modernization,3,Solid state and hybrid power transformers,2,T11222,Magnetic Properties and Applications,0.081,subfields/2504,"Electronic, Optical and Magnetic Materials",Materials Science
+Grid Modernization,3,Solid state and hybrid power transformers,3,T11343,Power Transformer Diagnostics and Insulation,0.01,subfields/2208,Electrical and Electronic Engineering,Engineering
+Grid Modernization,4,Cybersecurity of the electric grid,1,T10917,Smart Grid Security and Resilience,1,subfields/2207,Control and Systems Engineering,Engineering
+Grid Modernization,4,Cybersecurity of the electric grid,2,T12221,Cybersecurity and Cyber Warfare Studies,0,subfields/3320,Political Science and International Relations,Social Sciences
+Grid Modernization,4,Cybersecurity of the electric grid,3,T10734,Information and Cyber Security,0,subfields/1710,Information Systems,Computer Science
+Grid Modernization,5,Advanced construction techniques for nuclear power plants,1,T13031,Civil and Structural Engineering Research,0.845,subfields/2205,Civil and Structural Engineering,Engineering
+Grid Modernization,5,Advanced construction techniques for nuclear power plants,2,T13923,Nuclear and radioactivity studies,0.065,subfields/2213,"Safety, Risk, Reliability and Quality",Engineering
+Grid Modernization,5,Advanced construction techniques for nuclear power plants,3,T13856,Advanced Power Generation Technologies,0.013,subfields/2102,Energy Engineering and Power Technology,Energy
+IMPACT,1,Prevention diagnosis and treatment of musculoskeletal injury and disease,1,T13946,Musculoskeletal Disorders and Rehabilitation,0.48,subfields/2742,Rehabilitation,Medicine
+IMPACT,1,Prevention diagnosis and treatment of musculoskeletal injury and disease,2,T10084,Musculoskeletal pain and rehabilitation,0.431,subfields/3612,"Physical Therapy, Sports Therapy and Rehabilitation",Health Professions
+IMPACT,1,Prevention diagnosis and treatment of musculoskeletal injury and disease,3,T11246,Sports injuries and prevention,0.024,subfields/2732,Orthopedics and Sports Medicine,Medicine
+IMPACT,2,Orthopedic devices and implants,1,T10512,Orthopaedic implants and arthroplasty,0.996,subfields/2746,Surgery,Medicine
+IMPACT,2,Orthopedic devices and implants,2,T10059,Bone Tissue Engineering Materials,0.002,subfields/2204,Biomedical Engineering,Engineering
+IMPACT,2,Orthopedic devices and implants,3,T11293,Orthopedic Infections and Treatments,0.001,subfields/2746,Surgery,Medicine
+IMPACT,3,Biologics and drug development for bone and joint disorders,1,T10105,Osteoarthritis Treatment and Mechanisms,0.455,subfields/2745,Rheumatology,Medicine
+IMPACT,3,Biologics and drug development for bone and joint disorders,2,T12255,Biosimilars and Bioanalytical Methods,0.29,subfields/2403,Immunology,Immunology and Microbiology
+IMPACT,3,Biologics and drug development for bone and joint disorders,3,T10200,Rheumatoid Arthritis Research and Therapies,0.191,subfields/2745,Rheumatology,Medicine
+IMPACT,4,"AI tools using medical imaging, electronic health records and biospecimens for musculoskeletal diagnostics",1,T11636,Artificial Intelligence in Healthcare and Education,0.974,subfields/2718,Health Informatics,Medicine
+IMPACT,4,"AI tools using medical imaging, electronic health records and biospecimens for musculoskeletal diagnostics",2,T14510,Medical Imaging and Analysis,0.018,subfields/2204,Biomedical Engineering,Engineering
+IMPACT,4,"AI tools using medical imaging, electronic health records and biospecimens for musculoskeletal diagnostics",3,T12422,Radiomics and Machine Learning in Medical Imaging,0.002,subfields/2741,"Radiology, Nuclear Medicine and Imaging",Medicine
+NEO-SMART,1,Advanced materials manufacturing technology,1,T13290,Diverse Industrial Engineering Technologies,0.29,subfields/2209,Industrial and Manufacturing Engineering,Engineering
+NEO-SMART,1,Advanced materials manufacturing technology,2,T10783,Additive Manufacturing and 3D Printing Technologies,0.243,subfields/2209,Industrial and Manufacturing Engineering,Engineering
+NEO-SMART,1,Advanced materials manufacturing technology,3,T13889,Advanced Materials and Semiconductor Technologies,0.135,subfields/2505,Materials Chemistry,Materials Science
+NEO-SMART,2,"Metals production, processing, recovery and recycling",1,T11091,Extraction and Separation Processes,0.782,subfields/2506,Metals and Alloys,Materials Science
+NEO-SMART,2,"Metals production, processing, recovery and recycling",2,T11126,Metallurgical Processes and Thermodynamics,0.111,subfields/2506,Metals and Alloys,Materials Science
+NEO-SMART,2,"Metals production, processing, recovery and recycling",3,T13290,Diverse Industrial Engineering Technologies,0.039,subfields/2209,Industrial and Manufacturing Engineering,Engineering
+NEO-SMART,3,"Polymers: feedstock development, processing, reprocessing and recycling of plastics",1,T10389,Polymer crystallization and properties,0.962,subfields/2507,Polymers and Plastics,Materials Science
+NEO-SMART,3,"Polymers: feedstock development, processing, reprocessing and recycling of plastics",2,T10661,biodegradable polymer synthesis and properties,0.01,subfields/2502,Biomaterials,Materials Science
+NEO-SMART,3,"Polymers: feedstock development, processing, reprocessing and recycling of plastics",3,T14179,Waste Management and Recycling,0.008,subfields/2311,Waste Management and Disposal,Environmental Science
+NEO-SMART,4,Chemicals and coatings: development and durability of industrial coatings,1,T10310,Corrosion Behavior and Inhibition,0.893,subfields/2505,Materials Chemistry,Materials Science
+NEO-SMART,4,Chemicals and coatings: development and durability of industrial coatings,2,T13470,Surface Treatment and Coatings,0.083,subfields/2210,Mechanical Engineering,Engineering
+NEO-SMART,4,Chemicals and coatings: development and durability of industrial coatings,3,T10626,High-Temperature Coating Behaviors,0.005,subfields/2508,"Surfaces, Coatings and Films",Materials Science
+NEO-SMART,5,AI/ML and computational methods that accelerate materials design,1,T11948,Machine Learning in Materials Science,1,subfields/2505,Materials Chemistry,Materials Science
+NEO-SMART,5,AI/ML and computational methods that accelerate materials design,2,T10211,Computational Drug Discovery Methods,0,subfields/3002,Drug Discovery,"Pharmacology, Toxicology and Pharmaceutics"
+NEO-SMART,5,AI/ML and computational methods that accelerate materials design,3,T10002,Advanced Chemical Physics Studies,0,subfields/3107,"Atomic and Molecular Physics, and Optics",Physics and Astronomy
+Quantum Technologies,1,Quantum technologies and quantum information science,1,T10020,Quantum Information and Cryptography,0.962,subfields/3107,"Atomic and Molecular Physics, and Optics",Physics and Astronomy
+Quantum Technologies,1,Quantum technologies and quantum information science,2,T10682,Quantum Computing Algorithms and Architecture,0.028,subfields/1702,Artificial Intelligence,Computer Science
+Quantum Technologies,1,Quantum technologies and quantum information science,3,T10622,Quantum Mechanics and Applications,0.008,subfields/3107,"Atomic and Molecular Physics, and Optics",Physics and Astronomy
+Quantum Technologies,2,Quantum computing hardware and algorithms,1,T10682,Quantum Computing Algorithms and Architecture,1,subfields/1702,Artificial Intelligence,Computer Science
+Quantum Technologies,2,Quantum computing hardware and algorithms,2,T10020,Quantum Information and Cryptography,0,subfields/3107,"Atomic and Molecular Physics, and Optics",Physics and Astronomy
+Quantum Technologies,2,Quantum computing hardware and algorithms,3,T10622,Quantum Mechanics and Applications,0,subfields/3107,"Atomic and Molecular Physics, and Optics",Physics and Astronomy
+Quantum Technologies,3,Quantum sensing and quantum metrology,1,T10020,Quantum Information and Cryptography,0.98,subfields/3107,"Atomic and Molecular Physics, and Optics",Physics and Astronomy
+Quantum Technologies,3,Quantum sensing and quantum metrology,2,T10622,Quantum Mechanics and Applications,0.008,subfields/3107,"Atomic and Molecular Physics, and Optics",Physics and Astronomy
+Quantum Technologies,3,Quantum sensing and quantum metrology,3,T10682,Quantum Computing Algorithms and Architecture,0.003,subfields/1702,Artificial Intelligence,Computer Science
+Quantum Technologies,4,Quantum communications and quantum cryptography,1,T10020,Quantum Information and Cryptography,1,subfields/3107,"Atomic and Molecular Physics, and Optics",Physics and Astronomy
+Quantum Technologies,4,Quantum communications and quantum cryptography,2,T10682,Quantum Computing Algorithms and Architecture,0,subfields/1702,Artificial Intelligence,Computer Science
+Quantum Technologies,4,Quantum communications and quantum cryptography,3,T11414,Quantum optics and atomic interactions,0,subfields/3107,"Atomic and Molecular Physics, and Optics",Physics and Astronomy
+RETI,1,Resilient energy infrastructure and electric grid reliability for industry,1,T11807,Infrastructure Resilience and Vulnerability Analysis,0.6,subfields/2205,Civil and Structural Engineering,Engineering
+RETI,1,Resilient energy infrastructure and electric grid reliability for industry,2,T10454,Optimal Power Flow Distribution,0.083,subfields/2208,Electrical and Electronic Engineering,Engineering
+RETI,1,Resilient energy infrastructure and electric grid reliability for industry,3,T11941,Power System Reliability and Maintenance,0.072,subfields/2213,"Safety, Risk, Reliability and Quality",Engineering
+RETI,2,"Machine learning grid management, digital twins and secure control systems",1,T12451,Smart Grid and Power Systems,0.653,subfields/2208,Electrical and Electronic Engineering,Engineering
+RETI,2,"Machine learning grid management, digital twins and secure control systems",2,T10917,Smart Grid Security and Resilience,0.136,subfields/2207,Control and Systems Engineering,Engineering
+RETI,2,"Machine learning grid management, digital twins and secure control systems",3,T10223,Microgrid Control and Optimization,0.053,subfields/2207,Control and Systems Engineering,Engineering
+RETI,3,Energy storage with advanced batteries and solid oxide fuel cells,1,T10311,Advancements in Solid Oxide Fuel Cells,0.8,subfields/2505,Materials Chemistry,Materials Science
+RETI,3,Energy storage with advanced batteries and solid oxide fuel cells,2,T14444,Power Systems and Renewable Energy,0.09,subfields/2102,Energy Engineering and Power Technology,Energy
+RETI,3,Energy storage with advanced batteries and solid oxide fuel cells,3,T11007,Hybrid Renewable Energy Systems,0.03,subfields/2102,Energy Engineering and Power Technology,Energy
+RETI,4,"Hydrogen-based iron reduction, catalysis and process intensification in steel and chemical production",1,T11837,Iron and Steelmaking Processes,0.965,subfields/2506,Metals and Alloys,Materials Science
+RETI,4,"Hydrogen-based iron reduction, catalysis and process intensification in steel and chemical production",2,T10495,Catalysts for Methane Reforming,0.008,subfields/1503,Catalysis,Chemical Engineering
+RETI,4,"Hydrogen-based iron reduction, catalysis and process intensification in steel and chemical production",3,T12112,Ammonia Synthesis and Nitrogen Reduction,0.008,subfields/1503,Catalysis,Chemical Engineering
+RuralSTAMINA Biomanufacturing,1,Biomanufacturing of value-added bioproducts from agricultural feedstocks,1,T10932,Microbial Metabolic Engineering and Bioproduction,0.545,subfields/1312,Molecular Biology,"Biochemistry, Genetics and Molecular Biology"
+RuralSTAMINA Biomanufacturing,1,Biomanufacturing of value-added bioproducts from agricultural feedstocks,2,T10171,Biofuel production and bioconversion,0.426,subfields/2204,Biomedical Engineering,Engineering
+RuralSTAMINA Biomanufacturing,1,Biomanufacturing of value-added bioproducts from agricultural feedstocks,3,T11009,Catalysis for Biomass Conversion,0.005,subfields/1503,Catalysis,Chemical Engineering
+RuralSTAMINA Biomanufacturing,2,Engineered microorganisms for biomanufacturing of new products,1,T10932,Microbial Metabolic Engineering and Bioproduction,0.999,subfields/1312,Molecular Biology,"Biochemistry, Genetics and Molecular Biology"
+RuralSTAMINA Biomanufacturing,2,Engineered microorganisms for biomanufacturing of new products,2,T10252,Microbial Natural Products and Biosynthesis,0,subfields/2402,Applied Microbiology and Biotechnology,Immunology and Microbiology
+RuralSTAMINA Biomanufacturing,2,Engineered microorganisms for biomanufacturing of new products,3,T14150,Biochemical and biochemical processes,0,subfields/1305,Biotechnology,"Biochemistry, Genetics and Molecular Biology"
+RuralSTAMINA Biomanufacturing,3,Scale-up of biomanufacturing and fermentation processes,1,T10864,Fluid Dynamics and Mixing,0.812,subfields/1507,Fluid Flow and Transfer Processes,Chemical Engineering
+RuralSTAMINA Biomanufacturing,3,Scale-up of biomanufacturing and fermentation processes,2,T10932,Microbial Metabolic Engineering and Bioproduction,0.09,subfields/1312,Molecular Biology,"Biochemistry, Genetics and Molecular Biology"
+RuralSTAMINA Biomanufacturing,3,Scale-up of biomanufacturing and fermentation processes,3,T11663,Viral Infectious Diseases and Gene Expression in Insects,0.048,subfields/1312,Molecular Biology,"Biochemistry, Genetics and Molecular Biology"
+RuralSTAMINA Biomanufacturing,4,Sensors and AI tools for biomanufacturing process optimization,1,T10876,Fault Detection and Control Systems,0.462,subfields/2207,Control and Systems Engineering,Engineering
+RuralSTAMINA Biomanufacturing,4,Sensors and AI tools for biomanufacturing process optimization,2,T10864,Fluid Dynamics and Mixing,0.068,subfields/1507,Fluid Flow and Transfer Processes,Chemical Engineering
+RuralSTAMINA Biomanufacturing,4,Sensors and AI tools for biomanufacturing process optimization,3,T11663,Viral Infectious Diseases and Gene Expression in Insects,0.064,subfields/1312,Molecular Biology,"Biochemistry, Genetics and Molecular Biology"
+STELLAR,1,Lasers and laser applications,1,T14158,Optical Systems and Laser Technology,0.8,subfields/2208,Electrical and Electronic Engineering,Engineering
+STELLAR,1,Lasers and laser applications,2,T12760,Laser Design and Applications,0.148,subfields/2208,Electrical and Electronic Engineering,Engineering
+STELLAR,1,Lasers and laser applications,3,T11429,Semiconductor Lasers and Optical Devices,0.018,subfields/2208,Electrical and Electronic Engineering,Engineering
+STELLAR,2,Precision optics and optical imaging,1,T11517,Advanced optical system design,0.487,subfields/3107,"Atomic and Molecular Physics, and Optics",Physics and Astronomy
+STELLAR,2,Precision optics and optical imaging,2,T11484,Adaptive optics and wavefront sensing,0.205,subfields/3107,"Atomic and Molecular Physics, and Optics",Physics and Astronomy
+STELLAR,2,Precision optics and optical imaging,3,T10638,Optical measurement and interference techniques,0.1,subfields/1707,Computer Vision and Pattern Recognition,Computer Science
+STELLAR,3,Photonics and integrated photonic devices,1,T10299,Photonic and Optical Devices,0.999,subfields/2208,Electrical and Electronic Engineering,Engineering
+STELLAR,3,Photonics and integrated photonic devices,2,T10666,Photonic Crystals and Applications,0,subfields/3107,"Atomic and Molecular Physics, and Optics",Physics and Astronomy
+STELLAR,3,Photonics and integrated photonic devices,3,T11429,Semiconductor Lasers and Optical Devices,0,subfields/2208,Electrical and Electronic Engineering,Engineering
+STELLAR,4,Manufacturing of laser components and systems,1,T14158,Optical Systems and Laser Technology,0.394,subfields/2208,Electrical and Electronic Engineering,Engineering
+STELLAR,4,Manufacturing of laser components and systems,2,T10732,Laser Material Processing Techniques,0.277,subfields/2209,Industrial and Manufacturing Engineering,Engineering
+STELLAR,4,Manufacturing of laser components and systems,3,T11429,Semiconductor Lasers and Optical Devices,0.152,subfields/2208,Electrical and Electronic Engineering,Engineering
+Seafood,1,"Seafood harvesting, processing and supply chain technology",1,T14010,Food Industry and Aquatic Biology,0.658,subfields/1106,Food Science,Agricultural and Biological Sciences
+Seafood,1,"Seafood harvesting, processing and supply chain technology",2,T10333,Meat and Animal Product Quality,0.098,subfields/1103,Animal Science and Zoology,Agricultural and Biological Sciences
+Seafood,1,"Seafood harvesting, processing and supply chain technology",3,T10230,Marine and fisheries research,0.082,subfields/1104,Aquatic Science,Agricultural and Biological Sciences
+Seafood,2,Ocean observation technologies to map and predict fishery and aquaculture resources,1,T10230,Marine and fisheries research,0.916,subfields/1104,Aquatic Science,Agricultural and Biological Sciences
+Seafood,2,Ocean observation technologies to map and predict fishery and aquaculture resources,2,T12697,Water Quality Monitoring Technologies,0.045,subfields/2312,Water Science and Technology,Environmental Science
+Seafood,2,Ocean observation technologies to map and predict fishery and aquaculture resources,3,T10255,Oceanographic and Atmospheric Processes,0.004,subfields/1910,Oceanography,Earth and Planetary Sciences
+Seafood,3,"Sensors, AI and data visualization for decision-making in fishing and aquaculture",1,T12697,Water Quality Monitoring Technologies,0.995,subfields/2312,Water Science and Technology,Environmental Science
+Seafood,3,"Sensors, AI and data visualization for decision-making in fishing and aquaculture",2,T14405,Fisheries and Aquaculture Studies,0.002,subfields/1100,General Agricultural and Biological Sciences,Agricultural and Biological Sciences
+Seafood,3,"Sensors, AI and data visualization for decision-making in fishing and aquaculture",3,T10616,Smart Agriculture and AI,0.001,subfields/1110,Plant Science,Agricultural and Biological Sciences
+Seafood,4,"Seafood processing, waste stream utilization and cold chain technologies",1,T14010,Food Industry and Aquatic Biology,0.557,subfields/1106,Food Science,Agricultural and Biological Sciences
+Seafood,4,"Seafood processing, waste stream utilization and cold chain technologies",2,T12583,Food Waste Reduction and Sustainability,0.118,subfields/1106,Food Science,Agricultural and Biological Sciences
+Seafood,4,"Seafood processing, waste stream utilization and cold chain technologies",3,T10333,Meat and Animal Product Quality,0.095,subfields/1103,Animal Science and Zoology,Agricultural and Biological Sciences
+Seafood,5,Seafood traceability technologies,1,T12486,Food Supply Chain Traceability,0.992,subfields/1106,Food Science,Agricultural and Biological Sciences
+Seafood,5,Seafood traceability technologies,2,T12388,Identification and Quantification in Food,0.006,subfields/1312,Molecular Biology,"Biochemistry, Genetics and Molecular Biology"
+Seafood,5,Seafood traceability technologies,3,T10230,Marine and fisheries research,0,subfields/1104,Aquatic Science,Agricultural and Biological Sciences

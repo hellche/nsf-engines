@@ -1,0 +1,4 @@
+engine_name,item,topic_id,reason
+BRIDGES,1,T10171,"rank 2: biomass bioconversion fits biobased manufacturing better than the policy-oriented 'Bioeconomy and Sustainability Development' (rank 1, score 0.38)"
+BRIDGES,4,T10616,"rank 2: the statement is about AI for crop design; 'Digital Transformation in Industry' (rank 1) is generic management literature"
+RETI,1,T11941,"rank 3: grid reliability; rank 1 'Infrastructure Resilience and Vulnerability Analysis' is civil-engineering infrastructure"

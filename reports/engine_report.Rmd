@@ -1,0 +1,151 @@
+---
+title: "`r params$engine` Engine: knowledge base"
+subtitle: "NSF Regional Innovation Engines, Cohort 2"
+date: "Data retrieved `r format(Sys.Date(), '%B %d, %Y')`"
+output:
+  html_document:
+    toc: true
+    toc_float: true
+    theme: flatly
+    self_contained: true
+params:
+  engine: "NEO-SMART"
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE, message = FALSE, warning = FALSE, fig.width = 8, fig.height = 4)
+library(dplyr); library(tidyr); library(stringr); library(readr); library(ggplot2); library(knitr); library(here)
+rd <- \(f) read_csv(here("data", "processed", f), show_col_types = FALSE)
+E  <- params$engine
+eng      <- rd("engines.csv") |> filter(engine_name == E)
+m        <- rd("metrics_engine.csv") |> filter(engine_name == E)
+people   <- rd("people_roles_evidence.csv") |> filter(engine_name == E, in_team)
+partners <- rd("partners.csv") |> filter(engine_name == E)
+profile  <- rd("tech_profile.csv") |> filter(engine_name == E)
+pyear    <- rd("metrics_patents_year.csv") |> filter(engine_name == E)
+wyear    <- rd("metrics_papers_year.csv") |> filter(engine_name == E)
+lq       <- rd("metrics_lq_cpc.csv") |> filter(engine_name == E)
+top_asg  <- rd("metrics_top_assignees.csv") |> filter(engine_name == E)
+pe       <- rd("patents_engine.csv") |> filter(engine_name == E)
+wi       <- rd("works_institutions.csv") |> filter(engine_name == E)
+na0 <- \(x) ifelse(is.na(x), 0, x)
+theme_set(theme_minimal(base_size = 12))
+```
+
+**`r eng$title`**, led by `r eng$lead_org`. NSF award [`r eng$award_id`](https://www.nsf.gov/awardsearch/showAward?AWD_ID=`r eng$award_id`), start `r format(eng$start_date, "%B %Y")`. Search window for papers and patents: from `r format(as.Date(eng$window_from), "%B %Y")` (five years before the award) onward.
+
+## At a glance
+
+```{r glance}
+tibble(
+  Measure = c("People named by NSF or the Engine's site", "of them active researchers (>= 5 works since window start)",
+              "Team members who are inventors (2021-2025 grants, in the region)",
+              "Partners (site list + team members' organisations)", "Knowledge-producer partners (universities, labs, institutes)",
+              "Partner papers in the Engine's topics", "of them with an in-region partner",
+              "Regional patents in the technology profile (2021-2025 grants)",
+              "Location quotient of the technology profile (patents)",
+              "Share of regional technology patents owned by partners"),
+  Value = c(m$team, m$active_researchers, m$team_inventors, m$partners, m$knowledge_producers,
+            na0(m$partner_works_in_topics), na0(m$partner_works_in_topics_region), m$pat_region_tech,
+            m$lq_profile, scales::percent(m$share_region_tech_by_partners, accuracy = 0.1))
+) |> kable(align = c("l", "r"))
+```
+
+## Technology profile
+
+The profile has `r nrow(profile)` statements. Item 1 comes from the grant title, the rest from the technical part of the NSF abstract. Each statement is mapped to one OpenAlex topic and to CPC codes.
+
+```{r profile}
+profile |>
+  transmute(`#` = item, Source = source, Statement = statement, `OpenAlex topic` = topic,
+            Subfield = subfield, CPC = cpc) |>
+  kable()
+```
+
+## People
+
+```{r roles}
+people |>
+  count(Role = role_suggested) |> arrange(desc(n)) |> kable(col.names = c("Role", "People"))
+```
+
+```{r people-table}
+people |>
+  arrange(factor(role_suggested, c("researcher", "research_admin", "corporate_rd", "organizer")), name) |>
+  transmute(Name = name, Role = role_suggested,
+            `On NSF award` = if_else(in_nsf, coalesce(role_nsf, ""), ""),
+            Title = str_trunc(coalesce(title_site, ""), 60),
+            Organisation = str_trunc(coalesce(org_site, ""), 40),
+            `Works since window` = if_else(coalesce(reliable, FALSE), as.character(works_5y), "-"),
+            `h-index` = if_else(coalesce(reliable, FALSE), as.character(h_index), "-")) |>
+  kable()
+```
+
+Publication counts are shown only where the OpenAlex author matches both the name and the person's current organisation.
+
+## Partners
+
+```{r partners-class}
+partners |> count(Class = org_class, sort = TRUE) |> kable(col.names = c("Organisation class", "Partners"))
+```
+
+Partner list on the site: *`r partners$completeness[1]`*.
+
+```{r producers}
+partners |> filter(knowledge_producer == "yes") |>
+  arrange(desc(oa_works_5y)) |>
+  transmute(Partner = partner, Class = org_class, State = coalesce(state, ""),
+            `OpenAlex works since window (all topics)` = oa_works_5y) |>
+  kable()
+```
+
+## Science base: partner papers in the Engine's topics
+
+```{r papers-year, fig.height=3.5}
+if (nrow(wyear)) {
+  wyear |> filter(year >= as.integer(format(as.Date(eng$window_from), "%Y"))) |>
+    pivot_longer(c(works, works_in_region), names_to = "set", values_to = "n") |>
+    mutate(set = recode(set, works = "All partner institutions", works_in_region = "With an in-region partner")) |>
+    ggplot(aes(year, n, colour = set)) + geom_line(linewidth = 1) + geom_point() +
+    labs(x = NULL, y = "Papers", colour = NULL) + theme(legend.position = "bottom")
+} else cat("No knowledge-producer partners with an OpenAlex institution record.")
+```
+
+```{r papers-partners}
+if (nrow(wi)) {
+  wi |> separate_longer_delim(partners_on_work, delim = "; ") |>
+    filter(partners_on_work != "") |>
+    count(Partner = partners_on_work, sort = TRUE, name = "Papers in topics") |> head(10) |> kable()
+}
+```
+
+## Technology base: patents
+
+```{r patents-year, fig.height=3.5}
+pyear |> ggplot(aes(grant_year, patents)) + geom_col(fill = "#2c7fb8") +
+  labs(x = "Grant year", y = "Patents", title = "Patents with an inventor in the region, in the technology profile")
+```
+
+```{r lq, fig.height=3.5}
+if (nrow(lq)) {
+  lq |> mutate(cpc = reorder(cpc, lq)) |>
+    ggplot(aes(lq, cpc)) + geom_col(fill = "#41ab5d") + geom_vline(xintercept = 1, linetype = 2) +
+    geom_text(aes(label = region_patents), hjust = -0.2, size = 3) +
+    labs(x = "Location quotient (1 = US average)", y = NULL,
+         title = "Regional specialisation by CPC code, 2021-2025 grants", subtitle = "Labels: regional patents")
+}
+```
+
+```{r assignees}
+top_asg |> transmute(Assignee = assignee, `Regional patents in profile` = n) |> kable()
+```
+
+Partner-owned patents invented in the region: `r m$pat_partner_region`, of which `r m$pat_partner_region_tech` (`r scales::percent(m$share_partner_region_in_tech, accuracy = 0.1)`) fall in the Engine's technology profile.
+
+## Data and limitations
+
+- People: PIs and Co-PIs from the NSF Award API; leadership listed on the Engine's website. Roles come from titles and organisations, revised with OpenAlex evidence.
+- Partners: as listed on the Engine's website, plus organisations of team members. Some Engines publish partner logos without names.
+- Region: the Engine's states (state-level proxy). Engines that serve part of a state are compared with the whole state.
+- Papers: OpenAlex; partner papers are restricted to the Engine's OpenAlex topics.
+- Patents: USPTO grants 2021-2025; inventor locations from PatentsView; pre-grant publications are not included.

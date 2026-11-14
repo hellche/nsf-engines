@@ -1,0 +1,35 @@
+---
+title: "NSF Regional Innovation Engines, Cohort 2: knowledge bases"
+date: "Data retrieved `r format(Sys.Date(), '%B %d, %Y')`"
+output:
+  html_document:
+    theme: flatly
+    self_contained: true
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE, message = FALSE, warning = FALSE)
+library(dplyr); library(readr); library(knitr); library(here); library(stringr)
+m <- read_csv(here("data", "processed", "metrics_engine.csv"), show_col_types = FALSE)
+slug <- \(x) str_replace_all(str_to_lower(x), "[^a-z0-9]+", "-")
+```
+
+Twelve NSF Regional Innovation Engines started in 2026. For each one this site traces the people named by NSF and by the Engine, its partners, and the papers and patents of its knowledge base, from five years before the award onward.
+
+```{r table}
+m |>
+  arrange(desc(lq_profile)) |>
+  transmute(Engine = sprintf("[%s](%s.html)", engine_name, slug(engine_name)),
+            Region = region,
+            `Active researchers in team` = active_researchers,
+            `Team inventors` = team_inventors,
+            `Knowledge-producer partners` = knowledge_producers,
+            `Partner papers in topics (in region)` = coalesce(partner_works_in_topics_region, 0),
+            `Regional patents in profile` = pat_region_tech,
+            `Patent LQ` = lq_profile) |>
+  kable(align = c("l", "l", rep("r", 6)))
+```
+
+**Patent LQ**: share of the region's 2021-2025 patents that fall in the Engine's technology profile, relative to the same share for the US (1 = US average).
+
+Method, code and data: see the project README.
