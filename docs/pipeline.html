@@ -541,6 +541,1819 @@ display: flex; align-items: center; flex-wrap: wrap; gap: 4px 20px; min-height: 
 
 <p>How the knowledge base of each Engine is built, step by step.</p>
 <p><em>Page in progress.</em></p>
+<style>
+.pipeline-svg svg { width: 100%; height: auto; }
+.pipeline-svg .clickable { cursor: pointer; }
+.pipeline-svg .clickable rect { transition: fill .15s; }
+.pipeline-svg .clickable:hover rect, .pipeline-svg .clickable.hover rect { fill: #fff3c4 !important; }
+.pipeline-hint { font-size: 13px; color: #555; }
+.pipeline-hint span { background: #fff3c4; padding: 0 4px; border: 1px solid #e0c96a; }
+#m-profile .modal-dialog { width: 92%; max-width: 1100px; }
+#m-profile .modal-body { font-size: 14px; }
+#m-profile select { margin: 4px 0 10px; }
+</style>
+<p class="pipeline-hint">
+Схема (v2). Блоки, по которым можно кликнуть, подсвечиваются при
+наведении: <span>Профиль технологии</span>, <span>Технология</span>.
+</p>
+<div class="pipeline-svg">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 1880" width="1280" height="1880">
+<title>
+NSF Engines: научная база и группы сравнения (v2)
+</title>
+<defs>
+<marker id="a" viewBox="0 0 10 10" refX="10" refY="5" markerWidth="9" markerHeight="9" markerUnits="userSpaceOnUse" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#222" /></marker>
+<marker id="A" viewBox="0 0 10 10" refX="10" refY="5" markerWidth="16" markerHeight="16" markerUnits="userSpaceOnUse" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#111" /></marker>
+<marker id="g" viewBox="0 0 10 10" refX="10" refY="5" markerWidth="9" markerHeight="9" markerUnits="userSpaceOnUse" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#888" /></marker>
+<style> text { font-family: Helvetica, Arial, “DejaVu Sans”, sans-serif;
+} .box { fill: #fff; stroke: #222; stroke-width: 1.5; } .frame { fill:
+none; stroke: #222; stroke-width: 1.5; } .hold { fill: #fff; stroke:
+#888; stroke-width: 1.5; stroke-dasharray: 6 4; } .on { fill: #e3ecf9;
+stroke: #4a6fa5; stroke-width: 2.5; } .off { fill: #f5f6f8; stroke:
+#c9d0da; stroke-width: 1.2; } .t { font-size: 16px; font-weight: 700;
+fill: #111; text-anchor: middle; } .ts { font-size: 13.5px; font-weight:
+700; fill: #111; text-anchor: middle; } .tf { font-size: 14.5px;
+font-weight: 700; fill: #111; text-anchor: middle; } .s { font-size:
+12px; fill: #555; text-anchor: middle; } .n { font-size: 12px; fill:
+#111; text-anchor: middle; } .m { font-size: 11.5px; fill: #3a3a3a;
+text-anchor: middle; font-family: Menlo, Consolas, “DejaVu Sans Mono”,
+monospace; } .offt { font-size: 13.5px; font-weight: 600; fill: #8a8f97;
+text-anchor: middle; } .offs { font-size: 11.5px; fill: #a0a5ac;
+text-anchor: middle; } .ons { font-size: 11.5px; fill: #2d3f5c;
+text-anchor: middle; } .ln { fill: none; stroke: #222; stroke-width:
+1.5; } .LN { fill: none; stroke: #111; stroke-width: 4; stroke-linejoin:
+round; } .dl { fill: none; stroke: #888; stroke-width: 1.5;
+stroke-dasharray: 6 4; } .ck { fill: none; stroke: #222; stroke-width:
+1.5; stroke-dasharray: 2 3; } .br { fill: none; stroke: #9a9a9a;
+stroke-width: 1.2; } .brt { font-size: 12px; fill: #777; text-anchor:
+middle; } .u { text-decoration: underline; } </style> </defs>
+<rect x="250" y="12" width="780" height="34" rx="17" fill="#f3f3f1" stroke="#bbb" stroke-width="1" />
+<text x="640" y="34" style="font-size:13px;fill:#333;text-anchor:middle"><tspan style="font-weight:700">Граница:</tspan>
+только научно-технологическая база · окно: от (грант − 5 лет) до сейчас
+· кадры и капитал — отдельно</text>
+<rect x="1036" y="21" width="25" height="15" rx="3" fill="#111" />
+<text x="1048.5" y="32" style="font-size:10px;font-weight:700;fill:#fff;text-anchor:middle">v2</text>
+<g transform="translate(0,40)">
+<path class="br" d="M32,40 H24 V548 H32" />
+<text class="brt" transform="translate(14,294) rotate(-90)">полуручные
+шаги · проверка вручную</text>
+<path class="br" d="M32,600 H24 V1740 H32" />
+<text class="brt" transform="translate(14,1170) rotate(-90)">автоматически
+· targets · одинаково для 12 Engines и групп сравнения</text>
+<rect class="box" x="285" y="40" width="300" height="90" />
+<text class="t" x="435.0" y="64">NSF Award API</text>
+<text class="s" x="435.0" y="84">12 Engines · Cohort 2 · программа
+301Y00</text> <text class="n" x="435.0" y="101">PI + Co-PI · N =
+…</text> <text class="m" x="435.0" y="121">nsf_awards</text>
+<rect class="box" x="695" y="40" width="300" height="90" />
+<text class="t" x="845.0" y="64">Сайты Engine</text>
+<text class="s" x="845.0" y="84">команды · партнёры · логотипы</text>
+<text class="n" x="845.0" y="101">страницы отобраны вручную, URL на
+строку</text> <text class="m" x="845.0" y="121">site_pages</text>
+<path class="ln" d="M435,130 V178" marker-end="url(#a)" />
+<path class="ln" d="M845,130 V178" marker-end="url(#a)" />
+<path class="ln" d="M760,130 V155 H520 V178" marker-end="url(#a)" />
+<text class="s" x="640" y="150" style="font-size:11px">люди с
+сайтов</text>
+<rect class="box" x="285" y="180" width="300" height="90" />
+<text class="t" x="435.0" y="204">Единый реестр людей</text>
+<text class="s" x="435.0" y="224">PI ∪ люди с сайтов · дубли
+сведены</text> <text class="n" x="435.0" y="241">N = …</text>
+<text class="m" x="435.0" y="261">people</text>
+<rect class="box" x="695" y="180" width="300" height="90" />
+<text class="t" x="845.0" y="204">Реестр партнёров</text>
+<text class="s" x="845.0" y="224">все упомянутые организации</text>
+<text class="n" x="845.0" y="241">N = …</text>
+<text class="m" x="845.0" y="261">partners</text>
+<path class="ln" d="M435,270 V318" marker-end="url(#a)" />
+<path class="ln" d="M845,270 V318" marker-end="url(#a)" />
+<rect class="frame" x="250" y="320" width="370" height="228" />
+<text class="tf" x="435.0" y="344">Классификация людей · 4 роли</text>
+<text class="s" x="435.0" y="362">для каждого: основание + ссылка</text>
+<rect class="off" x="262" y="376" width="168" height="72" />
+<text class="offt" x="346.0" y="402">Корпоративный R&amp;D</text>
+<text class="offs" x="346.0" y="421">CTO · патенты компании</text>
+<text class="offs" x="346.0" y="437">→ через партнёра</text>
+<rect class="off" x="440" y="376" width="168" height="72" />
+<text class="offt" x="524.0" y="402">Организатор</text>
+<text class="offs" x="524.0" y="421">палаты · фонды</text>
+<text class="offs" x="524.0" y="437">эконом. развитие</text>
+<rect class="on" x="262" y="460" width="168" height="76" />
+<text class="ts" x="346.0" y="486">Исследователь</text>
+<text class="ons" x="346.0" y="505">работы в OpenAlex</text>
+<text class="ons" x="346.0" y="521">h-index · патенты</text>
+<rect class="on" x="440" y="460" width="168" height="76" />
+<text class="ts" x="524.0" y="486">Администратор науки</text>
+<text class="ons" x="524.0" y="505">VP for Research · провост</text>
+<text class="ons" x="524.0" y="521">директор института</text>
+<rect class="frame" x="660" y="320" width="370" height="228" />
+<text class="tf" x="845.0" y="344">Классификация партнёров · 4
+типа</text> <text class="s" x="845.0" y="362">по числу работ и патентов,
+не на глаз</text>
+<rect class="off" x="672" y="376" width="168" height="72" />
+<text class="offt" x="756.0" y="402">Пользователи</text>
+<text class="offs" x="756.0" y="421">заводы · операторы</text>
+<text class="offs" x="756.0" y="437">мало работ и патентов</text>
+<rect class="off" x="850" y="376" width="168" height="72" />
+<text class="offt" x="934.0" y="402">Посредники</text>
+<text class="offs" x="934.0" y="421">инкубаторы · венчур</text>
+<text class="offs" x="934.0" y="437">кластеры</text>
+<rect class="on" x="672" y="460" width="168" height="76" />
+<text class="ts" x="756.0" y="486">Производители знания</text>
+<text class="ons" x="756.0" y="505">университеты · нацлабы</text>
+<text class="ons" x="756.0" y="521">ERC · корп. R&amp;D</text>
+<rect class="off" x="850" y="460" width="168" height="76" />
+<text class="offt" x="934.0" y="486">Кадры и сообщество</text>
+<text class="offs" x="934.0" y="505">колледжи · workforce</text>
+<text class="offs" x="934.0" y="521">программы обучения</text>
+<rect class="box" x="40" y="388" width="175" height="104" />
+<text class="ts" x="127.5" y="412">Сопоставление людей</text>
+<text class="s" x="127.5" y="432">OpenAlex author ID</text>
+<text class="s" x="127.5" y="449">ORCID</text>
+<text class="s" x="127.5" y="466">PatentsView inventor</text>
+<text class="s" x="127.5" y="483" style="font-style:italic">имя +
+текущая орг.</text>
+<path class="ln" d="M215,440 H248" marker-end="url(#a)" />
+<rect class="box" x="1065" y="388" width="185" height="104" />
+<text class="ts" x="1157.5" y="412">Сопоставление орг.</text>
+<text class="s" x="1157.5" y="432">ROR</text>
+<text class="s" x="1157.5" y="449">OpenAlex institutions</text>
+<text class="s" x="1157.5" y="466">PatentsView assignee</text>
+<text class="s" x="1157.5" y="483" style="font-style:italic">имя +
+локация в США</text>
+<path class="ln" d="M1065,440 H1032" marker-end="url(#a)" />
+<path class="LN" d="M346,536 V572 H524 V536" />
+<path class="LN" d="M435,572 V598" marker-end="url(#A)" />
+<path class="LN" d="M756,536 V572 H845 V598" marker-end="url(#A)" />
+<rect class="box" x="285" y="600" width="300" height="90" />
+<text class="t" x="435.0" y="624">Работы и патенты людей</text>
+<text class="s" x="435.0" y="644">по ID автора и изобретателя</text>
+<text class="n" x="435.0" y="661">N работ · N патентов</text>
+<text class="m" x="435.0" y="681">people_output</text>
+<rect class="box" x="695" y="600" width="300" height="90" />
+<text class="t" x="845.0" y="624">Работы и патенты организаций</text>
+<text class="s" x="845.0" y="644">вне региона: только совместные с
+ним</text> <text class="n" x="845.0" y="661">N работ · N патентов</text>
+<text class="m" x="845.0" y="681">org_output</text>
+<path class="LN" d="M435,690 V758" marker-end="url(#A)" />
+<path class="LN" d="M845,690 V758" marker-end="url(#A)" />
+<rect class="frame" x="330" y="760" width="620" height="140" />
+<text class="tf" x="640.0" y="784">Фильтр выхода</text>
+<text class="s" x="640.0" y="802">все три условия одновременно</text>
+<rect class="on" x="345" y="816" width="190" height="72" />
+<text class="ts" x="440.0" y="842">Время</text>
+<text class="ons" x="440.0" y="861">от (грант − 5 лет) и дальше</text>
+<text class="ons" x="440.0" y="877">патенты: дата приоритета</text>
+<rect class="on" x="545" y="816" width="190" height="72" />
+<text class="ts" x="640.0" y="842">География</text>
+<text class="ons" x="640.0" y="861">штаты Engine</text>
+<text class="ons" x="640.0" y="877">аффилиация · адрес изобр.</text>
+<rect class="on" x="745" y="816" width="190" height="72" />
+<text class="ts" x="840.0" y="842">Технология</text>
+<text class="ons" x="840.0" y="861">темы OpenAlex</text>
+<text class="ons" x="840.0" y="877">+ классы CPC</text>
+<rect class="box" x="1065" y="796" width="185" height="112" />
+<text class="ts" x="1157.5" y="820">Профиль технологии</text>
+<text class="s" x="1157.5" y="840">название → аннотация</text>
+<text class="s" x="1157.5" y="857">3–5 утверждений</text>
+<text class="s" x="1157.5" y="874" style="font-style:italic">проверка
+вручную</text> <text class="m" x="1157.5" y="899">tech_profile</text>
+<path class="ln" d="M1065,852 H952" marker-end="url(#a)" />
+<rect class="box" x="40" y="784" width="175" height="124" />
+<text class="ts" x="127.5" y="808">Эталоны</text>
+<text class="s" x="127.5" y="828">опорная статья</text>
+<text class="s" x="127.5" y="845">+ опорный патент</text>
+<text class="s" x="127.5" y="862">упр. 3, вопросы 5 и 9</text>
+<text class="s" x="127.5" y="879" style="font-style:italic">находит ли
+фильтр?</text> <text class="m" x="127.5" y="899">validation_seeds</text>
+<rect x="195" y="776" width="25" height="15" rx="3" fill="#111" />
+<text x="207.5" y="787" style="font-size:10px;font-weight:700;fill:#fff;text-anchor:middle">v2</text>
+<path class="ck" d="M215,846 H328" marker-end="url(#a)" />
+<text class="s" x="272" y="838" style="font-size:11px">проверка</text>
+<path class="LN" d="M640,900 V948" marker-end="url(#A)" />
+<rect class="box" x="440" y="950" width="400" height="90" style="stroke-width:2.5" />
+<text class="t" x="640" y="975">База знаний Engine</text>
+<text class="s" x="640" y="995">люди + производители знания, после
+фильтра</text> <text class="n" x="640" y="1013">12 Engines · N работ · N
+патентов</text> <text class="m" x="640" y="1032">knowledge_base</text>
+<rect class="box" x="40" y="946" width="175" height="98" />
+<text class="ts" x="127.5" y="970">Прошлые гранты</text>
+<text class="s" x="127.5" y="990">NSF API: PI и партнёры</text>
+<text class="s" x="127.5" y="1007">те же 5 лет · та же тема</text>
+<text class="m" x="127.5" y="1035">prior_funding</text>
+<rect x="195" y="938" width="25" height="15" rx="3" fill="#111" />
+<text x="207.5" y="949" style="font-size:10px;font-weight:700;fill:#fff;text-anchor:middle">v2</text>
+<path class="ln" d="M215,995 H438" marker-end="url(#a)" />
+<path class="LN" d="M640,1040 V1088" marker-end="url(#A)" />
+<rect class="frame" x="250" y="1090" width="780" height="230" />
+<text class="tf" x="640.0" y="1114">Метрики</text>
+<text class="s" x="640.0" y="1132">по каждому Engine, сравнение с
+США</text> <rect class="on" x="262" y="1146" width="244" height="72" />
+<text class="ts" x="384.0" y="1172">Объём и LQ</text>
+<text class="ons" x="384.0" y="1191">доля региона в технологии</text>
+<text class="ons" x="384.0" y="1207">относительно США</text>
+<rect class="on" x="518" y="1146" width="244" height="72" />
+<text class="ts" x="640.0" y="1172">Сотрудничество</text>
+<text class="ons" x="640.0" y="1191">доля совместных работ</text>
+<text class="ons" x="640.0" y="1207">внутри региона</text>
+<rect class="on" x="774" y="1146" width="244" height="72" />
+<text class="ts" x="896.0" y="1172">Местные патенты</text>
+<text class="ons" x="896.0" y="1191">доля правообладателей</text>
+<text class="ons" x="896.0" y="1207">из региона</text>
+<rect class="on" x="262" y="1230" width="244" height="76" />
+<text class="ts" x="384.0" y="1256">Сеть партнёров до гранта</text>
+<text class="ons" x="384.0" y="1275">совместные работы и патенты</text>
+<text class="ons" x="384.0" y="1291">партнёр × партнёр</text>
+<rect x="476" y="1235" width="25" height="15" rx="3" fill="#111" />
+<text x="488.5" y="1246" style="font-size:10px;font-weight:700;fill:#fff;text-anchor:middle">v2</text>
+<rect class="on" x="518" y="1230" width="244" height="76" />
+<text class="ts" x="640.0" y="1256">Источники знания</text>
+<text class="ons" x="640.0" y="1275">кого цитирует база:</text>
+<text class="ons" x="640.0" y="1291">регион / США / мир</text>
+<rect x="732" y="1235" width="25" height="15" rx="3" fill="#111" />
+<text x="744.5" y="1246" style="font-size:10px;font-weight:700;fill:#fff;text-anchor:middle">v2</text>
+<rect class="on" x="774" y="1230" width="244" height="76" />
+<text class="ts" x="896.0" y="1256">Опора на науку</text>
+<text class="ons" x="896.0" y="1275">ссылки патент → статья</text>
+<text class="ons" x="896.0" y="1291">из патентов региона</text>
+<rect class="box" x="1065" y="1222" width="185" height="96" />
+<text class="ts" x="1157.5" y="1246">Reliance on Science</text>
+<text class="s u" x="1157.5" y="1266">Marx &amp; Fuegi (2020)</text>
+<text class="s" x="1157.5" y="1283">связи патент → статья</text>
+<text class="s" x="1157.5" y="1300">уже с OpenAlex ID</text>
+<path class="ln" d="M1065,1268 H1032" marker-end="url(#a)" />
+<rect class="hold" x="40" y="1150" width="175" height="96" />
+<text class="ts" x="127" y="1174" style="fill:#777">Датасет</text>
+<text class="ts" x="127" y="1192" style="fill:#777">преподавателя</text>
+<text class="s" x="127" y="1212" style="fill:#999">метрики по
+регионам</text>
+<text class="s" x="127" y="1230" style="fill:#999;font-style:italic">на
+холде</text> <path class="dl" d="M215,1198 H248" marker-end="url(#g)" />
+<path class="LN" d="M640,1320 V1368" marker-end="url(#A)" />
+<rect class="frame" x="250" y="1370" width="780" height="236" />
+<text class="tf" x="640.0" y="1394">Группы сравнения</text>
+<text class="s" x="640.0" y="1412">тот же фильтр и те же метрики ·
+другие регионы или организации</text>
+<rect x="998" y="1377" width="25" height="15" rx="3" fill="#111" />
+<text x="1010.5" y="1388" style="font-size:10px;font-weight:700;fill:#fff;text-anchor:middle">v2</text>
+<rect class="off" x="262" y="1426" width="244" height="72" />
+<text class="offt" x="384.0" y="1452">Development Awards</text>
+<text class="offs" x="384.0" y="1471">не ставшие Engine</text>
+<text class="offs" x="384.0" y="1487">смешивается с группой 1</text>
+<rect class="off" x="518" y="1426" width="244" height="72" />
+<text class="offt" x="640.0" y="1452">Первая когорта</text>
+<text class="offs" x="640.0" y="1471">10 Engines · 2024</text>
+<text class="offs" x="640.0" y="1487">взгляд вперёд, не контроль</text>
+<rect class="off" x="774" y="1426" width="244" height="72" />
+<text class="offt" x="896.0" y="1452">Тот же регион</text>
+<text class="offs" x="896.0" y="1471">другие технологии</text>
+<text class="offs" x="896.0" y="1487">плацебо-проверка</text>
+<rect class="on" x="262" y="1510" width="244" height="82" />
+<text class="ts" x="384.0" y="1536">Проигравшие финалисты</text>
+<text class="ons" x="384.0" y="1555">3 финалиста + 14
+полуфиналистов</text> <text class="ons" x="384.0" y="1571">что отличает
+победителя?</text>
+<rect class="on" x="518" y="1510" width="244" height="82" />
+<text class="ts" x="640.0" y="1536">Джорджия</text>
+<text class="ons" x="640.0" y="1555">12 профилей × штат GA</text>
+<text class="ons" x="640.0" y="1571">где мы?</text>
+<rect class="on" x="774" y="1510" width="244" height="82" />
+<text class="ts" x="896.0" y="1536">Лидеры по технологии</text>
+<text class="ons" x="896.0" y="1555">все штаты, ранг по LQ</text>
+<text class="ons" x="896.0" y="1571">почему именно здесь?</text>
+<rect class="box" x="1065" y="1440" width="185" height="118" />
+<text class="ts" x="1157.5" y="1464">Воронка конкурса</text>
+<text class="n" x="1157.5" y="1484">~300 → 71 → 29 → 15 → 12</text>
+<text class="s" x="1157.5" y="1501">письма → заявки → финал</text>
+<text class="s" x="1157.5" y="1518" style="font-style:italic">карта NSF,
+список вручную</text>
+<text class="m" x="1157.5" y="1549">competition_funnel</text>
+<rect x="1230" y="1432" width="25" height="15" rx="3" fill="#111" />
+<text x="1242.5" y="1443" style="font-size:10px;font-weight:700;fill:#fff;text-anchor:middle">v2</text>
+<path class="ln" d="M1065,1500 H1032" marker-end="url(#a)" />
+<rect class="box" x="40" y="1450" width="175" height="96" />
+<text class="ts" x="127.5" y="1474">EDA Tech Hubs</text>
+<text class="s" x="127.5" y="1494">флаг на регион:</text>
+<text class="s" x="127.5" y="1511">пересечение программ</text>
+<text class="m" x="127.5" y="1537">flag_tech_hub</text>
+<rect x="195" y="1442" width="25" height="15" rx="3" fill="#111" />
+<text x="207.5" y="1453" style="font-size:10px;font-weight:700;fill:#fff;text-anchor:middle">v2</text>
+<path class="ln" d="M215,1498 H248" marker-end="url(#a)" />
+<path class="LN" d="M384,1592 V1628 H896 V1592" />
+<path class="LN" d="M640,1592 V1628" />
+<path class="LN" d="M640,1628 V1658" marker-end="url(#A)" />
+<rect class="box" x="440" y="1660" width="400" height="80" />
+<text class="t" x="640.0" y="1684">Отчёты и сайт</text>
+<text class="s" x="640.0" y="1704">12 страниц Engine + страница
+сравнения</text> <text class="m" x="640.0" y="1731">reports/</text>
+<line x1="40" y1="1772" x2="1250" y2="1772" stroke="#ddd" stroke-width="1"></line>
+<path class="LN" d="M50,1798 H96" marker-end="url(#A)" />
+<text x="106" y="1802" style="font-size:12px;fill:#444">основной
+путь</text> <rect class="on" x="205" y="1789" width="30" height="18" />
+<text x="243" y="1802" style="font-size:12px;fill:#444">идёт
+дальше</text>
+<rect class="off" x="335" y="1789" width="30" height="18" />
+<text x="373" y="1802" style="font-size:12px;fill:#444">учтено, дальше
+не идёт</text>
+<rect class="box" x="535" y="1789" width="30" height="18" />
+<path class="ln" d="M565,1798 H588" marker-end="url(#a)" />
+<text x="596" y="1802" style="font-size:12px;fill:#444">внешний
+источник</text>
+<path class="ck" d="M715,1798 H750" marker-end="url(#a)" />
+<text x="758" y="1802" style="font-size:12px;fill:#444">проверка</text>
+<rect class="hold" x="840" y="1789" width="30" height="18" />
+<text x="878" y="1802" style="font-size:12px;fill:#444">на холде</text>
+<rect x="950" y="1790" width="25" height="15" rx="3" fill="#111" />
+<text x="962.5" y="1801" style="font-size:10px;font-weight:700;fill:#fff;text-anchor:middle">v2</text>
+<text x="982" y="1802" style="font-size:12px;fill:#444">новое в
+v2</text>
+<text x="1075" y="1802" style="font-size:11.5px;fill:#3a3a3a;font-family:Menlo,Consolas,&#39;DejaVu Sans Mono&#39;,monospace">people</text>
+<text x="1125" y="1802" style="font-size:12px;fill:#444">таблица
+targets</text> </g>
+</svg>
+</div>
+<!-- Methodology window for the technology profile (Bootstrap modal) -->
+<div id="m-profile" class="modal fade" tabindex="-1" role="dialog">
+<div class="modal-dialog" role="document">
+<div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal" aria-label="Закрыть">
+<span aria-hidden="true">×</span>
+</button>
+<h4 class="modal-title">
+Профиль технологии: как он построен
+</h4>
+</div>
+<div class="modal-body">
+<p>Профиль технологии описывает, чем занимается Engine, на двух языках:
+темами OpenAlex (для публикаций) и классами CPC (для патентов). Он
+строится из текста самого гранта NSF, а не из сайта Engine.</p>
+<ol style="list-style-type: decimal">
+<li><strong>Утверждения.</strong> Для каждого Engine записано 3–5
+коротких утверждений о технологии. Первое всегда из названия гранта
+(аббревиатура раскрыта по аннотации; у IMPACT название неинформативно,
+это отмечено). Остальные из технической части аннотации NSF. У каждого
+утверждения сохранена дословная цитата. Файл:
+<code>data/manual/tech_statements.csv</code>.</li>
+<li><strong>Темы OpenAlex.</strong> Каждое утверждение отдельно
+отправляется в классификатор OpenAlex <code>/text/topics</code> ($0.01
+за вызов). Аннотацию целиком не классифицируем: для NEO-SMART вся
+аннотация получает тему «Regional resilience and development», то есть
+описание программы, а не технологии. Сохраняются три лучших кандидата;
+берётся первый, если в <code>data/manual/tech_topic_choice.csv</code> не
+записан другой выбор с причиной (таких случаев 3).</li>
+<li><strong>Классы CPC.</strong> Для каждого утверждения коды CPC
+подобраны вручную на уровне подкласса (например, C22B) или основной
+группы (B29B17) и проверены по выданным патентам USPTO 2024–2025:
+сколько патентов с этим кодом во всех США и сколько с изобретателем в
+штатах Engine. Код, у которого в регионе почти нет патентов, виден
+сразу.</li>
+<li><strong>Как профиль используется дальше.</strong> Работа считается
+«в темах Engine», если хотя бы одна из трёх её тем OpenAlex совпадает с
+темой профиля. Патент считается «в профиле», если хотя бы один его код
+CPC входит в профиль. Отсюда региональные патенты в профиле, коэффициент
+локализации (LQ) и сравнение со штатами США.</li>
+</ol>
+<p>Итого: 12 Engines, 48 утверждений (11 из названий, 37 из
+аннотаций).</p>
+<p><strong>Профиль конкретного Engine:</strong></p>
+<select id="profile-engine" class="form-control" style="width:auto">
+<option value="1">BRIDGES</option> <option value="2">Critical Materials
+Crossroads</option> <option value="3">Critical Mineral
+Accelerator</option> <option value="4">FAST</option>
+<option value="5">Grid Modernization</option>
+<option value="6">IMPACT</option> <option value="7">NEO-SMART</option>
+<option value="8">Quantum Technologies</option>
+<option value="9">RETI</option> <option value="10">RuralSTAMINA
+Biomanufacturing</option> <option value="11">STELLAR</option>
+<option value="12">Seafood</option> </select>
+<div class="profile-engine" data-k="1">
+<table class="table table-condensed">
+<thead>
+<tr>
+<th style="text-align:right;">
+№
+</th>
+<th style="text-align:left;">
+Источник
+</th>
+<th style="text-align:left;">
+Утверждение
+</th>
+<th style="text-align:left;">
+Цитата из гранта
+</th>
+<th style="text-align:left;">
+Тема OpenAlex (подобласть)
+</th>
+<th style="text-align:left;">
+CPC (патенты США / в регионе, 2024–25)
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:right;">
+1
+</td>
+<td style="text-align:left;">
+название
+</td>
+<td style="text-align:left;">
+Biobased manufacturing of materials and products from locally grown
+biomass
+</td>
+<td style="text-align:left;">
+<i>Biobased Rural Innovation for Domestic Growth and Economic Security
+(BRIDGES) Engine … advancing domestic biobased manufacturing using
+locally grown resources</i>
+</td>
+<td style="text-align:left;">
+Biofuel production and bioconversion<br><span style="color:#666">Biomedical Engineering</span>
+</td>
+<td style="text-align:left;">
+C08H (194 / 1)<br>C08L97 (172 / 3)
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+2
+</td>
+<td style="text-align:left;">
+аннотация
+</td>
+<td style="text-align:left;">
+Perennial grasses miscanthus and switchgrass as feedstock for advanced
+manufacturing
+</td>
+<td style="text-align:left;">
+<i>integrating low-input perennial grasses, such as miscanthus and
+switchgrass, into advanced manufacturing systems</i>
+</td>
+<td style="text-align:left;">
+Bioenergy crop production and management<br><span style="color:#666">Agronomy and Crop Science</span>
+</td>
+<td style="text-align:left;">
+A01H (2098 / 30)<br>D21C (265 / 8)
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+3
+</td>
+<td style="text-align:left;">
+аннотация
+</td>
+<td style="text-align:left;">
+Biobased materials for automotive parts, construction materials and
+packaging
+</td>
+<td style="text-align:left;">
+<i>supply materials and products for the automotive, construction
+materials, and packaging sectors</i>
+</td>
+<td style="text-align:left;">
+Natural Fiber Reinforced Composites<br><span style="color:#666">Polymers
+and Plastics</span>
+</td>
+<td style="text-align:left;">
+C04B18 (235 / 1)<br>B65D65 (569 / 3)<br>C08L (6056 / 62)
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+4
+</td>
+<td style="text-align:left;">
+аннотация
+</td>
+<td style="text-align:left;">
+Digital twins and AI decision support for crop design and manufacturing
+efficiency
+</td>
+<td style="text-align:left;">
+<i>digital twins and AI-enabled decision-support systems, to optimize
+crop design, manufacturing efficiency, and supply-chain performance</i>
+</td>
+<td style="text-align:left;">
+Smart Agriculture and AI<br><span style="color:#666">Plant
+Science</span>
+</td>
+<td style="text-align:left;">
+G06Q50 (6403 / 56)<br>G05B17 (335 / 3)
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="profile-engine" data-k="2" style="display:none">
+<table class="table table-condensed">
+<thead>
+<tr>
+<th style="text-align:right;">
+№
+</th>
+<th style="text-align:left;">
+Источник
+</th>
+<th style="text-align:left;">
+Утверждение
+</th>
+<th style="text-align:left;">
+Цитата из гранта
+</th>
+<th style="text-align:left;">
+Тема OpenAlex (подобласть)
+</th>
+<th style="text-align:left;">
+CPC (патенты США / в регионе, 2024–25)
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:right;">
+1
+</td>
+<td style="text-align:left;">
+название
+</td>
+<td style="text-align:left;">
+Critical materials production and refining
+</td>
+<td style="text-align:left;">
+<i>Critical Materials Crossroads … onshore critical materials production
+capacity</i>
+</td>
+<td style="text-align:left;">
+Extraction and Separation Processes<br><span style="color:#666">Metals
+and Alloys</span>
+</td>
+<td style="text-align:left;">
+C22B (688 / 8)
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+2
+</td>
+<td style="text-align:left;">
+аннотация
+</td>
+<td style="text-align:left;">
+Domestic metal refining at industrial scale
+</td>
+<td style="text-align:left;">
+<i>domestic metal refining and advanced materials production capacity,
+each on the order of 100,000 tons annually</i>
+</td>
+<td style="text-align:left;">
+Metallurgical Processes and Thermodynamics<br><span style="color:#666">Metals and Alloys</span>
+</td>
+<td style="text-align:left;">
+C22B (688 / 8)<br>C25C (147 / 0)
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+3
+</td>
+<td style="text-align:left;">
+аннотация
+</td>
+<td style="text-align:left;">
+Materials processing scale-up with continuous flow processing, in-line
+monitoring and data-driven process control
+</td>
+<td style="text-align:left;">
+<i>Advanced manufacturing methods, including continuous flow processing,
+in-line monitoring, and data-driven process control</i>
+</td>
+<td style="text-align:left;">
+Innovative Microfluidic and Catalytic Techniques Innovation<br><span style="color:#666">Fluid Flow and Transfer Processes</span>
+</td>
+<td style="text-align:left;">
+B01J19 (1176 / 17)<br>G05B13 (1587 / 11)
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="profile-engine" data-k="3" style="display:none">
+<table class="table table-condensed">
+<thead>
+<tr>
+<th style="text-align:right;">
+№
+</th>
+<th style="text-align:left;">
+Источник
+</th>
+<th style="text-align:left;">
+Утверждение
+</th>
+<th style="text-align:left;">
+Цитата из гранта
+</th>
+<th style="text-align:left;">
+Тема OpenAlex (подобласть)
+</th>
+<th style="text-align:left;">
+CPC (патенты США / в регионе, 2024–25)
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:right;">
+1
+</td>
+<td style="text-align:left;">
+название
+</td>
+<td style="text-align:left;">
+Critical mineral exploration, extraction, recovery and production
+</td>
+<td style="text-align:left;">
+<i>Critical Mineral Accelerator … improve the discovery, evaluation,
+extraction, recovery, and production of critical minerals</i>
+</td>
+<td style="text-align:left;">
+Extraction and Separation Processes<br><span style="color:#666">Metals
+and Alloys</span>
+</td>
+<td style="text-align:left;">
+C22B (688 / 0)<br>G01V (2022 / 0)
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+2
+</td>
+<td style="text-align:left;">
+аннотация
+</td>
+<td style="text-align:left;">
+AI-based mineral discovery integrating geological, geochemical,
+geophysical and remote-sensing data, including metal-isotope
+geochemistry
+</td>
+<td style="text-align:left;">
+<i>integrating geological, geochemical, geophysical, remote-sensing, and
+legacy data into AI-based systems, including metal-isotope geochemical
+approaches to identify concealed mineral deposits</i>
+</td>
+<td style="text-align:left;">
+Geochemistry and Geologic Mapping<br><span style="color:#666">Geochemistry and Petrology</span>
+</td>
+<td style="text-align:left;">
+G01V (2022 / 0)<br>G06N (29538 / 1)
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+3
+</td>
+<td style="text-align:left;">
+аннотация
+</td>
+<td style="text-align:left;">
+Recovery of critical minerals from low-grade ore and mine waste by
+bio-based extraction and mineral processing
+</td>
+<td style="text-align:left;">
+<i>advance recovery methods for primary resources and mine waste through
+materials characterization, bio-based extraction, and mineral
+processing</i>
+</td>
+<td style="text-align:left;">
+Metal Extraction and Bioleaching<br><span style="color:#666">Metals and
+Alloys</span>
+</td>
+<td style="text-align:left;">
+C22B3 (361 / 0)<br>B03D (114 / 0)
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="profile-engine" data-k="4" style="display:none">
+<table class="table table-condensed">
+<thead>
+<tr>
+<th style="text-align:right;">
+№
+</th>
+<th style="text-align:left;">
+Источник
+</th>
+<th style="text-align:left;">
+Утверждение
+</th>
+<th style="text-align:left;">
+Цитата из гранта
+</th>
+<th style="text-align:left;">
+Тема OpenAlex (подобласть)
+</th>
+<th style="text-align:left;">
+CPC (патенты США / в регионе, 2024–25)
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:right;">
+1
+</td>
+<td style="text-align:left;">
+название
+</td>
+<td style="text-align:left;">
+Advanced semiconductor technology
+</td>
+<td style="text-align:left;">
+<i>Frontiers of Advanced Semiconductor Technology (FAST) Engine</i>
+</td>
+<td style="text-align:left;">
+Semiconductor materials and devices<br><span style="color:#666">Electrical and Electronic Engineering</span>
+</td>
+<td style="text-align:left;">
+H01L (23241 / 696)<br>H10D (15363 / 681)
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+2
+</td>
+<td style="text-align:left;">
+аннотация
+</td>
+<td style="text-align:left;">
+AI-enabled automatic process control for semiconductor manufacturing
+</td>
+<td style="text-align:left;">
+<i>AI-enabled Automatic Process Control concept will leverage AI to
+improve the quality, performance, and affordability of advanced
+semiconductors</i>
+</td>
+<td style="text-align:left;">
+Fault Detection and Control Systems<br><span style="color:#666">Control
+and Systems Engineering</span>
+</td>
+<td style="text-align:left;">
+H01L21 (13132 / 446)<br>G05B19 (5164 / 62)
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+3
+</td>
+<td style="text-align:left;">
+аннотация
+</td>
+<td style="text-align:left;">
+Design and manufacturing of advanced logic chips
+</td>
+<td style="text-align:left;">
+<i>reshore design and manufacturing of the world’s most advanced logic
+chips</i>
+</td>
+<td style="text-align:left;">
+VLSI and FPGA Design Techniques<br><span style="color:#666">Electrical
+and Electronic Engineering</span>
+</td>
+<td style="text-align:left;">
+G06F30 (4369 / 113)<br>H01L21 (13132 / 446)
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="profile-engine" data-k="5" style="display:none">
+<table class="table table-condensed">
+<thead>
+<tr>
+<th style="text-align:right;">
+№
+</th>
+<th style="text-align:left;">
+Источник
+</th>
+<th style="text-align:left;">
+Утверждение
+</th>
+<th style="text-align:left;">
+Цитата из гранта
+</th>
+<th style="text-align:left;">
+Тема OpenAlex (подобласть)
+</th>
+<th style="text-align:left;">
+CPC (патенты США / в регионе, 2024–25)
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:right;">
+1
+</td>
+<td style="text-align:left;">
+название
+</td>
+<td style="text-align:left;">
+Electric power grid modernization
+</td>
+<td style="text-align:left;">
+<i>Carolinas Engine for Grid Modernization … develop, deploy, and
+manufacture critical grid technologies</i>
+</td>
+<td style="text-align:left;">
+Smart Grid and Power Systems<br><span style="color:#666">Electrical and
+Electronic Engineering</span>
+</td>
+<td style="text-align:left;">
+H02J3 (2652 / 90)
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+2
+</td>
+<td style="text-align:left;">
+аннотация
+</td>
+<td style="text-align:left;">
+Grid-edge automation of power distribution networks
+</td>
+<td style="text-align:left;">
+<i>Key technology areas include grid-edge automation</i>
+</td>
+<td style="text-align:left;">
+Smart Grid and Power Systems<br><span style="color:#666">Electrical and
+Electronic Engineering</span>
+</td>
+<td style="text-align:left;">
+H02J13 (867 / 39)<br>Y04S (1497 / 90)
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+3
+</td>
+<td style="text-align:left;">
+аннотация
+</td>
+<td style="text-align:left;">
+Solid state and hybrid power transformers
+</td>
+<td style="text-align:left;">
+<i>solid state and hybrid transformers</i>
+</td>
+<td style="text-align:left;">
+Advanced DC-DC Converters<br><span style="color:#666">Electrical and
+Electronic Engineering</span>
+</td>
+<td style="text-align:left;">
+H02M5 (375 / 4)<br>H01F27 (1931 / 19)
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+4
+</td>
+<td style="text-align:left;">
+аннотация
+</td>
+<td style="text-align:left;">
+Cybersecurity of the electric grid
+</td>
+<td style="text-align:left;">
+<i>solutions that enhance grid cybersecurity</i>
+</td>
+<td style="text-align:left;">
+Smart Grid Security and Resilience<br><span style="color:#666">Control
+and Systems Engineering</span>
+</td>
+<td style="text-align:left;">
+H04L63 (16322 / 730)<br>Y04S40 (574 / 58)
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+5
+</td>
+<td style="text-align:left;">
+аннотация
+</td>
+<td style="text-align:left;">
+Advanced construction techniques for nuclear power plants
+</td>
+<td style="text-align:left;">
+<i>advanced techniques for nuclear construction</i>
+</td>
+<td style="text-align:left;">
+Civil and Structural Engineering Research<br><span style="color:#666">Civil and Structural Engineering</span>
+</td>
+<td style="text-align:left;">
+G21C (359 / 39)<br>G21D (138 / 10)
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="profile-engine" data-k="6" style="display:none">
+<table class="table table-condensed">
+<thead>
+<tr>
+<th style="text-align:right;">
+№
+</th>
+<th style="text-align:left;">
+Источник
+</th>
+<th style="text-align:left;">
+Утверждение
+</th>
+<th style="text-align:left;">
+Цитата из гранта
+</th>
+<th style="text-align:left;">
+Тема OpenAlex (подобласть)
+</th>
+<th style="text-align:left;">
+CPC (патенты США / в регионе, 2024–25)
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:right;">
+1
+</td>
+<td style="text-align:left;">
+аннотация
+</td>
+<td style="text-align:left;">
+Prevention diagnosis and treatment of musculoskeletal injury and disease
+</td>
+<td style="text-align:left;">
+<i>Title not informative (IMPACT is not expanded); abstract: new ways to
+prevent, diagnose, treat, and manufacture solutions for MSK
+conditions</i>
+</td>
+<td style="text-align:left;">
+Musculoskeletal Disorders and Rehabilitation<br><span style="color:#666">Rehabilitation</span>
+</td>
+<td style="text-align:left;">
+A61F2 (5617 / 255)<br>A61B17 (10101 / 267)
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+2
+</td>
+<td style="text-align:left;">
+аннотация
+</td>
+<td style="text-align:left;">
+Orthopedic devices and implants
+</td>
+<td style="text-align:left;">
+<i>advance orthopedic devices, biologics, diagnostics, manufacturing
+processes, and AI-enabled tools</i>
+</td>
+<td style="text-align:left;">
+Orthopaedic implants and arthroplasty<br><span style="color:#666">Surgery</span>
+</td>
+<td style="text-align:left;">
+A61F2 (5617 / 255)<br>A61B17 (10101 / 267)
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+3
+</td>
+<td style="text-align:left;">
+аннотация
+</td>
+<td style="text-align:left;">
+Biologics and drug development for bone and joint disorders
+</td>
+<td style="text-align:left;">
+<i>orthopedic devices, biologics … drug development</i>
+</td>
+<td style="text-align:left;">
+Osteoarthritis Treatment and Mechanisms<br><span style="color:#666">Rheumatology</span>
+</td>
+<td style="text-align:left;">
+A61K (24175 / 253)<br>A61P19 (1125 / 8)
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+4
+</td>
+<td style="text-align:left;">
+аннотация
+</td>
+<td style="text-align:left;">
+AI tools using medical imaging, electronic health records and
+biospecimens for musculoskeletal diagnostics
+</td>
+<td style="text-align:left;">
+<i>leverage multimodal data, including imaging, electronic health
+records, biospecimens, and outcomes data … AI-enabled tools</i>
+</td>
+<td style="text-align:left;">
+Artificial Intelligence in Healthcare and Education<br><span style="color:#666">Health Informatics</span>
+</td>
+<td style="text-align:left;">
+G16H50 (6085 / 61)<br>G06T7 (19554 / 76)
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="profile-engine" data-k="7" style="display:none">
+<table class="table table-condensed">
+<thead>
+<tr>
+<th style="text-align:right;">
+№
+</th>
+<th style="text-align:left;">
+Источник
+</th>
+<th style="text-align:left;">
+Утверждение
+</th>
+<th style="text-align:left;">
+Цитата из гранта
+</th>
+<th style="text-align:left;">
+Тема OpenAlex (подобласть)
+</th>
+<th style="text-align:left;">
+CPC (патенты США / в регионе, 2024–25)
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:right;">
+1
+</td>
+<td style="text-align:left;">
+название
+</td>
+<td style="text-align:left;">
+Advanced materials manufacturing technology
+</td>
+<td style="text-align:left;">
+<i>Northeast Ohio Strengthening Manufacturing for American Resilience
+through Technology … restoring U.S. leadership in advanced materials and
+manufacturing</i>
+</td>
+<td style="text-align:left;">
+Diverse Industrial Engineering Technologies<br><span style="color:#666">Industrial and Manufacturing Engineering</span>
+</td>
+<td style="text-align:left;">
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+2
+</td>
+<td style="text-align:left;">
+аннотация
+</td>
+<td style="text-align:left;">
+Metals production, processing, recovery and recycling
+</td>
+<td style="text-align:left;">
+<i>three interconnected materials systems - metals, polymers, and
+chemicals and coatings … from sourcing and feedstock development through
+production, processing, recovery</i>
+</td>
+<td style="text-align:left;">
+Extraction and Separation Processes<br><span style="color:#666">Metals
+and Alloys</span>
+</td>
+<td style="text-align:left;">
+C22B (688 / 10)<br>C22C (2757 / 61)
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+3
+</td>
+<td style="text-align:left;">
+аннотация
+</td>
+<td style="text-align:left;">
+Polymers: feedstock development, processing, reprocessing and recycling
+of plastics
+</td>
+<td style="text-align:left;">
+<i>polymers … sourcing and feedstock development through production,
+processing, recovery</i>
+</td>
+<td style="text-align:left;">
+Polymer crystallization and properties<br><span style="color:#666">Polymers and Plastics</span>
+</td>
+<td style="text-align:left;">
+C08J (3986 / 127)<br>B29B17 (258 / 7)
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+4
+</td>
+<td style="text-align:left;">
+аннотация
+</td>
+<td style="text-align:left;">
+Chemicals and coatings: development and durability of industrial
+coatings
+</td>
+<td style="text-align:left;">
+<i>chemicals and coatings … product durability</i>
+</td>
+<td style="text-align:left;">
+Corrosion Behavior and Inhibition<br><span style="color:#666">Materials
+Chemistry</span>
+</td>
+<td style="text-align:left;">
+C09D (4668 / 128)<br>C23F (444 / 12)
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+5
+</td>
+<td style="text-align:left;">
+аннотация
+</td>
+<td style="text-align:left;">
+AI/ML and computational methods that accelerate materials design
+</td>
+<td style="text-align:left;">
+<i>emerging AI/ML and computational methods that accelerate materials
+design and life cycle assessment</i>
+</td>
+<td style="text-align:left;">
+Machine Learning in Materials Science<br><span style="color:#666">Materials Chemistry</span>
+</td>
+<td style="text-align:left;">
+G16C60 (101 / 0)
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="profile-engine" data-k="8" style="display:none">
+<table class="table table-condensed">
+<thead>
+<tr>
+<th style="text-align:right;">
+№
+</th>
+<th style="text-align:left;">
+Источник
+</th>
+<th style="text-align:left;">
+Утверждение
+</th>
+<th style="text-align:left;">
+Цитата из гранта
+</th>
+<th style="text-align:left;">
+Тема OpenAlex (подобласть)
+</th>
+<th style="text-align:left;">
+CPC (патенты США / в регионе, 2024–25)
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:right;">
+1
+</td>
+<td style="text-align:left;">
+название
+</td>
+<td style="text-align:left;">
+Quantum technologies and quantum information science
+</td>
+<td style="text-align:left;">
+<i>NSF Quantum Technologies Engine in Connecticut … based on quantum
+information science and relevant technologies</i>
+</td>
+<td style="text-align:left;">
+Quantum Information and Cryptography<br><span style="color:#666">Atomic
+and Molecular Physics, and Optics</span>
+</td>
+<td style="text-align:left;">
+G06N10 (1429 / 53)<br>B82Y10 (2025 / 8)
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+2
+</td>
+<td style="text-align:left;">
+аннотация
+</td>
+<td style="text-align:left;">
+Quantum computing hardware and algorithms
+</td>
+<td style="text-align:left;">
+<i>quantum communications, quantum sensing, and quantum computing</i>
+</td>
+<td style="text-align:left;">
+Quantum Computing Algorithms and Architecture<br><span style="color:#666">Artificial Intelligence</span>
+</td>
+<td style="text-align:left;">
+G06N10 (1429 / 53)
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+3
+</td>
+<td style="text-align:left;">
+аннотация
+</td>
+<td style="text-align:left;">
+Quantum sensing and quantum metrology
+</td>
+<td style="text-align:left;">
+<i>quantum communications, quantum sensing, and quantum computing</i>
+</td>
+<td style="text-align:left;">
+Quantum Information and Cryptography<br><span style="color:#666">Atomic
+and Molecular Physics, and Optics</span>
+</td>
+<td style="text-align:left;">
+G01R33 (2320 / 39)<br>G01N24 (185 / 0)
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+4
+</td>
+<td style="text-align:left;">
+аннотация
+</td>
+<td style="text-align:left;">
+Quantum communications and quantum cryptography
+</td>
+<td style="text-align:left;">
+<i>quantum communications, quantum sensing, and quantum computing</i>
+</td>
+<td style="text-align:left;">
+Quantum Information and Cryptography<br><span style="color:#666">Atomic
+and Molecular Physics, and Optics</span>
+</td>
+<td style="text-align:left;">
+H04L9 (10852 / 92)<br>H04B10 (2504 / 18)
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="profile-engine" data-k="9" style="display:none">
+<table class="table table-condensed">
+<thead>
+<tr>
+<th style="text-align:right;">
+№
+</th>
+<th style="text-align:left;">
+Источник
+</th>
+<th style="text-align:left;">
+Утверждение
+</th>
+<th style="text-align:left;">
+Цитата из гранта
+</th>
+<th style="text-align:left;">
+Тема OpenAlex (подобласть)
+</th>
+<th style="text-align:left;">
+CPC (патенты США / в регионе, 2024–25)
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:right;">
+1
+</td>
+<td style="text-align:left;">
+название
+</td>
+<td style="text-align:left;">
+Resilient energy infrastructure and electric grid reliability for
+industry
+</td>
+<td style="text-align:left;">
+<i>Resilient Energy Technology and Infrastructure (RETI) Consortium
+addresses … the reliability of the U.S. electrical grid</i>
+</td>
+<td style="text-align:left;">
+Power System Reliability and Maintenance<br><span style="color:#666">Safety, Risk, Reliability and Quality</span>
+</td>
+<td style="text-align:left;">
+H02J3 (2652 / 38)
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+2
+</td>
+<td style="text-align:left;">
+аннотация
+</td>
+<td style="text-align:left;">
+Machine learning grid management, digital twins and secure control
+systems
+</td>
+<td style="text-align:left;">
+<i>machine learning-enabled grid management, digital twin platforms for
+real-time situational awareness, and secure control systems</i>
+</td>
+<td style="text-align:left;">
+Smart Grid and Power Systems<br><span style="color:#666">Electrical and
+Electronic Engineering</span>
+</td>
+<td style="text-align:left;">
+G05B13 (1587 / 53)<br>Y04S (1497 / 61)
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+3
+</td>
+<td style="text-align:left;">
+аннотация
+</td>
+<td style="text-align:left;">
+Energy storage with advanced batteries and solid oxide fuel cells
+</td>
+<td style="text-align:left;">
+<i>energy storage systems based on advanced batteries and solid oxide
+fuel cells</i>
+</td>
+<td style="text-align:left;">
+Advancements in Solid Oxide Fuel Cells<br><span style="color:#666">Materials Chemistry</span>
+</td>
+<td style="text-align:left;">
+H01M10 (9471 / 87)<br>H01M8 (1823 / 21)
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+4
+</td>
+<td style="text-align:left;">
+аннотация
+</td>
+<td style="text-align:left;">
+Hydrogen-based iron reduction, catalysis and process intensification in
+steel and chemical production
+</td>
+<td style="text-align:left;">
+<i>hydrogen-based iron reduction, novel catalytic systems, and process
+intensification aimed at reducing energy use in chemical and steel
+production</i>
+</td>
+<td style="text-align:left;">
+Iron and Steelmaking Processes<br><span style="color:#666">Metals and
+Alloys</span>
+</td>
+<td style="text-align:left;">
+C21B13 (86 / 11)<br>B01J (5371 / 199)
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="profile-engine" data-k="10" style="display:none">
+<table class="table table-condensed">
+<thead>
+<tr>
+<th style="text-align:right;">
+№
+</th>
+<th style="text-align:left;">
+Источник
+</th>
+<th style="text-align:left;">
+Утверждение
+</th>
+<th style="text-align:left;">
+Цитата из гранта
+</th>
+<th style="text-align:left;">
+Тема OpenAlex (подобласть)
+</th>
+<th style="text-align:left;">
+CPC (патенты США / в регионе, 2024–25)
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:right;">
+1
+</td>
+<td style="text-align:left;">
+название
+</td>
+<td style="text-align:left;">
+Biomanufacturing of value-added bioproducts from agricultural feedstocks
+</td>
+<td style="text-align:left;">
+<i>RuralSTAMINA Biomanufacturing Engine … transforming agricultural
+feedstocks into a wide range of value-added bioproducts</i>
+</td>
+<td style="text-align:left;">
+Microbial Metabolic Engineering and Bioproduction<br><span style="color:#666">Molecular Biology</span>
+</td>
+<td style="text-align:left;">
+C12P (1934 / 16)
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+2
+</td>
+<td style="text-align:left;">
+аннотация
+</td>
+<td style="text-align:left;">
+Engineered microorganisms for biomanufacturing of new products
+</td>
+<td style="text-align:left;">
+<i>developing enabling technologies such as new microorganisms for
+biomanufacturing of new value-added products</i>
+</td>
+<td style="text-align:left;">
+Microbial Metabolic Engineering and Bioproduction<br><span style="color:#666">Molecular Biology</span>
+</td>
+<td style="text-align:left;">
+C12N (11666 / 217)
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+3
+</td>
+<td style="text-align:left;">
+аннотация
+</td>
+<td style="text-align:left;">
+Scale-up of biomanufacturing and fermentation processes
+</td>
+<td style="text-align:left;">
+<i>predictable and reliable scaling up of biomanufacturing processes for
+commercialization</i>
+</td>
+<td style="text-align:left;">
+Fluid Dynamics and Mixing<br><span style="color:#666">Fluid Flow and
+Transfer Processes</span>
+</td>
+<td style="text-align:left;">
+C12M (1857 / 18)
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+4
+</td>
+<td style="text-align:left;">
+аннотация
+</td>
+<td style="text-align:left;">
+Sensors and AI tools for biomanufacturing process optimization
+</td>
+<td style="text-align:left;">
+<i>designing and deploying sensors and AI tools for biomanufacturing
+process optimization</i>
+</td>
+<td style="text-align:left;">
+Fault Detection and Control Systems<br><span style="color:#666">Control
+and Systems Engineering</span>
+</td>
+<td style="text-align:left;">
+C12Q3 (21 / 0)<br>G05B13 (1587 / 12)
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="profile-engine" data-k="11" style="display:none">
+<table class="table table-condensed">
+<thead>
+<tr>
+<th style="text-align:right;">
+№
+</th>
+<th style="text-align:left;">
+Источник
+</th>
+<th style="text-align:left;">
+Утверждение
+</th>
+<th style="text-align:left;">
+Цитата из гранта
+</th>
+<th style="text-align:left;">
+Тема OpenAlex (подобласть)
+</th>
+<th style="text-align:left;">
+CPC (патенты США / в регионе, 2024–25)
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:right;">
+1
+</td>
+<td style="text-align:left;">
+название
+</td>
+<td style="text-align:left;">
+Lasers and laser applications
+</td>
+<td style="text-align:left;">
+<i>Science, Technology, and Engineering for Lasers and Laser
+Applications Research (STELLAR) Engine</i>
+</td>
+<td style="text-align:left;">
+Optical Systems and Laser Technology<br><span style="color:#666">Electrical and Electronic Engineering</span>
+</td>
+<td style="text-align:left;">
+H01S (2157 / 43)
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+2
+</td>
+<td style="text-align:left;">
+аннотация
+</td>
+<td style="text-align:left;">
+Precision optics and optical imaging
+</td>
+<td style="text-align:left;">
+<i>the area’s globally recognized precision-optics and imaging
+expertise</i>
+</td>
+<td style="text-align:left;">
+Advanced optical system design<br><span style="color:#666">Atomic and
+Molecular Physics, and Optics</span>
+</td>
+<td style="text-align:left;">
+G02B (20724 / 623)
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+3
+</td>
+<td style="text-align:left;">
+аннотация
+</td>
+<td style="text-align:left;">
+Photonics and integrated photonic devices
+</td>
+<td style="text-align:left;">
+<i>strong capabilities in photonics and laser technologies … Optics,
+Photonics, Imaging, and Lasers (OPI+L)</i>
+</td>
+<td style="text-align:left;">
+Photonic and Optical Devices<br><span style="color:#666">Electrical and
+Electronic Engineering</span>
+</td>
+<td style="text-align:left;">
+G02B6 (5593 / 276)<br>H01S5 (1513 / 19)
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+4
+</td>
+<td style="text-align:left;">
+аннотация
+</td>
+<td style="text-align:left;">
+Manufacturing of laser components and systems
+</td>
+<td style="text-align:left;">
+<i>strengthen domestic laser component and system manufacturing</i>
+</td>
+<td style="text-align:left;">
+Optical Systems and Laser Technology<br><span style="color:#666">Electrical and Electronic Engineering</span>
+</td>
+<td style="text-align:left;">
+B23K26 (1955 / 60)<br>H01S3 (860 / 29)
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="profile-engine" data-k="12" style="display:none">
+<table class="table table-condensed">
+<thead>
+<tr>
+<th style="text-align:right;">
+№
+</th>
+<th style="text-align:left;">
+Источник
+</th>
+<th style="text-align:left;">
+Утверждение
+</th>
+<th style="text-align:left;">
+Цитата из гранта
+</th>
+<th style="text-align:left;">
+Тема OpenAlex (подобласть)
+</th>
+<th style="text-align:left;">
+CPC (патенты США / в регионе, 2024–25)
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:right;">
+1
+</td>
+<td style="text-align:left;">
+название
+</td>
+<td style="text-align:left;">
+Seafood harvesting, processing and supply chain technology
+</td>
+<td style="text-align:left;">
+<i>Seafood Engine … introduce synergistic technological innovations at
+the harvest, processing, distribution, and marketing stages</i>
+</td>
+<td style="text-align:left;">
+Food Industry and Aquatic Biology<br><span style="color:#666">Food
+Science</span>
+</td>
+<td style="text-align:left;">
+A22C25 (33 / 0)<br>A01K61 (191 / 9)
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+2
+</td>
+<td style="text-align:left;">
+аннотация
+</td>
+<td style="text-align:left;">
+Ocean observation technologies to map and predict fishery and
+aquaculture resources
+</td>
+<td style="text-align:left;">
+<i>New ocean observation technologies have the power to efficiently map,
+characterize, and predict seafood resources and their environments</i>
+</td>
+<td style="text-align:left;">
+Marine and fisheries research<br><span style="color:#666">Aquatic
+Science</span>
+</td>
+<td style="text-align:left;">
+A01K79 (21 / 3)<br>G01S15 (1169 / 79)
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+3
+</td>
+<td style="text-align:left;">
+аннотация
+</td>
+<td style="text-align:left;">
+Sensors, AI and data visualization for decision-making in fishing and
+aquaculture
+</td>
+<td style="text-align:left;">
+<i>Sensor technologies, AI and other advanced analytics, and novel data
+visualizations can improve domain awareness and decision-making</i>
+</td>
+<td style="text-align:left;">
+Water Quality Monitoring Technologies<br><span style="color:#666">Water
+Science and Technology</span>
+</td>
+<td style="text-align:left;">
+A01K61 (191 / 9)<br>G06Q50 (6403 / 320)
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+4
+</td>
+<td style="text-align:left;">
+аннотация
+</td>
+<td style="text-align:left;">
+Seafood processing, waste stream utilization and cold chain technologies
+</td>
+<td style="text-align:left;">
+<i>new and downscaled processing technologies … Waste stream utilization
+… Cold chain technologies</i>
+</td>
+<td style="text-align:left;">
+Food Industry and Aquatic Biology<br><span style="color:#666">Food
+Science</span>
+</td>
+<td style="text-align:left;">
+A22C25 (33 / 0)<br>A23B4 (163 / 8)<br>A23L17 (50 / 1)
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+5
+</td>
+<td style="text-align:left;">
+аннотация
+</td>
+<td style="text-align:left;">
+Seafood traceability technologies
+</td>
+<td style="text-align:left;">
+<i>Traceability technologies can also help to reach new consumers and
+markets</i>
+</td>
+<td style="text-align:left;">
+Food Supply Chain Traceability<br><span style="color:#666">Food
+Science</span>
+</td>
+<td style="text-align:left;">
+G06Q10 (13971 / 808)
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="modal-footer">
+<button type="button" class="btn btn-default" data-dismiss="modal">
+Закрыть
+</button>
+</div>
+</div>
+</div>
+</div>
+<script>
+// Make diagram boxes clickable by their label: the box is the <rect> just before the label,
+// the block is that rect and the texts up to the next rect or path.
+(function () {
+  var targets = { "Профиль технологии": "#m-profile", "Технология": "#m-profile" };
+  var svg = document.querySelector(".pipeline-svg svg");
+  if (!svg) return;
+  svg.querySelectorAll("text").forEach(function (t) {
+    var modal = targets[t.textContent.trim()];
+    if (!modal) return;
+    var rect = t.previousElementSibling;
+    while (rect && rect.tagName.toLowerCase() !== "rect") rect = rect.previousElementSibling;
+    if (!rect) return;
+    var g = document.createElementNS("http://www.w3.org/2000/svg", "g");
+    g.setAttribute("class", "clickable");
+    var title = document.createElementNS("http://www.w3.org/2000/svg", "title");
+    title.textContent = "Как это сделано";
+    g.appendChild(title);
+    rect.parentNode.insertBefore(g, rect);
+    var el = rect;
+    do {
+      var next = el.nextElementSibling;
+      g.appendChild(el);
+      el = next;
+    } while (el && el.tagName.toLowerCase() === "text");
+    g.addEventListener("click", function () { $(modal).modal("show"); });
+  });
+  var sel = document.getElementById("profile-engine");
+  if (sel) sel.addEventListener("change", function () {
+    document.querySelectorAll(".profile-engine").forEach(function (d) {
+      d.style.display = d.getAttribute("data-k") === sel.value ? "" : "none";
+    });
+  });
+})();
+</script>
 
 <!-- Sortable columns and a search box for site tables (included via `includes: after_body`) -->
 <style>
