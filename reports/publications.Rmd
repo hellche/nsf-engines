@@ -59,19 +59,22 @@ OpenAlex works of Engine team members, published since the start of each Engine'
 and the person's current organisation both match, and the profile is not flagged as merging namesakes.
 Choose an Engine, then click a name to open the list.
 
-## Engines {.tabset .tabset-pills}
+## Engines
 
 ```{r engines, results = "asis"}
+cat('<select id="engine-select" class="form-control" style="width:auto; margin-bottom:15px">\n',
+    paste0('<option value="', seq_len(nrow(engines)), '">', htmltools::htmlEscape(engines$engine_name), "</option>", collapse = "\n"),
+    "\n</select>\n\n")
 for (i in seq_len(nrow(engines))) {
   e  <- engines$engine_name[i]
   we <- wp |> filter(engine_name == e)
   pe <- people |> filter(engine_name == e, person_id %in% we$person_id) |>
     left_join(count(we, person_id, name = "n"), by = "person_id") |> arrange(desc(n))
-  cat(sprintf("### %s\n\n", e))
+  cat(sprintf('<div class="engine-pane" data-k="%d"%s>\n\n', i, if (i > 1) ' style="display:none"' else ""))
   cat(sprintf("[%s Engine page](%s.html). Window start: %s. ", e, slug(e),
               format(as.Date(engines$window_from[i]), "%B %Y")))
   if (nrow(pe) == 0) {
-    cat("No team member has a reliable OpenAlex match with works since the window start.\n\n")
+    cat("No team member has a reliable OpenAlex match with works since the window start.\n\n</div>\n\n")
     next
   }
   cat(sprintf("%d team members, %d works (%d distinct; %d distinct in Engine topics).\n\n", nrow(pe), nrow(we), n_distinct(we$work_id), n_distinct(we$work_id[we$in_engine_topics %in% TRUE])))
@@ -97,21 +100,29 @@ for (i in seq_len(nrow(engines))) {
     print(kable(tab, format = "html", escape = FALSE, table.attr = 'class="table table-condensed"'))
     cat("\n</details>\n\n")
   }
+  cat("</div>\n\n")
 }
 ```
 
 <script>
-// A link like publications.html#works-<person_id> opens that Engine's tab and that person's list
-// (run after rmarkdown has built the tabs, and again when only the #hash changes)
-function openWorksFromHash() {
+// Dropdown: show the chosen Engine's section
+function showEngine(k) {
+  document.getElementById("engine-select").value = k;
+  document.querySelectorAll(".engine-pane").forEach(function (d) {
+    d.style.display = d.getAttribute("data-k") === String(k) ? "" : "none";
+  });
+}
+document.getElementById("engine-select").addEventListener("change", function () { showEngine(this.value); });
+// A link like publications.html#works-<person_id> picks that Engine and opens that person's list
+function openFromHash() {
   if (location.hash.indexOf("#works-") !== 0) return;
   var d = document.getElementById(location.hash.slice(1));
   if (!d) return;
-  var pane = $(d).closest(".tab-pane");
-  if (pane.length) $('a[href="#' + pane.attr("id") + '"]').tab("show");
+  var pane = d.closest(".engine-pane");
+  if (pane) showEngine(pane.getAttribute("data-k"));
   d.open = true;
   setTimeout(function () { d.scrollIntoView(); }, 50);
 }
-window.addEventListener("load", function () { setTimeout(openWorksFromHash, 0); });
-window.addEventListener("hashchange", openWorksFromHash);
+window.addEventListener("load", function () { setTimeout(openFromHash, 0); });
+window.addEventListener("hashchange", openFromHash);
 </script>

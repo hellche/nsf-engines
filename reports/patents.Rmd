@@ -30,16 +30,19 @@ Engine's states. Common names can still be namesakes: compare *Inventor as liste
 *In Engine profile* = a CPC code of the patent is in the Engine's technology profile (the grant's topic).
 Choose an Engine, then click a name to open the list.
 
-## Engines {.tabset .tabset-pills}
+## Engines
 
 ```{r engines, results = "asis"}
+cat('<select id="engine-select" class="form-control" style="width:auto; margin-bottom:15px">\n',
+    paste0('<option value="', seq_len(nrow(engines)), '">', htmltools::htmlEscape(engines$engine_name), "</option>", collapse = "\n"),
+    "\n</select>\n\n")
 for (i in seq_len(nrow(engines))) {
   e  <- engines$engine_name[i]
   pe <- pt |> filter(engine_name == e)
-  cat(sprintf("### %s\n\n", e))
+  cat(sprintf('<div class="engine-pane" data-k="%d"%s>\n\n', i, if (i > 1) ' style="display:none"' else ""))
   cat(sprintf("[%s Engine page](%s.html). ", e, slug(e)))
   if (nrow(pe) == 0) {
-    cat("No patents with a team member among the inventors were found.\n\n")
+    cat("No patents with a team member among the inventors were found.\n\n</div>\n\n")
     next
   }
   cat(sprintf("%d team members, %d patents (%d in the Engine's technology profile).\n\n",
@@ -60,18 +63,26 @@ for (i in seq_len(nrow(engines))) {
     print(kable(tab, format = "html", escape = FALSE, table.attr = 'class="table table-condensed"'))
     cat("\n</details>\n\n")
   }
+  cat("</div>\n\n")
 }
 ```
 
 <script>
-// A link like patents.html#patents-<person_id> opens that Engine's tab and that person's list
-// (run after rmarkdown has built the tabs, and again when only the #hash changes)
+// Dropdown: show the chosen Engine's section
+function showEngine(k) {
+  document.getElementById("engine-select").value = k;
+  document.querySelectorAll(".engine-pane").forEach(function (d) {
+    d.style.display = d.getAttribute("data-k") === String(k) ? "" : "none";
+  });
+}
+document.getElementById("engine-select").addEventListener("change", function () { showEngine(this.value); });
+// A link like patents.html#patents-<person_id> picks that Engine and opens that person's list
 function openFromHash() {
   if (location.hash.indexOf("#patents-") !== 0) return;
   var d = document.getElementById(location.hash.slice(1));
   if (!d) return;
-  var pane = $(d).closest(".tab-pane");
-  if (pane.length) $('a[href="#' + pane.attr("id") + '"]').tab("show");
+  var pane = d.closest(".engine-pane");
+  if (pane) showEngine(pane.getAttribute("data-k"));
   d.open = true;
   setTimeout(function () { d.scrollIntoView(); }, 50);
 }
