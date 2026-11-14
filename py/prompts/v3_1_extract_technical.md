@@ -11,6 +11,14 @@ Changes from v3.0 (py/prompts/v3_extract_technical.md, kept unchanged):
 Input: the grant title and the abstract split into numbered sentences (data/processed/tech_v2_sentences.csv,
 column `text_original`; sentence 0 is the title). Output: one row per extracted fragment.
 
+Runs so far: one run, 2026-11-14, done by hand in a Claude Code chat session (not through the API: no
+Anthropic API key in the project), saved as data/manual/tech_v3_1_fragments_raw.csv. This run is **not
+reproducible**: there is no script that sends the prompt, and the model in the chat also had the
+conversation as context (including the review of v2/v3 rankings), not only this prompt and the grant text.
+The verbatim and label checks were done with a one-off script, not one in the repository. To make it
+reproducible: a script that sends only this prompt and the sentences through the API, keeps the raw
+responses, and runs it 3 times to check stability.
+
 ---
 
 You are given the title and the abstract of one NSF Regional Innovation Engine award, split into numbered
