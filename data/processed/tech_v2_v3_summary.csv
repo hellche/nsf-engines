@@ -1,0 +1,49 @@
+engine_name,kind,version,method,n_v1,median_rank_v1,share_top50,share_top200
+BRIDGES,oa,v2,max_bg,4,163.5,0.5,0.5
+BRIDGES,oa,v3,max_bg,4,44.5,0.5,0.75
+BRIDGES,cpc,v2,centroid,9,955.0,0.0,0.1111111111111111
+BRIDGES,cpc,v3,centroid,9,1011.0,0.0,0.1111111111111111
+Critical Materials Crossroads,oa,v2,max_bg,3,92.0,0.0,1.0
+Critical Materials Crossroads,oa,v3,max_bg,3,65.0,0.3333333333333333,1.0
+Critical Materials Crossroads,cpc,v2,centroid,5,13.0,0.6,0.6
+Critical Materials Crossroads,cpc,v3,centroid,5,50.0,0.6,0.6
+Critical Mineral Accelerator,oa,v2,max_bg,3,8.0,1.0,1.0
+Critical Mineral Accelerator,oa,v3,max_bg,3,2.0,0.6666666666666666,1.0
+Critical Mineral Accelerator,cpc,v2,centroid,6,117.5,0.5,0.6666666666666666
+Critical Mineral Accelerator,cpc,v3,centroid,6,84.5,0.0,0.6666666666666666
+FAST,oa,v2,max_bg,3,120.0,0.3333333333333333,1.0
+FAST,oa,v3,max_bg,3,9.0,0.6666666666666666,0.6666666666666666
+FAST,cpc,v2,centroid,3,126.0,0.3333333333333333,0.6666666666666666
+FAST,cpc,v3,centroid,3,40.0,0.6666666666666666,0.6666666666666666
+Grid Modernization,oa,v2,max_bg,4,36.0,0.5,0.75
+Grid Modernization,oa,v3,max_bg,4,50.0,0.5,0.75
+Grid Modernization,cpc,v2,centroid,9,49.0,0.5555555555555556,0.5555555555555556
+Grid Modernization,cpc,v3,centroid,9,99.0,0.4444444444444444,0.5555555555555556
+IMPACT,oa,v2,max_bg,4,166.0,0.5,0.5
+IMPACT,oa,v3,max_bg,4,52.5,0.5,0.75
+IMPACT,cpc,v2,centroid,8,867.0,0.125,0.25
+IMPACT,cpc,v3,centroid,8,236.5,0.125,0.25
+NEO-SMART,oa,v2,max_bg,5,21.0,0.6,0.8
+NEO-SMART,oa,v3,max_bg,5,238.0,0.2,0.4
+NEO-SMART,cpc,v2,centroid,7,733.0,0.2857142857142857,0.2857142857142857
+NEO-SMART,cpc,v3,centroid,7,152.0,0.42857142857142855,0.5714285714285714
+Quantum Technologies,oa,v2,max_bg,2,2.5,1.0,1.0
+Quantum Technologies,oa,v3,max_bg,2,3.0,1.0,1.0
+Quantum Technologies,cpc,v2,centroid,7,248.0,0.2857142857142857,0.42857142857142855
+Quantum Technologies,cpc,v3,centroid,7,15.0,0.5714285714285714,0.5714285714285714
+RETI,oa,v2,max_bg,4,23.0,0.75,0.75
+RETI,oa,v3,max_bg,4,13.0,0.75,1.0
+RETI,cpc,v2,centroid,7,64.0,0.2857142857142857,0.5714285714285714
+RETI,cpc,v3,centroid,7,151.0,0.2857142857142857,0.5714285714285714
+RuralSTAMINA Biomanufacturing,oa,v2,max_bg,3,57.0,0.3333333333333333,0.6666666666666666
+RuralSTAMINA Biomanufacturing,oa,v3,max_bg,3,272.0,0.0,0.0
+RuralSTAMINA Biomanufacturing,cpc,v2,centroid,5,1059.0,0.0,0.0
+RuralSTAMINA Biomanufacturing,cpc,v3,centroid,5,15.0,0.6,0.8
+STELLAR,oa,v2,max_bg,3,15.0,0.6666666666666666,1.0
+STELLAR,oa,v3,max_bg,3,12.0,1.0,1.0
+STELLAR,cpc,v2,centroid,6,157.5,0.3333333333333333,0.5
+STELLAR,cpc,v3,centroid,6,6.5,0.8333333333333334,0.8333333333333334
+Seafood,oa,v2,max_bg,4,25.5,1.0,1.0
+Seafood,oa,v3,max_bg,4,44.0,0.5,1.0
+Seafood,cpc,v2,centroid,10,35.0,0.7,0.7
+Seafood,cpc,v3,centroid,10,100.0,0.1,0.6

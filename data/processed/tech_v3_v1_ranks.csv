@@ -1,0 +1,1996 @@
+engine_name,item,kind,code,label,n_ranked,rank_max,rank_centroid,rank_max_bg,rank_centroid_bg
+BRIDGES,"<bound method IndexOpsMixin.item of engine_name                                                             BRIDGES
+item                                                                          1
+source                                                                    title
+statement                     Biobased manufacturing of materials and produc...
+quote                         Biobased Rural Innovation for Domestic Growth ...
+topic_id                                                                 T10171
+topic                                      Biofuel production and bioconversion
+subfield_id                                                      subfields/2204
+subfield                                                 Biomedical Engineering
+field                                                               Engineering
+topic_basis                   manual: rank 2: biomass bioconversion fits bio...
+cpc_patents_us_2024_25                                     C08H:194; C08L97:172
+cpc_patents_region_2024_25                                     C08H:1; C08L97:3
+cpc                                                                C08H; C08L97
+Name: 0, dtype: object>",openalex_topic,T10171,Biofuel production and bioconversion,4516,28.0,26.0,55.0,27.0
+BRIDGES,"<bound method IndexOpsMixin.item of engine_name                                                             BRIDGES
+item                                                                          1
+source                                                                    title
+statement                     Biobased manufacturing of materials and produc...
+quote                         Biobased Rural Innovation for Domestic Growth ...
+topic_id                                                                 T10171
+topic                                      Biofuel production and bioconversion
+subfield_id                                                      subfields/2204
+subfield                                                 Biomedical Engineering
+field                                                               Engineering
+topic_basis                   manual: rank 2: biomass bioconversion fits bio...
+cpc_patents_us_2024_25                                     C08H:194; C08L97:172
+cpc_patents_region_2024_25                                     C08H:1; C08L97:3
+cpc                                                                C08H; C08L97
+Name: 0, dtype: object>",cpc,C08H,Derivatives of natural macromolecular compounds,9867,424.0,545.0,330.0,515.0
+BRIDGES,"<bound method IndexOpsMixin.item of engine_name                                                             BRIDGES
+item                                                                          1
+source                                                                    title
+statement                     Biobased manufacturing of materials and produc...
+quote                         Biobased Rural Innovation for Domestic Growth ...
+topic_id                                                                 T10171
+topic                                      Biofuel production and bioconversion
+subfield_id                                                      subfields/2204
+subfield                                                 Biomedical Engineering
+field                                                               Engineering
+topic_basis                   manual: rank 2: biomass bioconversion fits bio...
+cpc_patents_us_2024_25                                     C08H:194; C08L97:172
+cpc_patents_region_2024_25                                     C08H:1; C08L97:3
+cpc                                                                C08H; C08L97
+Name: 0, dtype: object>",cpc,C08L97,Compositions of macromolecular compounds,9867,3642.0,1011.0,3775.0,934.0
+BRIDGES,"<bound method IndexOpsMixin.item of engine_name                                                             BRIDGES
+item                                                                          2
+source                                                                 abstract
+statement                     Perennial grasses miscanthus and switchgrass a...
+quote                         integrating low-input perennial grasses, such ...
+topic_id                                                                 T12003
+topic                                  Bioenergy crop production and management
+subfield_id                                                      subfields/1102
+subfield                                              Agronomy and Crop Science
+field                                      Agricultural and Biological Sciences
+topic_basis                                      classifier rank 1 (score 0.67)
+cpc_patents_us_2024_25                                      A01H:2098; D21C:265
+cpc_patents_region_2024_25                                      A01H:30; D21C:8
+cpc                                                                  A01H; D21C
+Name: 1, dtype: object>",openalex_topic,T12003,Bioenergy crop production and management,4516,31.0,23.0,34.0,29.0
+BRIDGES,"<bound method IndexOpsMixin.item of engine_name                                                             BRIDGES
+item                                                                          2
+source                                                                 abstract
+statement                     Perennial grasses miscanthus and switchgrass a...
+quote                         integrating low-input perennial grasses, such ...
+topic_id                                                                 T12003
+topic                                  Bioenergy crop production and management
+subfield_id                                                      subfields/1102
+subfield                                              Agronomy and Crop Science
+field                                      Agricultural and Biological Sciences
+topic_basis                                      classifier rank 1 (score 0.67)
+cpc_patents_us_2024_25                                      A01H:2098; D21C:265
+cpc_patents_region_2024_25                                      A01H:30; D21C:8
+cpc                                                                  A01H; D21C
+Name: 1, dtype: object>",cpc,A01H,New plants or non-transgenic processes for obtaining them; plant reproduction by tissue culture techniques,9867,273.0,402.0,408.0,406.0
+BRIDGES,"<bound method IndexOpsMixin.item of engine_name                                                             BRIDGES
+item                                                                          2
+source                                                                 abstract
+statement                     Perennial grasses miscanthus and switchgrass a...
+quote                         integrating low-input perennial grasses, such ...
+topic_id                                                                 T12003
+topic                                  Bioenergy crop production and management
+subfield_id                                                      subfields/1102
+subfield                                              Agronomy and Crop Science
+field                                      Agricultural and Biological Sciences
+topic_basis                                      classifier rank 1 (score 0.67)
+cpc_patents_us_2024_25                                      A01H:2098; D21C:265
+cpc_patents_region_2024_25                                      A01H:30; D21C:8
+cpc                                                                  A01H; D21C
+Name: 1, dtype: object>",cpc,D21C,Production of cellulose by removing non-cellulose substances from cellulose-containing materials; regeneration of pulping liquors; apparatus therefor,9867,444.0,376.0,428.0,425.0
+BRIDGES,"<bound method IndexOpsMixin.item of engine_name                                                             BRIDGES
+item                                                                          3
+source                                                                 abstract
+statement                     Biobased materials for automotive parts, const...
+quote                         supply materials and products for the automoti...
+topic_id                                                                 T10513
+topic                                       Natural Fiber Reinforced Composites
+subfield_id                                                      subfields/2507
+subfield                                                  Polymers and Plastics
+field                                                         Materials Science
+topic_basis                                      classifier rank 1 (score 0.53)
+cpc_patents_us_2024_25                        C04B18:235; B65D65:569; C08L:6056
+cpc_patents_region_2024_25                          C04B18:1; B65D65:3; C08L:62
+cpc                                                        C04B18; B65D65; C08L
+Name: 2, dtype: object>",openalex_topic,T10513,Natural Fiber Reinforced Composites,4516,430.0,287.0,285.0,290.0
+BRIDGES,"<bound method IndexOpsMixin.item of engine_name                                                             BRIDGES
+item                                                                          3
+source                                                                 abstract
+statement                     Biobased materials for automotive parts, const...
+quote                         supply materials and products for the automoti...
+topic_id                                                                 T10513
+topic                                       Natural Fiber Reinforced Composites
+subfield_id                                                      subfields/2507
+subfield                                                  Polymers and Plastics
+field                                                         Materials Science
+topic_basis                                      classifier rank 1 (score 0.53)
+cpc_patents_us_2024_25                        C04B18:235; B65D65:569; C08L:6056
+cpc_patents_region_2024_25                          C04B18:1; B65D65:3; C08L:62
+cpc                                                        C04B18; B65D65; C08L
+Name: 2, dtype: object>",cpc,C04B18,"Lime, magnesia; slag; cements; compositions thereof, e.g. mortars, concrete or like building materials; artificial stone; ceramics; refractories; treatment of natural stone",9867,5848.0,6415.0,5112.0,6189.0
+BRIDGES,"<bound method IndexOpsMixin.item of engine_name                                                             BRIDGES
+item                                                                          3
+source                                                                 abstract
+statement                     Biobased materials for automotive parts, const...
+quote                         supply materials and products for the automoti...
+topic_id                                                                 T10513
+topic                                       Natural Fiber Reinforced Composites
+subfield_id                                                      subfields/2507
+subfield                                                  Polymers and Plastics
+field                                                         Materials Science
+topic_basis                                      classifier rank 1 (score 0.53)
+cpc_patents_us_2024_25                        C04B18:235; B65D65:569; C08L:6056
+cpc_patents_region_2024_25                          C04B18:1; B65D65:3; C08L:62
+cpc                                                        C04B18; B65D65; C08L
+Name: 2, dtype: object>",cpc,B65D65,"Containers for storage or transport of articles or materials, e.g. bags, barrels, bottles, boxes, cans, cartons, crates, drums, jars, tanks, hoppers, forwarding containers; accessories, closures, or fittings therefor; packaging elements; packages",9867,79.0,1697.0,14.0,1728.0
+BRIDGES,"<bound method IndexOpsMixin.item of engine_name                                                             BRIDGES
+item                                                                          3
+source                                                                 abstract
+statement                     Biobased materials for automotive parts, const...
+quote                         supply materials and products for the automoti...
+topic_id                                                                 T10513
+topic                                       Natural Fiber Reinforced Composites
+subfield_id                                                      subfields/2507
+subfield                                                  Polymers and Plastics
+field                                                         Materials Science
+topic_basis                                      classifier rank 1 (score 0.53)
+cpc_patents_us_2024_25                        C04B18:235; B65D65:569; C08L:6056
+cpc_patents_region_2024_25                          C04B18:1; B65D65:3; C08L:62
+cpc                                                        C04B18; B65D65; C08L
+Name: 2, dtype: object>",cpc,C08L,Compositions of macromolecular compounds,9867,759.0,136.0,604.0,116.0
+BRIDGES,"<bound method IndexOpsMixin.item of engine_name                                                             BRIDGES
+item                                                                          4
+source                                                                 abstract
+statement                     Digital twins and AI decision support for crop...
+quote                         digital twins and AI-enabled decision-support ...
+topic_id                                                                 T10616
+topic                                                  Smart Agriculture and AI
+subfield_id                                                      subfields/1110
+subfield                                                          Plant Science
+field                                      Agricultural and Biological Sciences
+topic_basis                   manual: rank 2: the statement is about AI for ...
+cpc_patents_us_2024_25                                  G06Q50:6403; G05B17:335
+cpc_patents_region_2024_25                                  G06Q50:56; G05B17:3
+cpc                                                              G06Q50; G05B17
+Name: 3, dtype: object>",openalex_topic,T10616,Smart Agriculture and AI,4516,45.0,61.0,29.0,69.0
+BRIDGES,"<bound method IndexOpsMixin.item of engine_name                                                             BRIDGES
+item                                                                          4
+source                                                                 abstract
+statement                     Digital twins and AI decision support for crop...
+quote                         digital twins and AI-enabled decision-support ...
+topic_id                                                                 T10616
+topic                                                  Smart Agriculture and AI
+subfield_id                                                      subfields/1110
+subfield                                                          Plant Science
+field                                      Agricultural and Biological Sciences
+topic_basis                   manual: rank 2: the statement is about AI for ...
+cpc_patents_us_2024_25                                  G06Q50:6403; G05B17:335
+cpc_patents_region_2024_25                                  G06Q50:56; G05B17:3
+cpc                                                              G06Q50; G05B17
+Name: 3, dtype: object>",cpc,G06Q50,"Information and communication technology [ict] specially adapted for administrative, commercial, financial, managerial or supervisory purposes; systems or methods specially adapted for administrative, commercial, financial, managerial or supervisory purposes, not otherwise provided for",9867,7244.0,9486.0,8301.0,9581.0
+BRIDGES,"<bound method IndexOpsMixin.item of engine_name                                                             BRIDGES
+item                                                                          4
+source                                                                 abstract
+statement                     Digital twins and AI decision support for crop...
+quote                         digital twins and AI-enabled decision-support ...
+topic_id                                                                 T10616
+topic                                                  Smart Agriculture and AI
+subfield_id                                                      subfields/1110
+subfield                                                          Plant Science
+field                                      Agricultural and Biological Sciences
+topic_basis                   manual: rank 2: the statement is about AI for ...
+cpc_patents_us_2024_25                                  G06Q50:6403; G05B17:335
+cpc_patents_region_2024_25                                  G06Q50:56; G05B17:3
+cpc                                                              G06Q50; G05B17
+Name: 3, dtype: object>",cpc,G05B17,Control or regulating systems in general; functional elements of such systems; monitoring or testing arrangements for such systems or elements,9867,2154.0,5798.0,4562.0,5950.0
+Critical Materials Crossroads,"<bound method IndexOpsMixin.item of engine_name                                       Critical Materials Crossroads
+item                                                                          1
+source                                                                    title
+statement                            Critical materials production and refining
+quote                         Critical Materials Crossroads ... onshore crit...
+topic_id                                                                 T11091
+topic                                       Extraction and Separation Processes
+subfield_id                                                      subfields/2506
+subfield                                                      Metals and Alloys
+field                                                         Materials Science
+topic_basis                                      classifier rank 1 (score 0.99)
+cpc_patents_us_2024_25                                                 C22B:688
+cpc_patents_region_2024_25                                               C22B:8
+cpc                                                                        C22B
+Name: 4, dtype: object>",openalex_topic,T11091,Extraction and Separation Processes,4516,33.0,77.0,25.0,59.0
+Critical Materials Crossroads,"<bound method IndexOpsMixin.item of engine_name                                       Critical Materials Crossroads
+item                                                                          1
+source                                                                    title
+statement                            Critical materials production and refining
+quote                         Critical Materials Crossroads ... onshore crit...
+topic_id                                                                 T11091
+topic                                       Extraction and Separation Processes
+subfield_id                                                      subfields/2506
+subfield                                                      Metals and Alloys
+field                                                         Materials Science
+topic_basis                                      classifier rank 1 (score 0.99)
+cpc_patents_us_2024_25                                                 C22B:688
+cpc_patents_region_2024_25                                               C22B:8
+cpc                                                                        C22B
+Name: 4, dtype: object>",cpc,C22B,Production and refining of metals; pretreatment of raw materials,9867,1.0,3.0,1.0,3.0
+Critical Materials Crossroads,"<bound method IndexOpsMixin.item of engine_name                                       Critical Materials Crossroads
+item                                                                          2
+source                                                                 abstract
+statement                           Domestic metal refining at industrial scale
+quote                         domestic metal refining and advanced materials...
+topic_id                                                                 T11126
+topic                                Metallurgical Processes and Thermodynamics
+subfield_id                                                      subfields/2506
+subfield                                                      Metals and Alloys
+field                                                         Materials Science
+topic_basis                                      classifier rank 1 (score 0.88)
+cpc_patents_us_2024_25                                       C22B:688; C25C:147
+cpc_patents_region_2024_25                                       C22B:8; C25C:0
+cpc                                                                  C22B; C25C
+Name: 5, dtype: object>",openalex_topic,T11126,Metallurgical Processes and Thermodynamics,4516,92.0,84.0,65.0,76.0
+Critical Materials Crossroads,"<bound method IndexOpsMixin.item of engine_name                                       Critical Materials Crossroads
+item                                                                          2
+source                                                                 abstract
+statement                           Domestic metal refining at industrial scale
+quote                         domestic metal refining and advanced materials...
+topic_id                                                                 T11126
+topic                                Metallurgical Processes and Thermodynamics
+subfield_id                                                      subfields/2506
+subfield                                                      Metals and Alloys
+field                                                         Materials Science
+topic_basis                                      classifier rank 1 (score 0.88)
+cpc_patents_us_2024_25                                       C22B:688; C25C:147
+cpc_patents_region_2024_25                                       C22B:8; C25C:0
+cpc                                                                  C22B; C25C
+Name: 5, dtype: object>",cpc,C22B,Production and refining of metals; pretreatment of raw materials,9867,1.0,3.0,1.0,3.0
+Critical Materials Crossroads,"<bound method IndexOpsMixin.item of engine_name                                       Critical Materials Crossroads
+item                                                                          2
+source                                                                 abstract
+statement                           Domestic metal refining at industrial scale
+quote                         domestic metal refining and advanced materials...
+topic_id                                                                 T11126
+topic                                Metallurgical Processes and Thermodynamics
+subfield_id                                                      subfields/2506
+subfield                                                      Metals and Alloys
+field                                                         Materials Science
+topic_basis                                      classifier rank 1 (score 0.88)
+cpc_patents_us_2024_25                                       C22B:688; C25C:147
+cpc_patents_region_2024_25                                       C22B:8; C25C:0
+cpc                                                                  C22B; C25C
+Name: 5, dtype: object>",cpc,C25C,"Processes for the electrolytic production, recovery or refining of metals; apparatus therefor",9867,25.0,50.0,16.0,46.0
+Critical Materials Crossroads,"<bound method IndexOpsMixin.item of engine_name                                       Critical Materials Crossroads
+item                                                                          3
+source                                                                 abstract
+statement                     Materials processing scale-up with continuous ...
+quote                         Advanced manufacturing methods, including cont...
+topic_id                                                                 T11407
+topic                         Innovative Microfluidic and Catalytic Techniqu...
+subfield_id                                                      subfields/1507
+subfield                                      Fluid Flow and Transfer Processes
+field                                                      Chemical Engineering
+topic_basis                                      classifier rank 1 (score 0.88)
+cpc_patents_us_2024_25                                 B01J19:1176; G05B13:1587
+cpc_patents_region_2024_25                                 B01J19:17; G05B13:11
+cpc                                                              B01J19; G05B13
+Name: 6, dtype: object>",openalex_topic,T11407,Innovative Microfluidic and Catalytic Techniques Innovation,4516,91.0,631.0,116.0,718.0
+Critical Materials Crossroads,"<bound method IndexOpsMixin.item of engine_name                                       Critical Materials Crossroads
+item                                                                          3
+source                                                                 abstract
+statement                     Materials processing scale-up with continuous ...
+quote                         Advanced manufacturing methods, including cont...
+topic_id                                                                 T11407
+topic                         Innovative Microfluidic and Catalytic Techniqu...
+subfield_id                                                      subfields/1507
+subfield                                      Fluid Flow and Transfer Processes
+field                                                      Chemical Engineering
+topic_basis                                      classifier rank 1 (score 0.88)
+cpc_patents_us_2024_25                                 B01J19:1176; G05B13:1587
+cpc_patents_region_2024_25                                 B01J19:17; G05B13:11
+cpc                                                              B01J19; G05B13
+Name: 6, dtype: object>",cpc,B01J19,"Chemical or physical processes, e.g. catalysis or colloid chemistry; their relevant apparatus",9867,905.0,2113.0,1662.0,2135.0
+Critical Materials Crossroads,"<bound method IndexOpsMixin.item of engine_name                                       Critical Materials Crossroads
+item                                                                          3
+source                                                                 abstract
+statement                     Materials processing scale-up with continuous ...
+quote                         Advanced manufacturing methods, including cont...
+topic_id                                                                 T11407
+topic                         Innovative Microfluidic and Catalytic Techniqu...
+subfield_id                                                      subfields/1507
+subfield                                      Fluid Flow and Transfer Processes
+field                                                      Chemical Engineering
+topic_basis                                      classifier rank 1 (score 0.88)
+cpc_patents_us_2024_25                                 B01J19:1176; G05B13:1587
+cpc_patents_region_2024_25                                 B01J19:17; G05B13:11
+cpc                                                              B01J19; G05B13
+Name: 6, dtype: object>",cpc,G05B13,Control or regulating systems in general; functional elements of such systems; monitoring or testing arrangements for such systems or elements,9867,1257.0,7625.0,2220.0,7647.0
+Critical Mineral Accelerator,"<bound method IndexOpsMixin.item of engine_name                                        Critical Mineral Accelerator
+item                                                                          1
+source                                                                    title
+statement                     Critical mineral exploration, extraction, reco...
+quote                         Critical Mineral Accelerator ... improve the d...
+topic_id                                                                 T11091
+topic                                       Extraction and Separation Processes
+subfield_id                                                      subfields/2506
+subfield                                                      Metals and Alloys
+field                                                         Materials Science
+topic_basis                                      classifier rank 1 (score 0.96)
+cpc_patents_us_2024_25                                      C22B:688; G01V:2022
+cpc_patents_region_2024_25                                       C22B:0; G01V:0
+cpc                                                                  C22B; G01V
+Name: 7, dtype: object>",openalex_topic,T11091,Extraction and Separation Processes,4516,1.0,34.0,2.0,36.0
+Critical Mineral Accelerator,"<bound method IndexOpsMixin.item of engine_name                                        Critical Mineral Accelerator
+item                                                                          1
+source                                                                    title
+statement                     Critical mineral exploration, extraction, reco...
+quote                         Critical Mineral Accelerator ... improve the d...
+topic_id                                                                 T11091
+topic                                       Extraction and Separation Processes
+subfield_id                                                      subfields/2506
+subfield                                                      Metals and Alloys
+field                                                         Materials Science
+topic_basis                                      classifier rank 1 (score 0.96)
+cpc_patents_us_2024_25                                      C22B:688; G01V:2022
+cpc_patents_region_2024_25                                       C22B:0; G01V:0
+cpc                                                                  C22B; G01V
+Name: 7, dtype: object>",cpc,C22B,Production and refining of metals; pretreatment of raw materials,9867,19.0,91.0,79.0,100.0
+Critical Mineral Accelerator,"<bound method IndexOpsMixin.item of engine_name                                        Critical Mineral Accelerator
+item                                                                          1
+source                                                                    title
+statement                     Critical mineral exploration, extraction, reco...
+quote                         Critical Mineral Accelerator ... improve the d...
+topic_id                                                                 T11091
+topic                                       Extraction and Separation Processes
+subfield_id                                                      subfields/2506
+subfield                                                      Metals and Alloys
+field                                                         Materials Science
+topic_basis                                      classifier rank 1 (score 0.96)
+cpc_patents_us_2024_25                                      C22B:688; G01V:2022
+cpc_patents_region_2024_25                                       C22B:0; G01V:0
+cpc                                                                  C22B; G01V
+Name: 7, dtype: object>",cpc,G01V,Geophysics; gravitational measurements; detecting masses or objects; tags,9867,41.0,78.0,45.0,76.0
+Critical Mineral Accelerator,"<bound method IndexOpsMixin.item of engine_name                                        Critical Mineral Accelerator
+item                                                                          2
+source                                                                 abstract
+statement                     AI-based mineral discovery integrating geologi...
+quote                         integrating geological, geochemical, geophysic...
+topic_id                                                                 T12157
+topic                                         Geochemistry and Geologic Mapping
+subfield_id                                                      subfields/1906
+subfield                                             Geochemistry and Petrology
+field                                              Earth and Planetary Sciences
+topic_basis                                      classifier rank 1 (score 1.00)
+cpc_patents_us_2024_25                                    G01V:2022; G06N:29538
+cpc_patents_region_2024_25                                       G01V:0; G06N:1
+cpc                                                                  G01V; G06N
+Name: 8, dtype: object>",openalex_topic,T12157,Geochemistry and Geologic Mapping,4516,8.0,11.0,1.0,11.0
+Critical Mineral Accelerator,"<bound method IndexOpsMixin.item of engine_name                                        Critical Mineral Accelerator
+item                                                                          2
+source                                                                 abstract
+statement                     AI-based mineral discovery integrating geologi...
+quote                         integrating geological, geochemical, geophysic...
+topic_id                                                                 T12157
+topic                                         Geochemistry and Geologic Mapping
+subfield_id                                                      subfields/1906
+subfield                                             Geochemistry and Petrology
+field                                              Earth and Planetary Sciences
+topic_basis                                      classifier rank 1 (score 1.00)
+cpc_patents_us_2024_25                                    G01V:2022; G06N:29538
+cpc_patents_region_2024_25                                       G01V:0; G06N:1
+cpc                                                                  G01V; G06N
+Name: 8, dtype: object>",cpc,G01V,Geophysics; gravitational measurements; detecting masses or objects; tags,9867,41.0,78.0,45.0,76.0
+Critical Mineral Accelerator,"<bound method IndexOpsMixin.item of engine_name                                        Critical Mineral Accelerator
+item                                                                          2
+source                                                                 abstract
+statement                     AI-based mineral discovery integrating geologi...
+quote                         integrating geological, geochemical, geophysic...
+topic_id                                                                 T12157
+topic                                         Geochemistry and Geologic Mapping
+subfield_id                                                      subfields/1906
+subfield                                             Geochemistry and Petrology
+field                                              Earth and Planetary Sciences
+topic_basis                                      classifier rank 1 (score 1.00)
+cpc_patents_us_2024_25                                    G01V:2022; G06N:29538
+cpc_patents_region_2024_25                                       G01V:0; G06N:1
+cpc                                                                  G01V; G06N
+Name: 8, dtype: object>",cpc,G06N,Computing arrangements based on specific computational models,9867,836.0,3683.0,2147.0,3971.0
+Critical Mineral Accelerator,"<bound method IndexOpsMixin.item of engine_name                                        Critical Mineral Accelerator
+item                                                                          3
+source                                                                 abstract
+statement                     Recovery of critical minerals from low-grade o...
+quote                         advance recovery methods for primary resources...
+topic_id                                                                 T11073
+topic                                          Metal Extraction and Bioleaching
+subfield_id                                                      subfields/2506
+subfield                                                      Metals and Alloys
+field                                                         Materials Science
+topic_basis                                      classifier rank 1 (score 0.96)
+cpc_patents_us_2024_25                                      C22B3:361; B03D:114
+cpc_patents_region_2024_25                                      C22B3:0; B03D:0
+cpc                                                                 C22B3; B03D
+Name: 9, dtype: object>",openalex_topic,T11073,Metal Extraction and Bioleaching,4516,36.0,35.0,53.0,35.0
+Critical Mineral Accelerator,"<bound method IndexOpsMixin.item of engine_name                                        Critical Mineral Accelerator
+item                                                                          3
+source                                                                 abstract
+statement                     Recovery of critical minerals from low-grade o...
+quote                         advance recovery methods for primary resources...
+topic_id                                                                 T11073
+topic                                          Metal Extraction and Bioleaching
+subfield_id                                                      subfields/2506
+subfield                                                      Metals and Alloys
+field                                                         Materials Science
+topic_basis                                      classifier rank 1 (score 0.96)
+cpc_patents_us_2024_25                                      C22B3:361; B03D:114
+cpc_patents_region_2024_25                                      C22B3:0; B03D:0
+cpc                                                                 C22B3; B03D
+Name: 9, dtype: object>",cpc,C22B3,Production and refining of metals; pretreatment of raw materials,9867,39.0,322.0,168.0,362.0
+Critical Mineral Accelerator,"<bound method IndexOpsMixin.item of engine_name                                        Critical Mineral Accelerator
+item                                                                          3
+source                                                                 abstract
+statement                     Recovery of critical minerals from low-grade o...
+quote                         advance recovery methods for primary resources...
+topic_id                                                                 T11073
+topic                                          Metal Extraction and Bioleaching
+subfield_id                                                      subfields/2506
+subfield                                                      Metals and Alloys
+field                                                         Materials Science
+topic_basis                                      classifier rank 1 (score 0.96)
+cpc_patents_us_2024_25                                      C22B3:361; B03D:114
+cpc_patents_region_2024_25                                      C22B3:0; B03D:0
+cpc                                                                 C22B3; B03D
+Name: 9, dtype: object>",cpc,B03D,Flotation; differential sedimentation,9867,597.0,77.0,332.0,78.0
+FAST,"<bound method IndexOpsMixin.item of engine_name                                                                FAST
+item                                                                          1
+source                                                                    title
+statement                                     Advanced semiconductor technology
+quote                         Frontiers of Advanced Semiconductor Technology...
+topic_id                                                                 T10472
+topic                                       Semiconductor materials and devices
+subfield_id                                                      subfields/2208
+subfield                                  Electrical and Electronic Engineering
+field                                                               Engineering
+topic_basis                                      classifier rank 1 (score 0.46)
+cpc_patents_us_2024_25                                   H01L:23241; H10D:15363
+cpc_patents_region_2024_25                                   H01L:696; H10D:681
+cpc                                                                  H01L; H10D
+Name: 10, dtype: object>",openalex_topic,T10472,Semiconductor materials and devices,4516,3.0,10.0,3.0,10.0
+FAST,"<bound method IndexOpsMixin.item of engine_name                                                                FAST
+item                                                                          1
+source                                                                    title
+statement                                     Advanced semiconductor technology
+quote                         Frontiers of Advanced Semiconductor Technology...
+topic_id                                                                 T10472
+topic                                       Semiconductor materials and devices
+subfield_id                                                      subfields/2208
+subfield                                  Electrical and Electronic Engineering
+field                                                               Engineering
+topic_basis                                      classifier rank 1 (score 0.46)
+cpc_patents_us_2024_25                                   H01L:23241; H10D:15363
+cpc_patents_region_2024_25                                   H01L:696; H10D:681
+cpc                                                                  H01L; H10D
+Name: 10, dtype: object>",cpc,H01L,,9867,,,,
+FAST,"<bound method IndexOpsMixin.item of engine_name                                                                FAST
+item                                                                          1
+source                                                                    title
+statement                                     Advanced semiconductor technology
+quote                         Frontiers of Advanced Semiconductor Technology...
+topic_id                                                                 T10472
+topic                                       Semiconductor materials and devices
+subfield_id                                                      subfields/2208
+subfield                                  Electrical and Electronic Engineering
+field                                                               Engineering
+topic_basis                                      classifier rank 1 (score 0.46)
+cpc_patents_us_2024_25                                   H01L:23241; H10D:15363
+cpc_patents_region_2024_25                                   H01L:696; H10D:681
+cpc                                                                  H01L; H10D
+Name: 10, dtype: object>",cpc,H10D,Inorganic electric semiconductor devices,9867,1.0,1.0,1.0,1.0
+FAST,"<bound method IndexOpsMixin.item of engine_name                                                                FAST
+item                                                                          2
+source                                                                 abstract
+statement                     AI-enabled automatic process control for semic...
+quote                         AI-enabled Automatic Process Control concept w...
+topic_id                                                                 T10876
+topic                                       Fault Detection and Control Systems
+subfield_id                                                      subfields/2207
+subfield                                        Control and Systems Engineering
+field                                                               Engineering
+topic_basis                                      classifier rank 1 (score 0.50)
+cpc_patents_us_2024_25                                H01L21:13132; G05B19:5164
+cpc_patents_region_2024_25                                H01L21:446; G05B19:62
+cpc                                                              H01L21; G05B19
+Name: 11, dtype: object>",openalex_topic,T10876,Fault Detection and Control Systems,4516,144.0,805.0,292.0,750.0
+FAST,"<bound method IndexOpsMixin.item of engine_name                                                                FAST
+item                                                                          2
+source                                                                 abstract
+statement                     AI-enabled automatic process control for semic...
+quote                         AI-enabled Automatic Process Control concept w...
+topic_id                                                                 T10876
+topic                                       Fault Detection and Control Systems
+subfield_id                                                      subfields/2207
+subfield                                        Control and Systems Engineering
+field                                                               Engineering
+topic_basis                                      classifier rank 1 (score 0.50)
+cpc_patents_us_2024_25                                H01L21:13132; G05B19:5164
+cpc_patents_region_2024_25                                H01L21:446; G05B19:62
+cpc                                                              H01L21; G05B19
+Name: 11, dtype: object>",cpc,H01L21,,9867,,,,
+FAST,"<bound method IndexOpsMixin.item of engine_name                                                                FAST
+item                                                                          2
+source                                                                 abstract
+statement                     AI-enabled automatic process control for semic...
+quote                         AI-enabled Automatic Process Control concept w...
+topic_id                                                                 T10876
+topic                                       Fault Detection and Control Systems
+subfield_id                                                      subfields/2207
+subfield                                        Control and Systems Engineering
+field                                                               Engineering
+topic_basis                                      classifier rank 1 (score 0.50)
+cpc_patents_us_2024_25                                H01L21:13132; G05B19:5164
+cpc_patents_region_2024_25                                H01L21:446; G05B19:62
+cpc                                                              H01L21; G05B19
+Name: 11, dtype: object>",cpc,G05B19,Control or regulating systems in general; functional elements of such systems; monitoring or testing arrangements for such systems or elements,9867,90.0,1055.0,80.0,1069.0
+FAST,"<bound method IndexOpsMixin.item of engine_name                                                                FAST
+item                                                                          3
+source                                                                 abstract
+statement                      Design and manufacturing of advanced logic chips
+quote                         reshore design and manufacturing of the world'...
+topic_id                                                                 T11522
+topic                                           VLSI and FPGA Design Techniques
+subfield_id                                                      subfields/2208
+subfield                                  Electrical and Electronic Engineering
+field                                                               Engineering
+topic_basis                                      classifier rank 1 (score 0.49)
+cpc_patents_us_2024_25                                G06F30:4369; H01L21:13132
+cpc_patents_region_2024_25                               G06F30:113; H01L21:446
+cpc                                                              G06F30; H01L21
+Name: 12, dtype: object>",openalex_topic,T11522,VLSI and FPGA Design Techniques,4516,9.0,11.0,9.0,12.0
+FAST,"<bound method IndexOpsMixin.item of engine_name                                                                FAST
+item                                                                          3
+source                                                                 abstract
+statement                      Design and manufacturing of advanced logic chips
+quote                         reshore design and manufacturing of the world'...
+topic_id                                                                 T11522
+topic                                           VLSI and FPGA Design Techniques
+subfield_id                                                      subfields/2208
+subfield                                  Electrical and Electronic Engineering
+field                                                               Engineering
+topic_basis                                      classifier rank 1 (score 0.49)
+cpc_patents_us_2024_25                                G06F30:4369; H01L21:13132
+cpc_patents_region_2024_25                               G06F30:113; H01L21:446
+cpc                                                              G06F30; H01L21
+Name: 12, dtype: object>",cpc,G06F30,Electric digital data processing,9867,260.0,40.0,663.0,44.0
+FAST,"<bound method IndexOpsMixin.item of engine_name                                                                FAST
+item                                                                          3
+source                                                                 abstract
+statement                      Design and manufacturing of advanced logic chips
+quote                         reshore design and manufacturing of the world'...
+topic_id                                                                 T11522
+topic                                           VLSI and FPGA Design Techniques
+subfield_id                                                      subfields/2208
+subfield                                  Electrical and Electronic Engineering
+field                                                               Engineering
+topic_basis                                      classifier rank 1 (score 0.49)
+cpc_patents_us_2024_25                                G06F30:4369; H01L21:13132
+cpc_patents_region_2024_25                               G06F30:113; H01L21:446
+cpc                                                              G06F30; H01L21
+Name: 12, dtype: object>",cpc,H01L21,,9867,,,,
+Grid Modernization,"<bound method IndexOpsMixin.item of engine_name                                                  Grid Modernization
+item                                                                          1
+source                                                                    title
+statement                                     Electric power grid modernization
+quote                         Carolinas Engine for Grid Modernization ... de...
+topic_id                                                                 T12451
+topic                                              Smart Grid and Power Systems
+subfield_id                                                      subfields/2208
+subfield                                  Electrical and Electronic Engineering
+field                                                               Engineering
+topic_basis                                      classifier rank 1 (score 0.96)
+cpc_patents_us_2024_25                                               H02J3:2652
+cpc_patents_region_2024_25                                             H02J3:90
+cpc                                                                       H02J3
+Name: 13, dtype: object>",openalex_topic,T12451,Smart Grid and Power Systems,4516,2.0,1.0,2.0,1.0
+Grid Modernization,"<bound method IndexOpsMixin.item of engine_name                                                  Grid Modernization
+item                                                                          1
+source                                                                    title
+statement                                     Electric power grid modernization
+quote                         Carolinas Engine for Grid Modernization ... de...
+topic_id                                                                 T12451
+topic                                              Smart Grid and Power Systems
+subfield_id                                                      subfields/2208
+subfield                                  Electrical and Electronic Engineering
+field                                                               Engineering
+topic_basis                                      classifier rank 1 (score 0.96)
+cpc_patents_us_2024_25                                               H02J3:2652
+cpc_patents_region_2024_25                                             H02J3:90
+cpc                                                                       H02J3
+Name: 13, dtype: object>",cpc,H02J3,Electric power networks; circuit arrangements or systems for supplying or distributing electric power; systems for storing electric energy,9867,7.0,7.0,7.0,8.0
+Grid Modernization,"<bound method IndexOpsMixin.item of engine_name                                                  Grid Modernization
+item                                                                          2
+source                                                                 abstract
+statement                     Grid-edge automation of power distribution net...
+quote                         Key technology areas include grid-edge automation
+topic_id                                                                 T12451
+topic                                              Smart Grid and Power Systems
+subfield_id                                                      subfields/2208
+subfield                                  Electrical and Electronic Engineering
+field                                                               Engineering
+topic_basis                                      classifier rank 1 (score 0.74)
+cpc_patents_us_2024_25                                    H02J13:867; Y04S:1497
+cpc_patents_region_2024_25                                   H02J13:39; Y04S:90
+cpc                                                                H02J13; Y04S
+Name: 14, dtype: object>",openalex_topic,T12451,Smart Grid and Power Systems,4516,2.0,1.0,2.0,1.0
+Grid Modernization,"<bound method IndexOpsMixin.item of engine_name                                                  Grid Modernization
+item                                                                          2
+source                                                                 abstract
+statement                     Grid-edge automation of power distribution net...
+quote                         Key technology areas include grid-edge automation
+topic_id                                                                 T12451
+topic                                              Smart Grid and Power Systems
+subfield_id                                                      subfields/2208
+subfield                                  Electrical and Electronic Engineering
+field                                                               Engineering
+topic_basis                                      classifier rank 1 (score 0.74)
+cpc_patents_us_2024_25                                    H02J13:867; Y04S:1497
+cpc_patents_region_2024_25                                   H02J13:39; Y04S:90
+cpc                                                                H02J13; Y04S
+Name: 14, dtype: object>",cpc,H02J13,Electric power networks; circuit arrangements or systems for supplying or distributing electric power; systems for storing electric energy,9867,13.0,10.0,13.0,9.0
+Grid Modernization,"<bound method IndexOpsMixin.item of engine_name                                                  Grid Modernization
+item                                                                          2
+source                                                                 abstract
+statement                     Grid-edge automation of power distribution net...
+quote                         Key technology areas include grid-edge automation
+topic_id                                                                 T12451
+topic                                              Smart Grid and Power Systems
+subfield_id                                                      subfields/2208
+subfield                                  Electrical and Electronic Engineering
+field                                                               Engineering
+topic_basis                                      classifier rank 1 (score 0.74)
+cpc_patents_us_2024_25                                    H02J13:867; Y04S:1497
+cpc_patents_region_2024_25                                   H02J13:39; Y04S:90
+cpc                                                                H02J13; Y04S
+Name: 14, dtype: object>",cpc,Y04S,"Systems integrating technologies related to power network operation, communication or information technologies for improving the electrical power generation, transmission, distribution, management or usage, i.e. smart grids",9867,25.0,9.0,53.0,10.0
+Grid Modernization,"<bound method IndexOpsMixin.item of engine_name                                          Grid Modernization
+item                                                                  3
+source                                                         abstract
+statement                     Solid state and hybrid power transformers
+quote                               solid state and hybrid transformers
+topic_id                                                         T10175
+topic                                         Advanced DC-DC Converters
+subfield_id                                              subfields/2208
+subfield                          Electrical and Electronic Engineering
+field                                                       Engineering
+topic_basis                              classifier rank 1 (score 0.86)
+cpc_patents_us_2024_25                           H02M5:375; H01F27:1931
+cpc_patents_region_2024_25                           H02M5:4; H01F27:19
+cpc                                                       H02M5; H01F27
+Name: 15, dtype: object>",openalex_topic,T10175,Advanced DC-DC Converters,4516,92.0,24.0,89.0,27.0
+Grid Modernization,"<bound method IndexOpsMixin.item of engine_name                                          Grid Modernization
+item                                                                  3
+source                                                         abstract
+statement                     Solid state and hybrid power transformers
+quote                               solid state and hybrid transformers
+topic_id                                                         T10175
+topic                                         Advanced DC-DC Converters
+subfield_id                                              subfields/2208
+subfield                          Electrical and Electronic Engineering
+field                                                       Engineering
+topic_basis                              classifier rank 1 (score 0.86)
+cpc_patents_us_2024_25                           H02M5:375; H01F27:1931
+cpc_patents_region_2024_25                           H02M5:4; H01F27:19
+cpc                                                       H02M5; H01F27
+Name: 15, dtype: object>",cpc,H02M5,"Apparatus for conversion between ac and ac, between ac and dc, or between dc and dc, and for use with mains or similar power supply systems; conversion of dc or ac input power into surge output power; control or regulation thereof",9867,93.0,99.0,83.0,106.0
+Grid Modernization,"<bound method IndexOpsMixin.item of engine_name                                          Grid Modernization
+item                                                                  3
+source                                                         abstract
+statement                     Solid state and hybrid power transformers
+quote                               solid state and hybrid transformers
+topic_id                                                         T10175
+topic                                         Advanced DC-DC Converters
+subfield_id                                              subfields/2208
+subfield                          Electrical and Electronic Engineering
+field                                                       Engineering
+topic_basis                              classifier rank 1 (score 0.86)
+cpc_patents_us_2024_25                           H02M5:375; H01F27:1931
+cpc_patents_region_2024_25                           H02M5:4; H01F27:19
+cpc                                                       H02M5; H01F27
+Name: 15, dtype: object>",cpc,H01F27,Magnets; inductances; transformers; selection of materials for their magnetic properties,9867,68.0,628.0,89.0,695.0
+Grid Modernization,"<bound method IndexOpsMixin.item of engine_name                                          Grid Modernization
+item                                                                  4
+source                                                         abstract
+statement                            Cybersecurity of the electric grid
+quote                         solutions that enhance grid cybersecurity
+topic_id                                                         T10917
+topic                                Smart Grid Security and Resilience
+subfield_id                                              subfields/2207
+subfield                                Control and Systems Engineering
+field                                                       Engineering
+topic_basis                              classifier rank 1 (score 1.00)
+cpc_patents_us_2024_25                         H04L63:16322; Y04S40:574
+cpc_patents_region_2024_25                        H04L63:730; Y04S40:58
+cpc                                                      H04L63; Y04S40
+Name: 16, dtype: object>",openalex_topic,T10917,Smart Grid Security and Resilience,4516,9.0,9.0,11.0,9.0
+Grid Modernization,"<bound method IndexOpsMixin.item of engine_name                                          Grid Modernization
+item                                                                  4
+source                                                         abstract
+statement                            Cybersecurity of the electric grid
+quote                         solutions that enhance grid cybersecurity
+topic_id                                                         T10917
+topic                                Smart Grid Security and Resilience
+subfield_id                                              subfields/2207
+subfield                                Control and Systems Engineering
+field                                                       Engineering
+topic_basis                              classifier rank 1 (score 1.00)
+cpc_patents_us_2024_25                         H04L63:16322; Y04S40:574
+cpc_patents_region_2024_25                        H04L63:730; Y04S40:58
+cpc                                                      H04L63; Y04S40
+Name: 16, dtype: object>",cpc,H04L63,"Transmission of digital information, e.g. telegraphic communication",9867,44.0,255.0,100.0,278.0
+Grid Modernization,"<bound method IndexOpsMixin.item of engine_name                                          Grid Modernization
+item                                                                  4
+source                                                         abstract
+statement                            Cybersecurity of the electric grid
+quote                         solutions that enhance grid cybersecurity
+topic_id                                                         T10917
+topic                                Smart Grid Security and Resilience
+subfield_id                                              subfields/2207
+subfield                                Control and Systems Engineering
+field                                                       Engineering
+topic_basis                              classifier rank 1 (score 1.00)
+cpc_patents_us_2024_25                         H04L63:16322; Y04S40:574
+cpc_patents_region_2024_25                        H04L63:730; Y04S40:58
+cpc                                                      H04L63; Y04S40
+Name: 16, dtype: object>",cpc,Y04S40,"Systems integrating technologies related to power network operation, communication or information technologies for improving the electrical power generation, transmission, distribution, management or usage, i.e. smart grids",9867,25.0,18.0,53.0,18.0
+Grid Modernization,"<bound method IndexOpsMixin.item of engine_name                                                  Grid Modernization
+item                                                                          5
+source                                                                 abstract
+statement                     Advanced construction techniques for nuclear p...
+quote                              advanced techniques for nuclear construction
+topic_id                                                                 T13031
+topic                                 Civil and Structural Engineering Research
+subfield_id                                                      subfields/2205
+subfield                                       Civil and Structural Engineering
+field                                                               Engineering
+topic_basis                                      classifier rank 1 (score 0.84)
+cpc_patents_us_2024_25                                       G21C:359; G21D:138
+cpc_patents_region_2024_25                                     G21C:39; G21D:10
+cpc                                                                  G21C; G21D
+Name: 17, dtype: object>",openalex_topic,T13031,Civil and Structural Engineering Research,4516,1721.0,3185.0,1698.0,3065.0
+Grid Modernization,"<bound method IndexOpsMixin.item of engine_name                                                  Grid Modernization
+item                                                                          5
+source                                                                 abstract
+statement                     Advanced construction techniques for nuclear p...
+quote                              advanced techniques for nuclear construction
+topic_id                                                                 T13031
+topic                                 Civil and Structural Engineering Research
+subfield_id                                                      subfields/2205
+subfield                                       Civil and Structural Engineering
+field                                                               Engineering
+topic_basis                                      classifier rank 1 (score 0.84)
+cpc_patents_us_2024_25                                       G21C:359; G21D:138
+cpc_patents_region_2024_25                                     G21C:39; G21D:10
+cpc                                                                  G21C; G21D
+Name: 17, dtype: object>",cpc,G21C,Nuclear reactors,9867,1014.0,942.0,634.0,906.0
+Grid Modernization,"<bound method IndexOpsMixin.item of engine_name                                                  Grid Modernization
+item                                                                          5
+source                                                                 abstract
+statement                     Advanced construction techniques for nuclear p...
+quote                              advanced techniques for nuclear construction
+topic_id                                                                 T13031
+topic                                 Civil and Structural Engineering Research
+subfield_id                                                      subfields/2205
+subfield                                       Civil and Structural Engineering
+field                                                               Engineering
+topic_basis                                      classifier rank 1 (score 0.84)
+cpc_patents_us_2024_25                                       G21C:359; G21D:138
+cpc_patents_region_2024_25                                     G21C:39; G21D:10
+cpc                                                                  G21C; G21D
+Name: 17, dtype: object>",cpc,G21D,Nuclear power plant,9867,433.0,313.0,453.0,275.0
+IMPACT,"<bound method IndexOpsMixin.item of engine_name                                                              IMPACT
+item                                                                          1
+source                                                                 abstract
+statement                     Prevention diagnosis and treatment of musculos...
+quote                         Title not informative (IMPACT is not expanded)...
+topic_id                                                                 T13946
+topic                              Musculoskeletal Disorders and Rehabilitation
+subfield_id                                                      subfields/2742
+subfield                                                         Rehabilitation
+field                                                                  Medicine
+topic_basis                                      classifier rank 1 (score 0.48)
+cpc_patents_us_2024_25                                 A61F2:5617; A61B17:10101
+cpc_patents_region_2024_25                                A61F2:255; A61B17:267
+cpc                                                               A61F2; A61B17
+Name: 18, dtype: object>",openalex_topic,T13946,Musculoskeletal Disorders and Rehabilitation,4516,5.0,4.0,4.0,4.0
+IMPACT,"<bound method IndexOpsMixin.item of engine_name                                                              IMPACT
+item                                                                          1
+source                                                                 abstract
+statement                     Prevention diagnosis and treatment of musculos...
+quote                         Title not informative (IMPACT is not expanded)...
+topic_id                                                                 T13946
+topic                              Musculoskeletal Disorders and Rehabilitation
+subfield_id                                                      subfields/2742
+subfield                                                         Rehabilitation
+field                                                                  Medicine
+topic_basis                                      classifier rank 1 (score 0.48)
+cpc_patents_us_2024_25                                 A61F2:5617; A61B17:10101
+cpc_patents_region_2024_25                                A61F2:255; A61B17:267
+cpc                                                               A61F2; A61B17
+Name: 18, dtype: object>",cpc,A61F2,"Filters implantable into blood vessels; prostheses; devices providing patency to, or preventing collapsing of, tubular structures of the body, e.g. stents; orthopaedic, nursing or contraceptive devices; fomentation; treatment or protection of eyes or ears; bandages, dressings or absorbent pads; first-aid kits",9867,218.0,221.0,154.0,190.0
+IMPACT,"<bound method IndexOpsMixin.item of engine_name                                                              IMPACT
+item                                                                          1
+source                                                                 abstract
+statement                     Prevention diagnosis and treatment of musculos...
+quote                         Title not informative (IMPACT is not expanded)...
+topic_id                                                                 T13946
+topic                              Musculoskeletal Disorders and Rehabilitation
+subfield_id                                                      subfields/2742
+subfield                                                         Rehabilitation
+field                                                                  Medicine
+topic_basis                                      classifier rank 1 (score 0.48)
+cpc_patents_us_2024_25                                 A61F2:5617; A61B17:10101
+cpc_patents_region_2024_25                                A61F2:255; A61B17:267
+cpc                                                               A61F2; A61B17
+Name: 18, dtype: object>",cpc,A61B17,Diagnosis; surgery; identification,9867,184.0,283.0,121.0,250.0
+IMPACT,"<bound method IndexOpsMixin.item of engine_name                                                              IMPACT
+item                                                                          2
+source                                                                 abstract
+statement                                       Orthopedic devices and implants
+quote                         advance orthopedic devices, biologics, diagnos...
+topic_id                                                                 T10512
+topic                                     Orthopaedic implants and arthroplasty
+subfield_id                                                      subfields/2746
+subfield                                                                Surgery
+field                                                                  Medicine
+topic_basis                                      classifier rank 1 (score 1.00)
+cpc_patents_us_2024_25                                 A61F2:5617; A61B17:10101
+cpc_patents_region_2024_25                                A61F2:255; A61B17:267
+cpc                                                               A61F2; A61B17
+Name: 19, dtype: object>",openalex_topic,T10512,Orthopaedic implants and arthroplasty,4516,74.0,624.0,85.0,578.0
+IMPACT,"<bound method IndexOpsMixin.item of engine_name                                                              IMPACT
+item                                                                          2
+source                                                                 abstract
+statement                                       Orthopedic devices and implants
+quote                         advance orthopedic devices, biologics, diagnos...
+topic_id                                                                 T10512
+topic                                     Orthopaedic implants and arthroplasty
+subfield_id                                                      subfields/2746
+subfield                                                                Surgery
+field                                                                  Medicine
+topic_basis                                      classifier rank 1 (score 1.00)
+cpc_patents_us_2024_25                                 A61F2:5617; A61B17:10101
+cpc_patents_region_2024_25                                A61F2:255; A61B17:267
+cpc                                                               A61F2; A61B17
+Name: 19, dtype: object>",cpc,A61F2,"Filters implantable into blood vessels; prostheses; devices providing patency to, or preventing collapsing of, tubular structures of the body, e.g. stents; orthopaedic, nursing or contraceptive devices; fomentation; treatment or protection of eyes or ears; bandages, dressings or absorbent pads; first-aid kits",9867,218.0,221.0,154.0,190.0
+IMPACT,"<bound method IndexOpsMixin.item of engine_name                                                              IMPACT
+item                                                                          2
+source                                                                 abstract
+statement                                       Orthopedic devices and implants
+quote                         advance orthopedic devices, biologics, diagnos...
+topic_id                                                                 T10512
+topic                                     Orthopaedic implants and arthroplasty
+subfield_id                                                      subfields/2746
+subfield                                                                Surgery
+field                                                                  Medicine
+topic_basis                                      classifier rank 1 (score 1.00)
+cpc_patents_us_2024_25                                 A61F2:5617; A61B17:10101
+cpc_patents_region_2024_25                                A61F2:255; A61B17:267
+cpc                                                               A61F2; A61B17
+Name: 19, dtype: object>",cpc,A61B17,Diagnosis; surgery; identification,9867,184.0,283.0,121.0,250.0
+IMPACT,"<bound method IndexOpsMixin.item of engine_name                                                              IMPACT
+item                                                                          3
+source                                                                 abstract
+statement                     Biologics and drug development for bone and jo...
+quote                         orthopedic devices, biologics ... drug develop...
+topic_id                                                                 T10105
+topic                                   Osteoarthritis Treatment and Mechanisms
+subfield_id                                                      subfields/2745
+subfield                                                           Rheumatology
+field                                                                  Medicine
+topic_basis                                      classifier rank 1 (score 0.46)
+cpc_patents_us_2024_25                                  A61K:24175; A61P19:1125
+cpc_patents_region_2024_25                                   A61K:253; A61P19:8
+cpc                                                                A61K; A61P19
+Name: 20, dtype: object>",openalex_topic,T10105,Osteoarthritis Treatment and Mechanisms,4516,29.0,27.0,20.0,21.0
+IMPACT,"<bound method IndexOpsMixin.item of engine_name                                                              IMPACT
+item                                                                          3
+source                                                                 abstract
+statement                     Biologics and drug development for bone and jo...
+quote                         orthopedic devices, biologics ... drug develop...
+topic_id                                                                 T10105
+topic                                   Osteoarthritis Treatment and Mechanisms
+subfield_id                                                      subfields/2745
+subfield                                                           Rheumatology
+field                                                                  Medicine
+topic_basis                                      classifier rank 1 (score 0.46)
+cpc_patents_us_2024_25                                  A61K:24175; A61P19:1125
+cpc_patents_region_2024_25                                   A61K:253; A61P19:8
+cpc                                                                A61K; A61P19
+Name: 20, dtype: object>",cpc,A61K,"Preparations for medical, dental or toiletry purposes",9867,820.0,252.0,416.0,224.0
+IMPACT,"<bound method IndexOpsMixin.item of engine_name                                                              IMPACT
+item                                                                          3
+source                                                                 abstract
+statement                     Biologics and drug development for bone and jo...
+quote                         orthopedic devices, biologics ... drug develop...
+topic_id                                                                 T10105
+topic                                   Osteoarthritis Treatment and Mechanisms
+subfield_id                                                      subfields/2745
+subfield                                                           Rheumatology
+field                                                                  Medicine
+topic_basis                                      classifier rank 1 (score 0.46)
+cpc_patents_us_2024_25                                  A61K:24175; A61P19:1125
+cpc_patents_region_2024_25                                   A61K:253; A61P19:8
+cpc                                                                A61K; A61P19
+Name: 20, dtype: object>",cpc,A61P19,Specific therapeutic activity of chemical compounds or medicinal preparations,9867,394.0,154.0,184.0,131.0
+IMPACT,"<bound method IndexOpsMixin.item of engine_name                                                              IMPACT
+item                                                                          4
+source                                                                 abstract
+statement                     AI tools using medical imaging, electronic hea...
+quote                         leverage multimodal data, including imaging, e...
+topic_id                                                                 T11636
+topic                         Artificial Intelligence in Healthcare and Educ...
+subfield_id                                                      subfields/2718
+subfield                                                     Health Informatics
+field                                                                  Medicine
+topic_basis                                      classifier rank 1 (score 0.97)
+cpc_patents_us_2024_25                                 G16H50:6085; G06T7:19554
+cpc_patents_region_2024_25                                  G16H50:61; G06T7:76
+cpc                                                               G16H50; G06T7
+Name: 21, dtype: object>",openalex_topic,T11636,Artificial Intelligence in Healthcare and Education,4516,38.0,3.0,244.0,3.0
+IMPACT,"<bound method IndexOpsMixin.item of engine_name                                                              IMPACT
+item                                                                          4
+source                                                                 abstract
+statement                     AI tools using medical imaging, electronic hea...
+quote                         leverage multimodal data, including imaging, e...
+topic_id                                                                 T11636
+topic                         Artificial Intelligence in Healthcare and Educ...
+subfield_id                                                      subfields/2718
+subfield                                                     Health Informatics
+field                                                                  Medicine
+topic_basis                                      classifier rank 1 (score 0.97)
+cpc_patents_us_2024_25                                 G16H50:6085; G06T7:19554
+cpc_patents_region_2024_25                                  G16H50:61; G06T7:76
+cpc                                                               G16H50; G06T7
+Name: 21, dtype: object>",cpc,G16H50,"Healthcare informatics, i.e. information and communication technology [ict] specially adapted for the handling or processing of medical or healthcare data",9867,55.0,2.0,147.0,1.0
+IMPACT,"<bound method IndexOpsMixin.item of engine_name                                                              IMPACT
+item                                                                          4
+source                                                                 abstract
+statement                     AI tools using medical imaging, electronic hea...
+quote                         leverage multimodal data, including imaging, e...
+topic_id                                                                 T11636
+topic                         Artificial Intelligence in Healthcare and Educ...
+subfield_id                                                      subfields/2718
+subfield                                                     Health Informatics
+field                                                                  Medicine
+topic_basis                                      classifier rank 1 (score 0.97)
+cpc_patents_us_2024_25                                 G16H50:6085; G06T7:19554
+cpc_patents_region_2024_25                                  G16H50:61; G06T7:76
+cpc                                                               G16H50; G06T7
+Name: 21, dtype: object>",cpc,G06T7,"Image data processing or generation, in general",9867,1549.0,2659.0,2597.0,2665.0
+NEO-SMART,"<bound method IndexOpsMixin.item of engine_name                                                           NEO-SMART
+item                                                                          1
+source                                                                    title
+statement                           Advanced materials manufacturing technology
+quote                         Northeast Ohio Strengthening Manufacturing for...
+topic_id                                                                 T13290
+topic                               Diverse Industrial Engineering Technologies
+subfield_id                                                      subfields/2209
+subfield                               Industrial and Manufacturing Engineering
+field                                                               Engineering
+topic_basis                                      classifier rank 1 (score 0.29)
+cpc_patents_us_2024_25                                                      NaN
+cpc_patents_region_2024_25                                                  NaN
+cpc                                                                         NaN
+Name: 22, dtype: object>",openalex_topic,T13290,Diverse Industrial Engineering Technologies,4516,83.0,66.0,148.0,63.0
+NEO-SMART,"<bound method IndexOpsMixin.item of engine_name                                                           NEO-SMART
+item                                                                          2
+source                                                                 abstract
+statement                     Metals production, processing, recovery and re...
+quote                         three interconnected materials systems - metal...
+topic_id                                                                 T11091
+topic                                       Extraction and Separation Processes
+subfield_id                                                      subfields/2506
+subfield                                                      Metals and Alloys
+field                                                         Materials Science
+topic_basis                                      classifier rank 1 (score 0.78)
+cpc_patents_us_2024_25                                      C22B:688; C22C:2757
+cpc_patents_region_2024_25                                     C22B:10; C22C:61
+cpc                                                                  C22B; C22C
+Name: 23, dtype: object>",openalex_topic,T11091,Extraction and Separation Processes,4516,419.0,54.0,418.0,42.0
+NEO-SMART,"<bound method IndexOpsMixin.item of engine_name                                                           NEO-SMART
+item                                                                          2
+source                                                                 abstract
+statement                     Metals production, processing, recovery and re...
+quote                         three interconnected materials systems - metal...
+topic_id                                                                 T11091
+topic                                       Extraction and Separation Processes
+subfield_id                                                      subfields/2506
+subfield                                                      Metals and Alloys
+field                                                         Materials Science
+topic_basis                                      classifier rank 1 (score 0.78)
+cpc_patents_us_2024_25                                      C22B:688; C22C:2757
+cpc_patents_region_2024_25                                     C22B:10; C22C:61
+cpc                                                                  C22B; C22C
+Name: 23, dtype: object>",cpc,C22B,Production and refining of metals; pretreatment of raw materials,9867,39.0,11.0,81.0,11.0
+NEO-SMART,"<bound method IndexOpsMixin.item of engine_name                                                           NEO-SMART
+item                                                                          2
+source                                                                 abstract
+statement                     Metals production, processing, recovery and re...
+quote                         three interconnected materials systems - metal...
+topic_id                                                                 T11091
+topic                                       Extraction and Separation Processes
+subfield_id                                                      subfields/2506
+subfield                                                      Metals and Alloys
+field                                                         Materials Science
+topic_basis                                      classifier rank 1 (score 0.78)
+cpc_patents_us_2024_25                                      C22B:688; C22C:2757
+cpc_patents_region_2024_25                                     C22B:10; C22C:61
+cpc                                                                  C22B; C22C
+Name: 23, dtype: object>",cpc,C22C,Alloys,9867,195.0,46.0,126.0,49.0
+NEO-SMART,"<bound method IndexOpsMixin.item of engine_name                                                           NEO-SMART
+item                                                                          3
+source                                                                 abstract
+statement                     Polymers: feedstock development, processing, r...
+quote                         polymers ... sourcing and feedstock developmen...
+topic_id                                                                 T10389
+topic                                    Polymer crystallization and properties
+subfield_id                                                      subfields/2507
+subfield                                                  Polymers and Plastics
+field                                                         Materials Science
+topic_basis                                      classifier rank 1 (score 0.96)
+cpc_patents_us_2024_25                                    C08J:3986; B29B17:258
+cpc_patents_region_2024_25                                   C08J:127; B29B17:7
+cpc                                                                C08J; B29B17
+Name: 24, dtype: object>",openalex_topic,T10389,Polymer crystallization and properties,4516,520.0,163.0,490.0,160.0
+NEO-SMART,"<bound method IndexOpsMixin.item of engine_name                                                           NEO-SMART
+item                                                                          3
+source                                                                 abstract
+statement                     Polymers: feedstock development, processing, r...
+quote                         polymers ... sourcing and feedstock developmen...
+topic_id                                                                 T10389
+topic                                    Polymer crystallization and properties
+subfield_id                                                      subfields/2507
+subfield                                                  Polymers and Plastics
+field                                                         Materials Science
+topic_basis                                      classifier rank 1 (score 0.96)
+cpc_patents_us_2024_25                                    C08J:3986; B29B17:258
+cpc_patents_region_2024_25                                   C08J:127; B29B17:7
+cpc                                                                C08J; B29B17
+Name: 24, dtype: object>",cpc,C08J,"Working-up; general processes of compounding; after-treatment not covered by subclasses c08b, c08c, c08f, c08g or c08h",9867,973.0,602.0,827.0,673.0
+NEO-SMART,"<bound method IndexOpsMixin.item of engine_name                                                           NEO-SMART
+item                                                                          3
+source                                                                 abstract
+statement                     Polymers: feedstock development, processing, r...
+quote                         polymers ... sourcing and feedstock developmen...
+topic_id                                                                 T10389
+topic                                    Polymer crystallization and properties
+subfield_id                                                      subfields/2507
+subfield                                                  Polymers and Plastics
+field                                                         Materials Science
+topic_basis                                      classifier rank 1 (score 0.96)
+cpc_patents_us_2024_25                                    C08J:3986; B29B17:258
+cpc_patents_region_2024_25                                   C08J:127; B29B17:7
+cpc                                                                C08J; B29B17
+Name: 24, dtype: object>",cpc,B29B17,Preparation or pretreatment of the material to be shaped; making granules or preforms; recovery of plastics or other constituents of waste material containing plastics,9867,295.0,152.0,203.0,141.0
+NEO-SMART,"<bound method IndexOpsMixin.item of engine_name                                                           NEO-SMART
+item                                                                          4
+source                                                                 abstract
+statement                     Chemicals and coatings: development and durabi...
+quote                             chemicals and coatings ... product durability
+topic_id                                                                 T10310
+topic                                         Corrosion Behavior and Inhibition
+subfield_id                                                      subfields/2505
+subfield                                                    Materials Chemistry
+field                                                         Materials Science
+topic_basis                                      classifier rank 1 (score 0.89)
+cpc_patents_us_2024_25                                      C09D:4668; C23F:444
+cpc_patents_region_2024_25                                    C09D:128; C23F:12
+cpc                                                                  C09D; C23F
+Name: 25, dtype: object>",openalex_topic,T10310,Corrosion Behavior and Inhibition,4516,317.0,535.0,238.0,540.0
+NEO-SMART,"<bound method IndexOpsMixin.item of engine_name                                                           NEO-SMART
+item                                                                          4
+source                                                                 abstract
+statement                     Chemicals and coatings: development and durabi...
+quote                             chemicals and coatings ... product durability
+topic_id                                                                 T10310
+topic                                         Corrosion Behavior and Inhibition
+subfield_id                                                      subfields/2505
+subfield                                                    Materials Chemistry
+field                                                         Materials Science
+topic_basis                                      classifier rank 1 (score 0.89)
+cpc_patents_us_2024_25                                      C09D:4668; C23F:444
+cpc_patents_region_2024_25                                    C09D:128; C23F:12
+cpc                                                                  C09D; C23F
+Name: 25, dtype: object>",cpc,C09D,"Coating compositions, e.g. paints, varnishes or lacquers; filling pastes; chemical paint or ink removers; inks; correcting fluids; woodstains; pastes or solids for colouring or printing; use of materials therefor",9867,1.0,21.0,1.0,21.0
+NEO-SMART,"<bound method IndexOpsMixin.item of engine_name                                                           NEO-SMART
+item                                                                          4
+source                                                                 abstract
+statement                     Chemicals and coatings: development and durabi...
+quote                             chemicals and coatings ... product durability
+topic_id                                                                 T10310
+topic                                         Corrosion Behavior and Inhibition
+subfield_id                                                      subfields/2505
+subfield                                                    Materials Chemistry
+field                                                         Materials Science
+topic_basis                                      classifier rank 1 (score 0.89)
+cpc_patents_us_2024_25                                      C09D:4668; C23F:444
+cpc_patents_region_2024_25                                    C09D:128; C23F:12
+cpc                                                                  C09D; C23F
+Name: 25, dtype: object>",cpc,C23F,Non-mechanical removal of metallic material from surface; inhibiting corrosion of metallic material or incrustation in general; multi-step processes for surface treatment of metallic material involving at least one process provided for in class c23 and at least one process covered by subclass c21d or c22f or class c25,9867,1049.0,207.0,692.0,167.0
+NEO-SMART,"<bound method IndexOpsMixin.item of engine_name                                                           NEO-SMART
+item                                                                          5
+source                                                                 abstract
+statement                     AI/ML and computational methods that accelerat...
+quote                         emerging AI/ML and computational methods that ...
+topic_id                                                                 T11948
+topic                                     Machine Learning in Materials Science
+subfield_id                                                      subfields/2505
+subfield                                                    Materials Chemistry
+field                                                         Materials Science
+topic_basis                                      classifier rank 1 (score 1.00)
+cpc_patents_us_2024_25                                               G16C60:101
+cpc_patents_region_2024_25                                             G16C60:0
+cpc                                                                      G16C60
+Name: 26, dtype: object>",openalex_topic,T11948,Machine Learning in Materials Science,4516,52.0,49.0,28.0,50.0
+NEO-SMART,"<bound method IndexOpsMixin.item of engine_name                                                           NEO-SMART
+item                                                                          5
+source                                                                 abstract
+statement                     AI/ML and computational methods that accelerat...
+quote                         emerging AI/ML and computational methods that ...
+topic_id                                                                 T11948
+topic                                     Machine Learning in Materials Science
+subfield_id                                                      subfields/2505
+subfield                                                    Materials Chemistry
+field                                                         Materials Science
+topic_basis                                      classifier rank 1 (score 1.00)
+cpc_patents_us_2024_25                                               G16C60:101
+cpc_patents_region_2024_25                                             G16C60:0
+cpc                                                                      G16C60
+Name: 26, dtype: object>",cpc,G16C60,Computational chemistry; chemoinformatics; computational materials science,9867,794.0,1946.0,1549.0,2023.0
+Quantum Technologies,"<bound method IndexOpsMixin.item of engine_name                                                Quantum Technologies
+item                                                                          1
+source                                                                    title
+statement                     Quantum technologies and quantum information s...
+quote                         NSF Quantum Technologies Engine in Connecticut...
+topic_id                                                                 T10020
+topic                                      Quantum Information and Cryptography
+subfield_id                                                      subfields/3107
+subfield                               Atomic and Molecular Physics, and Optics
+field                                                     Physics and Astronomy
+topic_basis                                      classifier rank 1 (score 0.96)
+cpc_patents_us_2024_25                                 G06N10:1429; B82Y10:2025
+cpc_patents_region_2024_25                                  G06N10:53; B82Y10:8
+cpc                                                              G06N10; B82Y10
+Name: 27, dtype: object>",openalex_topic,T10020,Quantum Information and Cryptography,4516,2.0,2.0,2.0,2.0
+Quantum Technologies,"<bound method IndexOpsMixin.item of engine_name                                                Quantum Technologies
+item                                                                          1
+source                                                                    title
+statement                     Quantum technologies and quantum information s...
+quote                         NSF Quantum Technologies Engine in Connecticut...
+topic_id                                                                 T10020
+topic                                      Quantum Information and Cryptography
+subfield_id                                                      subfields/3107
+subfield                               Atomic and Molecular Physics, and Optics
+field                                                     Physics and Astronomy
+topic_basis                                      classifier rank 1 (score 0.96)
+cpc_patents_us_2024_25                                 G06N10:1429; B82Y10:2025
+cpc_patents_region_2024_25                                  G06N10:53; B82Y10:8
+cpc                                                              G06N10; B82Y10
+Name: 27, dtype: object>",cpc,G06N10,Computing arrangements based on specific computational models,9867,1.0,1.0,2.0,1.0
+Quantum Technologies,"<bound method IndexOpsMixin.item of engine_name                                                Quantum Technologies
+item                                                                          1
+source                                                                    title
+statement                     Quantum technologies and quantum information s...
+quote                         NSF Quantum Technologies Engine in Connecticut...
+topic_id                                                                 T10020
+topic                                      Quantum Information and Cryptography
+subfield_id                                                      subfields/3107
+subfield                               Atomic and Molecular Physics, and Optics
+field                                                     Physics and Astronomy
+topic_basis                                      classifier rank 1 (score 0.96)
+cpc_patents_us_2024_25                                 G06N10:1429; B82Y10:2025
+cpc_patents_region_2024_25                                  G06N10:53; B82Y10:8
+cpc                                                              G06N10; B82Y10
+Name: 27, dtype: object>",cpc,B82Y10,Specific uses or applications of nanostructures; measurement or analysis of nanostructures; manufacture or treatment of nanostructures,9867,581.0,258.0,448.0,288.0
+Quantum Technologies,"<bound method IndexOpsMixin.item of engine_name                                                Quantum Technologies
+item                                                                          2
+source                                                                 abstract
+statement                             Quantum computing hardware and algorithms
+quote                         quantum communications, quantum sensing, and q...
+topic_id                                                                 T10682
+topic                             Quantum Computing Algorithms and Architecture
+subfield_id                                                      subfields/1702
+subfield                                                Artificial Intelligence
+field                                                          Computer Science
+topic_basis                                      classifier rank 1 (score 1.00)
+cpc_patents_us_2024_25                                              G06N10:1429
+cpc_patents_region_2024_25                                            G06N10:53
+cpc                                                                      G06N10
+Name: 28, dtype: object>",openalex_topic,T10682,Quantum Computing Algorithms and Architecture,4516,4.0,3.0,4.0,3.0
+Quantum Technologies,"<bound method IndexOpsMixin.item of engine_name                                                Quantum Technologies
+item                                                                          2
+source                                                                 abstract
+statement                             Quantum computing hardware and algorithms
+quote                         quantum communications, quantum sensing, and q...
+topic_id                                                                 T10682
+topic                             Quantum Computing Algorithms and Architecture
+subfield_id                                                      subfields/1702
+subfield                                                Artificial Intelligence
+field                                                          Computer Science
+topic_basis                                      classifier rank 1 (score 1.00)
+cpc_patents_us_2024_25                                              G06N10:1429
+cpc_patents_region_2024_25                                            G06N10:53
+cpc                                                                      G06N10
+Name: 28, dtype: object>",cpc,G06N10,Computing arrangements based on specific computational models,9867,1.0,1.0,2.0,1.0
+Quantum Technologies,"<bound method IndexOpsMixin.item of engine_name                                                Quantum Technologies
+item                                                                          3
+source                                                                 abstract
+statement                                 Quantum sensing and quantum metrology
+quote                         quantum communications, quantum sensing, and q...
+topic_id                                                                 T10020
+topic                                      Quantum Information and Cryptography
+subfield_id                                                      subfields/3107
+subfield                               Atomic and Molecular Physics, and Optics
+field                                                     Physics and Astronomy
+topic_basis                                      classifier rank 1 (score 0.98)
+cpc_patents_us_2024_25                                  G01R33:2320; G01N24:185
+cpc_patents_region_2024_25                                  G01R33:39; G01N24:0
+cpc                                                              G01R33; G01N24
+Name: 29, dtype: object>",openalex_topic,T10020,Quantum Information and Cryptography,4516,2.0,2.0,2.0,2.0
+Quantum Technologies,"<bound method IndexOpsMixin.item of engine_name                                                Quantum Technologies
+item                                                                          3
+source                                                                 abstract
+statement                                 Quantum sensing and quantum metrology
+quote                         quantum communications, quantum sensing, and q...
+topic_id                                                                 T10020
+topic                                      Quantum Information and Cryptography
+subfield_id                                                      subfields/3107
+subfield                               Atomic and Molecular Physics, and Optics
+field                                                     Physics and Astronomy
+topic_basis                                      classifier rank 1 (score 0.98)
+cpc_patents_us_2024_25                                  G01R33:2320; G01N24:185
+cpc_patents_region_2024_25                                  G01R33:39; G01N24:0
+cpc                                                              G01R33; G01N24
+Name: 29, dtype: object>",cpc,G01R33,Measuring electric variables; measuring magnetic variables,9867,832.0,975.0,1365.0,908.0
+Quantum Technologies,"<bound method IndexOpsMixin.item of engine_name                                                Quantum Technologies
+item                                                                          3
+source                                                                 abstract
+statement                                 Quantum sensing and quantum metrology
+quote                         quantum communications, quantum sensing, and q...
+topic_id                                                                 T10020
+topic                                      Quantum Information and Cryptography
+subfield_id                                                      subfields/3107
+subfield                               Atomic and Molecular Physics, and Optics
+field                                                     Physics and Astronomy
+topic_basis                                      classifier rank 1 (score 0.98)
+cpc_patents_us_2024_25                                  G01R33:2320; G01N24:185
+cpc_patents_region_2024_25                                  G01R33:39; G01N24:0
+cpc                                                              G01R33; G01N24
+Name: 29, dtype: object>",cpc,G01N24,Investigating or analysing materials by determining their chemical or physical properties,9867,604.0,754.0,535.0,650.0
+Quantum Technologies,"<bound method IndexOpsMixin.item of engine_name                                                Quantum Technologies
+item                                                                          4
+source                                                                 abstract
+statement                       Quantum communications and quantum cryptography
+quote                         quantum communications, quantum sensing, and q...
+topic_id                                                                 T10020
+topic                                      Quantum Information and Cryptography
+subfield_id                                                      subfields/3107
+subfield                               Atomic and Molecular Physics, and Optics
+field                                                     Physics and Astronomy
+topic_basis                                      classifier rank 1 (score 1.00)
+cpc_patents_us_2024_25                                 H04L9:10852; H04B10:2504
+cpc_patents_region_2024_25                                  H04L9:92; H04B10:18
+cpc                                                               H04L9; H04B10
+Name: 30, dtype: object>",openalex_topic,T10020,Quantum Information and Cryptography,4516,2.0,2.0,2.0,2.0
+Quantum Technologies,"<bound method IndexOpsMixin.item of engine_name                                                Quantum Technologies
+item                                                                          4
+source                                                                 abstract
+statement                       Quantum communications and quantum cryptography
+quote                         quantum communications, quantum sensing, and q...
+topic_id                                                                 T10020
+topic                                      Quantum Information and Cryptography
+subfield_id                                                      subfields/3107
+subfield                               Atomic and Molecular Physics, and Optics
+field                                                     Physics and Astronomy
+topic_basis                                      classifier rank 1 (score 1.00)
+cpc_patents_us_2024_25                                 H04L9:10852; H04B10:2504
+cpc_patents_region_2024_25                                  H04L9:92; H04B10:18
+cpc                                                               H04L9; H04B10
+Name: 30, dtype: object>",cpc,H04L9,"Transmission of digital information, e.g. telegraphic communication",9867,8.0,15.0,13.0,15.0
+Quantum Technologies,"<bound method IndexOpsMixin.item of engine_name                                                Quantum Technologies
+item                                                                          4
+source                                                                 abstract
+statement                       Quantum communications and quantum cryptography
+quote                         quantum communications, quantum sensing, and q...
+topic_id                                                                 T10020
+topic                                      Quantum Information and Cryptography
+subfield_id                                                      subfields/3107
+subfield                               Atomic and Molecular Physics, and Optics
+field                                                     Physics and Astronomy
+topic_basis                                      classifier rank 1 (score 1.00)
+cpc_patents_us_2024_25                                 H04L9:10852; H04B10:2504
+cpc_patents_region_2024_25                                  H04L9:92; H04B10:18
+cpc                                                               H04L9; H04B10
+Name: 30, dtype: object>",cpc,H04B10,Transmission,9867,2.0,2.0,7.0,2.0
+RETI,"<bound method IndexOpsMixin.item of engine_name                                                                RETI
+item                                                                          1
+source                                                                    title
+statement                     Resilient energy infrastructure and electric g...
+quote                         Resilient Energy Technology and Infrastructure...
+topic_id                                                                 T11941
+topic                                  Power System Reliability and Maintenance
+subfield_id                                                      subfields/2213
+subfield                                  Safety, Risk, Reliability and Quality
+field                                                               Engineering
+topic_basis                   manual: rank 3: grid reliability; rank 1 'Infr...
+cpc_patents_us_2024_25                                               H02J3:2652
+cpc_patents_region_2024_25                                             H02J3:38
+cpc                                                                       H02J3
+Name: 31, dtype: object>",openalex_topic,T11941,Power System Reliability and Maintenance,4516,4.0,10.0,4.0,10.0
+RETI,"<bound method IndexOpsMixin.item of engine_name                                                                RETI
+item                                                                          1
+source                                                                    title
+statement                     Resilient energy infrastructure and electric g...
+quote                         Resilient Energy Technology and Infrastructure...
+topic_id                                                                 T11941
+topic                                  Power System Reliability and Maintenance
+subfield_id                                                      subfields/2213
+subfield                                  Safety, Risk, Reliability and Quality
+field                                                               Engineering
+topic_basis                   manual: rank 3: grid reliability; rank 1 'Infr...
+cpc_patents_us_2024_25                                               H02J3:2652
+cpc_patents_region_2024_25                                             H02J3:38
+cpc                                                                       H02J3
+Name: 31, dtype: object>",cpc,H02J3,Electric power networks; circuit arrangements or systems for supplying or distributing electric power; systems for storing electric energy,9867,50.0,46.0,53.0,50.0
+RETI,"<bound method IndexOpsMixin.item of engine_name                                                                RETI
+item                                                                          2
+source                                                                 abstract
+statement                     Machine learning grid management, digital twin...
+quote                         machine learning-enabled grid management, digi...
+topic_id                                                                 T12451
+topic                                              Smart Grid and Power Systems
+subfield_id                                                      subfields/2208
+subfield                                  Electrical and Electronic Engineering
+field                                                               Engineering
+topic_basis                                      classifier rank 1 (score 0.65)
+cpc_patents_us_2024_25                                   G05B13:1587; Y04S:1497
+cpc_patents_region_2024_25                                   G05B13:53; Y04S:61
+cpc                                                                G05B13; Y04S
+Name: 32, dtype: object>",openalex_topic,T12451,Smart Grid and Power Systems,4516,10.0,13.0,15.0,14.0
+RETI,"<bound method IndexOpsMixin.item of engine_name                                                                RETI
+item                                                                          2
+source                                                                 abstract
+statement                     Machine learning grid management, digital twin...
+quote                         machine learning-enabled grid management, digi...
+topic_id                                                                 T12451
+topic                                              Smart Grid and Power Systems
+subfield_id                                                      subfields/2208
+subfield                                  Electrical and Electronic Engineering
+field                                                               Engineering
+topic_basis                                      classifier rank 1 (score 0.65)
+cpc_patents_us_2024_25                                   G05B13:1587; Y04S:1497
+cpc_patents_region_2024_25                                   G05B13:53; Y04S:61
+cpc                                                                G05B13; Y04S
+Name: 32, dtype: object>",cpc,G05B13,Control or regulating systems in general; functional elements of such systems; monitoring or testing arrangements for such systems or elements,9867,714.0,1489.0,1139.0,1522.0
+RETI,"<bound method IndexOpsMixin.item of engine_name                                                                RETI
+item                                                                          2
+source                                                                 abstract
+statement                     Machine learning grid management, digital twin...
+quote                         machine learning-enabled grid management, digi...
+topic_id                                                                 T12451
+topic                                              Smart Grid and Power Systems
+subfield_id                                                      subfields/2208
+subfield                                  Electrical and Electronic Engineering
+field                                                               Engineering
+topic_basis                                      classifier rank 1 (score 0.65)
+cpc_patents_us_2024_25                                   G05B13:1587; Y04S:1497
+cpc_patents_region_2024_25                                   G05B13:53; Y04S:61
+cpc                                                                G05B13; Y04S
+Name: 32, dtype: object>",cpc,Y04S,"Systems integrating technologies related to power network operation, communication or information technologies for improving the electrical power generation, transmission, distribution, management or usage, i.e. smart grids",9867,12.0,15.0,64.0,21.0
+RETI,"<bound method IndexOpsMixin.item of engine_name                                                                RETI
+item                                                                          3
+source                                                                 abstract
+statement                     Energy storage with advanced batteries and sol...
+quote                         energy storage systems based on advanced batte...
+topic_id                                                                 T10311
+topic                                    Advancements in Solid Oxide Fuel Cells
+subfield_id                                                      subfields/2505
+subfield                                                    Materials Chemistry
+field                                                         Materials Science
+topic_basis                                      classifier rank 1 (score 0.80)
+cpc_patents_us_2024_25                                  H01M10:9471; H01M8:1823
+cpc_patents_region_2024_25                                  H01M10:87; H01M8:21
+cpc                                                               H01M10; H01M8
+Name: 33, dtype: object>",openalex_topic,T10311,Advancements in Solid Oxide Fuel Cells,4516,93.0,295.0,93.0,334.0
+RETI,"<bound method IndexOpsMixin.item of engine_name                                                                RETI
+item                                                                          3
+source                                                                 abstract
+statement                     Energy storage with advanced batteries and sol...
+quote                         energy storage systems based on advanced batte...
+topic_id                                                                 T10311
+topic                                    Advancements in Solid Oxide Fuel Cells
+subfield_id                                                      subfields/2505
+subfield                                                    Materials Chemistry
+field                                                         Materials Science
+topic_basis                                      classifier rank 1 (score 0.80)
+cpc_patents_us_2024_25                                  H01M10:9471; H01M8:1823
+cpc_patents_region_2024_25                                  H01M10:87; H01M8:21
+cpc                                                               H01M10; H01M8
+Name: 33, dtype: object>",cpc,H01M10,"Processes or means, e.g. batteries, for the direct conversion of chemical energy into electrical energy",9867,181.0,151.0,127.0,185.0
+RETI,"<bound method IndexOpsMixin.item of engine_name                                                                RETI
+item                                                                          3
+source                                                                 abstract
+statement                     Energy storage with advanced batteries and sol...
+quote                         energy storage systems based on advanced batte...
+topic_id                                                                 T10311
+topic                                    Advancements in Solid Oxide Fuel Cells
+subfield_id                                                      subfields/2505
+subfield                                                    Materials Chemistry
+field                                                         Materials Science
+topic_basis                                      classifier rank 1 (score 0.80)
+cpc_patents_us_2024_25                                  H01M10:9471; H01M8:1823
+cpc_patents_region_2024_25                                  H01M10:87; H01M8:21
+cpc                                                               H01M10; H01M8
+Name: 33, dtype: object>",cpc,H01M8,"Processes or means, e.g. batteries, for the direct conversion of chemical energy into electrical energy",9867,70.0,102.0,72.0,125.0
+RETI,"<bound method IndexOpsMixin.item of engine_name                                                                RETI
+item                                                                          4
+source                                                                 abstract
+statement                     Hydrogen-based iron reduction, catalysis and p...
+quote                         hydrogen-based iron reduction, novel catalytic...
+topic_id                                                                 T11837
+topic                                            Iron and Steelmaking Processes
+subfield_id                                                      subfields/2506
+subfield                                                      Metals and Alloys
+field                                                         Materials Science
+topic_basis                                      classifier rank 1 (score 0.96)
+cpc_patents_us_2024_25                                     C21B13:86; B01J:5371
+cpc_patents_region_2024_25                                  C21B13:11; B01J:199
+cpc                                                                C21B13; B01J
+Name: 34, dtype: object>",openalex_topic,T11837,Iron and Steelmaking Processes,4516,11.0,47.0,11.0,38.0
+RETI,"<bound method IndexOpsMixin.item of engine_name                                                                RETI
+item                                                                          4
+source                                                                 abstract
+statement                     Hydrogen-based iron reduction, catalysis and p...
+quote                         hydrogen-based iron reduction, novel catalytic...
+topic_id                                                                 T11837
+topic                                            Iron and Steelmaking Processes
+subfield_id                                                      subfields/2506
+subfield                                                      Metals and Alloys
+field                                                         Materials Science
+topic_basis                                      classifier rank 1 (score 0.96)
+cpc_patents_us_2024_25                                     C21B13:86; B01J:5371
+cpc_patents_region_2024_25                                  C21B13:11; B01J:199
+cpc                                                                C21B13; B01J
+Name: 34, dtype: object>",cpc,C21B13,Manufacture of iron or steel,9867,385.0,3816.0,596.0,3903.0
+RETI,"<bound method IndexOpsMixin.item of engine_name                                                                RETI
+item                                                                          4
+source                                                                 abstract
+statement                     Hydrogen-based iron reduction, catalysis and p...
+quote                         hydrogen-based iron reduction, novel catalytic...
+topic_id                                                                 T11837
+topic                                            Iron and Steelmaking Processes
+subfield_id                                                      subfields/2506
+subfield                                                      Metals and Alloys
+field                                                         Materials Science
+topic_basis                                      classifier rank 1 (score 0.96)
+cpc_patents_us_2024_25                                     C21B13:86; B01J:5371
+cpc_patents_region_2024_25                                  C21B13:11; B01J:199
+cpc                                                                C21B13; B01J
+Name: 34, dtype: object>",cpc,B01J,"Chemical or physical processes, e.g. catalysis or colloid chemistry; their relevant apparatus",9867,299.0,2791.0,251.0,2883.0
+RuralSTAMINA Biomanufacturing,"<bound method IndexOpsMixin.item of engine_name                                       RuralSTAMINA Biomanufacturing
+item                                                                          1
+source                                                                    title
+statement                     Biomanufacturing of value-added bioproducts fr...
+quote                         RuralSTAMINA Biomanufacturing Engine ... trans...
+topic_id                                                                 T10932
+topic                         Microbial Metabolic Engineering and Bioproduction
+subfield_id                                                      subfields/1312
+subfield                                                      Molecular Biology
+field                              Biochemistry, Genetics and Molecular Biology
+topic_basis                                      classifier rank 1 (score 0.55)
+cpc_patents_us_2024_25                                                C12P:1934
+cpc_patents_region_2024_25                                              C12P:16
+cpc                                                                        C12P
+Name: 35, dtype: object>",openalex_topic,T10932,Microbial Metabolic Engineering and Bioproduction,4516,154.0,50.0,253.0,54.0
+RuralSTAMINA Biomanufacturing,"<bound method IndexOpsMixin.item of engine_name                                       RuralSTAMINA Biomanufacturing
+item                                                                          1
+source                                                                    title
+statement                     Biomanufacturing of value-added bioproducts fr...
+quote                         RuralSTAMINA Biomanufacturing Engine ... trans...
+topic_id                                                                 T10932
+topic                         Microbial Metabolic Engineering and Bioproduction
+subfield_id                                                      subfields/1312
+subfield                                                      Molecular Biology
+field                              Biochemistry, Genetics and Molecular Biology
+topic_basis                                      classifier rank 1 (score 0.55)
+cpc_patents_us_2024_25                                                C12P:1934
+cpc_patents_region_2024_25                                              C12P:16
+cpc                                                                        C12P
+Name: 35, dtype: object>",cpc,C12P,Fermentation or enzyme-using processes to synthesise a desired chemical compound or composition or to separate optical isomers from a racemic mixture,9867,96.0,15.0,109.0,15.0
+RuralSTAMINA Biomanufacturing,"<bound method IndexOpsMixin.item of engine_name                                       RuralSTAMINA Biomanufacturing
+item                                                                          2
+source                                                                 abstract
+statement                     Engineered microorganisms for biomanufacturing...
+quote                         developing enabling technologies such as new m...
+topic_id                                                                 T10932
+topic                         Microbial Metabolic Engineering and Bioproduction
+subfield_id                                                      subfields/1312
+subfield                                                      Molecular Biology
+field                              Biochemistry, Genetics and Molecular Biology
+topic_basis                                      classifier rank 1 (score 1.00)
+cpc_patents_us_2024_25                                               C12N:11666
+cpc_patents_region_2024_25                                             C12N:217
+cpc                                                                        C12N
+Name: 36, dtype: object>",openalex_topic,T10932,Microbial Metabolic Engineering and Bioproduction,4516,154.0,50.0,253.0,54.0
+RuralSTAMINA Biomanufacturing,"<bound method IndexOpsMixin.item of engine_name                                       RuralSTAMINA Biomanufacturing
+item                                                                          2
+source                                                                 abstract
+statement                     Engineered microorganisms for biomanufacturing...
+quote                         developing enabling technologies such as new m...
+topic_id                                                                 T10932
+topic                         Microbial Metabolic Engineering and Bioproduction
+subfield_id                                                      subfields/1312
+subfield                                                      Molecular Biology
+field                              Biochemistry, Genetics and Molecular Biology
+topic_basis                                      classifier rank 1 (score 1.00)
+cpc_patents_us_2024_25                                               C12N:11666
+cpc_patents_region_2024_25                                             C12N:217
+cpc                                                                        C12N
+Name: 36, dtype: object>",cpc,C12N,"Microorganisms or enzymes; compositions thereof; propagating, preserving, or maintaining microorganisms; mutation or genetic engineering; culture media",9867,6.0,9.0,15.0,9.0
+RuralSTAMINA Biomanufacturing,"<bound method IndexOpsMixin.item of engine_name                                       RuralSTAMINA Biomanufacturing
+item                                                                          3
+source                                                                 abstract
+statement                     Scale-up of biomanufacturing and fermentation ...
+quote                         predictable and reliable scaling up of biomanu...
+topic_id                                                                 T10864
+topic                                                 Fluid Dynamics and Mixing
+subfield_id                                                      subfields/1507
+subfield                                      Fluid Flow and Transfer Processes
+field                                                      Chemical Engineering
+topic_basis                                      classifier rank 1 (score 0.81)
+cpc_patents_us_2024_25                                                C12M:1857
+cpc_patents_region_2024_25                                              C12M:18
+cpc                                                                        C12M
+Name: 37, dtype: object>",openalex_topic,T10864,Fluid Dynamics and Mixing,4516,222.0,149.0,272.0,152.0
+RuralSTAMINA Biomanufacturing,"<bound method IndexOpsMixin.item of engine_name                                       RuralSTAMINA Biomanufacturing
+item                                                                          3
+source                                                                 abstract
+statement                     Scale-up of biomanufacturing and fermentation ...
+quote                         predictable and reliable scaling up of biomanu...
+topic_id                                                                 T10864
+topic                                                 Fluid Dynamics and Mixing
+subfield_id                                                      subfields/1507
+subfield                                      Fluid Flow and Transfer Processes
+field                                                      Chemical Engineering
+topic_basis                                      classifier rank 1 (score 0.81)
+cpc_patents_us_2024_25                                                C12M:1857
+cpc_patents_region_2024_25                                              C12M:18
+cpc                                                                        C12M
+Name: 37, dtype: object>",cpc,C12M,"Apparatus for enzymology or microbiology; apparatus for culturing microorganisms for producing biomass, for growing cells or for obtaining fermentation or metabolic products, i.e. bioreactors or fermenters",9867,100.0,1.0,29.0,1.0
+RuralSTAMINA Biomanufacturing,"<bound method IndexOpsMixin.item of engine_name                                       RuralSTAMINA Biomanufacturing
+item                                                                          4
+source                                                                 abstract
+statement                     Sensors and AI tools for biomanufacturing proc...
+quote                         designing and deploying sensors and AI tools f...
+topic_id                                                                 T10876
+topic                                       Fault Detection and Control Systems
+subfield_id                                                      subfields/2207
+subfield                                        Control and Systems Engineering
+field                                                               Engineering
+topic_basis                                      classifier rank 1 (score 0.46)
+cpc_patents_us_2024_25                                    C12Q3:21; G05B13:1587
+cpc_patents_region_2024_25                                   C12Q3:0; G05B13:12
+cpc                                                               C12Q3; G05B13
+Name: 38, dtype: object>",openalex_topic,T10876,Fault Detection and Control Systems,4516,342.0,3926.0,1058.0,3908.0
+RuralSTAMINA Biomanufacturing,"<bound method IndexOpsMixin.item of engine_name                                       RuralSTAMINA Biomanufacturing
+item                                                                          4
+source                                                                 abstract
+statement                     Sensors and AI tools for biomanufacturing proc...
+quote                         designing and deploying sensors and AI tools f...
+topic_id                                                                 T10876
+topic                                       Fault Detection and Control Systems
+subfield_id                                                      subfields/2207
+subfield                                        Control and Systems Engineering
+field                                                               Engineering
+topic_basis                                      classifier rank 1 (score 0.46)
+cpc_patents_us_2024_25                                    C12Q3:21; G05B13:1587
+cpc_patents_region_2024_25                                   C12Q3:0; G05B13:12
+cpc                                                               C12Q3; G05B13
+Name: 38, dtype: object>",cpc,C12Q3,"Measuring or testing processes involving enzymes, nucleic acids or microorganisms; compositions or test papers therefor; processes of preparing such compositions; condition-responsive control in microbiological or enzymological processes",9867,86.0,143.0,147.0,120.0
+RuralSTAMINA Biomanufacturing,"<bound method IndexOpsMixin.item of engine_name                                       RuralSTAMINA Biomanufacturing
+item                                                                          4
+source                                                                 abstract
+statement                     Sensors and AI tools for biomanufacturing proc...
+quote                         designing and deploying sensors and AI tools f...
+topic_id                                                                 T10876
+topic                                       Fault Detection and Control Systems
+subfield_id                                                      subfields/2207
+subfield                                        Control and Systems Engineering
+field                                                               Engineering
+topic_basis                                      classifier rank 1 (score 0.46)
+cpc_patents_us_2024_25                                    C12Q3:21; G05B13:1587
+cpc_patents_region_2024_25                                   C12Q3:0; G05B13:12
+cpc                                                               C12Q3; G05B13
+Name: 38, dtype: object>",cpc,G05B13,Control or regulating systems in general; functional elements of such systems; monitoring or testing arrangements for such systems or elements,9867,2002.0,3734.0,3294.0,3721.0
+STELLAR,"<bound method IndexOpsMixin.item of engine_name                                                             STELLAR
+item                                                                          1
+source                                                                    title
+statement                                         Lasers and laser applications
+quote                         Science, Technology, and Engineering for Laser...
+topic_id                                                                 T14158
+topic                                      Optical Systems and Laser Technology
+subfield_id                                                      subfields/2208
+subfield                                  Electrical and Electronic Engineering
+field                                                               Engineering
+topic_basis                                      classifier rank 1 (score 0.80)
+cpc_patents_us_2024_25                                                H01S:2157
+cpc_patents_region_2024_25                                              H01S:43
+cpc                                                                        H01S
+Name: 39, dtype: object>",openalex_topic,T14158,Optical Systems and Laser Technology,4516,3.0,1.0,3.0,1.0
+STELLAR,"<bound method IndexOpsMixin.item of engine_name                                                             STELLAR
+item                                                                          1
+source                                                                    title
+statement                                         Lasers and laser applications
+quote                         Science, Technology, and Engineering for Laser...
+topic_id                                                                 T14158
+topic                                      Optical Systems and Laser Technology
+subfield_id                                                      subfields/2208
+subfield                                  Electrical and Electronic Engineering
+field                                                               Engineering
+topic_basis                                      classifier rank 1 (score 0.80)
+cpc_patents_us_2024_25                                                H01S:2157
+cpc_patents_region_2024_25                                              H01S:43
+cpc                                                                        H01S
+Name: 39, dtype: object>",cpc,H01S,Devices using the process of light amplification by stimulated emission of radiation [laser] to amplify or generate light; devices using stimulated emission of electromagnetic radiation in wave ranges other than optical,9867,1.0,1.0,1.0,1.0
+STELLAR,"<bound method IndexOpsMixin.item of engine_name                                                             STELLAR
+item                                                                          2
+source                                                                 abstract
+statement                                  Precision optics and optical imaging
+quote                         the area's globally recognized precision-optic...
+topic_id                                                                 T11517
+topic                                            Advanced optical system design
+subfield_id                                                      subfields/3107
+subfield                               Atomic and Molecular Physics, and Optics
+field                                                     Physics and Astronomy
+topic_basis                                      classifier rank 1 (score 0.49)
+cpc_patents_us_2024_25                                               G02B:20724
+cpc_patents_region_2024_25                                             G02B:623
+cpc                                                                        G02B
+Name: 40, dtype: object>",openalex_topic,T11517,Advanced optical system design,4516,40.0,28.0,43.0,32.0
+STELLAR,"<bound method IndexOpsMixin.item of engine_name                                                             STELLAR
+item                                                                          2
+source                                                                 abstract
+statement                                  Precision optics and optical imaging
+quote                         the area's globally recognized precision-optic...
+topic_id                                                                 T11517
+topic                                            Advanced optical system design
+subfield_id                                                      subfields/3107
+subfield                               Atomic and Molecular Physics, and Optics
+field                                                     Physics and Astronomy
+topic_basis                                      classifier rank 1 (score 0.49)
+cpc_patents_us_2024_25                                               G02B:20724
+cpc_patents_region_2024_25                                             G02B:623
+cpc                                                                        G02B
+Name: 40, dtype: object>",cpc,G02B,"Optical elements, systems or apparatus",9867,21.0,11.0,12.0,11.0
+STELLAR,"<bound method IndexOpsMixin.item of engine_name                                                             STELLAR
+item                                                                          3
+source                                                                 abstract
+statement                             Photonics and integrated photonic devices
+quote                         strong capabilities in photonics and laser tec...
+topic_id                                                                 T10299
+topic                                              Photonic and Optical Devices
+subfield_id                                                      subfields/2208
+subfield                                  Electrical and Electronic Engineering
+field                                                               Engineering
+topic_basis                                      classifier rank 1 (score 1.00)
+cpc_patents_us_2024_25                                   G02B6:5593; H01S5:1513
+cpc_patents_region_2024_25                                  G02B6:276; H01S5:19
+cpc                                                                G02B6; H01S5
+Name: 41, dtype: object>",openalex_topic,T10299,Photonic and Optical Devices,4516,9.0,18.0,12.0,20.0
+STELLAR,"<bound method IndexOpsMixin.item of engine_name                                                             STELLAR
+item                                                                          3
+source                                                                 abstract
+statement                             Photonics and integrated photonic devices
+quote                         strong capabilities in photonics and laser tec...
+topic_id                                                                 T10299
+topic                                              Photonic and Optical Devices
+subfield_id                                                      subfields/2208
+subfield                                  Electrical and Electronic Engineering
+field                                                               Engineering
+topic_basis                                      classifier rank 1 (score 1.00)
+cpc_patents_us_2024_25                                   G02B6:5593; H01S5:1513
+cpc_patents_region_2024_25                                  G02B6:276; H01S5:19
+cpc                                                                G02B6; H01S5
+Name: 41, dtype: object>",cpc,G02B6,"Optical elements, systems or apparatus",9867,58.0,32.0,18.0,31.0
+STELLAR,"<bound method IndexOpsMixin.item of engine_name                                                             STELLAR
+item                                                                          3
+source                                                                 abstract
+statement                             Photonics and integrated photonic devices
+quote                         strong capabilities in photonics and laser tec...
+topic_id                                                                 T10299
+topic                                              Photonic and Optical Devices
+subfield_id                                                      subfields/2208
+subfield                                  Electrical and Electronic Engineering
+field                                                               Engineering
+topic_basis                                      classifier rank 1 (score 1.00)
+cpc_patents_us_2024_25                                   G02B6:5593; H01S5:1513
+cpc_patents_region_2024_25                                  G02B6:276; H01S5:19
+cpc                                                                G02B6; H01S5
+Name: 41, dtype: object>",cpc,H01S5,Devices using the process of light amplification by stimulated emission of radiation [laser] to amplify or generate light; devices using stimulated emission of electromagnetic radiation in wave ranges other than optical,9867,2.0,2.0,3.0,2.0
+STELLAR,"<bound method IndexOpsMixin.item of engine_name                                                             STELLAR
+item                                                                          4
+source                                                                 abstract
+statement                         Manufacturing of laser components and systems
+quote                         strengthen domestic laser component and system...
+topic_id                                                                 T14158
+topic                                      Optical Systems and Laser Technology
+subfield_id                                                      subfields/2208
+subfield                                  Electrical and Electronic Engineering
+field                                                               Engineering
+topic_basis                                      classifier rank 1 (score 0.39)
+cpc_patents_us_2024_25                                   B23K26:1955; H01S3:860
+cpc_patents_region_2024_25                                  B23K26:60; H01S3:29
+cpc                                                               B23K26; H01S3
+Name: 42, dtype: object>",openalex_topic,T14158,Optical Systems and Laser Technology,4516,3.0,1.0,3.0,1.0
+STELLAR,"<bound method IndexOpsMixin.item of engine_name                                                             STELLAR
+item                                                                          4
+source                                                                 abstract
+statement                         Manufacturing of laser components and systems
+quote                         strengthen domestic laser component and system...
+topic_id                                                                 T14158
+topic                                      Optical Systems and Laser Technology
+subfield_id                                                      subfields/2208
+subfield                                  Electrical and Electronic Engineering
+field                                                               Engineering
+topic_basis                                      classifier rank 1 (score 0.39)
+cpc_patents_us_2024_25                                   B23K26:1955; H01S3:860
+cpc_patents_region_2024_25                                  B23K26:60; H01S3:29
+cpc                                                               B23K26; H01S3
+Name: 42, dtype: object>",cpc,B23K26,"Soldering or unsoldering; welding; cladding or plating by soldering or welding; cutting by applying heat locally, e.g. flame cutting; working by laser beam",9867,367.0,239.0,222.0,253.0
+STELLAR,"<bound method IndexOpsMixin.item of engine_name                                                             STELLAR
+item                                                                          4
+source                                                                 abstract
+statement                         Manufacturing of laser components and systems
+quote                         strengthen domestic laser component and system...
+topic_id                                                                 T14158
+topic                                      Optical Systems and Laser Technology
+subfield_id                                                      subfields/2208
+subfield                                  Electrical and Electronic Engineering
+field                                                               Engineering
+topic_basis                                      classifier rank 1 (score 0.39)
+cpc_patents_us_2024_25                                   B23K26:1955; H01S3:860
+cpc_patents_region_2024_25                                  B23K26:60; H01S3:29
+cpc                                                               B23K26; H01S3
+Name: 42, dtype: object>",cpc,H01S3,Devices using the process of light amplification by stimulated emission of radiation [laser] to amplify or generate light; devices using stimulated emission of electromagnetic radiation in wave ranges other than optical,9867,1.0,1.0,1.0,1.0
+Seafood,"<bound method IndexOpsMixin.item of engine_name                                                             Seafood
+item                                                                          1
+source                                                                    title
+statement                     Seafood harvesting, processing and supply chai...
+quote                         Seafood Engine ... introduce synergistic techn...
+topic_id                                                                 T14010
+topic                                         Food Industry and Aquatic Biology
+subfield_id                                                      subfields/1106
+subfield                                                           Food Science
+field                                      Agricultural and Biological Sciences
+topic_basis                                      classifier rank 1 (score 0.66)
+cpc_patents_us_2024_25                                    A22C25:33; A01K61:191
+cpc_patents_region_2024_25                                   A22C25:0; A01K61:9
+cpc                                                              A22C25; A01K61
+Name: 43, dtype: object>",openalex_topic,T14010,Food Industry and Aquatic Biology,4516,54.0,351.0,52.0,355.0
+Seafood,"<bound method IndexOpsMixin.item of engine_name                                                             Seafood
+item                                                                          1
+source                                                                    title
+statement                     Seafood harvesting, processing and supply chai...
+quote                         Seafood Engine ... introduce synergistic techn...
+topic_id                                                                 T14010
+topic                                         Food Industry and Aquatic Biology
+subfield_id                                                      subfields/1106
+subfield                                                           Food Science
+field                                      Agricultural and Biological Sciences
+topic_basis                                      classifier rank 1 (score 0.66)
+cpc_patents_us_2024_25                                    A22C25:33; A01K61:191
+cpc_patents_region_2024_25                                   A22C25:0; A01K61:9
+cpc                                                              A22C25; A01K61
+Name: 43, dtype: object>",cpc,A22C25,"Processing meat, poultry, or fish",9867,1354.0,100.0,1724.0,148.0
+Seafood,"<bound method IndexOpsMixin.item of engine_name                                                             Seafood
+item                                                                          1
+source                                                                    title
+statement                     Seafood harvesting, processing and supply chai...
+quote                         Seafood Engine ... introduce synergistic techn...
+topic_id                                                                 T14010
+topic                                         Food Industry and Aquatic Biology
+subfield_id                                                      subfields/1106
+subfield                                                           Food Science
+field                                      Agricultural and Biological Sciences
+topic_basis                                      classifier rank 1 (score 0.66)
+cpc_patents_us_2024_25                                    A22C25:33; A01K61:191
+cpc_patents_region_2024_25                                   A22C25:0; A01K61:9
+cpc                                                              A22C25; A01K61
+Name: 43, dtype: object>",cpc,A01K61,"Animal husbandry; aviculture; apiculture; pisciculture; fishing; rearing or breeding animals, not otherwise provided for; new breeds of animals",9867,50.0,98.0,82.0,142.0
+Seafood,"<bound method IndexOpsMixin.item of engine_name                                                             Seafood
+item                                                                          2
+source                                                                 abstract
+statement                     Ocean observation technologies to map and pred...
+quote                         New ocean observation technologies have the po...
+topic_id                                                                 T10230
+topic                                             Marine and fisheries research
+subfield_id                                                      subfields/1104
+subfield                                                        Aquatic Science
+field                                      Agricultural and Biological Sciences
+topic_basis                                      classifier rank 1 (score 0.92)
+cpc_patents_us_2024_25                                   A01K79:21; G01S15:1169
+cpc_patents_region_2024_25                                  A01K79:3; G01S15:79
+cpc                                                              A01K79; G01S15
+Name: 44, dtype: object>",openalex_topic,T10230,Marine and fisheries research,4516,63.0,5.0,30.0,6.0
+Seafood,"<bound method IndexOpsMixin.item of engine_name                                                             Seafood
+item                                                                          2
+source                                                                 abstract
+statement                     Ocean observation technologies to map and pred...
+quote                         New ocean observation technologies have the po...
+topic_id                                                                 T10230
+topic                                             Marine and fisheries research
+subfield_id                                                      subfields/1104
+subfield                                                        Aquatic Science
+field                                      Agricultural and Biological Sciences
+topic_basis                                      classifier rank 1 (score 0.92)
+cpc_patents_us_2024_25                                   A01K79:21; G01S15:1169
+cpc_patents_region_2024_25                                  A01K79:3; G01S15:79
+cpc                                                              A01K79; G01S15
+Name: 44, dtype: object>",cpc,A01K79,"Animal husbandry; aviculture; apiculture; pisciculture; fishing; rearing or breeding animals, not otherwise provided for; new breeds of animals",9867,48.0,54.0,73.0,74.0
+Seafood,"<bound method IndexOpsMixin.item of engine_name                                                             Seafood
+item                                                                          2
+source                                                                 abstract
+statement                     Ocean observation technologies to map and pred...
+quote                         New ocean observation technologies have the po...
+topic_id                                                                 T10230
+topic                                             Marine and fisheries research
+subfield_id                                                      subfields/1104
+subfield                                                        Aquatic Science
+field                                      Agricultural and Biological Sciences
+topic_basis                                      classifier rank 1 (score 0.92)
+cpc_patents_us_2024_25                                   A01K79:21; G01S15:1169
+cpc_patents_region_2024_25                                  A01K79:3; G01S15:79
+cpc                                                              A01K79; G01S15
+Name: 44, dtype: object>",cpc,G01S15,Radio direction-finding; radio navigation; determining distance or velocity by use of radio waves; locating or presence-detecting by use of the reflection or reradiation of radio waves; analogous arrangements using other waves,9867,375.0,287.0,447.0,265.0
+Seafood,"<bound method IndexOpsMixin.item of engine_name                                                             Seafood
+item                                                                          3
+source                                                                 abstract
+statement                     Sensors, AI and data visualization for decisio...
+quote                         Sensor technologies, AI and other advanced ana...
+topic_id                                                                 T12697
+topic                                     Water Quality Monitoring Technologies
+subfield_id                                                      subfields/2312
+subfield                                           Water Science and Technology
+field                                                     Environmental Science
+topic_basis                                      classifier rank 1 (score 0.99)
+cpc_patents_us_2024_25                                  A01K61:191; G06Q50:6403
+cpc_patents_region_2024_25                                 A01K61:9; G06Q50:320
+cpc                                                              A01K61; G06Q50
+Name: 45, dtype: object>",openalex_topic,T12697,Water Quality Monitoring Technologies,4516,90.0,11.0,140.0,13.0
+Seafood,"<bound method IndexOpsMixin.item of engine_name                                                             Seafood
+item                                                                          3
+source                                                                 abstract
+statement                     Sensors, AI and data visualization for decisio...
+quote                         Sensor technologies, AI and other advanced ana...
+topic_id                                                                 T12697
+topic                                     Water Quality Monitoring Technologies
+subfield_id                                                      subfields/2312
+subfield                                           Water Science and Technology
+field                                                     Environmental Science
+topic_basis                                      classifier rank 1 (score 0.99)
+cpc_patents_us_2024_25                                  A01K61:191; G06Q50:6403
+cpc_patents_region_2024_25                                 A01K61:9; G06Q50:320
+cpc                                                              A01K61; G06Q50
+Name: 45, dtype: object>",cpc,A01K61,"Animal husbandry; aviculture; apiculture; pisciculture; fishing; rearing or breeding animals, not otherwise provided for; new breeds of animals",9867,50.0,98.0,82.0,142.0
+Seafood,"<bound method IndexOpsMixin.item of engine_name                                                             Seafood
+item                                                                          3
+source                                                                 abstract
+statement                     Sensors, AI and data visualization for decisio...
+quote                         Sensor technologies, AI and other advanced ana...
+topic_id                                                                 T12697
+topic                                     Water Quality Monitoring Technologies
+subfield_id                                                      subfields/2312
+subfield                                           Water Science and Technology
+field                                                     Environmental Science
+topic_basis                                      classifier rank 1 (score 0.99)
+cpc_patents_us_2024_25                                  A01K61:191; G06Q50:6403
+cpc_patents_region_2024_25                                 A01K61:9; G06Q50:320
+cpc                                                              A01K61; G06Q50
+Name: 45, dtype: object>",cpc,G06Q50,"Information and communication technology [ict] specially adapted for administrative, commercial, financial, managerial or supervisory purposes; systems or methods specially adapted for administrative, commercial, financial, managerial or supervisory purposes, not otherwise provided for",9867,1664.0,1028.0,2029.0,1191.0
+Seafood,"<bound method IndexOpsMixin.item of engine_name                                                             Seafood
+item                                                                          4
+source                                                                 abstract
+statement                     Seafood processing, waste stream utilization a...
+quote                         new and downscaled processing technologies ......
+topic_id                                                                 T14010
+topic                                         Food Industry and Aquatic Biology
+subfield_id                                                      subfields/1106
+subfield                                                           Food Science
+field                                      Agricultural and Biological Sciences
+topic_basis                                      classifier rank 1 (score 0.56)
+cpc_patents_us_2024_25                          A22C25:33; A23B4:163; A23L17:50
+cpc_patents_region_2024_25                          A22C25:0; A23B4:8; A23L17:1
+cpc                                                       A22C25; A23B4; A23L17
+Name: 46, dtype: object>",openalex_topic,T14010,Food Industry and Aquatic Biology,4516,54.0,351.0,52.0,355.0
+Seafood,"<bound method IndexOpsMixin.item of engine_name                                                             Seafood
+item                                                                          4
+source                                                                 abstract
+statement                     Seafood processing, waste stream utilization a...
+quote                         new and downscaled processing technologies ......
+topic_id                                                                 T14010
+topic                                         Food Industry and Aquatic Biology
+subfield_id                                                      subfields/1106
+subfield                                                           Food Science
+field                                      Agricultural and Biological Sciences
+topic_basis                                      classifier rank 1 (score 0.56)
+cpc_patents_us_2024_25                          A22C25:33; A23B4:163; A23L17:50
+cpc_patents_region_2024_25                          A22C25:0; A23B4:8; A23L17:1
+cpc                                                       A22C25; A23B4; A23L17
+Name: 46, dtype: object>",cpc,A22C25,"Processing meat, poultry, or fish",9867,1354.0,100.0,1724.0,148.0
+Seafood,"<bound method IndexOpsMixin.item of engine_name                                                             Seafood
+item                                                                          4
+source                                                                 abstract
+statement                     Seafood processing, waste stream utilization a...
+quote                         new and downscaled processing technologies ......
+topic_id                                                                 T14010
+topic                                         Food Industry and Aquatic Biology
+subfield_id                                                      subfields/1106
+subfield                                                           Food Science
+field                                      Agricultural and Biological Sciences
+topic_basis                                      classifier rank 1 (score 0.56)
+cpc_patents_us_2024_25                          A22C25:33; A23B4:163; A23L17:50
+cpc_patents_region_2024_25                          A22C25:0; A23B4:8; A23L17:1
+cpc                                                       A22C25; A23B4; A23L17
+Name: 46, dtype: object>",cpc,A23B4,"Preservation of foods, foodstuffs or non-alcoholic beverages; chemical ripening of fruit or vegetables",9867,1086.0,1005.0,1289.0,903.0
+Seafood,"<bound method IndexOpsMixin.item of engine_name                                                             Seafood
+item                                                                          4
+source                                                                 abstract
+statement                     Seafood processing, waste stream utilization a...
+quote                         new and downscaled processing technologies ......
+topic_id                                                                 T14010
+topic                                         Food Industry and Aquatic Biology
+subfield_id                                                      subfields/1106
+subfield                                                           Food Science
+field                                      Agricultural and Biological Sciences
+topic_basis                                      classifier rank 1 (score 0.56)
+cpc_patents_us_2024_25                          A22C25:33; A23B4:163; A23L17:50
+cpc_patents_region_2024_25                          A22C25:0; A23B4:8; A23L17:1
+cpc                                                       A22C25; A23B4; A23L17
+Name: 46, dtype: object>",cpc,A23L17,"Foods, foodstuffs or non-alcoholic beverages, not otherwise provided for; preparation or treatment thereof",9867,159.0,23.0,78.0,26.0
+Seafood,"<bound method IndexOpsMixin.item of engine_name                                                             Seafood
+item                                                                          5
+source                                                                 abstract
+statement                                     Seafood traceability technologies
+quote                         Traceability technologies can also help to rea...
+topic_id                                                                 T12486
+topic                                            Food Supply Chain Traceability
+subfield_id                                                      subfields/1106
+subfield                                                           Food Science
+field                                      Agricultural and Biological Sciences
+topic_basis                                      classifier rank 1 (score 0.99)
+cpc_patents_us_2024_25                                             G06Q10:13971
+cpc_patents_region_2024_25                                           G06Q10:808
+cpc                                                                      G06Q10
+Name: 47, dtype: object>",openalex_topic,T12486,Food Supply Chain Traceability,4516,33.0,95.0,36.0,116.0
+Seafood,"<bound method IndexOpsMixin.item of engine_name                                                             Seafood
+item                                                                          5
+source                                                                 abstract
+statement                                     Seafood traceability technologies
+quote                         Traceability technologies can also help to rea...
+topic_id                                                                 T12486
+topic                                            Food Supply Chain Traceability
+subfield_id                                                      subfields/1106
+subfield                                                           Food Science
+field                                      Agricultural and Biological Sciences
+topic_basis                                      classifier rank 1 (score 0.99)
+cpc_patents_us_2024_25                                             G06Q10:13971
+cpc_patents_region_2024_25                                           G06Q10:808
+cpc                                                                      G06Q10
+Name: 47, dtype: object>",cpc,G06Q10,"Information and communication technology [ict] specially adapted for administrative, commercial, financial, managerial or supervisory purposes; systems or methods specially adapted for administrative, commercial, financial, managerial or supervisory purposes, not otherwise provided for",9867,2065.0,1272.0,3399.0,1437.0

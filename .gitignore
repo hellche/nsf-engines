@@ -5,3 +5,5 @@
 .DS_Store
 data/raw/
 *.parquet
+.venv/
+__pycache__/

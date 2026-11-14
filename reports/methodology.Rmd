@@ -19,9 +19,35 @@ library(dplyr); library(readr); library(knitr); library(here); library(stringr)
 profile <- read_csv(here("data", "processed", "tech_profile.csv"), show_col_types = FALSE)
 choices <- read_csv(here("data", "manual", "tech_topic_choice.csv"), show_col_types = FALSE)
 esc <- htmltools::htmlEscape
+svg_v23 <- here("tech_profile_v2_procedure.svg")
 ```
 
-## Technology profile {#technology-profile}
+<style>
+  .method-svg svg { width: 100%; height: auto; }
+</style>
+
+## Technology profile: versions 2 and 3 {#technology-profile-v2-v3}
+
+*In progress.* Versions 2 and 3 score **every** OpenAlex topic (4,516) and **every** CPC main group (9,867)
+for each Engine by embedding similarity to the grant text (SPECTER2 for topics, PatentSBERTa for CPC), so
+that nothing is left out by hand. They differ only in the input: v2 uses every sentence of the grant title
+and abstract; v3 uses only the science and technology fragments extracted from them, word for word, with a
+fixed prompt. A manual choice of the top 5 topics and codes per Engine follows. Version 1 (below) was an
+earlier manual choice and is shown for reference, not as a benchmark. The diagram labels are in Russian.
+
+<div class="method-svg">
+```{r diagram-v23, results = "asis"}
+# Inline SVG; blank lines would end pandoc's raw HTML block
+if (file.exists(svg_v23)) {
+  svg <- readLines(svg_v23, warn = FALSE, encoding = "UTF-8")
+  cat(svg[nzchar(trimws(svg))], sep = "\n")
+} else {
+  cat("<p><i>Diagram file tech_profile_v2_procedure.svg not found.</i></p>")
+}
+```
+</div>
+
+## Technology profile, version 1 {#technology-profile}
 
 The technology profile states what each Engine works on in two vocabularies: OpenAlex topics (for papers) and
 CPC classes (for patents). It is built from the text of the NSF grant itself, not from the Engine's website.
