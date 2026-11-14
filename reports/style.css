@@ -1,0 +1,18 @@
+/* Shared site style (included via `css: style.css` in each .Rmd) */
+
+/* Tables: black rules at top, under the header and at the bottom; grey lines between rows */
+.table, table {
+  border-collapse: collapse;
+  border-top: 2px solid #000;
+  border-bottom: 2px solid #000;
+}
+.table > thead > tr > th, table > thead > tr > th {
+  border-bottom: 1px solid #000;
+  vertical-align: bottom;
+}
+.table > tbody > tr > td, table > tbody > tr > td {
+  border-top: 1px solid #ccc;
+}
+.table > tbody > tr:first-child > td, table > tbody > tr:first-child > td {
+  border-top: none;
+}

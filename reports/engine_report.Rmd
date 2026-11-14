@@ -8,6 +8,7 @@ output:
     toc_float: true
     theme: flatly
     self_contained: true
+    css: style.css
     includes:
       before_body: _navbar.html
 params:
