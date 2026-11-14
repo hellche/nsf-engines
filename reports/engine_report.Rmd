@@ -51,6 +51,21 @@ tibble(
 ) |> kable(align = c("l", "r"))
 ```
 
+## Economic base
+
+```{r economy}
+econ <- rd("economy_engine.csv") |> filter(engine_name == E)
+econ |>
+  transmute(NAICS = naics, Industry = label,
+            `Employment in region` = scales::comma(region_emp),
+            Establishments = scales::comma(region_est),
+            `Share of US employment` = scales::percent(region_share_of_us, 0.1),
+            `Employment LQ` = lq_emp) |>
+  kable(align = c("l", "l", "r", "r", "r", "r"))
+```
+
+Industries related to the Engine's technology (chosen from the NSF abstract, see `data/manual/engine_naics.csv`). County Business Patterns 2023; LQ = the industry's share of regional employment relative to its share of US employment (1 = US average). Region: `r econ$counties[1]`.
+
 ## Technology profile
 
 The profile has `r nrow(profile)` statements. Item 1 comes from the grant title, the rest from the technical part of the NSF abstract. Each statement is mapped to one OpenAlex topic and to CPC codes.

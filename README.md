@@ -19,6 +19,7 @@ Search window for papers and patents: from 5 years before the award start onward
 | 6b | Patents (local USPTO grants): region x technology, partner assignees, team inventors | `R/06b_patents.R` | `data/processed/patents_engine.csv` |
 | 7 | Metrics per Engine: people, partners, papers, patents, patent location quotients | `R/07_metrics.R` | `data/processed/metrics_*.csv` |
 | 7b | Competition: US states and the Engine's region ranked by profile patents and LQ; inventor countries (patents); author countries (OpenAlex papers) | `R/07b_competition.R` | `data/processed/competition_*.csv` |
+| 7c | Economic base: employment and LQ of related industries (County Business Patterns 2023) | `R/07c_economy.R` + `data/manual/engine_naics.csv` | `data/processed/economy_engine.csv` |
 | 8 | Per-Engine reports (parameterised Rmd) and index page -> `docs/` for GitHub Pages | `R/08_render_site.R`, `reports/engine_report.Rmd`, `reports/index.Rmd` | `docs/*.html` |
 
 ## Data sources
@@ -114,8 +115,10 @@ Search window for papers and patents: from 5 years before the award start onward
   states. Inventor counties come from PatentsView (`inventors_pv_21_25_geo.parquet`).
 - Patent location quotient: (region patents with the code / all region patents) / (US patents with the code /
   all US patents), 2021-2025 grants.
-- Economic base (County Business Patterns) is not yet included: the Census API now requires a key.
+- Economic base: County Business Patterns 2023 files (cbp23co/st/us) downloaded from census.gov into
+  `data/raw/cbp/` (the Census API now requires a key). Related industries per Engine are chosen from the NSF
+  abstract in `data/manual/engine_naics.csv`. CBP 2023 uses noise-infused values for small cells.
 - Partner assignee matching does not yet include subsidiaries and IP holding companies (e.g. SWIMC LLC for
   Sherwin-Williams), so partner shares are lower bounds.
-- Run order: 01 -> 02 -> 03 -> 03b -> 04 -> 05 -> 06a -> 06b -> 07 -> 07b -> 08. `docs/` is ready for GitHub Pages
+- Run order: 01 -> 02 -> 03 -> 03b -> 04 -> 05 -> 06a -> 06b -> 07 -> 07b -> 07c -> 08. `docs/` is ready for GitHub Pages
   (publish from the `docs` folder of the main branch).
