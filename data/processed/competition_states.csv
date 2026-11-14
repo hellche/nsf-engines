@@ -70,7 +70,6 @@ Critical Materials Crossroads,NJ,146,35049,0.033,0.75,FALSE,13,32
 Critical Materials Crossroads,NC,129,27419,0.029,0.847,FALSE,14,25
 Critical Materials Crossroads,AZ,117,19714,0.026,1.068,FALSE,15,20
 Critical Materials Crossroads,CT,117,17656,0.026,1.193,FALSE,15,14
-Critical Materials Crossroads,ENGINE REGION,101,13842,0.023,1.313,FALSE,17,NA
 Critical Materials Crossroads,MN,98,24198,0.022,0.729,FALSE,17,33
 Critical Materials Crossroads,UT,90,10114,0.02,1.601,FALSE,18,7
 Critical Materials Crossroads,VA,87,21765,0.02,0.719,FALSE,19,34
@@ -92,6 +91,7 @@ Critical Materials Crossroads,AL,25,3577,0.006,1.258,FALSE,34,11
 Critical Materials Crossroads,KY,24,5057,0.005,0.854,FALSE,35,24
 Critical Materials Crossroads,ID,23,7892,0.005,0.524,FALSE,36,36
 Critical Materials Crossroads,WV,19,877,0.004,3.899,FALSE,37,NA
+Critical Materials Crossroads,ENGINE REGION,19,4416,0.004,0.774,FALSE,37,NA
 Critical Materials Crossroads,DE,18,3024,0.004,1.071,FALSE,38,NA
 Critical Materials Crossroads,VT,17,2675,0.004,1.144,FALSE,39,NA
 Critical Materials Crossroads,ME,16,2277,0.004,1.265,FALSE,40,NA

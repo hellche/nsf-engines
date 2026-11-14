@@ -17,9 +17,9 @@ RETI,2211,"Electric power generation, transmission and distribution",24858,609,6
 RETI,331,Primary metal manufacturing,37324,329,6265086,354914,0.1052,2.35,whole state(s),abstract: steel production
 RETI,325,Chemical manufacturing,49675,693,6265086,911245,0.0545,1.22,whole state(s),abstract: chemical production
 RETI,3359,Other electrical equipment and components (incl. batteries),15128,100,6265086,152659,0.0991,2.21,whole state(s),abstract: energy storage
-Critical Materials Crossroads,331,Primary metal manufacturing,9263,92,3880368,354914,0.0261,0.94,whole state(s),abstract: metal refining
-Critical Materials Crossroads,325,Chemical manufacturing,32135,442,3880368,911245,0.0353,1.27,whole state(s),abstract: materials processing
-Critical Materials Crossroads,3359,Other electrical equipment and components (incl. batteries),7237,57,3880368,152659,0.0474,1.71,whole state(s),critical materials for energy storage
+Critical Materials Crossroads,331,Primary metal manufacturing,383,12,1016941,354914,0.0011,0.15,14 of 14,abstract: metal refining
+Critical Materials Crossroads,325,Chemical manufacturing,7839,107,1016941,911245,0.0086,1.18,14 of 14,abstract: materials processing
+Critical Materials Crossroads,3359,Other electrical equipment and components (incl. batteries),479,5,1016941,152659,0.0031,0.43,14 of 14,critical materials for energy storage
 Critical Mineral Accelerator,212,Mining (except oil and gas),3250,70,263691,173729,0.0187,9.92,whole state(s),abstract: mineral exploration and production
 Critical Mineral Accelerator,2131,Support activities for mining,4845,72,263691,288339,0.0168,8.91,whole state(s),abstract: exploration services
 Seafood,1141,Fishing,789,650,5108119,4581,0.1722,4.71,whole state(s),abstract: harvest stage

@@ -111,13 +111,17 @@ Search window for papers and patents: from 5 years before the award start onward
 ## Notes on steps 7-8
 
 - Regions are defined in `data/manual/engine_regions.csv` (`R/regions.R`): counties where the list is known
-  (NEO-SMART: 18 Northeast Ohio counties; STELLAR: 11 counties listed in the NSF abstract), otherwise whole
-  states. Inventor counties come from PatentsView (`inventors_pv_21_25_geo.parquet`).
+  (NEO-SMART: 18 Northeast Ohio counties; STELLAR: 11 counties listed in the NSF abstract; Critical Materials
+  Crossroads: the 14-county Kansas City MSA, since the Engine calls itself 'the Kansas City Region'), otherwise
+  whole states. No official county lists were found for FAST (12 counties), Grid Modernization (36), RETI (78)
+  or BRIDGES; NSF's own data table lists states only. Inventor counties come from PatentsView (`inventors_pv_21_25_geo.parquet`).
 - Patent location quotient: (region patents with the code / all region patents) / (US patents with the code /
   all US patents), 2021-2025 grants.
 - Economic base: County Business Patterns 2023 files (cbp23co/st/us) downloaded from census.gov into
   `data/raw/cbp/` (the Census API now requires a key). Related industries per Engine are chosen from the NSF
   abstract in `data/manual/engine_naics.csv`. CBP 2023 uses noise-infused values for small cells.
+- `any_in_region` for partner papers is state-based (partner institutions have a city, not a county), so for
+  county-level Engines it is an upper bound.
 - Partner assignee matching does not yet include subsidiaries and IP holding companies (e.g. SWIMC LLC for
   Sherwin-Williams), so partner shares are lower bounds.
 - Run order: 01 -> 02 -> 03 -> 03b -> 04 -> 05 -> 06a -> 06b -> 07 -> 07b -> 07c -> 08. `docs/` is ready for GitHub Pages

@@ -8,10 +8,10 @@ BRIDGES,B65D65,11,12697,628,797568,1.1
 BRIDGES,G06Q50,159,12697,10551,797568,0.95
 BRIDGES,G05B17,5,12697,462,797568,0.68
 BRIDGES,C04B18,1,12697,230,797568,0.27
-Critical Materials Crossroads,B01J19,58,13842,1566,797568,2.13
-Critical Materials Crossroads,C22B,15,13842,530,797568,1.63
-Critical Materials Crossroads,C25C,2,13842,135,797568,0.85
-Critical Materials Crossroads,G05B13,27,13842,2274,797568,0.68
+Critical Materials Crossroads,B01J19,14,4416,1566,797568,1.61
+Critical Materials Crossroads,G05B13,5,4416,2274,797568,0.4
+Critical Materials Crossroads,C22B,0,4416,530,797568,0
+Critical Materials Crossroads,C25C,0,4416,135,797568,0
 Critical Mineral Accelerator,G06N,4,330,44724,797568,0.22
 Critical Mineral Accelerator,C22B,0,330,530,797568,0
 Critical Mineral Accelerator,G01V,0,330,3194,797568,0

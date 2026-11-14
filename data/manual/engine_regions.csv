@@ -30,8 +30,20 @@ STELLAR,NY,Steuben,county,same
 STELLAR,NY,Allegany,county,same
 BRIDGES,AL,,state,"state proxy: abstract names Alabama and Tennessee, no county list"
 BRIDGES,TN,,state,same
-Critical Materials Crossroads,MO,,state,"state proxy: Kansas City region, no county list found"
-Critical Materials Crossroads,KS,,state,same
+Critical Materials Crossroads,MO,Bates,county,"Engine describes itself as 'in the Kansas City Region' (crit-mat.org/about-cmc); no county list published, so the Kansas City, MO-KS MSA (CBSA 28140, OMB Bulletin 23-01; citypopulation.de/en/usa/metro/28140__kansas_city) is used"
+Critical Materials Crossroads,MO,Caldwell,county,same
+Critical Materials Crossroads,MO,Cass,county,same
+Critical Materials Crossroads,MO,Clay,county,same
+Critical Materials Crossroads,MO,Clinton,county,same
+Critical Materials Crossroads,MO,Jackson,county,same
+Critical Materials Crossroads,MO,Lafayette,county,same
+Critical Materials Crossroads,MO,Platte,county,same
+Critical Materials Crossroads,MO,Ray,county,same
+Critical Materials Crossroads,KS,Johnson,county,same
+Critical Materials Crossroads,KS,Leavenworth,county,same
+Critical Materials Crossroads,KS,Linn,county,same
+Critical Materials Crossroads,KS,Miami,county,same
+Critical Materials Crossroads,KS,Wyandotte,county,same
 Critical Mineral Accelerator,AK,,state,abstract: state of Alaska
 FAST,OR,,state,"state proxy: abstract says 12 counties, list not found"
 Grid Modernization,NC,,state,"state proxy: abstract says 36 counties in NC and SC, list not found"
