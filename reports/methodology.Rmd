@@ -56,6 +56,19 @@ has yet, and fixes the problems found in the review of their rankings. The diagr
 The profile describes what the grant says the Engine does. Data are used only to check it, not to choose it:
 choosing codes by the number of regional patents would make the region's Patent LQ high by construction.
 
+### Classification lists
+
+Both lists are public and are kept in the repository as CSV files (`data/reference/`, downloaded by
+`py/00_reference_lists.py`):
+
+- **OpenAlex topics**: all topics of the OpenAlex topic classification, with their descriptions and
+  keywords, from the [OpenAlex topics API](https://api.openalex.org/topics)
+  ([documentation](https://docs.openalex.org/api-entities/topics)).
+- **CPC titles**: the title list of the Cooperative Patent Classification, scheme 2026.08
+  ([CPCTitleList202608.zip](https://www.cooperativepatentclassification.org/sites/default/files/cpc/bulk/CPCTitleList202608.zip),
+  from the [CPC bulk download page](https://www.cooperativepatentclassification.org/cpcSchemeAndDefinitions/bulk)):
+  every section, class, subclass, main group and subgroup with its official title.
+
 ### Procedure of versions 2 and 3
 
 <div class="method-svg">
