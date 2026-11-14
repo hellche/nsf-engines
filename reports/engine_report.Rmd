@@ -33,7 +33,14 @@ top_asg  <- rd("metrics_top_assignees.csv") |> filter(engine_name == E)
 pe       <- rd("patents_engine.csv") |> filter(engine_name == E)
 wi       <- rd("works_institutions.csv") |> filter(engine_name == E)
 wp       <- rd("works_people.csv") |> filter(engine_name == E)
-people   <- people |> left_join(count(wp, person_id, name = "n_listed"), by = "person_id")
+pt       <- read_csv(here("data", "processed", "patents_team.csv"),
+                     col_types = cols(patent_id = col_character(), .default = col_guess())) |> filter(engine_name == E)
+people   <- people |>
+  left_join(wp |> group_by(person_id) |> summarise(n_listed = n(), n_topic = sum(in_engine_topics, na.rm = TRUE)),
+            by = "person_id") |>
+  left_join(pt |> group_by(person_id) |> summarise(n_pat = n_distinct(patent_id),
+                                                  n_pat_profile = n_distinct(patent_id[in_tech_profile])),
+            by = "person_id")
 na0 <- \(x) ifelse(is.na(x), 0, x)
 theme_set(theme_minimal(base_size = 12))
 ```
@@ -97,19 +104,22 @@ people |>
             `On NSF award` = if_else(in_nsf, coalesce(role_nsf, ""), ""),
             Title = str_trunc(coalesce(title_site, ""), 60),
             Organisation = str_trunc(coalesce(org_site, ""), 40),
-            `Works since window` = case_when(
-              !is.na(n_listed) ~ sprintf("[%d](publications.html#works-%s)", n_listed, person_id),
+            `Works since window (in Engine topics)` = case_when(
+              !is.na(n_listed) ~ sprintf("[%d](publications.html#works-%s) (%d)", n_listed, person_id, n_topic),
               coalesce(reliable, FALSE) & !coalesce(check_merged, FALSE) ~ "0",
               coalesce(reliable, FALSE) ~ as.character(works_5y),
               TRUE ~ "-"),
             `h-index` = if_else(coalesce(reliable, FALSE), as.character(h_index), "-"),
+            `Patents 2021-25 (in Engine profile)` = if_else(
+              is.na(n_pat), "",
+              sprintf("[%d](patents.html#patents-%s) (%d)", n_pat, person_id, n_pat_profile)),
             Site = if_else(is.na(site_url), "", sprintf("[page](%s)", site_url)),
             OpenAlex = if_else(coalesce(reliable, FALSE) & !coalesce(check_merged, FALSE) & !is.na(oa_id),
                                sprintf("[profile](https://openalex.org/%s)", oa_id), "")) |>
   kable()
 ```
 
-Publication counts are shown only where the OpenAlex author matches both the name and the person's current organisation. The OpenAlex link is given only for these reliable matches, and not for profiles flagged as possibly merging several namesakes. *Site* links to the page of the Engine's website where the person is named. Click a number of works to see the list on the [Publications](publications.html) page.
+Publication counts are shown only where the OpenAlex author matches both the name and the person's current organisation. The OpenAlex link is given only for these reliable matches, and not for profiles flagged as possibly merging several namesakes. *Site* links to the page of the Engine's website where the person is named. Click a number of works to see the list on the [Publications](publications.html) page. *Patents*: US grants 2021-2025 with the person among the inventors (same last and first name, address in the Engine's states); click the number for the list on the [Patents](patents.html) page. In brackets: works in the Engine's topics, patents with a CPC code in the Engine's technology profile.
 
 
 ## Partners

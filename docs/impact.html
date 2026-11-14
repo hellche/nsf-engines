@@ -1603,6 +1603,7 @@ display: flex; align-items: center; flex-wrap: wrap; gap: 4px 20px; min-height: 
     <a href="pipeline.html">Pipeline</a>
     <a href="index.html">12 Engines</a>
     <a href="publications.html">Publications</a>
+    <a href="patents.html">Patents</a>
     <a href="https://github.com/hellche/nsf-engines" aria-label="GitHub" title="GitHub"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z" /></svg></a>
   </div>
 </nav>
@@ -1613,7 +1614,7 @@ display: flex; align-items: center; flex-wrap: wrap; gap: 4px 20px; min-height: 
     for (var i = 1; i < navs.length; i++) navs[i].remove();
     document.body.insertBefore(navs[0], document.body.firstChild);
     var page = location.pathname.split("/").pop() || "index.html";
-    if (["index.html", "pipeline.html", "publications.html"].indexOf(page) < 0) return;
+    if (["index.html", "pipeline.html", "publications.html", "patents.html"].indexOf(page) < 0) return;
     document.querySelectorAll(".site-nav .links a").forEach(function (a) {
       if (a.getAttribute("href") === page) a.classList.add("active");
     });
@@ -1640,6 +1641,7 @@ display: flex; align-items: center; flex-wrap: wrap; gap: 4px 20px; min-height: 
     <a href="pipeline.html">Pipeline</a>
     <a href="index.html">12 Engines</a>
     <a href="publications.html">Publications</a>
+    <a href="patents.html">Patents</a>
     <a href="https://github.com/hellche/nsf-engines" aria-label="GitHub" title="GitHub"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z" /></svg></a>
   </div>
 </nav>
@@ -1650,7 +1652,7 @@ display: flex; align-items: center; flex-wrap: wrap; gap: 4px 20px; min-height: 
     for (var i = 1; i < navs.length; i++) navs[i].remove();
     document.body.insertBefore(navs[0], document.body.firstChild);
     var page = location.pathname.split("/").pop() || "index.html";
-    if (["index.html", "pipeline.html", "publications.html"].indexOf(page) < 0) return;
+    if (["index.html", "pipeline.html", "publications.html", "patents.html"].indexOf(page) < 0) return;
     document.querySelectorAll(".site-nav .links a").forEach(function (a) {
       if (a.getAttribute("href") === page) a.classList.add("active");
     });
@@ -1876,15 +1878,16 @@ Education</td>
 </table>
 <table>
 <colgroup>
-<col width="12%" />
-<col width="7%" />
 <col width="9%" />
-<col width="27%" />
-<col width="12%" />
-<col width="13%" />
 <col width="5%" />
-<col width="3%" />
 <col width="6%" />
+<col width="19%" />
+<col width="9%" />
+<col width="19%" />
+<col width="4%" />
+<col width="18%" />
+<col width="2%" />
+<col width="4%" />
 </colgroup>
 <thead>
 <tr class="header">
@@ -1893,8 +1896,9 @@ Education</td>
 <th align="left">On NSF award</th>
 <th align="left">Title</th>
 <th align="left">Organisation</th>
-<th align="left">Works since window</th>
+<th align="left">Works since window (in Engine topics)</th>
 <th align="left">h-index</th>
+<th align="left">Patents 2021-25 (in Engine profile)</th>
 <th align="left">Site</th>
 <th align="left">OpenAlex</th>
 </tr>
@@ -1906,8 +1910,9 @@ Education</td>
 <td align="left">Co-PI</td>
 <td align="left">Chief Technology &amp; Innovation Officer</td>
 <td align="left">NSF IMPACT Engine</td>
-<td align="left"><a href="publications.html#works-impact__amrou-awaysheh">15</a></td>
+<td align="left"><a href="publications.html#works-impact__amrou-awaysheh">15</a> (0)</td>
 <td align="left">14</td>
+<td align="left"></td>
 <td align="left"><a href="https://mskimpact.org/about.html">page</a></td>
 <td align="left"><a href="https://openalex.org/A5042819663">profile</a></td>
 </tr>
@@ -1917,8 +1922,9 @@ Education</td>
 <td align="left">Co-PI</td>
 <td align="left">Chief Learning Officer</td>
 <td align="left">NSF IMPACT Engine</td>
-<td align="left"><a href="publications.html#works-impact__jill-fehrenbacher">24</a></td>
+<td align="left"><a href="publications.html#works-impact__jill-fehrenbacher">24</a> (3)</td>
 <td align="left">26</td>
+<td align="left"><a href="patents.html#patents-impact__jill-fehrenbacher">1</a> (1)</td>
 <td align="left"><a href="https://mskimpact.org/about.html">page</a></td>
 <td align="left"><a href="https://openalex.org/A5065178270">profile</a></td>
 </tr>
@@ -1928,8 +1934,9 @@ Education</td>
 <td align="left">PI; Co-PI</td>
 <td align="left">Chief Scientific Officer</td>
 <td align="left">NSF IMPACT Engine</td>
-<td align="left"><a href="publications.html#works-impact__melissa-kacena">82</a></td>
+<td align="left"><a href="publications.html#works-impact__melissa-kacena">82</a> (6)</td>
 <td align="left">40</td>
+<td align="left"></td>
 <td align="left"><a href="https://mskimpact.org/about.html">page</a></td>
 <td align="left"><a href="https://openalex.org/A5034416233">profile</a></td>
 </tr>
@@ -1941,6 +1948,7 @@ Education</td>
 <td align="left">NSF IMPACT Engine</td>
 <td align="left">-</td>
 <td align="left">-</td>
+<td align="left"></td>
 <td align="left"><a href="https://mskimpact.org/about.html">page</a></td>
 <td align="left"></td>
 </tr>
@@ -1954,6 +1962,7 @@ Education</td>
 <td align="left">-</td>
 <td align="left"></td>
 <td align="left"></td>
+<td align="left"></td>
 </tr>
 </tbody>
 </table>
@@ -1962,7 +1971,12 @@ both the name and the person’s current organisation. The OpenAlex link
 is given only for these reliable matches, and not for profiles flagged
 as possibly merging several namesakes. <em>Site</em> links to the page
 of the Engine’s website where the person is named. Click a number of
-works to see the list on the <a href="publications.html">Publications</a> page.</p>
+works to see the list on the <a href="publications.html">Publications</a> page. <em>Patents</em>: US
+grants 2021-2025 with the person among the inventors (same last and
+first name, address in the Engine’s states); click the number for the
+list on the <a href="patents.html">Patents</a> page. In brackets: works
+in the Engine’s topics, patents with a CPC code in the Engine’s
+technology profile.</p>
 </div>
 <div id="partners" class="section level2">
 <h2>Partners</h2>
@@ -2169,9 +2183,9 @@ table th.sort-desc::after { content: " \25BC"; color: #000; }
 (function () {
   var MIN_ROWS_FOR_SEARCH = 10;
 
-  // A cell as a number ("1,234", "20.4%", "4.52"), or null if it is not one
+  // A cell as a number ("1,234", "20.4%", "4.52", "69 (55)" -> 69), or null if it is not one
   function num(text) {
-    var t = text.replace(/[,%\s]/g, "");
+    var t = text.replace(/\s*\([^)]*\)\s*$/, "").replace(/[,%\s]/g, "");
     return t !== "" && !isNaN(t) ? parseFloat(t) : null;
   }
   function cellText(row, i) { return row.cells[i] ? row.cells[i].textContent.trim() : ""; }

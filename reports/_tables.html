@@ -12,9 +12,9 @@
 (function () {
   var MIN_ROWS_FOR_SEARCH = 10;
 
-  // A cell as a number ("1,234", "20.4%", "4.52"), or null if it is not one
+  // A cell as a number ("1,234", "20.4%", "4.52", "69 (55)" -> 69), or null if it is not one
   function num(text) {
-    var t = text.replace(/[,%\s]/g, "");
+    var t = text.replace(/\s*\([^)]*\)\s*$/, "").replace(/[,%\s]/g, "");
     return t !== "" && !isNaN(t) ? parseFloat(t) : null;
   }
   function cellText(row, i) { return row.cells[i] ? row.cells[i].textContent.trim() : ""; }

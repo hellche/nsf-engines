@@ -1,0 +1,80 @@
+---
+title: "Patents of Engine team members"
+date: "Data retrieved `r format(Sys.Date(), '%B %d, %Y')`"
+output:
+  html_document:
+    theme: flatly
+    self_contained: true
+    css: style.css
+    includes:
+      before_body: _navbar.html
+      after_body: _tables.html
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE, message = FALSE, warning = FALSE)
+invisible(Sys.setlocale("LC_CTYPE", "en_US.UTF-8"))  # else cat() writes non-ASCII as <U+2010> under the C locale
+library(dplyr); library(readr); library(knitr); library(here); library(stringr)
+rd <- \(f) read_csv(here("data", "processed", f), show_col_types = FALSE)
+engines <- rd("engines.csv") |> arrange(engine_name)
+people  <- rd("people_roles_evidence.csv") |> filter(in_team)
+pt      <- read_csv(here("data", "processed", "patents_team.csv"),
+                    col_types = cols(patent_id = col_character(), .default = col_guess()))
+slug <- \(x) str_replace_all(str_to_lower(x), "[^a-z0-9]+", "-")
+esc  <- htmltools::htmlEscape
+```
+
+US patents granted in 2021-2025 with an Engine team member among the inventors. A team member counts as
+an inventor when the last name and the first name (or its start) match and the inventor's address is in the
+Engine's states. Common names can still be namesakes: compare *Inventor as listed* with the person.
+*In Engine profile* = a CPC code of the patent is in the Engine's technology profile (the grant's topic).
+Choose an Engine, then click a name to open the list.
+
+## Engines {.tabset .tabset-pills}
+
+```{r engines, results = "asis"}
+for (i in seq_len(nrow(engines))) {
+  e  <- engines$engine_name[i]
+  pe <- pt |> filter(engine_name == e)
+  cat(sprintf("### %s\n\n", e))
+  cat(sprintf("[%s Engine page](%s.html). ", e, slug(e)))
+  if (nrow(pe) == 0) {
+    cat("No patents with a team member among the inventors were found.\n\n")
+    next
+  }
+  cat(sprintf("%d team members, %d patents (%d in the Engine's technology profile).\n\n",
+              n_distinct(pe$person_id), n_distinct(pe$patent_id),
+              n_distinct(pe$patent_id[pe$in_tech_profile])))
+  ppl <- pe |> count(person_id, name, sort = TRUE)
+  for (j in seq_len(nrow(ppl))) {
+    p <- pe |> filter(person_id == ppl$person_id[j]) |> arrange(desc(grant_year), patent_id)
+    tab <- tibble(Patent = paste0("US&nbsp;", p$patent_id),
+                  Year = p$grant_year,
+                  Title = esc(str_to_sentence(coalesce(p$title, ""))),
+                  Assignee = esc(coalesce(p$assignees, "")),
+                  `Inventor as listed` = esc(coalesce(p$inventor_as_listed, "")),
+                  `In Engine profile` = if_else(p$in_tech_profile, paste0("yes (", p$cpc_matched, ")"), ""))
+    cat(sprintf('<details id="patents-%s"><summary><b>%s</b>: %d %s (%d in Engine profile)</summary>\n\n',
+                p$person_id[1], esc(p$name[1]), nrow(p), if (nrow(p) == 1) "patent" else "patents",
+                sum(p$in_tech_profile)))
+    print(kable(tab, format = "html", escape = FALSE, table.attr = 'class="table table-condensed"'))
+    cat("\n</details>\n\n")
+  }
+}
+```
+
+<script>
+// A link like patents.html#patents-<person_id> opens that Engine's tab and that person's list
+// (run after rmarkdown has built the tabs, and again when only the #hash changes)
+function openFromHash() {
+  if (location.hash.indexOf("#patents-") !== 0) return;
+  var d = document.getElementById(location.hash.slice(1));
+  if (!d) return;
+  var pane = $(d).closest(".tab-pane");
+  if (pane.length) $('a[href="#' + pane.attr("id") + '"]').tab("show");
+  d.open = true;
+  setTimeout(function () { d.scrollIntoView(); }, 50);
+}
+window.addEventListener("load", function () { setTimeout(openFromHash, 0); });
+window.addEventListener("hashchange", openFromHash);
+</script>

@@ -1,0 +1,41 @@
+engine_name,person_id,name,patent_id,grant_year,title,assignees,in_tech_profile,cpc_matched,invented_in_region,inventor_as_listed
+BRIDGES,bridges__nicole-labbe,Nicole Labbe,11512173,2022,Method of producing carbon fibers and carbon fiber composites from plant derived lignin and its blends,"University of Tennessee Research Foundation; TennEra, LLC",FALSE,NA,TRUE,Nicole Labbe
+Critical Materials Crossroads,critical-materials-crossroads__anthony-caruso,Anthony Caruso,12206030,2025,Stacked diode with side passivation and method of making the same,THE CURATORS OF THE UNIVERSITY OF MISSOURI,FALSE,NA,TRUE,Anthony Caruso
+Critical Materials Crossroads,critical-materials-crossroads__anthony-caruso,Anthony Caruso,12002891,2024,Diode and method of making the same,THE CURATORS OF THE UNIVERSITY OF MISSOURI,FALSE,NA,TRUE,Anthony Caruso
+Critical Materials Crossroads,critical-materials-crossroads__anthony-caruso,Anthony Caruso,11558036,2023,Multi-pass nonlinear network for microwave generation,The Curators of the University of Missouri,FALSE,NA,TRUE,Anthony M. Caruso
+Critical Materials Crossroads,critical-materials-crossroads__mostafizur-rahman,Mostafizur Rahman,11996129,2024,Semiconductor circuits and devices based on low-energy consumption semiconductor structures exhibiting multi-valued magnetoelectric spin hall effect,Cornell University; The Curators of the University of Missouri; The Regents of the University of Michigan; Oregon State University,FALSE,NA,TRUE,Mostafizur Rahman
+FAST,fast__christie-dudenhoefer,Christie Dudenhoefer,12270820,2025,Ejection subassembly pitches to match nanowell spacing,"Hewlett-Packard Development Company, L.P.",FALSE,NA,TRUE,Christie Dudenhoefer
+FAST,fast__christie-dudenhoefer,Christie Dudenhoefer,11975547,2024,Fluid ejection controllers to pivotally hold firing boards,"Hewlett-Packard Development Company, L.P.",FALSE,NA,TRUE,Christie Dudenhoefer
+FAST,fast__christie-dudenhoefer,Christie Dudenhoefer,11609241,2023,Dispenser platforms,"Hewlett-Packard Development Company, L.P.",FALSE,NA,TRUE,Christie Dudenhoefer
+FAST,fast__christie-dudenhoefer,Christie Dudenhoefer,11642693,2023,Alignment devices,"Hewlett-Packard Development Company, L.P.",FALSE,NA,TRUE,Christie Dudenhoefer
+FAST,fast__christie-dudenhoefer,Christie Dudenhoefer,11774463,2023,Dispenser stages,"Hewlett-Packard Development Company, L.P.",FALSE,NA,TRUE,Christie Dudenhoefer
+FAST,fast__christie-dudenhoefer,Christie Dudenhoefer,11801506,2023,Fluid ejections in nanowells,"Hewlett-Packard Development Company, L.P.",FALSE,NA,TRUE,Christie Dudenhoefer
+FAST,fast__christie-dudenhoefer,Christie Dudenhoefer,11253850,2022,Pipette dispenser tip utilizing print head,"Hewlett-Packard Development Company, L.P.",FALSE,NA,TRUE,Christie Dudenhoefer
+FAST,fast__christie-dudenhoefer,Christie Dudenhoefer,11278928,2022,Alignment devices,"Hewlett-Packard Development Company, L.P.",FALSE,NA,TRUE,Christie Dudenhoefer
+FAST,fast__christie-dudenhoefer,Christie Dudenhoefer,11364492,2022,Monolithic carrier structure for digital dispensing,"Hewlett-Packard Development Company, L.P.",FALSE,NA,TRUE,Christie Dudenhoefer
+FAST,fast__christie-dudenhoefer,Christie Dudenhoefer,11366125,2022,Substrate conveyance systems,"Hewlett-Packard Development Company, L.P.",FALSE,NA,TRUE,Christie Dudenhoefer
+FAST,fast__christie-dudenhoefer,Christie Dudenhoefer,11383230,2022,Monolithic carrier structure including fluid routing for digital dispensing,"Hewlett-Packard Development Company, L.P.",FALSE,NA,TRUE,Christie Dudenhoefer
+FAST,fast__christie-dudenhoefer,Christie Dudenhoefer,11007529,2021,Microfluidic apparatuses,"Hewlett-Packard Development Company, L.P.",FALSE,NA,TRUE,Christie Dudenhoefer
+FAST,fast__christie-dudenhoefer,Christie Dudenhoefer,11203017,2021,Microfluidic apparatuses,"Hewlett-Packard Development Company, L.P.",FALSE,NA,TRUE,Christie Dudenhoefer
+FAST,fast__scott-mokler,Scott Mokler,11923257,2024,Hybrid microelectronic substrates,Intel Corporation,TRUE,H01L,TRUE,Scott M. Mokler
+FAST,fast__scott-mokler,Scott Mokler,11444033,2022,Hybrid microelectronic substrate and methods for fabricating the same,Intel Corporation,TRUE,H01L,TRUE,Scott M. Mokler
+FAST,fast__scott-mokler,Scott Mokler,11114353,2021,Hybrid microelectronic substrates,Intel Corporation,TRUE,H01L,TRUE,Scott M. Mokler
+Grid Modernization,grid-modernization__robert-cox,Robert Cox,10965128,2021,Systems and methods for advanced grid integration of distributed generators and energy resources,"SineWatts, Inc.",TRUE,H02J3,TRUE,Robert Cox
+IMPACT,impact__jill-fehrenbacher,Jill Fehrenbacher,11351130,2022,Prevention and reversal of inflammation induced DNA damage,Indiana University Research and Technology Corporation,TRUE,A61K,TRUE,Jill Fehrenbacher
+RuralSTAMINA Biomanufacturing,ruralstamina-biomanufacturing__kevin-moore,Kevin Moore,12435025,2025,Triphenylphosphonium-tethered salicylamine derivatives,"MTI Biotech, Inc.",FALSE,NA,TRUE,Kevin W. Moore
+RuralSTAMINA Biomanufacturing,ruralstamina-biomanufacturing__nigel-reuel,Nigel Reuel,12257046,2025,Resonance frequency shift sensors,"Iowa State University Research Foundation, Inc.",FALSE,NA,TRUE,Nigel Forest Reuel
+RuralSTAMINA Biomanufacturing,ruralstamina-biomanufacturing__nigel-reuel,Nigel Reuel,12313581,2025,Position independent and long read range resonant sensor,"Iowa State University Research Foundation, Inc.",FALSE,NA,TRUE,Nigel Forest Reuel
+RuralSTAMINA Biomanufacturing,ruralstamina-biomanufacturing__nigel-reuel,Nigel Reuel,12344873,2025,Anaerobic preconditioning of cells for improved in vitro protein production,"Iowa State University Research Foundation, Inc.",TRUE,C12P; C12N,TRUE,Nigel Forest Reuel
+RuralSTAMINA Biomanufacturing,ruralstamina-biomanufacturing__nigel-reuel,Nigel Reuel,11636755,2023,Resonant sensor reader,"SKROOT LABOORATORY, INC.",FALSE,NA,TRUE,Nigel Forest Reuel
+RuralSTAMINA Biomanufacturing,ruralstamina-biomanufacturing__nigel-reuel,Nigel Reuel,11105761,2021,Resonant sensors for wireless monitoring of cell concentration,"Iowa State University Research Foundation, Inc.",TRUE,C12M,TRUE,Nigel Forest Reuel
+STELLAR,stellar__jonathan-zuegel,Jonathan Zuegel,11906812,2024,Actively cooled optical substrates for high average power reflective or diffractive optic,University of Rochester,TRUE,G02B,TRUE,Jonathan D. Zuegel
+STELLAR,stellar__stefan-preble,Stefan Preble,12468087,2025,Apparatus and methods for reduction of crosstalk in integrated photonics applied to addressing quantum memories,United States of America as represented by the Secretary of the Air Force,TRUE,G02B,TRUE,Stefan Preble
+STELLAR,stellar__stefan-preble,Stefan Preble,11353659,2022,Photonic chip features for fiber attachment,Rochester Institute of Technology,TRUE,G02B,TRUE,Stefan Preble
+STELLAR,stellar__susan-houde-walter,Susan Houde-Walter,11552444,2023,Infrared laser system,"LMD Applied Science, LLC",TRUE,H01S,TRUE,Susan Houde-Walter
+STELLAR,stellar__susan-houde-walter,Susan Houde-Walter,11598608,2023,Encoded signal detection and display,"LMD Applied Science, LLC",FALSE,NA,TRUE,Susan Houde-Walter
+STELLAR,stellar__susan-houde-walter,Susan Houde-Walter,11335724,2022,Marking system and method,"LMD Applied Science, LLC",TRUE,G02B,TRUE,Susan Houde-Walter
+STELLAR,stellar__susan-houde-walter,Susan Houde-Walter,11513180,2022,Tracking beacon system,"LMD Applied Science, LLC",FALSE,NA,TRUE,Susan Houde-Walter
+STELLAR,stellar__susan-houde-walter,Susan Houde-Walter,11041693,2021,Thermal marking systems and methods of control,"LMD Applied Science, LLC",FALSE,NA,TRUE,Susan Houde-Walter
+STELLAR,stellar__susan-houde-walter,Susan Houde-Walter,11049378,2021,Deterrent device communication system,"LMD Applied Science, LLC",FALSE,NA,TRUE,Susan Houde-Walter
+STELLAR,stellar__thomas-g-brown,Thomas G. Brown,12493000,2025,Photonic integrated circuit and characterization method,University of Rochester,TRUE,G02B,TRUE,Thomas G. Brown
+Seafood,seafood__marta-gomez-chiarri,Marta Gomez-Chiarri,11851644,2023,Marine bacteria formulation useful in aquaculture,University of Rhode Island Board of Trustees,FALSE,NA,TRUE,Marta Gomez-Chiarri
