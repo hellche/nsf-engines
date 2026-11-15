@@ -117,6 +117,10 @@ Downloaded by `py/00_reference_lists.py` on {date.today().isoformat()}.
 | `cpc_titles_202608.csv.gz` | CPC title list, scheme 2026.08: {CPC_URL} (bulk page: https://www.cooperativepatentclassification.org/cpcSchemeAndDefinitions/bulk) | {len(rows)} codes, {n_main} main groups |
 | `openalex_topics.csv` | OpenAlex topics API: {TOPICS_URL} (docs: https://docs.openalex.org/api-entities/topics) | {len(topics)} topics |
 
+Versions: the CPC site labels the title list "CPC Title List (2026.08)" (files dated 2026-08-01).
+OpenAlex gives its topic list no version number; `created_date` of the topics in the API is January 2024;
+`updated_date` changes daily with the work counts.
+
 `dots` in the CPC file is the depth of a subgroup under its main group (empty for sections, classes
 and subclasses, 0 for main groups). Titles are as published, including {{curly}} markers and references.
 """, encoding="utf-8")
