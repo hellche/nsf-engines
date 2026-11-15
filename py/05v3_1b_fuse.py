@@ -26,13 +26,15 @@ Output: data/processed/tech_v3_1_fused_{oa,cpc}.csv.gz       top FUSED_TOP per t
         data/raw/openalex_text_topics_v3_1.json              cached classifier responses (not tracked)
 
 Run:    .venv/bin/python py/05v3_1b_fuse.py
-        The classifier needs OPENALEX_API_KEY (or ~/.Renviron); without it, or if OpenAlex refuses the
-        calls, signal 4 is left out and the run says so.
+        The classifier needs an OpenAlex key: OPENALEX_API_KEY (or ~/.Renviron), or, in a Claude Code cloud
+        session, the key saved for api.openalex.org, which the network proxy adds to the request. Without
+        one, or if OpenAlex refuses the calls, signal 4 is left out and the run says so.
 """
 
 import json
 import os
 import re
+import time
 from pathlib import Path
 
 import pandas as pd
@@ -73,7 +75,13 @@ for text in techs.classifier_text:
     if text in cache or refused:
         continue
     params = {"api_key": key} if key else {}
-    r = requests.post("https://api.openalex.org/text/topics", json={"title": text}, params=params, timeout=60)
+    for _ in range(30):   # new keys may spend at most $0.10 per 5 minutes ($0.01 per call): wait on 429
+        r = requests.post("https://api.openalex.org/text/topics", json={"title": text}, params=params, timeout=60)
+        if r.status_code != 429:
+            break
+        wait = int(r.headers.get("Retry-After") or 60) + 5
+        print(f"  OpenAlex 429, waiting {wait} s")
+        time.sleep(wait)
     if r.status_code != 200:
         refused = f"HTTP {r.status_code}: {r.text[:150]}"
         break
