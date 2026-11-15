@@ -22,8 +22,8 @@ Version 1 (R/05_tech_profile.R) stays as it is; this is a separate, formal proce
   Part B (LLM) scores the top of these rankings.
 
 Input:  data/processed/engines.csv, data/processed/tech_profile.csv (v1, for the comparison only)
-        PATENT_DIR/CPCTitleList202608/cpc-section-*.txt   official CPC titles
-        OpenAlex /topics (downloaded once, cached in data/raw/openalex_topics.json)
+        data/reference/cpc_titles_202608.csv.gz   official CPC titles (scheme 2026.08)
+        data/reference/openalex_topics.csv        all OpenAlex topics with descriptions and keywords
         v3 only: data/manual/tech_v3_fragments_raw.csv   fragments extracted with py/prompts/v3_extract_technical.md
 Output: data/processed/tech_v2_sentences.csv       Engine x sentence (v2 input; v3 checks its fragments against it)
         data/processed/tech_v3_fragments.csv        v3 input: fragments, masked text, verbatim check
@@ -36,7 +36,20 @@ Versions: v2 = every sentence of the title and abstract; v3 = only the science a
           extracted from those sentences by the fixed prompt (each fragment must be a verbatim substring
           of its sentence, else it is dropped). Everything after the input is the same.
 
-Run:    .venv/bin/python py/05v2a_embed_rank.py v2      (or v3; Python 3.12; models download once)
+Version 3.1 (and v2.1, its comparison with the v2 input): the fixes from reports/tech_v2_v3_review.md.
+  - the Engine's name and the word "Engine(s)" are removed, not replaced by "the Engine"
+    (PatentSBERTa reads "engine" as a motor and pulled CPC towards F01/F02);
+  - the text of a CPC main group is the subclass title, the group title and the titles of its
+    first-level subgroups (they carry the specific words: "hydrogen", "flotation", "magnetometer");
+    indexing groups (number 2000 and above) and catch-all groups (99/00) are left out;
+  - v3_1 input: data/manual/tech_v3_1_fragments_raw.csv (prompt v3.1), where every fragment belongs to one
+    of the grant's technologies; besides the Engine-level scores, every item is scored against each
+    technology (tech_<v>_tech_rank_*.csv.gz, top 300 per technology), so the profile can be chosen
+    technology by technology.
+  v2 and v3 keep the original procedure (their outputs are not overwritten).
+  Reference lists for all versions: data/reference/ (py/00_reference_lists.py), not local files.
+
+Run:    .venv/bin/python py/05v2a_embed_rank.py v2      (or v3, v2_1, v3_1; models download once)
 """
 
 import hashlib
@@ -49,14 +62,13 @@ from pathlib import Path
 
 import numpy as np
 import pandas as pd
-import requests
 import torch
 
 ROOT = Path(__file__).resolve().parent.parent
 PROC = ROOT / "data" / "processed"
 RAW = ROOT / "data" / "raw"
-PATENT_DIR = Path(os.environ.get("PATENT_DIR", "/Users/elenachechik/Desktop/india/patent/data"))
-CPC_DIR = PATENT_DIR / "CPCTitleList202608"
+RAW.mkdir(parents=True, exist_ok=True)
+REF = ROOT / "data" / "reference"
 
 SPECTER_BASE = "allenai/specter2_base"
 SPECTER_DOC = "allenai/specter2"               # proximity adapter: documents (topics)
@@ -68,7 +80,9 @@ BOILERPLATE = re.compile(r"This award reflects NSF.s statutory mission", re.I)
 METHODS = ["max", "centroid", "max_bg", "centroid_bg"]
 METHOD = {"oa": "max_bg", "cpc": "centroid"}   # working choice; the v1 check at the end is a reference, not a benchmark
 VERSION = sys.argv[1] if len(sys.argv) > 1 else "v2"
-assert VERSION in ("v2", "v3"), "version must be v2 or v3"
+assert VERSION in ("v2", "v3", "v2_1", "v3_1"), "version must be v2, v3, v2_1 or v3_1"
+FIX = VERSION.endswith("_1")          # the v3.1 fixes (see the docstring)
+TECH_TOP = 300                        # items kept per technology in tech_<v>_tech_rank_*
 
 
 # ---- 1. Grant sentences -------------------------------------------------------------------------
@@ -100,6 +114,13 @@ def engine_name_tokens(e) -> list[str]:
 
 
 def mask(text: str, tokens: list[str]) -> str:
+    if FIX:   # remove the name and the word Engine(s); nothing is inserted
+        for t in tokens:
+            text = re.sub(rf"(?<![\w-]){re.escape(t)}(?![\w-])", "", text)
+        text = re.sub(r"\b[Ee]ngines?\b", "", text)
+        text = re.sub(r"\(\s*\)", "", text)
+        text = re.sub(r"\s+([,.;:])", r"\1", text)
+        return re.sub(r"\s+", " ", text).strip()
     for t in tokens:
         text = re.sub(rf"(?<![\w-]){re.escape(t)}(?![\w-])", "the Engine", text)
     text = re.sub(r"\(the Engine\)", "", text)
@@ -116,18 +137,19 @@ for _, e in engines.iterrows():
     sents = [s for s in split_sentences(e.abstract) if not BOILERPLATE.search(s)]
     rows += [(e.engine_name, i + 1, "abstract", s, mask(s, tokens)) for i, s in enumerate(sents)]
 sentences = pd.DataFrame(rows, columns=["engine_name", "sent_id", "source", "text_original", "text"])
-sentences.to_csv(PROC / "tech_v2_sentences.csv", index=False)
+sentences.to_csv(PROC / ("tech_v2_1_sentences.csv" if FIX else "tech_v2_sentences.csv"), index=False)
 print(f"Sentences: {len(sentences)} for {sentences.engine_name.nunique()} Engines; masked: {masked_tokens}")
 
-if VERSION == "v3":
+if VERSION in ("v3", "v3_1"):
     # Fragments must be verbatim substrings of their sentence: the model may not add words of its own
-    frag = pd.read_csv(ROOT / "data" / "manual" / "tech_v3_fragments_raw.csv")
+    frag = pd.read_csv(ROOT / "data" / "manual" /
+                       ("tech_v3_1_fragments_raw.csv" if VERSION == "v3_1" else "tech_v3_fragments_raw.csv"))
     frag = frag.merge(sentences[["engine_name", "sent_id", "text_original"]].rename(
         columns={"text_original": "sentence"}), on=["engine_name", "sent_id"], how="left")
     frag["verbatim"] = [isinstance(t, str) and f in t for f, t in zip(frag.fragment, frag.sentence)]
     tok = {e: masked_tokens[e] for e in masked_tokens}
     frag["text"] = [mask(f, tok[e]) for f, e in zip(frag.fragment, frag.engine_name)]
-    frag.to_csv(PROC / "tech_v3_fragments.csv", index=False)
+    frag.to_csv(PROC / f"tech_{VERSION}_fragments.csv", index=False)
     if (~frag.verbatim).any():
         print(f"Dropped {int((~frag.verbatim).sum())} fragments that are not verbatim")
     frag = frag[frag.verbatim].reset_index(drop=True)
@@ -135,48 +157,16 @@ if VERSION == "v3":
     sentences = pd.DataFrame({"engine_name": frag.engine_name, "sent_id": frag.frag_id,
                               "source": "fragment of sentence " + frag.sent_id.astype(str),
                               "text_original": frag.fragment, "text": frag.text})
+    if "tech_id" in frag:
+        sentences["tech_id"] = frag.tech_id.to_numpy()
+        sentences["tech_label"] = frag.tech_label.to_numpy()
     print(f"v3 input: {len(sentences)} verbatim fragments")
 
 
 # ---- 2. OpenAlex topics (all of them) -----------------------------------------------------------
 
-def openalex_key() -> str:
-    """OPENALEX_API_KEY from the environment, else from ~/.Renviron (where the R steps keep it)."""
-    key = os.environ.get("OPENALEX_API_KEY", "")
-    renviron = Path.home() / ".Renviron"
-    if not key and renviron.exists():
-        m = re.search(r"^OPENALEX_API_KEY\s*=\s*['\"]?([^'\"\n]+)", renviron.read_text(), re.M)
-        key = m.group(1).strip() if m else ""
-    return key
-
-
-topics_cache = RAW / "openalex_topics.json"
-if topics_cache.exists():
-    topics_raw = json.loads(topics_cache.read_text())
-else:
-    topics_raw, page, key = [], 1, openalex_key()
-    while True:   # page numbers, not a cursor: ~4,500 topics fit in OpenAlex's 10,000-result page limit
-        params = {"per-page": 200, "page": page,
-                  "select": "id,display_name,description,keywords,subfield,field,domain"}
-        if key:
-            params["api_key"] = key
-        r = requests.get("https://api.openalex.org/topics", timeout=60, params=params)
-        r.raise_for_status()
-        res = r.json()["results"]
-        if not res:
-            break
-        topics_raw += res
-        page += 1
-    topics_cache.write_text(json.dumps(topics_raw))
-topics = pd.DataFrame({
-    "topic_id": [t["id"].rsplit("/", 1)[-1] for t in topics_raw],
-    "topic": [t["display_name"] for t in topics_raw],
-    "subfield": [t["subfield"]["display_name"] for t in topics_raw],
-    "field": [t["field"]["display_name"] for t in topics_raw],
-    "text": [f'{t["display_name"]}. {t.get("description") or ""} Keywords: '
-             f'{"; ".join(k["display_name"] if isinstance(k, dict) else k for k in t.get("keywords") or [])}'
-             for t in topics_raw],
-})
+topics = pd.read_csv(REF / "openalex_topics.csv", keep_default_na=False)
+topics["text"] = topics.topic + ". " + topics.description + " Keywords: " + topics.keywords
 print(f"OpenAlex topics: {len(topics)}")
 
 
@@ -189,20 +179,24 @@ def clean_cpc(title: str) -> str:
     return re.sub(r"\s+", " ", title).strip()
 
 
-subclass_title, groups = {}, []
-for f in sorted(CPC_DIR.glob("cpc-section-*.txt")):
-    for line in f.read_text(encoding="utf-8").splitlines():
-        parts = line.split("\t")
-        if len(parts) < 3:
-            continue
-        code, _, title = parts[0], parts[1], parts[2]
-        if re.fullmatch(r"[A-HY]\d\d[A-Z]", code):
-            subclass_title[code] = clean_cpc(title).capitalize()   # subclass titles are in capitals
-        elif re.fullmatch(r"[A-HY]\d\d[A-Z]\d+/00", code):
-            groups.append((code, code[:4], clean_cpc(title)))
+ref_cpc = pd.read_csv(REF / "cpc_titles_202608.csv.gz", dtype=str, keep_default_na=False)
+subclass_title = {c: clean_cpc(t).capitalize()   # subclass titles are in capitals
+                  for c, t in zip(ref_cpc.code, ref_cpc.title) if re.fullmatch(r"[A-HY]\d\d[A-Z]", c)}
+main = ref_cpc[ref_cpc.kind == "main_group"]
+groups = [(c, c[:4], clean_cpc(t)) for c, t in zip(main.code, main.title)]
+if FIX:
+    # indexing groups (2000+) and catch-all groups (99/00) out; first-level subgroup titles added
+    num = lambda c: int(re.match(r"[A-HY]\d\d[A-Z](\d+)/", c).group(1))
+    groups = [g for g in groups if num(g[0]) < 2000 and num(g[0]) != 99]
+    sub1 = ref_cpc[(ref_cpc.kind == "subgroup") & (ref_cpc.dots == "1")]
+    sub1_titles = (sub1.assign(main=sub1.code.str.replace(r"/.*$", "/00", regex=True),
+                               t=[clean_cpc(t) for t in sub1.title])
+                   .groupby("main").t.agg(lambda x: "; ".join(x)))
 cpc = pd.DataFrame(groups, columns=["cpc", "subclass", "group_title"])
 cpc["subclass_title"] = cpc.subclass.map(subclass_title)
 cpc["text"] = cpc.subclass_title.fillna("") + ": " + cpc.group_title
+if FIX:
+    cpc["text"] = cpc.text + [f". {sub1_titles[c]}" if c in sub1_titles.index else "" for c in cpc.cpc]
 print(f"CPC main groups: {len(cpc)} in {cpc.subclass.nunique()} subclasses")
 
 
@@ -257,7 +251,7 @@ def models():
     return _models
 
 
-items_cache = RAW / "tech_items_embeddings.npz"
+items_cache = RAW / ("tech_items_embeddings_fix.npz" if FIX else "tech_items_embeddings.npz")
 items_key = cache_key(*topics.text, *cpc.text)
 z = cached(items_cache, items_key)
 if z is not None:
@@ -331,6 +325,46 @@ rank_oa.to_csv(PROC / f"tech_{VERSION}_rank_oa.csv.gz", index=False)
 rank_cpc.to_csv(PROC / f"tech_{VERSION}_rank_cpc.csv.gz", index=False)
 
 
+def rank_tech(items: pd.DataFrame, emb_items: np.ndarray, emb_sent: np.ndarray, keep: list[str],
+              engine_rank: pd.DataFrame, method: str) -> pd.DataFrame:
+    """Every item scored against each technology of each Engine (v3_1): the same four scores, computed
+    over the technology's fragments only; *_bg subtracts the item's Engine-level score averaged over the
+    other Engines, as in rank_all. The top TECH_TOP items per technology (by `method`) are kept."""
+    I, S = centre(emb_items), centre(emb_sent)
+    eng_score = {m: engine_rank.pivot(index="engine_name", columns=keep[0], values=m)[items[keep[0]]].to_numpy()
+                 for m in ("max", "centroid")}
+    engs = list(engine_rank.engine_name.drop_duplicates().sort_values())
+    out = []
+    for (eng, tid), d in sentences.groupby(["engine_name", "tech_id"]):
+        idx = d.index.to_numpy()
+        sims = S[idx] @ I.T
+        k = engs.index(eng)
+        sc = {"max": sims.max(axis=0), "centroid": (unit(S[idx].mean(axis=0, keepdims=True)) @ I.T)[0]}
+        for m in ("max", "centroid"):
+            others = np.delete(eng_score[m], k, axis=0).mean(axis=0)
+            sc[m + "_bg"] = sc[m] - others
+        r = items[keep].copy()
+        r.insert(0, "tech_label", d.tech_label.iloc[0])
+        r.insert(0, "tech_id", tid)
+        r.insert(0, "engine_name", eng)
+        for m in METHODS:
+            r[m] = sc[m].round(4)
+            r["rank_" + m] = (-sc[m]).argsort().argsort() + 1
+        r["best_frag_id"] = d.sent_id.to_numpy()[sims.argmax(axis=0)]
+        r["rank"] = r["rank_" + method]
+        out.append(r.sort_values("rank").head(TECH_TOP))
+    return pd.concat(out, ignore_index=True)
+
+
+if "tech_id" in sentences:
+    sentences = sentences.reset_index(drop=True)
+    rank_tech(topics, emb_topics, emb_sent_sp, ["topic_id", "topic", "subfield", "field"], rank_oa,
+              METHOD["oa"]).to_csv(PROC / f"tech_{VERSION}_tech_rank_oa.csv.gz", index=False)
+    rank_tech(cpc, emb_cpc, emb_sent_pt, ["cpc", "subclass", "subclass_title", "group_title"], rank_cpc,
+              METHOD["cpc"]).to_csv(PROC / f"tech_{VERSION}_tech_rank_cpc.csv.gz", index=False)
+    print(f"Per-technology rankings: {sentences.groupby(['engine_name', 'tech_id']).ngroups} technologies")
+
+
 # ---- 6. Where do the v1 choices rank in v2, under each method? ----------------------------------
 
 v1 = pd.read_csv(PROC / "tech_profile.csv")
@@ -357,6 +391,7 @@ import adapters, sentence_transformers, transformers  # noqa: E402,E401
                  "adapters": adapters.__version__, "sentence_transformers": sentence_transformers.__version__},
     "counts": {"engines": int(sentences.engine_name.nunique()), "sentences": len(sentences),
                "openalex_topics": len(topics), "cpc_main_groups": len(cpc)},
+    "fixes_v3_1": FIX, "reference_lists": "data/reference (CPC Title List 2026.08; OpenAlex topics)",
     "masked_name_tokens": masked_tokens, "centring": "mean vector of each set", "method": METHOD,
 }, indent=2))
 
