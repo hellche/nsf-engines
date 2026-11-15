@@ -44,8 +44,8 @@ Version 3.1 (and v2.1, its comparison with the v2 input): the fixes from reports
     indexing groups (number 2000 and above) and catch-all groups (99/00) are left out;
   - v3_1 input: data/manual/tech_v3_1_fragments_raw.csv (prompt v3.1), where every fragment belongs to one
     of the grant's technologies; besides the Engine-level scores, every item is scored against each
-    technology (tech_<v>_tech_rank_*.csv.gz, top 300 per technology), so the profile can be chosen
-    technology by technology.
+    technology (tech_<v>_tech_rank_*.csv.gz, top 300 per technology; all ranks in data/raw for the rank
+    fusion, py/05v3_1b_fuse.py), so the profile can be chosen technology by technology.
   v2 and v3 keep the original procedure (their outputs are not overwritten).
   Reference lists for all versions: data/reference/ (py/00_reference_lists.py), not local files.
 
@@ -325,43 +325,54 @@ rank_oa.to_csv(PROC / f"tech_{VERSION}_rank_oa.csv.gz", index=False)
 rank_cpc.to_csv(PROC / f"tech_{VERSION}_rank_cpc.csv.gz", index=False)
 
 
+TECH_METHODS = METHODS + ["mix", "mix_bg"]
+
+
 def rank_tech(items: pd.DataFrame, emb_items: np.ndarray, emb_sent: np.ndarray, keep: list[str],
-              engine_rank: pd.DataFrame, method: str) -> pd.DataFrame:
+              engine_rank: pd.DataFrame, method: str) -> tuple[pd.DataFrame, pd.DataFrame]:
     """Every item scored against each technology of each Engine (v3_1): the same four scores, computed
     over the technology's fragments only; *_bg subtracts the item's Engine-level score averaged over the
-    other Engines, as in rank_all. The top TECH_TOP items per technology (by `method`) are kept."""
+    other Engines, as in rank_all. `mix` adds the context of the whole Engine:
+    0.5 x the technology's centroid score + 0.5 x the Engine's centroid score (`mix_bg` the same with
+    both *_bg). Returns the top TECH_TOP items per technology (by `method`) and the ranks of all items
+    under every score (for the rank fusion in py/05v3_1b_fuse.py)."""
     I, S = centre(emb_items), centre(emb_sent)
     eng_score = {m: engine_rank.pivot(index="engine_name", columns=keep[0], values=m)[items[keep[0]]].to_numpy()
                  for m in ("max", "centroid")}
     engs = list(engine_rank.engine_name.drop_duplicates().sort_values())
-    out = []
+    out, full = [], []
     for (eng, tid), d in sentences.groupby(["engine_name", "tech_id"]):
         idx = d.index.to_numpy()
         sims = S[idx] @ I.T
         k = engs.index(eng)
         sc = {"max": sims.max(axis=0), "centroid": (unit(S[idx].mean(axis=0, keepdims=True)) @ I.T)[0]}
+        others = {m: np.delete(eng_score[m], k, axis=0).mean(axis=0) for m in ("max", "centroid")}
         for m in ("max", "centroid"):
-            others = np.delete(eng_score[m], k, axis=0).mean(axis=0)
-            sc[m + "_bg"] = sc[m] - others
+            sc[m + "_bg"] = sc[m] - others[m]
+        sc["mix"] = 0.5 * sc["centroid"] + 0.5 * eng_score["centroid"][k]
+        sc["mix_bg"] = 0.5 * sc["centroid_bg"] + 0.5 * (eng_score["centroid"][k] - others["centroid"])
         r = items[keep].copy()
         r.insert(0, "tech_label", d.tech_label.iloc[0])
         r.insert(0, "tech_id", tid)
         r.insert(0, "engine_name", eng)
-        for m in METHODS:
+        for m in TECH_METHODS:
             r[m] = sc[m].round(4)
             r["rank_" + m] = (-sc[m]).argsort().argsort() + 1
         r["best_frag_id"] = d.sent_id.to_numpy()[sims.argmax(axis=0)]
         r["rank"] = r["rank_" + method]
+        full.append(r[["engine_name", "tech_id", keep[0]] + ["rank_" + m for m in TECH_METHODS]])
         out.append(r.sort_values("rank").head(TECH_TOP))
-    return pd.concat(out, ignore_index=True)
+    return pd.concat(out, ignore_index=True), pd.concat(full, ignore_index=True)
 
 
 if "tech_id" in sentences:
     sentences = sentences.reset_index(drop=True)
-    rank_tech(topics, emb_topics, emb_sent_sp, ["topic_id", "topic", "subfield", "field"], rank_oa,
-              METHOD["oa"]).to_csv(PROC / f"tech_{VERSION}_tech_rank_oa.csv.gz", index=False)
-    rank_tech(cpc, emb_cpc, emb_sent_pt, ["cpc", "subclass", "subclass_title", "group_title"], rank_cpc,
-              METHOD["cpc"]).to_csv(PROC / f"tech_{VERSION}_tech_rank_cpc.csv.gz", index=False)
+    for kind, items, emb_i, emb_s, keep, eng_rank in [
+            ("oa", topics, emb_topics, emb_sent_sp, ["topic_id", "topic", "subfield", "field"], rank_oa),
+            ("cpc", cpc, emb_cpc, emb_sent_pt, ["cpc", "subclass", "subclass_title", "group_title"], rank_cpc)]:
+        top, full = rank_tech(items, emb_i, emb_s, keep, eng_rank, METHOD[kind])
+        top.to_csv(PROC / f"tech_{VERSION}_tech_rank_{kind}.csv.gz", index=False)
+        full.to_csv(RAW / f"tech_{VERSION}_tech_ranks_all_{kind}.csv.gz", index=False)   # not tracked: large
     print(f"Per-technology rankings: {sentences.groupby(['engine_name', 'tech_id']).ngroups} technologies")
 
 
