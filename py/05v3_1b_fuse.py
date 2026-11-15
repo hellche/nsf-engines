@@ -52,9 +52,14 @@ ID = {"oa": "topic_id", "cpc": "cpc"}
 frag = pd.read_csv(PROC / "tech_v3_1_fragments.csv")
 frag = frag[frag.verbatim]
 techs = (frag.groupby(["engine_name", "tech_id"])
-         .agg(tech_label=("tech_label", "first"), fragments=("fragment", lambda x: "; ".join(x)))
+         .agg(tech_label=("tech_label", "first"), fragments=("fragment", lambda x: "; ".join(x)),
+              sentence=("sentence", "first"))
          .reset_index())
 techs["classifier_text"] = techs.tech_label + ": " + techs.fragments
+# The classifier refuses texts under 20 characters and has little to go on in very short ones
+# ("metals: Metals"): those get the grant sentence their first fragment comes from.
+short = techs.classifier_text.str.len() < 40
+techs.loc[short, "classifier_text"] = techs.classifier_text[short] + ". " + techs.sentence[short]
 
 
 # ---- OpenAlex classifier (signal 4, topics only) ------------------------------------------------
@@ -82,15 +87,18 @@ for text in techs.classifier_text:
         wait = int(r.headers.get("Retry-After") or 60) + 5
         print(f"  OpenAlex 429, waiting {wait} s")
         time.sleep(wait)
-    if r.status_code != 200:
+    if r.status_code in (401, 403, 429) or r.status_code >= 500:   # no key, no budget, or OpenAlex down
         refused = f"HTTP {r.status_code}: {r.text[:150]}"
         break
+    if r.status_code != 200:   # this text refused (e.g. too short): the technology gets no classifier votes
+        print(f"  classifier refused '{text[:60]}': HTTP {r.status_code} {r.text[:100]}")
+        continue
     cache[text] = [{"topic_id": t["id"].rsplit("/", 1)[-1], "score": t["score"]} for t in r.json()["topics"]]
     cache_path.write_text(json.dumps(cache, indent=1))
-have_classifier = all(t in cache for t in techs.classifier_text)
-if not have_classifier:
-    print(f"OpenAlex classifier left out ({refused or 'not all technologies classified'}): "
-          f"{sum(t in cache for t in techs.classifier_text)} of {len(techs)} technologies in the cache")
+n_classified = sum(t in cache for t in techs.classifier_text)
+have_classifier = refused is None and n_classified > 0
+print(f"OpenAlex classifier: {n_classified} of {len(techs)} technologies classified"
+      + (f"; left out of the fusion ({refused})" if refused else ""))
 
 
 # ---- Fusion -------------------------------------------------------------------------------------
@@ -103,7 +111,7 @@ for kind in ("oa", "cpc"):
     if kind == "oa" and have_classifier:
         cl = pd.DataFrame([(e, t, c["topic_id"], i + 1)
                            for e, t, txt in zip(techs.engine_name, techs.tech_id, techs.classifier_text)
-                           for i, c in enumerate(cache[txt])],
+                           for i, c in enumerate(cache.get(txt, []))],
                           columns=["engine_name", "tech_id", idc, "rank_classifier"])
         ranks = ranks.merge(cl, how="left")
         sig = sig + ["classifier"]
