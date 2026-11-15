@@ -9,11 +9,28 @@ such an accident. Signals, each a ranking of ALL items for one technology of one
   1. max_bg     best fragment of the technology    1. max        best fragment of the technology
   2. centroid_bg  mean of its fragments            2. centroid   mean of its fragments
   3. mix_bg     with the whole Engine as context   3. mix        with the whole Engine as context
-  4. OpenAlex's own topic classifier (/text/topics) on the technology's text (label + fragments):
-     an independent model trained on works; it returns only a few topics, so it votes only for those.
+  4. OpenAlex's own topic classifier      4. lexical match (BM25) of the technology's
+     (/text/topics) on the technology's        words (label + fragments) with the full text
+     text (label + fragments): an              of the group: subclass, group and ALL its
+     independent model trained on works;       subgroup titles. No embedding model involved,
+     it returns only a few topics, so it       so it does not share the embeddings' chance
+     votes only for those.                     matches; groups with no common word get no vote.
   (*_bg for topics and plain scores for CPC, as in the Engine-level rankings: METHOD in 05v2a.)
 
-  fused = sum over signals of 1 / (K + rank),  K = 60 (the usual constant of reciprocal rank fusion)
+  The three embedding signals share one model and the same fragments, so they make the same chance
+  matches: counted as three votes they outvote the independent fourth signal. They are therefore fused
+  first into one embedding rank, which then counts once, as much as signal 4:
+    embedding = rank of  sum over s in 1-3 of 1 / (K + rank_s)
+    fused     = 1 / (K + rank_embedding) + 1 / (K + rank_signal4)      K = 60, the usual constant
+
+Confirmation level of each candidate (the fused sum alone still lets through chance matches that the
+embedding block ranks very high; requiring BOTH kinds of evidence is stricter):
+  high       in the embedding top EMB_TOP and confirmed by the independent signal
+             (topics: returned by the classifier; CPC: lexical rank <= LEX_HIGH)
+  medium     CPC only: in the embedding top EMB_TOP and lexical rank <= LEX_MEDIUM
+             (checked by eye: about half right, e.g. lasers for STELLAR, but also furniture joints for IMPACT)
+  none       otherwise
+A technology with no "high" candidate has too little in the grant text for this procedure.
 
 Also reported, not used in the fusion: `votes` = in how many signals the item is in the top VOTE_TOP,
 and the item's Engine-level rank in v2_1 (all sentences of the grant: a different input).
@@ -37,6 +54,7 @@ import re
 import time
 from pathlib import Path
 
+import numpy as np
 import pandas as pd
 import requests
 
@@ -46,6 +64,7 @@ RAW = ROOT / "data" / "raw"
 K = 60
 VOTE_TOP = 20
 FUSED_TOP = 30
+EMB_TOP, LEX_HIGH, LEX_MEDIUM = 20, 20, 50
 SIGNALS = {"oa": ["max_bg", "centroid_bg", "mix_bg"], "cpc": ["max", "centroid", "mix"]}
 ID = {"oa": "topic_id", "cpc": "cpc"}
 
@@ -101,6 +120,53 @@ print(f"OpenAlex classifier: {n_classified} of {len(techs)} technologies classif
       + (f"; left out of the fusion ({refused})" if refused else ""))
 
 
+# ---- Lexical signal for CPC (signal 4): BM25 ------------------------------------------------------
+
+STOP = set("""a an and are as at be by for from in into is it its of on or other than that the their thereof
+these this those to with without e g i not such using use used new advanced""".split())
+
+
+def stem(w: str) -> str:
+    """Light stemming so that 'lasers' meets 'laser' and 'processing' meets 'process'."""
+    for suf, rep_ in (("ies", "y"), ("ing", ""), ("ed", ""), ("es", ""), ("s", "")):
+        if w.endswith(suf) and len(w) - len(suf) >= 4:
+            return w[: len(w) - len(suf)] + rep_
+    return w
+
+
+def words(text: str) -> list[str]:
+    return [stem(w) for w in re.findall(r"[a-z][a-z0-9]+", text.lower()) if w not in STOP]
+
+
+def bm25_ranks(docs: dict[str, list[str]], queries: pd.DataFrame, k1: float = 1.2, b: float = 0.75) -> pd.DataFrame:
+    """Rank of every document with a positive BM25 score for each query (technology)."""
+    ids = list(docs)
+    n, avgdl = len(ids), sum(len(d) for d in docs.values()) / len(ids)
+    tf = [pd.Series(docs[i]).value_counts().to_dict() for i in ids]
+    dl = np.array([len(docs[i]) for i in ids])
+    df = pd.Series([w for d in tf for w in d]).value_counts()
+    out = []
+    for _, q in queries.iterrows():
+        score = np.zeros(n)
+        for w in set(words(q.query)):
+            if w not in df:
+                continue
+            idf = np.log(1 + (n - df[w] + 0.5) / (df[w] + 0.5))
+            f = np.array([d.get(w, 0) for d in tf])
+            score += idf * f * (k1 + 1) / (f + k1 * (1 - b + b * dl / avgdl))
+        pos = np.flatnonzero(score > 0)
+        order = pos[np.argsort(-score[pos], kind="stable")]
+        out += [(q.engine_name, q.tech_id, ids[j], r + 1) for r, j in enumerate(order)]
+    return pd.DataFrame(out, columns=["engine_name", "tech_id", "cpc", "rank_lexical"])
+
+
+ref = pd.read_csv(ROOT / "data" / "reference" / "cpc_titles_202608.csv.gz", dtype=str, keep_default_na=False)
+ref = ref[ref.kind.isin(["main_group", "subgroup"])].assign(main=lambda d: d.code.str.replace(r"/.*$", "/00", regex=True))
+sub_title = ref.assign(t=ref.title).groupby("main").t.agg(" ".join)          # group + all subgroups
+cls_title = pd.read_csv(ROOT / "data" / "reference" / "cpc_titles_202608.csv.gz", dtype=str,
+                        keep_default_na=False).query("kind == 'subclass'").set_index("code").title
+
+
 # ---- Fusion -------------------------------------------------------------------------------------
 
 for kind in ("oa", "cpc"):
@@ -115,10 +181,27 @@ for kind in ("oa", "cpc"):
                           columns=["engine_name", "tech_id", idc, "rank_classifier"])
         ranks = ranks.merge(cl, how="left")
         sig = sig + ["classifier"]
-    ranks["fused"] = sum((1 / (K + ranks["rank_" + s])).fillna(0) for s in sig)
+    if kind == "cpc":
+        groups = ranks.cpc.drop_duplicates()
+        docs = {g: words(cls_title.get(g[:4], "") + " " + sub_title.get(g, "")) for g in groups}
+        lex = bm25_ranks(docs, techs.assign(query=techs.tech_label + " " + techs.fragments))
+        ranks = ranks.merge(lex, how="left")
+        sig = sig + ["lexical"]
+    emb = SIGNALS[kind]
+    ranks["emb"] = sum(1 / (K + ranks["rank_" + s]) for s in emb)
+    ranks["rank_embedding"] = ranks.groupby(["engine_name", "tech_id"]).emb.rank(ascending=False, method="first")
+    indep = [s for s in sig if s not in emb]
+    ranks["fused"] = 1 / (K + ranks.rank_embedding) + sum((1 / (K + ranks["rank_" + s])).fillna(0) for s in indep)
+    ranks = ranks.drop(columns="emb")
     ranks["votes"] = sum((ranks["rank_" + s] <= VOTE_TOP).astype(int) for s in sig)
     ranks["rank_fused"] = ranks.groupby(["engine_name", "tech_id"]).fused.rank(ascending=False, method="first").astype(int)
-    top = ranks[ranks.rank_fused <= FUSED_TOP]
+    strong = ranks.rank_classifier.notna() if kind == "oa" else ranks.rank_lexical <= LEX_HIGH
+    medium = pd.Series(False, index=ranks.index) if kind == "oa" else ranks.rank_lexical <= LEX_MEDIUM
+    in_emb = ranks.rank_embedding <= EMB_TOP
+    ranks["confirmation"] = "none"
+    ranks.loc[in_emb & medium, "confirmation"] = "medium"
+    ranks.loc[in_emb & strong, "confirmation"] = "high"
+    top = ranks[(ranks.rank_fused <= FUSED_TOP) | (ranks.confirmation != "none")]
 
     # labels, best fragment, the v2_1 Engine-level rank
     labels = (pd.read_csv(PROC / f"tech_v3_1_tech_rank_{kind}.csv.gz")
@@ -137,5 +220,7 @@ for kind in ("oa", "cpc"):
            .sort_values(["engine_name", "tech_id", "rank_fused"]))
     out["fused"] = out.fused.round(5)
     out.to_csv(PROC / f"tech_v3_1_fused_{kind}.csv.gz", index=False)
+    conf = out[out.confirmation == "high"].groupby(["engine_name", "tech_id"]).size()
     print(f"{kind}: signals {sig}; top {FUSED_TOP} of {ranks[idc].nunique()} items for "
-          f"{out.groupby(['engine_name', 'tech_id']).ngroups} technologies")
+          f"{out.groupby(['engine_name', 'tech_id']).ngroups} technologies; with a 'high' candidate: "
+          f"{len(conf)} (2 or more: {(conf >= 2).sum()})")
