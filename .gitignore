@@ -7,3 +7,4 @@ data/raw/
 *.parquet
 .venv/
 __pycache__/
+_readme_for_me.md
