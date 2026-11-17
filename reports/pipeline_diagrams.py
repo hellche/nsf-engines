@@ -153,6 +153,9 @@ box(285, W, 300, "People's works and patents", ["by author and inventor ID", ("n
     ("n", "N patent ID = …")])
 s.box(695, W, 300, WH, "Organisations' works and patents", [("n", "N OpenAlex org ID = …"), ("n", "N patent assignee = …")],
       first=22, step=16)
+# researchers at the partners (step 6e): authors of the partners' works, added to the people's works
+s.path("ln", f"M695,{W + WH / 2} H587", "a")
+s.text("cap", 640, W + WH / 2 - 6, "authors")
 F = W + WH + GAP + 6                                    # output filter
 s.path("LN", f"M435,{W + WH} V{F - 2}", "A")
 s.path("LN", f"M845,{W + WH} V{F - 2}", "A")
