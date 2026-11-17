@@ -39,7 +39,7 @@ inline_svg("nsf_engines_pipeline_kb.svg")
 <script>
 // Box labels that link to other pages (found by their text, so a redrawn diagram keeps the links)
 (function () {
-  var links = { "Профиль технологии": "methodology.html" };
+  var links = { "Technology profile": "methodology.html" };
   document.querySelectorAll(".pipeline-svg svg text").forEach(function (t) {
     var href = links[t.textContent.trim()];
     if (!href || t.closest("a")) return;   // already a link in the SVG itself

@@ -107,43 +107,43 @@ GAP = 32
 s = Svg()
 box = lambda x, y, w, title, lines, **k: s.box(x, y, w, hb(len(lines)), title, lines, first=22, step=16, **k)
 T = 30
-box(285, T, 300, "Сайт NSF", ["PI, Co-PI, названия, аннотации"])
-box(695, T, 300, "Сайты Engine", ["команды, партнёры"])
+box(285, T, 300, "NSF website", ["PI, Co-PI, titles, abstracts"])
+box(695, T, 300, "Engine websites", ["teams, partners"])
 y1 = T + hb(1)
 R = y1 + GAP
 s.path("ln", f"M435,{y1} V{R - 2}", "a")
 s.path("ln", f"M845,{y1} V{R - 2}", "a")
 s.path("ln", f"M760,{y1} V{y1 + 16} H520 V{R - 2}", "a")
-box(285, R, 300, "Единый реестр людей", ["PI + люди с сайтов", ("n", "N = …")])
-box(695, R, 300, "Реестр партнёров", ["все упомянутые организации", ("n", "N = …")])
+box(285, R, 300, "People registry", ["PI + people from the websites", ("n", "N = …")])
+box(695, R, 300, "Partner registry", ["all organisations mentioned", ("n", "N = …")])
 C = R + hb(2) + GAP                                     # classification frames
 s.path("ln", f"M435,{R + hb(2)} V{C - 2}", "a")
 s.path("ln", f"M845,{R + hb(2)} V{C - 2}", "a")
 CH, R1, R2 = 64, C + 36, C + 36 + 64 + 8                 # cell height, rows
 FH = R2 + CH + 10 - C
-for x0, title, cells in ((250, "LLM: классификация людей, 4 роли",
-                          [(False, "Корпоративный R&D", ["CTO, патенты компании", "→ через партнёра"]),
-                           (False, "Организатор", ["палаты, фонды", "эконом. развитие"]),
-                           (True, "Исследователь", ["работы в OpenAlex", "h-index, патенты"]),
-                           (True, "Администратор науки", ["VP for Research, провост", "директор института"])]),
-                         (660, "LLM: классификация партнёров, 4 типа",
-                          [(False, "Пользователи", ["заводы, операторы", "мало работ и патентов"]),
-                           (False, "Посредники", ["инкубаторы, венчур", "кластеры"]),
-                           (True, "Производители знания", ["университеты, нацлабы", "ERC, корп. R&D"]),
-                           (False, "Кадры и сообщество", ["колледжи, workforce", "программы обучения"])])):
+for x0, title, cells in ((250, "LLM: people, 4 roles",
+                          [(False, "Corporate R&D", ["CTO, company patents", "→ via the partner"]),
+                           (False, "Organiser", ["chambers, foundations", "economic development"]),
+                           (True, "Researcher", ["works in OpenAlex", "h-index, patents"]),
+                           (True, "Research administrator", ["VP for Research, provost", "institute director"])]),
+                         (660, "LLM: partners, 4 types",
+                          [(False, "Users", ["plants, operators", "few works and patents"]),
+                           (False, "Intermediaries", ["incubators, venture", "clusters"]),
+                           (True, "Knowledge producers", ["universities, national labs", "ERC, corporate R&D"]),
+                           (False, "Workforce, community", ["colleges, workforce", "training programmes"])])):
     s.rect("frame", x0, C, 370, FH)
     s.text("tf", x0 + 185, C + 24, title)
     for i, (on, t, l) in enumerate(cells):
         s.cell(on, x0 + 12 + (i % 2) * 178, R1 if i < 2 else R2, 168, CH, t, l)
 # matching: extra checks of who is who
 MY = C + 40
-s.text("cap", 127.5, MY - 8, "доп. проверка")
-box(40, MY, 175, "Сопоставление людей", ["OpenAlex author ID", ("wip", "ORCID (в процессе)"),
-    "PatentsView inventor", ("i", "имя + текущая орг.")], tcls="ts")
+s.text("cap", 127.5, MY - 8, "extra check")
+box(40, MY, 175, "People matching", ["OpenAlex author ID", ("wip", "ORCID (in progress)"),
+    "PatentsView inventor", ("i", "name + current org.")], tcls="ts")
 s.path("ln", f"M215,{MY + hb(4) / 2} H248", "a")
-s.text("cap", 1157.5, MY - 8, "доп. проверка")
-box(1065, MY, 185, "Сопоставление орг.", [("wip", "ROR (в процессе)"), "OpenAlex institutions",
-    "PatentsView assignee", ("i", "имя + локация в США")], tcls="ts")
+s.text("cap", 1157.5, MY - 8, "extra check")
+box(1065, MY, 185, "Organisation matching", [("wip", "ROR (in progress)"), "OpenAlex institutions",
+    "PatentsView assignee", ("i", "name + US location")], tcls="ts")
 s.path("ln", f"M1065,{MY + hb(4) / 2} H1032", "a")
 B = R2 + CH                                             # bottom of the "on" cells
 W = C + FH + GAP + 6                                    # works and patents
@@ -151,46 +151,46 @@ s.path("LN", f"M346,{B} V{B + 20} H524 V{B}")
 s.path("LN", f"M435,{B + 20} V{W - 2}", "A")
 s.path("LN", f"M756,{B} V{B + 20} H845 V{W - 2}", "A")
 WH = hb(3)
-box(285, W, 300, "Работы и патенты людей", ["по ID автора и изобретателя", ("n", "N OpenAlex ID = …"),
+box(285, W, 300, "People's works and patents", ["by author and inventor ID", ("n", "N OpenAlex ID = …"),
     ("n", "N patent ID = …")])
-s.box(695, W, 300, WH, "Работы и патенты организаций", [("n", "N OpenAlex org ID = …"), ("n", "N patent assignee = …")],
+s.box(695, W, 300, WH, "Organisations' works and patents", [("n", "N OpenAlex org ID = …"), ("n", "N patent assignee = …")],
       first=22, step=16)
 F = W + WH + GAP + 6                                    # output filter
 s.path("LN", f"M435,{W + WH} V{F - 2}", "A")
 s.path("LN", f"M845,{W + WH} V{F - 2}", "A")
 FC = 64
 s.rect("frame", 330, F, 620, 50 + FC + 10)
-s.text("tf", 640, F + 22, "Фильтр выхода")
-s.text("s", 640, F + 40, "все три условия одновременно")
-s.cell(True, 345, F + 50, 190, FC, "Время", ["от (грант − 5 лет)", "и дальше"])
-s.cell(True, 545, F + 50, 190, FC, "География", ["штаты Engine", "аффилиация, адрес изобр."], wip_title="в процессе")
-s.cell(True, 745, F + 50, 190, FC, "Технология", ["темы OpenAlex", "+ классы CPC"])
+s.text("tf", 640, F + 22, "Output filter")
+s.text("s", 640, F + 40, "all three conditions at once")
+s.cell(True, 345, F + 50, 190, FC, "Time", ["from (award − 5 years)", "onwards"])
+s.cell(True, 545, F + 50, 190, FC, "Geography", ["Engine's states", "affiliation, inventor address"], wip_title="in progress")
+s.cell(True, 745, F + 50, 190, FC, "Technology", ["OpenAlex topics", "+ CPC classes"])
 FB = F + 50 + FC + 10                                   # bottom of the filter frame
 # the key cell, in the v1 orange: a link to the Technology profile page (methodology.html), clickable as a whole
 PRO_Y = F + 50 + FC / 2
 s.o.append('<a href="methodology.html" class="key">')
 s.rect("keybox", 40, PRO_Y - 38, 175, 76)
-s.text("keyt", 127.5, PRO_Y - 13, "Профиль технологии")
-s.text("s", 127.5, PRO_Y + 6, "методология")
-s.text("keyl", 127.5, PRO_Y + 25, "открыть страницу →")
+s.text("keyt", 127.5, PRO_Y - 13, "Technology profile")
+s.text("s", 127.5, PRO_Y + 6, "methodology")
+s.text("keyl", 127.5, PRO_Y + 25, "open the page →")
 s.o.append('</a>')
 # the grant texts also feed the technology profile: a line down the left edge, into the top of the cell
 s.path("ln", f"M285,{T + hb(1) / 2} H22 V{PRO_Y - 54} H127.5 V{PRO_Y - 40}", "a")
-s.text("cap", 153, T + hb(1) / 2 - 8, "названия и аннотации грантов")
+s.text("cap", 153, T + hb(1) / 2 - 8, "award titles and abstracts")
 s.path("ln", f"M215,{PRO_Y} H328", "a")
 K = FB + GAP + 6                                        # knowledge base
 s.path("LN", f"M640,{FB} V{K - 2}", "A")
-box(490, K, 300, "База знаний Engine", [("n", "1) люди + организации"),
-    "12 Engines, N работ, N патентов", ("wip", "2) топовые работы других (в процессе)")], cls="kb")
-box(40, K - 8, 175, "Топовые прошлые", ["гранты и публикации", "те же 5 лет, та же тема",
-    "поиск по всем vs по авторам", ("wip", "(в процессе)")], tcls="ts")
+box(490, K, 300, "Engine knowledge base", [("n", "1) people + organisations"),
+    "12 Engines, N works, N patents", ("wip", "2) top works by others (in progress)")], cls="kb")
+box(40, K - 8, 175, "Top past grants", ["and publications", "same 5 years, same topic",
+    "search all vs by authors", ("wip", "(in progress)")], tcls="ts")
 s.path("ln", f"M215,{K + hb(3) / 2} H488", "a")
 E2 = K + hb(3)
 s.path("LN", f"M640,{E2} V{E2 + 34}", "A")
 s.o.append('<a href="analysis.html" class="next">')          # the only link to the Analysis page
-s.text("cap", 640, E2 + 50, "дальше: метрики и группы сравнения")
+s.text("cap", 640, E2 + 50, "next: metrics and comparison groups")
 s.o.append('</a>')
-s.save("nsf_engines_pipeline_kb.svg", 1290, E2 + 64, "NSF Engines: база знаний")
+s.save("nsf_engines_pipeline_kb.svg", 1290, E2 + 64, "NSF Engines: knowledge base")
 
 # ---- 2. Analysis (in development) -------------------------------------------------------------------------------
 a = Svg()

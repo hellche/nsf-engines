@@ -1,5 +1,5 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1290 866" width="1290" height="866">
-<title>NSF Engines: база знаний</title>
+<title>NSF Engines: knowledge base</title>
 <defs>
 <marker id="a" viewBox="0 0 10 10" refX="10" refY="5" markerWidth="9" markerHeight="9" markerUnits="userSpaceOnUse" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#222"/></marker>
 <marker id="A" viewBox="0 0 10 10" refX="10" refY="5" markerWidth="16" markerHeight="16" markerUnits="userSpaceOnUse" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#111"/></marker>
@@ -32,129 +32,129 @@ a.key:hover .keybox { fill: #f3cd7e; }
 </style></defs>
 <rect width="100%" height="100%" fill="#fff"/>
 <rect class="box" x="285" y="30" width="300" height="52"/>
-<text class="t" x="435.0" y="52">Сайт NSF</text>
-<text class="s" x="435.0" y="70">PI, Co-PI, названия, аннотации</text>
+<text class="t" x="435.0" y="52">NSF website</text>
+<text class="s" x="435.0" y="70">PI, Co-PI, titles, abstracts</text>
 <rect class="box" x="695" y="30" width="300" height="52"/>
-<text class="t" x="845.0" y="52">Сайты Engine</text>
-<text class="s" x="845.0" y="70">команды, партнёры</text>
+<text class="t" x="845.0" y="52">Engine websites</text>
+<text class="s" x="845.0" y="70">teams, partners</text>
 <path class="ln" d="M435,82 V112" marker-end="url(#a)"/>
 <path class="ln" d="M845,82 V112" marker-end="url(#a)"/>
 <path class="ln" d="M760,82 V98 H520 V112" marker-end="url(#a)"/>
 <rect class="box" x="285" y="114" width="300" height="68"/>
-<text class="t" x="435.0" y="136">Единый реестр людей</text>
-<text class="s" x="435.0" y="154">PI + люди с сайтов</text>
+<text class="t" x="435.0" y="136">People registry</text>
+<text class="s" x="435.0" y="154">PI + people from the websites</text>
 <text class="n" x="435.0" y="170">N = …</text>
 <rect class="box" x="695" y="114" width="300" height="68"/>
-<text class="t" x="845.0" y="136">Реестр партнёров</text>
-<text class="s" x="845.0" y="154">все упомянутые организации</text>
+<text class="t" x="845.0" y="136">Partner registry</text>
+<text class="s" x="845.0" y="154">all organisations mentioned</text>
 <text class="n" x="845.0" y="170">N = …</text>
 <path class="ln" d="M435,182 V212" marker-end="url(#a)"/>
 <path class="ln" d="M845,182 V212" marker-end="url(#a)"/>
 <rect class="frame" x="250" y="214" width="370" height="182"/>
-<text class="tf" x="435" y="238">LLM: классификация людей, 4 роли</text>
+<text class="tf" x="435" y="238">LLM: people, 4 roles</text>
 <rect class="off" x="262" y="250" width="168" height="64"/>
-<text class="offt" x="346.0" y="272">Корпоративный R&amp;D</text>
-<text class="offs" x="346.0" y="290">CTO, патенты компании</text>
-<text class="offs" x="346.0" y="306">→ через партнёра</text>
+<text class="offt" x="346.0" y="272">Corporate R&amp;D</text>
+<text class="offs" x="346.0" y="290">CTO, company patents</text>
+<text class="offs" x="346.0" y="306">→ via the partner</text>
 <rect class="off" x="440" y="250" width="168" height="64"/>
-<text class="offt" x="524.0" y="272">Организатор</text>
-<text class="offs" x="524.0" y="290">палаты, фонды</text>
-<text class="offs" x="524.0" y="306">эконом. развитие</text>
+<text class="offt" x="524.0" y="272">Organiser</text>
+<text class="offs" x="524.0" y="290">chambers, foundations</text>
+<text class="offs" x="524.0" y="306">economic development</text>
 <rect class="on" x="262" y="322" width="168" height="64"/>
-<text class="ts" x="346.0" y="344">Исследователь</text>
-<text class="ons" x="346.0" y="362">работы в OpenAlex</text>
-<text class="ons" x="346.0" y="378">h-index, патенты</text>
+<text class="ts" x="346.0" y="344">Researcher</text>
+<text class="ons" x="346.0" y="362">works in OpenAlex</text>
+<text class="ons" x="346.0" y="378">h-index, patents</text>
 <rect class="on" x="440" y="322" width="168" height="64"/>
-<text class="ts" x="524.0" y="344">Администратор науки</text>
-<text class="ons" x="524.0" y="362">VP for Research, провост</text>
-<text class="ons" x="524.0" y="378">директор института</text>
+<text class="ts" x="524.0" y="344">Research administrator</text>
+<text class="ons" x="524.0" y="362">VP for Research, provost</text>
+<text class="ons" x="524.0" y="378">institute director</text>
 <rect class="frame" x="660" y="214" width="370" height="182"/>
-<text class="tf" x="845" y="238">LLM: классификация партнёров, 4 типа</text>
+<text class="tf" x="845" y="238">LLM: partners, 4 types</text>
 <rect class="off" x="672" y="250" width="168" height="64"/>
-<text class="offt" x="756.0" y="272">Пользователи</text>
-<text class="offs" x="756.0" y="290">заводы, операторы</text>
-<text class="offs" x="756.0" y="306">мало работ и патентов</text>
+<text class="offt" x="756.0" y="272">Users</text>
+<text class="offs" x="756.0" y="290">plants, operators</text>
+<text class="offs" x="756.0" y="306">few works and patents</text>
 <rect class="off" x="850" y="250" width="168" height="64"/>
-<text class="offt" x="934.0" y="272">Посредники</text>
-<text class="offs" x="934.0" y="290">инкубаторы, венчур</text>
-<text class="offs" x="934.0" y="306">кластеры</text>
+<text class="offt" x="934.0" y="272">Intermediaries</text>
+<text class="offs" x="934.0" y="290">incubators, venture</text>
+<text class="offs" x="934.0" y="306">clusters</text>
 <rect class="on" x="672" y="322" width="168" height="64"/>
-<text class="ts" x="756.0" y="344">Производители знания</text>
-<text class="ons" x="756.0" y="362">университеты, нацлабы</text>
-<text class="ons" x="756.0" y="378">ERC, корп. R&amp;D</text>
+<text class="ts" x="756.0" y="344">Knowledge producers</text>
+<text class="ons" x="756.0" y="362">universities, national labs</text>
+<text class="ons" x="756.0" y="378">ERC, corporate R&amp;D</text>
 <rect class="off" x="850" y="322" width="168" height="64"/>
-<text class="offt" x="934.0" y="344">Кадры и сообщество</text>
-<text class="offs" x="934.0" y="362">колледжи, workforce</text>
-<text class="offs" x="934.0" y="378">программы обучения</text>
-<text class="cap" x="127.5" y="246">доп. проверка</text>
+<text class="offt" x="934.0" y="344">Workforce, community</text>
+<text class="offs" x="934.0" y="362">colleges, workforce</text>
+<text class="offs" x="934.0" y="378">training programmes</text>
+<text class="cap" x="127.5" y="246">extra check</text>
 <rect class="box" x="40" y="254" width="175" height="100"/>
-<text class="ts" x="127.5" y="276">Сопоставление людей</text>
+<text class="ts" x="127.5" y="276">People matching</text>
 <text class="s" x="127.5" y="294">OpenAlex author ID</text>
-<text class="wip" x="127.5" y="310">ORCID (в процессе)</text>
+<text class="wip" x="127.5" y="310">ORCID (in progress)</text>
 <text class="s" x="127.5" y="326">PatentsView inventor</text>
-<text class="s" x="127.5" y="342" style="font-style:italic">имя + текущая орг.</text>
+<text class="s" x="127.5" y="342" style="font-style:italic">name + current org.</text>
 <path class="ln" d="M215,304.0 H248" marker-end="url(#a)"/>
-<text class="cap" x="1157.5" y="246">доп. проверка</text>
+<text class="cap" x="1157.5" y="246">extra check</text>
 <rect class="box" x="1065" y="254" width="185" height="100"/>
-<text class="ts" x="1157.5" y="276">Сопоставление орг.</text>
-<text class="wip" x="1157.5" y="294">ROR (в процессе)</text>
+<text class="ts" x="1157.5" y="276">Organisation matching</text>
+<text class="wip" x="1157.5" y="294">ROR (in progress)</text>
 <text class="s" x="1157.5" y="310">OpenAlex institutions</text>
 <text class="s" x="1157.5" y="326">PatentsView assignee</text>
-<text class="s" x="1157.5" y="342" style="font-style:italic">имя + локация в США</text>
+<text class="s" x="1157.5" y="342" style="font-style:italic">name + US location</text>
 <path class="ln" d="M1065,304.0 H1032" marker-end="url(#a)"/>
 <path class="LN" d="M346,386 V406 H524 V386"/>
 <path class="LN" d="M435,406 V432" marker-end="url(#A)"/>
 <path class="LN" d="M756,386 V406 H845 V432" marker-end="url(#A)"/>
 <rect class="box" x="285" y="434" width="300" height="84"/>
-<text class="t" x="435.0" y="456">Работы и патенты людей</text>
-<text class="s" x="435.0" y="474">по ID автора и изобретателя</text>
+<text class="t" x="435.0" y="456">People&#x27;s works and patents</text>
+<text class="s" x="435.0" y="474">by author and inventor ID</text>
 <text class="n" x="435.0" y="490">N OpenAlex ID = …</text>
 <text class="n" x="435.0" y="506">N patent ID = …</text>
 <rect class="box" x="695" y="434" width="300" height="84"/>
-<text class="t" x="845.0" y="456">Работы и патенты организаций</text>
+<text class="t" x="845.0" y="456">Organisations&#x27; works and patents</text>
 <text class="n" x="845.0" y="474">N OpenAlex org ID = …</text>
 <text class="n" x="845.0" y="490">N patent assignee = …</text>
 <path class="LN" d="M435,518 V554" marker-end="url(#A)"/>
 <path class="LN" d="M845,518 V554" marker-end="url(#A)"/>
 <rect class="frame" x="330" y="556" width="620" height="124"/>
-<text class="tf" x="640" y="578">Фильтр выхода</text>
-<text class="s" x="640" y="596">все три условия одновременно</text>
+<text class="tf" x="640" y="578">Output filter</text>
+<text class="s" x="640" y="596">all three conditions at once</text>
 <rect class="on" x="345" y="606" width="190" height="64"/>
-<text class="ts" x="440.0" y="628">Время</text>
-<text class="ons" x="440.0" y="646">от (грант − 5 лет)</text>
-<text class="ons" x="440.0" y="662">и дальше</text>
+<text class="ts" x="440.0" y="628">Time</text>
+<text class="ons" x="440.0" y="646">from (award − 5 years)</text>
+<text class="ons" x="440.0" y="662">onwards</text>
 <rect class="on" x="545" y="606" width="190" height="64"/>
-<text class="ts" x="640.0" y="628">География <tspan style="font-size:11.5px;font-weight:400;font-style:italic;fill:#b35900">(в процессе)</tspan></text>
-<text class="ons" x="640.0" y="646">штаты Engine</text>
-<text class="ons" x="640.0" y="662">аффилиация, адрес изобр.</text>
+<text class="ts" x="640.0" y="628">Geography <tspan style="font-size:11.5px;font-weight:400;font-style:italic;fill:#b35900">(in progress)</tspan></text>
+<text class="ons" x="640.0" y="646">Engine&#x27;s states</text>
+<text class="ons" x="640.0" y="662">affiliation, inventor address</text>
 <rect class="on" x="745" y="606" width="190" height="64"/>
-<text class="ts" x="840.0" y="628">Технология</text>
-<text class="ons" x="840.0" y="646">темы OpenAlex</text>
-<text class="ons" x="840.0" y="662">+ классы CPC</text>
+<text class="ts" x="840.0" y="628">Technology</text>
+<text class="ons" x="840.0" y="646">OpenAlex topics</text>
+<text class="ons" x="840.0" y="662">+ CPC classes</text>
 <a href="methodology.html" class="key">
 <rect class="keybox" x="40" y="600.0" width="175" height="76"/>
-<text class="keyt" x="127.5" y="625.0">Профиль технологии</text>
-<text class="s" x="127.5" y="644.0">методология</text>
-<text class="keyl" x="127.5" y="663.0">открыть страницу →</text>
+<text class="keyt" x="127.5" y="625.0">Technology profile</text>
+<text class="s" x="127.5" y="644.0">methodology</text>
+<text class="keyl" x="127.5" y="663.0">open the page →</text>
 </a>
 <path class="ln" d="M285,56.0 H22 V584.0 H127.5 V598.0" marker-end="url(#a)"/>
-<text class="cap" x="153" y="48.0">названия и аннотации грантов</text>
+<text class="cap" x="153" y="48.0">award titles and abstracts</text>
 <path class="ln" d="M215,638.0 H328" marker-end="url(#a)"/>
 <path class="LN" d="M640,680 V716" marker-end="url(#A)"/>
 <rect class="kb" x="490" y="718" width="300" height="84"/>
-<text class="t" x="640.0" y="740">База знаний Engine</text>
-<text class="n" x="640.0" y="758">1) люди + организации</text>
-<text class="s" x="640.0" y="774">12 Engines, N работ, N патентов</text>
-<text class="wip" x="640.0" y="790">2) топовые работы других (в процессе)</text>
+<text class="t" x="640.0" y="740">Engine knowledge base</text>
+<text class="n" x="640.0" y="758">1) people + organisations</text>
+<text class="s" x="640.0" y="774">12 Engines, N works, N patents</text>
+<text class="wip" x="640.0" y="790">2) top works by others (in progress)</text>
 <rect class="box" x="40" y="710" width="175" height="100"/>
-<text class="ts" x="127.5" y="732">Топовые прошлые</text>
-<text class="s" x="127.5" y="750">гранты и публикации</text>
-<text class="s" x="127.5" y="766">те же 5 лет, та же тема</text>
-<text class="s" x="127.5" y="782">поиск по всем vs по авторам</text>
-<text class="wip" x="127.5" y="798">(в процессе)</text>
+<text class="ts" x="127.5" y="732">Top past grants</text>
+<text class="s" x="127.5" y="750">and publications</text>
+<text class="s" x="127.5" y="766">same 5 years, same topic</text>
+<text class="s" x="127.5" y="782">search all vs by authors</text>
+<text class="wip" x="127.5" y="798">(in progress)</text>
 <path class="ln" d="M215,760.0 H488" marker-end="url(#a)"/>
 <path class="LN" d="M640,802 V836" marker-end="url(#A)"/>
 <a href="analysis.html" class="next">
-<text class="cap" x="640" y="852">дальше: метрики и группы сравнения</text>
+<text class="cap" x="640" y="852">next: metrics and comparison groups</text>
 </a>
 </svg>
