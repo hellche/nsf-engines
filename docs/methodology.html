@@ -1627,7 +1627,7 @@ display: flex; align-items: center; flex-wrap: wrap; gap: 4px 20px; min-height: 
     // Technology profile versions: data pages (Engines, index, publications, patents) exist once per version,
     // v1 in docs/ and v3.1 in docs/v3/ (R/08_render_site.R); pipeline, methodology and compare only in docs/.
     var VERSIONS = { v1: "", v3_1: "v3/" };
-    var SHARED = ["pipeline.html", "analysis.html", "methodology.html", "compare.html"];
+    var SHARED = ["pipeline.html", "analysis.html", "methodology.html", "neighbours.html", "compare.html"];
     var parts = location.pathname.split("/");
     var page = parts.pop() || "index.html";
     var dir = parts.pop();
@@ -1706,7 +1706,7 @@ display: flex; align-items: center; flex-wrap: wrap; gap: 4px 20px; min-height: 
     // Technology profile versions: data pages (Engines, index, publications, patents) exist once per version,
     // v1 in docs/ and v3.1 in docs/v3/ (R/08_render_site.R); pipeline, methodology and compare only in docs/.
     var VERSIONS = { v1: "", v3_1: "v3/" };
-    var SHARED = ["pipeline.html", "analysis.html", "methodology.html", "compare.html"];
+    var SHARED = ["pipeline.html", "analysis.html", "methodology.html", "neighbours.html", "compare.html"];
     var parts = location.pathname.split("/");
     var page = parts.pop() || "index.html";
     var dir = parts.pop();
@@ -1757,10 +1757,7 @@ display: flex; align-items: center; flex-wrap: wrap; gap: 4px 20px; min-height: 
 <h2>What is the technology profile</h2>
 <p>What an Engine works on, in two vocabularies: <strong>OpenAlex
 topics</strong> for papers and <strong>CPC groups</strong> for patents.
-It is built from the NSF grant text only. A paper is <em>in the Engine’s
-topics</em> when one of its topics is in the profile; a patent is <em>in
-the profile</em> when one of its CPC codes is. All metrics on this site
-still use version 1.</p>
+It is built from the NSF grant text only.</p>
 </div>
 <div id="versions" class="section level2">
 <h2>Versions</h2>
@@ -1967,105 +1964,15 @@ LLM</text> <text class="s" x="1050.0" y="767">название + полная
 2 прогонах из 3</text>
 </svg>
 </div>
-<div id="embeddings-in-detail" class="section level3">
-<h3>Embeddings in detail (version 3.1)</h3>
-<p>Version 3.1 ranks every OpenAlex topic and every CPC group by how
-close it is in meaning to each technology of the grant. Nobody chooses
-here: the items are only sorted by distance, the same way for all 43
-technologies.</p>
-<ol style="list-style-type: decimal">
-<li><p><strong>One text per technology.</strong> The technology’s label
-and its phrases of the grant are joined into one text, for example
-<em>“Continuous processing and data-driven process control. continuous
-flow processing; data-driven process control”</em>. 43 texts in total.
-The Engine’s name and the word “Engine” are removed (the patent model
-reads “engine” as a motor).</p></li>
-<li><p><strong>Two models, two separate comparisons.</strong> A model
-turns every text into a point in a space of meaning; texts about similar
-things lie close together.</p>
-<div class="no-sort">
-<table>
-<colgroup>
-<col width="33%" />
-<col width="33%" />
-<col width="33%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th></th>
-<th>The 43 technologies are compared with</th>
-<th>Model</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>Papers</td>
-<td>4,516 OpenAlex topics: name, description, keywords</td>
-<td>SPECTER2, trained on research papers</td>
-</tr>
-<tr class="even">
-<td>Patents</td>
-<td>7,646 CPC main groups: titles of the subclass, the group and its
-subgroups</td>
-<td>PatentSBERTa, trained on patents</td>
-</tr>
-</tbody>
-</table>
-</div></li>
-<li><p><strong>Closeness.</strong> All scientific texts are somewhat
-alike, so the average point of each set is subtracted first; what is
-left are the real differences in meaning. Closeness is the cosine
-between the technology’s point and the item’s point: 1 means the same
-meaning, 0 unrelated.</p></li>
-<li><p><strong>Top 20.</strong> For each technology, all 4,516 topics
-and all 7,646 CPC groups are sorted by closeness; the 20 closest of each
-are the candidates. Choosing among them is the next step (not settled
-yet).</p></li>
-</ol>
-<p>Because the text holds all the phrases of a technology, a group close
-to all of them scores high by itself (illustrative numbers):</p>
-<div class="no-sort">
-<table>
-<colgroup>
-<col width="50%" />
-<col width="50%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th>CPC group</th>
-<th>Closeness to the technology</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>B01J19 Chemical, physical or physico-chemical processes in general;
-their apparatus</td>
-<td>0.24</td>
-</tr>
-<tr class="even">
-<td>G05B13 Adaptive control systems</td>
-<td>0.21</td>
-</tr>
-<tr class="odd">
-<td>B01J8 Processes conducted in the presence of fluids and solid
-particles; apparatus</td>
-<td>0.17</td>
-</tr>
-</tbody>
-</table>
 </div>
-</div>
-</div>
-<div id="grant-technologies" class="section level2">
-<h2>Technologies of each grant</h2>
-<p><strong>43 technologies, 2–5 per Engine</strong> — the common first
-step for versions 1 and 3.1. A short fixed prompt asks the model to copy
-out, word for word, the phrases of the grant that name a technology and
-to group them into the grant’s technologies. It was run three times; a
-phrase is kept when at least two runs found it (77 phrases), and the
-grouping is that of the run that agrees most with the other two. The
-labels are the model’s own short names; the phrases are the grant’s
-words.</p>
+<div id="steps" class="section level2">
+<h2>Steps in detail</h2>
+<div id="grant-technologies" class="section level3">
+<h3>Step 1: technologies of each grant</h3>
+<p><strong>43 technologies, 2–5 per Engine</strong>, common to versions
+1 and 3.1. An LLM copies out the grant’s phrases that name a technology
+and groups them; three runs, a phrase is kept if two found it (77
+phrases).</p>
 <p><select id="tech-engine" class="form-control" style="width:auto; margin-bottom:10px" aria-label="Engine">
 <option value="1">BRIDGES</option> <option value="2">Critical Materials
 Crossroads</option> <option value="3">Critical Mineral
@@ -3240,6 +3147,85 @@ document.getElementById("tech-engine").addEventListener("change", function () {
   });
 });
 </script>
+</div>
+<div id="embeddings-in-detail" class="section level3">
+<h3>Step 2: embeddings (version 3.1)</h3>
+<ol style="list-style-type: decimal">
+<li><p><strong>One text per technology:</strong> its label and its
+phrases, without the Engine’s name.</p></li>
+<li><p><strong>Two models:</strong></p>
+<div class="no-sort">
+<table>
+<thead>
+<tr class="header">
+<th></th>
+<th>Compared with</th>
+<th>Model</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Papers</td>
+<td>4,516 OpenAlex topics</td>
+<td>SPECTER2</td>
+</tr>
+<tr class="even">
+<td>Patents</td>
+<td>7,646 CPC main groups</td>
+<td>PatentSBERTa</td>
+</tr>
+</tbody>
+</table>
+</div></li>
+<li><p><strong>Closeness:</strong> cosine after subtracting each set’s
+average.</p></li>
+<li><p><strong>Top 50:</strong> the 50 closest topics and groups go to
+an LLM judge (three runs, in progress). <a href="neighbours.html">See
+the nearest topics and groups of each technology</a>.</p></li>
+</ol>
+</div>
+</div>
+<div id="classification-lists" class="section level2">
+<h2>Classification lists</h2>
+<p>Both lists are public; copies are kept in the repository
+(<code>data/reference/</code>). Each has two levels: <strong>coarse
+categories</strong> and the <strong>codes</strong> inside them.</p>
+<div class="no-sort">
+<table>
+<colgroup>
+<col width="25%" />
+<col width="25%" />
+<col width="25%" />
+<col width="25%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th></th>
+<th>Coarse categories</th>
+<th>Codes inside them</th>
+<th>Source</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>OpenAlex</td>
+<td>250 subfields</td>
+<td>4,516 topics, with keywords</td>
+<td><a href="https://api.openalex.org/topics">OpenAlex topics
+API</a></td>
+</tr>
+<tr class="even">
+<td>CPC</td>
+<td>652 subclasses</td>
+<td>7,646 main groups</td>
+<td><a href="https://www.cooperativepatentclassification.org/cpcSchemeAndDefinitions/bulk">CPC
+Title List 2026.08</a></td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>CPC indexing groups (2000+) and catch-all groups (99/00) are left
+out. Both lists downloaded on November 15, 2026.</p>
 </div>
 <div id="technology-profile" class="section level2">
 <h2>[drop] Profile of each Engine</h2>
@@ -5595,48 +5581,6 @@ function showProfile() {
 document.getElementById("profile-engine").addEventListener("change", showProfile);
 document.getElementById("profile-version").addEventListener("change", showProfile);
 </script>
-</div>
-<div id="classification-lists" class="section level2">
-<h2>Classification lists</h2>
-<p>Both lists are public; copies are kept in the repository
-(<code>data/reference/</code>). Each has two levels: <strong>coarse
-categories</strong> and the <strong>codes</strong> inside them.</p>
-<div class="no-sort">
-<table>
-<colgroup>
-<col width="25%" />
-<col width="25%" />
-<col width="25%" />
-<col width="25%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th></th>
-<th>Coarse categories</th>
-<th>Codes inside them</th>
-<th>Source</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>OpenAlex</td>
-<td>250 subfields</td>
-<td>4,516 topics, with keywords</td>
-<td><a href="https://api.openalex.org/topics">OpenAlex topics
-API</a></td>
-</tr>
-<tr class="even">
-<td>CPC</td>
-<td>652 subclasses</td>
-<td>7,646 main groups</td>
-<td><a href="https://www.cooperativepatentclassification.org/cpcSchemeAndDefinitions/bulk">CPC
-Title List 2026.08</a></td>
-</tr>
-</tbody>
-</table>
-</div>
-<p>CPC indexing groups (2000+) and catch-all groups (99/00) are left
-out. Both lists downloaded on November 15, 2026.</p>
 </div>
 
 <!-- Sortable columns and a search box for site tables (included via `includes: after_body`) -->
