@@ -221,16 +221,17 @@ document.getElementById("profile-version").addEventListener("change", showProfil
 
 ## Classification lists {#classification-lists}
 
-Both lists are public and are kept in the repository as CSV files (`data/reference/`, downloaded by
-`py/00_reference_lists.py`):
+Both lists are public; copies are kept in the repository (`data/reference/`). Each has two levels: **coarse
+categories** and the **codes** inside them.
 
-- **OpenAlex topics**: all 4,516 topics of the OpenAlex topic classification, with their descriptions and
-  keywords, from the [OpenAlex topics API](https://api.openalex.org/topics)
-  ([documentation](https://docs.openalex.org/api-entities/topics)). OpenAlex gives the list no version
-  number; every topic has the creation date January 2024 in the API. Downloaded on November 15, 2026.
-- **CPC titles**: the title list of the Cooperative Patent Classification, scheme 2026.08
-  ([CPCTitleList202608.zip](https://www.cooperativepatentclassification.org/sites/default/files/cpc/bulk/CPCTitleList202608.zip),
-  from the [CPC bulk download page](https://www.cooperativepatentclassification.org/cpcSchemeAndDefinitions/bulk)):
-  every section, class, subclass, main group and subgroup with its official title (254,314 codes, of them
-  9,867 main groups). The CPC site labels this list "CPC Title List (2026.08)"; its files are dated
-  August 1, 2026. Downloaded on November 15, 2026.
+::: {.no-sort}
+
+| | Coarse categories | Codes inside them | Source |
+|---|---|---|---|
+| OpenAlex | 250 subfields | 4,516 topics, with keywords | [OpenAlex topics API](https://api.openalex.org/topics) |
+| CPC | 652 subclasses | 7,646 main groups | [CPC Title List 2026.08](https://www.cooperativepatentclassification.org/cpcSchemeAndDefinitions/bulk) |
+
+:::
+
+CPC indexing groups (2000+) and catch-all groups (99/00) are left out. Both lists downloaded on
+November 15, 2026.
