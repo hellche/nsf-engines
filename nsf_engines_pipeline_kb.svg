@@ -86,7 +86,6 @@ a.key:hover .keybox { fill: #f3cd7e; }
 <text class="offt" x="934.0" y="344">Workforce, community</text>
 <text class="offs" x="934.0" y="362">colleges, workforce</text>
 <text class="offs" x="934.0" y="378">training programmes</text>
-<text class="cap" x="127.5" y="246">extra check</text>
 <rect class="box" x="40" y="254" width="175" height="100"/>
 <text class="ts" x="127.5" y="276">People matching</text>
 <text class="s" x="127.5" y="294">OpenAlex author ID</text>
@@ -94,7 +93,6 @@ a.key:hover .keybox { fill: #f3cd7e; }
 <text class="s" x="127.5" y="326">PatentsView inventor</text>
 <text class="s" x="127.5" y="342" style="font-style:italic">name + current org.</text>
 <path class="ln" d="M215,304.0 H248" marker-end="url(#a)"/>
-<text class="cap" x="1157.5" y="246">extra check</text>
 <rect class="box" x="1065" y="254" width="185" height="100"/>
 <text class="ts" x="1157.5" y="276">Organisation matching</text>
 <text class="wip" x="1157.5" y="294">ROR (in progress)</text>

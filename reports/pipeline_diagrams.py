@@ -4,7 +4,7 @@
 #   nsf_engines_pipeline_analysis.svg  2. analysis (in development): metrics and comparison groups, as lists;
 #                                         on its own page, reports/analysis.Rmd, linked only from diagram 1
 # Replaces nsf_engines_pipeline_v2.svg on the site (that file is kept as it was).
-# Style: square corners, short cells, no file names, no middle dots; "(в процессе)" marks what is not done yet.
+# Style: square corners, short cells, no file names, no middle dots; "(in progress)" marks what is not done yet.
 # Run: python3 reports/pipeline_diagrams.py
 import html
 from pathlib import Path
@@ -72,7 +72,7 @@ class Svg:
 
     def cell(self, on, x, y, w, h, title, lines, extra=(), wip_title=None):
         self.rect("on" if on else "off", x, y, w, h)
-        if wip_title:   # "(в процессе)" right after the title, on the same line
+        if wip_title:   # "(in progress)" right after the title, on the same line
             self.o.append(f'<text class="ts" x="{x + w / 2}" y="{y + 22}">{E(title)} '
                           f'<tspan style="font-size:11.5px;font-weight:400;font-style:italic;fill:#b35900">({E(wip_title)})</tspan></text>')
         else:
@@ -137,11 +137,9 @@ for x0, title, cells in ((250, "LLM: people, 4 roles",
         s.cell(on, x0 + 12 + (i % 2) * 178, R1 if i < 2 else R2, 168, CH, t, l)
 # matching: extra checks of who is who
 MY = C + 40
-s.text("cap", 127.5, MY - 8, "extra check")
 box(40, MY, 175, "People matching", ["OpenAlex author ID", ("wip", "ORCID (in progress)"),
     "PatentsView inventor", ("i", "name + current org.")], tcls="ts")
 s.path("ln", f"M215,{MY + hb(4) / 2} H248", "a")
-s.text("cap", 1157.5, MY - 8, "extra check")
 box(1065, MY, 185, "Organisation matching", [("wip", "ROR (in progress)"), "OpenAlex institutions",
     "PatentsView assignee", ("i", "name + US location")], tcls="ts")
 s.path("ln", f"M1065,{MY + hb(4) / 2} H1032", "a")
@@ -195,35 +193,35 @@ s.save("nsf_engines_pipeline_kb.svg", 1290, E2 + 64, "NSF Engines: knowledge bas
 # ---- 2. Analysis (in development) -------------------------------------------------------------------------------
 a = Svg()
 a.o.append('<a href="pipeline.html">')                       # back to the pipeline
-a.box(490, 20, 300, 56, "База знаний Engine", ["из пайплайна"], cls="kb")
+a.box(490, 20, 300, 56, "Engine knowledge base", ["from the pipeline"], cls="kb")
 a.o.append('</a>')
 a.path("LN", "M640,76 V108", "A")
 M = 110
-metrics = [("Объём и LQ", "доля региона в технологии относительно США"),
-           ("Сотрудничество", "доля совместных работ внутри региона"),
-           ("Местные патенты", "доля правообладателей из региона"),
-           ("Сеть партнёров до гранта", "совместные работы и патенты, партнёр × партнёр"),
-           ("Источники знания", "кого цитирует база: регион, США, мир"),
-           ("Опора на науку", "ссылки патент → статья из патентов региона")]
+metrics = [("Volume and LQ", "the region's share of the technology relative to the US"),
+           ("Collaboration", "share of joint works within the region"),
+           ("Local patents", "share of assignees from the region"),
+           ("Partner network before the award", "joint works and patents, partner × partner"),
+           ("Knowledge sources", "whom the base cites: region, US, world"),
+           ("Reliance on science", "patent → paper citations from the region's patents")]
 MH = 62 + 22 * len(metrics)
 a.rect("frame", 250, M, 780, MH)
-a.text("tf", 640, M + 26, "Метрики")
-a.text("s", 640, M + 44, "по каждому Engine")
+a.text("tf", 640, M + 26, "Metrics")
+a.text("s", 640, M + 44, "for each Engine")
 a.listing_named(285, M + 72, metrics)
-a.box(1065, M + MH / 2 - 34, 205, 68, "Связи патент → статья", [("wip", "проверить SciSciNet?")], tcls="ts",
+a.box(1065, M + MH / 2 - 34, 205, 68, "Patent → paper links", [("wip", "check SciSciNet?")], tcls="ts",
       first=22, step=16)
 a.path("ln", f"M1065,{M + MH / 2} H1032", "a")
 G = M + MH + 40
 a.path("LN", f"M640,{M + MH} V{G - 2}", "A")
-groups = [("Проигравшие финалисты", "3 финалиста + 14 полуфиналистов: что отличает победителя?"),
-          ("Джорджия", "12 профилей × штат GA: где мы?"),
-          ("Лидеры по технологии", "все штаты: почему именно здесь?"),
-          ("Тот же регион", "другие технологии")]
+groups = [("Finalists that lost", "3 finalists + 14 semi-finalists: what sets the winner apart?"),
+          ("Georgia", "12 profiles × the state of GA: where do we stand?"),
+          ("Technology leaders", "all states: why here?"),
+          ("Same region", "other technologies")]
 GH = 44 + 22 * len(groups)
 a.rect("frame", 250, G, 780, GH)
-a.text("tf", 640, G + 26, "Группы сравнения")
+a.text("tf", 640, G + 26, "Comparison groups")
 a.listing(285, G + 54, groups)
-a.box(1065, G + GH / 2 - 42, 205, 84, "Воронка конкурса", [("wip", "доступна?"), "заявки → финал"], tcls="ts")
+a.box(1065, G + GH / 2 - 42, 205, 84, "Competition funnel", [("wip", "available?"), "applications → finals"], tcls="ts")
 a.path("ln", f"M1065,{G + GH / 2} H1032", "a")
-a.save("nsf_engines_pipeline_analysis.svg", 1290, G + GH + 30, "NSF Engines: метрики и группы сравнения (в разработке)")
+a.save("nsf_engines_pipeline_analysis.svg", 1290, G + GH + 30, "NSF Engines: metrics and comparison groups (in development)")
 print("written: nsf_engines_pipeline_kb.svg, nsf_engines_pipeline_analysis.svg")
