@@ -104,6 +104,49 @@ Patent LQ high by construction.
 In total: `r n_distinct(profile$engine_name)` Engines, `r nrow(profile)` statements
 (`r sum(profile$source == "title")` from titles, `r sum(profile$source == "abstract")` from abstracts).
 
+## Technologies of each grant {#grant-technologies}
+
+```{r tech-setup, include=FALSE}
+techs <- read_csv(here("data", "processed", "tech_minplus_technologies.csv"), show_col_types = FALSE)
+n_tech <- techs |> distinct(engine_name, tech_id) |> nrow()
+per_engine <- techs |> distinct(engine_name, tech_id) |> count(engine_name)
+```
+
+**`r n_tech` technologies, `r min(per_engine$n)`–`r max(per_engine$n)` per Engine** — the common first step for
+versions 1 and 3.1. A short fixed prompt asks the model to copy out, word for word, the phrases of the grant
+that name a technology and to group them into the grant's technologies. It was run three times; a phrase is
+kept when at least two runs found it (`r nrow(techs)` phrases), and the grouping is that of the run that agrees
+most with the other two. The labels are the model's own short names; the phrases are the grant's words.
+
+```{r tech-tables, results = "asis"}
+tech_engines <- sort(unique(techs$engine_name))
+cat('<select id="tech-engine" class="form-control" style="width:auto; margin-bottom:10px" aria-label="Engine">\n',
+    paste0('<option value="', seq_along(tech_engines), '">', esc(tech_engines), "</option>", collapse = "\n"),
+    "\n</select>\n\n")
+for (k in seq_along(tech_engines)) {
+  t <- techs |> filter(engine_name == tech_engines[k]) |>
+    group_by(tech_id, tech_label) |>
+    summarise(phrases = paste0("<i>", esc(fragment), "</i> <span style='color:#888'>(", n_runs, "/3)</span>",
+                               collapse = "<br>"), .groups = "drop") |>
+    arrange(tech_id)
+  tab <- tibble(`#` = t$tech_id, Technology = esc(t$tech_label),
+                `Phrases of the grant (verbatim; runs that found it)` = t$phrases)
+  cat(sprintf('<div class="tech-engine" data-k="%d"%s>\n', k, if (k > 1) ' style="display:none"' else ""))
+  print(kable(tab, format = "html", escape = FALSE, table.attr = 'class="table table-condensed"'))
+  cat("</div>\n\n")
+}
+```
+
+<script>
+// Dropdown: show the chosen Engine's technologies
+document.getElementById("tech-engine").addEventListener("change", function () {
+  var k = this.value;
+  document.querySelectorAll(".tech-engine").forEach(function (d) {
+    d.style.display = d.getAttribute("data-k") === k ? "" : "none";
+  });
+});
+</script>
+
 ## Profile of each Engine {#technology-profile}
 
 Choose an Engine and a version. **Metrics still use v1.** In v3.1, <sup>J</sup> marks an item chosen by the
