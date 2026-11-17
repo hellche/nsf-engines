@@ -1,0 +1,61 @@
+engine_name,year,works,works_in_region
+BRIDGES,2021,59,29
+BRIDGES,2022,124,63
+BRIDGES,2023,148,65
+BRIDGES,2024,193,83
+BRIDGES,2025,161,78
+BRIDGES,2026,197,91
+Critical Materials Crossroads,2021,94,34
+Critical Materials Crossroads,2022,204,40
+Critical Materials Crossroads,2023,251,42
+Critical Materials Crossroads,2024,259,52
+Critical Materials Crossroads,2025,321,65
+Critical Materials Crossroads,2026,291,55
+Critical Mineral Accelerator,2021,67,15
+Critical Mineral Accelerator,2022,211,26
+Critical Mineral Accelerator,2023,200,23
+Critical Mineral Accelerator,2024,255,34
+Critical Mineral Accelerator,2025,219,29
+Critical Mineral Accelerator,2026,225,43
+FAST,2021,5,5
+FAST,2022,17,17
+FAST,2023,12,12
+FAST,2024,11,11
+FAST,2025,19,19
+FAST,2026,26,26
+NEO-SMART,2021,48,19
+NEO-SMART,2022,118,47
+NEO-SMART,2023,87,42
+NEO-SMART,2024,88,27
+NEO-SMART,2025,98,36
+NEO-SMART,2026,88,22
+Quantum Technologies,2021,28,28
+Quantum Technologies,2022,81,81
+Quantum Technologies,2023,139,139
+Quantum Technologies,2024,121,120
+Quantum Technologies,2025,187,187
+Quantum Technologies,2026,172,172
+RETI,2021,127,54
+RETI,2022,400,166
+RETI,2023,401,202
+RETI,2024,414,181
+RETI,2025,386,186
+RETI,2026,312,120
+RuralSTAMINA Biomanufacturing,2021,17,17
+RuralSTAMINA Biomanufacturing,2022,50,50
+RuralSTAMINA Biomanufacturing,2023,38,38
+RuralSTAMINA Biomanufacturing,2024,32,32
+RuralSTAMINA Biomanufacturing,2025,29,29
+RuralSTAMINA Biomanufacturing,2026,49,49
+STELLAR,2021,87,34
+STELLAR,2022,218,63
+STELLAR,2023,222,75
+STELLAR,2024,220,75
+STELLAR,2025,262,99
+STELLAR,2026,179,39
+Seafood,2021,52,37
+Seafood,2022,175,115
+Seafood,2023,181,133
+Seafood,2024,160,113
+Seafood,2025,173,113
+Seafood,2026,200,140

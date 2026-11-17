@@ -1,0 +1,161 @@
+---
+title: "Technology profile versions compared"
+date: "Data retrieved `r format(Sys.Date(), '%B %d, %Y')`"
+output:
+  html_document:
+    toc: true
+    toc_float: true
+    theme: flatly
+    self_contained: true
+    css: style.css
+    includes:
+      before_body: _navbar.html
+      after_body: _tables.html
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE, message = FALSE, warning = FALSE)
+invisible(Sys.setlocale("LC_CTYPE", "en_US.UTF-8"))  # else cat() writes non-ASCII as <U+2010> under the C locale
+library(dplyr); library(tidyr); library(readr); library(knitr); library(here); library(stringr)
+source(here("R", "profile.R"))
+rdv <- \(f, v) read_csv(proc_path(f, v), show_col_types = FALSE) |> mutate(version = v)
+slug <- \(x) str_replace_all(str_to_lower(x), "[^a-z0-9]+", "-")
+esc  <- htmltools::htmlEscape
+vs   <- PROFILE_VERSIONS
+lab  <- PROFILE_LABELS
+
+m  <- bind_rows(lapply(vs, \(v) rdv("metrics_engine.csv", v)))
+st <- bind_rows(lapply(vs, \(v) rdv("competition_states.csv", v))) |> filter(state == "ENGINE REGION")
+lq <- bind_rows(lapply(vs, \(v) rdv("metrics_lq_cpc.csv", v)))
+p1 <- read_csv(here("data", "processed", "tech_profile.csv"), show_col_types = FALSE)
+p3 <- read_csv(here("data", "processed", "tech_profile_v3_1_core.csv"), show_col_types = FALSE)
+cpc_titles <- read_csv(here("data", "reference", "cpc_titles_202608.csv.gz"), show_col_types = FALSE) |>
+  filter(kind %in% c("subclass", "main_group")) |>
+  mutate(title = str_remove(title, " \\(.*$")) |>   # subclass titles are in capitals
+  transmute(code = str_remove(code, "/00$"), title = if_else(kind == "subclass", str_to_sentence(title), title))
+
+# number of OpenAlex topics and CPC codes per Engine and version
+n_items <- bind_rows(
+  p1 |> group_by(engine_name) |>
+    summarise(topics = n_distinct(na.omit(topic_id)),
+              cpc = n_distinct(str_trim(unlist(str_split(na.omit(cpc), ";")))), .groups = "drop") |>
+    mutate(version = "v1"),
+  p3 |> filter(in_core) |> group_by(engine_name) |>
+    summarise(topics = n_distinct(item_id[kind == "oa"]), cpc = n_distinct(item_id[kind == "cpc"]),
+              .groups = "drop") |> mutate(version = "v3_1"))
+```
+
+The site shows the knowledge base of each Engine under two technology profiles. Switch between them in the
+header (*Profile*): every Engine page, the table of 12 Engines, Publications and Patents exist in both
+versions. Papers and patents that are counted "in the profile" (partner papers in the Engine's topics,
+regional patents, Patent LQ, the Engine's rank among states) depend on the version; people, partners and
+the team's own works and patents do not.
+
+- **v1**: 3-5 technology statements per Engine written by hand from the NSF abstract; OpenAlex topics
+  from the OpenAlex classifier (with manual choices), CPC codes chosen by hand, mostly **subclasses**
+  (e.g. C22B). The earlier manual choice: it cannot be justified now and is not a benchmark.
+- **v3.1, core**: technologies of the grant from its scientific and technical fragments (fixed prompt);
+  all OpenAlex topics and all CPC main groups ranked for each technology by rank fusion of independent
+  signals; up to 2 topics and 2 CPC **main groups** (e.g. C22B7) per technology; a rubric judge where the
+  signals do not agree. The extraction and the judge scores were done by hand in a chat session, not through
+  the API, and are not reproducible. See [Methodology](methodology.html).
+
+The broad v3.1 profile (all items above a relevance threshold) and a v2 profile are not built yet.
+
+## Metrics by version
+
+```{r metrics}
+w <- m |>
+  select(engine_name, version, partner_works_in_topics, partner_works_in_topics_region,
+         people_works_in_topics, pat_region_tech, lq_profile, share_region_tech_by_partners) |>
+  left_join(st |> select(engine_name, version, rank_patents), by = c("engine_name", "version")) |>
+  left_join(n_items, by = c("engine_name", "version")) |>
+  pivot_wider(names_from = version, values_from = -c(engine_name, version))
+col <- \(x, v) paste0(x, "_", v)
+w |>
+  arrange(engine_name) |>
+  transmute(Engine = sprintf("[%s](%s.html)", engine_name, slug(engine_name)),
+            `Topics v1` = topics_v1, `Topics v3.1` = topics_v3_1,
+            `CPC v1` = cpc_v1, `CPC v3.1` = cpc_v3_1,
+            `Partner papers v1` = coalesce(partner_works_in_topics_v1, 0),
+            `Partner papers v3.1` = coalesce(partner_works_in_topics_v3_1, 0),
+            `Regional patents v1` = pat_region_tech_v1, `Regional patents v3.1` = pat_region_tech_v3_1,
+            `Patent LQ v1` = lq_profile_v1, `Patent LQ v3.1` = lq_profile_v3_1,
+            `Rank among states v1` = rank_patents_v1, `Rank among states v3.1` = rank_patents_v3_1) |>
+  kable(align = c("l", rep("r", 12)))
+lq_w <- w |> filter(!is.na(lq_profile_v1), !is.na(lq_profile_v3_1))
+both_above <- sum(lq_w$lq_profile_v1 > 1 & lq_w$lq_profile_v3_1 > 1)
+both_below <- sum(lq_w$lq_profile_v1 <= 1 & lq_w$lq_profile_v3_1 <= 1)
+rho <- cor(lq_w$lq_profile_v1, lq_w$lq_profile_v3_1, method = "spearman")
+small <- w |> filter(pat_region_tech_v3_1 < 50) |> arrange(pat_region_tech_v3_1)
+```
+
+*Partner papers*: works of the knowledge-producer partners in the Engine's OpenAlex topics since the window
+start (Engines without such partners: 0). *Regional patents*: 2021-2025 US grants with an inventor in the
+Engine's region and a CPC code of the profile. *Patent LQ*: the region's share of patents in the profile
+relative to the US share (1 = US average). *Rank among states*: where the Engine's region would rank among
+US states by the number of profile patents.
+
+**Do the conclusions hold?** The Patent LQ is above 1 under both versions for `r both_above` Engines and at
+most 1 under both for `r both_below`; the other `r nrow(lq_w) - both_above - both_below` change side. Rank
+correlation of the LQ between versions (Spearman): `r sprintf("%.2f", rho)`.
+Because v3.1 uses CPC main groups, it counts far fewer patents. Under v3.1, `r nrow(small)` Engines have fewer
+than 50 regional patents in the profile (`r paste(sprintf("%s: %d", small$engine_name, small$pat_region_tech_v3_1), collapse = "; ")`);
+their LQ rests on few patents and moves a lot with one code.
+
+## Profiles and LQ by code, per Engine
+
+```{r per-engine, results = "asis"}
+engines <- sort(unique(m$engine_name))
+cat('<select id="cmp-engine" class="form-control" style="width:auto; margin-bottom:10px">\n',
+    paste0('<option value="', seq_along(engines), '">', esc(engines), "</option>", collapse = "\n"),
+    "\n</select>\n\n")
+code_title <- \(code) coalesce(cpc_titles$title[match(code, cpc_titles$code)], "")
+for (k in seq_along(engines)) {
+  e <- engines[k]
+  cat(sprintf('<div class="cmp-engine" data-k="%d"%s>\n\n', k, if (k > 1) ' style="display:none"' else ""))
+  cat(sprintf("Engine page: [v1](%s.html), [v3.1](v3/%s.html).\n\n", slug(e), slug(e)))
+
+  cat("**v1**: statements, topics and CPC codes\n\n")
+  p1 |> filter(engine_name == e) |> arrange(item) |>
+    transmute(`#` = item, Statement = statement, `OpenAlex topic` = paste(topic_id, topic), CPC = cpc) |>
+    kable(format = "html", table.attr = 'class="table table-condensed"') |> print()
+
+  cat("\n\n**v3.1 core**: technologies of the grant, topics and CPC main groups (*judge* = chosen by the rubric judge)\n\n")
+  items <- p3 |> filter(engine_name == e, in_core) |>
+    mutate(txt = paste0(esc(item_id), " ", esc(item_title), if_else(str_starts(basis, "judge"), " (judge)", "")))
+  p3 |> filter(engine_name == e) |> distinct(tech_id, tech_label) |>
+    left_join(items |> filter(kind == "oa") |> group_by(tech_id) |>
+                summarise(topics = paste(txt, collapse = "<br>"), .groups = "drop"), by = "tech_id") |>
+    left_join(items |> filter(kind == "cpc") |> group_by(tech_id) |>
+                summarise(cpc = paste(txt, collapse = "<br>"), .groups = "drop"), by = "tech_id") |>
+    arrange(tech_id) |>
+    transmute(`#` = tech_id, Technology = esc(tech_label), `OpenAlex topics` = coalesce(topics, ""),
+              `CPC main groups` = coalesce(cpc, "")) |>
+    kable(format = "html", escape = FALSE, table.attr = 'class="table table-condensed"') |> print()
+
+  cat("\n\n**Patent LQ by CPC code** (2021-2025 grants; regional patents with the code / all regional patents, relative to the US)\n\n")
+  lq |> filter(engine_name == e) |> arrange(version, desc(lq)) |>
+    transmute(Version = lab[version], CPC = cpc, Title = code_title(cpc),
+              `Regional patents` = region_patents, `US patents` = us_patents, LQ = lq) |>
+    kable(format = "html", table.attr = 'class="table table-condensed"') |> print()
+  cat("\n</div>\n\n")
+}
+```
+
+<script>
+function showCmp(k) {
+  document.getElementById("cmp-engine").value = k;
+  document.querySelectorAll(".cmp-engine").forEach(function (d) {
+    d.style.display = d.getAttribute("data-k") === String(k) ? "" : "none";
+  });
+}
+document.getElementById("cmp-engine").addEventListener("change", function () {
+  showCmp(this.value);
+  history.replaceState(null, "", "#engine-" + this.value);
+});
+window.addEventListener("load", function () {
+  var m = location.hash.match(/^#engine-(\d+)$/);
+  if (m) showCmp(m[1]);
+});
+</script>

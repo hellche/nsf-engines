@@ -15,6 +15,7 @@ on:
       - "data/manual/**"
       - "*.svg"
       - "R/08_render_site.R"
+      - "R/profile.R"
       - ".github/workflows/render-site.yml"
   workflow_dispatch:
 

@@ -14,7 +14,8 @@ output:
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = FALSE, message = FALSE, warning = FALSE)
 library(dplyr); library(readr); library(knitr); library(here); library(stringr)
-m <- read_csv(here("data", "processed", "metrics_engine.csv"), show_col_types = FALSE)
+source(here("R", "profile.R"))   # PROFILE_VERSION: which profile's metrics
+m <- read_csv(proc_path("metrics_engine.csv"), show_col_types = FALSE)
 slug <- \(x) str_replace_all(str_to_lower(x), "[^a-z0-9]+", "-")
 ```
 
@@ -35,5 +36,7 @@ m |>
 ```
 
 **Patent LQ**: share of the region's 2021-2025 patents that fall in the Engine's technology profile, relative to the same share for the US (1 = US average).
+
+Technology profile: **`r PROFILE_LABELS[[profile_version()]]`**. Papers and patents "in profile" depend on the version; switch it in the header, or see the [comparison of versions](`r if (profile_version() == 'v1') '' else '../'`compare.html).
 
 Method, code and data: see the project README.

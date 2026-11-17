@@ -6,8 +6,9 @@
 #   team_inventor     an inventor is one of the Engine's people (step 2), living in the Engine's region
 #
 # Input:  PATENT_DIR/patents_<year>_full_slim.parquet, PATENT_DIR/raw/cpc_official_24_25.tsv
-#         data/processed/tech_profile.csv, partners.csv, people_roles_evidence.csv
-# Output: data/processed/patents_engine.csv   Engine x patent with layer flags and matches
+#         technology profile of PROFILE_VERSION (R/profile.R), partners.csv, people_roles_evidence.csv
+# Output: patents_engine.csv   Engine x patent with layer flags and matches
+#         (data/processed/ for v1, data/processed/profile_<version>/ otherwise)
 #
 # Coverage: the local files currently hold grants of 2024-2025 (PATENT_YEARS). The window starts in 2021,
 # so grants of 2021-2023 and pre-grant publications should be added when available.
@@ -18,12 +19,13 @@ library(stringr)
 library(purrr)
 library(readr)
 library(here)
+source(here("R", "profile.R"))   # PROFILE_VERSION: which technology profile; per-version outputs
 library(arrow)
 
 patent_dir   <- Sys.getenv("PATENT_DIR", "/Users/elenachechik/Desktop/india/patent/data")
 patent_years <- as.integer(str_split(Sys.getenv("PATENT_YEARS", "2024,2025"), ",")[[1]])
 
-profile  <- read_csv(here("data", "processed", "tech_profile.csv"), show_col_types = FALSE)
+profile  <- load_profile()
 partners <- read_csv(here("data", "processed", "partners.csv"), show_col_types = FALSE)
 people   <- read_csv(here("data", "processed", "people_roles_evidence.csv"), show_col_types = FALSE)
 
@@ -76,8 +78,7 @@ inv <- in_region(pv_inv, regions)
 
 # ---- 1. region_tech ---------------------------------------------------------------------------------
 
-codes <- profile |> select(engine_name, cpc) |> filter(!is.na(cpc)) |>
-  separate_longer_delim(cpc, delim = ";") |> mutate(cpc = str_trim(cpc)) |> distinct()
+codes <- profile_codes(profile)
 
 region_tech <- map_dfr(engine_names, \(e) {
   cc <- codes$cpc[codes$engine_name == e]
@@ -174,9 +175,10 @@ patents_engine <- patents_engine |>
   mutate(n_inventors_region = if_else(has_location, coalesce(n_inventors_region, 0L), NA_integer_),
          invented_in_region = n_inventors_region > 0)   # NA only if a patent has no inventor locations
 
-write_csv(patents_engine, here("data", "processed", "patents_engine.csv"))
+write_csv(patents_engine, proc_path("patents_engine.csv"))
 
-message(sprintf("Patent years: %s; rows: %d", paste(patent_years, collapse = ","), nrow(patents_engine)))
+message(sprintf("Profile %s; patent years: %s; rows: %d", profile_version(), paste(patent_years, collapse = ","),
+                nrow(patents_engine)))
 patents_engine |> group_by(engine_name) |>
   summarise(n_region_tech = sum(region_tech),
             n_partner = sum(partner_assignee),

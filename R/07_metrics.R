@@ -1,6 +1,6 @@
 # Step 7. Metrics per Engine (inputs for the reports)
 #
-# Output (data/processed/):
+# Output (data/processed/ for profile v1, data/processed/profile_<version>/ otherwise; PROFILE_VERSION, R/profile.R):
 #   metrics_engine.csv        one row per Engine: people, partners, papers, patents, specialisation
 #   metrics_patents_year.csv  Engine x grant year: regional patents in the technology profile
 #   metrics_papers_year.csv   Engine x year: partner papers in the Engine's topics (all / in-region)
@@ -18,15 +18,16 @@ library(stringr)
 library(purrr)
 library(readr)
 library(here)
+source(here("R", "profile.R"))   # PROFILE_VERSION: which technology profile; per-version outputs
 library(arrow)
 
 patent_dir <- Sys.getenv("PATENT_DIR", "/Users/elenachechik/Desktop/india/patent/data")
-rd <- \(f) read_csv(here("data", "processed", f), show_col_types = FALSE)
+rd <- \(f) read_csv(proc_path(f), show_col_types = FALSE)
 
 engines  <- rd("engines.csv")
 people   <- rd("people_roles_evidence.csv")
 partners <- rd("partners.csv")
-profile  <- rd("tech_profile.csv")
+profile  <- load_profile()
 wp       <- rd("works_people.csv")
 wi       <- rd("works_institutions.csv")
 pe       <- rd("patents_engine.csv")
@@ -103,8 +104,7 @@ region_ids_of <- \(e) reg_pat$patent_id[reg_pat$engine_name == e]
 
 us_ids  <- unique(inv_geo$patent_id)
 n_us    <- length(us_ids)
-codes <- profile |> select(engine_name, item, cpc) |> filter(!is.na(cpc)) |>
-  separate_longer_delim(cpc, delim = ";") |> mutate(cpc = str_trim(cpc)) |> distinct(engine_name, cpc)
+codes <- profile_codes(profile)
 
 lq <- pmap_dfr(codes, function(engine_name, cpc) {
   region_ids <- region_ids_of(engine_name)
@@ -141,12 +141,12 @@ metrics <- engines |>
   left_join(lq_profile, by = "engine_name") |>
   mutate(team_inventors = coalesce(team_inventors, 0L))
 
-write_csv(metrics, here("data", "processed", "metrics_engine.csv"))
-write_csv(patents_year, here("data", "processed", "metrics_patents_year.csv"))
-write_csv(papers_year, here("data", "processed", "metrics_papers_year.csv"))
-write_csv(lq, here("data", "processed", "metrics_lq_cpc.csv"))
-write_csv(top_assignees, here("data", "processed", "metrics_top_assignees.csv"))
+write_csv(metrics, proc_path("metrics_engine.csv"))
+write_csv(patents_year, proc_path("metrics_patents_year.csv"))
+write_csv(papers_year, proc_path("metrics_papers_year.csv"))
+write_csv(lq, proc_path("metrics_lq_cpc.csv"))
+write_csv(top_assignees, proc_path("metrics_top_assignees.csv"))
 
-message("Metrics written for ", nrow(metrics), " Engines")
+message("Metrics (profile ", profile_version(), ") written for ", nrow(metrics), " Engines")
 print(select(metrics, engine_name, active_researchers, knowledge_producers, partner_works_in_topics_region,
              pat_region_tech, lq_profile, share_region_tech_by_partners), n = Inf)

@@ -4,10 +4,13 @@
 #   people        all works of the Engine's people with a reliable OpenAlex author match (step 3b)
 #   institutions  works of the knowledge-producer partners (step 4) in the Engine's technology topics (step 5)
 #
-# Input:  data/processed/people_roles_evidence.csv, partners.csv, tech_profile.csv, engines.csv
-# Output: data/raw/openalex_works/<query>.json     cached pages (one file per query)
-#         data/processed/works_people.csv           person x work
-#         data/processed/works_institutions.csv     Engine x work (+ which partner institutions, in-region flag)
+# Input:  data/processed/people_roles_evidence.csv, partners.csv, engines.csv; the technology profile of
+#         PROFILE_VERSION (R/profile.R: v1 tech_profile.csv, v3_1 tech_profile_v3_1_core.csv)
+# Output: data/raw/openalex_works/<query>.json     cached pages (one file per query; the institution queries
+#                                                   depend on the profile and get a version suffix after v1)
+#         works_people.csv           person x work (people's works do not depend on the profile, only the flags)
+#         works_institutions.csv     Engine x work (+ which partner institutions, in-region flag)
+#         both in data/processed/ for v1, data/processed/profile_<version>/ otherwise
 #
 # Cost: list queries, $0.0001 per page of 200 works; a full run is well under $0.10.
 
@@ -19,11 +22,13 @@ library(stringr)
 library(purrr)
 library(readr)
 library(here)
+source(here("R", "profile.R"))
 
 api_key  <- Sys.getenv("OPENALEX_API_KEY")
 people   <- read_csv(here("data", "processed", "people_roles_evidence.csv"), show_col_types = FALSE)
 partners <- read_csv(here("data", "processed", "partners.csv"), show_col_types = FALSE)
-profile  <- read_csv(here("data", "processed", "tech_profile.csv"), show_col_types = FALSE)
+profile  <- load_profile()
+version  <- profile_version()
 engines  <- read_csv(here("data", "processed", "engines.csv"), show_col_types = FALSE)
 cache_dir <- here("data", "raw", "openalex_works")
 dir.create(cache_dir, showWarnings = FALSE, recursive = TRUE)
@@ -49,6 +54,9 @@ fetch_works <- function(key, filter) {
   out
 }
 
+# write_json() caches a JSON null as {} (an empty list), so a missing value read back from the cache is an empty
+# list, not NULL: treat both as missing
+`%||%` <- function(x, y) if (is.null(x) || length(x) == 0) y else x
 oa_id <- function(x) str_remove(x %||% NA_character_, "https://openalex.org/")
 
 works_table <- function(ws) map_dfr(ws, \(w) tibble(
@@ -91,7 +99,7 @@ works_people <- pmap_dfr(researchers, function(person_id, engine_name, name, rol
            in_engine_topics = str_detect(topics, topic_ids),
            in_engine_subfields = str_detect(subfields, subfield_ids), .before = 1)
 })
-write_csv(works_people, here("data", "processed", "works_people.csv"))
+write_csv(works_people, proc_path("works_people.csv"))
 
 # ---- 2. Institutions: works of knowledge-producer partners in the Engine's topics ----------------
 
@@ -116,7 +124,8 @@ works_inst <- producers |>
   left_join(window, by = "engine_name") |>
   left_join(topics_by_engine, by = "engine_name") |>
   pmap_dfr(function(engine_name, insts, window_from, topic_ids, subfield_ids) {
-    key <- paste0("inst_", str_replace_all(str_to_lower(engine_name), "[^a-z]+", "-"))
+    key <- paste0("inst_", str_replace_all(str_to_lower(engine_name), "[^a-z]+", "-"),
+                  if (version == "v1") "" else paste0("__", version))
     ws <- fetch_works(key, sprintf("institutions.id:%s,topics.id:%s,from_publication_date:%s",
                                    insts, topic_ids, window_from))
     if (!length(ws)) return(NULL)
@@ -134,7 +143,7 @@ works_inst <- works_inst |>
          any_in_region = any(inst_lookup$in_region[inst_lookup$engine_name == engine_name &
                                                    inst_lookup$oa_institution %in% inst_list])) |>
   ungroup() |> select(-inst_list)
-write_csv(works_inst, here("data", "processed", "works_institutions.csv"))
+write_csv(works_inst, proc_path("works_institutions.csv"))
 
 # ---- Report -------------------------------------------------------------------------------------
 

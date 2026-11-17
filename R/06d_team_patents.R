@@ -5,7 +5,8 @@
 # (the slim 2021-2023 copies have no titles).
 #
 # Input:  data/processed/patents_engine.csv, people_roles_evidence.csv, PATENT_DIR files above
-# Output: data/processed/patents_team.csv   engine x person x patent
+# Output: patents_team.csv   engine x person x patent (per PROFILE_VERSION, see R/profile.R: the in_tech_profile flag
+#         depends on the profile)
 #
 # Matching of team members to inventors (step 6b) uses last name, first name and an address in the Engine's
 # states; common names (e.g. Kevin Moore) can still be namesakes, so `inventor_as_listed` is kept for checks.
@@ -16,11 +17,12 @@ library(stringr)
 library(purrr)
 library(readr)
 library(here)
+source(here("R", "profile.R"))   # PROFILE_VERSION: which technology profile; per-version outputs
 library(arrow)
 
 patent_dir <- Sys.getenv("PATENT_DIR", "/Users/elenachechik/Desktop/india/patent/data")
 
-pe <- read_csv(here("data", "processed", "patents_engine.csv"),
+pe <- read_csv(proc_path("patents_engine.csv"),
                col_types = cols(patent_id = col_character(), .default = col_guess())) |>
   filter(team_inventor)
 people <- read_csv(here("data", "processed", "people_roles_evidence.csv"), show_col_types = FALSE) |>
@@ -48,7 +50,7 @@ team_patents <- pe |>
             invented_in_region, inventor_as_listed) |>
   arrange(engine_name, name, desc(grant_year), patent_id)
 
-write_csv(team_patents, here("data", "processed", "patents_team.csv"))
+write_csv(team_patents, proc_path("patents_team.csv"))
 message(sprintf("Team patents: %d person x patent rows, %d patents, %d people; titles found: %d; unmatched people: %d",
                 nrow(team_patents), n_distinct(team_patents$patent_id), n_distinct(team_patents$person_id),
                 sum(!is.na(team_patents$title)), sum(is.na(team_patents$person_id))))

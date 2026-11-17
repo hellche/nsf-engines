@@ -1,6 +1,6 @@
 ---
 title: "`r params$engine` Engine: knowledge base"
-subtitle: "NSF Regional Innovation Engines, Cohort 2"
+subtitle: "NSF Regional Innovation Engines, Cohort 2. Technology profile `r c(v1 = 'v1', v3_1 = 'v3.1')[[Sys.getenv('PROFILE_VERSION', 'v1')]]`"
 date: "Data retrieved `r format(Sys.Date(), '%B %d, %Y')`"
 output:
   html_document:
@@ -19,13 +19,16 @@ params:
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = FALSE, message = FALSE, warning = FALSE, fig.width = 8, fig.height = 4)
 library(dplyr); library(tidyr); library(stringr); library(readr); library(ggplot2); library(knitr); library(here)
-rd <- \(f) read_csv(here("data", "processed", f), show_col_types = FALSE)
+source(here("R", "profile.R"))   # PROFILE_VERSION (set by R/08_render_site.R): which profile's files to read
+V  <- profile_version()
+rd <- \(f) read_csv(proc_path(f), show_col_types = FALSE)
 E  <- params$engine
 eng      <- rd("engines.csv") |> filter(engine_name == E) |> mutate(award_id = as.character(award_id))
 m        <- rd("metrics_engine.csv") |> filter(engine_name == E)
 people   <- rd("people_roles_evidence.csv") |> filter(engine_name == E, in_team)
 partners <- rd("partners.csv") |> filter(engine_name == E)
-profile  <- rd("tech_profile.csv") |> filter(engine_name == E)
+profile  <- if (V == "v1") rd("tech_profile.csv") |> filter(engine_name == E) else
+  rd("tech_profile_v3_1_core.csv") |> filter(engine_name == E)
 pyear    <- rd("metrics_patents_year.csv") |> filter(engine_name == E)
 wyear    <- rd("metrics_papers_year.csv") |> filter(engine_name == E)
 lq       <- rd("metrics_lq_cpc.csv") |> filter(engine_name == E)
@@ -33,7 +36,7 @@ top_asg  <- rd("metrics_top_assignees.csv") |> filter(engine_name == E)
 pe       <- rd("patents_engine.csv") |> filter(engine_name == E)
 wi       <- rd("works_institutions.csv") |> filter(engine_name == E)
 wp       <- rd("works_people.csv") |> filter(engine_name == E)
-pt       <- read_csv(here("data", "processed", "patents_team.csv"),
+pt       <- read_csv(proc_path("patents_team.csv"),
                      col_types = cols(patent_id = col_character(), .default = col_guess())) |> filter(engine_name == E)
 people   <- people |>
   left_join(wp |> group_by(person_id) |> summarise(n_listed = n(), n_topic = sum(in_engine_topics, na.rm = TRUE)),
@@ -81,13 +84,34 @@ Industries related to the Engine's technology (chosen from the NSF abstract, see
 
 ## Technology profile
 
-The profile has `r nrow(profile)` statements. Item 1 comes from the grant title, the rest from the technical part of the NSF abstract. Each statement is mapped to one OpenAlex topic and to CPC codes.
+```{r profile-text, results = "asis"}
+if (V == "v1") {
+  cat(sprintf("Version 1. The profile has %d statements. Item 1 comes from the grant title, the rest from the technical part of the NSF abstract. Each statement is mapped to one OpenAlex topic and to CPC codes.\n\n", nrow(profile)))
+} else {
+  cat(sprintf("Version 3.1, core. The NSF abstract names %d technologies of this Engine (scientific and technical fragments extracted with a fixed prompt; the extraction was done by hand in a chat session, not reproducible). For each technology, all 4,516 OpenAlex topics and all CPC main groups are ranked by several independent signals; the core keeps up to 2 topics and 2 CPC main groups per technology. *Judge*: chosen by a rubric judge where no candidate was confirmed by two kinds of evidence (also by hand in a chat session). An empty cell: no suitable item among the candidates. See [Methodology](../methodology.html) and the [comparison of versions](../compare.html).\n\n",
+              n_distinct(profile$tech_id)))
+}
+```
 
 ```{r profile}
-profile |>
-  transmute(`#` = item, Source = source, Statement = statement, `OpenAlex topic` = topic,
-            Subfield = subfield, CPC = cpc) |>
-  kable()
+if (V == "v1") {
+  profile |>
+    transmute(`#` = item, Source = source, Statement = statement, `OpenAlex topic` = topic,
+              Subfield = subfield, CPC = cpc) |>
+    kable()
+} else {
+  fmt <- \(id, title, basis) paste0(id, " ", title, if_else(str_starts(basis, "judge"), " (judge)", ""))
+  items <- profile |> filter(in_core) |> mutate(txt = fmt(item_id, item_title, basis))
+  profile |> distinct(tech_id, tech_label) |>
+    left_join(items |> filter(kind == "oa") |> group_by(tech_id) |>
+                summarise(topics = paste(txt, collapse = "<br>"), .groups = "drop"), by = "tech_id") |>
+    left_join(items |> filter(kind == "cpc") |> group_by(tech_id) |>
+                summarise(cpc = paste(txt, collapse = "<br>"), .groups = "drop"), by = "tech_id") |>
+    arrange(tech_id) |>
+    transmute(`#` = tech_id, Technology = tech_label, `OpenAlex topics` = coalesce(topics, ""),
+              `CPC main groups` = coalesce(cpc, "")) |>
+    kable(escape = FALSE)
+}
 ```
 
 ## People
@@ -219,5 +243,6 @@ Patents: inventor countries on US grants in the profile (a patent counts for eve
 - People: PIs and Co-PIs from the NSF Award API; leadership listed on the Engine's website. Roles come from titles and organisations, revised with OpenAlex evidence.
 - Partners: as listed on the Engine's website, plus organisations of team members. Some Engines publish partner logos without names.
 - Region: the Engine's counties where the list is known (NEO-SMART: 18 Northeast Ohio counties; STELLAR: 11 counties from the NSF abstract), otherwise its states (state-level proxy).
+- Technology profile: `r PROFILE_LABELS[[V]]` (switch versions in the header). Partner papers and regional patents depend on it: v1 uses mostly CPC subclasses, the v3.1 core uses CPC main groups, which are narrower, so it counts fewer patents and the LQ of a small region rests on few patents.
 - Papers: OpenAlex; partner papers are restricted to the Engine's OpenAlex topics.
 - Patents: USPTO grants 2021-2025; inventor locations from PatentsView; pre-grant publications are not included.

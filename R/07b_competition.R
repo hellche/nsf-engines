@@ -1,6 +1,6 @@
 # Step 7b. Competitive landscape for each Engine's technology profile
 #
-# Output (data/processed/):
+# Output (data/processed/ for profile v1, data/processed/profile_<version>/ otherwise; PROFILE_VERSION, R/profile.R):
 #   competition_states.csv     Engine x US state: profile patents (2021-2025 grants), share of US, LQ, rank;
 #                              plus one row for the Engine's own region ("ENGINE REGION")
 #   competition_countries.csv  Engine x inventor country: profile patents among US grants (2021-2025)
@@ -20,8 +20,9 @@ library(httr2)
 patent_dir <- Sys.getenv("PATENT_DIR", "/Users/elenachechik/Desktop/india/patent/data")
 api_key    <- Sys.getenv("OPENALEX_API_KEY")
 source(here("R", "regions.R"))
+source(here("R", "profile.R"))
 
-profile <- read_csv(here("data", "processed", "tech_profile.csv"), show_col_types = FALSE)
+profile <- load_profile()
 engines <- read_csv(here("data", "processed", "engines.csv"), show_col_types = FALSE)
 regions <- load_regions()
 
@@ -40,8 +41,7 @@ geo_us <- geo_all |> filter(country == "US", !is.na(state))
 state_totals <- geo_us |> distinct(patent_id, state) |> count(state, name = "state_all")
 n_us <- n_distinct(geo_us$patent_id)
 
-codes <- profile |> select(engine_name, cpc) |> filter(!is.na(cpc)) |>
-  separate_longer_delim(cpc, delim = ";") |> mutate(cpc = str_trim(cpc)) |> distinct()
+codes <- profile_codes(profile)
 profile_ids <- \(e) { cc <- codes$cpc[codes$engine_name == e]
   unique(cpc_tbl$patent_id[cpc_tbl$cpc_subclass %in% cc[nchar(cc) == 4] | cpc_tbl$cpc_main %in% cc[nchar(cc) > 4]]) }
 
@@ -100,9 +100,9 @@ papers <- pmap_dfr(topics, function(engine_name, topic_ids, window_from) {
     arrange(desc(works)) |> slice_head(n = 15)
 }) |> relocate(engine_name)
 
-write_csv(states, here("data", "processed", "competition_states.csv"))
-write_csv(countries, here("data", "processed", "competition_countries.csv"))
-write_csv(papers, here("data", "processed", "competition_papers.csv"))
+write_csv(states, proc_path("competition_states.csv"))
+write_csv(countries, proc_path("competition_countries.csv"))
+write_csv(papers, proc_path("competition_papers.csv"))
 
 message("Engine regions among US states (profile patents, 2021-2025):")
 states |> filter(state == "ENGINE REGION") |> select(engine_name, patents, share_us, lq, rank_patents) |> print(n = Inf)
