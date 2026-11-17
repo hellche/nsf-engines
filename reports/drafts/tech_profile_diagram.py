@@ -69,16 +69,19 @@ for i in (0, 1):
 text("note", (tx[0] + kx[0])/2, PRY - 12, "технологии")
 text("note", (tx[1] + kx[1])/2, PRY - 12, "технологии")
 # v1: the model matches each technology to our codes, three times
-rect("llm", cols[0], PRY, CW, 132)
+LH = 92
+rect("llm", cols[0], PRY, CW, LH)
 text("t", cx[0], PRY + 24, "Выбор LLM: соотнести технологии с кодами")
-QW, QG = 108, 18
-for k in range(3):
-    qx = cols[0] + (CW - 3*QW - 2*QG)/2 + k*(QW + QG)
-    box("q", qx, PRY + 36, QW, 54, "Промпт", [f"прогон {k+1}"])
-text("s", cx[0], PRY + 109, "подкласс → группы внутри · подобласть → темы внутри")
-text("s", cx[0], PRY + 124, "промпт v1_select_by_levels.md")
-RY = PRY + 132 + 30
-down(cx[0], PRY + 132, RY)
+# the two levels as a picture: a coarse category first, then a code inside it
+QW, QH, QG = 130, 34, 46
+q0 = cx[0] - QW - QG/2
+for k, label in enumerate(["Крупная категория", "Код внутри неё"]):
+    rect("q", q0 + k*(QW + QG), PRY + 40, QW, QH)
+    text("qs", q0 + k*(QW + QG) + QW/2, PRY + 62, label)
+o.append(f'<path class="ln" d="M{q0+QW},{PRY+57} H{q0+QW+QG-3}" marker-end="url(#a)"/>')
+text("tag", cols[0] + CW - 12, PRY + 62, "× 3")
+RY = PRY + LH + 30
+down(cx[0], PRY + LH, RY)
 box("out1", cols[0], RY, CW, 74, "Профиль v1",
     ["≥ 2 прогонов из 3 · совпадение: группы CPC 91%, темы 86%", "162 пункта: 84 группы CPC + 78 тем OpenAlex"])
 # v3.1: to be recomputed on the new technologies
@@ -108,6 +111,7 @@ text { font-family: Helvetica, Arial, "DejaVu Sans", sans-serif; }
 .tech { fill: #fff6e5; stroke: #b07a1a; stroke-width: 2.5; }
 .out1 { fill: #f0f0f0; stroke: #222; stroke-width: 2.5; }
 .q { fill: #fff; stroke: #222; stroke-width: 1.2; }
+.qs { font-size: 12.5px; fill: #222; text-anchor: middle; }
 .llm { fill: #fbe9dc; stroke: #c0632b; stroke-width: 2; }
 .stop { fill: #fdecea; stroke: #b3261e; stroke-width: 2; }
 .km { fill: #fbe9dc; stroke: #c0632b; stroke-width: 1.2; }
