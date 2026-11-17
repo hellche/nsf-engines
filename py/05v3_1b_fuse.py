@@ -32,6 +32,12 @@ embedding block ranks very high; requiring BOTH kinds of evidence is stricter):
   none       otherwise
 A technology with no "high" candidate has too little in the grant text for this procedure.
 
+Catch-all topics: OpenAlex has topics that collect papers on many unrelated subjects ("Diverse Industrial
+Engineering Technologies", "Multidisciplinary Research Papers Compilation"). The classifier returns them
+for vague texts, so their classifier vote is not counted (no vote, no "high"). A topic is catch-all when
+its description says it covers a wide or diverse range (GENERIC_DESC) AND its name says so too
+(GENERIC_NAME): 226 of the 4,516 topics.
+
 Also reported, not used in the fusion: `votes` = in how many signals the item is in the top VOTE_TOP,
 and the item's Engine-level rank in v2_1 (all sentences of the grant: a different input).
 
@@ -65,6 +71,11 @@ K = 60
 VOTE_TOP = 20
 FUSED_TOP = 30
 EMB_TOP, LEX_HIGH, LEX_MEDIUM = 20, 20, 50
+GENERIC_DESC = r"\b(?:wide range|wide variety|broad range|diverse|various|variety of|miscellaneous|interdisciplinary)\b"
+GENERIC_NAME = r"\b(?:Diverse|Various|Miscellaneous|Studies|Multidisciplinary|Research and Applications|and Related Fields)\b"
+ref_topics = pd.read_csv(ROOT / "data" / "reference" / "openalex_topics.csv", keep_default_na=False)
+catch_all = set(ref_topics.topic_id[ref_topics.description.str.contains(GENERIC_DESC, case=False)
+                                    & ref_topics.topic.str.contains(GENERIC_NAME)])
 SIGNALS = {"oa": ["max_bg", "centroid_bg", "mix_bg"], "cpc": ["max", "centroid", "mix"]}
 ID = {"oa": "topic_id", "cpc": "cpc"}
 
@@ -179,7 +190,9 @@ for kind in ("oa", "cpc"):
                            for e, t, txt in zip(techs.engine_name, techs.tech_id, techs.classifier_text)
                            for i, c in enumerate(cache.get(txt, []))],
                           columns=["engine_name", "tech_id", idc, "rank_classifier"])
+        cl = cl[~cl[idc].isin(catch_all)]          # catch-all topics: classifier vote not counted
         ranks = ranks.merge(cl, how="left")
+        ranks["catch_all"] = ranks[idc].isin(catch_all)
         sig = sig + ["classifier"]
     if kind == "cpc":
         groups = ranks.cpc.drop_duplicates()
