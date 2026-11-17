@@ -148,20 +148,45 @@ def specter_embed(texts, adapter, batch=32):
     return unit(np.vstack(out))
 
 
+def patent_encode(texts):
+    """PatentSBERTa in small batches; if the Apple GPU runs out of memory (long CPC texts), on the CPU."""
+    try:
+        return models()["patent"].encode(texts, batch_size=16, normalize_embeddings=True, show_progress_bar=False)
+    except (torch.OutOfMemoryError, RuntimeError) as err:
+        print(f"GPU out of memory ({type(err).__name__}); encoding on the CPU")
+        if DEVICE == "mps":
+            torch.mps.empty_cache()
+        cpu = SentenceTransformer(PATENT_MODEL, device="cpu")
+        return cpu.encode(texts, batch_size=16, normalize_embeddings=True, show_progress_bar=False)
+
+
+def load(path, key):
+    z = np.load(path) if path.exists() else None
+    return z if z is not None and "key" in z.files and str(z["key"]) == key else None
+
+
+# Shared cache with 05v2a (topics + CPC); topics are also saved on their own as soon as they are done,
+# so a crash in the long CPC part does not lose them.
 items_cache, items_key = RAW / "tech_items_embeddings_fix.npz", cache_key(*topics.text, *cpc.text)
-z = np.load(items_cache) if items_cache.exists() else None
-if z is not None and "key" in z.files and str(z["key"]) == items_key:
+topics_cache, topics_key = RAW / "tech_topics_embeddings_fix.npz", cache_key(*topics.text)
+z = load(items_cache, items_key)
+if z is not None:
     emb_topics, emb_cpc = z["topics"], z["cpc"]
     print("Topic and CPC embeddings read from cache")
 else:
-    emb_topics = specter_embed(topics.text.tolist(), "proximity")
-    emb_cpc = models()["patent"].encode(cpc.text.tolist(), batch_size=64, normalize_embeddings=True,
-                                        show_progress_bar=False)
+    zt = load(topics_cache, topics_key)
+    if zt is not None:
+        emb_topics = zt["topics"]
+        print("Topic embeddings read from cache")
+    else:
+        emb_topics = specter_embed(topics.text.tolist(), "proximity")
+        np.savez_compressed(topics_cache, topics=emb_topics, key=np.array(topics_key))
+        print("Topic embeddings done (cached)")
+    emb_cpc = patent_encode(cpc.text.tolist())
     np.savez_compressed(items_cache, topics=emb_topics, cpc=emb_cpc, key=np.array(items_key))
-    print("Topic and CPC embeddings done (cached)")
+    print("CPC embeddings done (cached with the topics)")
 tech_sp = specter_embed(tech.text.tolist(), "adhoc_query")
-tech_pt = models()["patent"].encode(tech.text.tolist(), batch_size=64, normalize_embeddings=True,
-                                    show_progress_bar=False)
+tech_pt = patent_encode(tech.text.tolist())
 
 
 # ---- one score: cosine; every item ranked for every technology ------------------------------------
