@@ -10,11 +10,12 @@ consensus that the profile versions (v1, v3.1) start from.
   2. Fragments of different runs are the same when they come from the same sentence and their character
      spans overlap by at least half of the shorter one; such fragments form one "fragment group".
   3. Consensus fragments = groups found in at least 2 of the 3 runs; text = the version most runs used.
-  4. Consensus technologies: two consensus fragments are in one technology when at least 2 runs put them
-     together; technologies = connected groups. Label = the label of the run technology whose fragments match best
-     (Jaccard index of the fragment sets, then the shortest label).
-  5. Agreement of the groupings: adjusted Rand index between each pair of runs, over the fragments all three
-     runs found (1 = the same grouping, 0 = no better than chance).
+  4. Agreement of the groupings: adjusted Rand index between each pair of runs, over the fragments all three
+     runs found (1 = the same grouping, 0 = no better than chance). Consensus technologies = the grouping of
+     the medoid run of each Engine (the run with the highest mean agreement with the other two), on the
+     consensus fragments; a consensus fragment the medoid run lacks joins the medoid technology that holds most
+     of its companions in the other runs. Labels are the medoid run's. So the consensus is the real grouping
+     of one run, not a patchwork of three.
 
 Input:  data/manual/tech_v3_2_run{1,2,3}.csv     raw runs (engine_name, sent_id, fragment, tech_id, tech_label)
         data/processed/tech_v2_sentences.csv      the grant sentences (text_original)
@@ -105,43 +106,7 @@ cons = (allf[allf.group.isin(keep)].groupby("group")
              start=("start", "min"), n_runs=("run", "nunique"))
         .reset_index())
 
-# ---- 4. consensus technologies ------------------------------------------------------------------
-tech_of = {(k, gr): t for k, gr, t in zip(allf.run, allf.group, allf.tech_id)}
-out = []
-for e, c in cons.groupby("engine_name", sort=False):
-    groups = list(c.group)
-    parent = {g: g for g in groups}
-
-    def find(g):
-        while parent[g] != g:
-            parent[g] = parent[parent[g]]
-            g = parent[g]
-        return g
-    for a, b in itertools.combinations(groups, 2):
-        together = sum(1 for k in RUNS if (k, a) in tech_of and (k, b) in tech_of and tech_of[(k, a)] == tech_of[(k, b)])
-        if together >= 2:
-            parent[find(a)] = find(b)
-    comps = {}
-    for g in sorted(groups, key=lambda g: (c.set_index("group").sent_id[g], c.set_index("group").start[g])):
-        comps.setdefault(find(g), []).append(g)
-    for t, (root, members) in enumerate(comps.items(), start=1):
-        # label: the run technology whose fragments match this one best (Jaccard), then the shortest label
-        mset = set(members)
-        cand = []
-        for (k, t_id), rt in allf[(allf.engine_name == e)].groupby(["run", "tech_id"]):
-            rset = set(rt.group)
-            if rset & mset:
-                cand.append((len(rset & mset) / len(rset | mset), -len(rt.tech_label.iloc[0]), rt.tech_label.iloc[0]))
-        label = max(cand)[2]
-        for g in members:
-            r = c[c.group == g].iloc[0]
-            out.append({"engine_name": e, "tech_id": t, "tech_label": label, "sent_id": r.sent_id,
-                        "fragment": r.fragment, "n_runs": r.n_runs})
-techs = pd.DataFrame(out)
-techs.to_csv(PROC / f"tech_{TAG}_technologies.csv", index=False)
-
-
-# ---- 5. agreement of the groupings --------------------------------------------------------------
+# ---- 4. agreement of the groupings, and the consensus technologies -----------------------------
 def ari(a: list, b: list) -> float:
     """Adjusted Rand index of two labelings of the same items."""
     from math import comb
@@ -156,12 +121,65 @@ def ari(a: list, b: list) -> float:
     return 1.0 if mx == exp else (idx - exp) / (mx - exp)
 
 
+
+tech_of = {(k, gr): t for k, gr, t in zip(allf.run, allf.group, allf.tech_id)}
+label_of = {(k, t, e): l for k, t, e, l in zip(allf.run, allf.tech_id, allf.engine_name, allf.tech_label)}
+out, ari_tab, medoid_of = [], {}, {}
+for e in sent.index.get_level_values(0).unique():
+    f = allf[allf.engine_name == e]
+    common = [g for g, n in f.groupby("group").run.nunique().items() if n == 3]
+    pair = {(x, y): ari([tech_of[(x, g)] for g in common], [tech_of[(y, g)] for g in common])
+            for x, y in itertools.combinations(RUNS, 2)}
+    ari_tab[e] = pair
+    # medoid run: the highest mean agreement with the other two (ties: more consensus fragments, then run order)
+    c_e = cons[cons.engine_name == e]
+    score = {k: (sum(v for (x, y), v in pair.items() if k in (x, y)) / 2,
+                 sum((k, g) in tech_of for g in c_e.group), -k) for k in RUNS}
+    med = max(score, key=score.get)
+    medoid_of[e] = med
+    # consensus fragments keep the medoid's technology; a fragment the medoid run lacks goes to the medoid
+    # technology that holds most of its companions in the other runs (a new technology if none)
+    assign = {}
+    for g in c_e.group:
+        if (med, g) in tech_of:
+            assign[g] = tech_of[(med, g)]
+    extra_id = 1000
+    for g in c_e.group:
+        if g in assign:
+            continue
+        votes = Counter()
+        for k in RUNS:
+            if (k, g) in tech_of:
+                mates = [h for h in c_e.group if h != g and (k, h) in tech_of and tech_of[(k, h)] == tech_of[(k, g)]]
+                votes.update(assign[h] for h in mates if h in assign)
+        if votes:
+            assign[g] = votes.most_common(1)[0][0]
+        else:
+            assign[g] = extra_id
+            extra_id += 1
+    # renumber technologies 1, 2, ... in order of first appearance
+    order = sorted(c_e.itertuples(), key=lambda r: (r.sent_id, r.start))
+    ren = {}
+    for r in order:
+        ren.setdefault(assign[r.group], len(ren) + 1)
+    for r in order:
+        t_old = assign[r.group]
+        if t_old < 1000:
+            label = label_of[(med, t_old, e)]
+        else:
+            k0 = next(k for k in RUNS if (k, r.group) in tech_of)
+            label = label_of[(k0, tech_of[(k0, r.group)], e)]
+        out.append({"engine_name": e, "tech_id": ren[t_old], "tech_label": label, "sent_id": r.sent_id,
+                    "fragment": r.fragment, "n_runs": r.n_runs, "medoid_run": med})
+techs = pd.DataFrame(out)
+techs.to_csv(PROC / f"tech_{TAG}_technologies.csv", index=False)
+
+
 stab = []
 for e in sent.index.get_level_values(0).unique():
     f = allf[allf.engine_name == e]
     common = [g for g, n in f.groupby("group").run.nunique().items() if n == 3]
-    aris = [ari([tech_of[(a, g)] for g in common], [tech_of[(b, g)] for g in common])
-            for a, b in itertools.combinations(RUNS, 2)]
+    aris = list(ari_tab[e].values())
     row = {"engine_name": e}
     for k in RUNS:
         fk = f[f.run == k]
@@ -170,6 +188,7 @@ for e in sent.index.get_level_values(0).unique():
     t = techs[techs.engine_name == e]
     row.update({"fragment_groups": f.group.nunique(), "in_all_3": len(common),
                 "consensus_fragments": len(t), "consensus_technologies": t.tech_id.nunique(),
+                "medoid_run": medoid_of[e],
                 "ari_mean": round(sum(aris) / len(aris), 3) if common else float("nan"),
                 "ari_min": round(min(aris), 3) if common else float("nan")})
     stab.append(row)
