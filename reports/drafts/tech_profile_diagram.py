@@ -8,7 +8,7 @@ cx = [x + CW/2 for x in cols]
 W = cols[2] + CW + X0
 FULL_X, FULL_W = cols[0], cols[2] + CW - cols[0]
 o = []
-def rect(cls, x, y, w, h, rx=3): o.append(f'<rect class="{cls}" x="{x}" y="{y}" width="{w}" height="{h}" rx="{rx}"/>')
+def rect(cls, x, y, w, h): o.append(f'<rect class="{cls}" x="{x}" y="{y}" width="{w}" height="{h}"/>')   # square corners, as the pipeline diagram
 def text(cls, x, y, t): o.append(f'<text class="{cls}" x="{x}" y="{y}">{E(t)}</text>')
 def down(x, y1, y2, cls="ln", m="a"): o.append(f'<path class="{cls}" d="M{x},{y1} V{y2-3}" marker-end="url(#{m})"/>')
 def elbow(x1, y1, x2, y2, cls="ln"): o.append(f'<path class="{cls}" d="M{x1},{y1} V{(y1+y2)/2} H{x2} V{y2-3}" marker-end="url(#a)"/>')
@@ -17,8 +17,6 @@ def box(cls, x, y, w, h, title, lines=()):
     text("t", x + w/2, y + (24 if lines else h/2 + 5), title)
     for i, l in enumerate(lines):
         text("s", x + w/2, y + 44 + i*17, l)
-def badge(x, y):
-    rect("km", x, y, 104, 20, 10); text("kmt", x + 52, y + 14, "выбор модели")
 
 # 1. versions
 for x, h, k in zip(cols, ["v1 · LLM brute force", "v3.1 · embeddings, more nuance", "v2 · embeddings"], ["h1", "h3", "h2"]):
@@ -31,61 +29,57 @@ Y3 = Y2 + 120
 CX, CWD = cols[0], cols[1] + CW - cols[0]          # the common block spans the v1 and v3.1 columns
 for i in (0, 1):
     down(cx[i], Y2 + 60, Y3)
-H3 = 320
-rect("common", CX, Y3, CWD, H3, 8)
+H3 = 86 + 60 + 48 + 60 + 18                         # header, prompts, gap, technologies block, padding
+rect("common", CX, Y3, CWD, H3)                      # background first, the content is drawn on top
 text("bt", CX + 18, Y3 + 28, "Технологии гранта · общий шаг для v1 и v3.1")
 text("bs", CX + 18, Y3 + 48, "каждый промпт: 3 независимых прогона; модель выписывает фразы")
 text("bs", CX + 18, Y3 + 65, "гранта дословно и группирует их в технологии")
-PY, PH, PW = Y3 + 92, 76, 236
+PY, PH, PW = Y3 + 86, 60, 236
 px = [CX + 22 + i*((CWD - 44 - PW)/2) for i in range(3)]
 for x, (t, sub, cls) in zip(px, [("Простой", "только идея задачи", "pr"), ("Простой +", "идея + крупность технологий", "chosen"), ("Длинный", "правила и примеры", "pr")]):
     box(cls, x, PY, PW, PH, t, [sub])
 text("tag", px[1] + PW - 8, PY - 8, "выбран")
-TY, TW = PY + PH + 60, 600
+TY, TW, TH = PY + PH + 48, 600, 60
 MID = CX + CWD/2
 TX = MID - TW/2
 o.append(f'<path class="LN" d="M{px[1]+PW/2},{PY+PH} V{TY-4}" marker-end="url(#A)"/>')
 for x in (px[0], px[2]):
-    o.append(f'<path class="dl" d="M{x+PW/2},{PY+PH} V{PY+PH+22}"/>')
-    text("note", x + PW/2, PY + PH + 38, "сравнили, не взяли")
-rect("tech", TX, TY, TW, 64, 6)
+    o.append(f'<path class="dl" d="M{x+PW/2},{PY+PH} V{PY+PH+16}"/>')
+    text("note", x + PW/2, PY + PH + 31, "сравнили, не взяли")
+rect("tech", TX, TY, TW, TH)
 text("t", MID, TY + 26, "Технологии гранта: 43 технологии, 2–5 на Engine")
 text("s", MID, TY + 46, "77 фраз, найденных ≥ 2 прогонами из 3 · разбиение самого согласованного прогона")
-# codes: our lists, common to v1 and v3.1
-CY, CH = Y3 + H3 + 40, 150
-rect("common", CX, CY, CWD, CH, 8)
-text("bt", CX + 18, CY + 28, "Коды OpenAlex и CPC · наши списки, общие для v1 и v3.1")
-text("bs", CX + 18, CY + 48, "CPC Title List 2026.08 без индексных групп 2000+ и 99/00 · темы OpenAlex с ключевыми словами")
-SW = 320
-box("box", cx[0] - SW/2, CY + 66, SW, 64, "Крупные категории",
-    ["652 подкласса CPC · 250 подобластей OpenAlex"])
-box("box", cx[1] - SW/2, CY + 66, SW, 64, "Полные списки",
-    ["7 646 групп CPC · 4 516 тем OpenAlex"])
-# lanes: technologies and codes both go into each version. Technologies run around the codes block
-# (left and right margins), codes go straight down, so the lines do not cross.
-PRY = CY + CH + 60
-BUS = CY + CH + 25
-GAPY = Y3 + H3 + 20                                  # between the technologies block and the codes block
-LX, RX = cols[0] - 18, cols[1] + CW + 15             # left and right margins
-o.append(f'<path class="ln" d="M{TX+40},{TY+64} V{GAPY} H{LX} V{BUS} H{cx[0]-100} V{PRY-3}" marker-end="url(#a)"/>')
-o.append(f'<path class="ln" d="M{TX+TW-40},{TY+64} V{GAPY} H{RX} V{BUS} H{cx[1]+100} V{PRY-3}" marker-end="url(#a)"/>')
-text("note", (LX + cx[0] - 100)/2 + 8, BUS - 6, "технологии")
-text("note", (RX + cx[1] + 100)/2, BUS - 6, "технологии")
-for xc in (cx[0] + 70, cx[1] - 70):
-    down(xc, CY + 130, PRY)
-    text("note", xc + 22, CY + CH + 46, "коды")
+# codes: our lists, common to v1 and v3.1; narrow, so the technology arrows pass straight down beside it
+CY, CH, CBW = Y3 + H3 + 36, 150, 500
+CBX = MID - CBW/2
+rect("common", CBX, CY, CBW, CH)
+text("bt", CBX + 16, CY + 26, "Коды OpenAlex и CPC")
+text("bs", CBX + 16, CY + 44, "наши списки, общие для v1 и v3.1")
+SW = 220
+sx = [CBX + 20, CBX + CBW - 20 - SW]
+box("box", sx[0], CY + 58, SW, 76, "Крупные категории", ["652 подкласса CPC", "250 подобластей OpenAlex"])
+box("box", sx[1], CY + 58, SW, 76, "Полные списки", ["7 646 групп CPC", "4 516 тем OpenAlex"])
+PRY = CY + CH + 44
+tx = [TX + 15, TX + TW - 15]                         # technologies: straight down, outside the codes block
+kx = [sx[0] + SW/2, sx[1] + SW/2]                    # codes: straight down from each list
+for i in (0, 1):
+    down(tx[i], TY + TH, PRY)
+    down(kx[i], CY + 134, PRY)
+    text("note", kx[i] + (22 if i == 0 else -22), PRY - 12, "коды")
+text("note", (tx[0] + kx[0])/2, PRY - 12, "технологии")
+text("note", (tx[1] + kx[1])/2, PRY - 12, "технологии")
 # v1: the model matches each technology to our codes, three times
-rect("llm", cols[0], PRY, CW, 128)
+rect("llm", cols[0], PRY, CW, 132)
 text("t", cx[0], PRY + 24, "Выбор LLM: соотнести технологии с кодами")
 QW, QG = 108, 18
 for k in range(3):
     qx = cols[0] + (CW - 3*QW - 2*QG)/2 + k*(QW + QG)
-    box("q", qx, PRY + 40, QW, 48, "Промпт", [f"прогон {k+1}"])
-text("s", cx[0], PRY + 106, "подкласс → группы внутри · подобласть → темы внутри")
-text("s", cx[0], PRY + 121, "промпт v1_select_by_levels.md")
-RY = PRY + 128 + 32
-down(cx[0], PRY + 128, RY)
-box("out1", cols[0], RY, CW, 84, "Профиль v1",
+    box("q", qx, PRY + 36, QW, 54, "Промпт", [f"прогон {k+1}"])
+text("s", cx[0], PRY + 109, "подкласс → группы внутри · подобласть → темы внутри")
+text("s", cx[0], PRY + 124, "промпт v1_select_by_levels.md")
+RY = PRY + 132 + 30
+down(cx[0], PRY + 132, RY)
+box("out1", cols[0], RY, CW, 74, "Профиль v1",
     ["≥ 2 прогонов из 3 · совпадение: группы CPC 91%, темы 86%", "162 пункта: 84 группы CPC + 78 тем OpenAlex"])
 # v3.1: to be recomputed on the new technologies
 box("pr", cols[1], PRY, CW, 70, "v3.1 · эмбеддинги", ["пересчитать на новых технологиях"])
@@ -95,7 +89,7 @@ items = [("chosen", "выбранный промпт"), ("pr", "сравнили
          ("llm", "выбор LLM по нашим спискам")]
 x = FULL_X
 for c, t in items:
-    rect(c, x, L - 13, 30, 18, 3); text("lg", x + 38, L + 1, t); x += 38 + 8*len(t) + 40
+    rect(c, x, L - 13, 30, 18); text("lg", x + 38, L + 1, t); x += 38 + 8*len(t) + 40
 H = L + 30
 svg = [f'<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 {W} {H}" width="{W}" height="{H}">',
  '<title>Профиль технологии: версии v1, v2, v3.1 (в работе)</title>',
