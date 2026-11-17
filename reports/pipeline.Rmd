@@ -24,18 +24,11 @@ inline_svg <- function(file) {
 }
 ```
 
-*Page in progress.*
-
 <style>
   .pipeline-svg svg { width: 100%; height: auto; }
   .pipeline-svg a:not(.key) text { fill: #1a5fb4; text-decoration: underline; }
   .pipeline-svg a:not(.key):hover text { fill: #0b3d7a; }
 </style>
-
-## Knowledge base
-
-From the NSF award and the Engine's website to the knowledge base of each Engine: people and organisations,
-their works and patents, filtered by time, place and technology.
 
 <div class="pipeline-svg">
 ```{r kb, results = "asis"}
