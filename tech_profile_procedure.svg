@@ -1,0 +1,114 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 900" width="1280" height="900" role="img" aria-labelledby="t">
+<title id="t">Technology profile: versions 1, 2 and 3.1</title>
+<defs>
+<marker id="a" viewBox="0 0 10 10" refX="10" refY="5" markerWidth="9" markerHeight="9" markerUnits="userSpaceOnUse" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#333"/></marker>
+<style>
+text { font-family: Helvetica, Arial, "DejaVu Sans", sans-serif; }
+.box { fill: #fff; stroke: #333; stroke-width: 1.5; }
+.man { fill: #fff; stroke: #333; stroke-width: 1.5; stroke-dasharray: 6 4; }
+.out-v1 { fill: #ececec; stroke: #555; stroke-width: 2.5; }
+.out-v2 { fill: #e3ecf9; stroke: #4a6fa5; stroke-width: 2.5; }
+.out-v3 { fill: #e6f2ea; stroke: #4f8a62; stroke-width: 2.5; }
+.lane-v1 { fill: #f6f6f6; } .lane-v2 { fill: #f3f7fd; } .lane-v3 { fill: #f2f9f4; }
+.h { font-size: 19px; font-weight: 700; text-anchor: middle; }
+.h-v1 { fill: #444; } .h-v2 { fill: #2f5a96; } .h-v3 { fill: #2f6b43; }
+.idea { font-size: 13.5px; font-style: italic; fill: #333; text-anchor: middle; }
+.t { font-size: 15px; font-weight: 700; fill: #111; text-anchor: middle; }
+.s { font-size: 12.5px; fill: #444; text-anchor: middle; }
+.tag { font-size: 11px; fill: #777; text-anchor: end; }
+.ln { fill: none; stroke: #333; stroke-width: 1.5; }
+.top { font-size: 17px; font-weight: 700; fill: #111; text-anchor: middle; }
+.note { font-size: 12.5px; fill: #555; }
+</style>
+</defs>
+<rect width="100%" height="100%" fill="#fff"/>
+<rect class="box" x="440" y="20" width="400" height="56"/>
+<text class="top" x="640" y="45">NSF grant</text>
+<text class="s" x="640" y="64">title and abstract · 12 Engines</text>
+<rect class="lane-v1" x="20" y="100" width="400" height="730" rx="10"/>
+<path class="ln" d="M640,76 V86 H220 V96" marker-end="url(#a)"/>
+<path class="ln" d="M220,190 V226" marker-end="url(#a)"/>
+<text class="h h-v1" x="220" y="130">v1 · used on the site</text>
+<text class="idea" x="220" y="156">Idea: a person reads the grant</text>
+<text class="idea" x="220" y="174">and names its technologies</text>
+<rect class="box" x="40" y="230" width="360" height="70" rx="4"/>
+<text class="t" x="220" y="253">Statements by hand</text>
+<text class="s" x="220" y="272">3-5 per Engine, 48 in total,</text>
+<text class="s" x="220" y="288">each with a verbatim quote</text>
+<rect class="box" x="40" y="335" width="360" height="70" rx="4"/>
+<text class="t" x="220" y="358">OpenAlex topic classifier</text>
+<text class="s" x="220" y="377">top 3 topics per statement; the first,</text>
+<text class="s" x="220" y="393">or the second with a stated reason</text>
+<rect class="box" x="40" y="440" width="360" height="70" rx="4"/>
+<text class="t" x="220" y="463">CPC codes by hand</text>
+<text class="s" x="220" y="482">subclasses and groups mixed;</text>
+<text class="s" x="220" y="498">checked: the code has patents</text>
+<path class="ln" d="M220,300 V331" marker-end="url(#a)"/>
+<path class="ln" d="M220,405 V436" marker-end="url(#a)"/>
+<path class="ln" d="M220,510 V712" marker-end="url(#a)"/>
+<rect class="out-v1" x="40" y="716" width="360" height="74" rx="6"/>
+<text class="t" x="220" y="741">Profile v1</text>
+<text class="s" x="220" y="760">all metrics on this site</text>
+<rect class="lane-v2" x="440" y="100" width="400" height="730" rx="10"/>
+<path class="ln" d="M640,76 V96" marker-end="url(#a)"/>
+<path class="ln" d="M640,190 V226" marker-end="url(#a)"/>
+<text class="h h-v2" x="640" y="130">v2 · for comparison</text>
+<text class="idea" x="640" y="156">Idea: rank every topic and code</text>
+<text class="idea" x="640" y="174">against the whole grant text</text>
+<rect class="box" x="460" y="230" width="360" height="70" rx="4"/>
+<text class="t" x="640" y="253">Every sentence of the grant</text>
+<text class="s" x="640" y="272">title and abstract, 203 sentences;</text>
+<text class="s" x="640" y="288">includes region and workforce</text>
+<rect class="box" x="460" y="335" width="360" height="70" rx="4"/>
+<text class="t" x="640" y="358">Embeddings of all items</text>
+<text class="s" x="640" y="377">4,516 OpenAlex topics (SPECTER2)</text>
+<text class="s" x="640" y="393">7,646 CPC groups (PatentSBERTa)</text>
+<rect class="box" x="460" y="440" width="360" height="70" rx="4"/>
+<text class="t" x="640" y="463">Ranking per Engine</text>
+<text class="s" x="640" y="482">every topic and group gets a rank;</text>
+<text class="s" x="640" y="498">no selection</text>
+<path class="ln" d="M640,300 V331" marker-end="url(#a)"/>
+<path class="ln" d="M640,405 V436" marker-end="url(#a)"/>
+<path class="ln" d="M640,510 V712" marker-end="url(#a)"/>
+<rect class="out-v2" x="460" y="716" width="360" height="74" rx="6"/>
+<text class="t" x="640" y="741">Rankings v2</text>
+<text class="s" x="640" y="760">used only to compare with v3.1</text>
+<rect class="lane-v3" x="860" y="100" width="400" height="730" rx="10"/>
+<path class="ln" d="M640,76 V86 H1060 V96" marker-end="url(#a)"/>
+<path class="ln" d="M1060,190 V226" marker-end="url(#a)"/>
+<text class="h h-v3" x="1060" y="130">v3.1 · core ready</text>
+<text class="idea" x="1060" y="156">Idea: technology by technology,</text>
+<text class="idea" x="1060" y="174">two independent kinds of evidence</text>
+<rect class="man" x="880" y="230" width="360" height="70" rx="4"/>
+<text class="t" x="1060" y="253">Fragments and technologies</text>
+<text class="s" x="1060" y="272">fixed prompt: verbatim technical phrases,</text>
+<text class="s" x="1060" y="288">86 fragments in 39 technologies</text>
+<rect class="box" x="880" y="326" width="360" height="70" rx="4"/>
+<text class="t" x="1060" y="349">Embeddings per technology</text>
+<text class="s" x="1060" y="368">three similarity scores,</text>
+<text class="s" x="1060" y="384">fused into one embedding rank</text>
+<rect class="box" x="880" y="422" width="360" height="70" rx="4"/>
+<text class="t" x="1060" y="445">Independent signal</text>
+<text class="s" x="1060" y="464">topics: OpenAlex classifier</text>
+<text class="s" x="1060" y="480">CPC: word match (BM25) with group text</text>
+<rect class="box" x="880" y="518" width="360" height="70" rx="4"/>
+<text class="t" x="1060" y="541">Confirmed = both agree</text>
+<text class="s" x="1060" y="560">embedding top 20 and independent signal;</text>
+<text class="s" x="1060" y="576">catch-all topics do not count</text>
+<rect class="man" x="880" y="614" width="360" height="70" rx="4"/>
+<text class="t" x="1060" y="637">Judge with a fixed rubric (0-3)</text>
+<text class="s" x="1060" y="656">fills what is not confirmed,</text>
+<text class="s" x="1060" y="672">audits what is confirmed</text>
+<path class="ln" d="M1060,300 V322" marker-end="url(#a)"/>
+<path class="ln" d="M1060,396 V418" marker-end="url(#a)"/>
+<path class="ln" d="M1060,492 V514" marker-end="url(#a)"/>
+<path class="ln" d="M1060,588 V610" marker-end="url(#a)"/>
+<path class="ln" d="M1060,684 V712" marker-end="url(#a)"/>
+<rect class="out-v3" x="880" y="716" width="360" height="74" rx="6"/>
+<text class="t" x="1060" y="741">Core of the profile v3.1</text>
+<text class="s" x="1060" y="760">128 items: up to 2 topics and 2 CPC</text>
+<text class="s" x="1060" y="776">groups per technology</text>
+<rect class="man" x="40" y="860" width="34" height="18"/>
+<text class="note" x="84" y="874">done by hand in a chat session, not through an API: not reproducible</text>
+<text class="note" x="640" y="874">v3 (first run): fragments from an earlier prompt, no technologies, no fixes; rankings kept for comparison</text>
+</svg>

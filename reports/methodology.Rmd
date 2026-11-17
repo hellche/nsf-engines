@@ -19,42 +19,56 @@ library(dplyr); library(readr); library(knitr); library(here); library(stringr)
 profile <- read_csv(here("data", "processed", "tech_profile.csv"), show_col_types = FALSE)
 choices <- read_csv(here("data", "manual", "tech_topic_choice.csv"), show_col_types = FALSE)
 esc <- htmltools::htmlEscape
-svg_v23 <- here("tech_profile_v2_procedure.svg")
+svg_v23 <- here("tech_profile_procedure.svg")
 ```
 
 <style>
   .method-svg svg { width: 100%; height: auto; }
 </style>
 
-## Technology profile: versions 2 and 3 {#technology-profile-v2-v3}
+## Technology profile: versions {#technology-profile-v2-v3}
 
-*In progress.* Versions 2 and 3 score **every** OpenAlex topic (4,516) and **every** CPC main group (9,867)
-for each Engine by embedding similarity to the grant text (SPECTER2 for topics, PatentSBERTa for CPC), so
-that nothing is left out by hand. They differ only in the input: v2 uses every sentence of the grant title
-and abstract; v3 uses only the science and technology fragments extracted from them, word for word, with a
-fixed prompt. Version 1 (below) was an earlier manual choice and is shown for reference, not as a
-benchmark. Version 3.1 (planned) completes version 3: it adds the selection step, which neither v2 nor v3
-has yet, and fixes the problems found in the review of their rankings. The diagram labels are in Russian.
+The technology profile says what each Engine works on, as OpenAlex topics (for papers) and CPC groups
+(for patents). It is built from the text of the NSF grant only. Three versions exist. **Version 1** is the
+earlier choice made by hand; all metrics on this site still use it. **Version 2** ranks every topic and CPC
+group against the whole grant text and is kept for comparison. **Version 3.1** splits the grant into its
+technologies and chooses, technology by technology, the items that two independent kinds of evidence agree
+on; its core is ready, and the metrics have not yet been recomputed with it.
+
+<div class="method-svg">
+```{r diagram-v23, results = "asis"}
+# Inline SVG; blank lines would end pandoc's raw HTML block
+if (file.exists(svg_v23)) {
+  svg <- readLines(svg_v23, warn = FALSE, encoding = "UTF-8")
+  cat(svg[nzchar(trimws(svg))], sep = "\n")
+} else {
+  cat("<p><i>Diagram file tech_profile_procedure.svg not found.</i></p>")
+}
+```
+</div>
 
 ### Versions compared {#versions-compared}
 
 ::: {.no-sort}
 
-| Step | v1 (on this site) | v2 | v3 | v3.1 (planned) |
-|---|---|---|---|---|
-| Source | NSF grant title and abstract | same | same | same |
-| Splitting into technologies | by hand: 3-5 statements per Engine (48 in total), each with a verbatim quote | none: every sentence on its own, including sentences on the region and workforce | none: 123 science and technology fragments extracted with a fixed prompt, checked to be verbatim | fragments from a revised prompt (no industries of application, no generic qualities such as "resilience"), each labelled with one of the grant's 3-5 technologies |
-| Candidates: OpenAlex topics | top 3 of the OpenAlex `/text/topics` classifier per statement | all 4,516 topics | same | same |
-| Candidates: CPC | chosen by hand; subclasses (C22B) and main groups (B29B17) mixed | all 9,867 main groups (subclass and group titles) | same | all main groups, with the titles of their first-level subgroups; indexing groups (2000+, /99) dropped or down-weighted |
-| Scoring | classifier score; no score for CPC | embedding cosine (SPECTER2 for topics, PatentSBERTa for CPC), mean-centred; the Engine's name masked as "the Engine" | same | same, with "Engine" removed rather than inserted (PatentSBERTa reads it as a motor) |
-| Selection | the classifier's first topic, sometimes the second by hand, with a stated reason | not done: rankings only | not done: rankings only | per technology, near-duplicates removed (MMR); **core**: 2-3 topics and 2-3 CPC codes per technology, checked by eye; **broad profile**: everything above one relevance threshold, with no limit on the number of CPC codes |
-| Check against data | patents per CPC code (US and region, 2024-25), so that no code is empty | none | none | share of the team's works and patents in the profile; coverage of US patents; metrics for both the core and the broad profile |
-| Status | used for all metrics on this site | rankings done | rankings done | planned |
+| Step | v1 (used on this site) | v2 (for comparison) | v3.1 (core ready) |
+|---|---|---|---|
+| Source | NSF grant title and abstract | same | same |
+| Splitting into technologies | by hand: 3-5 statements per Engine (48 in total), each with a verbatim quote | none: every sentence on its own (203), including sentences on the region and workforce | a fixed prompt copies out the technical phrases word for word (86 fragments, no industries of application or generic qualities such as "resilience") and groups them into the grant's 2-5 technologies (39 in total); done by hand in a chat session |
+| Candidates: OpenAlex topics | top 3 of the OpenAlex `/text/topics` classifier per statement | all 4,516 topics | same |
+| Candidates: CPC | chosen by hand; subclasses (C22B) and main groups (B29B17) mixed | all main groups: subclass and group titles | 7,646 main groups: titles of the subclass, the group and its first-level subgroups; indexing (2000+) and catch-all (99/00) groups left out |
+| Scoring | classifier score; no score for CPC | embedding similarity (SPECTER2 for topics, PatentSBERTa for CPC), mean-centred | per technology: three embedding scores fused into one rank, plus an independent signal: the OpenAlex classifier for topics, word match (BM25) with the full group text for CPC; the word "Engine" removed (PatentSBERTa reads it as a motor) |
+| Selection | the classifier's first topic, sometimes the second by hand, with a stated reason | none: rankings only | confirmed = in the embedding top 20 and confirmed by the independent signal (catch-all topics such as "Diverse Industrial Engineering Technologies" do not count); up to 2 topics and 2 CPC groups per technology |
+| Check | patents per CPC code (US and region, 2024-25), so that no code is empty | none | a judge with a fixed rubric (0-3) fills the places with nothing confirmed and audits the confirmed items; done by hand in a chat session |
+| Result | 48 statements with topics and CPC codes | rankings | core of 128 items for 39 technologies; 3 places left empty where the grant text is too general |
 
 :::
 
-The profile describes what the grant says the Engine does. Data are used only to check it, not to choose it:
-choosing codes by the number of regional patents would make the region's Patent LQ high by construction.
+Steps marked "done by hand in a chat session" were run by a language model in a chat, not through an API,
+once each: they are not reproducible, and every core item records whether it comes from the confirmation
+rule or from the judge. The profile describes what the grant says the Engine does. Data are used only to
+check it, not to choose it: choosing codes by the number of regional patents would make the region's
+Patent LQ high by construction.
 
 ### Classification lists
 
@@ -71,20 +85,6 @@ Both lists are public and are kept in the repository as CSV files (`data/referen
   every section, class, subclass, main group and subgroup with its official title (254,314 codes, of them
   9,867 main groups). The CPC site labels this list "CPC Title List (2026.08)"; its files are dated
   August 1, 2026. Downloaded on November 15, 2026.
-
-### Procedure of versions 2 and 3
-
-<div class="method-svg">
-```{r diagram-v23, results = "asis"}
-# Inline SVG; blank lines would end pandoc's raw HTML block
-if (file.exists(svg_v23)) {
-  svg <- readLines(svg_v23, warn = FALSE, encoding = "UTF-8")
-  cat(svg[nzchar(trimws(svg))], sep = "\n")
-} else {
-  cat("<p><i>Diagram file tech_profile_v2_procedure.svg not found.</i></p>")
-}
-```
-</div>
 
 ## Technology profile, version 1 {#technology-profile}
 

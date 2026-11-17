@@ -44,7 +44,7 @@ v1 остаётся на сайте без изменений. **v1 — не э�
 пометка *In progress*); ниже — раздел «Technology profile, version 1» с таблицами профиля v1. Ссылка
 «Профиль технологии» на схеме Pipeline ведёт на раздел v1 (`#technology-profile`).
 
-### Процедура (схема: `tech_profile_v2_procedure.svg`, упрощённая, v2 и v3 отдельными дорожками)
+### Процедура (схема: `tech_profile_procedure.svg`, на английском: дорожки v1, v2, v3.1; старая схема v2/v3 на русском удалена 2026-11-17)
 - **Справочники:** 4 516 тем OpenAlex (название + описание + ключевые слова, API `/topics`, кэш
   `data/raw/openalex_topics.json`) и 9 867 основных групп CPC (название подкласса + группы, локальный
   `CPCTitleList202608`).
@@ -105,7 +105,7 @@ v1 остаётся на сайте без изменений. **v1 — не э�
 | `data/processed/tech_{v2,v3}_v1_ranks.csv` | Место каждого выбора v1 при каждой из 4 оценок |
 | `data/processed/tech_{v2,v3}_run.json` | Модели, версии пакетов, маски, метод, дата |
 | `data/raw/tech_items_embeddings.npz`, `tech_{v2,v3}_text_embeddings.npz` | Кэш эмбеддингов (не в git) |
-| `tech_profile_v2_procedure.svg` | Схема v2/v3 (в корне репозитория; встраивается в `methodology.html` при сборке) |
+| `tech_profile_procedure.svg` | Схема версий v1, v2, v3.1 (в корне репозитория; встраивается в `methodology.html` при сборке) |
 
 Окружение: `.venv/` на Python 3.12 (arm64, `/usr/local/bin/python3.12`), пакеты torch 2.15, sentence-transformers 5.7,
 adapters 1.3, pandas, matplotlib; ускорение Apple MPS. `.venv/` добавлен в `.gitignore`. Модели скачиваются
