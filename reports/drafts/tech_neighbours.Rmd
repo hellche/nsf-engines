@@ -1,0 +1,190 @@
+---
+title: "Nearest topics and CPC groups of each technology (draft)"
+output:
+  html_document:
+    theme: flatly
+    self_contained: true
+---
+
+```{r setup, include=FALSE}
+# Draft, not on the site. For each of the 43 technologies of the grants (data/processed/tech_minplus_technologies.csv):
+# the 100 nearest OpenAlex topics and CPC main groups by embedding (py/05v3_1s_simple.py,
+# data/processed/tech_v3_1s_rank_{oa,cpc}.csv.gz), in two layouts:
+#   A  radial: distance from the centre = how much less similar than the closest item; angle = subfield / subclass
+#   C  strip:  cosine on the x axis, one row per subfield / subclass
+# Ranks 1-50 went to the judge. If the judge consensus exists (data/processed/tech_profile_v3_1s.csv, made by
+# py/05v3_1s_judge_consensus.py), each candidate shows its verdict; otherwise only candidate / not a candidate.
+# Black ring: also chosen by v1 (data/processed/tech_profile_v1_levels.csv; reference only, not a benchmark).
+# Colours: Okabe-Ito (colour-blind safe), and the verdict is also coded by the marker shape.
+# Render: Rscript -e 'rmarkdown::render("reports/drafts/tech_neighbours.Rmd")'
+knitr::opts_chunk$set(echo = FALSE, message = FALSE, warning = FALSE)
+invisible(Sys.setlocale("LC_CTYPE", "en_US.UTF-8"))
+library(dplyr); library(readr); library(stringr); library(purrr); library(plotly); library(htmltools); library(here)
+CUT <- 50
+STATUS <- tibble(
+  status = c("in profile", "about it, not taken (limit 2)", "rejected by the judge", "candidate (no verdict yet)",
+             "rank 51-100, not judged"),
+  color  = c("#0072b2", "#56b4e9", "#d55e00", "#0072b2", "#9a9a9a"),
+  symbol = c("circle", "circle", "x", "circle", "circle"),
+  size   = c(13, 10, 9, 9, 7),
+  alpha  = c(1, 1, 1, 1, 0.35))
+
+techs <- read_csv(here("data", "processed", "tech_minplus_technologies.csv"), show_col_types = FALSE) |>
+  distinct(engine_name, tech_id, tech_label) |> arrange(engine_name, tech_id)
+v1 <- read_csv(here("data", "processed", "tech_profile_v1_levels.csv"), show_col_types = FALSE)
+jf <- here("data", "processed", "tech_profile_v3_1s.csv")
+judge <- if (file.exists(jf)) read_csv(jf, show_col_types = FALSE, col_types = cols(item_id = "c")) else NULL
+
+ranks <- bind_rows(
+  read_csv(here("data", "processed", "tech_v3_1s_rank_oa.csv.gz"), show_col_types = FALSE) |>
+    transmute(kind = "oa", engine_name, tech_id, id = topic_id, title = topic, cat = subfield, score, rank),
+  read_csv(here("data", "processed", "tech_v3_1s_rank_cpc.csv.gz"), show_col_types = FALSE) |>
+    transmute(kind = "cpc", engine_name, tech_id, id = cpc, title = group_title, cat = subclass, score, rank)) |>
+  filter(rank <= 100) |>
+  left_join(v1 |> transmute(kind, engine_name, tech_id, id = item_id, in_v1 = TRUE),
+            by = c("kind", "engine_name", "tech_id", "id")) |>
+  mutate(in_v1 = coalesce(in_v1, FALSE))
+if (!is.null(judge)) {
+  ranks <- ranks |> left_join(judge |> transmute(kind, engine_name, tech_id, id = item_id, n_about, mean_score,
+                                                 in_profile, s = paste(score1, score2, score3, sep = "/")),
+                              by = c("kind", "engine_name", "tech_id", "id"))
+} else ranks <- ranks |> mutate(n_about = NA_real_, mean_score = NA_real_, in_profile = NA, s = NA_character_)
+ranks <- ranks |>
+  mutate(status = case_when(rank > CUT ~ "rank 51-100, not judged",
+                            is.na(in_profile) ~ "candidate (no verdict yet)",
+                            in_profile ~ "in profile",
+                            n_about >= 2 ~ "about it, not taken (limit 2)",
+                            TRUE ~ "rejected by the judge")) |>
+  left_join(STATUS, by = "status") |>
+  group_by(kind, engine_name, tech_id) |> mutate(dist = max(score) - score) |> ungroup() |>
+  mutate(hover = sprintf("<b>%s</b> %s<br>%s<br>rank %d, cosine %.3f<br>%s%s%s", id, title, cat, rank, score, status,
+                         if_else(is.na(s), "", paste0(" (judge scores ", s, ")")),
+                         if_else(in_v1, "<br><i>also chosen by v1</i>", "")))
+
+short <- \(x, n) if_else(nchar(x) > n, paste0(substr(x, 1, n - 3), "..."), x)
+marker <- \(d) list(color = d$color, opacity = d$alpha, size = d$size, symbol = d$symbol,
+                    line = list(color = if_else(d$in_v1, "#000000", "#ffffff"), width = if_else(d$in_v1, 2.5, 0.8)))
+
+# A: radial. Sectors = categories ordered by their best rank, sized by number of items
+radial <- function(d, title) {
+  # sectors: categories with 3+ items, ordered by their best rank; smaller ones pooled into one sector, last
+  d <- d |> add_count(cat, name = "n_cat") |> mutate(sec = if_else(n_cat >= 3, cat, "other (1-2 items each)")) |>
+    arrange(rank)
+  ord <- d |> group_by(sec) |> summarise(best = min(rank), n = n(), .groups = "drop") |>
+    arrange(sec == "other (1-2 items each)", best) |>
+    mutate(start = 360 * (cumsum(n) - n) / sum(n), width = 360 * n / sum(n), mid = start + width / 2,
+           shade = if_else(row_number() %% 2 == 1, "rgba(0,0,0,0.06)", "rgba(0,0,0,0)"))
+  d <- d |> left_join(ord, by = "sec") |> group_by(sec) |>
+    mutate(theta = start + width * (rank(rank) - 0.5) / n()) |> ungroup() |> arrange(rank)
+  # the technology is the centre; radius = a fixed gap + how much less similar than the closest item
+  gap <- 0.2 * max(d$dist); r <- gap + d$dist; cr <- gap + d$dist[d$rank == CUT]; R <- max(r) * 1.04
+  k <- which(d$rank <= CUT)
+  plot_ly(width = 560, height = 480) |>
+    add_trace(type = "barpolar", r = rep(R, nrow(ord)), theta = ord$mid, width = ord$width, hoverinfo = "skip",
+              marker = list(color = ord$shade, line = list(width = 0)), showlegend = FALSE) |>
+    add_trace(type = "scatterpolar", mode = "lines", r = as.vector(rbind(0, r[k], NA)),   # rays of the candidates
+              theta = as.vector(rbind(d$theta[k], d$theta[k], NA)), connectgaps = FALSE,
+              hoverinfo = "skip", line = list(color = "rgba(0,0,0,0.13)", width = 1), showlegend = FALSE) |>
+    add_trace(type = "scatterpolar", mode = "lines", r = rep(cr, 361), theta = 0:360, hoverinfo = "skip",
+              line = list(color = "#0072b2", dash = "dash", width = 1.5), showlegend = FALSE) |>
+    add_trace(type = "scatterpolar", mode = "markers", r = r, theta = d$theta, text = d$hover, hoverinfo = "text",
+              marker = marker(d), showlegend = FALSE) |>
+    add_trace(type = "scatterpolar", mode = "markers", r = 0, theta = 0, text = "the technology", hoverinfo = "text",
+              marker = list(size = 16, color = "#ffffff", line = list(color = "#000000", width = 2)), showlegend = FALSE) |>
+    layout(title = list(text = title, font = list(size = 14)),
+           polar = list(bargap = 0,
+                        radialaxis = list(range = c(0, R), showticklabels = FALSE, showgrid = FALSE, ticks = "", showline = FALSE),
+                        angularaxis = list(tickvals = ord$mid, ticktext = short(ord$sec, 22), ticks = "",
+                                           tickfont = list(size = 10), showgrid = FALSE)),
+           margin = list(t = 50, l = 135, r = 135, b = 30))
+}
+# C: strip. Rows = categories with 2+ items, the rest pooled
+strip <- function(d, title) {
+  d <- d |> add_count(cat) |> mutate(row = if_else(n >= 2, short(cat, 40), "(other, 1 item each)"))
+  lv <- d |> group_by(row) |> summarise(b = min(rank)) |> arrange(desc(b)) |> pull(row)
+  d <- d |> mutate(row = factor(row, levels = lv))
+  plot_ly(d, width = 1080, height = 120 + 20 * length(lv), x = ~score, y = ~row, type = "scatter", mode = "markers",
+          text = ~hover, hoverinfo = "text", marker = marker(d)) |>
+    layout(title = list(text = title, font = list(size = 14)),
+           xaxis = list(title = "cosine (further right = closer)", zeroline = FALSE),
+           yaxis = list(title = "", tickfont = list(size = 10)),
+           shapes = list(list(type = "line", x0 = d$score[d$rank == CUT], x1 = d$score[d$rank == CUT], y0 = 0, y1 = 1,
+                              yref = "paper", line = list(color = "#0072b2", dash = "dash"))),
+           margin = list(l = 260, t = 50))
+}
+legend_html <- function() {
+  sym <- \(st) if (st$symbol == "x") sprintf('<b style="color:%s">&#10005;</b>', st$color) else
+    sprintf('<span style="display:inline-block;width:11px;height:11px;border-radius:50%%;background:%s;opacity:%s"></span>',
+            st$color, st$alpha)
+  used <- STATUS |> filter(status %in% ranks$status)
+  HTML(paste0('<p style="font-size:13px">', paste(map_chr(seq_len(nrow(used)), \(i) paste(sym(used[i, ]), used$status[i])),
+                                                 collapse = " &nbsp; "),
+              ' &nbsp; <span style="display:inline-block;width:11px;height:11px;border-radius:50%;border:2.5px solid #000"></span> also chosen by v1',
+              ' &nbsp; <span style="color:#0072b2">- - -</span> cut at rank ', CUT, '</p>'))
+}
+```
+
+The 100 nearest OpenAlex topics and CPC main groups of each technology of the grants, by embedding similarity.
+Ranks 1-`r CUT` go to the LLM judge; ranks `r CUT + 1`-100 are shown faded, to see what did not make the cut.
+`r if (is.null(judge)) "**The judge's verdicts are not in yet**: candidates are shown without a verdict." else "Verdicts: consensus of three judge runs."`
+**A** (radial): the technology is the centre; distance from it = a fixed gap plus how much less similar the item is
+than the closest one. Shaded and white sectors are OpenAlex subfields or CPC subclasses (the label names the whole
+sector); subfields or subclasses with 1-2 items share the sector \"other\". **C** (strip): the cosine itself, one row per subfield or subclass.
+Hover a point for its title, rank, cosine and scores. v1 is shown for reference only; it is not a benchmark.
+
+```{r legend}
+legend_html()
+```
+
+```{r pages}
+engines <- unique(techs$engine_name)
+sel <- tags$select(id = "engine-select", class = "form-control", style = "width:auto; margin-bottom:10px",
+                   map(seq_along(engines), \(j) tags$option(value = j, engines[j])))
+# one row of buttons per Engine, one button per technology
+btns <- map(seq_along(engines), \(j) {
+  ks <- which(techs$engine_name == engines[j])
+  div(class = "tech-btns", `data-e` = j, style = if (j > 1) "display:none" else NULL,
+      map(ks, \(i) tags$button(type = "button", class = "btn btn-default btn-sm tech-btn", `data-k` = i,
+                                style = "margin:0 6px 6px 0", sprintf("%d. %s", techs$tech_id[i], techs$tech_label[i]))))
+})
+row <- \(...) div(style = "display:flex; gap:10px; flex-wrap:wrap", ...)
+panes <- map(seq_len(nrow(techs)), \(i) {
+  d <- ranks |> filter(engine_name == techs$engine_name[i], tech_id == techs$tech_id[i])
+  oa <- d |> filter(kind == "oa"); cpc <- d |> filter(kind == "cpc")
+  div(class = "tech-pane", `data-k` = i, `data-e` = match(techs$engine_name[i], engines),
+      style = if (i > 1) "display:none" else NULL,
+      h3(sprintf("%s: %s", techs$engine_name[i], techs$tech_label[i])),
+      h4("A. Radial"), row(radial(oa, "Topics"), radial(cpc, "CPC groups")),
+      h4("C. Strip"), strip(oa, "Topics"), strip(cpc, "CPC groups"))
+})
+tagList(sel, btns, panes)
+```
+
+<style>
+.tech-btn.active { background: #0072b2; border-color: #0072b2; color: #fff; }
+</style>
+<script>
+// Engine list, then one button per technology of that Engine; the choice goes into the address (#tech-<k>)
+function showTech(k) {
+  var pane = document.querySelector('.tech-pane[data-k="' + k + '"]');
+  if (!pane) return;
+  var e = pane.getAttribute("data-e");
+  document.getElementById("engine-select").value = e;
+  document.querySelectorAll(".tech-btns").forEach(function (d) { d.style.display = d.getAttribute("data-e") === e ? "" : "none"; });
+  document.querySelectorAll(".tech-btn").forEach(function (b) { b.classList.toggle("active", b.getAttribute("data-k") === String(k)); });
+  document.querySelectorAll(".tech-pane").forEach(function (d) { d.style.display = d.getAttribute("data-k") === String(k) ? "" : "none"; });
+  history.replaceState(null, "", "#tech-" + k);
+  window.dispatchEvent(new Event("resize"));  // plotly sizes hidden plots on show
+}
+document.getElementById("engine-select").addEventListener("change", function () {
+  var first = document.querySelector('.tech-btns[data-e="' + this.value + '"] .tech-btn');
+  showTech(first.getAttribute("data-k"));  // an Engine opens on its first technology
+});
+document.querySelectorAll(".tech-btn").forEach(function (b) {
+  b.addEventListener("click", function () { showTech(b.getAttribute("data-k")); });
+});
+window.addEventListener("load", function () {
+  var m = location.hash.match(/^#tech-(\d+)$/);
+  showTech(m ? m[1] : 1);
+});
+</script>

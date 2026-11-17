@@ -19,7 +19,7 @@ def box(cls, x, y, w, h, title, lines=()):
         text("s", x + w/2, y + 44 + i*17, l)
 
 # 1. versions
-for x, h, k in zip(cols, ["v1 · LLM brute force", "v3.1 · embeddings, more nuance", "v2 · embeddings"], ["h1", "h3", "h2"]):
+for x, h, k in zip(cols, ["v1: LLM brute force", "v3.1: embeddings, more nuance", "v2: embeddings"], ["h1", "h3", "h2"]):
     rect(f"head {k}", x, 20, CW, 46); text("th", x + CW/2, 49, h)
 # 2. grants
 Y2 = 100
@@ -81,7 +81,7 @@ text("tag", cols[0] + CW - 12, PRY + 62, "× 3")
 RY = PRY + LH + 30
 down(cx[0], PRY + LH, RY)
 box("out1", cols[0], RY, CW, 74, "Профиль v1",
-    ["≥ 2 прогонов из 3 · совпадение: группы CPC 91%, темы 86%", "162 пункта: 84 группы CPC + 78 тем OpenAlex"])
+    ["≥ 2 прогонов из 3, совпадение: группы CPC 91%, темы 86%", "162 пункта: 84 группы CPC + 78 тем OpenAlex"])
 # v3.1 (simple), step 1: embeddings. Two columns: topics (SPECTER2) and CPC groups (PatentSBERTa); each
 # compares the 43 technologies with the full list by geometric closeness; picture: a technology and its nearest items
 EH = 480
