@@ -20,11 +20,13 @@ Input:  data/manual/tech_v3_2_run{1,2,3}.csv     raw runs (engine_name, sent_id,
         data/processed/tech_v2_sentences.csv      the grant sentences (text_original)
 Output: data/processed/tech_v3_2_technologies.csv  consensus: Engine x technology x fragment, n_runs
         data/processed/tech_v3_2_stability.csv     per Engine: fragments and technologies per run, consensus, ARI
-Run:    python3 py/05v3_2a_stability.py           (pandas only)
+Run:    python3 py/05v3_2a_stability.py [tag]     (pandas only; tag = v3_2 by default, or min for the
+        minimal prompt py/prompts/grant_technologies_minimal.md: files tech_<tag>_run{1,2,3}.csv and so on)
 """
 
 import itertools
 import re
+import sys
 from collections import Counter
 from pathlib import Path
 
@@ -33,6 +35,7 @@ import pandas as pd
 ROOT = Path(__file__).resolve().parent.parent
 MAN, PROC = ROOT / "data" / "manual", ROOT / "data" / "processed"
 RUNS = [1, 2, 3]
+TAG = sys.argv[1] if len(sys.argv) > 1 else "v3_2"
 STOP = {"and", "of", "for", "from", "the", "a", "an", "in", "on", "to", "with", "by"}
 
 sent = pd.read_csv(PROC / "tech_v2_sentences.csv").set_index(["engine_name", "sent_id"]).text_original
@@ -47,7 +50,7 @@ def words(t: str) -> set[str]:
 # ---- 1. checks per run ---------------------------------------------------------------------------
 runs = []
 for k in RUNS:
-    r = pd.read_csv(MAN / f"tech_v3_2_run{k}.csv", dtype={"fragment": str, "tech_label": str})
+    r = pd.read_csv(MAN / f"tech_{TAG}_run{k}.csv", dtype={"fragment": str, "tech_label": str})
     rows, dropped = [], 0
     for _, x in r.iterrows():
         s = sent.get((x.engine_name, int(x.sent_id)))
@@ -135,7 +138,7 @@ for e, c in cons.groupby("engine_name", sort=False):
             out.append({"engine_name": e, "tech_id": t, "tech_label": label, "sent_id": r.sent_id,
                         "fragment": r.fragment, "n_runs": r.n_runs})
 techs = pd.DataFrame(out)
-techs.to_csv(PROC / "tech_v3_2_technologies.csv", index=False)
+techs.to_csv(PROC / f"tech_{TAG}_technologies.csv", index=False)
 
 
 # ---- 5. agreement of the groupings --------------------------------------------------------------
@@ -171,7 +174,7 @@ for e in sent.index.get_level_values(0).unique():
                 "ari_min": round(min(aris), 3) if common else float("nan")})
     stab.append(row)
 stab = pd.DataFrame(stab)
-stab.to_csv(PROC / "tech_v3_2_stability.csv", index=False)
+stab.to_csv(PROC / f"tech_{TAG}_stability.csv", index=False)
 
 g_n = allf.groupby("group").run.nunique()
 print(f"fragment groups: {len(g_n)}; in 3 runs {int((g_n == 3).sum())}, in 2 {int((g_n == 2).sum())}, "
