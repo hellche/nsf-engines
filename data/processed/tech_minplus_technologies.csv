@@ -1,0 +1,78 @@
+engine_name,tech_id,tech_label,sent_id,fragment,n_runs
+BRIDGES,1,Biobased materials and products manufacturing,1,domestic biobased manufacturing using locally grown resources,3
+BRIDGES,1,Biobased materials and products manufacturing,2,"materials and products for the automotive, construction materials, and packaging sectors",3
+BRIDGES,1,Biobased materials and products manufacturing,6,new biobased products,3
+BRIDGES,1,Biobased materials and products manufacturing,10,biobased manufacturing,3
+BRIDGES,2,Perennial grass biomass feedstocks,2,"low-input perennial grasses, such as miscanthus and switchgrass",3
+BRIDGES,3,Digital twins and AI decision support,8,digital twins and AI-enabled decision-support systems,3
+BRIDGES,3,Digital twins and AI decision support,8,"optimize crop design, manufacturing efficiency, and supply-chain performance",2
+Critical Materials Crossroads,1,Critical materials and metal refining,4,onshore critical materials production capacity,2
+Critical Materials Crossroads,1,Critical materials and metal refining,5,materials processing technologies,3
+Critical Materials Crossroads,1,Critical materials and metal refining,8,"research, scaling, and production of critical materials",2
+Critical Materials Crossroads,1,Critical materials and metal refining,9,domestic metal refining,3
+Critical Materials Crossroads,2,Advanced materials production,9,advanced materials production capacity,3
+Critical Materials Crossroads,2,Advanced materials production,11,materials innovation,3
+Critical Materials Crossroads,3,Continuous flow processing and process control,11,continuous flow processing,3
+Critical Materials Crossroads,4,Continuous processing and data-driven process control,13,scaling materials production,2
+Critical Mineral Accelerator,1,Mineral processing and recovery from mine waste,5,increase recovery from low-grade materials and mine waste,3
+Critical Mineral Accelerator,1,Mineral processing and recovery from mine waste,14,recovery methods for primary resources and mine waste,2
+Critical Mineral Accelerator,1,Mineral processing and recovery from mine waste,14,materials characterization,3
+Critical Mineral Accelerator,1,Mineral processing and recovery from mine waste,14,mineral processing,3
+Critical Mineral Accelerator,2,AI-based mineral exploration,13,"integrating geological, geochemical, geophysical, remote-sensing, and legacy data into AI-based systems",3
+Critical Mineral Accelerator,2,AI-based mineral exploration,13,ore-deposit targeting,2
+Critical Mineral Accelerator,2,AI-based mineral exploration,16,"data integration, machine learning, and uncertainty analysis",3
+Critical Mineral Accelerator,3,Metal-isotope geochemistry,13,metal-isotope geochemical approaches to identify concealed mineral deposits,3
+Critical Mineral Accelerator,4,Bio-based mineral extraction,14,bio-based extraction,3
+FAST,1,Advanced logic chip design and manufacturing,3,advanced logic chips are both designed and manufactured at scale,3
+FAST,1,Advanced logic chip design and manufacturing,7,design and manufacturing of the world’s most advanced logic chips,3
+FAST,2,AI-enabled semiconductor process control,6,AI-enabled Automatic Process Control,3
+FAST,2,AI-enabled semiconductor process control,6,"leverage AI to improve the quality, performance, and affordability of advanced semiconductors",3
+Grid Modernization,1,Transformers and grid power equipment,4,"transformers, circuit breakers, and inverters",3
+Grid Modernization,1,Transformers and grid power equipment,15,solid state and hybrid transformers,3
+Grid Modernization,2,Grid-edge automation for transmission and distribution,10,"new technologies for transmission, distribution, and generation",2
+Grid Modernization,3,Grid-edge automation,15,grid-edge automation,3
+Grid Modernization,4,Nuclear construction techniques,15,advanced techniques for nuclear construction,3
+Grid Modernization,5,Grid cybersecurity,15,solutions that enhance grid cybersecurity,3
+IMPACT,1,Biologics and MSK drug discovery,8,drug development,3
+IMPACT,1,Biologics and MSK drug discovery,19,biologics,3
+IMPACT,2,MSK diagnostics,8,diagnostic technologies,3
+IMPACT,2,MSK diagnostics,19,diagnostics,3
+IMPACT,3,AI tools on multimodal health data,8,large‑scale health data,3
+IMPACT,3,AI tools on multimodal health data,19,"multimodal data, including imaging, electronic health records, biospecimens, and outcomes data",3
+IMPACT,3,AI tools on multimodal health data,19,AI‑enabled tools,3
+IMPACT,4,Orthopedic devices,18,Biomedical Engineering,2
+IMPACT,4,Orthopedic devices,19,orthopedic devices,3
+NEO-SMART,1,Metals,13,metals,3
+NEO-SMART,2,Polymers,13,polymers,3
+NEO-SMART,3,Chemicals and coatings,13,chemicals and coatings,3
+NEO-SMART,4,AI/ML computational materials design,15,AI/ML and computational methods that accelerate materials design and life cycle assessment,3
+Quantum Technologies,1,Quantum computing,11,quantum information science,2
+Quantum Technologies,1,Quantum computing,13,quantum computing,3
+Quantum Technologies,1,Quantum computing,18,quantum technology and computing infrastructure,3
+Quantum Technologies,2,Quantum communications,13,quantum communications,3
+Quantum Technologies,3,Quantum sensing,13,quantum sensing,3
+RETI,1,"ML-enabled grid management, digital twins and secure control",16,machine learning-enabled grid management,3
+RETI,1,"ML-enabled grid management, digital twins and secure control",16,digital twin platforms for real-time situational awareness,3
+RETI,1,"ML-enabled grid management, digital twins and secure control",16,secure control systems,3
+RETI,1,"ML-enabled grid management, digital twins and secure control",16,sensing technologies,3
+RETI,2,Grid sensing and distributed energy resources,16,distributed energy resources,3
+RETI,3,Solid oxide fuel cells,16,energy storage systems based on advanced batteries,3
+RETI,4,Industrial process engineering for chemicals and steel,17,hydrogen-based iron reduction,3
+RETI,4,Industrial process engineering for chemicals and steel,17,novel catalytic systems,3
+RETI,4,Industrial process engineering for chemicals and steel,17,process intensification aimed at reducing energy use in chemical and steel production,3
+RuralSTAMINA Biomanufacturing,1,Bioproducts from agricultural feedstocks,1,"transforming agricultural feedstocks into a wide range of value-added bioproducts—spanning industrial materials, food and feed ingredients, fuels, and vaccines",3
+RuralSTAMINA Biomanufacturing,2,Engineered microorganisms,5,new microorganisms for biomanufacturing of new value-added products,3
+RuralSTAMINA Biomanufacturing,3,Bioprocess scale-up,5,predictable and reliable scaling up of biomanufacturing processes for commercialization,3
+RuralSTAMINA Biomanufacturing,4,Sensors and AI for bioprocess optimization,5,sensors and AI tools for biomanufacturing process optimization,3
+STELLAR,1,Precision optics and imaging,1,precision-optics and imaging,3
+STELLAR,2,Photonics,1,laser technologies,3
+STELLAR,3,Lasers and laser systems,4,next-generation laser systems,3
+STELLAR,3,Lasers and laser systems,8,domestic laser component and system manufacturing,3
+STELLAR,3,Lasers and laser systems,9,"laser engineering, testing, fabrication and packaging",2
+Seafood,1,Ocean observation and analytics for harvest,5,actionable ocean intelligence,3
+Seafood,1,Ocean observation and analytics for harvest,6,New ocean observation technologies,3
+Seafood,1,Ocean observation and analytics for harvest,8,"Sensor technologies, AI and other advanced analytics, and novel data visualizations",3
+Seafood,2,Downscaled seafood processing,10,new and downscaled processing technologies,3
+Seafood,3,Seafood waste stream utilization,11,Waste stream utilization,3
+Seafood,4,Cold chain,12,Cold chain technologies,3
+Seafood,5,Traceability,13,Traceability technologies,3
