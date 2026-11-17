@@ -67,5 +67,9 @@ load_profile <- function(version = profile_version()) {
   )
 }
 
+# Order of the Engines in the site's dropdowns: NEO-SMART first (opened by default), the others alphabetically
+FIRST_ENGINE <- "NEO-SMART"
+engine_first <- function(x) { x <- sort(unique(x)); c(intersect(FIRST_ENGINE, x), setdiff(x, FIRST_ENGINE)) }
+
 # CPC codes of the profile: one row per Engine x code
 profile_codes <- function(profile) profile |> filter(!is.na(cpc)) |> distinct(engine_name, cpc)

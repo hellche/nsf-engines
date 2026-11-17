@@ -106,7 +106,7 @@ their LQ rests on few patents and moves a lot with one code.
 ## Profiles and LQ by code, per Engine
 
 ```{r per-engine, results = "asis"}
-engines <- sort(unique(m$engine_name))
+engines <- engine_first(m$engine_name)
 cat('<select id="cmp-engine" class="form-control" style="width:auto; margin-bottom:10px">\n',
     paste0('<option value="', seq_along(engines), '">', esc(engines), "</option>", collapse = "\n"),
     "\n</select>\n\n")

@@ -14,8 +14,9 @@ output:
 # Site page (linked from the Technology profile page, step 2). For each of the 43 technologies of the grants (data/processed/tech_minplus_technologies.csv):
 # the 100 nearest OpenAlex topics and CPC main groups by embedding (py/05v3_1s_simple.py,
 # data/processed/tech_v3_1s_rank_{oa,cpc}.csv.gz), in two layouts:
-#   A  radial: distance from the centre = how much less similar than the closest item; angle = subfield / subclass
-#   C  strip:  cosine on the x axis, one row per subfield / subclass
+#   strip:  cosine on the x axis, one row per subfield / subclass (all technologies)
+#   radial: distance from the centre = how much less similar than the closest item; angle = subfield / subclass
+#           (NEO-SMART only, the two circles side by side)
 # Ranks 1-50 went to the judge. If the judge consensus exists (data/processed/tech_profile_v3_1s.csv, made by
 # py/05v3_1s_judge_consensus.py), each candidate shows its verdict; otherwise only candidate / not a candidate.
 # Black ring: also chosen by v1 (data/processed/tech_profile_v1_levels.csv; reference only, not a benchmark).
@@ -24,6 +25,7 @@ output:
 knitr::opts_chunk$set(echo = FALSE, message = FALSE, warning = FALSE)
 invisible(Sys.setlocale("LC_CTYPE", "en_US.UTF-8"))
 library(dplyr); library(readr); library(stringr); library(purrr); library(plotly); library(htmltools); library(here)
+source(here("R", "profile.R"))
 CUT <- 50
 STATUS <- tibble(
   status = c("in profile", "about it, not taken (limit 2)", "rejected by the judge", "candidate (no verdict yet)",
@@ -34,7 +36,8 @@ STATUS <- tibble(
   alpha  = c(1, 1, 1, 1, 0.35))
 
 techs <- read_csv(here("data", "processed", "tech_minplus_technologies.csv"), show_col_types = FALSE) |>
-  distinct(engine_name, tech_id, tech_label) |> arrange(engine_name, tech_id)
+  distinct(engine_name, tech_id, tech_label) |>
+  arrange(match(engine_name, engine_first(engine_name)), tech_id)   # NEO-SMART first (R/profile.R)
 v1 <- read_csv(here("data", "processed", "tech_profile_v1_levels.csv"), show_col_types = FALSE)
 jf <- here("data", "processed", "tech_profile_v3_1s.csv")
 judge <- if (file.exists(jf)) read_csv(jf, show_col_types = FALSE, col_types = cols(item_id = "c")) else NULL
@@ -143,9 +146,9 @@ legend_html <- function() {
 The 100 nearest OpenAlex topics and CPC main groups of each technology of the grants, by embedding similarity.
 Ranks 1-`r CUT` go to the LLM judge; ranks `r CUT + 1`-100 are shown faded, to see what did not make the cut.
 `r if (is.null(judge)) "**The judge's verdicts are not in yet**: candidates are shown without a verdict." else "Verdicts: consensus of three judge runs."`
-**A** (radial): the technology is the centre (hover it for its name); distance from it = a fixed gap plus how much less similar the item is
-than the closest one. Shaded and white sectors are OpenAlex subfields or CPC subclasses (the label names the whole
-sector); subfields or subclasses with 1-2 items share the sector \"other\". **C** (strip): the cosine itself, one row per subfield or subclass.
+Each chart: the cosine on the x axis (further right = closer), one row per OpenAlex subfield or CPC subclass.
+For NEO-SMART also as circles: the technology is the centre (hover it for its name), the distance from it shows how
+much less similar an item is than the closest one, and shaded and white sectors are subfields or subclasses.
 Hover a point for its title, rank, cosine and scores. v1 is shown for reference only; it is not a benchmark.
 
 ```{r legend}
@@ -163,7 +166,7 @@ btns <- map(seq_along(engines), \(j) {
       map(ks, \(i) tags$button(type = "button", class = "btn btn-default btn-sm tech-btn", `data-k` = i,
                                 style = "margin:0 6px 6px 0", sprintf("%d. %s", techs$tech_id[i], techs$tech_label[i]))))
 })
-row <- \(...) div(style = "display:flex; gap:10px; flex-wrap:wrap", ...)
+row <- \(...) div(style = "display:flex; gap:10px; flex-wrap:nowrap", ...)
 fn <- \(x) p(style = "font-size:12px; color:#555; margin-top:4px", HTML(x))
 note_a <- fn(paste("<b>other (1-2 items each)</b>: OpenAlex subfields or CPC subclasses that have only one or two",
                    "items among the 100 nearest. They are pooled into one sector so that the circle is not split into",
@@ -177,13 +180,15 @@ panes <- map(seq_len(nrow(techs)), \(i) {
   div(class = "tech-pane", `data-k` = i, `data-e` = match(techs$engine_name[i], engines),
       style = if (i > 1) "display:none" else NULL,
       h3(sprintf("%s: %s", techs$engine_name[i], techs$tech_label[i])),
-      h4("A. Radial"), row(radial(oa, "Topics", techs$tech_label[i]), radial(cpc, "CPC groups", techs$tech_label[i])), note_a,
-      h4("C. Strip"), strip(oa, "Topics"), strip(cpc, "CPC groups"), note_c)
+      if (techs$engine_name[i] == "NEO-SMART")       # circles for one Engine only, side by side
+        tagList(row(radial(oa, "Topics", techs$tech_label[i]), radial(cpc, "CPC groups", techs$tech_label[i])), note_a),
+      strip(oa, "Topics"), strip(cpc, "CPC groups"), note_c)
 })
 tagList(sel, btns, panes)
 ```
 
 <style>
+.main-container { max-width: 1260px; }   /* room for two circles side by side */
 .tech-btn.active { background: #0072b2; border-color: #0072b2; color: #fff; }
 </style>
 <script>
