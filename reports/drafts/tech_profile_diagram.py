@@ -18,7 +18,7 @@ def box(cls, x, y, w, h, title, lines=()):
     for i, l in enumerate(lines):
         text("s", x + w/2, y + 44 + i*17, l)
 def badge(x, y):
-    rect("km", x, y, 104, 20, 10); text("kmt", x + 52, y + 14, "знания модели")
+    rect("km", x, y, 104, 20, 10); text("kmt", x + 52, y + 14, "выбор модели")
 
 # 1. versions
 for x, h, k in zip(cols, ["v1 · LLM brute force", "v3.1 · embeddings, more nuance", "v2 · embeddings"], ["h1", "h3", "h2"]):
@@ -51,23 +51,49 @@ for x in (px[0], px[2]):
 rect("tech", TX, TY, TW, 64, 6)
 text("t", MID, TY + 26, "Технологии гранта: 43 технологии, 2–5 на Engine")
 text("s", MID, TY + 46, "77 фраз, найденных ≥ 2 прогонами из 3 · разбиение самого согласованного прогона")
-# v1 lane below
-LY = Y3 + H3 + 50
-elbow(MID - TW/4, TY + 64, cx[0], LY)
-elbow(MID + TW/4, TY + 64, cx[1], LY + 10)
-box("box", cols[0], LY, CW, 96, "Модель выбирает по уровням",
-    ["CPC: подкласс (из 652) → группы внутри", "OpenAlex: подобласть (из 250) → темы внутри", "промпт v1_select_by_levels.md"])
-badge(cols[0] + CW - 112, LY - 10)
-down(cx[0], LY + 96, LY + 126)
-box("box", cols[0], LY + 126, CW, 80, "3 независимых прогона",
-    ["в итог: пункты, выбранные ≥ 2 прогонами", "совпадение с другим прогоном: группы CPC 91% · темы 86%"])
-down(cx[0], LY + 206, LY + 236)
-box("out1", cols[0], LY + 236, CW, 84, "Профиль v1",
-    ["162 пункта: 84 группы CPC + 78 тем OpenAlex", "до 2 тем и 2 групп CPC; у всех 43 технологий есть оба"])
-text("note", cx[1], LY + 34, "v3.1: пересчитать на новых технологиях")
+# codes: our lists, common to v1 and v3.1
+CY, CH = Y3 + H3 + 40, 150
+rect("common", CX, CY, CWD, CH, 8)
+text("bt", CX + 18, CY + 28, "Коды OpenAlex и CPC · наши списки, общие для v1 и v3.1")
+text("bs", CX + 18, CY + 48, "CPC Title List 2026.08 без индексных групп 2000+ и 99/00 · темы OpenAlex с ключевыми словами")
+SW = 320
+box("box", cx[0] - SW/2, CY + 66, SW, 64, "Крупные категории",
+    ["652 подкласса CPC · 250 подобластей OpenAlex"])
+box("box", cx[1] - SW/2, CY + 66, SW, 64, "Полные списки",
+    ["7 646 групп CPC · 4 516 тем OpenAlex"])
+# lanes: technologies and codes both go into each version. Technologies run around the codes block
+# (left and right margins), codes go straight down, so the lines do not cross.
+PRY = CY + CH + 60
+BUS = CY + CH + 25
+GAPY = Y3 + H3 + 20                                  # between the technologies block and the codes block
+LX, RX = cols[0] - 18, cols[1] + CW + 15             # left and right margins
+o.append(f'<path class="ln" d="M{TX+40},{TY+64} V{GAPY} H{LX} V{BUS} H{cx[0]-100} V{PRY-3}" marker-end="url(#a)"/>')
+o.append(f'<path class="ln" d="M{TX+TW-40},{TY+64} V{GAPY} H{RX} V{BUS} H{cx[1]+100} V{PRY-3}" marker-end="url(#a)"/>')
+text("note", (LX + cx[0] - 100)/2 + 8, BUS - 6, "технологии")
+text("note", (RX + cx[1] + 100)/2, BUS - 6, "технологии")
+for xc in (cx[0] + 70, cx[1] - 70):
+    down(xc, CY + 130, PRY)
+    text("note", xc + 22, CY + CH + 46, "коды")
+# v1: the model matches each technology to our codes, three times
+rect("box", cols[0], PRY, CW, 128)
+text("t", cx[0], PRY + 24, "Соотнести технологии с кодами")
+QW, QG = 108, 18
+for k in range(3):
+    qx = cols[0] + (CW - 3*QW - 2*QG)/2 + k*(QW + QG)
+    box("q", qx, PRY + 40, QW, 48, "Промпт", [f"прогон {k+1}"])
+text("s", cx[0], PRY + 106, "подкласс → группы внутри · подобласть → темы внутри")
+text("s", cx[0], PRY + 121, "промпт v1_select_by_levels.md")
+badge(cols[0] + CW - 112, PRY - 10)
+RY = PRY + 128 + 32
+down(cx[0], PRY + 128, RY)
+box("out1", cols[0], RY, CW, 84, "Профиль v1",
+    ["≥ 2 прогонов из 3 · совпадение: группы CPC 91%, темы 86%", "162 пункта: 84 группы CPC + 78 тем OpenAlex"])
+# v3.1: to be recomputed on the new technologies
+box("pr", cols[1], PRY, CW, 70, "v3.1 · эмбеддинги", ["пересчитать на новых технологиях"])
 # legend
-L = LY + 366
-items = [("chosen", "выбранный промпт"), ("pr", "сравнили, не взяли"), ("km", "знания модели о предметной области")]
+L = RY + 84 + 46
+items = [("chosen", "выбранный промпт"), ("pr", "сравнили, не взяли / ещё не сделано"),
+         ("km", "выбор модели по нашим спискам")]
 x = FULL_X
 for c, t in items:
     rect(c, x, L - 13, 30, 18, 3); text("lg", x + 38, L + 1, t); x += 38 + 8*len(t) + 40
@@ -88,6 +114,7 @@ text { font-family: Helvetica, Arial, "DejaVu Sans", sans-serif; }
 .chosen { fill: #fff; stroke: #111; stroke-width: 3; }
 .tech { fill: #fff6e5; stroke: #b07a1a; stroke-width: 2.5; }
 .out1 { fill: #f0f0f0; stroke: #222; stroke-width: 2.5; }
+.q { fill: #fff; stroke: #222; stroke-width: 1.2; }
 .stop { fill: #fdecea; stroke: #b3261e; stroke-width: 2; }
 .km { fill: #fbe9dc; stroke: #c0632b; stroke-width: 1.2; }
 .kmt { font-size: 11px; font-weight: 700; fill: #9a4a1c; text-anchor: middle; }
