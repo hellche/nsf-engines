@@ -35,11 +35,17 @@ v1 <- read_csv(here("data", "processed", "tech_profile_v1_levels.csv"), show_col
 jf <- here("data", "processed", "tech_profile_v3_1s.csv")
 judge <- if (file.exists(jf)) read_csv(jf, show_col_types = FALSE, col_types = cols(item_id = "c")) else NULL
 
+# CPC subclass titles for the labels: the title without its references in brackets, in sentence case
+sub_titles <- read_csv(here("data", "reference", "cpc_titles_202608.csv.gz"), show_col_types = FALSE) |>
+  filter(kind == "subclass") |>
+  transmute(subclass = code, sub_title = str_to_sentence(str_squish(str_remove(title, "\\s*\\(.*$"))))
 ranks <- bind_rows(
   read_csv(here("data", "processed", "tech_v3_1s_rank_oa.csv.gz"), show_col_types = FALSE) |>
     transmute(kind = "oa", engine_name, tech_id, id = topic_id, title = topic, cat = subfield, score, rank),
   read_csv(here("data", "processed", "tech_v3_1s_rank_cpc.csv.gz"), show_col_types = FALSE) |>
-    transmute(kind = "cpc", engine_name, tech_id, id = cpc, title = group_title, cat = subclass, score, rank)) |>
+    left_join(sub_titles, by = "subclass") |>
+    transmute(kind = "cpc", engine_name, tech_id, id = cpc, title = group_title,
+              cat = paste(subclass, coalesce(sub_title, "")), score, rank)) |>
   filter(rank <= 100) |>
   left_join(v1 |> transmute(kind, engine_name, tech_id, id = item_id, in_v1 = TRUE),
             by = c("kind", "engine_name", "tech_id", "id")) |>
@@ -66,7 +72,13 @@ marker <- \(d) list(color = d$color, opacity = d$alpha, size = d$size, symbol = 
                     line = list(color = if_else(d$in_v1, "#000000", "#ffffff"), width = if_else(d$in_v1, 2.5, 0.8)))
 
 # A: radial. Sectors = categories ordered by their best rank, sized by number of items
-radial <- function(d, title) {
+# a label in up to two lines of about `w` characters (whole words), "..." if longer
+wrap2 <- function(x, w = 20) vapply(x, \(t) {
+  lines <- strwrap(t, width = w)
+  if (length(lines) > 2) lines <- c(lines[1], paste0(substr(lines[2], 1, w - 3), "..."))
+  paste(lines, collapse = "<br>")
+}, "", USE.NAMES = FALSE)
+radial <- function(d, title, tech) {
   # sectors: categories with 3+ items, ordered by their best rank; smaller ones pooled into one sector, last
   d <- d |> add_count(cat, name = "n_cat") |> mutate(sec = if_else(n_cat >= 3, cat, "other (1-2 items each)")) |>
     arrange(rank)
@@ -79,7 +91,7 @@ radial <- function(d, title) {
   # the technology is the centre; radius = a fixed gap + how much less similar than the closest item
   gap <- 0.2 * max(d$dist); r <- gap + d$dist; cr <- gap + d$dist[d$rank == CUT]; R <- max(r) * 1.04
   k <- which(d$rank <= CUT)
-  plot_ly(width = 560, height = 480) |>
+  plot_ly(width = 600, height = 500) |>
     add_trace(type = "barpolar", r = rep(R, nrow(ord)), theta = ord$mid, width = ord$width, hoverinfo = "skip",
               marker = list(color = ord$shade, line = list(width = 0)), showlegend = FALSE) |>
     add_trace(type = "scatterpolar", mode = "lines", r = as.vector(rbind(0, r[k], NA)),   # rays of the candidates
@@ -89,18 +101,18 @@ radial <- function(d, title) {
               line = list(color = "#0072b2", dash = "dash", width = 1.5), showlegend = FALSE) |>
     add_trace(type = "scatterpolar", mode = "markers", r = r, theta = d$theta, text = d$hover, hoverinfo = "text",
               marker = marker(d), showlegend = FALSE) |>
-    add_trace(type = "scatterpolar", mode = "markers", r = 0, theta = 0, text = "the technology", hoverinfo = "text",
+    add_trace(type = "scatterpolar", mode = "markers", r = 0, theta = 0, text = paste0("<b>", tech, "</b>"), hoverinfo = "text",
               marker = list(size = 16, color = "#ffffff", line = list(color = "#000000", width = 2)), showlegend = FALSE) |>
     layout(title = list(text = title, font = list(size = 14)),
            polar = list(bargap = 0,
                         radialaxis = list(range = c(0, R), showticklabels = FALSE, showgrid = FALSE, ticks = "", showline = FALSE),
-                        angularaxis = list(tickvals = ord$mid, ticktext = short(ord$sec, 22), ticks = "",
-                                           tickfont = list(size = 10), showgrid = FALSE)),
-           margin = list(t = 50, l = 135, r = 135, b = 30))
+                        angularaxis = list(tickvals = ord$mid, ticktext = wrap2(str_remove(ord$sec, "^[A-HY][0-9]{2}[A-Z] ")), ticks = "",   # CPC: title only, code in the hover
+                                           tickfont = list(size = 9), showgrid = FALSE)),
+           margin = list(t = 60, l = 150, r = 150, b = 50))
 }
 # C: strip. Rows = categories with 2+ items, the rest pooled
 strip <- function(d, title) {
-  d <- d |> add_count(cat) |> mutate(row = if_else(n >= 2, short(cat, 40), "(other, 1 item each)"))
+  d <- d |> add_count(cat) |> mutate(row = if_else(n >= 2, short(str_remove(cat, "^[A-HY][0-9]{2}[A-Z] "), 40), "(other, 1 item each)"))
   lv <- d |> group_by(row) |> summarise(b = min(rank)) |> arrange(desc(b)) |> pull(row)
   d <- d |> mutate(row = factor(row, levels = lv))
   plot_ly(d, width = 1080, height = 120 + 20 * length(lv), x = ~score, y = ~row, type = "scatter", mode = "markers",
@@ -127,7 +139,7 @@ legend_html <- function() {
 The 100 nearest OpenAlex topics and CPC main groups of each technology of the grants, by embedding similarity.
 Ranks 1-`r CUT` go to the LLM judge; ranks `r CUT + 1`-100 are shown faded, to see what did not make the cut.
 `r if (is.null(judge)) "**The judge's verdicts are not in yet**: candidates are shown without a verdict." else "Verdicts: consensus of three judge runs."`
-**A** (radial): the technology is the centre; distance from it = a fixed gap plus how much less similar the item is
+**A** (radial): the technology is the centre (hover it for its name); distance from it = a fixed gap plus how much less similar the item is
 than the closest one. Shaded and white sectors are OpenAlex subfields or CPC subclasses (the label names the whole
 sector); subfields or subclasses with 1-2 items share the sector \"other\". **C** (strip): the cosine itself, one row per subfield or subclass.
 Hover a point for its title, rank, cosine and scores. v1 is shown for reference only; it is not a benchmark.
@@ -148,14 +160,21 @@ btns <- map(seq_along(engines), \(j) {
                                 style = "margin:0 6px 6px 0", sprintf("%d. %s", techs$tech_id[i], techs$tech_label[i]))))
 })
 row <- \(...) div(style = "display:flex; gap:10px; flex-wrap:wrap", ...)
+fn <- \(x) p(style = "font-size:12px; color:#555; margin-top:4px", HTML(x))
+note_a <- fn(paste("<b>other (1-2 items each)</b>: OpenAlex subfields or CPC subclasses that have only one or two",
+                   "items among the 100 nearest. They are pooled into one sector so that the circle is not split into",
+                   "dozens of thin slices; hover a point to see its own subfield or subclass."))
+note_c <- fn(paste("<b>(other, 1 item each)</b>: OpenAlex subfields or CPC subclasses that have only one item among",
+                   "the 100 nearest. They share one row instead of a row each; hover a point to see its own subfield or",
+                   "subclass."))
 panes <- map(seq_len(nrow(techs)), \(i) {
   d <- ranks |> filter(engine_name == techs$engine_name[i], tech_id == techs$tech_id[i])
   oa <- d |> filter(kind == "oa"); cpc <- d |> filter(kind == "cpc")
   div(class = "tech-pane", `data-k` = i, `data-e` = match(techs$engine_name[i], engines),
       style = if (i > 1) "display:none" else NULL,
       h3(sprintf("%s: %s", techs$engine_name[i], techs$tech_label[i])),
-      h4("A. Radial"), row(radial(oa, "Topics"), radial(cpc, "CPC groups")),
-      h4("C. Strip"), strip(oa, "Topics"), strip(cpc, "CPC groups"))
+      h4("A. Radial"), row(radial(oa, "Topics", techs$tech_label[i]), radial(cpc, "CPC groups", techs$tech_label[i])), note_a,
+      h4("C. Strip"), strip(oa, "Topics"), strip(cpc, "CPC groups"), note_c)
 })
 tagList(sel, btns, panes)
 ```
