@@ -22,9 +22,10 @@ on:
 permissions:
   contents: write
 
+# A newer push cancels a build still running: it would be overwritten by the newer one anyway.
 concurrency:
   group: render-site
-  cancel-in-progress: false
+  cancel-in-progress: true
 
 jobs:
   render:
@@ -62,6 +63,11 @@ jobs:
         run: Rscript R/08_render_site.R
 
       - name: Commit docs/
+        # Builds can overlap with the bot's own "Rebuild site" commits. Rules, so a build never fails on docs/:
+        #  - if main already has newer sources (anything outside docs/), commit nothing: their own build will run;
+        #  - otherwise only docs/ can differ, and this build's docs/ is the newer one: keep it on a conflict
+        #    (in a rebase, -X theirs = the commit being replayed, i.e. ours);
+        #  - retry the push if main moved in between.
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
@@ -71,5 +77,15 @@ jobs:
             exit 0
           fi
           git commit -m "Rebuild site (docs/)"
-          git pull --rebase origin main
-          git push origin HEAD:main
+          for attempt in 1 2 3; do
+            git fetch origin main
+            if ! git diff --quiet HEAD~1 origin/main -- . ':(exclude)docs'; then
+              echo "main has newer sources than this build; leaving docs/ to their build"
+              exit 0
+            fi
+            git rebase -X theirs origin/main
+            if git push origin HEAD:main; then exit 0; fi
+            echo "push rejected (main moved), retrying"
+            sleep 5
+          done
+          exit 1
