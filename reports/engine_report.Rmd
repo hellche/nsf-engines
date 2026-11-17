@@ -18,6 +18,7 @@ params:
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = FALSE, message = FALSE, warning = FALSE, fig.width = 8, fig.height = 4)
+invisible(Sys.setlocale("LC_CTYPE", "en_US.UTF-8"))  # else cat() writes non-ASCII as <U+2010> under the C locale
 library(dplyr); library(tidyr); library(stringr); library(readr); library(ggplot2); library(knitr); library(here)
 source(here("R", "profile.R"))   # PROFILE_VERSION (set by R/08_render_site.R): which profile's files to read
 V  <- profile_version()
@@ -145,6 +146,25 @@ people |>
 
 Publication counts are shown only where the OpenAlex author matches both the name and the person's current organisation. The OpenAlex link is given only for these reliable matches, and not for profiles flagged as possibly merging several namesakes. *Site* links to the page of the Engine's website where the person is named. Click a number of works to see the list on the [Publications](publications.html) page. *Patents*: US grants 2021-2025 with the person among the inventors (same last and first name, address in the Engine's states); click the number for the list on the [Patents](patents.html) page. In brackets: works in the Engine's topics, patents with a CPC code in the Engine's technology profile.
 
+
+## Researchers at partner organisations
+
+```{r partner-researchers, results = "asis"}
+pr_file <- proc_path("partner_researchers.csv")
+pr <- if (file.exists(pr_file)) read_csv(pr_file, show_col_types = FALSE) |> filter(engine_name == E) else tibble()
+if (nrow(pr)) {
+  pr |>
+    transmute(`#` = rank,
+              Researcher = sprintf("[%s](https://openalex.org/%s)%s", name, author_id, if_else(in_team, " (team)", "")),
+              Partner = partners,
+              `Works in the Engine's topics` = works_in_topics,
+              Citations = citations,
+              Years = if_else(first_year == last_year, as.character(first_year), paste0(first_year, "-", last_year)),
+              `Most cited of these works` = sprintf("[%s](https://openalex.org/%s)", str_trunc(top_work, 60), top_work_id)) |>
+    kable() |> print()
+  cat("\nThe grant names mostly managers; the technology is often developed at the partner universities and labs. These are the authors with the most works in the Engine's OpenAlex topics written at a knowledge-producer partner in the Engine's states, since the window start (at least 3 works; top 15). The list depends on the technology profile version. OpenAlex sometimes merges namesakes into one author: check the profile before relying on a name.\n")
+} else cat("No knowledge-producer partner in the Engine's states with works in its topics.\n")
+```
 
 ## Partners
 

@@ -28,7 +28,8 @@ profile_version <- function() {
 PROFILE_FILES <- c("works_people.csv", "works_institutions.csv", "patents_engine.csv", "patents_team.csv",
                    "metrics_engine.csv", "metrics_patents_year.csv", "metrics_papers_year.csv",
                    "metrics_lq_cpc.csv", "metrics_top_assignees.csv",
-                   "competition_states.csv", "competition_countries.csv", "competition_papers.csv")
+                   "competition_states.csv", "competition_countries.csv", "competition_papers.csv",
+                   "partner_researchers.csv")
 
 # path of a processed file for the given profile version (creates the version folder when writing)
 proc_path <- function(f, version = profile_version()) {
