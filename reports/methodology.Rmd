@@ -4,8 +4,6 @@ output:
   html_document:
     theme: flatly
     self_contained: true
-    toc: true
-    toc_float: true
     css: style.css
     includes:
       before_body: _navbar.html
