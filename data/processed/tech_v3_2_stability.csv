@@ -1,0 +1,13 @@
+engine_name,fragments_run1,technologies_run1,fragments_run2,technologies_run2,fragments_run3,technologies_run3,fragment_groups,in_all_3,consensus_fragments,consensus_technologies,ari_mean,ari_min
+BRIDGES,7,2,7,3,7,3,7,7,7,3,0.867,0.8
+Critical Materials Crossroads,8,3,8,3,10,2,8,8,8,3,0.245,0.042
+Critical Mineral Accelerator,12,2,11,3,14,3,12,11,12,3,0.773,0.66
+FAST,3,2,4,2,5,2,5,3,4,2,1.0,1.0
+Grid Modernization,8,4,8,4,8,4,8,8,8,4,1.0,1.0
+IMPACT,12,3,11,3,12,4,15,7,12,4,0.797,0.696
+NEO-SMART,8,4,6,3,6,3,6,6,6,3,0.667,0.5
+Quantum Technologies,6,4,6,4,5,4,6,5,6,4,1.0,1.0
+RETI,15,3,13,3,14,3,14,12,14,3,0.665,0.505
+RuralSTAMINA Biomanufacturing,7,3,6,4,6,4,7,6,6,4,0.375,0.062
+STELLAR,5,2,5,2,5,2,5,5,5,2,1.0,1.0
+Seafood,9,3,8,4,7,3,9,7,8,3,0.906,0.859

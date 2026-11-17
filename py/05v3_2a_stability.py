@@ -11,8 +11,8 @@ consensus that the profile versions (v1, v3.1) start from.
      spans overlap by at least half of the shorter one; such fragments form one "fragment group".
   3. Consensus fragments = groups found in at least 2 of the 3 runs; text = the version most runs used.
   4. Consensus technologies: two consensus fragments are in one technology when at least 2 runs put them
-     together; technologies = connected groups. Label = the label of the run technology that matches best
-     (most shared fragments, then the shortest label).
+     together; technologies = connected groups. Label = the label of the run technology whose fragments match best
+     (Jaccard index of the fragment sets, then the shortest label).
   5. Agreement of the groupings: adjusted Rand index between each pair of runs, over the fragments all three
      runs found (1 = the same grouping, 0 = no better than chance).
 
@@ -122,11 +122,14 @@ for e, c in cons.groupby("engine_name", sort=False):
     for g in sorted(groups, key=lambda g: (c.set_index("group").sent_id[g], c.set_index("group").start[g])):
         comps.setdefault(find(g), []).append(g)
     for t, (root, members) in enumerate(comps.items(), start=1):
-        # label: the run technology sharing most fragments with this one, then the shortest label
-        cand = (allf[allf.group.isin(members)].groupby(["run", "tech_id"])
-                .agg(n=("group", "nunique"), label=("tech_label", "first")).reset_index())
-        cand["len"] = cand.label.str.len()
-        label = cand.sort_values(["n", "len"], ascending=[False, True]).label.iloc[0]
+        # label: the run technology whose fragments match this one best (Jaccard), then the shortest label
+        mset = set(members)
+        cand = []
+        for (k, t_id), rt in allf[(allf.engine_name == e)].groupby(["run", "tech_id"]):
+            rset = set(rt.group)
+            if rset & mset:
+                cand.append((len(rset & mset) / len(rset | mset), -len(rt.tech_label.iloc[0]), rt.tech_label.iloc[0]))
+        label = max(cand)[2]
         for g in members:
             r = c[c.group == g].iloc[0]
             out.append({"engine_name": e, "tech_id": t, "tech_label": label, "sent_id": r.sent_id,
