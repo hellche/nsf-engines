@@ -1,0 +1,163 @@
+engine_name,tech_id,tech_label,kind,item_id,item_title,level1,votes
+BRIDGES,1,Biobased manufacturing of materials and products,cpc,C08L97/00,Compositions of lignin-containing materials (of polysaccharides C08L1/00 - C08L5/00),C08L,3
+BRIDGES,1,Biobased manufacturing of materials and products,cpc,C08H8/00,Macromolecular compounds derived from lignocellulosic materials {(pretreatment thereof B27N)},C08H,3
+BRIDGES,1,Biobased manufacturing of materials and products,oa,T10513,Natural Fiber Reinforced Composites,Polymers and Plastics,3
+BRIDGES,1,Biobased manufacturing of materials and products,oa,T11009,Catalysis for Biomass Conversion,Catalysis,2
+BRIDGES,2,Perennial grass biomass feedstocks,cpc,A01G22/00,Cultivation of specific crops or plants not otherwise provided for,A01G,2
+BRIDGES,2,Perennial grass biomass feedstocks,cpc,A01H6/00,"Angiosperms, i.e. flowering plants, characterised by their botanic taxonomy",A01H,2
+BRIDGES,2,Perennial grass biomass feedstocks,oa,T12003,Bioenergy crop production and management,Agronomy and Crop Science,3
+BRIDGES,2,Perennial grass biomass feedstocks,oa,T10171,Biofuel production and bioconversion,Biomedical Engineering,3
+BRIDGES,3,Digital twins and AI decision support,cpc,G05B17/00,"Systems involving the use of models or simulators of said systems (G05B13/00, G05B15/00, G05B19/00 take precedence)",G05B,3
+BRIDGES,3,Digital twins and AI decision support,cpc,G06Q10/00,Administration; Management,G06Q,3
+BRIDGES,3,Digital twins and AI decision support,oa,T10763,Digital Transformation in Industry,Industrial and Manufacturing Engineering,3
+Critical Materials Crossroads,1,Critical materials refining and processing,cpc,C22B3/00,Extraction of metal compounds from ores or concentrates by wet processes,C22B,3
+Critical Materials Crossroads,1,Critical materials refining and processing,cpc,C22B59/00,Obtaining rare earth metals,C22B,3
+Critical Materials Crossroads,1,Critical materials refining and processing,oa,T11091,Extraction and Separation Processes,Metals and Alloys,3
+Critical Materials Crossroads,1,Critical materials refining and processing,oa,T11126,Metallurgical Processes and Thermodynamics,Metals and Alloys,2
+Critical Materials Crossroads,2,Advanced materials production and scale-up,cpc,C22C1/00,"Making non-ferrous alloys (by electrothermic methods C22B4/00; by electrolysis C25C1/24, C25C3/36)",C22C,2
+Critical Materials Crossroads,2,Advanced materials production and scale-up,oa,T13290,Diverse Industrial Engineering Technologies,Industrial and Manufacturing Engineering,2
+Critical Materials Crossroads,3,Continuous processing and data-driven process control,cpc,B01J19/00,"Chemical, physical or physico-chemical processes in general; Their relevant apparatus",B01J,3
+Critical Materials Crossroads,3,Continuous processing and data-driven process control,cpc,G05B13/00,"Adaptive control systems, i.e. systems automatically adjusting themselves to have a performance which is optimum according to some preassigned criterion (G05B19/00 takes precedence)",G05B,3
+Critical Materials Crossroads,3,Continuous processing and data-driven process control,oa,T10791,Advanced Control Systems Optimization,Control and Systems Engineering,3
+Critical Materials Crossroads,3,Continuous processing and data-driven process control,oa,T11407,Innovative Microfluidic and Catalytic Techniques Innovation,Fluid Flow and Transfer Processes,2
+Critical Mineral Accelerator,1,Mineral processing and recovery from mine waste,cpc,B03D1/00,"Flotation (conditioning for flotation, general arrangement of plan B03B)",B03D,3
+Critical Mineral Accelerator,1,Mineral processing and recovery from mine waste,cpc,C22B7/00,"Working up raw materials other than ores, e.g. scrap, to produce non-ferrous metals and compounds thereof; {Methods of a general interest or applied to the winning of more than two metals (briquetting of scrap C22B1/248; preliminary treatment of scrap C22B1/005)}",C22B,3
+Critical Mineral Accelerator,1,Mineral processing and recovery from mine waste,oa,T11091,Extraction and Separation Processes,Metals and Alloys,3
+Critical Mineral Accelerator,1,Mineral processing and recovery from mine waste,oa,T11073,Metal Extraction and Bioleaching,Metals and Alloys,2
+Critical Mineral Accelerator,2,AI-based mineral exploration,cpc,G01V20/00,Geomodelling in general,G01V,3
+Critical Mineral Accelerator,2,AI-based mineral exploration,cpc,G06N20/00,Machine learning,G06N,3
+Critical Mineral Accelerator,2,AI-based mineral exploration,oa,T12157,Geochemistry and Geologic Mapping,Geochemistry and Petrology,3
+Critical Mineral Accelerator,2,AI-based mineral exploration,oa,T13067,Geological Modeling and Analysis,Geology,3
+Critical Mineral Accelerator,3,Metal-isotope geochemistry for deposit targeting,cpc,G01N33/00,Investigating or analysing materials by specific methods not covered by groups G01N1/00 - G01N31/00,G01N,3
+Critical Mineral Accelerator,3,Metal-isotope geochemistry for deposit targeting,cpc,G01V9/00,Prospecting or detecting by methods not provided for in groups G01V1/00 - G01V8/00,G01V,3
+Critical Mineral Accelerator,3,Metal-isotope geochemistry for deposit targeting,oa,T12157,Geochemistry and Geologic Mapping,Geochemistry and Petrology,3
+Critical Mineral Accelerator,3,Metal-isotope geochemistry for deposit targeting,oa,T10001,Geological and Geochemical Analysis,Geochemistry and Petrology,2
+Critical Mineral Accelerator,4,Bio-based mineral extraction,cpc,C22B3/00,Extraction of metal compounds from ores or concentrates by wet processes,C22B,3
+Critical Mineral Accelerator,4,Bio-based mineral extraction,cpc,C12N1/00,"Microorganisms; Compositions thereof (medicinal preparations containing material from protozoa, bacteria or viruses A61K35/66, from algae A61K36/02, from fungi A61K36/06; preparing medicinal bacterial antigen or antibody compositions, e.g. bacterial vaccines, A61K39/00); Processes of propagating, maintaining or preserving microorganisms or compositions thereof; Processes of preparing or isolating a composition containing a microorganism; Culture media therefor",C12N,3
+Critical Mineral Accelerator,4,Bio-based mineral extraction,oa,T11073,Metal Extraction and Bioleaching,Metals and Alloys,3
+FAST,1,Advanced logic chip design and manufacturing,cpc,H10D84/00,"Integrated devices formed in or on semiconductor substrates that comprise only semiconducting layers, e.g. on Si wafers or on GaAs-on-Si wafers",H10D,3
+FAST,1,Advanced logic chip design and manufacturing,cpc,G06F30/00,Computer-aided design [CAD],G06F,3
+FAST,1,Advanced logic chip design and manufacturing,oa,T10558,Advancements in Semiconductor Devices and Circuit Design,Electrical and Electronic Engineering,3
+FAST,1,Advanced logic chip design and manufacturing,oa,T11522,VLSI and FPGA Design Techniques,Electrical and Electronic Engineering,3
+FAST,2,AI-enabled semiconductor process control,cpc,H10P74/00,"Testing or measuring during manufacture or treatment of wafers, substrates or devices",H10P,3
+FAST,2,AI-enabled semiconductor process control,cpc,G05B13/00,"Adaptive control systems, i.e. systems automatically adjusting themselves to have a performance which is optimum according to some preassigned criterion (G05B19/00 takes precedence)",G05B,3
+FAST,2,AI-enabled semiconductor process control,oa,T10876,Fault Detection and Control Systems,Control and Systems Engineering,3
+FAST,2,AI-enabled semiconductor process control,oa,T12111,Industrial Vision Systems and Defect Detection,Industrial and Manufacturing Engineering,2
+Grid Modernization,1,Transformers and grid power equipment,cpc,H01F27/00,"Details of transformers or inductances, in general",H01F,3
+Grid Modernization,1,Transformers and grid power equipment,cpc,H02M7/00,Conversion of AC power input into DC power output; Conversion of DC power input into AC power output,H02M,3
+Grid Modernization,1,Transformers and grid power equipment,oa,T11343,Power Transformer Diagnostics and Insulation,Electrical and Electronic Engineering,3
+Grid Modernization,1,Transformers and grid power equipment,oa,T10228,Multilevel Inverters and Converters,Electrical and Electronic Engineering,3
+Grid Modernization,2,Grid-edge automation for transmission and distribution,cpc,H02J13/00,Circuit arrangements for providing remote monitoring or remote control of equipment in a power distribution network,H02J,3
+Grid Modernization,2,Grid-edge automation for transmission and distribution,cpc,Y04S10/00,"Systems supporting electrical power generation, transmission or distribution",Y04S,2
+Grid Modernization,2,Grid-edge automation for transmission and distribution,oa,T12451,Smart Grid and Power Systems,Electrical and Electronic Engineering,3
+Grid Modernization,2,Grid-edge automation for transmission and distribution,oa,T10454,Optimal Power Flow Distribution,Electrical and Electronic Engineering,2
+Grid Modernization,3,Nuclear construction techniques,cpc,G21C13/00,Pressure vessels; Containment vessels; Containment in general (for chemical or physical processes B01J3/00; pressure vessels in general F16J12/00),G21C,3
+Grid Modernization,3,Nuclear construction techniques,cpc,G21D1/00,Details of nuclear power plant (control G21D3/00),G21D,2
+Grid Modernization,3,Nuclear construction techniques,oa,T10597,Nuclear reactor physics and engineering,Nuclear Energy and Engineering,3
+Grid Modernization,3,Nuclear construction techniques,oa,T11006,BIM and Construction Integration,Building and Construction,3
+Grid Modernization,4,Grid cybersecurity,cpc,H04L63/00,{Network architectures or network communication protocols for network security (cryptographic mechanisms or cryptographic arrangements for secret or secure communication H04L9/00; network architectures or network communication protocols for wireless network security H04W12/00; security arrangements for protecting computers or computer systems against unauthorised activity G06F21/00)},H04L,3
+Grid Modernization,4,Grid cybersecurity,cpc,Y04S40/00,"Systems for electrical power generation, transmission, distribution or end-user application management characterised by the use of communication or information technologies, or communication or information technology specific aspects supporting them",Y04S,3
+Grid Modernization,4,Grid cybersecurity,oa,T10917,Smart Grid Security and Resilience,Control and Systems Engineering,3
+Grid Modernization,4,Grid cybersecurity,oa,T10400,Network Security and Intrusion Detection,Computer Networks and Communications,3
+IMPACT,1,Biologics and MSK drug discovery,cpc,A61K39/00,Medicinal preparations containing antigens or antibodies (materials for immunoassay G01N33/53),A61K,3
+IMPACT,1,Biologics and MSK drug discovery,cpc,C07K16/00,"Immunoglobulins [IG], e.g. monoclonal or polyclonal antibodies",C07K,3
+IMPACT,1,Biologics and MSK drug discovery,oa,T10200,Rheumatoid Arthritis Research and Therapies,Rheumatology,3
+IMPACT,1,Biologics and MSK drug discovery,oa,T10105,Osteoarthritis Treatment and Mechanisms,Rheumatology,2
+IMPACT,2,MSK diagnostics,cpc,A61B5/00,"Measuring for diagnostic purposes (radiation diagnosis A61B6/00; diagnosis by ultrasonic, sonic or infrasonic waves A61B8/00); Identification of persons",A61B,3
+IMPACT,2,MSK diagnostics,cpc,G01N33/00,Investigating or analysing materials by specific methods not covered by groups G01N1/00 - G01N31/00,G01N,3
+IMPACT,2,MSK diagnostics,oa,T14510,Medical Imaging and Analysis,Biomedical Engineering,3
+IMPACT,2,MSK diagnostics,oa,T10071,Bone health and osteoporosis research,Orthopedics and Sports Medicine,2
+IMPACT,3,AI on multimodal health data,cpc,G16H50/00,"ICT specially adapted for medical diagnosis, medical simulation or medical data mining; ICT specially adapted for detecting, monitoring or modelling epidemics or pandemics",G16H,3
+IMPACT,3,AI on multimodal health data,cpc,G16H10/00,ICT specially adapted for the handling or processing of patient-related medical or healthcare data (for medical reports G16H15/00; for therapies or health-improving plans G16H20/00; for the handling or processing of medical images G16H30/00),G16H,2
+IMPACT,3,AI on multimodal health data,oa,T13702,Machine Learning in Healthcare,Artificial Intelligence,3
+IMPACT,3,AI on multimodal health data,oa,T11636,Artificial Intelligence in Healthcare and Education,Health Informatics,3
+IMPACT,4,Orthopedic devices,cpc,A61F2/00,"Filters implantable into blood vessels; Prostheses, i.e. artificial substitutes or replacements for parts of the body; Appliances for connecting them with the body; Devices providing patency to, or preventing collapsing of, tubular structures of the body, e.g. stents (dental prostheses A61C13/00; artificial kidneys A61M1/14; artificial hearts A61M60/00)",A61F,3
+IMPACT,4,Orthopedic devices,cpc,A61B17/00,"Surgical instruments, devices or methods (A61B18/00 takes precedence; dental tools A61C3/00; eye surgery A61F9/007; ear surgery A61F11/20)",A61B,3
+IMPACT,4,Orthopedic devices,oa,T10059,Bone Tissue Engineering Materials,Biomedical Engineering,3
+IMPACT,4,Orthopedic devices,oa,T10658,Bone fractures and treatments,Orthopedics and Sports Medicine,3
+NEO-SMART,1,Metals,cpc,C22C38/00,"Ferrous alloys, e.g. steel alloys (cast-iron alloys C22C37/00)",C22C,3
+NEO-SMART,1,Metals,cpc,C22F1/00,"Changing the physical structure of non-ferrous metals or alloys by heat treatment or by hot or cold working (apparatus for mechanical working of metal B21, B23, B24)",C22F,2
+NEO-SMART,1,Metals,oa,T10204,Microstructure and mechanical properties,Metals and Alloys,3
+NEO-SMART,2,Polymers,cpc,C08L101/00,Compositions of unspecified macromolecular compounds,C08L,3
+NEO-SMART,2,Polymers,cpc,C08F2/00,Processes of polymerisation,C08F,2
+NEO-SMART,2,Polymers,oa,T14303,Polymer Synthesis and Characterization,Polymers and Plastics,3
+NEO-SMART,2,Polymers,oa,T10389,Polymer crystallization and properties,Polymers and Plastics,3
+NEO-SMART,3,Chemicals and coatings,cpc,C09D5/00,"Coating compositions, e.g. paints, varnishes or lacquers, characterised by their physical nature or the effects produced {(electrically insulating plastics, resins or waxes H01B3/30)}; Filling pastes",C09D,3
+NEO-SMART,3,Chemicals and coatings,cpc,C09D7/00,"Features of coating compositions, not provided for in group C09D5/00 (driers C09F9/00); Processes for incorporating ingredients in coating compositions",C09D,3
+NEO-SMART,3,Chemicals and coatings,oa,T10310,Corrosion Behavior and Inhibition,Materials Chemistry,3
+NEO-SMART,3,Chemicals and coatings,oa,T10313,Surface Modification and Superhydrophobicity,"Surfaces, Coatings and Films",3
+NEO-SMART,4,AI/ML computational materials design,cpc,G16C60/00,"Computational materials science, i.e. ICT specially adapted for investigating the physical or chemical properties of materials or phenomena associated with their design, synthesis, processing, characterisation or utilisation",G16C,3
+NEO-SMART,4,AI/ML computational materials design,cpc,G16C20/00,"Chemoinformatics, i.e. ICT specially adapted for the handling of physicochemical or structural data of chemical particles, elements, compounds or mixtures",G16C,2
+NEO-SMART,4,AI/ML computational materials design,oa,T11948,Machine Learning in Materials Science,Materials Chemistry,3
+NEO-SMART,4,AI/ML computational materials design,oa,T12938,Material Selection and Properties,General Materials Science,2
+Quantum Technologies,1,Quantum computing,cpc,G06N10/00,"Quantum computing, i.e. information processing based on quantum-mechanical phenomena",G06N,3
+Quantum Technologies,1,Quantum computing,cpc,H10N60/00,Superconducting devices (integrated devices or assemblies of multiple devices H10N69/00),H10N,2
+Quantum Technologies,1,Quantum computing,oa,T10682,Quantum Computing Algorithms and Architecture,Artificial Intelligence,3
+Quantum Technologies,1,Quantum computing,oa,T10020,Quantum Information and Cryptography,"Atomic and Molecular Physics, and Optics",3
+Quantum Technologies,2,Quantum communications,cpc,H04B10/00,"Transmission systems employing electromagnetic waves other than radio-waves, e.g. infrared, visible or ultraviolet light, or employing corpuscular radiation, e.g. quantum communication",H04B,3
+Quantum Technologies,2,Quantum communications,cpc,H04L9/00,{Cryptographic mechanisms or cryptographic} arrangements for secret or secure communications; Network security protocols,H04L,3
+Quantum Technologies,2,Quantum communications,oa,T10020,Quantum Information and Cryptography,"Atomic and Molecular Physics, and Optics",3
+Quantum Technologies,2,Quantum communications,oa,T10237,Cryptography and Data Security,Computer Networks and Communications,3
+Quantum Technologies,3,Quantum sensing,cpc,G01R33/00,Arrangements or instruments for measuring magnetic variables,G01R,3
+Quantum Technologies,3,Quantum sensing,cpc,G01N24/00,"Investigating or analyzing materials by the use of nuclear magnetic resonance, electron paramagnetic resonance or other spin effects",G01N,3
+Quantum Technologies,3,Quantum sensing,oa,T11993,Atomic and Subatomic Physics Research,"Atomic and Molecular Physics, and Optics",3
+Quantum Technologies,3,Quantum sensing,oa,T10478,Diamond and Carbon-based Materials Research,Materials Chemistry,3
+RETI,1,"Machine learning grid management, digital twins and sensing",cpc,H02J3/00,Circuit arrangements for AC mains or AC distribution networks,H02J,2
+RETI,1,"Machine learning grid management, digital twins and sensing",oa,T10917,Smart Grid Security and Resilience,Control and Systems Engineering,3
+RETI,1,"Machine learning grid management, digital twins and sensing",oa,T10305,Power System Optimization and Stability,Electrical and Electronic Engineering,2
+RETI,2,Distributed energy resources and battery storage,cpc,H02J3/00,Circuit arrangements for AC mains or AC distribution networks,H02J,3
+RETI,2,Distributed energy resources and battery storage,cpc,H01M10/00,Secondary cells; Manufacture thereof,H01M,3
+RETI,2,Distributed energy resources and battery storage,oa,T10223,Microgrid Control and Optimization,Control and Systems Engineering,3
+RETI,2,Distributed energy resources and battery storage,oa,T10454,Optimal Power Flow Distribution,Electrical and Electronic Engineering,2
+RETI,3,Solid oxide fuel cells,cpc,H01M8/00,Fuel cells; Manufacture thereof,H01M,3
+RETI,3,Solid oxide fuel cells,cpc,H01M10/00,Secondary cells; Manufacture thereof,H01M,3
+RETI,3,Solid oxide fuel cells,oa,T10311,Advancements in Solid Oxide Fuel Cells,Materials Chemistry,3
+RETI,3,Solid oxide fuel cells,oa,T10018,Advancements in Battery Materials,Electrical and Electronic Engineering,3
+RETI,4,Low-energy industrial process engineering for chemicals and steel,cpc,C21B13/00,"Making spongy iron or liquid steel, by direct processes",C21B,3
+RETI,4,Low-energy industrial process engineering for chemicals and steel,cpc,B01J23/00,"Catalysts comprising metals or metal oxides or hydroxides, not provided for in group B01J21/00 (B01J21/16 takes precedence)",B01J,3
+RETI,4,Low-energy industrial process engineering for chemicals and steel,oa,T11837,Iron and Steelmaking Processes,Metals and Alloys,3
+RETI,4,Low-energy industrial process engineering for chemicals and steel,oa,T11053,Process Optimization and Integration,Control and Systems Engineering,2
+RuralSTAMINA Biomanufacturing,1,Agricultural feedstock to bioproducts biomanufacturing,cpc,C12P7/00,Preparation of oxygen-containing organic compounds,C12P,3
+RuralSTAMINA Biomanufacturing,1,Agricultural feedstock to bioproducts biomanufacturing,cpc,C12M43/00,{Combinations of bioreactors or fermenters with other apparatus},C12M,2
+RuralSTAMINA Biomanufacturing,1,Agricultural feedstock to bioproducts biomanufacturing,oa,T10171,Biofuel production and bioconversion,Biomedical Engineering,3
+RuralSTAMINA Biomanufacturing,1,Agricultural feedstock to bioproducts biomanufacturing,oa,T10932,Microbial Metabolic Engineering and Bioproduction,Molecular Biology,3
+RuralSTAMINA Biomanufacturing,2,Engineered microorganisms,cpc,C12N15/00,"Mutation or genetic engineering; DNA or RNA concerning genetic engineering, vectors, e.g. plasmids, or their isolation, preparation or purification; Use of hosts therefor (mutants or genetically engineered microorganisms, per se C12N1/00, C12N5/00, C12N7/00; new plants per se A01H; plant reproduction by tissue culture techniques A01H4/00; new animals per se A01K67/00; use of medicinal preparations containing genetic material which is inserted into cells of the living body to treat genetic diseases, gene therapy A61K48/00)",C12N,3
+RuralSTAMINA Biomanufacturing,2,Engineered microorganisms,cpc,C12N1/00,"Microorganisms; Compositions thereof (medicinal preparations containing material from protozoa, bacteria or viruses A61K35/66, from algae A61K36/02, from fungi A61K36/06; preparing medicinal bacterial antigen or antibody compositions, e.g. bacterial vaccines, A61K39/00); Processes of propagating, maintaining or preserving microorganisms or compositions thereof; Processes of preparing or isolating a composition containing a microorganism; Culture media therefor",C12N,3
+RuralSTAMINA Biomanufacturing,2,Engineered microorganisms,oa,T10932,Microbial Metabolic Engineering and Bioproduction,Molecular Biology,3
+RuralSTAMINA Biomanufacturing,2,Engineered microorganisms,oa,T10878,CRISPR and Genetic Engineering,Molecular Biology,3
+RuralSTAMINA Biomanufacturing,3,Bioprocess scale-up,cpc,C12M1/00,Apparatus for enzymology or microbiology,C12M,3
+RuralSTAMINA Biomanufacturing,3,Bioprocess scale-up,cpc,C12M27/00,"{Means for mixing, agitating or circulating fluids in the vessel (by introduction of gas C12M29/06, C12M29/14, mixing in general or mixers per se B01F; mixing in apparatus for chemical or physical processes B01J)}",C12M,2
+RuralSTAMINA Biomanufacturing,3,Bioprocess scale-up,oa,T10864,Fluid Dynamics and Mixing,Fluid Flow and Transfer Processes,2
+RuralSTAMINA Biomanufacturing,3,Bioprocess scale-up,oa,T10932,Microbial Metabolic Engineering and Bioproduction,Molecular Biology,2
+RuralSTAMINA Biomanufacturing,4,Sensors and AI for bioprocess optimization,cpc,C12M41/00,"{Means for regulation, monitoring, measurement or control, e.g. flow regulation (controlling or regulating chemical, physical or physicochemical processes B01J19/0006; heating or cooling apparatus for laboratory use B01L7/00; electro optical investigation of individual particles, flow cytometers G01N15/14; automatic analysis G01N35/00; controlling or regulating in general G06N)}",C12M,3
+RuralSTAMINA Biomanufacturing,4,Sensors and AI for bioprocess optimization,cpc,G05B13/00,"Adaptive control systems, i.e. systems automatically adjusting themselves to have a performance which is optimum according to some preassigned criterion (G05B19/00 takes precedence)",G05B,3
+RuralSTAMINA Biomanufacturing,4,Sensors and AI for bioprocess optimization,oa,T10876,Fault Detection and Control Systems,Control and Systems Engineering,3
+STELLAR,1,Precision optics and imaging,cpc,G02B27/00,"Optical systems or apparatus not provided for by any of the groups G02B1/00 - G02B26/00, G02B30/00",G02B,3
+STELLAR,1,Precision optics and imaging,cpc,G02B13/00,Optical objectives specially designed for the purposes specified below (with variable magnification {in general} G02B15/00),G02B,3
+STELLAR,1,Precision optics and imaging,oa,T11517,Advanced optical system design,"Atomic and Molecular Physics, and Optics",3
+STELLAR,1,Precision optics and imaging,oa,T11484,Adaptive optics and wavefront sensing,"Atomic and Molecular Physics, and Optics",3
+STELLAR,2,Photonics,cpc,H01S5/00,Semiconductor lasers (superluminescent diodes H10H20/00),H01S,2
+STELLAR,2,Photonics,cpc,G02B6/00,"Light guides; Structural details of arrangements comprising light guides and other optical elements, e.g. couplings",G02B,2
+STELLAR,2,Photonics,oa,T10299,Photonic and Optical Devices,Electrical and Electronic Engineering,3
+STELLAR,2,Photonics,oa,T11429,Semiconductor Lasers and Optical Devices,Electrical and Electronic Engineering,2
+STELLAR,3,Lasers and laser systems,cpc,H01S3/00,"Lasers, i.e. devices using stimulated emission of electromagnetic radiation in the infrared, visible or ultraviolet wave range (semiconductors lasers H01S5/00)",H01S,3
+STELLAR,3,Lasers and laser systems,cpc,B23K26/00,"Working by laser beam, e.g. welding, cutting or boring",B23K,2
+STELLAR,3,Lasers and laser systems,oa,T11127,Solid State Laser Technologies,Electrical and Electronic Engineering,3
+Seafood,1,"Ocean observation, sensing and analytics for harvest",cpc,G01S15/00,"Systems using the reflection or reradiation of acoustic waves, e.g. sonar systems",G01S,3
+Seafood,1,"Ocean observation, sensing and analytics for harvest",cpc,A01K79/00,"Methods or means of catching fish in bulk not provided for in groups A01K69/00 - A01K77/00, {e.g. fish pumps; Detection of fish; Whale fishery}",A01K,2
+Seafood,1,"Ocean observation, sensing and analytics for harvest",oa,T10255,Oceanographic and Atmospheric Processes,Oceanography,3
+Seafood,1,"Ocean observation, sensing and analytics for harvest",oa,T10230,Marine and fisheries research,Aquatic Science,3
+Seafood,2,Downscaled seafood processing technologies,cpc,A22C25/00,Processing fish {; Curing of fish; Stunning of fish by electric current; Investigating fish by optical means (slaughtering fish A22B3/08)},A22C,3
+Seafood,2,Downscaled seafood processing technologies,cpc,A22C29/00,"Processing shellfish {or bivalves}, e.g. oysters, lobsters; {Devices therefor, e.g. claw locks, claw crushers, grading devices; Processing lines}",A22C,2
+Seafood,2,Downscaled seafood processing technologies,oa,T14010,Food Industry and Aquatic Biology,Food Science,3
+Seafood,3,Seafood waste stream utilization,cpc,A23K10/00,Animal feeding-stuffs,A23K,3
+Seafood,3,Seafood waste stream utilization,cpc,A23J1/00,Obtaining protein compositions for foodstuffs; Bulk opening of eggs and separation of yolks from whites,A23J,2
+Seafood,3,Seafood waste stream utilization,oa,T11561,Protein Hydrolysis and Bioactive Peptides,Food Science,3
+Seafood,3,Seafood waste stream utilization,oa,T12583,Food Waste Reduction and Sustainability,Food Science,2
+Seafood,4,Cold chain technologies,cpc,A23B4/00,"Preservation of meat, sausages, fish or fish products",A23B,3
+Seafood,4,Cold chain technologies,cpc,F25D11/00,"Self-contained movable devices, e.g. domestic refrigerators",F25D,2
+Seafood,4,Cold chain technologies,oa,T12486,Food Supply Chain Traceability,Food Science,3
+Seafood,5,Seafood traceability technologies,cpc,G06Q10/00,Administration; Management,G06Q,3
+Seafood,5,Seafood traceability technologies,cpc,G06Q50/00,"Information and communication technology [ICT] specially adapted for implementation of business processes of specific business sectors, e.g. utilities or tourism (healthcare informatics G16H)",G06Q,3
+Seafood,5,Seafood traceability technologies,oa,T12486,Food Supply Chain Traceability,Food Science,3
+Seafood,5,Seafood traceability technologies,oa,T10986,RFID technology advancements,Computer Networks and Communications,2
