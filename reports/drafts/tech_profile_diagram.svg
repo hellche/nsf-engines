@@ -17,7 +17,7 @@ text { font-family: Helvetica, Arial, "DejaVu Sans", sans-serif; }
 .model { fill: #fff; stroke: #222; stroke-width: 2; }
 .frame { fill: #fff; stroke: #111; stroke-width: 2; }
 .judge { fill: #c2e4f7; stroke: #0072b2; stroke-width: 2; }
-.v2c { fill: #fff; stroke: #cc79a7; stroke-width: 4; }
+.v2c { fill: #fff; stroke: #cc79a7; stroke-width: 1.5; }   /* as the v2 header */
 .bound { fill: none; stroke: #0072b2; stroke-width: 1.5; stroke-dasharray: 5 4; }
 .tc { fill: #fff; stroke: #111; stroke-width: 2; }
 .plus { font-size: 18px; font-weight: 700; fill: #222; text-anchor: middle; }
