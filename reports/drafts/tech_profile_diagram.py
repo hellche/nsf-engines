@@ -75,15 +75,14 @@ for xc in (cx[0] + 70, cx[1] - 70):
     down(xc, CY + 130, PRY)
     text("note", xc + 22, CY + CH + 46, "коды")
 # v1: the model matches each technology to our codes, three times
-rect("box", cols[0], PRY, CW, 128)
-text("t", cx[0], PRY + 24, "Соотнести технологии с кодами")
+rect("llm", cols[0], PRY, CW, 128)
+text("t", cx[0], PRY + 24, "Выбор LLM: соотнести технологии с кодами")
 QW, QG = 108, 18
 for k in range(3):
     qx = cols[0] + (CW - 3*QW - 2*QG)/2 + k*(QW + QG)
     box("q", qx, PRY + 40, QW, 48, "Промпт", [f"прогон {k+1}"])
 text("s", cx[0], PRY + 106, "подкласс → группы внутри · подобласть → темы внутри")
 text("s", cx[0], PRY + 121, "промпт v1_select_by_levels.md")
-badge(cols[0] + CW - 112, PRY - 10)
 RY = PRY + 128 + 32
 down(cx[0], PRY + 128, RY)
 box("out1", cols[0], RY, CW, 84, "Профиль v1",
@@ -93,7 +92,7 @@ box("pr", cols[1], PRY, CW, 70, "v3.1 · эмбеддинги", ["пересчи
 # legend
 L = RY + 84 + 46
 items = [("chosen", "выбранный промпт"), ("pr", "сравнили, не взяли / ещё не сделано"),
-         ("km", "выбор модели по нашим спискам")]
+         ("llm", "выбор LLM по нашим спискам")]
 x = FULL_X
 for c, t in items:
     rect(c, x, L - 13, 30, 18, 3); text("lg", x + 38, L + 1, t); x += 38 + 8*len(t) + 40
@@ -115,6 +114,7 @@ text { font-family: Helvetica, Arial, "DejaVu Sans", sans-serif; }
 .tech { fill: #fff6e5; stroke: #b07a1a; stroke-width: 2.5; }
 .out1 { fill: #f0f0f0; stroke: #222; stroke-width: 2.5; }
 .q { fill: #fff; stroke: #222; stroke-width: 1.2; }
+.llm { fill: #fbe9dc; stroke: #c0632b; stroke-width: 2; }
 .stop { fill: #fdecea; stroke: #b3261e; stroke-width: 2; }
 .km { fill: #fbe9dc; stroke: #c0632b; stroke-width: 1.2; }
 .kmt { font-size: 11px; font-weight: 700; fill: #9a4a1c; text-anchor: middle; }
