@@ -1674,36 +1674,157 @@ display: flex; align-items: center; flex-wrap: wrap; gap: 4px 20px; min-height: 
 .method-svg svg { width: 100%; height: auto; }
 </style>
 <div id="technology-profile-v2-v3" class="section level2">
-<h2>Technology profile: versions 2 and 3</h2>
-<p><em>In progress.</em> Versions 2 and 3 score <strong>every</strong>
-OpenAlex topic (4,516) and <strong>every</strong> CPC main group (9,867)
-for each Engine by embedding similarity to the grant text (SPECTER2 for
-topics, PatentSBERTa for CPC), so that nothing is left out by hand. They
-differ only in the input: v2 uses every sentence of the grant title and
-abstract; v3 uses only the science and technology fragments extracted
-from them, word for word, with a fixed prompt. Version 1 (below) was an
-earlier manual choice and is shown for reference, not as a benchmark.
-Version 3.1 (planned) completes version 3: it adds the selection step,
-which neither v2 nor v3 has yet, and fixes the problems found in the
-review of their rankings. The diagram labels are in Russian.</p>
+<h2>Technology profile: versions</h2>
+<p>The technology profile says what each Engine works on, as OpenAlex
+topics (for papers) and CPC groups (for patents). It is built from the
+text of the NSF grant only. Three versions exist. <strong>Version
+1</strong> is the earlier choice made by hand; all metrics on this site
+still use it. <strong>Version 2</strong> ranks every topic and CPC group
+against the whole grant text and is kept for comparison. <strong>Version
+3.1</strong> splits the grant into its technologies and chooses,
+technology by technology, the items that two independent kinds of
+evidence agree on; its core is ready, and the metrics have not yet been
+recomputed with it.</p>
+<div class="method-svg">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 900" width="1280" height="900" role="img" aria-labelledby="t">
+<title id="t">
+Technology profile: versions 1, 2 and 3.1
+</title>
+<defs>
+<marker id="a" viewBox="0 0 10 10" refX="10" refY="5" markerWidth="9" markerHeight="9" markerUnits="userSpaceOnUse" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#333" /></marker>
+<style> text { font-family: Helvetica, Arial, “DejaVu Sans”, sans-serif;
+} .box { fill: #fff; stroke: #333; stroke-width: 1.5; } .man { fill:
+#fff; stroke: #333; stroke-width: 1.5; stroke-dasharray: 6 4; } .out-v1
+{ fill: #ececec; stroke: #555; stroke-width: 2.5; } .out-v2 { fill:
+#e3ecf9; stroke: #4a6fa5; stroke-width: 2.5; } .out-v3 { fill: #e6f2ea;
+stroke: #4f8a62; stroke-width: 2.5; } .lane-v1 { fill: #f6f6f6; }
+.lane-v2 { fill: #f3f7fd; } .lane-v3 { fill: #f2f9f4; } .h { font-size:
+19px; font-weight: 700; text-anchor: middle; } .h-v1 { fill: #444; }
+.h-v2 { fill: #2f5a96; } .h-v3 { fill: #2f6b43; } .idea { font-size:
+13.5px; font-style: italic; fill: #333; text-anchor: middle; } .t {
+font-size: 15px; font-weight: 700; fill: #111; text-anchor: middle; } .s
+{ font-size: 12.5px; fill: #444; text-anchor: middle; } .tag {
+font-size: 11px; fill: #777; text-anchor: end; } .ln { fill: none;
+stroke: #333; stroke-width: 1.5; } .top { font-size: 17px; font-weight:
+700; fill: #111; text-anchor: middle; } .note { font-size: 12.5px; fill:
+#555; } </style> </defs> <rect width="100%" height="100%" fill="#fff" />
+<rect class="box" x="440" y="20" width="400" height="56" />
+<text class="top" x="640" y="45">NSF grant</text>
+<text class="s" x="640" y="64">title and abstract · 12 Engines</text>
+<rect class="lane-v1" x="20" y="100" width="400" height="730" rx="10" />
+<path class="ln" d="M640,76 V86 H220 V96" marker-end="url(#a)" />
+<path class="ln" d="M220,190 V226" marker-end="url(#a)" />
+<text class="h h-v1" x="220" y="130">v1 · used on the site</text>
+<text class="idea" x="220" y="156">Idea: a person reads the grant</text>
+<text class="idea" x="220" y="174">and names its technologies</text>
+<rect class="box" x="40" y="230" width="360" height="70" rx="4" />
+<text class="t" x="220" y="253">Statements by hand</text>
+<text class="s" x="220" y="272">3-5 per Engine, 48 in total,</text>
+<text class="s" x="220" y="288">each with a verbatim quote</text>
+<rect class="box" x="40" y="335" width="360" height="70" rx="4" />
+<text class="t" x="220" y="358">OpenAlex topic classifier</text>
+<text class="s" x="220" y="377">top 3 topics per statement; the
+first,</text> <text class="s" x="220" y="393">or the second with a
+stated reason</text>
+<rect class="box" x="40" y="440" width="360" height="70" rx="4" />
+<text class="t" x="220" y="463">CPC codes by hand</text>
+<text class="s" x="220" y="482">subclasses and groups mixed;</text>
+<text class="s" x="220" y="498">checked: the code has patents</text>
+<path class="ln" d="M220,300 V331" marker-end="url(#a)" />
+<path class="ln" d="M220,405 V436" marker-end="url(#a)" />
+<path class="ln" d="M220,510 V712" marker-end="url(#a)" />
+<rect class="out-v1" x="40" y="716" width="360" height="74" rx="6" />
+<text class="t" x="220" y="741">Profile v1</text>
+<text class="s" x="220" y="760">all metrics on this site</text>
+<rect class="lane-v2" x="440" y="100" width="400" height="730" rx="10" />
+<path class="ln" d="M640,76 V96" marker-end="url(#a)" />
+<path class="ln" d="M640,190 V226" marker-end="url(#a)" />
+<text class="h h-v2" x="640" y="130">v2 · for comparison</text>
+<text class="idea" x="640" y="156">Idea: rank every topic and
+code</text> <text class="idea" x="640" y="174">against the whole grant
+text</text>
+<rect class="box" x="460" y="230" width="360" height="70" rx="4" />
+<text class="t" x="640" y="253">Every sentence of the grant</text>
+<text class="s" x="640" y="272">title and abstract, 203
+sentences;</text> <text class="s" x="640" y="288">includes region and
+workforce</text>
+<rect class="box" x="460" y="335" width="360" height="70" rx="4" />
+<text class="t" x="640" y="358">Embeddings of all items</text>
+<text class="s" x="640" y="377">4,516 OpenAlex topics (SPECTER2)</text>
+<text class="s" x="640" y="393">7,646 CPC groups (PatentSBERTa)</text>
+<rect class="box" x="460" y="440" width="360" height="70" rx="4" />
+<text class="t" x="640" y="463">Ranking per Engine</text>
+<text class="s" x="640" y="482">every topic and group gets a
+rank;</text> <text class="s" x="640" y="498">no selection</text>
+<path class="ln" d="M640,300 V331" marker-end="url(#a)" />
+<path class="ln" d="M640,405 V436" marker-end="url(#a)" />
+<path class="ln" d="M640,510 V712" marker-end="url(#a)" />
+<rect class="out-v2" x="460" y="716" width="360" height="74" rx="6" />
+<text class="t" x="640" y="741">Rankings v2</text>
+<text class="s" x="640" y="760">used only to compare with v3.1</text>
+<rect class="lane-v3" x="860" y="100" width="400" height="730" rx="10" />
+<path class="ln" d="M640,76 V86 H1060 V96" marker-end="url(#a)" />
+<path class="ln" d="M1060,190 V226" marker-end="url(#a)" />
+<text class="h h-v3" x="1060" y="130">v3.1 · core ready</text>
+<text class="idea" x="1060" y="156">Idea: technology by
+technology,</text> <text class="idea" x="1060" y="174">two independent
+kinds of evidence</text>
+<rect class="man" x="880" y="230" width="360" height="70" rx="4" />
+<text class="t" x="1060" y="253">Fragments and technologies</text>
+<text class="s" x="1060" y="272">fixed prompt: verbatim technical
+phrases,</text> <text class="s" x="1060" y="288">86 fragments in 39
+technologies</text>
+<rect class="box" x="880" y="326" width="360" height="70" rx="4" />
+<text class="t" x="1060" y="349">Embeddings per technology</text>
+<text class="s" x="1060" y="368">three similarity scores,</text>
+<text class="s" x="1060" y="384">fused into one embedding rank</text>
+<rect class="box" x="880" y="422" width="360" height="70" rx="4" />
+<text class="t" x="1060" y="445">Independent signal</text>
+<text class="s" x="1060" y="464">topics: OpenAlex classifier</text>
+<text class="s" x="1060" y="480">CPC: word match (BM25) with group
+text</text>
+<rect class="box" x="880" y="518" width="360" height="70" rx="4" />
+<text class="t" x="1060" y="541">Confirmed = both agree</text>
+<text class="s" x="1060" y="560">embedding top 20 and independent
+signal;</text> <text class="s" x="1060" y="576">catch-all topics do not
+count</text>
+<rect class="man" x="880" y="614" width="360" height="70" rx="4" />
+<text class="t" x="1060" y="637">Judge with a fixed rubric (0-3)</text>
+<text class="s" x="1060" y="656">fills what is not confirmed,</text>
+<text class="s" x="1060" y="672">audits what is confirmed</text>
+<path class="ln" d="M1060,300 V322" marker-end="url(#a)" />
+<path class="ln" d="M1060,396 V418" marker-end="url(#a)" />
+<path class="ln" d="M1060,492 V514" marker-end="url(#a)" />
+<path class="ln" d="M1060,588 V610" marker-end="url(#a)" />
+<path class="ln" d="M1060,684 V712" marker-end="url(#a)" />
+<rect class="out-v3" x="880" y="716" width="360" height="74" rx="6" />
+<text class="t" x="1060" y="741">Core of the profile v3.1</text>
+<text class="s" x="1060" y="760">128 items: up to 2 topics and 2
+CPC</text> <text class="s" x="1060" y="776">groups per technology</text>
+<rect class="man" x="40" y="860" width="34" height="18" />
+<text class="note" x="84" y="874">done by hand in a chat session, not
+through an API: not reproducible</text>
+<text class="note" x="640" y="874">v3 (first run): fragments from an
+earlier prompt, no technologies, no fixes; rankings kept for
+comparison</text>
+</svg>
+</div>
 <div id="versions-compared" class="section level3">
 <h3>Versions compared</h3>
 <div class="no-sort">
 <table>
 <colgroup>
-<col width="20%" />
-<col width="20%" />
-<col width="20%" />
-<col width="20%" />
-<col width="20%" />
+<col width="25%" />
+<col width="25%" />
+<col width="25%" />
+<col width="25%" />
 </colgroup>
 <thead>
 <tr class="header">
 <th>Step</th>
-<th>v1 (on this site)</th>
-<th>v2</th>
-<th>v3</th>
-<th>v3.1 (planned)</th>
+<th>v1 (used on this site)</th>
+<th>v2 (for comparison)</th>
+<th>v3.1 (core ready)</th>
 </tr>
 </thead>
 <tbody>
@@ -1712,19 +1833,17 @@ review of their rankings. The diagram labels are in Russian.</p>
 <td>NSF grant title and abstract</td>
 <td>same</td>
 <td>same</td>
-<td>same</td>
 </tr>
 <tr class="even">
 <td>Splitting into technologies</td>
 <td>by hand: 3-5 statements per Engine (48 in total), each with a
 verbatim quote</td>
-<td>none: every sentence on its own, including sentences on the region
-and workforce</td>
-<td>none: 123 science and technology fragments extracted with a fixed
-prompt, checked to be verbatim</td>
-<td>fragments from a revised prompt (no industries of application, no
-generic qualities such as “resilience”), each labelled with one of the
-grant’s 3-5 technologies</td>
+<td>none: every sentence on its own (203), including sentences on the
+region and workforce</td>
+<td>a fixed prompt copies out the technical phrases word for word (86
+fragments, no industries of application or generic qualities such as
+“resilience”) and groups them into the grant’s 2-5 technologies (39 in
+total); done by hand in a chat session</td>
 </tr>
 <tr class="odd">
 <td>Candidates: OpenAlex topics</td>
@@ -1732,60 +1851,62 @@ grant’s 3-5 technologies</td>
 statement</td>
 <td>all 4,516 topics</td>
 <td>same</td>
-<td>same</td>
 </tr>
 <tr class="even">
 <td>Candidates: CPC</td>
 <td>chosen by hand; subclasses (C22B) and main groups (B29B17)
 mixed</td>
-<td>all 9,867 main groups (subclass and group titles)</td>
-<td>same</td>
-<td>all main groups, with the titles of their first-level subgroups;
-indexing groups (2000+, /99) dropped or down-weighted</td>
+<td>all main groups: subclass and group titles</td>
+<td>7,646 main groups: titles of the subclass, the group and its
+first-level subgroups; indexing (2000+) and catch-all (99/00) groups
+left out</td>
 </tr>
 <tr class="odd">
 <td>Scoring</td>
 <td>classifier score; no score for CPC</td>
-<td>embedding cosine (SPECTER2 for topics, PatentSBERTa for CPC),
-mean-centred; the Engine’s name masked as “the Engine”</td>
-<td>same</td>
-<td>same, with “Engine” removed rather than inserted (PatentSBERTa reads
-it as a motor)</td>
+<td>embedding similarity (SPECTER2 for topics, PatentSBERTa for CPC),
+mean-centred</td>
+<td>per technology: three embedding scores fused into one rank, plus an
+independent signal: the OpenAlex classifier for topics, word match
+(BM25) with the full group text for CPC; the word “Engine” removed
+(PatentSBERTa reads it as a motor)</td>
 </tr>
 <tr class="even">
 <td>Selection</td>
 <td>the classifier’s first topic, sometimes the second by hand, with a
 stated reason</td>
-<td>not done: rankings only</td>
-<td>not done: rankings only</td>
-<td>per technology, near-duplicates removed (MMR);
-<strong>core</strong>: 2-3 topics and 2-3 CPC codes per technology,
-checked by eye; <strong>broad profile</strong>: everything above one
-relevance threshold, with no limit on the number of CPC codes</td>
+<td>none: rankings only</td>
+<td>confirmed = in the embedding top 20 and confirmed by the independent
+signal (catch-all topics such as “Diverse Industrial Engineering
+Technologies” do not count); up to 2 topics and 2 CPC groups per
+technology</td>
 </tr>
 <tr class="odd">
-<td>Check against data</td>
+<td>Check</td>
 <td>patents per CPC code (US and region, 2024-25), so that no code is
 empty</td>
 <td>none</td>
-<td>none</td>
-<td>share of the team’s works and patents in the profile; coverage of US
-patents; metrics for both the core and the broad profile</td>
+<td>a judge with a fixed rubric (0-3) fills the places with nothing
+confirmed and audits the confirmed items; done by hand in a chat
+session</td>
 </tr>
 <tr class="even">
-<td>Status</td>
-<td>used for all metrics on this site</td>
-<td>rankings done</td>
-<td>rankings done</td>
-<td>planned</td>
+<td>Result</td>
+<td>48 statements with topics and CPC codes</td>
+<td>rankings</td>
+<td>core of 128 items for 39 technologies; 3 places left empty where the
+grant text is too general</td>
 </tr>
 </tbody>
 </table>
 </div>
-<p>The profile describes what the grant says the Engine does. Data are
-used only to check it, not to choose it: choosing codes by the number of
-regional patents would make the region’s Patent LQ high by
-construction.</p>
+<p>Steps marked “done by hand in a chat session” were run by a language
+model in a chat, not through an API, once each: they are not
+reproducible, and every core item records whether it comes from the
+confirmation rule or from the judge. The profile describes what the
+grant says the Engine does. Data are used only to check it, not to
+choose it: choosing codes by the number of regional patents would make
+the region’s Patent LQ high by construction.</p>
 </div>
 <div id="classification-lists" class="section level3">
 <h3>Classification lists</h3>
@@ -1805,127 +1926,6 @@ subgroup with its official title (254,314 codes, of them 9,867 main
 groups). The CPC site labels this list “CPC Title List (2026.08)”; its
 files are dated August 1, 2026. Downloaded on November 15, 2026.</li>
 </ul>
-</div>
-<div id="procedure-of-versions-2-and-3" class="section level3">
-<h3>Procedure of versions 2 and 3</h3>
-<div class="method-svg">
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 930" width="1280" height="930">
-<title>
-Профиль технологии: версии v2 и v3
-</title>
-<defs>
-<marker id="a" viewBox="0 0 10 10" refX="10" refY="5" markerWidth="9" markerHeight="9" markerUnits="userSpaceOnUse" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#222" /></marker>
-<marker id="A" viewBox="0 0 10 10" refX="10" refY="5" markerWidth="16" markerHeight="16" markerUnits="userSpaceOnUse" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#111" /></marker>
-<marker id="g" viewBox="0 0 10 10" refX="10" refY="5" markerWidth="9" markerHeight="9" markerUnits="userSpaceOnUse" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#888" /></marker>
-<style> text { font-family: Helvetica, Arial, “DejaVu Sans”, sans-serif;
-} .box { fill: #fff; stroke: #222; stroke-width: 1.5; } .hold { fill:
-#fff; stroke: #888; stroke-width: 1.5; stroke-dasharray: 6 4; } .on {
-fill: #e3ecf9; stroke: #4a6fa5; stroke-width: 2.5; } .emb { fill:
-#e6f2ea; stroke: #4f8a62; stroke-width: 2.5; } .t { font-size: 16px;
-font-weight: 700; fill: #111; text-anchor: middle; } .ts { font-size:
-14px; font-weight: 700; fill: #111; text-anchor: middle; } .s {
-font-size: 12px; fill: #555; text-anchor: middle; } .m { font-size:
-11.5px; fill: #3a3a3a; text-anchor: middle; font-family: Menlo,
-Consolas, “DejaVu Sans Mono”, monospace; } .hs { font-size: 12px; fill:
-#777; text-anchor: middle; } .ln { fill: none; stroke: #222;
-stroke-width: 1.5; } .LN { fill: none; stroke: #111; stroke-width: 4;
-stroke-linejoin: round; } .dl { fill: none; stroke: #888; stroke-width:
-1.5; stroke-dasharray: 6 4; } .ck { fill: none; stroke: #222;
-stroke-width: 1.5; stroke-dasharray: 2 3; } </style> </defs>
-<!-- input -->
-<rect class="box" x="490" y="40" width="300" height="70" />
-<text class="t" x="640" y="64">Грант NSF</text>
-<text class="s" x="640" y="83">название + аннотация · 12 Engines</text>
-<text class="m" x="640" y="101">engines</text>
-<path class="ln" d="M640,110 V135 H315 V258" marker-end="url(#a)" />
-<path class="ln" d="M640,135 H965 V158" marker-end="url(#a)" />
-<!-- v3 only: the fixed prompt sits between the grant and the fragments -->
-<rect class="box" x="800" y="160" width="330" height="70" />
-<text class="ts" x="965" y="183">Промпт v3</text>
-<text class="s" x="965" y="202">зафиксирован · только дословные
-куски</text>
-<text class="m" x="965" y="220">v3_extract_technical.md</text>
-<path class="ln" d="M965,230 V258" marker-end="url(#a)" />
-<!-- the two versions differ only in the grant text -->
-<rect class="on" x="150" y="260" width="330" height="80" />
-<text class="ts" x="315" y="284">v2 · все предложения</text>
-<text class="s" x="315" y="303">название и каждое предложение
-аннотации</text>
-<text class="m" x="315" y="328">tech_v2_sentences</text>
-<rect class="emb" x="800" y="260" width="330" height="80" />
-<text class="ts" x="965" y="284">v3 · фрагменты о науке и
-технологиях</text> <text class="s" x="965" y="303">проверены на
-дословность</text>
-<text class="m" x="965" y="328">tech_v3_fragments</text>
-<path class="ln" d="M315,340 V378" marker-end="url(#a)" />
-<path class="ln" d="M965,340 V378" marker-end="url(#a)" />
-<!-- the same ranking for both -->
-<rect class="on" x="150" y="380" width="330" height="90" />
-<text class="ts" x="315" y="404">Рейтинг v2</text>
-<text class="s" x="315" y="423">эмбеддинги · каждый пункт получает
-место</text> <text class="m" x="315" y="456">tech_v2_rank_oa ·
-_cpc</text> <rect class="box" x="520" y="380" width="240" height="90" />
-<text class="ts" x="640" y="404">Справочники</text>
-<text class="s" x="640" y="423">4 516 тем OpenAlex (SPECTER2)</text>
-<text class="s" x="640" y="440">9 867 групп CPC (PatentSBERTa)</text>
-<text class="m" x="640" y="459">/topics · CPCTitleList</text>
-<path class="ln" d="M520,425 H482" marker-end="url(#a)" />
-<path class="ln" d="M760,425 H798" marker-end="url(#a)" />
-<rect class="emb" x="800" y="380" width="330" height="90" />
-<text class="ts" x="965" y="404">Рейтинг v3</text>
-<text class="s" x="965" y="423">те же модели и та же формула</text>
-<text class="m" x="965" y="456">tech_v3_rank_oa · _cpc</text>
-<!-- comparison -->
-<path class="ln" d="M315,470 V545 H438" marker-end="url(#a)" />
-<path class="ln" d="M965,470 V545 H842" marker-end="url(#a)" />
-<rect class="box" x="40" y="530" width="230" height="80" />
-<text class="ts" x="155" y="554">Версия 1 (на сайте)</text>
-<text class="s" x="155" y="573">прежний ручной выбор, не эталон</text>
-<text class="m" x="155" y="596">tech_profile</text>
-<path class="ck" d="M270,585 H438" marker-end="url(#a)" />
-<text class="s" x="355" y="577" style="font-size:11px">для
-справки</text>
-<rect class="box" x="440" y="520" width="400" height="90" />
-<text class="t" x="640" y="545">Сравнение v2 и v3</text>
-<text class="s" x="640" y="565">распределения по 12 Engines · место
-выбора v1</text>
-<text class="m" x="640" y="597">tech_v2_v3_summary</text>
-<!-- choice and result -->
-<path class="LN" d="M640,610 V646" marker-end="url(#A)" />
-<rect class="hold" x="960" y="650" width="260" height="80" />
-<text class="ts" x="1090" y="674" style="fill:#555">LLM-оценка
-топ-50</text> <text class="hs" x="1090" y="693">обоснование ·
-цитата</text> <text class="hs" x="1090" y="712">ещё не запускали</text>
-<path class="dl" d="M960,690 H842" marker-end="url(#g)" />
-<rect class="box" x="440" y="650" width="400" height="80" />
-<text class="t" x="640" y="674">Ручной выбор</text>
-<text class="s" x="640" y="693">топ-5 тем + топ-5 кодов CPC на
-Engine</text> <text class="m" x="640" y="718">tech_choice.csv</text>
-<path class="LN" d="M640,730 V766" marker-end="url(#A)" />
-<rect class="box" x="440" y="770" width="400" height="70" />
-<text class="t" x="640" y="794">Профиль технологии</text>
-<text class="s" x="640" y="813">выбранная версия → работы и патенты
-Engine</text> <text class="m" x="640" y="831">tech_profile_v2</text>
-<!-- legend -->
-<line x1="40" y1="870" x2="1250" y2="870" stroke="#ddd" stroke-width="1"></line>
-<path class="LN" d="M50,896 H96" marker-end="url(#A)" />
-<text x="106" y="900" style="font-size:12px;fill:#444">основной
-путь</text> <rect class="on" x="215" y="887" width="30" height="18" />
-<text x="253" y="900" style="font-size:12px;fill:#444">v2</text>
-<rect class="emb" x="300" y="887" width="30" height="18" />
-<text x="338" y="900" style="font-size:12px;fill:#444">v3</text>
-<rect class="box" x="385" y="887" width="30" height="18" />
-<path class="ln" d="M415,896 H438" marker-end="url(#a)" />
-<text x="446" y="900" style="font-size:12px;fill:#444">вход /
-таблица</text> <path class="ck" d="M570,896 H605" marker-end="url(#a)" />
-<text x="613" y="900" style="font-size:12px;fill:#444">сравнение для
-справки</text>
-<rect class="hold" x="780" y="887" width="30" height="18" />
-<text x="818" y="900" style="font-size:12px;fill:#444">на холде</text>
-<text x="910" y="900" style="font-size:11.5px;fill:#3a3a3a;font-family:Menlo,Consolas,&#39;DejaVu Sans Mono&#39;,monospace">tech_v3_rank</text>
-<text x="1010" y="900" style="font-size:12px;fill:#444">таблица</text>
-</svg>
-</div>
 </div>
 </div>
 <div id="technology-profile" class="section level2">
