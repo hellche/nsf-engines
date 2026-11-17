@@ -4,7 +4,8 @@ What scientific and technological base does each of the 12 NSF Regional Innovati
 awards from 2026) stand on? We trace it from the people and partners the Engine names itself to their
 papers and patents in the Engine's technology, from five years before the award onward.
 
-**Site:** https://hellche.github.io/nsf-engines/ (Pipeline, Methodology, a page per Engine, Publications, Patents)
+**Site:** https://hellche.github.io/nsf-engines/ (Pipeline, Technology profile, a page per Engine, Publications,
+Patents, and a comparison of profile versions). A switch in the header shows the data pages with profile v1 or v3.1.
 
 ## Approach
 
@@ -20,17 +21,21 @@ papers and patents in the Engine's technology, from five years before the award 
 
 | Version | How it is chosen | Status |
 |---|---|---|
-| v1 | 3-5 statements per Engine written by hand; topics from the OpenAlex classifier, CPC codes by hand | used by all metrics on the site |
+| v1 | 3-5 statements per Engine written by hand; topics from the OpenAlex classifier, CPC codes by hand | metrics computed; the site's default |
 | v2 | every OpenAlex topic and CPC group ranked by embedding similarity to all sentences of the grant | rankings only, for comparison |
-| v3.1 | science and technology fragments of the grant grouped into 2-5 technologies; per technology, rank fusion of embeddings with an independent signal (OpenAlex classifier, BM25 on CPC text); a judge with a fixed rubric for what the fusion cannot confirm and as an audit | **core ready**: 128 items for 39 technologies (`data/processed/tech_profile_v3_1_core.csv`) |
+| v3.1 | science and technology fragments of the grant grouped into 2-5 technologies; per technology, rank fusion of embeddings with an independent signal (OpenAlex classifier, BM25 on CPC text); a judge with a fixed rubric for what the fusion cannot confirm and as an audit | core of 128 items for 39 technologies (`data/processed/tech_profile_v3_1_core.csv`); metrics computed (`data/processed/profile_v3_1/`) |
 
 The fragment extraction and the judge scores of v3.1 were made in a chat session, not through an API, and
-are not reproducible; every core item records its basis. Details: the Methodology page.
+are not reproducible; every core item records its basis. Details: the Technology profile page.
+
+The v3.1 core uses CPC main groups (C22B7), v1 mostly subclasses (C22B), so far fewer regional patents fall
+in the v3.1 profile and its patent location quotients are unstable for Engines with few patents.
 
 ## Next
 
-1. Recompute the metrics (steps 6-7) with the v3.1 profile; needs the local USPTO patent files.
-2. A version switch on the site (v1 / v2 / v3.1) and a comparison page.
+1. CPC level of the v3.1 profile: lift main groups to subclasses, or add a broad profile (all groups above a
+   relevance threshold), so that the patent metrics rest on enough patents.
+2. Profile v2 as a third version on the site: it has no technology labels, so its selection rule is open.
 3. Optionally: the v3.1 extraction and judge through the API, three runs each, to check stability.
 
 ## Run order
@@ -44,6 +49,7 @@ are not reproducible; every core item records its basis. Details: the Methodolog
 | Technology profile v2 / v3.1 | `py/05v2a_embed_rank.py v2_1` and `v3_1`, `py/05v3_1b_fuse.py`, `py/05v3_1c_core.py` |
 | Papers; patents; paper details; team patents | `R/06a_openalex_works.R`, `R/06b_patents.R`, `R/06c_works_details.R`, `R/06d_team_patents.R` |
 | Metrics; competition; economic base | `R/07_metrics.R`, `R/07b_competition.R`, `R/07c_economy.R` |
+| (steps 06-07b for profile v3.1) | the same scripts with `PROFILE_VERSION=v3_1` (`R/profile.R`) |
 | Site (`docs/`) | `R/08_render_site.R` (also run by GitHub Actions on every push to `main`) |
 
 Python only for the profile steps (`.venv`, Python 3.12+). Keys: `OPENALEX_API_KEY` in `~/.Renviron`.
