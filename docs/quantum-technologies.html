@@ -1595,16 +1595,25 @@ display: flex; align-items: center; flex-wrap: wrap; gap: 4px 20px; min-height: 
 .site-nav .links { display: flex; align-items: center; flex-wrap: wrap; gap: 4px 20px; }
 .site-nav .links a.active { color: #000; }
 .site-nav svg { width: 18px; height: 18px; vertical-align: -3px; fill: currentColor; }
+.site-nav .versions { display: inline-flex; align-items: center; gap: 0; font-size: 13px; }
+.site-nav .versions .lbl { color: rgba(0,0,0,.6); margin-right: 6px; }
+.site-nav .versions a { border: 1px solid #bbb; padding: 2px 8px; color: rgba(0,0,0,.7); }
+.site-nav .versions a + a { border-left: none; }
+.site-nav .versions a.current { background: #2c3e50; border-color: #2c3e50; color: #fff; }
 #TOC { top: 76px; }
 </style>
 <nav class="site-nav">
-  <a class="brand" href="index.html">NSF Regional Innovation Engines, Cohort 2</a>
+  <a class="brand" href="index.html" data-page="index.html">NSF Regional Innovation Engines, Cohort 2</a>
   <div class="links">
-    <a href="pipeline.html">Pipeline</a>
-    <a href="methodology.html">Technology profile</a>
-    <a href="index.html">12 Engines</a>
-    <a href="publications.html">Publications</a>
-    <a href="patents.html">Patents</a>
+    <a href="pipeline.html" data-page="pipeline.html">Pipeline</a>
+    <a href="methodology.html" data-page="methodology.html">Technology profile</a>
+    <a href="index.html" data-page="index.html">12 Engines</a>
+    <a href="publications.html" data-page="publications.html">Publications</a>
+    <a href="patents.html" data-page="patents.html">Patents</a>
+    <span class="versions" title="Technology profile version: the same page with the other profile">
+      <span class="lbl">Profile</span><a data-version="v1" href="#">v1</a><a data-version="v3_1" href="#">v3.1</a>
+    </span>
+    <a href="compare.html" data-page="compare.html">Compare</a>
     <a href="https://github.com/hellche/nsf-engines" aria-label="GitHub" title="GitHub"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z" /></svg></a>
   </div>
 </nav>
@@ -1614,11 +1623,42 @@ display: flex; align-items: center; flex-wrap: wrap; gap: 4px 20px; min-height: 
     var navs = document.querySelectorAll(".site-nav");
     for (var i = 1; i < navs.length; i++) navs[i].remove();
     document.body.insertBefore(navs[0], document.body.firstChild);
-    var page = location.pathname.split("/").pop() || "index.html";
-    if (["index.html", "pipeline.html", "methodology.html", "publications.html", "patents.html"].indexOf(page) < 0) return;
-    document.querySelectorAll(".site-nav .links a").forEach(function (a) {
-      if (a.getAttribute("href") === page) a.classList.add("active");
+
+    // Technology profile versions: data pages (Engines, index, publications, patents) exist once per version,
+    // v1 in docs/ and v3.1 in docs/v3/ (R/08_render_site.R); pipeline, methodology and compare only in docs/.
+    var VERSIONS = { v1: "", v3_1: "v3/" };
+    var SHARED = ["pipeline.html", "methodology.html", "compare.html"];
+    var parts = location.pathname.split("/");
+    var page = parts.pop() || "index.html";
+    var dir = parts.pop();
+    var current = null, root = "";
+    for (var v in VERSIONS) if (VERSIONS[v] === dir + "/") { current = v; root = "../"; }
+    if (!current && SHARED.indexOf(page) < 0) current = "v1";
+    var store = { get: function () { try { return localStorage.getItem("profileVersion"); } catch (e) { return null; } },
+                  set: function (v) { try { localStorage.setItem("profileVersion", v); } catch (e) {} } };
+    if (current) store.set(current);                       // a data page: its version is the chosen one
+    var chosen = current || (VERSIONS.hasOwnProperty(store.get()) ? store.get() : "v1");
+
+    function setLinks() {
+      document.querySelectorAll(".site-nav [data-page]").forEach(function (a) {
+        var p = a.getAttribute("data-page");
+        a.href = root + (SHARED.indexOf(p) >= 0 ? "" : VERSIONS[chosen]) + p;
+        if (p === page && a.parentNode.classList.contains("links")) a.classList.add("active");
+      });
+      document.querySelectorAll(".site-nav [data-version]").forEach(function (a) {
+        var v = a.getAttribute("data-version");
+        a.classList.toggle("current", v === chosen);
+        a.href = current ? root + VERSIONS[v] + page : "#";
+      });
+    }
+    document.querySelectorAll(".site-nav [data-version]").forEach(function (a) {
+      a.addEventListener("click", function (ev) {
+        var v = a.getAttribute("data-version");
+        if (current) { a.href = root + VERSIONS[v] + page + location.hash; return; }  // same page, same Engine
+        ev.preventDefault(); chosen = v; store.set(v); setLinks();                    // shared page: remember
+      });
     });
+    setLinks();
   })();
 </script>
 <!-- Site header shared by all pages (included via `includes: before_body`) -->
@@ -1634,16 +1674,25 @@ display: flex; align-items: center; flex-wrap: wrap; gap: 4px 20px; min-height: 
 .site-nav .links { display: flex; align-items: center; flex-wrap: wrap; gap: 4px 20px; }
 .site-nav .links a.active { color: #000; }
 .site-nav svg { width: 18px; height: 18px; vertical-align: -3px; fill: currentColor; }
+.site-nav .versions { display: inline-flex; align-items: center; gap: 0; font-size: 13px; }
+.site-nav .versions .lbl { color: rgba(0,0,0,.6); margin-right: 6px; }
+.site-nav .versions a { border: 1px solid #bbb; padding: 2px 8px; color: rgba(0,0,0,.7); }
+.site-nav .versions a + a { border-left: none; }
+.site-nav .versions a.current { background: #2c3e50; border-color: #2c3e50; color: #fff; }
 #TOC { top: 76px; }
 </style>
 <nav class="site-nav">
-  <a class="brand" href="index.html">NSF Regional Innovation Engines, Cohort 2</a>
+  <a class="brand" href="index.html" data-page="index.html">NSF Regional Innovation Engines, Cohort 2</a>
   <div class="links">
-    <a href="pipeline.html">Pipeline</a>
-    <a href="methodology.html">Technology profile</a>
-    <a href="index.html">12 Engines</a>
-    <a href="publications.html">Publications</a>
-    <a href="patents.html">Patents</a>
+    <a href="pipeline.html" data-page="pipeline.html">Pipeline</a>
+    <a href="methodology.html" data-page="methodology.html">Technology profile</a>
+    <a href="index.html" data-page="index.html">12 Engines</a>
+    <a href="publications.html" data-page="publications.html">Publications</a>
+    <a href="patents.html" data-page="patents.html">Patents</a>
+    <span class="versions" title="Technology profile version: the same page with the other profile">
+      <span class="lbl">Profile</span><a data-version="v1" href="#">v1</a><a data-version="v3_1" href="#">v3.1</a>
+    </span>
+    <a href="compare.html" data-page="compare.html">Compare</a>
     <a href="https://github.com/hellche/nsf-engines" aria-label="GitHub" title="GitHub"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z" /></svg></a>
   </div>
 </nav>
@@ -1653,11 +1702,42 @@ display: flex; align-items: center; flex-wrap: wrap; gap: 4px 20px; min-height: 
     var navs = document.querySelectorAll(".site-nav");
     for (var i = 1; i < navs.length; i++) navs[i].remove();
     document.body.insertBefore(navs[0], document.body.firstChild);
-    var page = location.pathname.split("/").pop() || "index.html";
-    if (["index.html", "pipeline.html", "methodology.html", "publications.html", "patents.html"].indexOf(page) < 0) return;
-    document.querySelectorAll(".site-nav .links a").forEach(function (a) {
-      if (a.getAttribute("href") === page) a.classList.add("active");
+
+    // Technology profile versions: data pages (Engines, index, publications, patents) exist once per version,
+    // v1 in docs/ and v3.1 in docs/v3/ (R/08_render_site.R); pipeline, methodology and compare only in docs/.
+    var VERSIONS = { v1: "", v3_1: "v3/" };
+    var SHARED = ["pipeline.html", "methodology.html", "compare.html"];
+    var parts = location.pathname.split("/");
+    var page = parts.pop() || "index.html";
+    var dir = parts.pop();
+    var current = null, root = "";
+    for (var v in VERSIONS) if (VERSIONS[v] === dir + "/") { current = v; root = "../"; }
+    if (!current && SHARED.indexOf(page) < 0) current = "v1";
+    var store = { get: function () { try { return localStorage.getItem("profileVersion"); } catch (e) { return null; } },
+                  set: function (v) { try { localStorage.setItem("profileVersion", v); } catch (e) {} } };
+    if (current) store.set(current);                       // a data page: its version is the chosen one
+    var chosen = current || (VERSIONS.hasOwnProperty(store.get()) ? store.get() : "v1");
+
+    function setLinks() {
+      document.querySelectorAll(".site-nav [data-page]").forEach(function (a) {
+        var p = a.getAttribute("data-page");
+        a.href = root + (SHARED.indexOf(p) >= 0 ? "" : VERSIONS[chosen]) + p;
+        if (p === page && a.parentNode.classList.contains("links")) a.classList.add("active");
+      });
+      document.querySelectorAll(".site-nav [data-version]").forEach(function (a) {
+        var v = a.getAttribute("data-version");
+        a.classList.toggle("current", v === chosen);
+        a.href = current ? root + VERSIONS[v] + page : "#";
+      });
+    }
+    document.querySelectorAll(".site-nav [data-version]").forEach(function (a) {
+      a.addEventListener("click", function (ev) {
+        var v = a.getAttribute("data-version");
+        if (current) { a.href = root + VERSIONS[v] + page + location.hash; return; }  // same page, same Engine
+        ev.preventDefault(); chosen = v; store.set(v); setLinks();                    // shared page: remember
+      });
     });
+    setLinks();
   })();
 </script>
 
@@ -1667,7 +1747,8 @@ display: flex; align-items: center; flex-wrap: wrap; gap: 4px 20px; min-height: 
 
 <h1 class="title toc-ignore">Quantum Technologies Engine: knowledge
 base</h1>
-<h3 class="subtitle">NSF Regional Innovation Engines, Cohort 2</h3>
+<h3 class="subtitle">NSF Regional Innovation Engines, Cohort 2.
+Technology profile v1</h3>
 <h4 class="date">Data retrieved November 17, 2026</h4>
 
 </div>
@@ -1797,9 +1878,9 @@ state(s).</p>
 </div>
 <div id="technology-profile" class="section level2">
 <h2>Technology profile</h2>
-<p>The profile has 4 statements. Item 1 comes from the grant title, the
-rest from the technical part of the NSF abstract. Each statement is
-mapped to one OpenAlex topic and to CPC codes.</p>
+<p>Version 1. The profile has 4 statements. Item 1 comes from the grant
+title, the rest from the technical part of the NSF abstract. Each
+statement is mapped to one OpenAlex topic and to CPC codes.</p>
 <table>
 <colgroup>
 <col width="1%" />
@@ -2544,6 +2625,10 @@ team members. Some Engines publish partner logos without names.</li>
 <li>Region: the Engine’s counties where the list is known (NEO-SMART: 18
 Northeast Ohio counties; STELLAR: 11 counties from the NSF abstract),
 otherwise its states (state-level proxy).</li>
+<li>Technology profile: v1 (switch versions in the header). Partner
+papers and regional patents depend on it: v1 uses mostly CPC subclasses,
+the v3.1 core uses CPC main groups, which are narrower, so it counts
+fewer patents and the LQ of a small region rests on few patents.</li>
 <li>Papers: OpenAlex; partner papers are restricted to the Engine’s
 OpenAlex topics.</li>
 <li>Patents: USPTO grants 2021-2025; inventor locations from
