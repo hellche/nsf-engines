@@ -17,6 +17,14 @@ without a "high" candidate. The judge can only score the candidates it is given:
 not among the 12 (e.g. C08L/C08H for BRIDGES biobased manufacturing, A61F2 for IMPACT orthopedic devices),
 the technology stays without a core item.
 
+Later runs, same way (by hand in the chat, not reproducible), all on 2026-11-17:
+- 24 scores for the two Critical Materials Crossroads technologies left without a confirmed topic by the
+  catch-all topic rule (appended to tech_v3_1_judge_raw.csv);
+- audit of the 94 core items chosen by the fusion (data/manual/tech_v3_1_judge_audit_raw.csv);
+- 331 scores for the 13 places still empty after the audit: candidates down to fused rank 30, minus those
+  already scored (appended to tech_v3_1_judge_raw.csv). In this batch the judge wrote a reason for every
+  non-zero score; candidates it read and found unrelated got score 0 with the reason "unrelated".
+
 ---
 
 You are given one technology of an NSF Regional Innovation Engine grant, described by a short label and the

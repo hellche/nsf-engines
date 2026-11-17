@@ -1,289 +1,620 @@
 kind,engine_name,tech_id,item_id,score,reason
 oa,BRIDGES,3,T14260,1,"business and societal effects of AI, not decision-support tools"
-oa,BRIDGES,3,T10763,2,"digital twins appear in industrial digital transformation work"
+oa,BRIDGES,3,T10763,2,digital twins appear in industrial digital transformation work
 oa,BRIDGES,3,T11891,1,"business intelligence, not engineering decision support"
-oa,BRIDGES,3,T11734,3,"decision-support systems directly"
-oa,BRIDGES,3,T13064,0,"unrelated"
-oa,BRIDGES,3,T11629,0,"unrelated (child health)"
+oa,BRIDGES,3,T11734,3,decision-support systems directly
+oa,BRIDGES,3,T13064,0,unrelated
+oa,BRIDGES,3,T11629,0,unrelated (child health)
 oa,BRIDGES,3,T10315,0,"behavioural decision-making, not decision-support systems"
-oa,BRIDGES,3,T11118,0,"unrelated"
-oa,BRIDGES,3,T11732,0,"'twin' in another meaning"
-oa,BRIDGES,3,T10702,0,"unrelated"
-oa,BRIDGES,3,T10673,0,"unrelated"
+oa,BRIDGES,3,T11118,0,unrelated
+oa,BRIDGES,3,T11732,0,'twin' in another meaning
+oa,BRIDGES,3,T10702,0,unrelated
+oa,BRIDGES,3,T10673,0,unrelated
 oa,BRIDGES,3,T14414,0,"AI in education, not decision support"
-oa,IMPACT,3,T11775,1,"diagnostics of one unrelated disease"
+oa,IMPACT,3,T11775,1,diagnostics of one unrelated disease
 oa,IMPACT,3,T12574,1,"clinical reasoning skills, not diagnostic technology"
-oa,IMPACT,3,T13374,1,"diagnostics of unrelated disorders"
-oa,IMPACT,3,T10428,0,"unrelated"
-oa,IMPACT,3,T11316,1,"diagnosis of one unrelated disease"
-oa,IMPACT,3,T12874,1,"imaging diagnostics of unrelated disease"
-oa,IMPACT,3,T11987,0,"unrelated"
-oa,IMPACT,3,T12369,1,"detection of one unrelated disease"
-oa,IMPACT,3,T12578,1,"diagnosis of one unrelated disease"
-oa,IMPACT,3,T11894,1,"radiology practice and education"
-oa,IMPACT,3,T11551,1,"diagnosis of one unrelated disease"
-oa,IMPACT,3,T11396,1,"general AI in healthcare"
-oa,IMPACT,5,T10512,3,"orthopaedic implants directly"
-oa,IMPACT,5,T11159,1,"generic manufacturing"
-oa,IMPACT,5,T10059,2,"materials for bone implants and scaffolds"
+oa,IMPACT,3,T13374,1,diagnostics of unrelated disorders
+oa,IMPACT,3,T10428,0,unrelated
+oa,IMPACT,3,T11316,1,diagnosis of one unrelated disease
+oa,IMPACT,3,T12874,1,imaging diagnostics of unrelated disease
+oa,IMPACT,3,T11987,0,unrelated
+oa,IMPACT,3,T12369,1,detection of one unrelated disease
+oa,IMPACT,3,T12578,1,diagnosis of one unrelated disease
+oa,IMPACT,3,T11894,1,radiology practice and education
+oa,IMPACT,3,T11551,1,diagnosis of one unrelated disease
+oa,IMPACT,3,T11396,1,general AI in healthcare
+oa,IMPACT,5,T10512,3,orthopaedic implants directly
+oa,IMPACT,5,T11159,1,generic manufacturing
+oa,IMPACT,5,T10059,2,materials for bone implants and scaffolds
 oa,IMPACT,5,T11293,1,"infections, clinical"
-oa,IMPACT,5,T10562,2,"outcomes of knee implants"
-oa,IMPACT,5,T12006,0,"workplace ergonomics"
+oa,IMPACT,5,T10562,2,outcomes of knee implants
+oa,IMPACT,5,T12006,0,workplace ergonomics
 oa,IMPACT,5,T10356,0,"dental orthopedics, not orthopedic devices"
 oa,IMPACT,5,T10630,1,"surgery and rehabilitation, clinical"
-oa,IMPACT,5,T10084,0,"pain rehabilitation"
-oa,IMPACT,5,T10852,0,"jaw joint disorders"
+oa,IMPACT,5,T10084,0,pain rehabilitation
+oa,IMPACT,5,T10852,0,jaw joint disorders
 oa,IMPACT,5,T14510,0,"imaging, not devices"
 oa,IMPACT,5,T10455,1,"surgery of one region, clinical"
-oa,NEO-SMART,1,T12959,1,"generic engineering and materials"
-oa,NEO-SMART,1,T13290,1,"generic"
-oa,NEO-SMART,1,T13547,0,"economics"
+oa,NEO-SMART,1,T12959,1,generic engineering and materials
+oa,NEO-SMART,1,T13290,1,generic
+oa,NEO-SMART,1,T13547,0,economics
 oa,NEO-SMART,1,T11746,1,"chemistry of metal compounds, not metals as materials"
-oa,NEO-SMART,1,T10139,0,"heavy metals as pollutants"
-oa,NEO-SMART,1,T10790,0,"toxicity"
-oa,NEO-SMART,1,T13079,0,"heavy metals in plants"
-oa,NEO-SMART,1,T14184,3,"metallurgy and metals as materials"
-oa,NEO-SMART,1,T10163,0,"metal complexes as drugs"
-oa,NEO-SMART,1,T12944,0,"unrelated"
-oa,NEO-SMART,1,T10447,0,"ecotoxicology"
-oa,NEO-SMART,1,T10180,0,"analytical chemistry"
-oa,NEO-SMART,3,T10495,2,"chemicals from natural gas feedstock"
-oa,NEO-SMART,3,T12129,0,"energy policy"
-oa,NEO-SMART,3,T12271,0,"renewable power"
+oa,NEO-SMART,1,T10139,0,heavy metals as pollutants
+oa,NEO-SMART,1,T10790,0,toxicity
+oa,NEO-SMART,1,T13079,0,heavy metals in plants
+oa,NEO-SMART,1,T14184,3,metallurgy and metals as materials
+oa,NEO-SMART,1,T10163,0,metal complexes as drugs
+oa,NEO-SMART,1,T12944,0,unrelated
+oa,NEO-SMART,1,T10447,0,ecotoxicology
+oa,NEO-SMART,1,T10180,0,analytical chemistry
+oa,NEO-SMART,3,T10495,2,chemicals from natural gas feedstock
+oa,NEO-SMART,3,T12129,0,energy policy
+oa,NEO-SMART,3,T12271,0,renewable power
 oa,NEO-SMART,3,T13604,1,"physical chemistry of materials, general"
 oa,NEO-SMART,3,T10967,1,"separation, not chemicals production or coatings"
 oa,NEO-SMART,3,T10310,2,"corrosion protection, a main use of coatings"
 oa,NEO-SMART,3,T11593,1,"catalysis with CO2, one step removed"
-oa,NEO-SMART,3,T11529,0,"refrigeration"
-oa,NEO-SMART,3,T12105,0,"building physics"
-oa,NEO-SMART,3,T10568,0,"power and cooling cycles"
-oa,NEO-SMART,3,T14097,0,"education"
+oa,NEO-SMART,3,T11529,0,refrigeration
+oa,NEO-SMART,3,T12105,0,building physics
+oa,NEO-SMART,3,T10568,0,power and cooling cycles
+oa,NEO-SMART,3,T14097,0,education
 oa,NEO-SMART,3,T11360,1,"flame retardant additives, partly coatings"
-oa,RuralSTAMINA Biomanufacturing,3,T10864,2,"mixing and fluid dynamics in scale-up of bioreactors"
-oa,RuralSTAMINA Biomanufacturing,3,T11663,0,"unrelated"
-oa,RuralSTAMINA Biomanufacturing,3,T10932,2,"bioproduction by engineered microbes"
+oa,RuralSTAMINA Biomanufacturing,3,T10864,2,mixing and fluid dynamics in scale-up of bioreactors
+oa,RuralSTAMINA Biomanufacturing,3,T11663,0,unrelated
+oa,RuralSTAMINA Biomanufacturing,3,T10932,2,bioproduction by engineered microbes
 oa,RuralSTAMINA Biomanufacturing,3,T12867,1,"biosensors, mostly diagnostic"
-oa,RuralSTAMINA Biomanufacturing,3,T10593,0,"biofilm biology"
-oa,RuralSTAMINA Biomanufacturing,3,T11970,0,"generic lab techniques"
-oa,RuralSTAMINA Biomanufacturing,3,T11131,0,"unrelated"
-oa,RuralSTAMINA Biomanufacturing,3,T11966,0,"unrelated"
-oa,RuralSTAMINA Biomanufacturing,3,T10379,0,"unrelated"
-oa,RuralSTAMINA Biomanufacturing,3,T10059,0,"unrelated"
-oa,RuralSTAMINA Biomanufacturing,3,T13223,0,"unrelated"
+oa,RuralSTAMINA Biomanufacturing,3,T10593,0,biofilm biology
+oa,RuralSTAMINA Biomanufacturing,3,T11970,0,generic lab techniques
+oa,RuralSTAMINA Biomanufacturing,3,T11131,0,unrelated
+oa,RuralSTAMINA Biomanufacturing,3,T11966,0,unrelated
+oa,RuralSTAMINA Biomanufacturing,3,T10379,0,unrelated
+oa,RuralSTAMINA Biomanufacturing,3,T10059,0,unrelated
+oa,RuralSTAMINA Biomanufacturing,3,T13223,0,unrelated
 oa,RuralSTAMINA Biomanufacturing,3,T11085,1,"fungal applications, general"
-cpc,BRIDGES,1,B21D51/00,0,"sheet metal objects"
+cpc,BRIDGES,1,B21D51/00,0,sheet metal objects
 cpc,BRIDGES,1,Y02P70/00,1,"climate mitigation in production, generic"
 cpc,BRIDGES,1,B29C64/00,1,"additive manufacturing, not biobased"
-cpc,BRIDGES,1,A01H11/00,0,"mosses"
+cpc,BRIDGES,1,A01H11/00,0,mosses
 cpc,BRIDGES,1,D01F9/00,1,"filaments of other substances, not specifically biobased"
-cpc,BRIDGES,1,H05K13/00,0,"electronics assembly"
+cpc,BRIDGES,1,H05K13/00,0,electronics assembly
 cpc,BRIDGES,1,A01H6/00,1,"new plant varieties, feedstock only"
-cpc,BRIDGES,1,A01H17/00,0,"symbiotic plant combinations"
-cpc,BRIDGES,1,G06Q10/00,0,"administration"
-cpc,BRIDGES,1,B21C49/00,0,"metal working"
-cpc,BRIDGES,1,A01H13/00,0,"algae"
-cpc,BRIDGES,1,B21C37/00,0,"metal working"
-cpc,BRIDGES,3,G06J3/00,0,"hybrid analogue-digital computers"
-cpc,BRIDGES,3,Y10S706/00,2,"artificial intelligence data processing"
-cpc,BRIDGES,3,G06C17/00,0,"mechanical computers"
-cpc,BRIDGES,3,H04J7/00,0,"multiplex communication"
-cpc,BRIDGES,3,H04J9/00,0,"multiplex communication"
-cpc,BRIDGES,3,B60W60/00,0,"autonomous vehicles"
-cpc,BRIDGES,3,H04J1/00,0,"multiplex communication"
-cpc,BRIDGES,3,H04J4/00,0,"multiplex communication"
-cpc,BRIDGES,3,H04S1/00,0,"stereo sound"
-cpc,BRIDGES,3,H04S3/00,0,"stereo sound"
-cpc,BRIDGES,3,G06C29/00,0,"mechanical computers"
-cpc,BRIDGES,3,G06C25/00,0,"mechanical computers"
-cpc,Critical Materials Crossroads,2,B81C1/00,0,"microstructure fabrication"
+cpc,BRIDGES,1,A01H17/00,0,symbiotic plant combinations
+cpc,BRIDGES,1,G06Q10/00,0,administration
+cpc,BRIDGES,1,B21C49/00,0,metal working
+cpc,BRIDGES,1,A01H13/00,0,algae
+cpc,BRIDGES,1,B21C37/00,0,metal working
+cpc,BRIDGES,3,G06J3/00,0,hybrid analogue-digital computers
+cpc,BRIDGES,3,Y10S706/00,2,artificial intelligence data processing
+cpc,BRIDGES,3,G06C17/00,0,mechanical computers
+cpc,BRIDGES,3,H04J7/00,0,multiplex communication
+cpc,BRIDGES,3,H04J9/00,0,multiplex communication
+cpc,BRIDGES,3,B60W60/00,0,autonomous vehicles
+cpc,BRIDGES,3,H04J1/00,0,multiplex communication
+cpc,BRIDGES,3,H04J4/00,0,multiplex communication
+cpc,BRIDGES,3,H04S1/00,0,stereo sound
+cpc,BRIDGES,3,H04S3/00,0,stereo sound
+cpc,BRIDGES,3,G06C29/00,0,mechanical computers
+cpc,BRIDGES,3,G06C25/00,0,mechanical computers
+cpc,Critical Materials Crossroads,2,B81C1/00,0,microstructure fabrication
 cpc,Critical Materials Crossroads,2,C03B17/00,1,"glass forming by flow, other material"
 cpc,Critical Materials Crossroads,2,B22F10/00,1,"metal additive manufacturing, not continuous processing"
-cpc,Critical Materials Crossroads,2,C22B13/00,0,"lead extraction"
-cpc,Critical Materials Crossroads,2,C25F7/00,0,"electrolytic removal cells"
-cpc,Critical Materials Crossroads,2,H05K13/00,0,"electronics assembly"
+cpc,Critical Materials Crossroads,2,C22B13/00,0,lead extraction
+cpc,Critical Materials Crossroads,2,C25F7/00,0,electrolytic removal cells
+cpc,Critical Materials Crossroads,2,H05K13/00,0,electronics assembly
 cpc,Critical Materials Crossroads,2,C22B15/00,1,"copper extraction, materials processing"
-cpc,Critical Materials Crossroads,2,B29C64/00,1,"additive manufacturing"
-cpc,Critical Materials Crossroads,2,B29B7/00,1,"mixing of plastics"
-cpc,Critical Materials Crossroads,2,G05B19/00,2,"program control of processes"
+cpc,Critical Materials Crossroads,2,B29C64/00,1,additive manufacturing
+cpc,Critical Materials Crossroads,2,B29B7/00,1,mixing of plastics
+cpc,Critical Materials Crossroads,2,G05B19/00,2,program control of processes
 cpc,Critical Materials Crossroads,2,B01J19/00,3,"chemical processes and apparatus, incl. continuous flow reactors"
-cpc,Critical Materials Crossroads,2,B22F12/00,0,"additive manufacturing apparatus"
-cpc,Critical Mineral Accelerator,1,E21F13/00,0,"underground transport"
-cpc,Critical Mineral Accelerator,1,C22B11/00,2,"obtaining noble metals"
+cpc,Critical Materials Crossroads,2,B22F12/00,0,additive manufacturing apparatus
+cpc,Critical Mineral Accelerator,1,E21F13/00,0,underground transport
+cpc,Critical Mineral Accelerator,1,C22B11/00,2,obtaining noble metals
 cpc,Critical Mineral Accelerator,1,C22B3/00,3,"wet extraction of metals from ores, incl. bioleaching"
-cpc,Critical Mineral Accelerator,1,E21C35/00,0,"mining machine parts"
-cpc,Critical Mineral Accelerator,1,C22B34/00,2,"obtaining refractory metals"
-cpc,Critical Mineral Accelerator,1,B29B17/00,0,"plastics recovery"
-cpc,Critical Mineral Accelerator,1,E21C37/00,1,"dislodging in mining"
-cpc,Critical Mineral Accelerator,1,C22B60/00,1,"radioactive metals"
+cpc,Critical Mineral Accelerator,1,E21C35/00,0,mining machine parts
+cpc,Critical Mineral Accelerator,1,C22B34/00,2,obtaining refractory metals
+cpc,Critical Mineral Accelerator,1,B29B17/00,0,plastics recovery
+cpc,Critical Mineral Accelerator,1,E21C37/00,1,dislodging in mining
+cpc,Critical Mineral Accelerator,1,C22B60/00,1,radioactive metals
 cpc,Critical Mineral Accelerator,1,B09B3/00,1,"solid waste treatment, not metal recovery"
 cpc,Critical Mineral Accelerator,1,E21B43/00,1,"oil and gas, partly in-situ leaching"
-cpc,Critical Mineral Accelerator,1,F23G7/00,0,"incineration"
-cpc,Critical Mineral Accelerator,1,C09C1/00,0,"inorganic fillers and pigments"
-cpc,Critical Mineral Accelerator,2,G01V5/00,3,"prospecting by radiation"
-cpc,Critical Mineral Accelerator,2,G01V3/00,3,"electric and magnetic prospecting"
+cpc,Critical Mineral Accelerator,1,F23G7/00,0,incineration
+cpc,Critical Mineral Accelerator,1,C09C1/00,0,inorganic fillers and pigments
+cpc,Critical Mineral Accelerator,2,G01V5/00,3,prospecting by radiation
+cpc,Critical Mineral Accelerator,2,G01V3/00,3,electric and magnetic prospecting
 cpc,Critical Mineral Accelerator,2,G06F18/00,1,"pattern recognition, general"
-cpc,Critical Mineral Accelerator,2,G01P7/00,0,"speed measurement"
+cpc,Critical Mineral Accelerator,2,G01P7/00,0,speed measurement
 cpc,Critical Mineral Accelerator,2,E21B47/00,1,"borehole survey, mostly oil and gas"
-cpc,Critical Mineral Accelerator,2,E21B27/00,0,"borehole containers"
+cpc,Critical Mineral Accelerator,2,E21B27/00,0,borehole containers
 cpc,Critical Mineral Accelerator,2,G01N30/00,1,"chromatography, general analysis"
-cpc,Critical Mineral Accelerator,2,G01V1/00,2,"seismic prospecting"
+cpc,Critical Mineral Accelerator,2,G01V1/00,2,seismic prospecting
 cpc,Critical Mineral Accelerator,2,Y10S706/00,1,"artificial intelligence, general"
-cpc,Critical Mineral Accelerator,2,G01C21/00,0,"navigation"
-cpc,Critical Mineral Accelerator,2,E21B28/00,0,"well stimulation"
+cpc,Critical Mineral Accelerator,2,G01C21/00,0,navigation
+cpc,Critical Mineral Accelerator,2,E21B28/00,0,well stimulation
 cpc,Critical Mineral Accelerator,2,G06V10/00,1,"image recognition, general"
 cpc,IMPACT,1,C12N5/00,1,"cell and tissue culture, general"
-cpc,IMPACT,1,F16B1/00,0,"fasteners"
-cpc,IMPACT,1,F16B12/00,0,"furniture joints"
+cpc,IMPACT,1,F16B1/00,0,fasteners
+cpc,IMPACT,1,F16B12/00,0,furniture joints
 cpc,IMPACT,1,A61B17/00,2,"surgical instruments, incl. orthopaedic"
-cpc,IMPACT,1,F16B47/00,0,"suction cups"
-cpc,IMPACT,1,A61P19/00,3,"drugs for skeletal disorders"
-cpc,IMPACT,1,F16B41/00,0,"bolts and nuts"
-cpc,IMPACT,1,A47B91/00,0,"furniture"
-cpc,IMPACT,1,B68C3/00,0,"stirrups"
-cpc,IMPACT,1,B25J9/00,0,"robot manipulators"
-cpc,IMPACT,1,A61C8/00,0,"dental implants"
+cpc,IMPACT,1,F16B47/00,0,suction cups
+cpc,IMPACT,1,A61P19/00,3,drugs for skeletal disorders
+cpc,IMPACT,1,F16B41/00,0,bolts and nuts
+cpc,IMPACT,1,A47B91/00,0,furniture
+cpc,IMPACT,1,B68C3/00,0,stirrups
+cpc,IMPACT,1,B25J9/00,0,robot manipulators
+cpc,IMPACT,1,A61C8/00,0,dental implants
 cpc,IMPACT,1,A61F2/00,2,"prostheses, incl. joint replacements"
-cpc,IMPACT,5,A43D71/00,0,"shoe machines"
-cpc,IMPACT,5,A43D1/00,0,"foot measuring for shoes"
-cpc,IMPACT,5,B81C1/00,0,"microstructure fabrication"
-cpc,IMPACT,5,A43D25/00,0,"shoe machines"
-cpc,IMPACT,5,A43D11/00,0,"shoe machines"
-cpc,IMPACT,5,A43D13/00,0,"shoe machines"
-cpc,IMPACT,5,A43D15/00,0,"shoe machines"
-cpc,IMPACT,5,A43D111/00,0,"shoe machines"
-cpc,IMPACT,5,A43D33/00,0,"shoe machines"
-cpc,IMPACT,5,A43D83/00,0,"shoe machines"
-cpc,IMPACT,5,A43D23/00,0,"shoe machines"
-cpc,IMPACT,5,A43D119/00,0,"shoe machines"
-cpc,NEO-SMART,1,B23P6/00,1,"repair of objects"
-cpc,NEO-SMART,1,B23P11/00,1,"joining metal parts"
-cpc,NEO-SMART,1,B22D21/00,2,"casting of non-ferrous metals"
-cpc,NEO-SMART,1,C23C24/00,1,"coating from powder"
-cpc,NEO-SMART,1,C22B7/00,2,"producing metals from scrap"
-cpc,NEO-SMART,1,B22D43/00,1,"cleaning molten metal"
-cpc,NEO-SMART,1,B21C31/00,1,"extrusion control"
-cpc,NEO-SMART,1,B21D33/00,1,"metal foils"
-cpc,NEO-SMART,1,B22D39/00,1,"molten metal supply"
-cpc,NEO-SMART,1,C23C28/00,1,"multilayer coatings"
-cpc,NEO-SMART,1,C22B5/00,2,"reducing to metals"
-cpc,NEO-SMART,1,B21C27/00,1,"extrusion containers"
-cpc,NEO-SMART,4,C22B13/00,0,"lead extraction"
-cpc,NEO-SMART,4,G16C60/00,3,"computational materials science"
+cpc,IMPACT,5,A43D71/00,0,shoe machines
+cpc,IMPACT,5,A43D1/00,0,foot measuring for shoes
+cpc,IMPACT,5,B81C1/00,0,microstructure fabrication
+cpc,IMPACT,5,A43D25/00,0,shoe machines
+cpc,IMPACT,5,A43D11/00,0,shoe machines
+cpc,IMPACT,5,A43D13/00,0,shoe machines
+cpc,IMPACT,5,A43D15/00,0,shoe machines
+cpc,IMPACT,5,A43D111/00,0,shoe machines
+cpc,IMPACT,5,A43D33/00,0,shoe machines
+cpc,IMPACT,5,A43D83/00,0,shoe machines
+cpc,IMPACT,5,A43D23/00,0,shoe machines
+cpc,IMPACT,5,A43D119/00,0,shoe machines
+cpc,NEO-SMART,1,B23P6/00,1,repair of objects
+cpc,NEO-SMART,1,B23P11/00,1,joining metal parts
+cpc,NEO-SMART,1,B22D21/00,2,casting of non-ferrous metals
+cpc,NEO-SMART,1,C23C24/00,1,coating from powder
+cpc,NEO-SMART,1,C22B7/00,2,producing metals from scrap
+cpc,NEO-SMART,1,B22D43/00,1,cleaning molten metal
+cpc,NEO-SMART,1,B21C31/00,1,extrusion control
+cpc,NEO-SMART,1,B21D33/00,1,metal foils
+cpc,NEO-SMART,1,B22D39/00,1,molten metal supply
+cpc,NEO-SMART,1,C23C28/00,1,multilayer coatings
+cpc,NEO-SMART,1,C22B5/00,2,reducing to metals
+cpc,NEO-SMART,1,B21C27/00,1,extrusion containers
+cpc,NEO-SMART,4,C22B13/00,0,lead extraction
+cpc,NEO-SMART,4,G16C60/00,3,computational materials science
 cpc,NEO-SMART,4,C22B5/00,1,"metal production, general"
-cpc,NEO-SMART,4,C22B7/00,2,"recovery of metals from scrap: life cycle"
-cpc,NEO-SMART,4,B63B71/00,0,"ship design"
-cpc,NEO-SMART,4,G16C20/00,2,"chemoinformatics"
-cpc,NEO-SMART,4,B29B17/00,2,"recovery of plastics: life cycle"
-cpc,NEO-SMART,4,C22B23/00,0,"nickel and cobalt extraction"
-cpc,NEO-SMART,4,C22B11/00,0,"noble metals extraction"
+cpc,NEO-SMART,4,C22B7/00,2,recovery of metals from scrap: life cycle
+cpc,NEO-SMART,4,B63B71/00,0,ship design
+cpc,NEO-SMART,4,G16C20/00,2,chemoinformatics
+cpc,NEO-SMART,4,B29B17/00,2,recovery of plastics: life cycle
+cpc,NEO-SMART,4,C22B23/00,0,nickel and cobalt extraction
+cpc,NEO-SMART,4,C22B11/00,0,noble metals extraction
 cpc,NEO-SMART,4,Y02P20/00,1,"chemical industry mitigation, generic"
 cpc,NEO-SMART,4,G06F30/00,1,"computer-aided design, not materials"
-cpc,NEO-SMART,4,C22B21/00,0,"aluminium extraction"
-cpc,RETI,1,H02J13/00,3,"remote monitoring and control of power networks"
-cpc,RETI,1,Y04S20/00,2,"smart grid end-user side"
+cpc,NEO-SMART,4,C22B21/00,0,aluminium extraction
+cpc,RETI,1,H02J13/00,3,remote monitoring and control of power networks
+cpc,RETI,1,Y04S20/00,2,smart grid end-user side
 cpc,RETI,1,Y04S10/00,3,"smart grid systems for generation, transmission, distribution"
-cpc,RETI,1,Y04S40/00,2,"smart grid communication and IT"
-cpc,RETI,1,G05D23/00,0,"temperature control"
-cpc,RETI,1,Y04S30/00,1,"smart grid for transport"
-cpc,RETI,1,H02J11/00,1,"station auxiliaries"
-cpc,RETI,1,Y04S50/00,1,"energy markets"
-cpc,RETI,1,H02J15/00,2,"grid energy storage: distributed energy resources"
-cpc,RETI,1,G05D1/00,0,"vehicle control"
+cpc,RETI,1,Y04S40/00,2,smart grid communication and IT
+cpc,RETI,1,G05D23/00,0,temperature control
+cpc,RETI,1,Y04S30/00,1,smart grid for transport
+cpc,RETI,1,H02J11/00,1,station auxiliaries
+cpc,RETI,1,Y04S50/00,1,energy markets
+cpc,RETI,1,H02J15/00,2,grid energy storage: distributed energy resources
+cpc,RETI,1,G05D1/00,0,vehicle control
 cpc,RETI,1,H04L12/00,1,"data networks, general"
-cpc,RETI,1,H02J1/00,2,"DC distribution networks"
-cpc,RuralSTAMINA Biomanufacturing,1,A01K5/00,0,"animal feeding devices"
-cpc,RuralSTAMINA Biomanufacturing,1,A01N25/00,0,"biocide formulations"
-cpc,RuralSTAMINA Biomanufacturing,1,C08J9/00,0,"porous plastics"
-cpc,RuralSTAMINA Biomanufacturing,1,C12M21/00,3,"bioreactors for production"
-cpc,RuralSTAMINA Biomanufacturing,1,C05F5/00,1,"fertilisers from residues"
+cpc,RETI,1,H02J1/00,2,DC distribution networks
+cpc,RuralSTAMINA Biomanufacturing,1,A01K5/00,0,animal feeding devices
+cpc,RuralSTAMINA Biomanufacturing,1,A01N25/00,0,biocide formulations
+cpc,RuralSTAMINA Biomanufacturing,1,C08J9/00,0,porous plastics
+cpc,RuralSTAMINA Biomanufacturing,1,C12M21/00,3,bioreactors for production
+cpc,RuralSTAMINA Biomanufacturing,1,C05F5/00,1,fertilisers from residues
 cpc,RuralSTAMINA Biomanufacturing,1,Y02P20/00,1,"chemical industry mitigation, generic"
 cpc,RuralSTAMINA Biomanufacturing,1,C10L5/00,1,"solid fuels, partly from biomass"
-cpc,RuralSTAMINA Biomanufacturing,1,A01N39/00,0,"biocides"
+cpc,RuralSTAMINA Biomanufacturing,1,A01N39/00,0,biocides
 cpc,RuralSTAMINA Biomanufacturing,1,A61K39/00,2,"vaccines, a named product"
-cpc,RuralSTAMINA Biomanufacturing,1,A01F7/00,0,"threshing"
-cpc,RuralSTAMINA Biomanufacturing,1,C05F7/00,0,"fertilisers from sewage"
-cpc,RuralSTAMINA Biomanufacturing,1,A01K39/00,0,"poultry feeders"
-cpc,RuralSTAMINA Biomanufacturing,3,B81C1/00,0,"microstructure fabrication"
-cpc,RuralSTAMINA Biomanufacturing,3,C25D21/00,0,"electroplating"
-cpc,RuralSTAMINA Biomanufacturing,3,C12P39/00,2,"mixed-culture fermentation processes"
-cpc,RuralSTAMINA Biomanufacturing,3,C25D13/00,0,"electrophoretic coating"
-cpc,RuralSTAMINA Biomanufacturing,3,C12M1/00,3,"apparatus for microbiology and enzymology"
+cpc,RuralSTAMINA Biomanufacturing,1,A01F7/00,0,threshing
+cpc,RuralSTAMINA Biomanufacturing,1,C05F7/00,0,fertilisers from sewage
+cpc,RuralSTAMINA Biomanufacturing,1,A01K39/00,0,poultry feeders
+cpc,RuralSTAMINA Biomanufacturing,3,B81C1/00,0,microstructure fabrication
+cpc,RuralSTAMINA Biomanufacturing,3,C25D21/00,0,electroplating
+cpc,RuralSTAMINA Biomanufacturing,3,C12P39/00,2,mixed-culture fermentation processes
+cpc,RuralSTAMINA Biomanufacturing,3,C25D13/00,0,electrophoretic coating
+cpc,RuralSTAMINA Biomanufacturing,3,C12M1/00,3,apparatus for microbiology and enzymology
 cpc,RuralSTAMINA Biomanufacturing,3,Y10S706/00,1,"artificial intelligence, general"
 cpc,RuralSTAMINA Biomanufacturing,3,G06F17/00,0,"digital computing, general"
-cpc,RuralSTAMINA Biomanufacturing,3,Y10S715/00,0,"document processing"
-cpc,RuralSTAMINA Biomanufacturing,3,G06T3/00,0,"image transformations"
-cpc,RuralSTAMINA Biomanufacturing,3,C12M21/00,3,"bioreactors"
-cpc,RuralSTAMINA Biomanufacturing,3,C12M41/00,3,"monitoring and control of bioreactors"
+cpc,RuralSTAMINA Biomanufacturing,3,Y10S715/00,0,document processing
+cpc,RuralSTAMINA Biomanufacturing,3,G06T3/00,0,image transformations
+cpc,RuralSTAMINA Biomanufacturing,3,C12M21/00,3,bioreactors
+cpc,RuralSTAMINA Biomanufacturing,3,C12M41/00,3,monitoring and control of bioreactors
 cpc,RuralSTAMINA Biomanufacturing,3,C12N1/00,1,"microorganisms, not processes"
-cpc,STELLAR,3,H01S3/00,3,"lasers"
-cpc,STELLAR,3,H01S5/00,3,"semiconductor lasers"
-cpc,STELLAR,3,H05K13/00,1,"electronics assembly"
-cpc,STELLAR,3,B29C64/00,0,"additive manufacturing"
+cpc,STELLAR,3,H01S3/00,3,lasers
+cpc,STELLAR,3,H01S5/00,3,semiconductor lasers
+cpc,STELLAR,3,H05K13/00,1,electronics assembly
+cpc,STELLAR,3,B29C64/00,0,additive manufacturing
 cpc,STELLAR,3,B23K26/00,1,"laser as a tool, not laser manufacturing"
-cpc,STELLAR,3,B33Y10/00,0,"additive manufacturing"
-cpc,STELLAR,3,B33Y30/00,0,"additive manufacturing"
-cpc,STELLAR,3,B41C1/00,0,"printing forms"
-cpc,STELLAR,3,G02B5/00,2,"optical elements: laser components"
-cpc,STELLAR,3,F42B33/00,0,"ammunition"
-cpc,STELLAR,3,C06F1/00,0,"matches"
-cpc,STELLAR,3,B33Y80/00,0,"additive manufacturing"
+cpc,STELLAR,3,B33Y10/00,0,additive manufacturing
+cpc,STELLAR,3,B33Y30/00,0,additive manufacturing
+cpc,STELLAR,3,B41C1/00,0,printing forms
+cpc,STELLAR,3,G02B5/00,2,optical elements: laser components
+cpc,STELLAR,3,F42B33/00,0,ammunition
+cpc,STELLAR,3,C06F1/00,0,matches
+cpc,STELLAR,3,B33Y80/00,0,additive manufacturing
 cpc,Seafood,1,F23G7/00,1,"incineration of waste, not utilization"
-cpc,Seafood,1,A23L17/00,3,"seafood products"
-cpc,Seafood,1,C05F5/00,1,"fertilisers from residues"
+cpc,Seafood,1,A23L17/00,3,seafood products
+cpc,Seafood,1,C05F5/00,1,fertilisers from residues
 cpc,Seafood,1,Y02W10/00,1,"wastewater, generic"
 cpc,Seafood,1,Y02W30/00,1,"solid waste, generic"
-cpc,Seafood,1,C02F1/00,1,"water treatment"
-cpc,Seafood,1,B09B3/00,1,"solid waste treatment"
-cpc,Seafood,1,C02F9/00,0,"water treatment"
-cpc,Seafood,1,C02F7/00,0,"aeration"
-cpc,Seafood,1,A22C29/00,3,"processing shellfish"
-cpc,Seafood,1,F23G5/00,0,"incinerators"
-cpc,Seafood,1,Y02W90/00,0,"generic"
-cpc,Seafood,3,F25D13/00,3,"cold rooms"
-cpc,Seafood,3,F25D3/00,3,"cold-storage bodies"
-cpc,Seafood,3,F25D11/00,2,"movable refrigerators"
+cpc,Seafood,1,C02F1/00,1,water treatment
+cpc,Seafood,1,B09B3/00,1,solid waste treatment
+cpc,Seafood,1,C02F9/00,0,water treatment
+cpc,Seafood,1,C02F7/00,0,aeration
+cpc,Seafood,1,A22C29/00,3,processing shellfish
+cpc,Seafood,1,F23G5/00,0,incinerators
+cpc,Seafood,1,Y02W90/00,0,generic
+cpc,Seafood,3,F25D13/00,3,cold rooms
+cpc,Seafood,3,F25D3/00,3,cold-storage bodies
+cpc,Seafood,3,F25D11/00,2,movable refrigerators
 cpc,Seafood,3,Y02T10/00,1,"road transport, generic"
-cpc,Seafood,3,F25D1/00,2,"cooling with natural cold"
-cpc,Seafood,3,F25D17/00,2,"circulating cooling fluids in refrigerators"
-cpc,Seafood,3,Y02B30/00,1,"HVAC"
-cpc,Seafood,3,B01D8/00,0,"cold traps in separation"
-cpc,Seafood,3,Y02T90/00,0,"generic"
-cpc,Seafood,3,Y02B50/00,0,"elevators"
-cpc,Seafood,3,Y02A90/00,0,"generic"
-cpc,Seafood,3,F25D25/00,2,"handling goods in refrigerators"
-cpc,Seafood,4,Y02T10/00,0,"road transport"
-cpc,Seafood,4,Y02T90/00,0,"generic"
-cpc,Seafood,4,Y02A90/00,0,"generic"
-cpc,Seafood,4,Y02W90/00,0,"generic"
+cpc,Seafood,3,F25D1/00,2,cooling with natural cold
+cpc,Seafood,3,F25D17/00,2,circulating cooling fluids in refrigerators
+cpc,Seafood,3,Y02B30/00,1,HVAC
+cpc,Seafood,3,B01D8/00,0,cold traps in separation
+cpc,Seafood,3,Y02T90/00,0,generic
+cpc,Seafood,3,Y02B50/00,0,elevators
+cpc,Seafood,3,Y02A90/00,0,generic
+cpc,Seafood,3,F25D25/00,2,handling goods in refrigerators
+cpc,Seafood,4,Y02T10/00,0,road transport
+cpc,Seafood,4,Y02T90/00,0,generic
+cpc,Seafood,4,Y02A90/00,0,generic
+cpc,Seafood,4,Y02W90/00,0,generic
 cpc,Seafood,4,G16Y20/00,1,"IoT sensing, one step removed"
-cpc,Seafood,4,Y02D10/00,0,"energy-efficient computing"
-cpc,Seafood,4,Y02B50/00,0,"elevators"
-cpc,Seafood,4,Y02D30/00,0,"energy in networks"
-cpc,Seafood,4,Y02B90/00,0,"generic"
-cpc,Seafood,4,Y02T70/00,0,"maritime transport"
-cpc,Seafood,4,Y02B70/00,0,"power management"
-cpc,Seafood,4,G01C22/00,0,"pedometers and odometers"
+cpc,Seafood,4,Y02D10/00,0,energy-efficient computing
+cpc,Seafood,4,Y02B50/00,0,elevators
+cpc,Seafood,4,Y02D30/00,0,energy in networks
+cpc,Seafood,4,Y02B90/00,0,generic
+cpc,Seafood,4,Y02T70/00,0,maritime transport
+cpc,Seafood,4,Y02B70/00,0,power management
+cpc,Seafood,4,G01C22/00,0,pedometers and odometers
 oa,Critical Materials Crossroads,1,T11091,3,"extraction, separation and refining of metals"
-oa,Critical Materials Crossroads,1,T11126,3,"metallurgical processes"
+oa,Critical Materials Crossroads,1,T11126,3,metallurgical processes
 oa,Critical Materials Crossroads,1,T11201,2,"metallurgy and forming, partly processing"
 oa,Critical Materials Crossroads,1,T12938,1,"materials selection, not production"
-oa,Critical Materials Crossroads,1,T12971,1,"generic materials processing"
-oa,Critical Materials Crossroads,1,T13236,0,"construction materials"
-oa,Critical Materials Crossroads,1,T12299,0,"radiation shielding"
-oa,Critical Materials Crossroads,1,T14184,1,"corrosion of one alloy family"
-oa,Critical Materials Crossroads,1,T12932,2,"powder metallurgy: materials production"
-oa,Critical Materials Crossroads,1,T13140,0,"building materials"
-oa,Critical Materials Crossroads,1,T13129,1,"generic material properties"
-oa,Critical Materials Crossroads,1,T13290,1,"catch-all topic"
-oa,Critical Materials Crossroads,2,T11407,2,"continuous flow (microfluidic) processing"
-oa,Critical Materials Crossroads,2,T10876,2,"process monitoring and fault detection"
-oa,Critical Materials Crossroads,2,T11159,2,"manufacturing process optimization"
+oa,Critical Materials Crossroads,1,T12971,1,generic materials processing
+oa,Critical Materials Crossroads,1,T13236,0,construction materials
+oa,Critical Materials Crossroads,1,T12299,0,radiation shielding
+oa,Critical Materials Crossroads,1,T14184,1,corrosion of one alloy family
+oa,Critical Materials Crossroads,1,T12932,2,powder metallurgy: materials production
+oa,Critical Materials Crossroads,1,T13140,0,building materials
+oa,Critical Materials Crossroads,1,T13129,1,generic material properties
+oa,Critical Materials Crossroads,1,T13290,1,catch-all topic
+oa,Critical Materials Crossroads,2,T11407,2,continuous flow (microfluidic) processing
+oa,Critical Materials Crossroads,2,T10876,2,process monitoring and fault detection
+oa,Critical Materials Crossroads,2,T11159,2,manufacturing process optimization
 oa,Critical Materials Crossroads,2,T10615,1,"granular flow, partly continuous processing"
-oa,Critical Materials Crossroads,2,T11201,1,"metal forming"
-oa,Critical Materials Crossroads,2,T10703,0,"business processes"
-oa,Critical Materials Crossroads,2,T13706,0,"management"
+oa,Critical Materials Crossroads,2,T11201,1,metal forming
+oa,Critical Materials Crossroads,2,T10703,0,business processes
+oa,Critical Materials Crossroads,2,T13706,0,management
 oa,Critical Materials Crossroads,2,T13857,1,"mining processes, general"
-oa,Critical Materials Crossroads,2,T14121,0,"logistics"
-oa,Critical Materials Crossroads,2,T13341,0,"conveyors"
-oa,Critical Materials Crossroads,2,T12938,0,"materials selection"
-oa,Critical Materials Crossroads,2,T13344,2,"industrial automation and control"
+oa,Critical Materials Crossroads,2,T14121,0,logistics
+oa,Critical Materials Crossroads,2,T13341,0,conveyors
+oa,Critical Materials Crossroads,2,T12938,0,materials selection
+oa,Critical Materials Crossroads,2,T13344,2,industrial automation and control
+cpc,BRIDGES,1,A01H15/00,0,unrelated
+cpc,BRIDGES,1,D06Q1/00,0,unrelated
+cpc,BRIDGES,1,G07C3/00,0,unrelated
+cpc,BRIDGES,1,C12P1/00,2,fermentation to biobased compounds
+cpc,BRIDGES,1,C22B11/00,0,unrelated
+cpc,BRIDGES,1,D21C3/00,2,pulping of biomass to biobased materials
+cpc,BRIDGES,1,A01N63/00,1,microbial biocides
+cpc,BRIDGES,1,B23K11/00,0,unrelated
+cpc,BRIDGES,1,C08G18/00,1,"polyurethanes, not specifically biobased"
+cpc,BRIDGES,1,C12N15/00,1,"genetic engineering, one step removed"
+cpc,BRIDGES,1,B22D19/00,0,unrelated
+cpc,BRIDGES,1,B21C45/00,0,unrelated
+cpc,BRIDGES,1,A01H7/00,0,unrelated
+cpc,BRIDGES,1,H04W72/00,0,unrelated
+cpc,BRIDGES,1,A23L21/00,0,unrelated
+cpc,BRIDGES,1,D01F4/00,2,fibres from proteins: biobased material
+cpc,BRIDGES,1,C12M21/00,2,bioreactors for biomanufacturing
+cpc,BRIDGES,1,B32B9/00,0,unrelated
+cpc,FAST,2,H03G5/00,0,unrelated
+cpc,FAST,2,G05B7/00,1,"control engagement, general"
+cpc,FAST,2,G05B24/00,1,"open-loop control, general"
+cpc,FAST,2,F02D11/00,0,unrelated
+cpc,FAST,2,H03L3/00,0,unrelated
+cpc,FAST,2,B23B7/00,0,unrelated
+cpc,FAST,2,G05D1/00,0,unrelated
+cpc,FAST,2,G05B15/00,2,computer-controlled systems
+cpc,FAST,2,H03J7/00,0,unrelated
+cpc,FAST,2,D05C5/00,0,unrelated
+cpc,FAST,2,E21B44/00,1,automatic control of drilling
+cpc,FAST,2,B41L39/00,0,unrelated
+cpc,FAST,2,Y10S706/00,2,artificial intelligence
+cpc,FAST,2,H03L1/00,0,unrelated
+cpc,FAST,2,G10L21/00,0,unrelated
+cpc,FAST,2,F02D28/00,0,unrelated
+cpc,FAST,2,B64C13/00,0,unrelated
+cpc,FAST,2,G05G19/00,0,unrelated
+cpc,FAST,2,B60W30/00,0,unrelated
+cpc,FAST,2,D03C17/00,0,unrelated
+cpc,FAST,2,F02D27/00,0,unrelated
+cpc,FAST,2,B60W60/00,0,unrelated
+cpc,FAST,2,G05G11/00,0,unrelated
+cpc,FAST,2,B41J13/00,0,unrelated
+cpc,FAST,2,F02P5/00,0,unrelated
+cpc,FAST,2,G05G23/00,0,unrelated
+cpc,FAST,2,G05G21/00,0,unrelated
+cpc,FAST,2,D05B21/00,0,unrelated
+cpc,Grid Modernization,4,H02J13/00,2,remote control of power networks
+cpc,Grid Modernization,4,A01K3/00,0,unrelated
+cpc,Grid Modernization,4,Y04S10/00,1,smart grid generation and distribution
+cpc,Grid Modernization,4,Y04S40/00,3,smart grid IT incl. security
+cpc,Grid Modernization,4,E04B7/00,0,unrelated
+cpc,Grid Modernization,4,Y04S50/00,0,unrelated
+cpc,Grid Modernization,4,E04B9/00,0,unrelated
+cpc,Grid Modernization,4,Y02B90/00,0,unrelated
+cpc,Grid Modernization,4,H02J3/00,1,AC networks
+cpc,Grid Modernization,4,G11C5/00,0,unrelated
+cpc,Grid Modernization,4,Y02B70/00,0,unrelated
+cpc,Grid Modernization,4,H02J7/00,0,unrelated
+cpc,Grid Modernization,4,E06C9/00,0,unrelated
+cpc,Grid Modernization,4,Y04S20/00,1,smart grid end-user side
+cpc,Grid Modernization,4,B60L55/00,0,unrelated
+cpc,Grid Modernization,4,G21C3/00,0,unrelated
+cpc,Grid Modernization,4,Y02E40/00,0,unrelated
+cpc,Grid Modernization,4,H02B1/00,0,unrelated
+cpc,Grid Modernization,4,H02J11/00,0,unrelated
+cpc,Grid Modernization,4,F03H1/00,0,unrelated
+cpc,Grid Modernization,4,H02J4/00,0,unrelated
+cpc,Grid Modernization,4,H02B11/00,0,unrelated
+cpc,Grid Modernization,4,F28F25/00,0,unrelated
+cpc,Grid Modernization,4,H02B7/00,0,unrelated
+cpc,Grid Modernization,4,E01B17/00,0,unrelated
+cpc,Grid Modernization,4,F21V11/00,0,unrelated
+cpc,Grid Modernization,4,H01H89/00,0,unrelated
+cpc,Grid Modernization,4,H03C1/00,0,unrelated
+cpc,Grid Modernization,4,F21S4/00,0,unrelated
+cpc,IMPACT,5,A43D3/00,0,unrelated
+cpc,IMPACT,5,A43D117/00,0,unrelated
+cpc,IMPACT,5,A43D115/00,0,unrelated
+cpc,IMPACT,5,Y10S606/00,2,surgery art collection incl. orthopedic devices
+cpc,IMPACT,5,B33Y10/00,1,"additive manufacturing, general"
+cpc,IMPACT,5,A43D31/00,0,unrelated
+cpc,IMPACT,5,A43D43/00,0,unrelated
+cpc,IMPACT,5,A61G15/00,0,unrelated
+cpc,IMPACT,5,H01P11/00,0,unrelated
+cpc,IMPACT,5,B22F12/00,1,additive manufacturing apparatus
+cpc,IMPACT,5,A42C2/00,0,unrelated
+cpc,IMPACT,5,A61H1/00,1,physical therapy apparatus
+cpc,IMPACT,5,F16B23/00,0,unrelated
+cpc,IMPACT,5,C22B11/00,0,unrelated
+cpc,IMPACT,5,B33Y50/00,1,additive manufacturing data
+cpc,IMPACT,5,H01G13/00,0,unrelated
+cpc,IMPACT,5,A43D67/00,0,unrelated
+cpc,IMPACT,5,A43D19/00,0,unrelated
+cpc,NEO-SMART,3,C09D149/00,3,coating compositions
+cpc,NEO-SMART,3,C09D165/00,3,coating compositions
+cpc,NEO-SMART,3,C09D173/00,3,coating compositions
+cpc,NEO-SMART,3,C09D107/00,3,coating compositions
+cpc,NEO-SMART,3,C09D199/00,3,coating compositions
+cpc,NEO-SMART,3,C09D1/00,3,coating compositions
+cpc,NEO-SMART,3,C09D185/00,3,coating compositions
+cpc,NEO-SMART,3,C09D113/00,3,coating compositions
+cpc,NEO-SMART,3,C09D153/00,3,coating compositions
+cpc,NEO-SMART,3,C09D157/00,3,coating compositions
+cpc,NEO-SMART,3,C09D171/00,3,coating compositions
+cpc,NEO-SMART,3,C09D187/00,3,coating compositions
+cpc,NEO-SMART,3,C09D121/00,3,coating compositions
+cpc,NEO-SMART,3,C09D111/00,3,coating compositions
+cpc,NEO-SMART,3,C09D181/00,3,coating compositions
+cpc,NEO-SMART,3,C09D127/00,3,coating compositions
+cpc,NEO-SMART,3,C09D115/00,3,coating compositions
+cpc,NEO-SMART,3,C09D17/00,2,pigment pastes for coatings
+cpc,NEO-SMART,3,C09D193/00,3,coating compositions
+cpc,NEO-SMART,3,C09D117/00,3,coating compositions
+cpc,NEO-SMART,3,C09D119/00,3,coating compositions
+cpc,NEO-SMART,3,C09D15/00,2,wood stains
+cpc,NEO-SMART,3,C09D169/00,3,coating compositions
+cpc,NEO-SMART,3,C09D137/00,3,coating compositions
+cpc,NEO-SMART,3,C09D147/00,3,coating compositions
+cpc,NEO-SMART,3,C09D109/00,3,coating compositions
+cpc,NEO-SMART,3,C10L10/00,1,fuel additives
+cpc,NEO-SMART,3,C03C17/00,2,coating of glass
+cpc,NEO-SMART,3,C09D159/00,3,coating compositions
+cpc,Quantum Technologies,2,H04K1/00,2,secret communication
+cpc,Quantum Technologies,2,H04L23/00,0,unrelated
+cpc,Quantum Technologies,2,H04B10/00,3,optical transmission incl. quantum communication
+cpc,Quantum Technologies,2,G06N10/00,1,"quantum computing, not communication"
+cpc,Quantum Technologies,2,H04L21/00,0,unrelated
+cpc,Quantum Technologies,2,H04W24/00,0,unrelated
+cpc,Quantum Technologies,2,H04W74/00,0,unrelated
+cpc,Quantum Technologies,2,H04W68/00,0,unrelated
+cpc,Quantum Technologies,2,H04L9/00,3,cryptography incl. quantum key distribution
+cpc,Quantum Technologies,2,H04W60/00,0,unrelated
+cpc,Quantum Technologies,2,H04H40/00,0,unrelated
+cpc,Quantum Technologies,2,H04L65/00,0,unrelated
+cpc,Quantum Technologies,2,H04W36/00,0,unrelated
+cpc,Quantum Technologies,2,H04M11/00,0,unrelated
+cpc,Quantum Technologies,2,H04W92/00,0,unrelated
+cpc,Quantum Technologies,2,H04L51/00,0,unrelated
+cpc,Quantum Technologies,2,H04W40/00,0,unrelated
+cpc,Quantum Technologies,2,H04W4/00,0,unrelated
+cpc,Quantum Technologies,2,H04L13/00,0,unrelated
+cpc,Quantum Technologies,2,H04L67/00,0,unrelated
+cpc,Quantum Technologies,2,G02F2/00,1,light frequency conversion
+cpc,Quantum Technologies,2,H04L15/00,0,unrelated
+cpc,Quantum Technologies,2,H04M9/00,0,unrelated
+cpc,Quantum Technologies,2,H04N11/00,0,unrelated
+cpc,Quantum Technologies,2,H04W64/00,0,unrelated
+cpc,Quantum Technologies,2,H04H60/00,0,unrelated
+cpc,Quantum Technologies,2,H04W56/00,0,unrelated
+cpc,Quantum Technologies,2,H04W76/00,0,unrelated
+cpc,Quantum Technologies,2,H04L17/00,0,unrelated
+cpc,Quantum Technologies,3,G08B26/00,0,unrelated
+cpc,Quantum Technologies,3,B82Y15/00,1,"nanotech sensing, quantum dots as markers"
+cpc,Quantum Technologies,3,G06M7/00,0,unrelated
+cpc,Quantum Technologies,3,G02F2/00,0,unrelated
+cpc,Quantum Technologies,3,B82Y20/00,2,quantum optics
+cpc,Quantum Technologies,3,G08C25/00,0,unrelated
+cpc,Quantum Technologies,3,G01T1/00,1,radiation measurement
+cpc,Quantum Technologies,3,G06K7/00,0,unrelated
+cpc,Quantum Technologies,3,G16Y20/00,0,unrelated
+cpc,Quantum Technologies,3,G08C23/00,0,unrelated
+cpc,Quantum Technologies,3,H10D48/00,0,unrelated
+cpc,Quantum Technologies,3,H10F39/00,1,photodetectors
+cpc,Quantum Technologies,3,H10F77/00,1,photodetectors
+cpc,Quantum Technologies,3,B82Y10/00,1,quantum computing nanotech
+cpc,Quantum Technologies,3,G16C10/00,0,unrelated
+cpc,Quantum Technologies,3,G01J5/00,1,optical thermometry
+cpc,Quantum Technologies,3,G06K21/00,0,unrelated
+cpc,Quantum Technologies,3,G08C17/00,0,unrelated
+cpc,Quantum Technologies,3,H04K3/00,0,unrelated
+cpc,Quantum Technologies,3,G01H9/00,1,optical vibration sensing
+cpc,Quantum Technologies,3,H10D62/00,0,unrelated
+cpc,Quantum Technologies,3,G01D5/00,1,sensor output conversion
+cpc,Quantum Technologies,3,G01H1/00,0,unrelated
+cpc,Quantum Technologies,3,G08B13/00,0,unrelated
+cpc,Quantum Technologies,3,G01H11/00,0,unrelated
+cpc,Quantum Technologies,3,G01Q20/00,1,scanning probes
+cpc,Quantum Technologies,3,H04B10/00,0,unrelated
+cpc,Quantum Technologies,3,G03B25/00,0,unrelated
+cpc,Quantum Technologies,3,G05D23/00,0,unrelated
+cpc,RuralSTAMINA Biomanufacturing,2,A23C9/00,0,unrelated
+cpc,RuralSTAMINA Biomanufacturing,2,A23C17/00,0,unrelated
+cpc,RuralSTAMINA Biomanufacturing,2,C12N1/00,3,microorganisms
+cpc,RuralSTAMINA Biomanufacturing,2,C12P7/00,2,fermentation products
+cpc,RuralSTAMINA Biomanufacturing,2,C12M39/00,1,equipment
+cpc,RuralSTAMINA Biomanufacturing,2,C12M21/00,1,equipment
+cpc,RuralSTAMINA Biomanufacturing,2,C12M45/00,1,equipment
+cpc,RuralSTAMINA Biomanufacturing,2,D21H17/00,0,unrelated
+cpc,RuralSTAMINA Biomanufacturing,2,C12N3/00,2,spores
+cpc,RuralSTAMINA Biomanufacturing,2,C12M1/00,1,equipment
+cpc,RuralSTAMINA Biomanufacturing,2,C12N13/00,1,treatment of microorganisms
+cpc,RuralSTAMINA Biomanufacturing,2,C12N15/00,3,genetic engineering of microorganisms
+cpc,RuralSTAMINA Biomanufacturing,2,C12N7/00,1,viruses and phages
+cpc,RuralSTAMINA Biomanufacturing,2,A23C21/00,0,unrelated
+cpc,RuralSTAMINA Biomanufacturing,2,C12M25/00,1,equipment
+cpc,RuralSTAMINA Biomanufacturing,2,A01N63/00,1,microbial biocides
+cpc,RuralSTAMINA Biomanufacturing,2,C12M37/00,1,equipment
+cpc,RuralSTAMINA Biomanufacturing,2,C12M43/00,1,equipment
+cpc,RuralSTAMINA Biomanufacturing,2,A01H15/00,1,fungi as plants
+cpc,RuralSTAMINA Biomanufacturing,2,C12P21/00,2,proteins by fermentation
+cpc,RuralSTAMINA Biomanufacturing,2,C12M27/00,1,equipment
+cpc,RuralSTAMINA Biomanufacturing,2,C12M29/00,1,equipment
+cpc,RuralSTAMINA Biomanufacturing,2,C12P1/00,2,fermentation products
+cpc,RuralSTAMINA Biomanufacturing,2,C12P39/00,2,mixed microbial cultures
+cpc,RuralSTAMINA Biomanufacturing,2,C12M3/00,1,equipment
+cpc,RuralSTAMINA Biomanufacturing,2,A23L33/00,0,unrelated
+cpc,RuralSTAMINA Biomanufacturing,2,A23L17/00,0,unrelated
+cpc,RuralSTAMINA Biomanufacturing,2,A23C15/00,0,unrelated
+cpc,Seafood,2,A01K61/00,1,"aquaculture itself, not observation"
+cpc,Seafood,2,G01C21/00,1,navigation
+cpc,Seafood,2,A01K73/00,1,fishing nets
+cpc,Seafood,2,A01K80/00,1,shellfish harvesting
+cpc,Seafood,2,A01K97/00,0,unrelated
+cpc,Seafood,2,A01K67/00,0,unrelated
+cpc,Seafood,2,G16Y20/00,1,"IoT sensing, general"
+cpc,Seafood,2,Y02A40/00,0,unrelated
+cpc,Seafood,2,A01K75/00,0,unrelated
+cpc,Seafood,2,A01K63/00,0,unrelated
+cpc,Seafood,2,A01K81/00,0,unrelated
+cpc,Seafood,2,A01K71/00,0,unrelated
+cpc,Seafood,2,G16Y40/00,1,"IoT processing, general"
+cpc,Seafood,2,G01C3/00,0,unrelated
+cpc,Seafood,2,A01K79/00,1,bulk fishing
+cpc,Seafood,2,A01K93/00,0,unrelated
+cpc,Seafood,2,A01K74/00,0,unrelated
+cpc,Seafood,2,Y10S706/00,1,"AI, general"
+cpc,Seafood,2,A23L17/00,0,unrelated
+cpc,Seafood,2,A01K65/00,0,unrelated
+cpc,Seafood,2,A01K83/00,0,unrelated
+cpc,Seafood,2,A01K77/00,0,unrelated
+cpc,Seafood,2,A01K91/00,0,unrelated
+cpc,Seafood,2,A01K69/00,0,unrelated
+cpc,Seafood,2,G06Q40/00,0,unrelated
+cpc,Seafood,2,A01K57/00,0,unrelated
+cpc,Seafood,2,Y02P60/00,0,unrelated
+cpc,Seafood,2,A01K95/00,0,unrelated
+cpc,Seafood,2,G06Q10/00,0,unrelated
+cpc,Seafood,4,Y02W10/00,0,unrelated
+cpc,Seafood,4,G01C7/00,0,unrelated
+cpc,Seafood,4,Y02B40/00,0,unrelated
+cpc,Seafood,4,G01C21/00,0,unrelated
+cpc,Seafood,4,Y02W30/00,0,unrelated
+cpc,Seafood,4,H04L43/00,0,unrelated
+cpc,Seafood,4,Y04S40/00,0,unrelated
+cpc,Seafood,4,H04L67/00,0,unrelated
+cpc,Seafood,4,Y02T50/00,0,unrelated
+cpc,Seafood,4,H04L9/00,1,"cryptography, partly blockchain traceability"
+cpc,Seafood,4,H04L45/00,0,unrelated
+cpc,Seafood,4,G11B7/00,0,unrelated
+cpc,Seafood,4,Y02T30/00,0,unrelated
+cpc,Seafood,4,H04L1/00,0,unrelated
+cpc,Seafood,4,Y04S50/00,0,unrelated
+cpc,Seafood,4,G11B23/00,0,unrelated
+cpc,Seafood,4,E01B35/00,0,unrelated
+cpc,Seafood,4,Y02P30/00,0,unrelated
+oa,Grid Modernization,3,T13031,1,"civil engineering, general"
+oa,Grid Modernization,3,T13808,2,construction engineering and safety
+oa,Grid Modernization,3,T13856,1,"power generation, general"
+oa,Grid Modernization,3,T13120,0,unrelated
+oa,Grid Modernization,3,T10597,2,nuclear reactor engineering
+oa,Grid Modernization,3,T14327,2,energy technologies and civil engineering
+oa,Grid Modernization,3,T11070,0,unrelated
+oa,Grid Modernization,3,T13465,1,nuclear materials
+oa,Grid Modernization,3,T13900,0,unrelated
+oa,Grid Modernization,3,T13369,0,unrelated
+oa,Grid Modernization,3,T11949,0,unrelated
+oa,Grid Modernization,3,T10358,0,unrelated
+oa,Grid Modernization,3,T14342,0,unrelated
+oa,Grid Modernization,3,T12870,0,unrelated
+oa,Grid Modernization,3,T13458,0,unrelated
+oa,Grid Modernization,3,T12102,1,concrete under fire
+oa,Grid Modernization,3,T11352,1,concrete structures
+oa,Grid Modernization,3,T13494,0,unrelated
+oa,Grid Modernization,3,T11046,1,geotechnics
+oa,Grid Modernization,3,T11870,1,structural analysis
+oa,Grid Modernization,3,T12560,1,reactor thermal-hydraulics
+oa,Grid Modernization,3,T10572,0,unrelated
+oa,Grid Modernization,3,T13236,0,unrelated
+oa,Grid Modernization,3,T13086,0,unrelated
+oa,Grid Modernization,3,T13133,0,unrelated
+oa,Grid Modernization,3,T11175,0,unrelated
+oa,Grid Modernization,3,T11850,1,concrete durability
+oa,Grid Modernization,3,T11808,0,unrelated
+oa,Grid Modernization,3,T13414,0,unrelated
+oa,IMPACT,2,T13656,0,unrelated
+oa,IMPACT,2,T12255,3,biosimilars: biologics
+oa,IMPACT,2,T11943,1,drug safety after approval
+oa,IMPACT,2,T10526,1,drugs for one unrelated disease
+oa,IMPACT,2,T14463,0,unrelated
+oa,IMPACT,2,T10211,3,drug discovery
+oa,IMPACT,2,T11117,1,adverse reactions
+oa,IMPACT,2,T11964,0,unrelated
+oa,IMPACT,2,T12842,0,unrelated
+oa,IMPACT,2,T10041,0,unrelated
+oa,IMPACT,2,T10134,0,unrelated
+oa,IMPACT,2,T10833,0,unrelated
+oa,IMPACT,2,T10984,0,unrelated
+oa,IMPACT,2,T10897,0,unrelated
+oa,IMPACT,2,T12878,1,pharmaceutical quality
+oa,IMPACT,2,T12553,0,unrelated
+oa,IMPACT,2,T11243,0,unrelated
+oa,IMPACT,2,T10168,0,unrelated
+oa,IMPACT,2,T10200,1,therapies for one disease
+oa,IMPACT,2,T11649,1,pharmaceutical industry
+oa,IMPACT,2,T13254,0,unrelated
+oa,IMPACT,2,T14511,0,unrelated
+oa,IMPACT,2,T10576,0,unrelated
+oa,IMPACT,2,T11668,0,unrelated
+oa,IMPACT,2,T12488,0,unrelated
+oa,IMPACT,2,T10410,0,unrelated
+oa,IMPACT,2,T12547,1,paediatric pharmacy
+oa,IMPACT,2,T13467,0,unrelated
+oa,IMPACT,2,T14108,1,"pharmaceutical studies, general"
+oa,IMPACT,3,T11934,1,diagnosis of one unrelated disease
+oa,IMPACT,3,T11819,1,"surveillance, not diagnostics"
+oa,IMPACT,3,T10862,1,detection of one unrelated disease
+oa,IMPACT,3,T10185,1,diagnosis of one unrelated disease
+oa,IMPACT,3,T12167,1,microbial testing
+oa,IMPACT,3,T12914,0,unrelated
+oa,IMPACT,3,T11473,1,diagnosis of one unrelated disease
+oa,IMPACT,3,T10697,0,unrelated
+oa,IMPACT,3,T11086,1,diagnostics of unrelated infections
+oa,IMPACT,3,T13314,1,diagnosis of one condition
+oa,IMPACT,3,T12151,0,unrelated
+oa,IMPACT,3,T11636,1,"AI in healthcare, general"
+oa,IMPACT,3,T11381,0,unrelated
+oa,IMPACT,3,T12268,0,unrelated
+oa,IMPACT,3,T12212,1,diagnosis of one unrelated disease
+oa,IMPACT,3,T10041,0,unrelated
+oa,IMPACT,3,T11243,0,unrelated
+oa,IMPACT,3,T12296,0,unrelated
