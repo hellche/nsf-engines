@@ -25,7 +25,7 @@ papers and patents in the Engine's technology, from five years before the award 
 | v3.1 | science and technology fragments of the grant grouped into 2-5 technologies; per technology, rank fusion of embeddings with an independent signal (OpenAlex classifier, BM25 on CPC text); a judge with a fixed rubric for what the fusion cannot confirm and as an audit | **core ready**: 128 items for 39 technologies (`data/processed/tech_profile_v3_1_core.csv`) |
 
 The fragment extraction and the judge scores of v3.1 were made in a chat session, not through an API, and
-are not reproducible; every core item records its basis. Details: `HANDOFF.md`, the Methodology page.
+are not reproducible; every core item records its basis. Details: the Methodology page.
 
 ## Next
 
