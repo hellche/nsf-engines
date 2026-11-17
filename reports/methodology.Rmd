@@ -110,6 +110,18 @@ In total: `r n_distinct(profile$engine_name)` Engines, `r nrow(profile)` stateme
 techs <- read_csv(here("data", "processed", "tech_minplus_technologies.csv"), show_col_types = FALSE)
 n_tech <- techs |> distinct(engine_name, tech_id) |> nrow()
 per_engine <- techs |> distinct(engine_name, tech_id) |> count(engine_name)
+sentences <- read_csv(here("data", "processed", "tech_v2_sentences.csv"), show_col_types = FALSE) |>
+  select(engine_name, sent_id, sentence = text_original)
+# The full sentence of the abstract (or the title) each phrase comes from, with the technology's phrases in bold
+in_context <- function(d) {
+  d <- d |> left_join(sentences, by = c("engine_name", "sent_id"))
+  ids <- sort(unique(d$sent_id))
+  paste(vapply(ids, function(i) {
+    x <- esc(d$sentence[d$sent_id == i][1])
+    for (f in unique(d$fragment[d$sent_id == i])) x <- sub(esc(f), paste0("<b>", esc(f), "</b>"), x, fixed = TRUE)
+    x
+  }, ""), collapse = "<br><br>")
+}
 ```
 
 **`r n_tech` technologies, `r min(per_engine$n)`–`r max(per_engine$n)` per Engine** — the common first step for
@@ -127,10 +139,13 @@ for (k in seq_along(tech_engines)) {
   t <- techs |> filter(engine_name == tech_engines[k]) |>
     group_by(tech_id, tech_label) |>
     summarise(phrases = paste0("<i>", esc(fragment), "</i> <span style='color:#888'>(", n_runs, "/3)</span>",
-                               collapse = "<br>"), .groups = "drop") |>
+                               collapse = "<br>"),
+              context = in_context(pick(everything()) |> mutate(engine_name = tech_engines[k])),
+              .groups = "drop") |>
     arrange(tech_id)
   tab <- tibble(`#` = t$tech_id, Technology = esc(t$tech_label),
-                `Phrases of the grant (verbatim; runs that found it)` = t$phrases)
+                `Phrases of the grant (verbatim; runs that found it)` = t$phrases,
+                `In the abstract (phrases in bold)` = paste0("<span style='font-size:90%'>", t$context, "</span>"))
   cat(sprintf('<div class="tech-engine" data-k="%d"%s>\n', k, if (k > 1) ' style="display:none"' else ""))
   print(kable(tab, format = "html", escape = FALSE, table.attr = 'class="table table-condensed"'))
   cat("</div>\n\n")
