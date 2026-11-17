@@ -118,7 +118,7 @@ a.key:hover .keybox { fill: #f3cd7e; }
 <path class="LN" d="M845,518 V554" marker-end="url(#A)"/>
 <rect class="frame" x="330" y="556" width="620" height="124"/>
 <text class="tf" x="640" y="578">Output filter</text>
-<text class="s" x="640" y="596">all three conditions at once</text>
+<text class="s" x="640" y="596">each condition applied or flagged</text>
 <rect class="on" x="545" y="606" width="190" height="64"/>
 <text class="ts" x="640.0" y="628">Time</text>
 <text class="ons" x="640.0" y="646">from (award − 5 years)</text>

@@ -162,7 +162,7 @@ s.path("LN", f"M845,{W + WH} V{F - 2}", "A")
 FC = 64
 s.rect("frame", 330, F, 620, 50 + FC + 10)
 s.text("tf", 640, F + 22, "Output filter")
-s.text("s", 640, F + 40, "all three conditions at once")
+s.text("s", 640, F + 40, "each condition applied or flagged")
 s.cell(True, 545, F + 50, 190, FC, "Time", ["from (award − 5 years)", "onwards"])
 s.cell(True, 745, F + 50, 190, FC, "Geography", ["Engine's states", "affiliation, inventor address"], wip_title="in progress")
 s.cell(True, 345, F + 50, 190, FC, "Technology", ["OpenAlex topics", "+ CPC classes"])
