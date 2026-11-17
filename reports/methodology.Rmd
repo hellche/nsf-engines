@@ -1,5 +1,5 @@
 ---
-title: "Methodology"
+title: "Technology profile"
 output:
   html_document:
     theme: flatly
@@ -17,23 +17,39 @@ knitr::opts_chunk$set(echo = FALSE, message = FALSE, warning = FALSE)
 invisible(Sys.setlocale("LC_CTYPE", "en_US.UTF-8"))  # else cat() writes non-ASCII as <U+2010> under the C locale
 library(dplyr); library(readr); library(knitr); library(here); library(stringr)
 profile <- read_csv(here("data", "processed", "tech_profile.csv"), show_col_types = FALSE)
+core31 <- read_csv(here("data", "processed", "tech_profile_v3_1_core.csv"), show_col_types = FALSE)
 choices <- read_csv(here("data", "manual", "tech_topic_choice.csv"), show_col_types = FALSE)
 esc <- htmltools::htmlEscape
-svg_v23 <- here("tech_profile_procedure.svg")
+svg_v23 <- here("tech_profile_v2_procedure.svg")
 ```
 
 <style>
   .method-svg svg { width: 100%; height: auto; }
 </style>
 
-## Technology profile: versions {#technology-profile-v2-v3}
+## What is the technology profile {#what-is-the-technology-profile}
 
-The technology profile says what each Engine works on, as OpenAlex topics (for papers) and CPC groups
-(for patents). It is built from the text of the NSF grant only. Three versions exist. **Version 1** is the
-earlier choice made by hand; all metrics on this site still use it. **Version 2** ranks every topic and CPC
-group against the whole grant text and is kept for comparison. **Version 3.1** splits the grant into its
+The technology profile says what an Engine works on, in two vocabularies: **OpenAlex topics** for papers and
+**CPC groups** for patents. It is built from the text of the NSF grant only (title and abstract), not from the
+Engine's website or from the papers and patents themselves: the profile describes what the grant says the
+Engine does, and the data are then measured against it.
+
+The profile is used in two ways across the site:
+
+- a paper is **in the Engine's topics** when at least one of its three OpenAlex topics is a profile topic;
+- a patent is **in the profile** when at least one of its CPC codes is a profile code.
+
+These give the partners' papers in the Engine's topics, the regional patents in the profile, the patent
+location quotient (LQ) and the comparison with US states. **All metrics on this site still use version 1**
+of the profile.
+
+## Versions {#versions}
+
+Three versions exist. **Version 1** is the earlier choice made by hand. **Version 2** ranks every topic and
+CPC group against the whole grant text and is kept for comparison. **Version 3.1** splits the grant into its
 technologies and chooses, technology by technology, the items that two independent kinds of evidence agree
-on; its core is ready, and the metrics have not yet been recomputed with it.
+on; its core is ready, and the metrics have not yet been recomputed with it. The diagram labels are in
+Russian.
 
 <div class="method-svg">
 ```{r diagram-v23, results = "asis"}
@@ -42,7 +58,7 @@ if (file.exists(svg_v23)) {
   svg <- readLines(svg_v23, warn = FALSE, encoding = "UTF-8")
   cat(svg[nzchar(trimws(svg))], sep = "\n")
 } else {
-  cat("<p><i>Diagram file tech_profile_procedure.svg not found.</i></p>")
+  cat("<p><i>Diagram file tech_profile_v2_procedure.svg not found.</i></p>")
 }
 ```
 </div>
@@ -70,26 +86,7 @@ rule or from the judge. The profile describes what the grant says the Engine doe
 check it, not to choose it: choosing codes by the number of regional patents would make the region's
 Patent LQ high by construction.
 
-### Classification lists
-
-Both lists are public and are kept in the repository as CSV files (`data/reference/`, downloaded by
-`py/00_reference_lists.py`):
-
-- **OpenAlex topics**: all 4,516 topics of the OpenAlex topic classification, with their descriptions and
-  keywords, from the [OpenAlex topics API](https://api.openalex.org/topics)
-  ([documentation](https://docs.openalex.org/api-entities/topics)). OpenAlex gives the list no version
-  number; every topic has the creation date January 2024 in the API. Downloaded on November 15, 2026.
-- **CPC titles**: the title list of the Cooperative Patent Classification, scheme 2026.08
-  ([CPCTitleList202608.zip](https://www.cooperativepatentclassification.org/sites/default/files/cpc/bulk/CPCTitleList202608.zip),
-  from the [CPC bulk download page](https://www.cooperativepatentclassification.org/cpcSchemeAndDefinitions/bulk)):
-  every section, class, subclass, main group and subgroup with its official title (254,314 codes, of them
-  9,867 main groups). The CPC site labels this list "CPC Title List (2026.08)"; its files are dated
-  August 1, 2026. Downloaded on November 15, 2026.
-
-## Technology profile, version 1 {#technology-profile}
-
-The technology profile states what each Engine works on in two vocabularies: OpenAlex topics (for papers) and
-CPC classes (for patents). It is built from the text of the NSF grant itself, not from the Engine's website.
+### Version 1 in detail
 
 1. **Statements.** Each Engine gets 3-5 short statements about its technology. The first always comes from
    the grant title (the acronym expanded from the abstract; IMPACT's title is not informative, which is noted).
@@ -103,20 +100,24 @@ CPC classes (for patents). It is built from the text of the NSF grant itself, no
 3. **CPC classes.** CPC codes are chosen by hand for each statement, at subclass level (e.g. C22B) or main
    group (B29B17), and checked against USPTO grants of 2024-2025: patents with the code in the whole US and
    with an inventor in the Engine's states. A code with almost no patents in the region shows up at once.
-4. **How the profile is used.** A paper is *in the Engine's topics* when at least one of its three OpenAlex
-   topics is a profile topic. A patent is *in the profile* when at least one of its CPC codes is a profile code.
-   These give the regional patents in the profile, the location quotient (LQ) and the comparison with US states.
 
 In total: `r n_distinct(profile$engine_name)` Engines, `r nrow(profile)` statements
 (`r sum(profile$source == "title")` from titles, `r sum(profile$source == "abstract")` from abstracts).
 
-### Profile of each Engine
+## Profile of each Engine {#technology-profile}
+
+Choose an Engine and a version. **Metrics still use v1.** In v3.1, <sup>J</sup> marks an item chosen by the
+judge rather than confirmed by the two signals; "—" marks a place the procedure could not fill.
 
 ```{r profile-tables, results = "asis"}
 engines <- sort(unique(profile$engine_name))
-cat('<select id="profile-engine" class="form-control" style="width:auto; margin-bottom:10px">\n',
+cat('<div style="display:flex; gap:10px; flex-wrap:wrap; margin-bottom:10px">',
+    '<select id="profile-engine" class="form-control" style="width:auto" aria-label="Engine">\n',
     paste0('<option value="', seq_along(engines), '">', esc(engines), "</option>", collapse = "\n"),
-    "\n</select>\n\n")
+    '\n</select>',
+    '<select id="profile-version" class="form-control" style="width:auto" aria-label="Profile version">',
+    '<option value="v1">v1 (used by the metrics)</option><option value="v31">v3.1 (core)</option></select>',
+    "</div>\n\n")
 # "C22B; C22C" + "C22B:688; C22C:2757" + "C22B:10; C22C:61" -> "C22B (688 / 10)<br>C22C (2757 / 61)"
 fmt_cpc <- function(cpc, us, reg) {
   if (is.na(cpc)) return("")
@@ -136,18 +137,57 @@ for (k in seq_along(engines)) {
                                                      esc(p$subfield), "</span>"),
                 `CPC (US / region patents, 2024-25)` = mapply(fmt_cpc, p$cpc, p$cpc_patents_us_2024_25,
                                                               p$cpc_patents_region_2024_25))
-  cat(sprintf('<div class="profile-engine" data-k="%d"%s>\n', k, if (k > 1) ' style="display:none"' else ""))
+  cat(sprintf('<div class="profile-engine" data-k="%d" data-v="v1"%s>\n', k, if (k > 1) ' style="display:none"' else ""))
+  print(kable(tab, format = "html", escape = FALSE, table.attr = 'class="table table-condensed"'))
+  cat("</div>\n\n")
+}
+
+# Version 3.1: one row per technology; items of the core, judge-chosen ones marked J, empty places as a dash
+item_html <- function(d, kind) {
+  d <- d[d$kind == kind & d$in_core, ]
+  if (nrow(d) == 0) return("&mdash;")
+  lab <- if (kind == "oa") paste0(esc(d$item_title), "<br><span style='color:#666'>", esc(d$subclass_or_subfield), "</span>")
+         else paste0("<b>", esc(d$item_id), "</b> ", esc(str_trunc(d$item_title, 90)))
+  paste0(lab, ifelse(startsWith(d$basis, "judge"), "<sup>J</sup>", ""), collapse = "<br>")
+}
+for (k in seq_along(engines)) {
+  c3 <- core31 |> filter(engine_name == engines[k])
+  techs <- c3 |> distinct(tech_id, tech_label) |> arrange(tech_id)
+  tab <- tibble(`#` = techs$tech_id,
+                Technology = esc(techs$tech_label),
+                `OpenAlex topics (subfield)` = sapply(techs$tech_id, \(t) item_html(c3[c3$tech_id == t, ], "oa")),
+                `CPC groups` = sapply(techs$tech_id, \(t) item_html(c3[c3$tech_id == t, ], "cpc")))
+  cat(sprintf('<div class="profile-engine" data-k="%d" data-v="v31" style="display:none">\n', k))
   print(kable(tab, format = "html", escape = FALSE, table.attr = 'class="table table-condensed"'))
   cat("</div>\n\n")
 }
 ```
 
 <script>
-// Dropdown: show the chosen Engine's profile table
-document.getElementById("profile-engine").addEventListener("change", function () {
-  var k = this.value;
+// Dropdowns: show the chosen Engine's profile table in the chosen version
+function showProfile() {
+  var k = document.getElementById("profile-engine").value;
+  var v = document.getElementById("profile-version").value;
   document.querySelectorAll(".profile-engine").forEach(function (d) {
-    d.style.display = d.getAttribute("data-k") === k ? "" : "none";
+    d.style.display = d.getAttribute("data-k") === k && d.getAttribute("data-v") === v ? "" : "none";
   });
-});
+}
+document.getElementById("profile-engine").addEventListener("change", showProfile);
+document.getElementById("profile-version").addEventListener("change", showProfile);
 </script>
+
+## Classification lists {#classification-lists}
+
+Both lists are public and are kept in the repository as CSV files (`data/reference/`, downloaded by
+`py/00_reference_lists.py`):
+
+- **OpenAlex topics**: all 4,516 topics of the OpenAlex topic classification, with their descriptions and
+  keywords, from the [OpenAlex topics API](https://api.openalex.org/topics)
+  ([documentation](https://docs.openalex.org/api-entities/topics)). OpenAlex gives the list no version
+  number; every topic has the creation date January 2024 in the API. Downloaded on November 15, 2026.
+- **CPC titles**: the title list of the Cooperative Patent Classification, scheme 2026.08
+  ([CPCTitleList202608.zip](https://www.cooperativepatentclassification.org/sites/default/files/cpc/bulk/CPCTitleList202608.zip),
+  from the [CPC bulk download page](https://www.cooperativepatentclassification.org/cpcSchemeAndDefinitions/bulk)):
+  every section, class, subclass, main group and subgroup with its official title (254,314 codes, of them
+  9,867 main groups). The CPC site labels this list "CPC Title List (2026.08)"; its files are dated
+  August 1, 2026. Downloaded on November 15, 2026.

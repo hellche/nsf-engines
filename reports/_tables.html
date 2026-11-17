@@ -63,6 +63,16 @@
     });
   }
 
+  // Wide tables scroll inside their own box on narrow screens instead of widening the whole page
+  document.querySelectorAll(".main-container table").forEach(function (t) {
+    if (t.parentNode.classList && t.parentNode.classList.contains("table-scroll")) return;
+    var w = document.createElement("div");
+    w.className = "table-scroll";
+    w.style.overflowX = "auto";
+    t.parentNode.insertBefore(w, t);
+    w.appendChild(t);
+  });
+
   document.querySelectorAll(".main-container table").forEach(function (t) {
     if (t.closest(".no-sort")) return;  // e.g. a comparison table: rows are steps, not records
     makeSortable(t);
