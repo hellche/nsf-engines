@@ -2,7 +2,7 @@
 # pages into docs/ (GitHub Pages)
 #
 # One copy of the data pages per technology profile version (R/profile.R): v1 in docs/, v3.1 in docs/v3/.
-# Data pages (12 Engines, index, publications, patents) read the files of their version; pipeline,
+# Data pages (12 Engines, index, publications, patents) read the files of their version; pipeline, analysis,
 # methodology and the comparison of versions are rendered once, in docs/. The header switches versions.
 #
 # Usage: Rscript R/08_render_site.R                       all versions, all Engines
@@ -43,7 +43,7 @@ for (v in versions) {
   }
 }
 Sys.setenv(PROFILE_VERSION = "v1")
-if (!nzchar(only_v)) for (page in c("pipeline", "methodology", "compare")) {
+if (!nzchar(only_v)) for (page in c("pipeline", "analysis", "methodology", "compare")) {
   message("Rendering ", page)
   render_page(paste0(page, ".Rmd"), paste0(page, ".html"), here("docs"))
 }

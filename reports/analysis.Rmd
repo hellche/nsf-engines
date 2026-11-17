@@ -1,0 +1,37 @@
+---
+title: "Analysis (in development)"
+output:
+  html_document:
+    theme: flatly
+    self_contained: true
+    css: style.css
+    includes:
+      before_body: _navbar.html
+      after_body: _tables.html
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE, message = FALSE, warning = FALSE)
+invisible(Sys.setlocale("LC_CTYPE", "en_US.UTF-8"))  # else cat() writes non-ASCII as <U+2010> under the C locale
+library(here)
+# Inline SVG (not <img>) so its labels can be links; blank lines would end pandoc's raw HTML block.
+# Drawn by reports/pipeline_diagrams.py; the second diagram is on reports/analysis.Rmd.
+inline_svg <- function(file) {
+  f <- here(file)
+  if (!file.exists(f)) return(cat(sprintf("<p><i>Diagram file %s not found.</i></p>", file)))
+  svg <- readLines(f, warn = FALSE, encoding = "UTF-8")
+  cat(svg[nzchar(trimws(svg))], sep = "\n")
+}
+```
+
+<style>
+  .pipeline-svg svg { width: 100%; height: auto; }
+  .pipeline-svg a:not(.key) text { fill: #1a5fb4; text-decoration: underline; }
+  .pipeline-svg a:not(.key):hover text { fill: #0b3d7a; }
+</style>
+
+<div class="pipeline-svg">
+```{r analysis, results = "asis"}
+inline_svg("nsf_engines_pipeline_analysis.svg")
+```
+</div>
