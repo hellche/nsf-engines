@@ -1,5 +1,5 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 1432" width="1280" height="1432">
-<title>Профиль технологии: версии v1, v2, v3.1 (в работе)</title>
+<title>Technology profile: versions v1, v2, v3.1 (in progress)</title>
 <defs>
 <marker id="a" viewBox="0 0 10 10" refX="10" refY="5" markerWidth="9" markerHeight="9" markerUnits="userSpaceOnUse" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#222"/></marker>
 <marker id="A" viewBox="0 0 10 10" refX="10" refY="5" markerWidth="14" markerHeight="14" markerUnits="userSpaceOnUse" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#111"/></marker>
@@ -56,19 +56,19 @@ text { font-family: Helvetica, Arial, "DejaVu Sans", sans-serif; }
 <rect class="head h2" x="860" y="20" width="380" height="46"/>
 <text class="th" x="1050.0" y="49">v2: embeddings</text>
 <rect class="box" x="40" y="100" width="1200" height="60"/>
-<text class="t" x="640.0" y="124">12 грантов NSF</text>
-<text class="s" x="640.0" y="144">название + аннотация (сайт NSF)</text>
+<text class="t" x="640.0" y="124">12 NSF awards</text>
+<text class="s" x="640.0" y="144">title + abstract (NSF website)</text>
 <rect class="prompts" x="40" y="220" width="790" height="256"/>
-<text class="bt" x="58" y="250">Промпты для LLM для определения технологий гранта</text>
+<text class="bt" x="58" y="250">LLM prompts to find the grant&#x27;s technologies</text>
 <rect class="pr" x="62.0" y="286" width="236" height="60"/>
-<text class="t" x="180.0" y="310">Простой</text>
-<text class="s" x="180.0" y="330">только идея задачи</text>
+<text class="t" x="180.0" y="310">Simple</text>
+<text class="s" x="180.0" y="330">the task only</text>
 <rect class="chosen" x="317.0" y="286" width="236" height="60"/>
-<text class="t" x="435.0" y="310">Простой +</text>
-<text class="s" x="435.0" y="330">идея + крупность технологий</text>
+<text class="t" x="435.0" y="310">Simple +</text>
+<text class="s" x="435.0" y="330">task + size of a technology</text>
 <rect class="pr" x="572.0" y="286" width="236" height="60"/>
-<text class="t" x="690.0" y="310">Длинный</text>
-<text class="s" x="690.0" y="330">правила и примеры</text>
+<text class="t" x="690.0" y="310">Long</text>
+<text class="s" x="690.0" y="330">rules and examples</text>
 <path class="ln" d="M150.0,66 V100"/>
 <path class="ln" d="M150.0,160 V217" marker-end="url(#a)"/>
 <path class="ln" d="M720.0,66 V100"/>
@@ -77,18 +77,18 @@ text { font-family: Helvetica, Arial, "DejaVu Sans", sans-serif; }
 <path class="LN" d="M435.0,346 V390" marker-end="url(#A)"/>
 <text class="x3" x="447.0" y="376.0">× 3</text>
 <rect class="tech" x="135.0" y="394" width="600" height="60"/>
-<text class="t" x="435.0" y="420">43 технологии, 2–5 на Engine</text>
-<text class="s" x="435.0" y="440">77 фраз, найденных ≥ 2 прогонами из 3</text>
+<text class="t" x="435.0" y="420">43 technologies, 2–5 per Engine</text>
+<text class="s" x="435.0" y="440">77 phrases found by ≥ 2 of 3 runs</text>
 <rect class="common" x="180.0" y="512" width="510.0" height="150"/>
-<text class="bt" x="196.0" y="538">Коды OpenAlex и CPC</text>
+<text class="bt" x="196.0" y="538">OpenAlex and CPC codes</text>
 <rect class="box" x="200.0" y="570" width="220" height="76"/>
-<text class="t" x="310.0" y="594">Крупные категории</text>
-<text class="s" x="310.0" y="614">652 подкласса CPC</text>
-<text class="s" x="310.0" y="631">250 подобластей OpenAlex</text>
+<text class="t" x="310.0" y="594">Coarse categories</text>
+<text class="s" x="310.0" y="614">652 CPC subclasses</text>
+<text class="s" x="310.0" y="631">250 OpenAlex subfields</text>
 <rect class="box" x="450.0" y="570" width="220" height="76"/>
-<text class="t" x="560.0" y="594">Полные списки</text>
-<text class="s" x="560.0" y="614">7 646 групп CPC</text>
-<text class="s" x="560.0" y="631">4 516 тем OpenAlex</text>
+<text class="t" x="560.0" y="594">Full lists</text>
+<text class="s" x="560.0" y="614">7,646 CPC groups</text>
+<text class="s" x="560.0" y="631">4,516 OpenAlex topics</text>
 <path class="LN2" d="M150.0,454 V688"/>
 <path class="LN2" d="M310.0,646 V688"/>
 <path class="LN2" d="M150.0,688 H310.0"/>
@@ -98,51 +98,51 @@ text { font-family: Helvetica, Arial, "DejaVu Sans", sans-serif; }
 <path class="LN2" d="M560.0,688 H720.0"/>
 <path class="ln" d="M640.0,688 V703" marker-end="url(#a)"/>
 <rect class="llm" x="40" y="706" width="380" height="92"/>
-<text class="t" x="230.0" y="730">Промпт LLM: соотнести технологии с кодами</text>
+<text class="t" x="230.0" y="730">LLM prompt: match technologies to codes</text>
 <rect class="q" x="77.0" y="746" width="130" height="34"/>
-<text class="qs" x="142.0" y="768">Крупная категория</text>
+<text class="qs" x="142.0" y="768">Coarse category</text>
 <rect class="q" x="253.0" y="746" width="130" height="34"/>
-<text class="qs" x="318.0" y="768">Код внутри неё</text>
+<text class="qs" x="318.0" y="768">Code inside it</text>
 <path class="ln" d="M207.0,763 H250.0" marker-end="url(#a)"/>
 <text class="tag" x="408" y="768">× 3</text>
 <path class="ln" d="M230.0,798 V825" marker-end="url(#a)"/>
 <rect class="out1" x="40" y="828" width="380" height="74"/>
-<text class="t" x="230.0" y="852">Профиль v1</text>
-<text class="s" x="230.0" y="872">≥ 2 прогонов из 3, совпадение: группы CPC 91%, темы 86%</text>
-<text class="s" x="230.0" y="889">162 пункта: 84 группы CPC + 78 тем OpenAlex</text>
+<text class="t" x="230.0" y="852">Profile v1</text>
+<text class="s" x="230.0" y="872">≥ 2 of 3 runs; agreement: CPC groups 91%, topics 86%</text>
+<text class="s" x="230.0" y="889">162 items: 84 CPC groups + 78 OpenAlex topics</text>
 <rect class="emb" x="450" y="706" width="380" height="480"/>
-<text class="t" x="640.0" y="732">Эмбеддинги</text>
+<text class="t" x="640.0" y="732">Embeddings</text>
 <rect class="frame" x="460.0" y="745" width="174" height="120"/>
 <rect class="q" x="465.0" y="750" width="164" height="42"/>
-<text class="qs" x="547.0" y="768">43 технологии</text>
-<text class="qss" x="547.0" y="784">название + фразы</text>
+<text class="qs" x="547.0" y="768">43 technologies</text>
+<text class="qss" x="547.0" y="784">label + phrases</text>
 <text class="plus" x="547.0" y="810">+</text>
 <rect class="q" x="465.0" y="818" width="164" height="42"/>
-<text class="qs" x="547.0" y="836">4 516 тем OpenAlex</text>
-<text class="qss" x="547.0" y="852">название, описание, слова</text>
+<text class="qs" x="547.0" y="836">4,516 OpenAlex topics</text>
+<text class="qss" x="547.0" y="852">name, description, keywords</text>
 <path class="ln" d="M547.0,865 V875" marker-end="url(#a)"/>
 <rect class="model" x="465.0" y="878" width="164" height="30"/>
 <text class="qs" x="547.0" y="898">SPECTER2</text>
 <path class="ln" d="M547.0,908 V921" marker-end="url(#a)"/>
 <rect class="q" x="497.0" y="924" width="100" height="100"/>
-<text class="qs" x="547.0" y="964">геом.</text>
-<text class="qs" x="547.0" y="980">близость</text>
+<text class="qs" x="547.0" y="964">geometric</text>
+<text class="qs" x="547.0" y="980">closeness</text>
 <text class="qss" x="547.0" y="998">OpenAlex</text>
 <rect class="frame" x="646.0" y="745" width="174" height="120"/>
 <rect class="q" x="651.0" y="750" width="164" height="42"/>
-<text class="qs" x="733.0" y="768">43 технологии</text>
-<text class="qss" x="733.0" y="784">название + фразы</text>
+<text class="qs" x="733.0" y="768">43 technologies</text>
+<text class="qss" x="733.0" y="784">label + phrases</text>
 <text class="plus" x="733.0" y="810">+</text>
 <rect class="q" x="651.0" y="818" width="164" height="42"/>
-<text class="qs" x="733.0" y="836">7 646 групп CPC</text>
-<text class="qss" x="733.0" y="852">подкласс, группа, подгруппы</text>
+<text class="qs" x="733.0" y="836">7,646 CPC groups</text>
+<text class="qss" x="733.0" y="852">subclass, group, subgroups</text>
 <path class="ln" d="M733.0,865 V875" marker-end="url(#a)"/>
 <rect class="model" x="651.0" y="878" width="164" height="30"/>
 <text class="qs" x="733.0" y="898">PatentSBERTa</text>
 <path class="ln" d="M733.0,908 V921" marker-end="url(#a)"/>
 <circle class="q" cx="733.0" cy="974" r="50"/>
-<text class="qs" x="733.0" y="964">геом.</text>
-<text class="qs" x="733.0" y="980">близость</text>
+<text class="qs" x="733.0" y="964">geometric</text>
+<text class="qs" x="733.0" y="980">closeness</text>
 <text class="qss" x="733.0" y="998">CPC</text>
 <path class="ln" d="M547.0,1024 L616.75,1074" marker-end="url(#a)"/>
 <path class="ln" d="M733.0,1024 L663.25,1074" marker-end="url(#a)"/>
@@ -176,27 +176,27 @@ text { font-family: Helvetica, Arial, "DejaVu Sans", sans-serif; }
 <g style="opacity:.3"><path class="ln" d="M640.0,1098 L795.5,1070.1"/>
 <circle class="q" cx="795.5" cy="1070.1" r="8"/></g>
 <ellipse class="tc" cx="640.0" cy="1098" rx="40" ry="18"/>
-<text class="qss" x="640.0" y="1102">технология</text>
-<text class="qss" x="530.0" y="1170">50 ближайших тем</text>
-<text class="qss" x="750.0" y="1170">50 ближайших CPC</text>
+<text class="qss" x="640.0" y="1102">technology</text>
+<text class="qss" x="530.0" y="1170">50 nearest topics</text>
+<text class="qss" x="750.0" y="1170">50 nearest CPC groups</text>
 <path class="ln" d="M1050.0,160 V703" marker-end="url(#a)"/>
 <rect class="v2c" x="860" y="706" width="380" height="96"/>
-<text class="t" x="1050.0" y="730">Эмбеддинги на полных текстах</text>
-<text class="s" x="1050.0" y="750">пропущен шаг с чисткой аннотаций LLM</text>
-<text class="s" x="1050.0" y="767">название + полная аннотация (по предложениям)</text>
-<text class="s" x="1050.0" y="784">эмбеддинги как в v3.1 дают шум (регион, кадры)</text>
+<text class="t" x="1050.0" y="730">Embeddings on the full texts</text>
+<text class="s" x="1050.0" y="750">no LLM step to clean the abstracts</text>
+<text class="s" x="1050.0" y="767">title + full abstract (sentence by sentence)</text>
+<text class="s" x="1050.0" y="784">embeddings as in v3.1 give noise (region, workforce)</text>
 <path class="ln" d="M640.0,1186 V1213" marker-end="url(#a)"/>
 <rect class="judge" x="450" y="1216" width="380" height="92"/>
-<text class="t" x="640.0" y="1240">Судья LLM: оценить кандидатов</text>
+<text class="t" x="640.0" y="1240">LLM judge: score the candidates</text>
 <rect class="q" x="487.0" y="1256" width="130" height="34"/>
-<text class="qs" x="552.0" y="1278">50 ближайших</text>
+<text class="qs" x="552.0" y="1278">50 nearest</text>
 <rect class="q" x="663.0" y="1256" width="130" height="34"/>
-<text class="qs" x="728.0" y="1278">Оценка 0–3</text>
+<text class="qs" x="728.0" y="1278">Score 0–3</text>
 <path class="ln" d="M617.0,1273 H660.0" marker-end="url(#a)"/>
 <text class="tag" x="818" y="1278">× 3</text>
 <path class="ln" d="M640.0,1308 V1335" marker-end="url(#a)"/>
 <rect class="pr" x="450" y="1338" width="380" height="74"/>
-<text class="t" x="640.0" y="1362">Профиль v3.1</text>
-<text class="s" x="640.0" y="1382">до 2 тем и 2 групп CPC на технологию</text>
-<text class="s" x="640.0" y="1399">высокая оценка в ≥ 2 прогонах из 3</text>
+<text class="t" x="640.0" y="1362">Profile v3.1</text>
+<text class="s" x="640.0" y="1382">up to 2 topics and 2 CPC groups per technology</text>
+<text class="s" x="640.0" y="1399">high score in ≥ 2 of 3 runs</text>
 </svg>

@@ -23,16 +23,16 @@ for x, h, k in zip(cols, ["v1: LLM brute force", "v3.1: embeddings, more nuance"
     rect(f"head {k}", x, 20, CW, 46); text("th", x + CW/2, 49, h)
 # 2. grants
 Y2 = 100
-box("box", FULL_X, Y2, FULL_W, 60, "12 грантов NSF", ["название + аннотация (сайт NSF)"])
+box("box", FULL_X, Y2, FULL_W, 60, "12 NSF awards", ["title + abstract (NSF website)"])
 # common step for v1 and v3.1
 Y3 = Y2 + 120
 CX, CWD = cols[0], cols[1] + CW - cols[0]          # the common block spans the v1 and v3.1 columns
 H3 = 66 + 60 + 48 + 60 + 22                         # header, prompts, gap, technologies block, padding
 rect("prompts", CX, Y3, CWD, H3)                     # background first, the content is drawn on top
-text("bt", CX + 18, Y3 + 30, "Промпты для LLM для определения технологий гранта")
+text("bt", CX + 18, Y3 + 30, "LLM prompts to find the grant's technologies")
 PY, PH, PW = Y3 + 66, 60, 236
 px = [CX + 22 + i*((CWD - 44 - PW)/2) for i in range(3)]
-for x, (t, sub, cls) in zip(px, [("Простой", "только идея задачи", "pr"), ("Простой +", "идея + крупность технологий", "chosen"), ("Длинный", "правила и примеры", "pr")]):
+for x, (t, sub, cls) in zip(px, [("Simple", "the task only", "pr"), ("Simple +", "task + size of a technology", "chosen"), ("Long", "rules and examples", "pr")]):
     box(cls, x, PY, PW, PH, t, [sub])
 TY, TW, TH = PY + PH + 48, 600, 60
 MID = CX + CWD/2
@@ -46,8 +46,8 @@ o.append(f'<path class="ln" d="M{cx[2]},66 V{Y2}"/>')           # v2: header -> 
 o.append(f'<path class="LN" d="M{px[1]+PW/2},{PY+PH} V{TY-4}" marker-end="url(#A)"/>')
 o.append(f'<text class="x3" x="{px[1]+PW/2+12}" y="{(PY+PH+TY)/2+6}">× 3</text>')
 rect("tech", TX, TY, TW, TH)
-text("t", MID, TY + 26, "43 технологии, 2–5 на Engine")
-text("s", MID, TY + 46, "77 фраз, найденных ≥ 2 прогонами из 3")
+text("t", MID, TY + 26, "43 technologies, 2–5 per Engine")
+text("s", MID, TY + 46, "77 phrases found by ≥ 2 of 3 runs")
 # codes: our lists, common to v1 and v3.1; narrow, so the technology arrows pass straight down beside it
 CY, CH = Y3 + H3 + 36, 150
 SW = 220
@@ -56,9 +56,9 @@ kx = [2*cx[i] - tx[i] for i in (0, 1)]               # list centre mirrors the t
 sx = [k - SW/2 for k in kx]
 CBX, CBW = sx[0] - 20, sx[1] + SW + 20 - (sx[0] - 20)
 rect("common", CBX, CY, CBW, CH)
-text("bt", CBX + 16, CY + 26, "Коды OpenAlex и CPC")
-box("box", sx[0], CY + 58, SW, 76, "Крупные категории", ["652 подкласса CPC", "250 подобластей OpenAlex"])
-box("box", sx[1], CY + 58, SW, 76, "Полные списки", ["7 646 групп CPC", "4 516 тем OpenAlex"])
+text("bt", CBX + 16, CY + 26, "OpenAlex and CPC codes")
+box("box", sx[0], CY + 58, SW, 76, "Coarse categories", ["652 CPC subclasses", "250 OpenAlex subfields"])
+box("box", sx[1], CY + 58, SW, 76, "Full lists", ["7,646 CPC groups", "4,516 OpenAlex topics"])
 PRY = CY + CH + 44
 BY = PRY - 18                                        # brackets: technologies + list -> one arrow on the column axis
 for i in (0, 1):
@@ -69,31 +69,31 @@ for i in (0, 1):
 # v1: the model matches each technology to our codes, three times
 LH = 92
 rect("llm", cols[0], PRY, CW, LH)
-text("t", cx[0], PRY + 24, "Промпт LLM: соотнести технологии с кодами")
+text("t", cx[0], PRY + 24, "LLM prompt: match technologies to codes")
 # the two levels as a picture: a coarse category first, then a code inside it
 QW, QH, QG = 130, 34, 46
 q0 = cx[0] - QW - QG/2
-for k, label in enumerate(["Крупная категория", "Код внутри неё"]):
+for k, label in enumerate(["Coarse category", "Code inside it"]):
     rect("q", q0 + k*(QW + QG), PRY + 40, QW, QH)
     text("qs", q0 + k*(QW + QG) + QW/2, PRY + 62, label)
 o.append(f'<path class="ln" d="M{q0+QW},{PRY+57} H{q0+QW+QG-3}" marker-end="url(#a)"/>')
 text("tag", cols[0] + CW - 12, PRY + 62, "× 3")
 RY = PRY + LH + 30
 down(cx[0], PRY + LH, RY)
-box("out1", cols[0], RY, CW, 74, "Профиль v1",
-    ["≥ 2 прогонов из 3, совпадение: группы CPC 91%, темы 86%", "162 пункта: 84 группы CPC + 78 тем OpenAlex"])
+box("out1", cols[0], RY, CW, 74, "Profile v1",
+    ["≥ 2 of 3 runs; agreement: CPC groups 91%, topics 86%", "162 items: 84 CPC groups + 78 OpenAlex topics"])
 # v3.1 (simple), step 1: embeddings. Two columns: topics (SPECTER2) and CPC groups (PatentSBERTa); each
 # compares the 43 technologies with the full list by geometric closeness; picture: a technology and its nearest items
 EH = 480
 rect("emb", cols[1], PRY, CW, EH)
-text("t", cx[1], PRY + 26, "Эмбеддинги")
+text("t", cx[1], PRY + 26, "Embeddings")
 w, g = 164, 22
 ex = [cx[1] - w - g/2, cx[1] + g/2]
-for k, (lst, lsub, model, near) in enumerate([("4 516 тем OpenAlex", "название, описание, слова", "SPECTER2", "OpenAlex"),
-                                              ("7 646 групп CPC", "подкласс, группа, подгруппы", "PatentSBERTa", "CPC")]):
+for k, (lst, lsub, model, near) in enumerate([("4,516 OpenAlex topics", "name, description, keywords", "SPECTER2", "OpenAlex"),
+                                              ("7,646 CPC groups", "subclass, group, subgroups", "PatentSBERTa", "CPC")]):
     xm = ex[k] + w/2
     rect("frame", ex[k] - 5, PRY + 39, w + 10, 120)         # the pair that the model compares
-    rect("q", ex[k], PRY + 44, w, 42); text("qs", xm, PRY + 62, "43 технологии"); text("qss", xm, PRY + 78, "название + фразы")
+    rect("q", ex[k], PRY + 44, w, 42); text("qs", xm, PRY + 62, "43 technologies"); text("qss", xm, PRY + 78, "label + phrases")
     text("plus", xm, PRY + 104, "+")
     rect("q", ex[k], PRY + 112, w, 42); text("qs", xm, PRY + 130, lst); text("qss", xm, PRY + 146, lsub)
     down(xm, PRY + 159, PRY + 172)
@@ -101,7 +101,7 @@ for k, (lst, lsub, model, near) in enumerate([("4 516 тем OpenAlex", "наз�
     down(xm, PRY + 202, PRY + 218)
     if k == 0: rect("q", xm - 50, PRY + 218, 100, 100)          # topics: square, as in the picture below
     else: o.append(f'<circle class="q" cx="{xm}" cy="{PRY+268}" r="50"/>')   # CPC: circle
-    text("qs", xm, PRY + 258, "геом."); text("qs", xm, PRY + 274, "близость"); text("qss", xm, PRY + 292, near)
+    text("qs", xm, PRY + 258, "geometric"); text("qs", xm, PRY + 274, "closeness"); text("qss", xm, PRY + 292, near)
 # picture: one technology in the middle, its nearest topics (squares) and CPC groups (circles)
 SC = (cx[1], PRY + 392)
 for xm in (ex[0] + w/2, ex[1] + w/2):
@@ -120,33 +120,33 @@ for side in (-1, 1):                      # left: topics (squares), right: CPC g
         o.append(f'<rect class="q" x="{x-8:.1f}" y="{y-8:.1f}" width="16" height="16"/></g>' if side < 0 else
                  f'<circle class="q" cx="{x:.1f}" cy="{y:.1f}" r="8"/></g>')
 o.append(f'<ellipse class="tc" cx="{SC[0]}" cy="{SC[1]}" rx="40" ry="18"/>')
-text("qss", SC[0], SC[1] + 4, "технология")
-text("qss", SC[0] - 110, SC[1] + RY + 18, "50 ближайших тем")
-text("qss", SC[0] + 110, SC[1] + RY + 18, "50 ближайших CPC")
+text("qss", SC[0], SC[1] + 4, "technology")
+text("qss", SC[0] - 110, SC[1] + RY + 18, "50 nearest topics")
+text("qss", SC[0] + 110, SC[1] + RY + 18, "50 nearest CPC groups")
 # step 3: an LLM judge scores the 50 candidates of each list, three runs
 # v2: the grant text as it is (title + each abstract sentence), then the same embeddings as v3.1;
 # without the technologies step the rankings are noisy (region, workforce), so v2 stops here
 down(cx[2], Y2 + 60, PRY)
-box("v2c", cols[2], PRY, CW, 96, "Эмбеддинги на полных текстах", ["пропущен шаг с чисткой аннотаций LLM",
-    "название + полная аннотация (по предложениям)", "эмбеддинги как в v3.1 дают шум (регион, кадры)"])
+box("v2c", cols[2], PRY, CW, 96, "Embeddings on the full texts", ["no LLM step to clean the abstracts",
+    "title + full abstract (sentence by sentence)", "embeddings as in v3.1 give noise (region, workforce)"])
 JY = PRY + EH + 30
 down(cx[1], PRY + EH, JY)
 rect("judge", cols[1], JY, CW, LH)
-text("t", cx[1], JY + 24, "Судья LLM: оценить кандидатов")
+text("t", cx[1], JY + 24, "LLM judge: score the candidates")
 q1 = cx[1] - QW - QG/2
-for k, label in enumerate(["50 ближайших", "Оценка 0–3"]):
+for k, label in enumerate(["50 nearest", "Score 0–3"]):
     rect("q", q1 + k*(QW + QG), JY + 40, QW, QH)
     text("qs", q1 + k*(QW + QG) + QW/2, JY + 62, label)
 o.append(f'<path class="ln" d="M{q1+QW},{JY+57} H{q1+QW+QG-3}" marker-end="url(#a)"/>')
 text("tag", cols[1] + CW - 12, JY + 62, "× 3")
 RY3 = JY + LH + 30
 down(cx[1], JY + LH, RY3)
-box("pr", cols[1], RY3, CW, 74, "Профиль v3.1",
-    ["до 2 тем и 2 групп CPC на технологию", "высокая оценка в ≥ 2 прогонах из 3"])
+box("pr", cols[1], RY3, CW, 74, "Profile v3.1",
+    ["up to 2 topics and 2 CPC groups per technology", "high score in ≥ 2 of 3 runs"])
 L = max(RY, RY3) + 74
 H = L + 20
 svg = [f'<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 {W} {H}" width="{W}" height="{H}">',
- '<title>Профиль технологии: версии v1, v2, v3.1 (в работе)</title>',
+ '<title>Technology profile: versions v1, v2, v3.1 (in progress)</title>',
  '''<defs>
 <marker id="a" viewBox="0 0 10 10" refX="10" refY="5" markerWidth="9" markerHeight="9" markerUnits="userSpaceOnUse" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#222"/></marker>
 <marker id="A" viewBox="0 0 10 10" refX="10" refY="5" markerWidth="14" markerHeight="14" markerUnits="userSpaceOnUse" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#111"/></marker>
