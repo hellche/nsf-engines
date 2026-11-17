@@ -1592,7 +1592,7 @@ display: flex; align-items: center; flex-wrap: wrap; gap: 4px 20px; min-height: 
 .site-nav a { color: rgba(0,0,0,.6); text-decoration: none; }
 .site-nav a:hover, .site-nav a:focus { color: #000; text-decoration: none; }
 .site-nav .brand { font-size: 18px; margin-right: auto; padding: 12px 0; }
-.site-nav .links { display: flex; align-items: center; gap: 20px; }
+.site-nav .links { display: flex; align-items: center; flex-wrap: wrap; gap: 4px 20px; }
 .site-nav .links a.active { color: #000; }
 .site-nav svg { width: 18px; height: 18px; vertical-align: -3px; fill: currentColor; }
 #TOC { top: 76px; }
@@ -1601,7 +1601,7 @@ display: flex; align-items: center; flex-wrap: wrap; gap: 4px 20px; min-height: 
   <a class="brand" href="index.html">NSF Regional Innovation Engines, Cohort 2</a>
   <div class="links">
     <a href="pipeline.html">Pipeline</a>
-    <a href="methodology.html">Methodology</a>
+    <a href="methodology.html">Technology profile</a>
     <a href="index.html">12 Engines</a>
     <a href="publications.html">Publications</a>
     <a href="patents.html">Patents</a>
@@ -1631,7 +1631,7 @@ display: flex; align-items: center; flex-wrap: wrap; gap: 4px 20px; min-height: 
 .site-nav a { color: rgba(0,0,0,.6); text-decoration: none; }
 .site-nav a:hover, .site-nav a:focus { color: #000; text-decoration: none; }
 .site-nav .brand { font-size: 18px; margin-right: auto; padding: 12px 0; }
-.site-nav .links { display: flex; align-items: center; gap: 20px; }
+.site-nav .links { display: flex; align-items: center; flex-wrap: wrap; gap: 4px 20px; }
 .site-nav .links a.active { color: #000; }
 .site-nav svg { width: 18px; height: 18px; vertical-align: -3px; fill: currentColor; }
 #TOC { top: 76px; }
@@ -1640,7 +1640,7 @@ display: flex; align-items: center; flex-wrap: wrap; gap: 4px 20px; min-height: 
   <a class="brand" href="index.html">NSF Regional Innovation Engines, Cohort 2</a>
   <div class="links">
     <a href="pipeline.html">Pipeline</a>
-    <a href="methodology.html">Methodology</a>
+    <a href="methodology.html">Technology profile</a>
     <a href="index.html">12 Engines</a>
     <a href="publications.html">Publications</a>
     <a href="patents.html">Patents</a>
@@ -2235,6 +2235,16 @@ table th.sort-desc::after { content: " \25BC"; color: #000; }
       count.textContent = q ? shown + " of " + body.rows.length + " rows" : "";
     });
   }
+
+  // Wide tables scroll inside their own box on narrow screens instead of widening the whole page
+  document.querySelectorAll(".main-container table").forEach(function (t) {
+    if (t.parentNode.classList && t.parentNode.classList.contains("table-scroll")) return;
+    var w = document.createElement("div");
+    w.className = "table-scroll";
+    w.style.overflowX = "auto";
+    t.parentNode.insertBefore(w, t);
+    w.appendChild(t);
+  });
 
   document.querySelectorAll(".main-container table").forEach(function (t) {
     if (t.closest(".no-sort")) return;  // e.g. a comparison table: rows are steps, not records

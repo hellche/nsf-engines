@@ -11,7 +11,7 @@
 
 
 
-<title>Methodology</title>
+<title>Technology profile</title>
 
 <script>// Pandoc 2.9 adds attributes on both header and div. We remove the former (to
 // be compatible with the behavior of Pandoc < 2.8).
@@ -1592,7 +1592,7 @@ display: flex; align-items: center; flex-wrap: wrap; gap: 4px 20px; min-height: 
 .site-nav a { color: rgba(0,0,0,.6); text-decoration: none; }
 .site-nav a:hover, .site-nav a:focus { color: #000; text-decoration: none; }
 .site-nav .brand { font-size: 18px; margin-right: auto; padding: 12px 0; }
-.site-nav .links { display: flex; align-items: center; gap: 20px; }
+.site-nav .links { display: flex; align-items: center; flex-wrap: wrap; gap: 4px 20px; }
 .site-nav .links a.active { color: #000; }
 .site-nav svg { width: 18px; height: 18px; vertical-align: -3px; fill: currentColor; }
 #TOC { top: 76px; }
@@ -1601,7 +1601,7 @@ display: flex; align-items: center; flex-wrap: wrap; gap: 4px 20px; min-height: 
   <a class="brand" href="index.html">NSF Regional Innovation Engines, Cohort 2</a>
   <div class="links">
     <a href="pipeline.html">Pipeline</a>
-    <a href="methodology.html">Methodology</a>
+    <a href="methodology.html">Technology profile</a>
     <a href="index.html">12 Engines</a>
     <a href="publications.html">Publications</a>
     <a href="patents.html">Patents</a>
@@ -1631,7 +1631,7 @@ display: flex; align-items: center; flex-wrap: wrap; gap: 4px 20px; min-height: 
 .site-nav a { color: rgba(0,0,0,.6); text-decoration: none; }
 .site-nav a:hover, .site-nav a:focus { color: #000; text-decoration: none; }
 .site-nav .brand { font-size: 18px; margin-right: auto; padding: 12px 0; }
-.site-nav .links { display: flex; align-items: center; gap: 20px; }
+.site-nav .links { display: flex; align-items: center; flex-wrap: wrap; gap: 4px 20px; }
 .site-nav .links a.active { color: #000; }
 .site-nav svg { width: 18px; height: 18px; vertical-align: -3px; fill: currentColor; }
 #TOC { top: 76px; }
@@ -1640,7 +1640,7 @@ display: flex; align-items: center; flex-wrap: wrap; gap: 4px 20px; min-height: 
   <a class="brand" href="index.html">NSF Regional Innovation Engines, Cohort 2</a>
   <div class="links">
     <a href="pipeline.html">Pipeline</a>
-    <a href="methodology.html">Methodology</a>
+    <a href="methodology.html">Technology profile</a>
     <a href="index.html">12 Engines</a>
     <a href="publications.html">Publications</a>
     <a href="patents.html">Patents</a>
@@ -1665,7 +1665,7 @@ display: flex; align-items: center; flex-wrap: wrap; gap: 4px 20px; min-height: 
 
 
 
-<h1 class="title toc-ignore">Methodology</h1>
+<h1 class="title toc-ignore">Technology profile</h1>
 
 </div>
 
@@ -1673,140 +1673,152 @@ display: flex; align-items: center; flex-wrap: wrap; gap: 4px 20px; min-height: 
 <style>
 .method-svg svg { width: 100%; height: auto; }
 </style>
-<div id="technology-profile-v2-v3" class="section level2">
-<h2>Technology profile: versions</h2>
-<p>The technology profile says what each Engine works on, as OpenAlex
-topics (for papers) and CPC groups (for patents). It is built from the
-text of the NSF grant only. Three versions exist. <strong>Version
-1</strong> is the earlier choice made by hand; all metrics on this site
-still use it. <strong>Version 2</strong> ranks every topic and CPC group
-against the whole grant text and is kept for comparison. <strong>Version
-3.1</strong> splits the grant into its technologies and chooses,
-technology by technology, the items that two independent kinds of
-evidence agree on; its core is ready, and the metrics have not yet been
-recomputed with it.</p>
+<div id="what-is-the-technology-profile" class="section level2">
+<h2>What is the technology profile</h2>
+<p>The technology profile says what an Engine works on, in two
+vocabularies: <strong>OpenAlex topics</strong> for papers and
+<strong>CPC groups</strong> for patents. It is built from the text of
+the NSF grant only (title and abstract), not from the Engine’s website
+or from the papers and patents themselves: the profile describes what
+the grant says the Engine does, and the data are then measured against
+it.</p>
+<p>The profile is used in two ways across the site:</p>
+<ul>
+<li>a paper is <strong>in the Engine’s topics</strong> when at least one
+of its three OpenAlex topics is a profile topic;</li>
+<li>a patent is <strong>in the profile</strong> when at least one of its
+CPC codes is a profile code.</li>
+</ul>
+<p>These give the partners’ papers in the Engine’s topics, the regional
+patents in the profile, the patent location quotient (LQ) and the
+comparison with US states. <strong>All metrics on this site still use
+version 1</strong> of the profile.</p>
+</div>
+<div id="versions" class="section level2">
+<h2>Versions</h2>
+<p>Three versions exist. <strong>Version 1</strong> is the earlier
+choice made by hand. <strong>Version 2</strong> ranks every topic and
+CPC group against the whole grant text and is kept for comparison.
+<strong>Version 3.1</strong> splits the grant into its technologies and
+chooses, technology by technology, the items that two independent kinds
+of evidence agree on; its core is ready, and the metrics have not yet
+been recomputed with it. The diagram labels are in Russian.</p>
 <div class="method-svg">
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 900" width="1280" height="900" role="img" aria-labelledby="t">
-<title id="t">
-Technology profile: versions 1, 2 and 3.1
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 930" width="1280" height="930">
+<title>
+Профиль технологии: версии v2 и v3
 </title>
 <defs>
-<marker id="a" viewBox="0 0 10 10" refX="10" refY="5" markerWidth="9" markerHeight="9" markerUnits="userSpaceOnUse" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#333" /></marker>
+<marker id="a" viewBox="0 0 10 10" refX="10" refY="5" markerWidth="9" markerHeight="9" markerUnits="userSpaceOnUse" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#222" /></marker>
+<marker id="A" viewBox="0 0 10 10" refX="10" refY="5" markerWidth="16" markerHeight="16" markerUnits="userSpaceOnUse" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#111" /></marker>
+<marker id="g" viewBox="0 0 10 10" refX="10" refY="5" markerWidth="9" markerHeight="9" markerUnits="userSpaceOnUse" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#888" /></marker>
 <style> text { font-family: Helvetica, Arial, “DejaVu Sans”, sans-serif;
-} .box { fill: #fff; stroke: #333; stroke-width: 1.5; } .man { fill:
-#fff; stroke: #333; stroke-width: 1.5; stroke-dasharray: 6 4; } .out-v1
-{ fill: #ececec; stroke: #555; stroke-width: 2.5; } .out-v2 { fill:
-#e3ecf9; stroke: #4a6fa5; stroke-width: 2.5; } .out-v3 { fill: #e6f2ea;
-stroke: #4f8a62; stroke-width: 2.5; } .lane-v1 { fill: #f6f6f6; }
-.lane-v2 { fill: #f3f7fd; } .lane-v3 { fill: #f2f9f4; } .h { font-size:
-19px; font-weight: 700; text-anchor: middle; } .h-v1 { fill: #444; }
-.h-v2 { fill: #2f5a96; } .h-v3 { fill: #2f6b43; } .idea { font-size:
-13.5px; font-style: italic; fill: #333; text-anchor: middle; } .t {
-font-size: 15px; font-weight: 700; fill: #111; text-anchor: middle; } .s
-{ font-size: 12.5px; fill: #444; text-anchor: middle; } .tag {
-font-size: 11px; fill: #777; text-anchor: end; } .ln { fill: none;
-stroke: #333; stroke-width: 1.5; } .top { font-size: 17px; font-weight:
-700; fill: #111; text-anchor: middle; } .note { font-size: 12.5px; fill:
-#555; } </style> </defs> <rect width="100%" height="100%" fill="#fff" />
-<rect class="box" x="440" y="20" width="400" height="56" />
-<text class="top" x="640" y="45">NSF grant</text>
-<text class="s" x="640" y="64">title and abstract · 12 Engines</text>
-<rect class="lane-v1" x="20" y="100" width="400" height="730" rx="10" />
-<path class="ln" d="M640,76 V86 H220 V96" marker-end="url(#a)" />
-<path class="ln" d="M220,190 V226" marker-end="url(#a)" />
-<text class="h h-v1" x="220" y="130">v1 · used on the site</text>
-<text class="idea" x="220" y="156">Idea: a person reads the grant</text>
-<text class="idea" x="220" y="174">and names its technologies</text>
-<rect class="box" x="40" y="230" width="360" height="70" rx="4" />
-<text class="t" x="220" y="253">Statements by hand</text>
-<text class="s" x="220" y="272">3-5 per Engine, 48 in total,</text>
-<text class="s" x="220" y="288">each with a verbatim quote</text>
-<rect class="box" x="40" y="335" width="360" height="70" rx="4" />
-<text class="t" x="220" y="358">OpenAlex topic classifier</text>
-<text class="s" x="220" y="377">top 3 topics per statement; the
-first,</text> <text class="s" x="220" y="393">or the second with a
-stated reason</text>
-<rect class="box" x="40" y="440" width="360" height="70" rx="4" />
-<text class="t" x="220" y="463">CPC codes by hand</text>
-<text class="s" x="220" y="482">subclasses and groups mixed;</text>
-<text class="s" x="220" y="498">checked: the code has patents</text>
-<path class="ln" d="M220,300 V331" marker-end="url(#a)" />
-<path class="ln" d="M220,405 V436" marker-end="url(#a)" />
-<path class="ln" d="M220,510 V712" marker-end="url(#a)" />
-<rect class="out-v1" x="40" y="716" width="360" height="74" rx="6" />
-<text class="t" x="220" y="741">Profile v1</text>
-<text class="s" x="220" y="760">all metrics on this site</text>
-<rect class="lane-v2" x="440" y="100" width="400" height="730" rx="10" />
-<path class="ln" d="M640,76 V96" marker-end="url(#a)" />
-<path class="ln" d="M640,190 V226" marker-end="url(#a)" />
-<text class="h h-v2" x="640" y="130">v2 · for comparison</text>
-<text class="idea" x="640" y="156">Idea: rank every topic and
-code</text> <text class="idea" x="640" y="174">against the whole grant
-text</text>
-<rect class="box" x="460" y="230" width="360" height="70" rx="4" />
-<text class="t" x="640" y="253">Every sentence of the grant</text>
-<text class="s" x="640" y="272">title and abstract, 203
-sentences;</text> <text class="s" x="640" y="288">includes region and
-workforce</text>
-<rect class="box" x="460" y="335" width="360" height="70" rx="4" />
-<text class="t" x="640" y="358">Embeddings of all items</text>
-<text class="s" x="640" y="377">4,516 OpenAlex topics (SPECTER2)</text>
-<text class="s" x="640" y="393">7,646 CPC groups (PatentSBERTa)</text>
-<rect class="box" x="460" y="440" width="360" height="70" rx="4" />
-<text class="t" x="640" y="463">Ranking per Engine</text>
-<text class="s" x="640" y="482">every topic and group gets a
-rank;</text> <text class="s" x="640" y="498">no selection</text>
-<path class="ln" d="M640,300 V331" marker-end="url(#a)" />
-<path class="ln" d="M640,405 V436" marker-end="url(#a)" />
-<path class="ln" d="M640,510 V712" marker-end="url(#a)" />
-<rect class="out-v2" x="460" y="716" width="360" height="74" rx="6" />
-<text class="t" x="640" y="741">Rankings v2</text>
-<text class="s" x="640" y="760">used only to compare with v3.1</text>
-<rect class="lane-v3" x="860" y="100" width="400" height="730" rx="10" />
-<path class="ln" d="M640,76 V86 H1060 V96" marker-end="url(#a)" />
-<path class="ln" d="M1060,190 V226" marker-end="url(#a)" />
-<text class="h h-v3" x="1060" y="130">v3.1 · core ready</text>
-<text class="idea" x="1060" y="156">Idea: technology by
-technology,</text> <text class="idea" x="1060" y="174">two independent
-kinds of evidence</text>
-<rect class="man" x="880" y="230" width="360" height="70" rx="4" />
-<text class="t" x="1060" y="253">Fragments and technologies</text>
-<text class="s" x="1060" y="272">fixed prompt: verbatim technical
-phrases,</text> <text class="s" x="1060" y="288">86 fragments in 39
-technologies</text>
-<rect class="box" x="880" y="326" width="360" height="70" rx="4" />
-<text class="t" x="1060" y="349">Embeddings per technology</text>
-<text class="s" x="1060" y="368">three similarity scores,</text>
-<text class="s" x="1060" y="384">fused into one embedding rank</text>
-<rect class="box" x="880" y="422" width="360" height="70" rx="4" />
-<text class="t" x="1060" y="445">Independent signal</text>
-<text class="s" x="1060" y="464">topics: OpenAlex classifier</text>
-<text class="s" x="1060" y="480">CPC: word match (BM25) with group
-text</text>
-<rect class="box" x="880" y="518" width="360" height="70" rx="4" />
-<text class="t" x="1060" y="541">Confirmed = both agree</text>
-<text class="s" x="1060" y="560">embedding top 20 and independent
-signal;</text> <text class="s" x="1060" y="576">catch-all topics do not
-count</text>
-<rect class="man" x="880" y="614" width="360" height="70" rx="4" />
-<text class="t" x="1060" y="637">Judge with a fixed rubric (0-3)</text>
-<text class="s" x="1060" y="656">fills what is not confirmed,</text>
-<text class="s" x="1060" y="672">audits what is confirmed</text>
-<path class="ln" d="M1060,300 V322" marker-end="url(#a)" />
-<path class="ln" d="M1060,396 V418" marker-end="url(#a)" />
-<path class="ln" d="M1060,492 V514" marker-end="url(#a)" />
-<path class="ln" d="M1060,588 V610" marker-end="url(#a)" />
-<path class="ln" d="M1060,684 V712" marker-end="url(#a)" />
-<rect class="out-v3" x="880" y="716" width="360" height="74" rx="6" />
-<text class="t" x="1060" y="741">Core of the profile v3.1</text>
-<text class="s" x="1060" y="760">128 items: up to 2 topics and 2
-CPC</text> <text class="s" x="1060" y="776">groups per technology</text>
-<rect class="man" x="40" y="860" width="34" height="18" />
-<text class="note" x="84" y="874">done by hand in a chat session, not
-through an API: not reproducible</text>
-<text class="note" x="640" y="874">v3 (first run): fragments from an
-earlier prompt, no technologies, no fixes; rankings kept for
-comparison</text>
+} .box { fill: #fff; stroke: #222; stroke-width: 1.5; } .hold { fill:
+#fff; stroke: #888; stroke-width: 1.5; stroke-dasharray: 6 4; } .on {
+fill: #e3ecf9; stroke: #4a6fa5; stroke-width: 2.5; } .emb { fill:
+#e6f2ea; stroke: #4f8a62; stroke-width: 2.5; } .t { font-size: 16px;
+font-weight: 700; fill: #111; text-anchor: middle; } .ts { font-size:
+14px; font-weight: 700; fill: #111; text-anchor: middle; } .s {
+font-size: 12px; fill: #555; text-anchor: middle; } .m { font-size:
+11.5px; fill: #3a3a3a; text-anchor: middle; font-family: Menlo,
+Consolas, “DejaVu Sans Mono”, monospace; } .hs { font-size: 12px; fill:
+#777; text-anchor: middle; } .ln { fill: none; stroke: #222;
+stroke-width: 1.5; } .LN { fill: none; stroke: #111; stroke-width: 4;
+stroke-linejoin: round; } .dl { fill: none; stroke: #888; stroke-width:
+1.5; stroke-dasharray: 6 4; } .ck { fill: none; stroke: #222;
+stroke-width: 1.5; stroke-dasharray: 2 3; } </style> </defs>
+<!-- input -->
+<rect class="box" x="490" y="40" width="300" height="70" />
+<text class="t" x="640" y="64">Грант NSF</text>
+<text class="s" x="640" y="83">название + аннотация · 12 Engines</text>
+<text class="m" x="640" y="101">engines</text>
+<path class="ln" d="M640,110 V135 H315 V258" marker-end="url(#a)" />
+<path class="ln" d="M640,135 H965 V158" marker-end="url(#a)" />
+<!-- v3 only: the fixed prompt sits between the grant and the fragments -->
+<rect class="box" x="800" y="160" width="330" height="70" />
+<text class="ts" x="965" y="183">Промпт v3</text>
+<text class="s" x="965" y="202">зафиксирован · только дословные
+куски</text>
+<text class="m" x="965" y="220">v3_extract_technical.md</text>
+<path class="ln" d="M965,230 V258" marker-end="url(#a)" />
+<!-- the two versions differ only in the grant text -->
+<rect class="on" x="150" y="260" width="330" height="80" />
+<text class="ts" x="315" y="284">v2 · все предложения</text>
+<text class="s" x="315" y="303">название и каждое предложение
+аннотации</text>
+<text class="m" x="315" y="328">tech_v2_sentences</text>
+<rect class="emb" x="800" y="260" width="330" height="80" />
+<text class="ts" x="965" y="284">v3 · фрагменты о науке и
+технологиях</text> <text class="s" x="965" y="303">проверены на
+дословность</text>
+<text class="m" x="965" y="328">tech_v3_fragments</text>
+<path class="ln" d="M315,340 V378" marker-end="url(#a)" />
+<path class="ln" d="M965,340 V378" marker-end="url(#a)" />
+<!-- the same ranking for both -->
+<rect class="on" x="150" y="380" width="330" height="90" />
+<text class="ts" x="315" y="404">Рейтинг v2</text>
+<text class="s" x="315" y="423">эмбеддинги · каждый пункт получает
+место</text> <text class="m" x="315" y="456">tech_v2_rank_oa ·
+_cpc</text> <rect class="box" x="520" y="380" width="240" height="90" />
+<text class="ts" x="640" y="404">Справочники</text>
+<text class="s" x="640" y="423">4 516 тем OpenAlex (SPECTER2)</text>
+<text class="s" x="640" y="440">9 867 групп CPC (PatentSBERTa)</text>
+<text class="m" x="640" y="459">/topics · CPCTitleList</text>
+<path class="ln" d="M520,425 H482" marker-end="url(#a)" />
+<path class="ln" d="M760,425 H798" marker-end="url(#a)" />
+<rect class="emb" x="800" y="380" width="330" height="90" />
+<text class="ts" x="965" y="404">Рейтинг v3</text>
+<text class="s" x="965" y="423">те же модели и та же формула</text>
+<text class="m" x="965" y="456">tech_v3_rank_oa · _cpc</text>
+<!-- comparison -->
+<path class="ln" d="M315,470 V545 H438" marker-end="url(#a)" />
+<path class="ln" d="M965,470 V545 H842" marker-end="url(#a)" />
+<rect class="box" x="40" y="530" width="230" height="80" />
+<text class="ts" x="155" y="554">Версия 1 (на сайте)</text>
+<text class="s" x="155" y="573">прежний ручной выбор, не эталон</text>
+<text class="m" x="155" y="596">tech_profile</text>
+<path class="ck" d="M270,585 H438" marker-end="url(#a)" />
+<text class="s" x="355" y="577" style="font-size:11px">для
+справки</text>
+<rect class="box" x="440" y="520" width="400" height="90" />
+<text class="t" x="640" y="545">Сравнение v2 и v3</text>
+<text class="s" x="640" y="565">распределения по 12 Engines · место
+выбора v1</text>
+<text class="m" x="640" y="597">tech_v2_v3_summary</text>
+<!-- choice and result -->
+<path class="LN" d="M640,610 V646" marker-end="url(#A)" />
+<rect class="hold" x="960" y="650" width="260" height="80" />
+<text class="ts" x="1090" y="674" style="fill:#555">LLM-оценка
+топ-50</text> <text class="hs" x="1090" y="693">обоснование ·
+цитата</text> <text class="hs" x="1090" y="712">ещё не запускали</text>
+<path class="dl" d="M960,690 H842" marker-end="url(#g)" />
+<rect class="box" x="440" y="650" width="400" height="80" />
+<text class="t" x="640" y="674">Ручной выбор</text>
+<text class="s" x="640" y="693">топ-5 тем + топ-5 кодов CPC на
+Engine</text> <text class="m" x="640" y="718">tech_choice.csv</text>
+<path class="LN" d="M640,730 V766" marker-end="url(#A)" />
+<rect class="box" x="440" y="770" width="400" height="70" />
+<text class="t" x="640" y="794">Профиль технологии</text>
+<text class="s" x="640" y="813">выбранная версия → работы и патенты
+Engine</text> <text class="m" x="640" y="831">tech_profile_v2</text>
+<!-- legend -->
+<line x1="40" y1="870" x2="1250" y2="870" stroke="#ddd" stroke-width="1"></line>
+<path class="LN" d="M50,896 H96" marker-end="url(#A)" />
+<text x="106" y="900" style="font-size:12px;fill:#444">основной
+путь</text> <rect class="on" x="215" y="887" width="30" height="18" />
+<text x="253" y="900" style="font-size:12px;fill:#444">v2</text>
+<rect class="emb" x="300" y="887" width="30" height="18" />
+<text x="338" y="900" style="font-size:12px;fill:#444">v3</text>
+<rect class="box" x="385" y="887" width="30" height="18" />
+<path class="ln" d="M415,896 H438" marker-end="url(#a)" />
+<text x="446" y="900" style="font-size:12px;fill:#444">вход /
+таблица</text> <path class="ck" d="M570,896 H605" marker-end="url(#a)" />
+<text x="613" y="900" style="font-size:12px;fill:#444">сравнение для
+справки</text>
+<rect class="hold" x="780" y="887" width="30" height="18" />
+<text x="818" y="900" style="font-size:12px;fill:#444">на холде</text>
+<text x="910" y="900" style="font-size:11.5px;fill:#3a3a3a;font-family:Menlo,Consolas,&#39;DejaVu Sans Mono&#39;,monospace">tech_v3_rank</text>
+<text x="1010" y="900" style="font-size:12px;fill:#444">таблица</text>
 </svg>
 </div>
 <div id="versions-compared" class="section level3">
@@ -1908,32 +1920,8 @@ grant says the Engine does. Data are used only to check it, not to
 choose it: choosing codes by the number of regional patents would make
 the region’s Patent LQ high by construction.</p>
 </div>
-<div id="classification-lists" class="section level3">
-<h3>Classification lists</h3>
-<p>Both lists are public and are kept in the repository as CSV files
-(<code>data/reference/</code>, downloaded by
-<code>py/00_reference_lists.py</code>):</p>
-<ul>
-<li><strong>OpenAlex topics</strong>: all 4,516 topics of the OpenAlex
-topic classification, with their descriptions and keywords, from the <a href="https://api.openalex.org/topics">OpenAlex topics API</a> (<a href="https://docs.openalex.org/api-entities/topics">documentation</a>).
-OpenAlex gives the list no version number; every topic has the creation
-date January 2024 in the API. Downloaded on November 15, 2026.</li>
-<li><strong>CPC titles</strong>: the title list of the Cooperative
-Patent Classification, scheme 2026.08 (<a href="https://www.cooperativepatentclassification.org/sites/default/files/cpc/bulk/CPCTitleList202608.zip">CPCTitleList202608.zip</a>,
-from the <a href="https://www.cooperativepatentclassification.org/cpcSchemeAndDefinitions/bulk">CPC
-bulk download page</a>): every section, class, subclass, main group and
-subgroup with its official title (254,314 codes, of them 9,867 main
-groups). The CPC site labels this list “CPC Title List (2026.08)”; its
-files are dated August 1, 2026. Downloaded on November 15, 2026.</li>
-</ul>
-</div>
-</div>
-<div id="technology-profile" class="section level2">
-<h2>Technology profile, version 1</h2>
-<p>The technology profile states what each Engine works on in two
-vocabularies: OpenAlex topics (for papers) and CPC classes (for
-patents). It is built from the text of the NSF grant itself, not from
-the Engine’s website.</p>
+<div id="version-1-in-detail" class="section level3">
+<h3>Version 1 in detail</h3>
 <ol style="list-style-type: decimal">
 <li><strong>Statements.</strong> Each Engine gets 3-5 short statements
 about its technology. The first always comes from the grant title (the
@@ -1954,18 +1942,19 @@ statement, at subclass level (e.g. C22B) or main group (B29B17), and
 checked against USPTO grants of 2024-2025: patents with the code in the
 whole US and with an inventor in the Engine’s states. A code with almost
 no patents in the region shows up at once.</li>
-<li><strong>How the profile is used.</strong> A paper is <em>in the
-Engine’s topics</em> when at least one of its three OpenAlex topics is a
-profile topic. A patent is <em>in the profile</em> when at least one of
-its CPC codes is a profile code. These give the regional patents in the
-profile, the location quotient (LQ) and the comparison with US
-states.</li>
 </ol>
 <p>In total: 12 Engines, 48 statements (11 from titles, 37 from
 abstracts).</p>
-<div id="profile-of-each-engine" class="section level3">
-<h3>Profile of each Engine</h3>
-<p><select id="profile-engine" class="form-control" style="width:auto; margin-bottom:10px">
+</div>
+</div>
+<div id="technology-profile" class="section level2">
+<h2>Profile of each Engine</h2>
+<p>Choose an Engine and a version. <strong>Metrics still use
+v1.</strong> In v3.1, <sup>J</sup> marks an item chosen by the judge
+rather than confirmed by the two signals; “—” marks a place the
+procedure could not fill.</p>
+<div style="display:flex; gap:10px; flex-wrap:wrap; margin-bottom:10px">
+<select id="profile-engine" class="form-control" style="width:auto" aria-label="Engine">
 <option value="1">BRIDGES</option> <option value="2">Critical Materials
 Crossroads</option> <option value="3">Critical Mineral
 Accelerator</option> <option value="4">FAST</option>
@@ -1974,8 +1963,12 @@ Accelerator</option> <option value="4">FAST</option>
 <option value="8">Quantum Technologies</option>
 <option value="9">RETI</option> <option value="10">RuralSTAMINA
 Biomanufacturing</option> <option value="11">Seafood</option>
-<option value="12">STELLAR</option> </select></p>
-<div class="profile-engine" data-k="1">
+<option value="12">STELLAR</option> </select>
+<select id="profile-version" class="form-control" style="width:auto" aria-label="Profile version">
+<option value="v1">v1 (used by the
+metrics)</option><option value="v31">v3.1 (core)</option></select>
+</div>
+<div class="profile-engine" data-k="1" data-v="v1">
 <table class="table table-condensed">
 <thead>
 <tr>
@@ -2094,7 +2087,7 @@ G06Q50 (6403 / 56)<br>G05B17 (335 / 3)
 </tbody>
 </table>
 </div>
-<div class="profile-engine" data-k="2" style="display:none">
+<div class="profile-engine" data-k="2" data-v="v1" style="display:none">
 <table class="table table-condensed">
 <thead>
 <tr>
@@ -2187,7 +2180,7 @@ B01J19 (1176 / 17)<br>G05B13 (1587 / 11)
 </tbody>
 </table>
 </div>
-<div class="profile-engine" data-k="3" style="display:none">
+<div class="profile-engine" data-k="3" data-v="v1" style="display:none">
 <table class="table table-condensed">
 <thead>
 <tr>
@@ -2285,7 +2278,7 @@ C22B3 (361 / 0)<br>B03D (114 / 0)
 </tbody>
 </table>
 </div>
-<div class="profile-engine" data-k="4" style="display:none">
+<div class="profile-engine" data-k="4" data-v="v1" style="display:none">
 <table class="table table-condensed">
 <thead>
 <tr>
@@ -2378,7 +2371,7 @@ G06F30 (4369 / 113)<br>H01L21 (13132 / 446)
 </tbody>
 </table>
 </div>
-<div class="profile-engine" data-k="5" style="display:none">
+<div class="profile-engine" data-k="5" data-v="v1" style="display:none">
 <table class="table table-condensed">
 <thead>
 <tr>
@@ -2511,7 +2504,7 @@ G21C (359 / 39)<br>G21D (138 / 10)
 </tbody>
 </table>
 </div>
-<div class="profile-engine" data-k="6" style="display:none">
+<div class="profile-engine" data-k="6" data-v="v1" style="display:none">
 <table class="table table-condensed">
 <thead>
 <tr>
@@ -2624,7 +2617,7 @@ G16H50 (6085 / 61)<br>G06T7 (19554 / 76)
 </tbody>
 </table>
 </div>
-<div class="profile-engine" data-k="7" style="display:none">
+<div class="profile-engine" data-k="7" data-v="v1" style="display:none">
 <table class="table table-condensed">
 <thead>
 <tr>
@@ -2761,7 +2754,7 @@ G16C60 (101 / 0)
 </tbody>
 </table>
 </div>
-<div class="profile-engine" data-k="8" style="display:none">
+<div class="profile-engine" data-k="8" data-v="v1" style="display:none">
 <table class="table table-condensed">
 <thead>
 <tr>
@@ -2873,7 +2866,7 @@ H04L9 (10852 / 92)<br>H04B10 (2504 / 18)
 </tbody>
 </table>
 </div>
-<div class="profile-engine" data-k="9" style="display:none">
+<div class="profile-engine" data-k="9" data-v="v1" style="display:none">
 <table class="table table-condensed">
 <thead>
 <tr>
@@ -2991,7 +2984,7 @@ C21B13 (86 / 11)<br>B01J (5371 / 199)
 </tbody>
 </table>
 </div>
-<div class="profile-engine" data-k="10" style="display:none">
+<div class="profile-engine" data-k="10" data-v="v1" style="display:none">
 <table class="table table-condensed">
 <thead>
 <tr>
@@ -3105,7 +3098,7 @@ C12Q3 (21 / 0)<br>G05B13 (1587 / 12)
 </tbody>
 </table>
 </div>
-<div class="profile-engine" data-k="11" style="display:none">
+<div class="profile-engine" data-k="11" data-v="v1" style="display:none">
 <table class="table table-condensed">
 <thead>
 <tr>
@@ -3245,7 +3238,7 @@ G06Q10 (13971 / 808)
 </tbody>
 </table>
 </div>
-<div class="profile-engine" data-k="12" style="display:none">
+<div class="profile-engine" data-k="12" data-v="v1" style="display:none">
 <table class="table table-condensed">
 <thead>
 <tr>
@@ -3358,16 +3351,975 @@ B23K26 (1955 / 60)<br>H01S3 (860 / 29)
 </tbody>
 </table>
 </div>
+<div class="profile-engine" data-k="1" data-v="v31" style="display:none">
+<table class="table table-condensed">
+<thead>
+<tr>
+<th style="text-align:right;">
+#
+</th>
+<th style="text-align:left;">
+Technology
+</th>
+<th style="text-align:left;">
+OpenAlex topics (subfield)
+</th>
+<th style="text-align:left;">
+CPC groups
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:right;">
+1
+</td>
+<td style="text-align:left;">
+biobased manufacturing of products
+</td>
+<td style="text-align:left;">
+biodegradable polymer synthesis and properties<br><span style="color:#666">Biomaterials</span>
+</td>
+<td style="text-align:left;">
+<b>C12P1/00</b> Preparation of compounds or compositions, not provided
+for in groups C12P3/00 - C12P39/…<sup>J</sup><br><b>D21C3/00</b> Pulping
+cellulose-containing materials<sup>J</sup>
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+2
+</td>
+<td style="text-align:left;">
+perennial grasses and crop design
+</td>
+<td style="text-align:left;">
+Agronomic Practices and Intercropping Systems<br><span style="color:#666">Agronomy and Crop Science</span><br>Bioenergy crop
+production and management<br><span style="color:#666">Agronomy and Crop
+Science</span>
+</td>
+<td style="text-align:left;">
+<b>A01G22/00</b> Cultivation of specific crops or plants not otherwise
+provided for
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+3
+</td>
+<td style="text-align:left;">
+digital twins and AI-enabled decision-support systems
+</td>
+<td style="text-align:left;">
+Decision Support System Applications<br><span style="color:#666">Management Information
+Systems</span><sup>J</sup><br>Digital Transformation in
+Industry<br><span style="color:#666">Industrial and Manufacturing
+Engineering</span><sup>J</sup>
+</td>
+<td style="text-align:left;">
+<b>Y10S706/00</b> Data processing: artificial intelligence<sup>J</sup>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="profile-engine" data-k="2" data-v="v31" style="display:none">
+<table class="table table-condensed">
+<thead>
+<tr>
+<th style="text-align:right;">
+#
+</th>
+<th style="text-align:left;">
+Technology
+</th>
+<th style="text-align:left;">
+OpenAlex topics (subfield)
+</th>
+<th style="text-align:left;">
+CPC groups
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:right;">
+1
+</td>
+<td style="text-align:left;">
+critical materials and metal refining
+</td>
+<td style="text-align:left;">
+Extraction and Separation Processes<br><span style="color:#666">Metals
+and Alloys</span><sup>J</sup><br>Metallurgical Processes and
+Thermodynamics<br><span style="color:#666">Metals and
+Alloys</span><sup>J</sup>
+</td>
+<td style="text-align:left;">
+<b>C22B25/00</b> Obtaining tin<br><b>C22B9/00</b> General processes of
+refining or remelting of metals; Apparatus for electroslag or arc …
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+2
+</td>
+<td style="text-align:left;">
+continuous flow processing and process control
+</td>
+<td style="text-align:left;">
+Innovative Microfluidic and Catalytic Techniques Innovation<br><span style="color:#666">Fluid Flow and Transfer
+Processes</span><sup>J</sup><br>Fault Detection and Control
+Systems<br><span style="color:#666">Control and Systems
+Engineering</span><sup>J</sup>
+</td>
+<td style="text-align:left;">
+<b>B01J19/00</b> Chemical, physical or physico-chemical processes in
+general; Their relevant apparatus<sup>J</sup><br><b>G05B19/00</b>
+Program-control systems<sup>J</sup>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="profile-engine" data-k="3" data-v="v31" style="display:none">
+<table class="table table-condensed">
+<thead>
+<tr>
+<th style="text-align:right;">
+#
+</th>
+<th style="text-align:left;">
+Technology
+</th>
+<th style="text-align:left;">
+OpenAlex topics (subfield)
+</th>
+<th style="text-align:left;">
+CPC groups
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:right;">
+1
+</td>
+<td style="text-align:left;">
+recovery of critical minerals from mine waste
+</td>
+<td style="text-align:left;">
+Extraction and Separation Processes<br><span style="color:#666">Metals
+and Alloys</span><br>Metal Extraction and Bioleaching<br><span style="color:#666">Metals and Alloys</span>
+</td>
+<td style="text-align:left;">
+<b>C22B3/00</b> Extraction of metal compounds from ores or concentrates
+by wet processes<sup>J</sup><br><b>C22B11/00</b> Obtaining noble
+metals<sup>J</sup>
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+2
+</td>
+<td style="text-align:left;">
+geochemical and geophysical targeting of mineral deposits
+</td>
+<td style="text-align:left;">
+Geochemistry and Geologic Mapping<br><span style="color:#666">Geochemistry and Petrology</span><br>Geological and
+Geochemical Analysis<br><span style="color:#666">Geochemistry and
+Petrology</span>
+</td>
+<td style="text-align:left;">
+<b>G01V5/00</b> Prospecting or detecting by the use of ionising
+radiation, e.g. of natural or induced r…<sup>J</sup><br><b>G01V3/00</b>
+Electric or magnetic prospecting or detecting; Measuring magnetic field
+characteristics…<sup>J</sup>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="profile-engine" data-k="4" data-v="v31" style="display:none">
+<table class="table table-condensed">
+<thead>
+<tr>
+<th style="text-align:right;">
+#
+</th>
+<th style="text-align:left;">
+Technology
+</th>
+<th style="text-align:left;">
+OpenAlex topics (subfield)
+</th>
+<th style="text-align:left;">
+CPC groups
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:right;">
+1
+</td>
+<td style="text-align:left;">
+semiconductors and advanced logic chips
+</td>
+<td style="text-align:left;">
+Low-power high-performance VLSI design<br><span style="color:#666">Electrical and Electronic
+Engineering</span><br>Advancements in Semiconductor Devices and Circuit
+Design<br><span style="color:#666">Electrical and Electronic
+Engineering</span>
+</td>
+<td style="text-align:left;">
+<b>H10D89/00</b> Aspects of integrated devices not covered by groups
+H10D84/00 - H10D88/00<br><b>H10D84/00</b> Integrated devices formed in
+or on semiconductor substrates that comprise only semicond…
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+2
+</td>
+<td style="text-align:left;">
+AI-enabled Automatic Process Control
+</td>
+<td style="text-align:left;">
+Fault Detection and Control Systems<br><span style="color:#666">Control
+and Systems Engineering</span><br>Industrial Technology and Control
+Systems<br><span style="color:#666">Control and Systems
+Engineering</span>
+</td>
+<td style="text-align:left;">
+<b>G05B15/00</b> Systems controlled by a
+computer<sup>J</sup><br><b>Y10S706/00</b> Data processing: artificial
+intelligence<sup>J</sup>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="profile-engine" data-k="5" data-v="v31" style="display:none">
+<table class="table table-condensed">
+<thead>
+<tr>
+<th style="text-align:right;">
+#
+</th>
+<th style="text-align:left;">
+Technology
+</th>
+<th style="text-align:left;">
+OpenAlex topics (subfield)
+</th>
+<th style="text-align:left;">
+CPC groups
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:right;">
+1
+</td>
+<td style="text-align:left;">
+electric grid transmission, distribution and automation
+</td>
+<td style="text-align:left;">
+Smart Grid and Power Systems<br><span style="color:#666">Electrical and
+Electronic Engineering</span><br>High-Voltage Power Transmission
+Systems<br><span style="color:#666">Electrical and Electronic
+Engineering</span>
+</td>
+<td style="text-align:left;">
+<b>H02J13/00</b> Circuit arrangements for providing remote monitoring or
+remote control of equipment in …<br><b>H02J3/00</b> Circuit arrangements
+for AC mains or AC distribution networks
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+2
+</td>
+<td style="text-align:left;">
+solid state and hybrid transformers, inverters
+</td>
+<td style="text-align:left;">
+Multilevel Inverters and Converters<br><span style="color:#666">Electrical and Electronic
+Engineering</span><br>Advanced DC-DC Converters<br><span style="color:#666">Electrical and Electronic Engineering</span>
+</td>
+<td style="text-align:left;">
+<b>H01F38/00</b> Adaptations of transformers or inductances for specific
+applications or functions<br><b>H01F27/00</b> Details of transformers or
+inductances, in general
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+3
+</td>
+<td style="text-align:left;">
+nuclear construction
+</td>
+<td style="text-align:left;">
+Construction Engineering and Safety<br><span style="color:#666">Civil
+and Structural Engineering</span><sup>J</sup><br>Nuclear reactor physics
+and engineering<br><span style="color:#666">Nuclear Energy and
+Engineering</span><sup>J</sup>
+</td>
+<td style="text-align:left;">
+<b>G21C21/00</b> Apparatus or processes specially adapted to the
+manufacture of reactors or parts thereof
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+4
+</td>
+<td style="text-align:left;">
+grid cybersecurity
+</td>
+<td style="text-align:left;">
+Smart Grid Security and Resilience<br><span style="color:#666">Control
+and Systems Engineering</span><br>Smart Grid and Power Systems<br><span style="color:#666">Electrical and Electronic Engineering</span>
+</td>
+<td style="text-align:left;">
+<b>Y04S40/00</b> Systems for electrical power generation, transmission,
+distribution or end-user applica…<sup>J</sup><br><b>H02J13/00</b>
+Circuit arrangements for providing remote monitoring or remote control
+of equipment in …<sup>J</sup>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="profile-engine" data-k="6" data-v="v31" style="display:none">
+<table class="table table-condensed">
+<thead>
+<tr>
+<th style="text-align:right;">
+#
+</th>
+<th style="text-align:left;">
+Technology
+</th>
+<th style="text-align:left;">
+OpenAlex topics (subfield)
+</th>
+<th style="text-align:left;">
+CPC groups
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:right;">
+1
+</td>
+<td style="text-align:left;">
+musculoskeletal injury or disease
+</td>
+<td style="text-align:left;">
+Musculoskeletal Disorders and Rehabilitation<br><span style="color:#666">Rehabilitation</span><br>Musculoskeletal pain and
+rehabilitation<br><span style="color:#666">Physical Therapy, Sports
+Therapy and Rehabilitation</span>
+</td>
+<td style="text-align:left;">
+<b>A61P19/00</b> Drugs for skeletal
+disorders<sup>J</sup><br><b>A61B17/00</b> Surgical instruments, devices
+or methods<sup>J</sup>
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+2
+</td>
+<td style="text-align:left;">
+drug development and biologics
+</td>
+<td style="text-align:left;">
+Biosimilars and Bioanalytical Methods<br><span style="color:#666">Immunology</span><sup>J</sup><br>Computational Drug
+Discovery Methods<br><span style="color:#666">Drug
+Discovery</span><sup>J</sup>
+</td>
+<td style="text-align:left;">
+<b>A61P7/00</b> Drugs for disorders of the blood or the extracellular
+fluid<br><b>A61P25/00</b> Drugs for disorders of the nervous system
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+3
+</td>
+<td style="text-align:left;">
+diagnostic technologies
+</td>
+<td style="text-align:left;">
+—
+</td>
+<td style="text-align:left;">
+<b>A61B8/00</b> Diagnosis using ultrasonic, sonic or infrasonic
+waves<br><b>A61B6/00</b> Apparatus or devices for radiation diagnosis;
+Apparatus or devices for radiation diagno…
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+4
+</td>
+<td style="text-align:left;">
+multimodal health data and AI-enabled tools
+</td>
+<td style="text-align:left;">
+Artificial Intelligence in Healthcare<br><span style="color:#666">Health
+Information Management</span><br>Machine Learning in Healthcare<br><span style="color:#666">Artificial Intelligence</span>
+</td>
+<td style="text-align:left;">
+<b>G16H10/00</b> ICT specially adapted for the handling or processing of
+patient-related medical or heal…
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+5
+</td>
+<td style="text-align:left;">
+orthopedic devices and manufacturing processes
+</td>
+<td style="text-align:left;">
+Orthopaedic implants and arthroplasty<br><span style="color:#666">Surgery</span><sup>J</sup><br>Bone Tissue Engineering
+Materials<br><span style="color:#666">Biomedical
+Engineering</span><sup>J</sup>
+</td>
+<td style="text-align:left;">
+<b>Y10S606/00</b> Surgery<sup>J</sup>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="profile-engine" data-k="7" data-v="v31" style="display:none">
+<table class="table table-condensed">
+<thead>
+<tr>
+<th style="text-align:right;">
+#
+</th>
+<th style="text-align:left;">
+Technology
+</th>
+<th style="text-align:left;">
+OpenAlex topics (subfield)
+</th>
+<th style="text-align:left;">
+CPC groups
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:right;">
+1
+</td>
+<td style="text-align:left;">
+metals
+</td>
+<td style="text-align:left;">
+Metallurgy and Material Science<br><span style="color:#666">Metals and
+Alloys</span><sup>J</sup>
+</td>
+<td style="text-align:left;">
+<b>B22D21/00</b> Casting non-ferrous metals or metallic compounds so far
+as their metallurgical properti…<sup>J</sup><br><b>C22B7/00</b> Working
+up raw materials other than ores, e.g. scrap, to produce non-ferrous
+metals and…<sup>J</sup>
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+2
+</td>
+<td style="text-align:left;">
+polymers
+</td>
+<td style="text-align:left;">
+Polymer Science and Applications<br><span style="color:#666">Polymers
+and Plastics</span>
+</td>
+<td style="text-align:left;">
+<b>C08G81/00</b> Macromolecular compounds obtained by interreacting
+polymers in the absence of monomers,…<br><b>D01F6/00</b> Monocomponent
+artificial filaments or the like of synthetic polymers; Manufacture
+thereof
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+3
+</td>
+<td style="text-align:left;">
+chemicals and coatings
+</td>
+<td style="text-align:left;">
+Catalysts for Methane Reforming<br><span style="color:#666">Catalysis</span><sup>J</sup><br>Corrosion Behavior
+and Inhibition<br><span style="color:#666">Materials
+Chemistry</span><sup>J</sup>
+</td>
+<td style="text-align:left;">
+<b>C09D149/00</b> Coating compositions based on homopolymers or
+copolymers of compounds having one or
+mor…<sup>J</sup><br><b>C09D165/00</b> Coating compositions based on
+macromolecular compounds obtained by reactions forming a …<sup>J</sup>
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+4
+</td>
+<td style="text-align:left;">
+AI/ML materials design and life cycle assessment
+</td>
+<td style="text-align:left;">
+Environmental Impact and Sustainability<br><span style="color:#666">Environmental Engineering</span><br>Material
+Selection and Properties<br><span style="color:#666">General Materials
+Science</span>
+</td>
+<td style="text-align:left;">
+<b>G16C60/00</b> Computational materials science, i.e. ICT specially
+adapted for investigating the physi…<sup>J</sup><br><b>C22B7/00</b>
+Working up raw materials other than ores, e.g. scrap, to produce
+non-ferrous metals and…<sup>J</sup>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="profile-engine" data-k="8" data-v="v31" style="display:none">
+<table class="table table-condensed">
+<thead>
+<tr>
+<th style="text-align:right;">
+#
+</th>
+<th style="text-align:left;">
+Technology
+</th>
+<th style="text-align:left;">
+OpenAlex topics (subfield)
+</th>
+<th style="text-align:left;">
+CPC groups
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:right;">
+1
+</td>
+<td style="text-align:left;">
+quantum information science and technologies
+</td>
+<td style="text-align:left;">
+Quantum Information and Cryptography<br><span style="color:#666">Atomic
+and Molecular Physics, and Optics</span><br>Quantum Mechanics and
+Applications<br><span style="color:#666">Atomic and Molecular Physics,
+and Optics</span>
+</td>
+<td style="text-align:left;">
+<b>G06N10/00</b> Quantum computing, i.e. information processing based on
+quantum-mechanical phenomena
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+2
+</td>
+<td style="text-align:left;">
+quantum communications
+</td>
+<td style="text-align:left;">
+Quantum Information and Cryptography<br><span style="color:#666">Atomic
+and Molecular Physics, and Optics</span><br>Quantum Mechanics and
+Applications<br><span style="color:#666">Atomic and Molecular Physics,
+and Optics</span>
+</td>
+<td style="text-align:left;">
+<b>H04B10/00</b> Transmission systems employing electromagnetic waves
+other than radio-waves, e.g. infra…<sup>J</sup><br><b>H04L9/00</b>
+Cryptographic mechanisms or cryptographic arrangements for secret or
+secure communicati…<sup>J</sup>
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+3
+</td>
+<td style="text-align:left;">
+quantum sensing
+</td>
+<td style="text-align:left;">
+Quantum Information and Cryptography<br><span style="color:#666">Atomic
+and Molecular Physics, and Optics</span>
+</td>
+<td style="text-align:left;">
+<b>B82Y20/00</b> Nanooptics, e.g. quantum optics or photonic
+crystals<sup>J</sup>
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+4
+</td>
+<td style="text-align:left;">
+quantum computing
+</td>
+<td style="text-align:left;">
+Quantum Computing Algorithms and Architecture<br><span style="color:#666">Artificial Intelligence</span><br>Quantum Information
+and Cryptography<br><span style="color:#666">Atomic and Molecular
+Physics, and Optics</span>
+</td>
+<td style="text-align:left;">
+<b>G06N10/00</b> Quantum computing, i.e. information processing based on
+quantum-mechanical phenomena
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="profile-engine" data-k="9" data-v="v31" style="display:none">
+<table class="table table-condensed">
+<thead>
+<tr>
+<th style="text-align:right;">
+#
+</th>
+<th style="text-align:left;">
+Technology
+</th>
+<th style="text-align:left;">
+OpenAlex topics (subfield)
+</th>
+<th style="text-align:left;">
+CPC groups
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:right;">
+1
+</td>
+<td style="text-align:left;">
+electrical grid management and control systems
+</td>
+<td style="text-align:left;">
+Smart Grid and Power Systems<br><span style="color:#666">Electrical and
+Electronic Engineering</span><br>Smart Grid Energy Management<br><span style="color:#666">Electrical and Electronic Engineering</span>
+</td>
+<td style="text-align:left;">
+<b>H02J13/00</b> Circuit arrangements for providing remote monitoring or
+remote control of equipment in …<sup>J</sup><br><b>Y04S10/00</b> Systems
+supporting electrical power generation, transmission or
+distribution<sup>J</sup>
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+2
+</td>
+<td style="text-align:left;">
+industrial energy systems, iron reduction and catalytic systems
+</td>
+<td style="text-align:left;">
+Iron and Steelmaking Processes<br><span style="color:#666">Metals and
+Alloys</span><br>Catalysts for Methane Reforming<br><span style="color:#666">Catalysis</span>
+</td>
+<td style="text-align:left;">
+<b>C21B13/00</b> Making spongy iron or liquid steel, by direct processes
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+3
+</td>
+<td style="text-align:left;">
+energy storage, advanced batteries and solid oxide fuel cells
+</td>
+<td style="text-align:left;">
+Advancements in Solid Oxide Fuel Cells<br><span style="color:#666">Materials Chemistry</span>
+</td>
+<td style="text-align:left;">
+<b>H01M8/00</b> Fuel cells; Manufacture thereof
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="profile-engine" data-k="10" data-v="v31" style="display:none">
+<table class="table table-condensed">
+<thead>
+<tr>
+<th style="text-align:right;">
+#
+</th>
+<th style="text-align:left;">
+Technology
+</th>
+<th style="text-align:left;">
+OpenAlex topics (subfield)
+</th>
+<th style="text-align:left;">
+CPC groups
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:right;">
+1
+</td>
+<td style="text-align:left;">
+biomanufacturing of bioproducts from agricultural feedstocks
+</td>
+<td style="text-align:left;">
+Biofuel production and bioconversion<br><span style="color:#666">Biomedical Engineering</span>
+</td>
+<td style="text-align:left;">
+<b>C12M21/00</b> Bioreactors or fermenters specially adapted for
+specific uses<sup>J</sup><br><b>A61K39/00</b> Medicinal preparations
+containing antigens or antibodies<sup>J</sup>
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+2
+</td>
+<td style="text-align:left;">
+new microorganisms
+</td>
+<td style="text-align:left;">
+Microbial Natural Products and Biosynthesis<br><span style="color:#666">Applied Microbiology and Biotechnology</span>
+</td>
+<td style="text-align:left;">
+<b>C12N1/00</b> Microorganisms; Compositions thereof; Processes of
+propagating, maintaining or preservi…<sup>J</sup><br><b>C12N15/00</b>
+Mutation or genetic engineering; DNA or RNA concerning genetic
+engineering, vectors, e….<sup>J</sup>
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+3
+</td>
+<td style="text-align:left;">
+scaling up, sensors and AI tools for biomanufacturing processes
+</td>
+<td style="text-align:left;">
+Fluid Dynamics and Mixing<br><span style="color:#666">Fluid Flow and
+Transfer Processes</span><sup>J</sup><br>Microbial Metabolic Engineering
+and Bioproduction<br><span style="color:#666">Molecular
+Biology</span><sup>J</sup>
+</td>
+<td style="text-align:left;">
+<b>C12M1/00</b> Apparatus for enzymology or
+microbiology<sup>J</sup><br><b>C12M21/00</b> Bioreactors or fermenters
+specially adapted for specific uses<sup>J</sup>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="profile-engine" data-k="11" data-v="v31" style="display:none">
+<table class="table table-condensed">
+<thead>
+<tr>
+<th style="text-align:right;">
+#
+</th>
+<th style="text-align:left;">
+Technology
+</th>
+<th style="text-align:left;">
+OpenAlex topics (subfield)
+</th>
+<th style="text-align:left;">
+CPC groups
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:right;">
+1
+</td>
+<td style="text-align:left;">
+seafood products, processing technologies and waste stream utilization
+</td>
+<td style="text-align:left;">
+Food Industry and Aquatic Biology<br><span style="color:#666">Food
+Science</span>
+</td>
+<td style="text-align:left;">
+<b>A23L17/00</b> Food-from-the-sea products; Fish products; Fish meal;
+Fish-egg substitutes; Preparation…<sup>J</sup><br><b>A22C29/00</b>
+Processing shellfish or bivalves, e.g. oysters, lobsters; Devices
+therefor, e.g. claw l…<sup>J</sup>
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+2
+</td>
+<td style="text-align:left;">
+ocean observation technologies for fishing grounds and aquaculture farms
+</td>
+<td style="text-align:left;">
+Marine and fisheries research<br><span style="color:#666">Aquatic
+Science</span>
+</td>
+<td style="text-align:left;">
+—
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+3
+</td>
+<td style="text-align:left;">
+cold chain technologies
+</td>
+<td style="text-align:left;">
+Food Supply Chain Traceability<br><span style="color:#666">Food
+Science</span><br>Freezing and Crystallization Processes<br><span style="color:#666">Filtration and Separation</span>
+</td>
+<td style="text-align:left;">
+<b>F25D13/00</b> Stationary devices,
+e.g. cold-rooms<sup>J</sup><br><b>F25D3/00</b> Devices using other cold
+materials; Devices using cold-storage bodies<sup>J</sup>
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+4
+</td>
+<td style="text-align:left;">
+traceability technologies
+</td>
+<td style="text-align:left;">
+Food Supply Chain Traceability<br><span style="color:#666">Food
+Science</span>
+</td>
+<td style="text-align:left;">
+—
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="profile-engine" data-k="12" data-v="v31" style="display:none">
+<table class="table table-condensed">
+<thead>
+<tr>
+<th style="text-align:right;">
+#
+</th>
+<th style="text-align:left;">
+Technology
+</th>
+<th style="text-align:left;">
+OpenAlex topics (subfield)
+</th>
+<th style="text-align:left;">
+CPC groups
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:right;">
+1
+</td>
+<td style="text-align:left;">
+precision-optics and imaging
+</td>
+<td style="text-align:left;">
+Optical measurement and interference techniques<br><span style="color:#666">Computer Vision and Pattern
+Recognition</span><br>Advanced optical system design<br><span style="color:#666">Atomic and Molecular Physics, and Optics</span>
+</td>
+<td style="text-align:left;">
+<b>G02B27/00</b> Optical systems or apparatus not provided for by any of
+the groups G02B1/00 - G02B26/00…<br><b>G01B9/00</b> Measuring
+instruments characterised by the use of optical techniques
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+2
+</td>
+<td style="text-align:left;">
+photonics and laser technologies
+</td>
+<td style="text-align:left;">
+Optical Systems and Laser Technology<br><span style="color:#666">Electrical and Electronic
+Engineering</span><br>Semiconductor Lasers and Optical Devices<br><span style="color:#666">Electrical and Electronic Engineering</span>
+</td>
+<td style="text-align:left;">
+<b>H01S3/00</b> Lasers, i.e. devices using stimulated emission of
+electromagnetic radiation in the infr…
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+3
+</td>
+<td style="text-align:left;">
+laser component and system manufacturing
+</td>
+<td style="text-align:left;">
+Optical Systems and Laser Technology<br><span style="color:#666">Electrical and Electronic Engineering</span>
+</td>
+<td style="text-align:left;">
+<b>H01S3/00</b> Lasers, i.e. devices using stimulated emission of
+electromagnetic radiation in the infr…<sup>J</sup><br><b>H01S5/00</b>
+Semiconductor lasers<sup>J</sup>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
 <script>
-// Dropdown: show the chosen Engine's profile table
-document.getElementById("profile-engine").addEventListener("change", function () {
-  var k = this.value;
+// Dropdowns: show the chosen Engine's profile table in the chosen version
+function showProfile() {
+  var k = document.getElementById("profile-engine").value;
+  var v = document.getElementById("profile-version").value;
   document.querySelectorAll(".profile-engine").forEach(function (d) {
-    d.style.display = d.getAttribute("data-k") === k ? "" : "none";
+    d.style.display = d.getAttribute("data-k") === k && d.getAttribute("data-v") === v ? "" : "none";
   });
-});
+}
+document.getElementById("profile-engine").addEventListener("change", showProfile);
+document.getElementById("profile-version").addEventListener("change", showProfile);
 </script>
 </div>
+<div id="classification-lists" class="section level2">
+<h2>Classification lists</h2>
+<p>Both lists are public and are kept in the repository as CSV files
+(<code>data/reference/</code>, downloaded by
+<code>py/00_reference_lists.py</code>):</p>
+<ul>
+<li><strong>OpenAlex topics</strong>: all 4,516 topics of the OpenAlex
+topic classification, with their descriptions and keywords, from the <a href="https://api.openalex.org/topics">OpenAlex topics API</a> (<a href="https://docs.openalex.org/api-entities/topics">documentation</a>).
+OpenAlex gives the list no version number; every topic has the creation
+date January 2024 in the API. Downloaded on November 15, 2026.</li>
+<li><strong>CPC titles</strong>: the title list of the Cooperative
+Patent Classification, scheme 2026.08 (<a href="https://www.cooperativepatentclassification.org/sites/default/files/cpc/bulk/CPCTitleList202608.zip">CPCTitleList202608.zip</a>,
+from the <a href="https://www.cooperativepatentclassification.org/cpcSchemeAndDefinitions/bulk">CPC
+bulk download page</a>): every section, class, subclass, main group and
+subgroup with its official title (254,314 codes, of them 9,867 main
+groups). The CPC site labels this list “CPC Title List (2026.08)”; its
+files are dated August 1, 2026. Downloaded on November 15, 2026.</li>
+</ul>
 </div>
 
 <!-- Sortable columns and a search box for site tables (included via `includes: after_body`) -->
@@ -3434,6 +4386,16 @@ table th.sort-desc::after { content: " \25BC"; color: #000; }
       count.textContent = q ? shown + " of " + body.rows.length + " rows" : "";
     });
   }
+
+  // Wide tables scroll inside their own box on narrow screens instead of widening the whole page
+  document.querySelectorAll(".main-container table").forEach(function (t) {
+    if (t.parentNode.classList && t.parentNode.classList.contains("table-scroll")) return;
+    var w = document.createElement("div");
+    w.className = "table-scroll";
+    w.style.overflowX = "auto";
+    t.parentNode.insertBefore(w, t);
+    w.appendChild(t);
+  });
 
   document.querySelectorAll(".main-container table").forEach(function (t) {
     if (t.closest(".no-sort")) return;  // e.g. a comparison table: rows are steps, not records
