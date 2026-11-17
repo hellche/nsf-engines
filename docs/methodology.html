@@ -1765,7 +1765,7 @@ still use version 1.</p>
 <div id="versions" class="section level2">
 <h2>Versions</h2>
 <div class="method-svg">
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 1100" width="1280" height="1100">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 1076" width="1280" height="1076">
 <title>
 Профиль технологии: версии v1, v2, v3.1 (в работе)
 </title>
@@ -1871,44 +1871,132 @@ v3.1</text>
 <text class="s" x="230.0" y="888">≥ 2 прогонов из 3 · совпадение: группы
 CPC 91%, темы 86%</text> <text class="s" x="230.0" y="905">162 пункта:
 84 группы CPC + 78 тем OpenAlex</text>
-<rect class="emb" x="450" y="722" width="380" height="136" />
-<text class="t" x="640.0" y="746">1 · Эмбеддинги в двух моделях</text>
-<rect class="q" x="537.0" y="760" width="96" height="30" />
-<text class="qs" x="585.0" y="780">77 фраз</text>
-<path class="ln" d="M585.0,790 V804" />
-<rect class="q" x="647.0" y="760" width="96" height="30" />
-<text class="qs" x="695.0" y="780">темы / CPC</text>
-<path class="ln" d="M695.0,790 V804" />
-<path class="ln" d="M585.0,804 H695.0" />
-<path class="ln" d="M640.0,804 V815" marker-end="url(#a)" />
-<rect class="q" x="520.0" y="818" width="240" height="28" />
-<text class="qs" x="640.0" y="837">Близость: косинус</text>
-<path class="ln" d="M640.0,858 V885" marker-end="url(#a)" />
-<rect class="emb" x="450" y="888" width="380" height="136" />
-<text class="t" x="640.0" y="912">2 · От фраз к технологии</text>
-<rect class="q" x="482.0" y="926" width="96" height="30" />
-<text class="qs" x="530.0" y="946">max</text>
-<path class="ln" d="M530.0,956 V970" />
-<rect class="q" x="592.0" y="926" width="96" height="30" />
-<text class="qs" x="640.0" y="946">centroid</text>
-<path class="ln" d="M640.0,956 V970" />
-<rect class="q" x="702.0" y="926" width="96" height="30" />
-<text class="qs" x="750.0" y="946">mix</text>
-<path class="ln" d="M750.0,956 V970" />
-<path class="ln" d="M530.0,970 H750.0" />
-<path class="ln" d="M640.0,970 V981" marker-end="url(#a)" />
-<rect class="q" x="520.0" y="984" width="240" height="28" />
-<text class="qs" x="640.0" y="1003">Один рейтинг · топ-20</text>
-<rect class="chosen" x="40" y="1057" width="30" height="18" />
-<text class="lg" x="78" y="1071">выбранный промпт</text>
-<rect class="pr" x="246" y="1057" width="30" height="18" />
-<text class="lg" x="284" y="1071">сравнили, не взяли / ещё не
+<rect class="emb" x="450" y="722" width="380" height="128" />
+<text class="t" x="640.0" y="746">SPECTER2 · темы OpenAlex</text>
+<rect class="q" x="462.0" y="758" width="172" height="42" />
+<text class="qs" x="548.0" y="776">43 технологии</text>
+<text class="qss" x="548.0" y="792">название, фраза 1, фраза 2…</text>
+<path class="ln" d="M548.0,800 V810" />
+<rect class="q" x="646.0" y="758" width="172" height="42" />
+<text class="qs" x="732.0" y="776">4 516 тем</text>
+<text class="qss" x="732.0" y="792">название, описание, слова</text>
+<path class="ln" d="M732.0,800 V810" />
+<path class="ln" d="M548.0,810 H732.0" />
+<path class="ln" d="M640.0,810 V817" marker-end="url(#a)" />
+<rect class="q" x="490.0" y="820" width="300" height="22" />
+<text class="qs" x="640.0" y="836">косинус → 20 ближайших тем</text>
+<rect class="emb" x="450" y="872" width="380" height="128" />
+<text class="t" x="640.0" y="896">PatentSBERTa · группы CPC</text>
+<rect class="q" x="462.0" y="908" width="172" height="42" />
+<text class="qs" x="548.0" y="926">43 технологии</text>
+<text class="qss" x="548.0" y="942">название, фраза 1, фраза 2…</text>
+<path class="ln" d="M548.0,950 V960" />
+<rect class="q" x="646.0" y="908" width="172" height="42" />
+<text class="qs" x="732.0" y="926">7 646 групп</text>
+<text class="qss" x="732.0" y="942">подкласс, группа, подгруппы</text>
+<path class="ln" d="M732.0,950 V960" />
+<path class="ln" d="M548.0,960 H732.0" />
+<path class="ln" d="M640.0,960 V967" marker-end="url(#a)" />
+<rect class="q" x="490.0" y="970" width="300" height="22" />
+<text class="qs" x="640.0" y="986">косинус → 20 ближайших групп</text>
+<rect class="chosen" x="40" y="1033" width="30" height="18" />
+<text class="lg" x="78" y="1047">выбранный промпт</text>
+<rect class="pr" x="246" y="1033" width="30" height="18" />
+<text class="lg" x="284" y="1047">сравнили, не взяли / ещё не
 сделано</text>
-<rect class="llm" x="604" y="1057" width="30" height="18" />
-<text class="lg" x="642" y="1071">выбор LLM по нашим спискам</text>
-<rect class="emb" x="890" y="1057" width="30" height="18" />
-<text class="lg" x="928" y="1071">эмбеддинги (v3.1)</text>
+<rect class="llm" x="604" y="1033" width="30" height="18" />
+<text class="lg" x="642" y="1047">выбор LLM по нашим спискам</text>
+<rect class="emb" x="890" y="1033" width="30" height="18" />
+<text class="lg" x="928" y="1047">эмбеддинги (v3.1)</text>
 </svg>
+</div>
+<div id="embeddings-in-detail" class="section level3">
+<h3>Embeddings in detail (version 3.1)</h3>
+<p>Version 3.1 ranks every OpenAlex topic and every CPC group by how
+close it is in meaning to each technology of the grant. Nobody chooses
+here: the items are only sorted by distance, the same way for all 43
+technologies.</p>
+<ol style="list-style-type: decimal">
+<li><p><strong>One text per technology.</strong> The technology’s label
+and its phrases of the grant are joined into one text, for example
+<em>“Continuous processing and data-driven process control. continuous
+flow processing; data-driven process control”</em>. 43 texts in total.
+The Engine’s name and the word “Engine” are removed (the patent model
+reads “engine” as a motor).</p></li>
+<li><p><strong>Two models, two separate comparisons.</strong> A model
+turns every text into a point in a space of meaning; texts about similar
+things lie close together.</p>
+<div class="no-sort">
+<table>
+<colgroup>
+<col width="33%" />
+<col width="33%" />
+<col width="33%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th></th>
+<th>The 43 technologies are compared with</th>
+<th>Model</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Papers</td>
+<td>4,516 OpenAlex topics: name, description, keywords</td>
+<td>SPECTER2, trained on research papers</td>
+</tr>
+<tr class="even">
+<td>Patents</td>
+<td>7,646 CPC main groups: titles of the subclass, the group and its
+subgroups</td>
+<td>PatentSBERTa, trained on patents</td>
+</tr>
+</tbody>
+</table>
+</div></li>
+<li><p><strong>Closeness.</strong> All scientific texts are somewhat
+alike, so the average point of each set is subtracted first; what is
+left are the real differences in meaning. Closeness is the cosine
+between the technology’s point and the item’s point: 1 means the same
+meaning, 0 unrelated.</p></li>
+<li><p><strong>Top 20.</strong> For each technology, all 4,516 topics
+and all 7,646 CPC groups are sorted by closeness; the 20 closest of each
+are the candidates. Choosing among them is the next step (not settled
+yet).</p></li>
+</ol>
+<p>Because the text holds all the phrases of a technology, a group close
+to all of them scores high by itself (illustrative numbers):</p>
+<div class="no-sort">
+<table>
+<colgroup>
+<col width="50%" />
+<col width="50%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>CPC group</th>
+<th>Closeness to the technology</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>B01J19 Chemical, physical or physico-chemical processes in general;
+their apparatus</td>
+<td>0.24</td>
+</tr>
+<tr class="even">
+<td>G05B13 Adaptive control systems</td>
+<td>0.21</td>
+</tr>
+<tr class="odd">
+<td>B01J8 Processes conducted in the presence of fluids and solid
+particles; apparatus</td>
+<td>0.17</td>
+</tr>
+</tbody>
+</table>
+</div>
 </div>
 </div>
 <div id="grant-technologies" class="section level2">
@@ -1929,8 +2017,8 @@ Accelerator</option> <option value="4">FAST</option>
 <option value="6">IMPACT</option> <option value="7">NEO-SMART</option>
 <option value="8">Quantum Technologies</option>
 <option value="9">RETI</option> <option value="10">RuralSTAMINA
-Biomanufacturing</option> <option value="11">Seafood</option>
-<option value="12">STELLAR</option> </select></p>
+Biomanufacturing</option> <option value="11">STELLAR</option>
+<option value="12">Seafood</option> </select></p>
 <div class="tech-engine" data-k="1">
 <table class="table table-condensed">
 <thead>
@@ -2907,6 +2995,95 @@ In the abstract (phrases in bold)
 1
 </td>
 <td style="text-align:left;">
+Precision optics and imaging
+</td>
+<td style="text-align:left;">
+<i>precision-optics and imaging</i> <span style="color:#888">(3/3)</span>
+</td>
+<td style="text-align:left;">
+<span style="font-size:90%">The Science, Technology, and Engineering for
+Lasers and Laser Applications Research (STELLAR) Engine in the
+Rochester/Finger Lakes (ROC/FLX) region will build on the area’s
+globally recognized <b>precision-optics and imaging</b> expertise and
+expand on strong capabilities in photonics and laser technologies to
+become a leading innovation ecosystem across all four Optics, Photonics,
+Imaging, and Lasers (OPI+L) technologies.</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+2
+</td>
+<td style="text-align:left;">
+Photonics
+</td>
+<td style="text-align:left;">
+<i>laser technologies</i> <span style="color:#888">(3/3)</span>
+</td>
+<td style="text-align:left;">
+<span style="font-size:90%">The Science, Technology, and Engineering for
+Lasers and Laser Applications Research (STELLAR) Engine in the
+Rochester/Finger Lakes (ROC/FLX) region will build on the area’s
+globally recognized precision-optics and imaging expertise and expand on
+strong capabilities in photonics and <b>laser technologies</b> to become
+a leading innovation ecosystem across all four Optics, Photonics,
+Imaging, and Lasers (OPI+L) technologies.</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+3
+</td>
+<td style="text-align:left;">
+Lasers and laser systems
+</td>
+<td style="text-align:left;">
+<i>next-generation laser systems</i> <span style="color:#888">(3/3)</span><br><i>domestic laser component and
+system manufacturing</i> <span style="color:#888">(3/3)</span><br><i>laser engineering, testing,
+fabrication and packaging</i> <span style="color:#888">(2/3)</span>
+</td>
+<td style="text-align:left;">
+<span style="font-size:90%">STELLAR has three equally important goals:
+expand and align education and training programs with industry needs;
+accelerate the translation of research into commercial technologies; and
+strengthen domestic supply chains for <b>next-generation laser
+systems</b>.<br><br>STELLAR leverages significant co-investment from New
+York State and contributions from more than 50 industry, federal, and
+academic partners to increase workforce capacity, expand participation
+in STEM, enhance research translation, increase regional investment,
+create jobs, and strengthen <b>domestic laser component and system
+manufacturing</b>.<br><br>STELLAR aims to engage students and expose
+them to career pathways in <b>laser engineering, testing, fabrication
+and packaging</b>, and applications of lasers.</span>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="tech-engine" data-k="12" style="display:none">
+<table class="table table-condensed">
+<thead>
+<tr>
+<th style="text-align:right;">
+#
+</th>
+<th style="text-align:left;">
+Technology
+</th>
+<th style="text-align:left;">
+Phrases of the grant (verbatim; runs that found it)
+</th>
+<th style="text-align:left;">
+In the abstract (phrases in bold)
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:right;">
+1
+</td>
+<td style="text-align:left;">
 Ocean observation, sensing and analytics for harvest
 </td>
 <td style="text-align:left;">
@@ -2997,95 +3174,6 @@ help to reach new consumers and markets, both at home and abroad.</span>
 </tbody>
 </table>
 </div>
-<div class="tech-engine" data-k="12" style="display:none">
-<table class="table table-condensed">
-<thead>
-<tr>
-<th style="text-align:right;">
-#
-</th>
-<th style="text-align:left;">
-Technology
-</th>
-<th style="text-align:left;">
-Phrases of the grant (verbatim; runs that found it)
-</th>
-<th style="text-align:left;">
-In the abstract (phrases in bold)
-</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:right;">
-1
-</td>
-<td style="text-align:left;">
-Precision optics and imaging
-</td>
-<td style="text-align:left;">
-<i>precision-optics and imaging</i> <span style="color:#888">(3/3)</span>
-</td>
-<td style="text-align:left;">
-<span style="font-size:90%">The Science, Technology, and Engineering for
-Lasers and Laser Applications Research (STELLAR) Engine in the
-Rochester/Finger Lakes (ROC/FLX) region will build on the area’s
-globally recognized <b>precision-optics and imaging</b> expertise and
-expand on strong capabilities in photonics and laser technologies to
-become a leading innovation ecosystem across all four Optics, Photonics,
-Imaging, and Lasers (OPI+L) technologies.</span>
-</td>
-</tr>
-<tr>
-<td style="text-align:right;">
-2
-</td>
-<td style="text-align:left;">
-Photonics
-</td>
-<td style="text-align:left;">
-<i>laser technologies</i> <span style="color:#888">(3/3)</span>
-</td>
-<td style="text-align:left;">
-<span style="font-size:90%">The Science, Technology, and Engineering for
-Lasers and Laser Applications Research (STELLAR) Engine in the
-Rochester/Finger Lakes (ROC/FLX) region will build on the area’s
-globally recognized precision-optics and imaging expertise and expand on
-strong capabilities in photonics and <b>laser technologies</b> to become
-a leading innovation ecosystem across all four Optics, Photonics,
-Imaging, and Lasers (OPI+L) technologies.</span>
-</td>
-</tr>
-<tr>
-<td style="text-align:right;">
-3
-</td>
-<td style="text-align:left;">
-Lasers and laser systems
-</td>
-<td style="text-align:left;">
-<i>next-generation laser systems</i> <span style="color:#888">(3/3)</span><br><i>domestic laser component and
-system manufacturing</i> <span style="color:#888">(3/3)</span><br><i>laser engineering, testing,
-fabrication and packaging</i> <span style="color:#888">(2/3)</span>
-</td>
-<td style="text-align:left;">
-<span style="font-size:90%">STELLAR has three equally important goals:
-expand and align education and training programs with industry needs;
-accelerate the translation of research into commercial technologies; and
-strengthen domestic supply chains for <b>next-generation laser
-systems</b>.<br><br>STELLAR leverages significant co-investment from New
-York State and contributions from more than 50 industry, federal, and
-academic partners to increase workforce capacity, expand participation
-in STEM, enhance research translation, increase regional investment,
-create jobs, and strengthen <b>domestic laser component and system
-manufacturing</b>.<br><br>STELLAR aims to engage students and expose
-them to career pathways in <b>laser engineering, testing, fabrication
-and packaging</b>, and applications of lasers.</span>
-</td>
-</tr>
-</tbody>
-</table>
-</div>
 <script>
 // Dropdown: show the chosen Engine's technologies
 document.getElementById("tech-engine").addEventListener("change", function () {
@@ -3111,8 +3199,8 @@ Accelerator</option> <option value="4">FAST</option>
 <option value="6">IMPACT</option> <option value="7">NEO-SMART</option>
 <option value="8">Quantum Technologies</option>
 <option value="9">RETI</option> <option value="10">RuralSTAMINA
-Biomanufacturing</option> <option value="11">Seafood</option>
-<option value="12">STELLAR</option> </select>
+Biomanufacturing</option> <option value="11">STELLAR</option>
+<option value="12">Seafood</option> </select>
 <select id="profile-version" class="form-control" style="width:auto" aria-label="Profile version">
 <option value="v1">v1 (used by the
 metrics)</option><option value="v31">v3.1 (core)</option></select>
@@ -4280,6 +4368,119 @@ CPC (US / region patents, 2024-25)
 title
 </td>
 <td style="text-align:left;">
+Lasers and laser applications
+</td>
+<td style="text-align:left;">
+<i>Science, Technology, and Engineering for Lasers and Laser
+Applications Research (STELLAR) Engine</i>
+</td>
+<td style="text-align:left;">
+Optical Systems and Laser Technology<br><span style="color:#666">Electrical and Electronic Engineering</span>
+</td>
+<td style="text-align:left;">
+H01S (2157 / 43)
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+2
+</td>
+<td style="text-align:left;">
+abstract
+</td>
+<td style="text-align:left;">
+Precision optics and optical imaging
+</td>
+<td style="text-align:left;">
+<i>the area’s globally recognized precision-optics and imaging
+expertise</i>
+</td>
+<td style="text-align:left;">
+Advanced optical system design<br><span style="color:#666">Atomic and
+Molecular Physics, and Optics</span>
+</td>
+<td style="text-align:left;">
+G02B (20724 / 623)
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+3
+</td>
+<td style="text-align:left;">
+abstract
+</td>
+<td style="text-align:left;">
+Photonics and integrated photonic devices
+</td>
+<td style="text-align:left;">
+<i>strong capabilities in photonics and laser technologies … Optics,
+Photonics, Imaging, and Lasers (OPI+L)</i>
+</td>
+<td style="text-align:left;">
+Photonic and Optical Devices<br><span style="color:#666">Electrical and
+Electronic Engineering</span>
+</td>
+<td style="text-align:left;">
+G02B6 (5593 / 276)<br>H01S5 (1513 / 19)
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+4
+</td>
+<td style="text-align:left;">
+abstract
+</td>
+<td style="text-align:left;">
+Manufacturing of laser components and systems
+</td>
+<td style="text-align:left;">
+<i>strengthen domestic laser component and system manufacturing</i>
+</td>
+<td style="text-align:left;">
+Optical Systems and Laser Technology<br><span style="color:#666">Electrical and Electronic Engineering</span>
+</td>
+<td style="text-align:left;">
+B23K26 (1955 / 60)<br>H01S3 (860 / 29)
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="profile-engine" data-k="12" data-v="v1" style="display:none">
+<table class="table table-condensed">
+<thead>
+<tr>
+<th style="text-align:right;">
+#
+</th>
+<th style="text-align:left;">
+Source
+</th>
+<th style="text-align:left;">
+Statement
+</th>
+<th style="text-align:left;">
+Quote from the grant
+</th>
+<th style="text-align:left;">
+OpenAlex topic (subfield)
+</th>
+<th style="text-align:left;">
+CPC (US / region patents, 2024-25)
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:right;">
+1
+</td>
+<td style="text-align:left;">
+title
+</td>
+<td style="text-align:left;">
 Seafood harvesting, processing and supply chain technology
 </td>
 <td style="text-align:left;">
@@ -4382,119 +4583,6 @@ Science</span>
 </td>
 <td style="text-align:left;">
 G06Q10 (13971 / 808)
-</td>
-</tr>
-</tbody>
-</table>
-</div>
-<div class="profile-engine" data-k="12" data-v="v1" style="display:none">
-<table class="table table-condensed">
-<thead>
-<tr>
-<th style="text-align:right;">
-#
-</th>
-<th style="text-align:left;">
-Source
-</th>
-<th style="text-align:left;">
-Statement
-</th>
-<th style="text-align:left;">
-Quote from the grant
-</th>
-<th style="text-align:left;">
-OpenAlex topic (subfield)
-</th>
-<th style="text-align:left;">
-CPC (US / region patents, 2024-25)
-</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:right;">
-1
-</td>
-<td style="text-align:left;">
-title
-</td>
-<td style="text-align:left;">
-Lasers and laser applications
-</td>
-<td style="text-align:left;">
-<i>Science, Technology, and Engineering for Lasers and Laser
-Applications Research (STELLAR) Engine</i>
-</td>
-<td style="text-align:left;">
-Optical Systems and Laser Technology<br><span style="color:#666">Electrical and Electronic Engineering</span>
-</td>
-<td style="text-align:left;">
-H01S (2157 / 43)
-</td>
-</tr>
-<tr>
-<td style="text-align:right;">
-2
-</td>
-<td style="text-align:left;">
-abstract
-</td>
-<td style="text-align:left;">
-Precision optics and optical imaging
-</td>
-<td style="text-align:left;">
-<i>the area’s globally recognized precision-optics and imaging
-expertise</i>
-</td>
-<td style="text-align:left;">
-Advanced optical system design<br><span style="color:#666">Atomic and
-Molecular Physics, and Optics</span>
-</td>
-<td style="text-align:left;">
-G02B (20724 / 623)
-</td>
-</tr>
-<tr>
-<td style="text-align:right;">
-3
-</td>
-<td style="text-align:left;">
-abstract
-</td>
-<td style="text-align:left;">
-Photonics and integrated photonic devices
-</td>
-<td style="text-align:left;">
-<i>strong capabilities in photonics and laser technologies … Optics,
-Photonics, Imaging, and Lasers (OPI+L)</i>
-</td>
-<td style="text-align:left;">
-Photonic and Optical Devices<br><span style="color:#666">Electrical and
-Electronic Engineering</span>
-</td>
-<td style="text-align:left;">
-G02B6 (5593 / 276)<br>H01S5 (1513 / 19)
-</td>
-</tr>
-<tr>
-<td style="text-align:right;">
-4
-</td>
-<td style="text-align:left;">
-abstract
-</td>
-<td style="text-align:left;">
-Manufacturing of laser components and systems
-</td>
-<td style="text-align:left;">
-<i>strengthen domestic laser component and system manufacturing</i>
-</td>
-<td style="text-align:left;">
-Optical Systems and Laser Technology<br><span style="color:#666">Electrical and Electronic Engineering</span>
-</td>
-<td style="text-align:left;">
-B23K26 (1955 / 60)<br>H01S3 (860 / 29)
 </td>
 </tr>
 </tbody>
@@ -5304,6 +5392,77 @@ CPC groups
 1
 </td>
 <td style="text-align:left;">
+precision-optics and imaging
+</td>
+<td style="text-align:left;">
+Optical measurement and interference techniques<br><span style="color:#666">Computer Vision and Pattern
+Recognition</span><br>Advanced optical system design<br><span style="color:#666">Atomic and Molecular Physics, and Optics</span>
+</td>
+<td style="text-align:left;">
+<b>G02B27/00</b> Optical systems or apparatus not provided for by any of
+the groups G02B1/00 - G02B26/00…<br><b>G01B9/00</b> Measuring
+instruments characterised by the use of optical techniques
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+2
+</td>
+<td style="text-align:left;">
+photonics and laser technologies
+</td>
+<td style="text-align:left;">
+Optical Systems and Laser Technology<br><span style="color:#666">Electrical and Electronic
+Engineering</span><br>Semiconductor Lasers and Optical Devices<br><span style="color:#666">Electrical and Electronic Engineering</span>
+</td>
+<td style="text-align:left;">
+<b>H01S3/00</b> Lasers, i.e. devices using stimulated emission of
+electromagnetic radiation in the infr…
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+3
+</td>
+<td style="text-align:left;">
+laser component and system manufacturing
+</td>
+<td style="text-align:left;">
+Optical Systems and Laser Technology<br><span style="color:#666">Electrical and Electronic Engineering</span>
+</td>
+<td style="text-align:left;">
+<b>H01S3/00</b> Lasers, i.e. devices using stimulated emission of
+electromagnetic radiation in the infr…<sup>J</sup><br><b>H01S5/00</b>
+Semiconductor lasers<sup>J</sup>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="profile-engine" data-k="12" data-v="v31" style="display:none">
+<table class="table table-condensed">
+<thead>
+<tr>
+<th style="text-align:right;">
+#
+</th>
+<th style="text-align:left;">
+Technology
+</th>
+<th style="text-align:left;">
+OpenAlex topics (subfield)
+</th>
+<th style="text-align:left;">
+CPC groups
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:right;">
+1
+</td>
+<td style="text-align:left;">
 seafood products, processing technologies and waste stream utilization
 </td>
 <td style="text-align:left;">
@@ -5362,77 +5521,6 @@ Science</span>
 </td>
 <td style="text-align:left;">
 —
-</td>
-</tr>
-</tbody>
-</table>
-</div>
-<div class="profile-engine" data-k="12" data-v="v31" style="display:none">
-<table class="table table-condensed">
-<thead>
-<tr>
-<th style="text-align:right;">
-#
-</th>
-<th style="text-align:left;">
-Technology
-</th>
-<th style="text-align:left;">
-OpenAlex topics (subfield)
-</th>
-<th style="text-align:left;">
-CPC groups
-</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:right;">
-1
-</td>
-<td style="text-align:left;">
-precision-optics and imaging
-</td>
-<td style="text-align:left;">
-Optical measurement and interference techniques<br><span style="color:#666">Computer Vision and Pattern
-Recognition</span><br>Advanced optical system design<br><span style="color:#666">Atomic and Molecular Physics, and Optics</span>
-</td>
-<td style="text-align:left;">
-<b>G02B27/00</b> Optical systems or apparatus not provided for by any of
-the groups G02B1/00 - G02B26/00…<br><b>G01B9/00</b> Measuring
-instruments characterised by the use of optical techniques
-</td>
-</tr>
-<tr>
-<td style="text-align:right;">
-2
-</td>
-<td style="text-align:left;">
-photonics and laser technologies
-</td>
-<td style="text-align:left;">
-Optical Systems and Laser Technology<br><span style="color:#666">Electrical and Electronic
-Engineering</span><br>Semiconductor Lasers and Optical Devices<br><span style="color:#666">Electrical and Electronic Engineering</span>
-</td>
-<td style="text-align:left;">
-<b>H01S3/00</b> Lasers, i.e. devices using stimulated emission of
-electromagnetic radiation in the infr…
-</td>
-</tr>
-<tr>
-<td style="text-align:right;">
-3
-</td>
-<td style="text-align:left;">
-laser component and system manufacturing
-</td>
-<td style="text-align:left;">
-Optical Systems and Laser Technology<br><span style="color:#666">Electrical and Electronic Engineering</span>
-</td>
-<td style="text-align:left;">
-<b>H01S3/00</b> Lasers, i.e. devices using stimulated emission of
-electromagnetic radiation in the infr…<sup>J</sup><br><b>H01S5/00</b>
-Semiconductor lasers<sup>J</sup>
 </td>
 </tr>
 </tbody>

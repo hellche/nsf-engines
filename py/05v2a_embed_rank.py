@@ -46,10 +46,13 @@ Version 3.1 (and v2.1, its comparison with the v2 input): the fixes from reports
     of the grant's technologies; besides the Engine-level scores, every item is scored against each
     technology (tech_<v>_tech_rank_*.csv.gz, top 300 per technology; all ranks in data/raw for the rank
     fusion, py/05v3_1b_fuse.py), so the profile can be chosen technology by technology.
+  - v3_1m input: the common technologies of the grants, data/processed/tech_minplus_technologies.csv
+    (43 technologies, 77 phrases; prompt grant_technologies_minimal_plus.md, the same input as profile v1);
+    everything else as v3_1. Outputs tech_v3_1m_*, so the v3_1 results stay for comparison.
   v2 and v3 keep the original procedure (their outputs are not overwritten).
   Reference lists for all versions: data/reference/ (py/00_reference_lists.py), not local files.
 
-Run:    .venv/bin/python py/05v2a_embed_rank.py v2      (or v3, v2_1, v3_1; models download once)
+Run:    .venv/bin/python py/05v2a_embed_rank.py v2      (or v3, v2_1, v3_1, v3_1m; models download once)
 """
 
 import hashlib
@@ -80,8 +83,8 @@ BOILERPLATE = re.compile(r"This award reflects NSF.s statutory mission", re.I)
 METHODS = ["max", "centroid", "max_bg", "centroid_bg"]
 METHOD = {"oa": "max_bg", "cpc": "centroid"}   # working choice; the v1 check at the end is a reference, not a benchmark
 VERSION = sys.argv[1] if len(sys.argv) > 1 else "v2"
-assert VERSION in ("v2", "v3", "v2_1", "v3_1"), "version must be v2, v3, v2_1 or v3_1"
-FIX = VERSION.endswith("_1")          # the v3.1 fixes (see the docstring)
+assert VERSION in ("v2", "v3", "v2_1", "v3_1", "v3_1m"), "version must be v2, v3, v2_1, v3_1 or v3_1m"
+FIX = VERSION in ("v2_1", "v3_1", "v3_1m")          # the v3.1 fixes (see the docstring)
 TECH_TOP = 300                        # items kept per technology in tech_<v>_tech_rank_*
 
 
@@ -140,10 +143,13 @@ sentences = pd.DataFrame(rows, columns=["engine_name", "sent_id", "source", "tex
 sentences.to_csv(PROC / ("tech_v2_1_sentences.csv" if FIX else "tech_v2_sentences.csv"), index=False)
 print(f"Sentences: {len(sentences)} for {sentences.engine_name.nunique()} Engines; masked: {masked_tokens}")
 
-if VERSION in ("v3", "v3_1"):
+if VERSION in ("v3", "v3_1", "v3_1m"):
     # Fragments must be verbatim substrings of their sentence: the model may not add words of its own
-    frag = pd.read_csv(ROOT / "data" / "manual" /
-                       ("tech_v3_1_fragments_raw.csv" if VERSION == "v3_1" else "tech_v3_fragments_raw.csv"))
+    frag_file = {"v3": ROOT / "data" / "manual" / "tech_v3_fragments_raw.csv",
+                 "v3_1": ROOT / "data" / "manual" / "tech_v3_1_fragments_raw.csv",
+                 "v3_1m": PROC / "tech_minplus_technologies.csv"}[VERSION]
+    frag = pd.read_csv(frag_file)[lambda d: [c for c in ("engine_name", "sent_id", "fragment", "tech_id", "tech_label")
+                                             if c in d.columns]]
     frag = frag.merge(sentences[["engine_name", "sent_id", "text_original"]].rename(
         columns={"text_original": "sentence"}), on=["engine_name", "sent_id"], how="left")
     frag["verbatim"] = [isinstance(t, str) and f in t for f, t in zip(frag.fragment, frag.sentence)]

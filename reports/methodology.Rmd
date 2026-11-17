@@ -47,6 +47,46 @@ if (file.exists(svg_v23)) {
 ```
 </div>
 
+### Embeddings in detail (version 3.1) {#embeddings-in-detail}
+
+Version 3.1 ranks every OpenAlex topic and every CPC group by how close it is in meaning to each technology of
+the grant. Nobody chooses here: the items are only sorted by distance, the same way for all 43 technologies.
+
+1. **One text per technology.** The technology's label and its phrases of the grant are joined into one text,
+   for example *"Continuous processing and data-driven process control. continuous flow processing; data-driven
+   process control"*. 43 texts in total. The Engine's name and the word "Engine" are removed (the patent model
+   reads "engine" as a motor).
+2. **Two models, two separate comparisons.** A model turns every text into a point in a space of meaning;
+   texts about similar things lie close together.
+
+   ::: {.no-sort}
+
+   | | The 43 technologies are compared with | Model |
+   |---|---|---|
+   | Papers | 4,516 OpenAlex topics: name, description, keywords | SPECTER2, trained on research papers |
+   | Patents | 7,646 CPC main groups: titles of the subclass, the group and its subgroups | PatentSBERTa, trained on patents |
+
+   :::
+
+3. **Closeness.** All scientific texts are somewhat alike, so the average point of each set is subtracted first;
+   what is left are the real differences in meaning. Closeness is the cosine between the technology's point and
+   the item's point: 1 means the same meaning, 0 unrelated.
+4. **Top 20.** For each technology, all 4,516 topics and all 7,646 CPC groups are sorted by closeness; the 20
+   closest of each are the candidates. Choosing among them is the next step (not settled yet).
+
+Because the text holds all the phrases of a technology, a group close to all of them scores high by itself
+(illustrative numbers):
+
+::: {.no-sort}
+
+| CPC group | Closeness to the technology |
+|---|---|
+| B01J19 Chemical, physical or physico-chemical processes in general; their apparatus | 0.24 |
+| G05B13 Adaptive control systems | 0.21 |
+| B01J8 Processes conducted in the presence of fluids and solid particles; apparatus | 0.17 |
+
+:::
+
 ## Technologies of each grant {#grant-technologies}
 
 ```{r tech-setup, include=FALSE}

@@ -84,29 +84,27 @@ RY = PRY + LH + 30
 down(cx[0], PRY + LH, RY)
 box("out1", cols[0], RY, CW, 74, "Профиль v1",
     ["≥ 2 прогонов из 3 · совпадение: группы CPC 91%, темы 86%", "162 пункта: 84 группы CPC + 78 тем OpenAlex"])
-# v3.1, steps 1-2 only (step 3 is still being discussed)
-def mini_flow(y, labels, out):
-    """small cells side by side, arrows from each into one result cell below"""
-    n, w, g = len(labels), 96, 14
-    x0 = cx[1] - (n*w + (n-1)*g)/2
-    for k, lab in enumerate(labels):
-        rect("q", x0 + k*(w + g), y, w, 30)
-        text("qs", x0 + k*(w + g) + w/2, y + 20, lab)
-        o.append(f'<path class="ln" d="M{x0+k*(w+g)+w/2},{y+30} V{y+44}"/>')
-    o.append(f'<path class="ln" d="M{x0+w/2},{y+44} H{x0+(n-1)*(w+g)+w/2}"/>')
-    o.append(f'<path class="ln" d="M{cx[1]},{y+44} V{y+55}" marker-end="url(#a)"/>')
-    rect("q", cx[1] - 120, y + 58, 240, 28)
-    text("qs", cx[1], y + 77, out)
-S1H = 136
-rect("emb", cols[1], PRY, CW, S1H)
-text("t", cx[1], PRY + 24, "1 · Эмбеддинги в двух моделях")
-mini_flow(PRY + 38, ["77 фраз", "темы / CPC"], "Близость: косинус")
-S2Y = PRY + S1H + 30
-down(cx[1], PRY + S1H, S2Y)
-rect("emb", cols[1], S2Y, CW, S1H)
-text("t", cx[1], S2Y + 24, "2 · От фраз к технологии")
-mini_flow(S2Y + 38, ["max", "centroid", "mix"], "Один рейтинг · топ-20")
-RY3 = S2Y + S1H - 74
+# v3.1 (simple): each technology is one text; two models, each compares the 43 technologies with one list
+def model_cell(y, title, right, right_sub, out):
+    rect("emb", cols[1], y, CW, 128)
+    text("t", cx[1], y + 24, title)
+    w, g = 172, 12
+    xs = [cx[1] - w - g/2, cx[1] + g/2]
+    for k, (a, b) in enumerate([("43 технологии", "название, фраза 1, фраза 2…"), (right, right_sub)]):
+        rect("q", xs[k], y + 36, w, 42)
+        text("qs", xs[k] + w/2, y + 54, a)
+        text("qss", xs[k] + w/2, y + 70, b)
+        o.append(f'<path class="ln" d="M{xs[k]+w/2},{y+78} V{y+88}"/>')
+    o.append(f'<path class="ln" d="M{xs[0]+w/2},{y+88} H{xs[1]+w/2}"/>')
+    o.append(f'<path class="ln" d="M{cx[1]},{y+88} V{y+95}" marker-end="url(#a)"/>')
+    rect("q", cx[1] - 150, y + 98, 300, 22)
+    text("qs", cx[1], y + 114, out)
+model_cell(PRY, "SPECTER2 · темы OpenAlex", "4 516 тем", "название, описание, слова",
+           "косинус → 20 ближайших тем")
+S2Y = PRY + 128 + 22
+model_cell(S2Y, "PatentSBERTa · группы CPC", "7 646 групп", "подкласс, группа, подгруппы",
+           "косинус → 20 ближайших групп")
+RY3 = S2Y + 128 - 74
 # legend
 L = max(RY, RY3) + 74 + 46
 items = [("chosen", "выбранный промпт"), ("pr", "сравнили, не взяли / ещё не сделано"),
