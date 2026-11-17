@@ -84,12 +84,33 @@ RY = PRY + LH + 30
 down(cx[0], PRY + LH, RY)
 box("out1", cols[0], RY, CW, 74, "Профиль v1",
     ["≥ 2 прогонов из 3 · совпадение: группы CPC 91%, темы 86%", "162 пункта: 84 группы CPC + 78 тем OpenAlex"])
-# v3.1: to be recomputed on the new technologies
-box("pr", cols[1], PRY, CW, 70, "v3.1 · эмбеддинги", ["пересчитать на новых технологиях"])
+# v3.1, steps 1-2 only (step 3 is still being discussed)
+def mini_flow(y, labels, out):
+    """small cells side by side, arrows from each into one result cell below"""
+    n, w, g = len(labels), 96, 14
+    x0 = cx[1] - (n*w + (n-1)*g)/2
+    for k, lab in enumerate(labels):
+        rect("q", x0 + k*(w + g), y, w, 30)
+        text("qs", x0 + k*(w + g) + w/2, y + 20, lab)
+        o.append(f'<path class="ln" d="M{x0+k*(w+g)+w/2},{y+30} V{y+44}"/>')
+    o.append(f'<path class="ln" d="M{x0+w/2},{y+44} H{x0+(n-1)*(w+g)+w/2}"/>')
+    o.append(f'<path class="ln" d="M{cx[1]},{y+44} V{y+55}" marker-end="url(#a)"/>')
+    rect("q", cx[1] - 120, y + 58, 240, 28)
+    text("qs", cx[1], y + 77, out)
+S1H = 136
+rect("emb", cols[1], PRY, CW, S1H)
+text("t", cx[1], PRY + 24, "1 · Эмбеддинги в двух моделях")
+mini_flow(PRY + 38, ["77 фраз", "темы / CPC"], "Близость: косинус")
+S2Y = PRY + S1H + 30
+down(cx[1], PRY + S1H, S2Y)
+rect("emb", cols[1], S2Y, CW, S1H)
+text("t", cx[1], S2Y + 24, "2 · От фраз к технологии")
+mini_flow(S2Y + 38, ["max", "centroid", "mix"], "Один рейтинг · топ-20")
+RY3 = S2Y + S1H - 74
 # legend
-L = RY + 84 + 46
+L = max(RY, RY3) + 74 + 46
 items = [("chosen", "выбранный промпт"), ("pr", "сравнили, не взяли / ещё не сделано"),
-         ("llm", "выбор LLM по нашим спискам")]
+         ("llm", "выбор LLM по нашим спискам"), ("emb", "эмбеддинги (v3.1)")]
 x = FULL_X
 for c, t in items:
     rect(c, x, L - 13, 30, 18); text("lg", x + 38, L + 1, t); x += 38 + 8*len(t) + 40
@@ -112,6 +133,8 @@ text { font-family: Helvetica, Arial, "DejaVu Sans", sans-serif; }
 .out1 { fill: #f0f0f0; stroke: #222; stroke-width: 2.5; }
 .q { fill: #fff; stroke: #222; stroke-width: 1.2; }
 .qs { font-size: 12.5px; fill: #222; text-anchor: middle; }
+.qss { font-size: 11.5px; fill: #555; text-anchor: middle; }
+.emb { fill: #e6f2ea; stroke: #4f8a62; stroke-width: 2; }
 .llm { fill: #fbe9dc; stroke: #c0632b; stroke-width: 2; }
 .stop { fill: #fdecea; stroke: #b3261e; stroke-width: 2; }
 .km { fill: #fbe9dc; stroke: #c0632b; stroke-width: 1.2; }
