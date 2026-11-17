@@ -20,7 +20,7 @@ profile <- read_csv(here("data", "processed", "tech_profile.csv"), show_col_type
 core31 <- read_csv(here("data", "processed", "tech_profile_v3_1_core.csv"), show_col_types = FALSE)
 choices <- read_csv(here("data", "manual", "tech_topic_choice.csv"), show_col_types = FALSE)
 esc <- htmltools::htmlEscape
-svg_v23 <- here("tech_profile_v2_procedure.svg")
+svg_v23 <- here("reports", "drafts", "tech_profile_diagram.svg")
 ```
 
 <style>
@@ -42,7 +42,7 @@ if (file.exists(svg_v23)) {
   svg <- readLines(svg_v23, warn = FALSE, encoding = "UTF-8")
   cat(svg[nzchar(trimws(svg))], sep = "\n")
 } else {
-  cat("<p><i>Diagram file tech_profile_v2_procedure.svg not found.</i></p>")
+  cat("<p><i>Diagram file reports/drafts/tech_profile_diagram.svg not found.</i></p>")
 }
 ```
 </div>
