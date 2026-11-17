@@ -55,6 +55,8 @@ jobs:
             any::scales
             any::htmltools
             any::stringi
+            any::purrr
+            any::plotly
 
       - name: Render site
         run: Rscript R/08_render_site.R

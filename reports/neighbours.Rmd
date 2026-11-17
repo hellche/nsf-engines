@@ -1,13 +1,17 @@
 ---
-title: "Nearest topics and CPC groups of each technology (draft)"
+title: "Nearest topics and CPC groups"
 output:
   html_document:
     theme: flatly
     self_contained: true
+    css: style.css
+    includes:
+      before_body: _navbar.html
+      after_body: _tables.html
 ---
 
 ```{r setup, include=FALSE}
-# Draft, not on the site. For each of the 43 technologies of the grants (data/processed/tech_minplus_technologies.csv):
+# Site page (linked from the Technology profile page, step 2). For each of the 43 technologies of the grants (data/processed/tech_minplus_technologies.csv):
 # the 100 nearest OpenAlex topics and CPC main groups by embedding (py/05v3_1s_simple.py,
 # data/processed/tech_v3_1s_rank_{oa,cpc}.csv.gz), in two layouts:
 #   A  radial: distance from the centre = how much less similar than the closest item; angle = subfield / subclass
@@ -16,7 +20,7 @@ output:
 # py/05v3_1s_judge_consensus.py), each candidate shows its verdict; otherwise only candidate / not a candidate.
 # Black ring: also chosen by v1 (data/processed/tech_profile_v1_levels.csv; reference only, not a benchmark).
 # Colours: Okabe-Ito (colour-blind safe), and the verdict is also coded by the marker shape.
-# Render: Rscript -e 'rmarkdown::render("reports/drafts/tech_neighbours.Rmd")'
+# Rendered by R/08_render_site.R (once, in docs/).
 knitr::opts_chunk$set(echo = FALSE, message = FALSE, warning = FALSE)
 invisible(Sys.setlocale("LC_CTYPE", "en_US.UTF-8"))
 library(dplyr); library(readr); library(stringr); library(purrr); library(plotly); library(htmltools); library(here)

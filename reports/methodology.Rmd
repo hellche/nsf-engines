@@ -30,8 +30,7 @@ svg_v23 <- here("reports", "drafts", "tech_profile_diagram.svg")
 ## What is the technology profile {#what-is-the-technology-profile}
 
 What an Engine works on, in two vocabularies: **OpenAlex topics** for papers and **CPC groups** for patents.
-It is built from the NSF grant text only. A paper is *in the Engine's topics* when one of its topics is in the
-profile; a patent is *in the profile* when one of its CPC codes is. All metrics on this site still use version 1.
+It is built from the NSF grant text only.
 
 ## Versions {#versions}
 
@@ -47,47 +46,9 @@ if (file.exists(svg_v23)) {
 ```
 </div>
 
-### Embeddings in detail (version 3.1) {#embeddings-in-detail}
+## Steps in detail {#steps}
 
-Version 3.1 ranks every OpenAlex topic and every CPC group by how close it is in meaning to each technology of
-the grant. Nobody chooses here: the items are only sorted by distance, the same way for all 43 technologies.
-
-1. **One text per technology.** The technology's label and its phrases of the grant are joined into one text,
-   for example *"Continuous processing and data-driven process control. continuous flow processing; data-driven
-   process control"*. 43 texts in total. The Engine's name and the word "Engine" are removed (the patent model
-   reads "engine" as a motor).
-2. **Two models, two separate comparisons.** A model turns every text into a point in a space of meaning;
-   texts about similar things lie close together.
-
-   ::: {.no-sort}
-
-   | | The 43 technologies are compared with | Model |
-   |---|---|---|
-   | Papers | 4,516 OpenAlex topics: name, description, keywords | SPECTER2, trained on research papers |
-   | Patents | 7,646 CPC main groups: titles of the subclass, the group and its subgroups | PatentSBERTa, trained on patents |
-
-   :::
-
-3. **Closeness.** All scientific texts are somewhat alike, so the average point of each set is subtracted first;
-   what is left are the real differences in meaning. Closeness is the cosine between the technology's point and
-   the item's point: 1 means the same meaning, 0 unrelated.
-4. **Top 20.** For each technology, all 4,516 topics and all 7,646 CPC groups are sorted by closeness; the 20
-   closest of each are the candidates. Choosing among them is the next step (not settled yet).
-
-Because the text holds all the phrases of a technology, a group close to all of them scores high by itself
-(illustrative numbers):
-
-::: {.no-sort}
-
-| CPC group | Closeness to the technology |
-|---|---|
-| B01J19 Chemical, physical or physico-chemical processes in general; their apparatus | 0.24 |
-| G05B13 Adaptive control systems | 0.21 |
-| B01J8 Processes conducted in the presence of fluids and solid particles; apparatus | 0.17 |
-
-:::
-
-## Technologies of each grant {#grant-technologies}
+### Step 1: technologies of each grant {#grant-technologies}
 
 ```{r tech-setup, include=FALSE}
 techs <- read_csv(here("data", "processed", "tech_minplus_technologies.csv"), show_col_types = FALSE)
@@ -107,11 +68,9 @@ in_context <- function(d) {
 }
 ```
 
-**`r n_tech` technologies, `r min(per_engine$n)`–`r max(per_engine$n)` per Engine** — the common first step for
-versions 1 and 3.1. A short fixed prompt asks the model to copy out, word for word, the phrases of the grant
-that name a technology and to group them into the grant's technologies. It was run three times; a phrase is
-kept when at least two runs found it (`r nrow(techs)` phrases), and the grouping is that of the run that agrees
-most with the other two. The labels are the model's own short names; the phrases are the grant's words.
+**`r n_tech` technologies, `r min(per_engine$n)`–`r max(per_engine$n)` per Engine**, common to versions 1 and 3.1.
+An LLM copies out the grant's phrases that name a technology and groups them; three runs, a phrase is kept if
+two found it (`r nrow(techs)` phrases).
 
 ```{r tech-tables, results = "asis"}
 tech_engines <- sort(unique(techs$engine_name))
@@ -144,6 +103,41 @@ document.getElementById("tech-engine").addEventListener("change", function () {
   });
 });
 </script>
+
+### Step 2: embeddings (version 3.1) {#embeddings-in-detail}
+
+1. **One text per technology:** its label and its phrases, without the Engine's name.
+2. **Two models:**
+
+   ::: {.no-sort}
+
+   | | Compared with | Model |
+   |---|---|---|
+   | Papers | 4,516 OpenAlex topics | SPECTER2 |
+   | Patents | 7,646 CPC main groups | PatentSBERTa |
+
+   :::
+
+3. **Closeness:** cosine after subtracting each set's average.
+4. **Top 50:** the 50 closest topics and groups go to an LLM judge (three runs, in progress).
+   [See the nearest topics and groups of each technology](neighbours.html).
+
+## Classification lists {#classification-lists}
+
+Both lists are public; copies are kept in the repository (`data/reference/`). Each has two levels: **coarse
+categories** and the **codes** inside them.
+
+::: {.no-sort}
+
+| | Coarse categories | Codes inside them | Source |
+|---|---|---|---|
+| OpenAlex | 250 subfields | 4,516 topics, with keywords | [OpenAlex topics API](https://api.openalex.org/topics) |
+| CPC | 652 subclasses | 7,646 main groups | [CPC Title List 2026.08](https://www.cooperativepatentclassification.org/cpcSchemeAndDefinitions/bulk) |
+
+:::
+
+CPC indexing groups (2000+) and catch-all groups (99/00) are left out. Both lists downloaded on
+November 15, 2026.
 
 ## [drop] Profile of each Engine {#technology-profile}
 
@@ -216,20 +210,3 @@ function showProfile() {
 document.getElementById("profile-engine").addEventListener("change", showProfile);
 document.getElementById("profile-version").addEventListener("change", showProfile);
 </script>
-
-## Classification lists {#classification-lists}
-
-Both lists are public; copies are kept in the repository (`data/reference/`). Each has two levels: **coarse
-categories** and the **codes** inside them.
-
-::: {.no-sort}
-
-| | Coarse categories | Codes inside them | Source |
-|---|---|---|---|
-| OpenAlex | 250 subfields | 4,516 topics, with keywords | [OpenAlex topics API](https://api.openalex.org/topics) |
-| CPC | 652 subclasses | 7,646 main groups | [CPC Title List 2026.08](https://www.cooperativepatentclassification.org/cpcSchemeAndDefinitions/bulk) |
-
-:::
-
-CPC indexing groups (2000+) and catch-all groups (99/00) are left out. Both lists downloaded on
-November 15, 2026.
