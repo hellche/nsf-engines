@@ -1,6 +1,6 @@
 ---
 title: "`r params$engine` Engine: knowledge base"
-subtitle: "NSF Regional Innovation Engines, Cohort 2. Technology profile `r c(v1 = 'v1', v3_1 = 'v3.1')[[Sys.getenv('PROFILE_VERSION', 'v1')]]`"
+subtitle: "NSF Regional Innovation Engines, Cohort 2. Technology profile `r c(v1 = 'v1', v3_1 = 'v3.1')[[Sys.getenv('PROFILE_VERSION', 'v1')]]`. Draft, in progress"
 output:
   html_document:
     toc: true
