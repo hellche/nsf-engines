@@ -145,15 +145,17 @@ box("pr", cols[1], RY3, CW, 74, "Profile v3.1",
     ["up to 2 topics and 2 CPC groups per technology", "high score in ≥ 2 of 3 runs"])
 L = max(RY, RY3) + 74
 H = L + 20
+# Palette: Okabe-Ito orange #E69F00 (v1), sky blue #56B4E9 / blue #0072B2 (v3.1), reddish purple #CC79A7 (v2);
+# tints for fills, darker shades for borders; checked for protan-, deutan- and tritanopia (Machado 2009): the v1
+# and v3.1 fills differ by dE >= 33 in all three. The v2 cell border is as thin as the v2 header.
+# No CSS comments in the style: the SVG is inlined into an R Markdown page, and pandoc reads "/* ... */" as
+# Markdown emphasis, which breaks the SVG.
 svg = [f'<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 {W} {H}" width="{W}" height="{H}">',
  '<title>Technology profile: versions v1, v2, v3.1 (in progress)</title>',
  '''<defs>
 <marker id="a" viewBox="0 0 10 10" refX="10" refY="5" markerWidth="9" markerHeight="9" markerUnits="userSpaceOnUse" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#222"/></marker>
 <marker id="A" viewBox="0 0 10 10" refX="10" refY="5" markerWidth="14" markerHeight="14" markerUnits="userSpaceOnUse" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#111"/></marker>
 <style>
-/* palette: Okabe-Ito orange #E69F00 (v1) and sky blue #56B4E9 / blue #0072B2 (v3.1), reddish purple #CC79A7 (v2);
-   tints for fills, darker shades for borders; checked for protan-, deutan- and tritanopia (Machado 2009):
-   the v1 and v3.1 fills differ by dE >= 33 in all three */
 text { font-family: Helvetica, Arial, "DejaVu Sans", sans-serif; }
 .box { fill: #fff; stroke: #222; stroke-width: 1.5; }
 .v2 { fill: #e3ecf9; stroke: #4a6fa5; stroke-width: 1.5; }
@@ -164,7 +166,7 @@ text { font-family: Helvetica, Arial, "DejaVu Sans", sans-serif; }
 .model { fill: #fff; stroke: #222; stroke-width: 2; }
 .frame { fill: #fff; stroke: #111; stroke-width: 2; }
 .judge { fill: #c2e4f7; stroke: #0072b2; stroke-width: 2; }
-.v2c { fill: #fff; stroke: #cc79a7; stroke-width: 1.5; }   /* as the v2 header */
+.v2c { fill: #fff; stroke: #cc79a7; stroke-width: 1.5; }
 .bound { fill: none; stroke: #0072b2; stroke-width: 1.5; stroke-dasharray: 5 4; }
 .tc { fill: #fff; stroke: #111; stroke-width: 2; }
 .plus { font-size: 18px; font-weight: 700; fill: #222; text-anchor: middle; }
