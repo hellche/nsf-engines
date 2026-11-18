@@ -1,6 +1,5 @@
 ---
 title: "Patents of Engine team members"
-date: "Data retrieved `r format(Sys.Date(), '%B %d, %Y')`"
 output:
   html_document:
     theme: flatly

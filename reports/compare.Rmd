@@ -1,6 +1,5 @@
 ---
 title: "Technology profile versions compared"
-date: "Data retrieved `r format(Sys.Date(), '%B %d, %Y')`"
 output:
   html_document:
     toc: true

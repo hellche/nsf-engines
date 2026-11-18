@@ -1,6 +1,5 @@
 ---
 title: "NSF Regional Innovation Engines, Cohort 2: knowledge bases"
-date: "Data retrieved `r format(Sys.Date(), '%B %d, %Y')`"
 output:
   html_document:
     theme: flatly
