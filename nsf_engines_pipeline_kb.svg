@@ -113,8 +113,8 @@ a.key:hover .keybox { fill: #f3cd7e; }
 <text class="s" x="1157.5" y="326">PatentsView assignee</text>
 <text class="s" x="1157.5" y="342" style="font-style:italic">name + US location</text>
 <path class="ln" d="M1065,304.0 H1032" marker-end="url(#a)"/>
-<path class="LN" d="M346,386 V406 H524 V386"/>
-<path class="LN" d="M435,406 V432" marker-end="url(#A)"/>
+<path class="LO" d="M346,386 V406 H524 V386"/>
+<path class="LO" d="M435,406 V432" marker-end="url(#Ao)"/>
 <path class="LB" d="M756,386 V406 H845 V432" marker-end="url(#Ab)"/>
 <rect class="box" x="285" y="434" width="300" height="84"/>
 <text class="t" x="435.0" y="456">People&#x27;s works and patents</text>
@@ -127,7 +127,7 @@ a.key:hover .keybox { fill: #f3cd7e; }
 <text class="n" x="845.0" y="490">N patent assignee = …</text>
 <path class="lb" d="M695,476.0 H587" marker-end="url(#ab)"/>
 <text class="cap" x="640" y="470.0">authors</text>
-<path class="LN" d="M422,518 V554" marker-end="url(#A)"/>
+<path class="LO" d="M422,518 V554" marker-end="url(#Ao)"/>
 <path class="LB" d="M450,518 V554" marker-end="url(#Ab)"/>
 <path class="LB" d="M845,518 V554" marker-end="url(#Ab)"/>
 <rect class="frame" x="330" y="556" width="620" height="124"/>
@@ -154,7 +154,7 @@ a.key:hover .keybox { fill: #f3cd7e; }
 <path class="ln" d="M285,56.0 H22 V584.0 H127.5 V598.0" marker-end="url(#a)"/>
 <text class="cap" x="153" y="48.0">award titles and abstracts</text>
 <path class="ln" d="M215,638.0 H328" marker-end="url(#a)"/>
-<path class="LN" d="M630,680 V716" marker-end="url(#A)"/>
+<path class="LO" d="M630,680 V716" marker-end="url(#Ao)"/>
 <path class="LB" d="M650,680 V716" marker-end="url(#Ab)"/>
 <rect class="kb" x="490" y="718" width="300" height="84"/>
 <text class="t" x="640.0" y="740">Engine knowledge base</text>
@@ -173,7 +173,7 @@ a.key:hover .keybox { fill: #f3cd7e; }
 <text class="cap" x="640" y="852">next: metrics and comparison groups</text>
 </a>
 <text class="lg" x="40" y="872">Tie to the Engine (to be tracked for every work and patent):</text>
-<path class="LN" d="M40,894 H80"/>
+<path class="LO" d="M40,894 H80"/>
 <text class="lg" x="92" y="898">Engine people: NSF award, website team</text>
 <path class="LB" d="M450,894 H490"/>
 <text class="lg" x="502" y="898">Partners: organisations and their researchers</text>

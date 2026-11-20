@@ -155,8 +155,8 @@ box(1065, MY, 185, "Organisation matching", [("wip", "ROR (in progress)"), "Open
 s.path("ln", f"M1065,{MY + hb(4) / 2} H1032", "a")
 B = R2 + CH                                             # bottom of the "on" cells
 W = C + FH + GAP + 6                                    # works and patents
-s.path("LN", f"M346,{B} V{B + 20} H524 V{B}")
-s.path("LN", f"M435,{B + 20} V{W - 2}", "A")
+s.path("LO", f"M346,{B} V{B + 20} H524 V{B}")                # Engine people (orange)
+s.path("LO", f"M435,{B + 20} V{W - 2}", "Ao")
 s.path("LB", f"M756,{B} V{B + 20} H845 V{W - 2}", "Ab")       # partners (blue)
 WH = hb(3)
 box(285, W, 300, "People's works and patents", ["by author and inventor ID", ("n", "N OpenAlex ID = …"),
@@ -167,7 +167,7 @@ s.box(695, W, 300, WH, "Organisations' works and patents", [("n", "N OpenAlex or
 s.path("lb", f"M695,{W + WH / 2} H587", "ab")
 s.text("cap", 640, W + WH / 2 - 6, "authors")
 F = W + WH + GAP + 6                                    # output filter
-s.path("LN", f"M422,{W + WH} V{F - 2}", "A")                 # Engine people (black)
+s.path("LO", f"M422,{W + WH} V{F - 2}", "Ao")                # Engine people (orange)
 s.path("LB", f"M450,{W + WH} V{F - 2}", "Ab")                # researchers at the partners (blue)
 s.path("LB", f"M845,{W + WH} V{F - 2}", "Ab")                # partner organisations (blue)
 FC = 64
@@ -191,7 +191,7 @@ s.path("ln", f"M285,{T + hb(1) / 2} H22 V{PRO_Y - 54} H127.5 V{PRO_Y - 40}", "a"
 s.text("cap", 153, T + hb(1) / 2 - 8, "award titles and abstracts")
 s.path("ln", f"M215,{PRO_Y} H328", "a")
 K = FB + GAP + 6                                        # knowledge base
-for dx, c, m in ((-10, "LN", "A"), (10, "LB", "Ab")):       # both kinds of tie go on
+for dx, c, m in ((-10, "LO", "Ao"), (10, "LB", "Ab")):       # both kinds of tie go on
     s.path(c, f"M{640 + dx},{FB} V{K - 2}", m)
 box(490, K, 300, "Engine knowledge base", [("n", "1) people + organisations"),
     "12 Engines, N works, N patents", ("wip", "2) top works by others (in progress)")], cls="kb")
@@ -205,7 +205,7 @@ s.text("cap", 640, E2 + 50, "next: metrics and comparison groups")
 s.o.append('</a>')
 LG = E2 + 92                                            # legend: how a work or patent is tied to the Engine
 s.text("lg", 40, LG - 22, "Tie to the Engine (to be tracked for every work and patent):")
-for i, (c, t) in enumerate((("LN", "Engine people: NSF award, website team"),
+for i, (c, t) in enumerate((("LO", "Engine people: NSF award, website team"),
                             ("LB", "Partners: organisations and their researchers"))):
     x = 40 + i * 410
     s.path(c, f"M{x},{LG} H{x + 40}")
