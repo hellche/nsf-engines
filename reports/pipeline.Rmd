@@ -39,7 +39,8 @@ inline_svg("nsf_engines_pipeline_kb.svg")
 ### Tie to the Engine
 
 Every work and patent should record how it is tied to the Engine. *To do: not tracked yet; the colours on
-the diagram show the plan.* The data keep five kinds of tie; the diagram groups them in three colours.
+the diagram show the plan.* The data keep five kinds of tie; the diagram shows the first four in two colours,
+and the fifth, region only, is listed here alone.
 A work found by several paths keeps them all and counts once, under its strongest tie.
 
 ::: {.no-sort}

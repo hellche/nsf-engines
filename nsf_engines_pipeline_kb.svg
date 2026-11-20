@@ -154,14 +154,8 @@ a.key:hover .keybox { fill: #f3cd7e; }
 <path class="ln" d="M285,56.0 H22 V584.0 H127.5 V598.0" marker-end="url(#a)"/>
 <text class="cap" x="153" y="48.0">award titles and abstracts</text>
 <path class="ln" d="M215,638.0 H328" marker-end="url(#a)"/>
-<rect class="box" x="1065" y="590" width="185" height="68"/>
-<text class="ts" x="1157.5" y="612">Regional patents</text>
-<text class="s" x="1157.5" y="630">inventor in the Engine&#x27;s states</text>
-<text class="s" x="1157.5" y="646" style="font-style:italic">context, not a tie</text>
-<path class="LO" d="M1065,624.0 H952" marker-end="url(#Ao)"/>
-<path class="LN" d="M622,680 V716" marker-end="url(#A)"/>
-<path class="LB" d="M640,680 V716" marker-end="url(#Ab)"/>
-<path class="LO" d="M658,680 V716" marker-end="url(#Ao)"/>
+<path class="LN" d="M630,680 V716" marker-end="url(#A)"/>
+<path class="LB" d="M650,680 V716" marker-end="url(#Ab)"/>
 <rect class="kb" x="490" y="718" width="300" height="84"/>
 <text class="t" x="640.0" y="740">Engine knowledge base</text>
 <text class="n" x="640.0" y="758">1) people + organisations</text>
@@ -183,6 +177,4 @@ a.key:hover .keybox { fill: #f3cd7e; }
 <text class="lg" x="92" y="898">Engine people: NSF award, website team</text>
 <path class="LB" d="M450,894 H490"/>
 <text class="lg" x="502" y="898">Partners: organisations and their researchers</text>
-<path class="LO" d="M860,894 H900"/>
-<text class="lg" x="912" y="898">Region only: context, not a tie</text>
 </svg>

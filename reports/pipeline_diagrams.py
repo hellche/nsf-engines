@@ -190,10 +190,8 @@ s.o.append('</a>')
 s.path("ln", f"M285,{T + hb(1) / 2} H22 V{PRO_Y - 54} H127.5 V{PRO_Y - 40}", "a")
 s.text("cap", 153, T + hb(1) / 2 - 8, "award titles and abstracts")
 s.path("ln", f"M215,{PRO_Y} H328", "a")
-box(1065, F + 34, 185, "Regional patents", ["inventor in the Engine's states", ("i", "context, not a tie")], tcls="ts")
-s.path("LO", f"M1065,{F + 34 + hb(2) / 2} H952", "Ao")       # region only (orange)
 K = FB + GAP + 6                                        # knowledge base
-for dx, c, m in ((-18, "LN", "A"), (0, "LB", "Ab"), (18, "LO", "Ao")):   # the three kinds of link go on
+for dx, c, m in ((-10, "LN", "A"), (10, "LB", "Ab")):       # both kinds of tie go on
     s.path(c, f"M{640 + dx},{FB} V{K - 2}", m)
 box(490, K, 300, "Engine knowledge base", [("n", "1) people + organisations"),
     "12 Engines, N works, N patents", ("wip", "2) top works by others (in progress)")], cls="kb")
@@ -208,8 +206,7 @@ s.o.append('</a>')
 LG = E2 + 92                                            # legend: how a work or patent is tied to the Engine
 s.text("lg", 40, LG - 22, "Tie to the Engine (to be tracked for every work and patent):")
 for i, (c, t) in enumerate((("LN", "Engine people: NSF award, website team"),
-                            ("LB", "Partners: organisations and their researchers"),
-                            ("LO", "Region only: context, not a tie"))):
+                            ("LB", "Partners: organisations and their researchers"))):
     x = 40 + i * 410
     s.path(c, f"M{x},{LG} H{x + 40}")
     s.text("lg", x + 52, LG + 4, t)
