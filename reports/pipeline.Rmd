@@ -38,11 +38,6 @@ inline_svg("nsf_engines_pipeline_kb.svg")
 
 ### Tie to the Engine
 
-Every work and patent should record how it is tied to the Engine. *To do: not tracked yet; the colours on
-the diagram show the plan.* The data keep five kinds of tie; the diagram shows the first four in two colours,
-and the fifth, region only, is listed here alone.
-A work found by several paths keeps them all and counts once, under its strongest tie.
-
 ::: {.no-sort}
 
 | Tie (strongest first) | Colour | Found through |
@@ -51,7 +46,7 @@ A work found by several paths keeps them all and counts once, under its stronges
 | 2. Team member named on the Engine's website | black | works and patents of the people |
 | 3. Researcher at a partner organisation | blue | authors of the partners' works |
 | 4. Partner organisation (affiliation or patent owner) | blue | the partners' works and patents |
-| 5. Region and technology only | orange | patents with an inventor in the Engine's states: context, not a tie |
+| 5. Region and technology only |  | patents with an inventor in the Engine's states: context, not a tie |
 
 :::
 
