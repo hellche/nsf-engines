@@ -115,6 +115,10 @@ s.path("ln", f"M435,{y1} V{R - 2}", "a")
 s.path("ln", f"M845,{y1} V{R - 2}", "a")
 s.path("ln", f"M760,{y1} V{y1 + 16} H520 V{R - 2}", "a")
 box(285, R, 300, "People registry", ["PI + people from the websites", ("n", "N = …")])
+# ties between the people of the registry (NSF award + Engine websites): career sources still to collect
+box(40, R, 175, "Ties between people", [("wip", "CV (in progress)"), ("wip", "LinkedIn (in progress)"),
+    ("wip", "Revelio (in progress)"), ("i", "careers, shared employers")], tcls="ts")
+s.path("ln", f"M215,{R + hb(2) / 2} H283", "a")
 box(695, R, 300, "Partner registry", ["all organisations mentioned", ("n", "N = …")])
 C = R + hb(2) + GAP                                     # classification frames
 s.path("ln", f"M435,{R + hb(2)} V{C - 2}", "a")
