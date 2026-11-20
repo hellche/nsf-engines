@@ -42,10 +42,10 @@ inline_svg("nsf_engines_pipeline_kb.svg")
 
 | Tie (strongest first) | Colour | Found through |
 |---|---|---|
-| 1. Author or inventor on the NSF award (PI, Co-PI) | orange | works and patents of the people |
-| 2. Team member named on the Engine's website | orange | works and patents of the people |
-| 3. Researcher at a partner organisation | blue | authors of the partners' works |
-| 4. Partner organisation (affiliation or patent owner) | blue | the partners' works and patents |
+| 1. Author or inventor on the NSF award (PI, Co-PI) | <span style="display:block; height:1.3em; background:#FF6007" aria-label="orange"></span> | works and patents of the people |
+| 2. Team member named on the Engine's website | <span style="display:block; height:1.3em; background:#FF6007" aria-label="orange"></span> | works and patents of the people |
+| 3. Researcher at a partner organisation | <span style="display:block; height:1.3em; background:#1E88E5" aria-label="blue"></span> | authors of the partners' works |
+| 4. Partner organisation (affiliation or patent owner) | <span style="display:block; height:1.3em; background:#1E88E5" aria-label="blue"></span> | the partners' works and patents |
 | 5. Region and technology only |  | patents with an inventor in the Engine's states: context, not a tie |
 
 :::
