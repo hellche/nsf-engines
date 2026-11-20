@@ -1,8 +1,11 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1290 866" width="1290" height="866">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1290 918" width="1290" height="918">
 <title>NSF Engines: knowledge base</title>
 <defs>
 <marker id="a" viewBox="0 0 10 10" refX="10" refY="5" markerWidth="9" markerHeight="9" markerUnits="userSpaceOnUse" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#222"/></marker>
 <marker id="A" viewBox="0 0 10 10" refX="10" refY="5" markerWidth="16" markerHeight="16" markerUnits="userSpaceOnUse" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#111"/></marker>
+<marker id="Ab" viewBox="0 0 10 10" refX="10" refY="5" markerWidth="16" markerHeight="16" markerUnits="userSpaceOnUse" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#1E88E5"/></marker>
+<marker id="Ao" viewBox="0 0 10 10" refX="10" refY="5" markerWidth="16" markerHeight="16" markerUnits="userSpaceOnUse" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#FF6007"/></marker>
+<marker id="ab" viewBox="0 0 10 10" refX="10" refY="5" markerWidth="9" markerHeight="9" markerUnits="userSpaceOnUse" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#1E88E5"/></marker>
 <style>
 text { font-family: Helvetica, Arial, "DejaVu Sans", sans-serif; }
 .box { fill: #fff; stroke: #222; stroke-width: 1.5; }
@@ -28,6 +31,9 @@ a.key:hover .keybox { fill: #f3cd7e; }
 .lib { font-weight: 700; fill: #111; }
 .ln { fill: none; stroke: #222; stroke-width: 1.5; }
 .LN { fill: none; stroke: #111; stroke-width: 4; stroke-linejoin: round; }
+.LB { fill: none; stroke: #1E88E5; stroke-width: 4; stroke-linejoin: round; }
+.LO { fill: none; stroke: #FF6007; stroke-width: 4; stroke-linejoin: round; }
+.lb { fill: none; stroke: #1E88E5; stroke-width: 1.5; }
 .lg { font-size: 12px; fill: #444; }
 </style></defs>
 <rect width="100%" height="100%" fill="#fff"/>
@@ -109,7 +115,7 @@ a.key:hover .keybox { fill: #f3cd7e; }
 <path class="ln" d="M1065,304.0 H1032" marker-end="url(#a)"/>
 <path class="LN" d="M346,386 V406 H524 V386"/>
 <path class="LN" d="M435,406 V432" marker-end="url(#A)"/>
-<path class="LN" d="M756,386 V406 H845 V432" marker-end="url(#A)"/>
+<path class="LB" d="M756,386 V406 H845 V432" marker-end="url(#Ab)"/>
 <rect class="box" x="285" y="434" width="300" height="84"/>
 <text class="t" x="435.0" y="456">People&#x27;s works and patents</text>
 <text class="s" x="435.0" y="474">by author and inventor ID</text>
@@ -119,10 +125,11 @@ a.key:hover .keybox { fill: #f3cd7e; }
 <text class="t" x="845.0" y="456">Organisations&#x27; works and patents</text>
 <text class="n" x="845.0" y="474">N OpenAlex org ID = …</text>
 <text class="n" x="845.0" y="490">N patent assignee = …</text>
-<path class="ln" d="M695,476.0 H587" marker-end="url(#a)"/>
+<path class="lb" d="M695,476.0 H587" marker-end="url(#ab)"/>
 <text class="cap" x="640" y="470.0">authors</text>
-<path class="LN" d="M435,518 V554" marker-end="url(#A)"/>
-<path class="LN" d="M845,518 V554" marker-end="url(#A)"/>
+<path class="LN" d="M422,518 V554" marker-end="url(#A)"/>
+<path class="LB" d="M450,518 V554" marker-end="url(#Ab)"/>
+<path class="LB" d="M845,518 V554" marker-end="url(#Ab)"/>
 <rect class="frame" x="330" y="556" width="620" height="124"/>
 <text class="tf" x="640" y="578">Output filter</text>
 <text class="s" x="640" y="596">each condition applied or flagged</text>
@@ -147,7 +154,14 @@ a.key:hover .keybox { fill: #f3cd7e; }
 <path class="ln" d="M285,56.0 H22 V584.0 H127.5 V598.0" marker-end="url(#a)"/>
 <text class="cap" x="153" y="48.0">award titles and abstracts</text>
 <path class="ln" d="M215,638.0 H328" marker-end="url(#a)"/>
-<path class="LN" d="M640,680 V716" marker-end="url(#A)"/>
+<rect class="box" x="1065" y="590" width="185" height="68"/>
+<text class="ts" x="1157.5" y="612">Regional patents</text>
+<text class="s" x="1157.5" y="630">inventor in the Engine&#x27;s states</text>
+<text class="s" x="1157.5" y="646" style="font-style:italic">context, not a tie</text>
+<path class="LO" d="M1065,624.0 H952" marker-end="url(#Ao)"/>
+<path class="LN" d="M622,680 V716" marker-end="url(#A)"/>
+<path class="LB" d="M640,680 V716" marker-end="url(#Ab)"/>
+<path class="LO" d="M658,680 V716" marker-end="url(#Ao)"/>
 <rect class="kb" x="490" y="718" width="300" height="84"/>
 <text class="t" x="640.0" y="740">Engine knowledge base</text>
 <text class="n" x="640.0" y="758">1) people + organisations</text>
@@ -164,4 +178,11 @@ a.key:hover .keybox { fill: #f3cd7e; }
 <a href="analysis.html" class="next">
 <text class="cap" x="640" y="852">next: metrics and comparison groups</text>
 </a>
+<text class="lg" x="40" y="872">Tie to the Engine (to be tracked for every work and patent):</text>
+<path class="LN" d="M40,894 H80"/>
+<text class="lg" x="92" y="898">Engine people: NSF award, website team</text>
+<path class="LB" d="M450,894 H490"/>
+<text class="lg" x="502" y="898">Partners: organisations and their researchers</text>
+<path class="LO" d="M860,894 H900"/>
+<text class="lg" x="912" y="898">Region only: context, not a tie</text>
 </svg>

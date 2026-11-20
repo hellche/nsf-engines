@@ -15,6 +15,9 @@ E = html.escape
 STYLE = '''<defs>
 <marker id="a" viewBox="0 0 10 10" refX="10" refY="5" markerWidth="9" markerHeight="9" markerUnits="userSpaceOnUse" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#222"/></marker>
 <marker id="A" viewBox="0 0 10 10" refX="10" refY="5" markerWidth="16" markerHeight="16" markerUnits="userSpaceOnUse" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#111"/></marker>
+<marker id="Ab" viewBox="0 0 10 10" refX="10" refY="5" markerWidth="16" markerHeight="16" markerUnits="userSpaceOnUse" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#1E88E5"/></marker>
+<marker id="Ao" viewBox="0 0 10 10" refX="10" refY="5" markerWidth="16" markerHeight="16" markerUnits="userSpaceOnUse" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#FF6007"/></marker>
+<marker id="ab" viewBox="0 0 10 10" refX="10" refY="5" markerWidth="9" markerHeight="9" markerUnits="userSpaceOnUse" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#1E88E5"/></marker>
 <style>
 text { font-family: Helvetica, Arial, "DejaVu Sans", sans-serif; }
 .box { fill: #fff; stroke: #222; stroke-width: 1.5; }
@@ -40,6 +43,9 @@ a.key:hover .keybox { fill: #f3cd7e; }
 .lib { font-weight: 700; fill: #111; }
 .ln { fill: none; stroke: #222; stroke-width: 1.5; }
 .LN { fill: none; stroke: #111; stroke-width: 4; stroke-linejoin: round; }
+.LB { fill: none; stroke: #1E88E5; stroke-width: 4; stroke-linejoin: round; }
+.LO { fill: none; stroke: #FF6007; stroke-width: 4; stroke-linejoin: round; }
+.lb { fill: none; stroke: #1E88E5; stroke-width: 1.5; }
 .lg { font-size: 12px; fill: #444; }
 </style></defs>'''
 
@@ -151,18 +157,19 @@ B = R2 + CH                                             # bottom of the "on" cel
 W = C + FH + GAP + 6                                    # works and patents
 s.path("LN", f"M346,{B} V{B + 20} H524 V{B}")
 s.path("LN", f"M435,{B + 20} V{W - 2}", "A")
-s.path("LN", f"M756,{B} V{B + 20} H845 V{W - 2}", "A")
+s.path("LB", f"M756,{B} V{B + 20} H845 V{W - 2}", "Ab")       # partners (blue)
 WH = hb(3)
 box(285, W, 300, "People's works and patents", ["by author and inventor ID", ("n", "N OpenAlex ID = …"),
     ("n", "N patent ID = …")])
 s.box(695, W, 300, WH, "Organisations' works and patents", [("n", "N OpenAlex org ID = …"), ("n", "N patent assignee = …")],
       first=22, step=16)
 # researchers at the partners (step 6e): authors of the partners' works, added to the people's works
-s.path("ln", f"M695,{W + WH / 2} H587", "a")
+s.path("lb", f"M695,{W + WH / 2} H587", "ab")
 s.text("cap", 640, W + WH / 2 - 6, "authors")
 F = W + WH + GAP + 6                                    # output filter
-s.path("LN", f"M435,{W + WH} V{F - 2}", "A")
-s.path("LN", f"M845,{W + WH} V{F - 2}", "A")
+s.path("LN", f"M422,{W + WH} V{F - 2}", "A")                 # Engine people (black)
+s.path("LB", f"M450,{W + WH} V{F - 2}", "Ab")                # researchers at the partners (blue)
+s.path("LB", f"M845,{W + WH} V{F - 2}", "Ab")                # partner organisations (blue)
 FC = 64
 s.rect("frame", 330, F, 620, 50 + FC + 10)
 s.text("tf", 640, F + 22, "Output filter")
@@ -183,8 +190,11 @@ s.o.append('</a>')
 s.path("ln", f"M285,{T + hb(1) / 2} H22 V{PRO_Y - 54} H127.5 V{PRO_Y - 40}", "a")
 s.text("cap", 153, T + hb(1) / 2 - 8, "award titles and abstracts")
 s.path("ln", f"M215,{PRO_Y} H328", "a")
+box(1065, F + 34, 185, "Regional patents", ["inventor in the Engine's states", ("i", "context, not a tie")], tcls="ts")
+s.path("LO", f"M1065,{F + 34 + hb(2) / 2} H952", "Ao")       # region only (orange)
 K = FB + GAP + 6                                        # knowledge base
-s.path("LN", f"M640,{FB} V{K - 2}", "A")
+for dx, c, m in ((-18, "LN", "A"), (0, "LB", "Ab"), (18, "LO", "Ao")):   # the three kinds of link go on
+    s.path(c, f"M{640 + dx},{FB} V{K - 2}", m)
 box(490, K, 300, "Engine knowledge base", [("n", "1) people + organisations"),
     "12 Engines, N works, N patents", ("wip", "2) top works by others (in progress)")], cls="kb")
 box(40, K - 8, 175, "Top past grants", ["and publications", "same 5 years, same topic",
@@ -195,7 +205,15 @@ s.path("LN", f"M640,{E2} V{E2 + 34}", "A")
 s.o.append('<a href="analysis.html" class="next">')          # the only link to the Analysis page
 s.text("cap", 640, E2 + 50, "next: metrics and comparison groups")
 s.o.append('</a>')
-s.save("nsf_engines_pipeline_kb.svg", 1290, E2 + 64, "NSF Engines: knowledge base")
+LG = E2 + 92                                            # legend: how a work or patent is tied to the Engine
+s.text("lg", 40, LG - 22, "Tie to the Engine (to be tracked for every work and patent):")
+for i, (c, t) in enumerate((("LN", "Engine people: NSF award, website team"),
+                            ("LB", "Partners: organisations and their researchers"),
+                            ("LO", "Region only: context, not a tie"))):
+    x = 40 + i * 410
+    s.path(c, f"M{x},{LG} H{x + 40}")
+    s.text("lg", x + 52, LG + 4, t)
+s.save("nsf_engines_pipeline_kb.svg", 1290, LG + 24, "NSF Engines: knowledge base")
 
 # ---- 2. Analysis (in development) -------------------------------------------------------------------------------
 a = Svg()
