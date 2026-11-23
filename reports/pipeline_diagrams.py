@@ -257,7 +257,7 @@ FUNNEL = [("Letters of intent", 294, "2024", "NSFEnginesLOI"),
           ("Invited to full proposal", 71, "October 2024", "NSFEnginesFullProposalInvitations"),
           ("Semifinalists", 29, "July 2025", "NSFEnginesFullProposalSemifinalists"),
           ("Finalists", 15, "September 2025", "NSFEngines2025Finalists"),
-          ("NSF Engines", 12, "2026", "NSFEnginesPortfolioRevised")]
+          ("NSF Engines", 12, "Type-2, 2026", "NSFEnginesPortfolioRevised")]
 INFO = ["Lead org.", "PI", "States", "Keywords", "Industries", "Coalition", "Abstract", "Team, partners"]
 HAS = [  # per stage: what is published (1) or not (0), in the order of INFO
     [1, 1, 1, 1, 1, 0, 0, 0],   # LOI: lead organisation and its type, PI last name, states, keywords, NAICS sectors
@@ -269,8 +269,8 @@ NOTE = {(1, 5): "1,644 orgs", (2, 5): "full proposal", (3, 3): "+ tech areas", (
         (4, 7): "websites"}
 f = Svg()
 FW, FH_, FG, FY = 300, hb(2), GAP, 58          # widest cell (as wide as the pipeline's), height, gap, top
-CX = 190
-GX, GW, GC, GH = 2 * CX + 50, 84, 6, 36         # grid: left edge, column width, gap between cells, cell height
+CX = 420                                        # the funnel's centre: room on the left for the Type-1 grants
+GX, GW, GC, GH = CX + 190, 84, 6, 36         # grid: left edge, column width, gap between cells, cell height
 for j, lab in enumerate(INFO):
     f.text("ts", GX + j * GW + (GW - GC) / 2, FY - 12, lab)
 f.text("s", GX + len(INFO) * GW / 2, FY - 36, "published by NSF at this stage")
@@ -289,6 +289,15 @@ for i, (title, n, when, view) in enumerate(FUNNEL):
         f.rect("on" if on else "off", x, y + (FH_ - GH) / 2, GW - GC, GH)
         if (i, j) in NOTE:
             f.text("ons" if on else "offs", x + (GW - GC) / 2, y + FH_ / 2 + 4, NOTE[(i, j)])
+# Type-1 planning grants (2023-2024): many semifinalists and finalists held one (NSF's counts)
+TY1 = FY + 2 * (FH_ + FG) - 34
+f.box(20, TY1, 190, hb(3), "Type-1 planning grants", ["58 teams, 2023-2024", "up to $1M, 2 years",
+      ("wip", "link to teams (in progress)")], tcls="ts", first=22, step=16)
+for k, lab in ((2, "17 of 29"), (3, "11 of 15")):
+    yk = FY + k * (FH_ + FG) + FH_ / 2
+    xk = CX - (FW - 30 * k) / 2
+    f.path("ln", f"M210,{TY1 + hb(3) / 2} H240 V{yk} H{xk - 2}", "a")
+    f.text("cap", (240 + xk) / 2, yk - 6, lab)
 f.save("nsf_engines_funnel.svg", GX + len(INFO) * GW + 40, FY + len(FUNNEL) * (FH_ + FG) - FG + 20,
        "NSF Engines: the second competition")
 
