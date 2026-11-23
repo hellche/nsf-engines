@@ -243,7 +243,10 @@ GH = 44 + 22 * len(groups)
 a.rect("frame", 250, G, 780, GH)
 a.text("tf", 640, G + 26, "Comparison groups")
 a.listing(285, G + 54, groups)
-a.box(1065, G + GH / 2 - 42, 205, 84, "Competition funnel", [("wip", "available?"), "applications → finals"], tcls="ts")
+a.o.append('<a href="funnel.html">')                         # the Competition funnel page
+a.box(1065, G + GH / 2 - 42, 205, 84, "Competition funnel", ["letters of intent → awards", ("n", "294 → 12 teams")],
+      tcls="ts")
+a.o.append('</a>')
 a.path("ln", f"M1065,{G + GH / 2} H1032", "a")
 a.save("nsf_engines_pipeline_analysis.svg", 1290, G + GH + 30, "NSF Engines: metrics and comparison groups (in development)")
 # ---- 3. Competition funnel (shown on reports/funnel.Rmd) ------------------------------------------------------
@@ -265,25 +268,25 @@ HAS = [  # per stage: what is published (1) or not (0), in the order of INFO
 NOTE = {(1, 5): "1,644 orgs", (2, 5): "full proposal", (3, 3): "+ tech areas", (4, 1): "+ co-PIs",
         (4, 7): "websites"}
 f = Svg()
-FW, FH_, FG, FY = 640, 72, 30, 58               # widest cell, cell height, gap, top (room for the grid header)
-CX = 340
-GX, GW, GC = 2 * CX + 40, 92, 4                 # grid: left edge, column width, gap between cells
+FW, FH_, FG, FY = 300, hb(2), GAP, 58          # widest cell (as wide as the pipeline's), height, gap, top
+CX = 190
+GX, GW, GC, GH = 2 * CX + 50, 84, 6, 36         # grid: left edge, column width, gap between cells, cell height
 for j, lab in enumerate(INFO):
     f.text("ts", GX + j * GW + (GW - GC) / 2, FY - 12, lab)
 f.text("s", GX + len(INFO) * GW / 2, FY - 36, "published by NSF at this stage")
 for i, (title, n, when, view) in enumerate(FUNNEL):
-    w = FW * (1 - 0.13 * i)                       # each stage a little narrower: a funnel
+    w = FW - 30 * i                               # each stage a little narrower: a funnel
     y = FY + i * (FH_ + FG)
     f.o.append(f'<a href="{E(TAB.format(view))}" target="_blank">')
-    f.box(CX - w / 2, y, w, FH_, title, [("n", f"N = {n}"), when], cls="kb" if i == len(FUNNEL) - 1 else "box",
-          first=24, step=17)
+    f.box(CX - w / 2, y, w, FH_, title, [when, ("n", f"N = {n}")], cls="kb" if i == len(FUNNEL) - 1 else "box",
+          first=22, step=16)
     f.o.append('</a>')
     if i < len(FUNNEL) - 1:
-        f.path("LN", f"M{CX},{y + FH_} V{y + FH_ + FG - 2}", "A")
+        f.path("ln", f"M{CX},{y + FH_} V{y + FH_ + FG - 2}", "a")
     f.path("ln", f"M{CX + w / 2},{y + FH_ / 2} H{GX - 6}")              # the stage's row of the grid
     for j, on in enumerate(HAS[i]):
         x = GX + j * GW
-        f.rect("on" if on else "off", x, y + 6, GW - GC, FH_ - 12)
+        f.rect("on" if on else "off", x, y + (FH_ - GH) / 2, GW - GC, GH)
         if (i, j) in NOTE:
             f.text("ons" if on else "offs", x + (GW - GC) / 2, y + FH_ / 2 + 4, NOTE[(i, j)])
 f.save("nsf_engines_funnel.svg", GX + len(INFO) * GW + 40, FY + len(FUNNEL) * (FH_ + FG) - FG + 20,

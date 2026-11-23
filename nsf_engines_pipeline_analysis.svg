@@ -63,9 +63,11 @@ a.key:hover .keybox { fill: #f3cd7e; }
 <text class="li" x="285" y="420">•  <tspan class="lib">Georgia</tspan>: 12 profiles × the state of GA: where do we stand?</text>
 <text class="li" x="285" y="442">•  <tspan class="lib">Technology leaders</tspan>: all states: why here?</text>
 <text class="li" x="285" y="464">•  <tspan class="lib">Same region</tspan>: other technologies</text>
+<a href="funnel.html">
 <rect class="box" x="1065" y="368.0" width="205" height="84"/>
 <text class="ts" x="1167.5" y="392.0">Competition funnel</text>
-<text class="wip" x="1167.5" y="410.0">available?</text>
-<text class="s" x="1167.5" y="427.0">applications → finals</text>
+<text class="s" x="1167.5" y="410.0">letters of intent → awards</text>
+<text class="n" x="1167.5" y="427.0">294 → 12 teams</text>
+</a>
 <path class="ln" d="M1065,410.0 H1032" marker-end="url(#a)"/>
 </svg>
