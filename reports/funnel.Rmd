@@ -1,6 +1,6 @@
 ---
 title: "Competition funnel"
-subtitle: "Draft, in progress"
+subtitle: "Draft, in progress (Claude analysis, not checked yet)"
 output:
   html_document:
     theme: flatly
@@ -20,41 +20,29 @@ library(dplyr); library(readr); library(knitr); library(here); library(stringr)
 props <- read_csv(here("data", "manual", "nsf_engines_c2_proposals.csv"), show_col_types = FALSE)
 lois <- read_csv(here("data", "manual", "nsf_engines_c2_lois.csv"), show_col_types = FALSE)
 chg <- read_csv(here("data", "processed", "funnel_engines_change.csv"), show_col_types = FALSE)
-reach <- function(s) sum(props$stage %in% s)
-stages <- tibble(
-  stage = c("Letters of intent", "Invited to full proposal", "Semifinalists", "Finalists", "NSF Engines"),
-  when  = c("2024, data published July 2024", "after preliminary proposals (Aug 2024), Oct 2024",
-            "after full proposals (Feb 2025), July 2025", "September 2025", "awards, 2026"),
-  n     = c(nrow(lois), nrow(props), reach(c("semifinalist", "finalist", "engine")),
-            reach(c("finalist", "engine")), reach("engine")))
+inline_svg <- function(file) {   # the diagram from reports/pipeline_diagrams.py, inline so its cells are links
+  svg <- readLines(here(file), warn = FALSE, encoding = "UTF-8")
+  cat(svg[nzchar(trimws(svg))], sep = "\n")
+}
 ```
 
 The second NSF Regional Innovation Engines competition ran from 2024 to 2026. At each stage NSF published who
 was still in the competition, so every team can be followed from its letter of intent to the award, or to the
 stage where it stopped.
 
+<style>
+  .funnel-svg svg { width: 100%; max-width: 640px; height: auto; display: block; margin: 0 auto; }
+  .funnel-svg a text.t { fill: #1a5fb4; text-decoration: underline; }
+  .funnel-svg a:hover text.t { fill: #0b3d7a; }
+</style>
+
+<div class="funnel-svg">
 ```{r funnel, results = "asis"}
-# a funnel: one bar per stage; width by the square root of the number of teams, so the small stages differ
-W <- 900; H <- 70; top <- 10
-w <- W * sqrt(stages$n / max(stages$n))
-bars <- vapply(seq_len(nrow(stages)), function(i) {
-  x <- (W - w[i]) / 2; y <- top + (i - 1) * H
-  sprintf(paste0('<rect x="%.0f" y="%d" width="%.0f" height="%d" fill="%s"/>',
-                 '<text x="%d" y="%d" class="fn">%s</text>',
-                 '<text x="%d" y="%d" class="fs">%s</text>',
-                 '<text x="%.0f" y="%d" class="fk">%d</text>'),
-          x, y, w[i], H - 12, if (i == nrow(stages)) "#2c3e50" else "#dfe7f2",
-          W + 20, y + 24, stages$stage[i], W + 20, y + 46, stages$when[i],
-          W / 2, y + 37, stages$n[i])
-}, "")
-cat(sprintf('<div style="overflow-x:auto"><svg viewBox="0 0 1380 %d" style="width:100%%; max-width:1000px; height:auto" role="img" aria-label="Funnel of the second NSF Engines competition">',
-            top + nrow(stages) * H),
-    '<style>.fn{font:700 21px Helvetica,Arial,sans-serif;fill:#111}.fs{font:17px Helvetica,Arial,sans-serif;fill:#555}',
-    '.fk{font:700 24px Helvetica,Arial,sans-serif;text-anchor:middle;fill:#111}</style>',
-    sub('class="fk">(\\d+)</text>$', 'class="fk" style="fill:#fff">\\1</text>', bars[length(bars)]) |>
-      (\(last) paste(c(bars[-length(bars)], last), collapse = ""))(),
-    '</svg></div>', sep = "")
+inline_svg("nsf_engines_funnel.svg")
 ```
+</div>
+
+Each stage opens NSF's map of the teams at that stage.
 
 Before this competition, NSF gave 58 smaller planning grants (NSF Engines Development Awards, up to $1 million
 for two years) in 2023-2024; many of the teams above held one. An NSF Engine award is up to $160 million for up
@@ -62,7 +50,13 @@ to 10 years.
 
 ## Sources
 
-NSF published these lists to help teams find partners:
+NSF published these lists to help teams find partners. Maps of the teams at each stage (NSF Tableau):
+[294 letters of intent](https://tableau.external.nsf.gov/views/NSFEnginesLOI/MapOverview?%3Aembed=y&%3AisGuestRedirectFromVizportal=y),
+[71 invited to full proposal](https://tableau.external.nsf.gov/views/NSFEnginesFullProposalInvitations/MapOverview?%3Aembed=y&%3AisGuestRedirectFromVizportal=y),
+[29 semifinalists](https://tableau.external.nsf.gov/views/NSFEnginesFullProposalSemifinalists/MapOverview?%3Aembed=y&%3AisGuestRedirectFromVizportal=y),
+[15 finalists](https://tableau.external.nsf.gov/views/NSFEngines2025Finalists/MapOverview?%3Aembed=y&%3AisGuestRedirectFromVizportal=y),
+[12 NSF Engines](https://tableau.external.nsf.gov/views/NSFEnginesPortfolioRevised/MapOverview?%3Aembed=y&%3AisGuestRedirectFromVizportal=y).
+Announcements:
 
 - [Letters of intent](https://new.nsf.gov/funding/initiatives/regional-innovation-engines/updates/nsf-publishes-data-letters-intent-submitted-rie) (July 2024)
 - [The 71 teams invited to submit full proposals, with their coalitions](https://www.nsf.gov/tip/updates/explore-data-collaborate-71-nsf-regional-innovation-engines) (November 2024; [interactive map and data](https://tableau.external.nsf.gov/views/NSFEnginesFullProposalInvitations/MapOverview))

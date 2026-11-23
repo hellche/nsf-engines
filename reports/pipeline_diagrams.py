@@ -246,4 +246,26 @@ a.listing(285, G + 54, groups)
 a.box(1065, G + GH / 2 - 42, 205, 84, "Competition funnel", [("wip", "available?"), "applications → finals"], tcls="ts")
 a.path("ln", f"M1065,{G + GH / 2} H1032", "a")
 a.save("nsf_engines_pipeline_analysis.svg", 1290, G + GH + 30, "NSF Engines: metrics and comparison groups (in development)")
-print("written: nsf_engines_pipeline_kb.svg, nsf_engines_pipeline_analysis.svg")
+# ---- 3. Competition funnel (shown on reports/funnel.Rmd) ------------------------------------------------------
+# the second NSF Engines competition; each stage links to NSF's Tableau map of the teams at that stage
+TAB = "https://tableau.external.nsf.gov/views/{}/MapOverview?%3Aembed=y&%3AisGuestRedirectFromVizportal=y"
+FUNNEL = [("Letters of intent", 294, "2024", "NSFEnginesLOI"),
+          ("Invited to full proposal", 71, "October 2024", "NSFEnginesFullProposalInvitations"),
+          ("Semifinalists", 29, "July 2025", "NSFEnginesFullProposalSemifinalists"),
+          ("Finalists", 15, "September 2025", "NSFEngines2025Finalists"),
+          ("NSF Engines", 12, "2026", "NSFEnginesPortfolioRevised")]
+f = Svg()
+FW, FX, FH_, FG, FY = 640, 0, 72, 30, 20        # widest cell, centre set below, cell height, gap, top
+CX = 380
+for i, (title, n, when, view) in enumerate(FUNNEL):
+    w = FW * (1 - 0.13 * i)                       # each stage a little narrower: a funnel
+    y = FY + i * (FH_ + FG)
+    f.o.append(f'<a href="{E(TAB.format(view))}" target="_blank">')
+    f.box(CX - w / 2, y, w, FH_, title, [("n", f"N = {n}"), when], cls="kb" if i == len(FUNNEL) - 1 else "box",
+          first=24, step=17)
+    f.o.append('</a>')
+    if i < len(FUNNEL) - 1:
+        f.path("LN", f"M{CX},{y + FH_} V{y + FH_ + FG - 2}", "A")
+f.save("nsf_engines_funnel.svg", 2 * CX, FY + len(FUNNEL) * (FH_ + FG) - FG + 20, "NSF Engines: the second competition")
+
+print("written: nsf_engines_pipeline_kb.svg, nsf_engines_pipeline_analysis.svg, nsf_engines_funnel.svg")

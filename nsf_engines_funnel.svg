@@ -1,0 +1,74 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 520" width="760" height="520">
+<title>NSF Engines: the second competition</title>
+<defs>
+<marker id="a" viewBox="0 0 10 10" refX="10" refY="5" markerWidth="9" markerHeight="9" markerUnits="userSpaceOnUse" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#222"/></marker>
+<marker id="A" viewBox="0 0 10 10" refX="10" refY="5" markerWidth="16" markerHeight="16" markerUnits="userSpaceOnUse" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#111"/></marker>
+<marker id="Ab" viewBox="0 0 10 10" refX="10" refY="5" markerWidth="16" markerHeight="16" markerUnits="userSpaceOnUse" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#1E88E5"/></marker>
+<marker id="Ao" viewBox="0 0 10 10" refX="10" refY="5" markerWidth="16" markerHeight="16" markerUnits="userSpaceOnUse" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#FF6007"/></marker>
+<marker id="ab" viewBox="0 0 10 10" refX="10" refY="5" markerWidth="9" markerHeight="9" markerUnits="userSpaceOnUse" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#1E88E5"/></marker>
+<style>
+text { font-family: Helvetica, Arial, "DejaVu Sans", sans-serif; }
+.box { fill: #fff; stroke: #222; stroke-width: 1.5; }
+.kb { fill: #fff; stroke: #111; stroke-width: 2.5; }
+.frame { fill: none; stroke: #222; stroke-width: 1.5; }
+.on { fill: #e3ecf9; stroke: #4a6fa5; stroke-width: 2.5; }
+.off { fill: #f5f6f8; stroke: #c9d0da; stroke-width: 1.2; }
+.t { font-size: 16px; font-weight: 700; fill: #111; text-anchor: middle; }
+.ts { font-size: 13.5px; font-weight: 700; fill: #111; text-anchor: middle; }
+.tf { font-size: 14.5px; font-weight: 700; fill: #111; text-anchor: middle; }
+.s { font-size: 12px; fill: #555; text-anchor: middle; }
+.n { font-size: 12px; fill: #111; text-anchor: middle; }
+.wip { font-size: 11.5px; font-style: italic; fill: #b35900; text-anchor: middle; }
+.cap { font-size: 12px; font-style: italic; fill: #555; text-anchor: middle; }
+.offt { font-size: 13.5px; font-weight: 600; fill: #8a8f97; text-anchor: middle; }
+.offs { font-size: 11.5px; fill: #a0a5ac; text-anchor: middle; }
+.ons { font-size: 11.5px; fill: #2d3f5c; text-anchor: middle; }
+.keybox { fill: #f8dfa6; stroke: #c27c00; stroke-width: 3.5; }
+.keyt { font-size: 14.5px; font-weight: 700; fill: #6b4100; text-anchor: middle; text-decoration: underline; }
+.keyl { font-size: 12px; font-weight: 700; fill: #6b4100; text-anchor: middle; }
+a.key:hover .keybox { fill: #f3cd7e; }
+.li { font-size: 13px; fill: #222; }
+.lib { font-weight: 700; fill: #111; }
+.ln { fill: none; stroke: #222; stroke-width: 1.5; }
+.LN { fill: none; stroke: #111; stroke-width: 4; stroke-linejoin: round; }
+.LB { fill: none; stroke: #1E88E5; stroke-width: 4; stroke-linejoin: round; }
+.LO { fill: none; stroke: #FF6007; stroke-width: 4; stroke-linejoin: round; }
+.lb { fill: none; stroke: #1E88E5; stroke-width: 1.5; }
+.lg { font-size: 12px; fill: #444; }
+</style></defs>
+<rect width="100%" height="100%" fill="#fff"/>
+<a href="https://tableau.external.nsf.gov/views/NSFEnginesLOI/MapOverview?%3Aembed=y&amp;%3AisGuestRedirectFromVizportal=y" target="_blank">
+<rect class="box" x="60.0" y="20" width="640.0" height="72"/>
+<text class="t" x="380.0" y="44">Letters of intent</text>
+<text class="n" x="380.0" y="62">N = 294</text>
+<text class="s" x="380.0" y="79">2024</text>
+</a>
+<path class="LN" d="M380,92 V120" marker-end="url(#A)"/>
+<a href="https://tableau.external.nsf.gov/views/NSFEnginesFullProposalInvitations/MapOverview?%3Aembed=y&amp;%3AisGuestRedirectFromVizportal=y" target="_blank">
+<rect class="box" x="101.60000000000002" y="122" width="556.8" height="72"/>
+<text class="t" x="380.0" y="146">Invited to full proposal</text>
+<text class="n" x="380.0" y="164">N = 71</text>
+<text class="s" x="380.0" y="181">October 2024</text>
+</a>
+<path class="LN" d="M380,194 V222" marker-end="url(#A)"/>
+<a href="https://tableau.external.nsf.gov/views/NSFEnginesFullProposalSemifinalists/MapOverview?%3Aembed=y&amp;%3AisGuestRedirectFromVizportal=y" target="_blank">
+<rect class="box" x="143.2" y="224" width="473.6" height="72"/>
+<text class="t" x="380.0" y="248">Semifinalists</text>
+<text class="n" x="380.0" y="266">N = 29</text>
+<text class="s" x="380.0" y="283">July 2025</text>
+</a>
+<path class="LN" d="M380,296 V324" marker-end="url(#A)"/>
+<a href="https://tableau.external.nsf.gov/views/NSFEngines2025Finalists/MapOverview?%3Aembed=y&amp;%3AisGuestRedirectFromVizportal=y" target="_blank">
+<rect class="box" x="184.8" y="326" width="390.4" height="72"/>
+<text class="t" x="380.0" y="350">Finalists</text>
+<text class="n" x="380.0" y="368">N = 15</text>
+<text class="s" x="380.0" y="385">September 2025</text>
+</a>
+<path class="LN" d="M380,398 V426" marker-end="url(#A)"/>
+<a href="https://tableau.external.nsf.gov/views/NSFEnginesPortfolioRevised/MapOverview?%3Aembed=y&amp;%3AisGuestRedirectFromVizportal=y" target="_blank">
+<rect class="kb" x="226.4" y="428" width="307.2" height="72"/>
+<text class="t" x="380.0" y="452">NSF Engines</text>
+<text class="n" x="380.0" y="470">N = 12</text>
+<text class="s" x="380.0" y="487">2026</text>
+</a>
+</svg>
