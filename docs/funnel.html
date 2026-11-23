@@ -619,7 +619,8 @@ display: flex; align-items: center; flex-wrap: wrap; gap: 4px 20px; min-height: 
 
 
 <h1 class="title toc-ignore">Competition funnel</h1>
-<h3 class="subtitle">Draft, in progress</h3>
+<h3 class="subtitle">Draft, in progress (Claude analysis, not checked
+yet)</h3>
 
 </div>
 
@@ -628,30 +629,155 @@ display: flex; align-items: center; flex-wrap: wrap; gap: 4px 20px; min-height: 
 to 2026. At each stage NSF published who was still in the competition,
 so every team can be followed from its letter of intent to the award, or
 to the stage where it stopped.</p>
-<div style="overflow-x:auto">
-<svg viewBox="0 0 1380 360" style="width:100%; max-width:1000px; height:auto" role="img" aria-label="Funnel of the second NSF Engines competition">
-<style>.fn{font:700 21px Helvetica,Arial,sans-serif;fill:#111}.fs{font:17px Helvetica,Arial,sans-serif;fill:#555}.fk{font:700 24px Helvetica,Arial,sans-serif;text-anchor:middle;fill:#111}</style>
-<rect x="0" y="10" width="900" height="58" fill="#dfe7f2" /><text x="920" y="34" class="fn">Letters
-of intent</text><text x="920" y="56" class="fs">2024, data published
-July
-2024</text><text x="450" y="47" class="fk">294</text><rect x="229" y="80" width="442" height="58" fill="#dfe7f2" /><text x="920" y="104" class="fn">Invited
-to full proposal</text><text x="920" y="126" class="fs">after
-preliminary proposals (Aug 2024), Oct
-2024</text><text x="450" y="117" class="fk">71</text><rect x="309" y="150" width="283" height="58" fill="#dfe7f2" /><text x="920" y="174" class="fn">Semifinalists</text><text x="920" y="196" class="fs">after
-full proposals (Feb 2025), July
-2025</text><text x="450" y="187" class="fk">29</text><rect x="348" y="220" width="203" height="58" fill="#dfe7f2" /><text x="920" y="244" class="fn">Finalists</text><text x="920" y="266" class="fs">September
-2025</text><text x="450" y="257" class="fk">15</text><rect x="359" y="290" width="182" height="58" fill="#2c3e50" /><text x="920" y="314" class="fn">NSF
-Engines</text><text x="920" y="336" class="fs">awards,
-2026</text><text x="450" y="327" class="fk" style="fill:#fff">12</text>
+<style>
+.funnel-svg svg { width: 100%; height: auto; display: block; }
+.funnel-svg a text.t { fill: #1a5fb4; text-decoration: underline; }
+.funnel-svg a:hover text.t { fill: #0b3d7a; }
+</style>
+<div class="funnel-svg">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1142 546" width="1142" height="546">
+<title>
+NSF Engines: the second competition
+</title>
+<defs>
+<marker id="a" viewBox="0 0 10 10" refX="10" refY="5" markerWidth="9" markerHeight="9" markerUnits="userSpaceOnUse" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#222" /></marker>
+<marker id="A" viewBox="0 0 10 10" refX="10" refY="5" markerWidth="16" markerHeight="16" markerUnits="userSpaceOnUse" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#111" /></marker>
+<marker id="Ab" viewBox="0 0 10 10" refX="10" refY="5" markerWidth="16" markerHeight="16" markerUnits="userSpaceOnUse" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#1E88E5" /></marker>
+<marker id="Ao" viewBox="0 0 10 10" refX="10" refY="5" markerWidth="16" markerHeight="16" markerUnits="userSpaceOnUse" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#FF6007" /></marker>
+<marker id="ab" viewBox="0 0 10 10" refX="10" refY="5" markerWidth="9" markerHeight="9" markerUnits="userSpaceOnUse" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#1E88E5" /></marker>
+<style> text { font-family: Helvetica, Arial, “DejaVu Sans”, sans-serif;
+} .box { fill: #fff; stroke: #222; stroke-width: 1.5; } .kb { fill:
+#fff; stroke: #111; stroke-width: 2.5; } .frame { fill: none; stroke:
+#222; stroke-width: 1.5; } .on { fill: #e3ecf9; stroke: #4a6fa5;
+stroke-width: 2.5; } .off { fill: #f5f6f8; stroke: #c9d0da;
+stroke-width: 1.2; } .t { font-size: 16px; font-weight: 700; fill: #111;
+text-anchor: middle; } .ts { font-size: 13.5px; font-weight: 700; fill:
+#111; text-anchor: middle; } .tf { font-size: 14.5px; font-weight: 700;
+fill: #111; text-anchor: middle; } .s { font-size: 12px; fill: #555;
+text-anchor: middle; } .n { font-size: 12px; fill: #111; text-anchor:
+middle; } .wip { font-size: 11.5px; font-style: italic; fill: #b35900;
+text-anchor: middle; } .cap { font-size: 12px; font-style: italic; fill:
+#555; text-anchor: middle; } .offt { font-size: 13.5px; font-weight:
+600; fill: #8a8f97; text-anchor: middle; } .offs { font-size: 11.5px;
+fill: #a0a5ac; text-anchor: middle; } .ons { font-size: 11.5px; fill:
+#2d3f5c; text-anchor: middle; } .keybox { fill: #f8dfa6; stroke:
+#c27c00; stroke-width: 3.5; } .keyt { font-size: 14.5px; font-weight:
+700; fill: #6b4100; text-anchor: middle; text-decoration: underline; }
+.keyl { font-size: 12px; font-weight: 700; fill: #6b4100; text-anchor:
+middle; } a.key:hover .keybox { fill: #f3cd7e; } .li { font-size: 13px;
+fill: #222; } .lib { font-weight: 700; fill: #111; } .ln { fill: none;
+stroke: #222; stroke-width: 1.5; } .LN { fill: none; stroke: #111;
+stroke-width: 4; stroke-linejoin: round; } .LB { fill: none; stroke:
+#1E88E5; stroke-width: 4; stroke-linejoin: round; } .LO { fill: none;
+stroke: #FF6007; stroke-width: 4; stroke-linejoin: round; } .lb { fill:
+none; stroke: #1E88E5; stroke-width: 1.5; } .lg { font-size: 12px; fill:
+#444; } </style></defs> <rect width="100%" height="100%" fill="#fff" />
+<text class="ts" x="469.0" y="46">Lead org.</text>
+<text class="ts" x="553.0" y="46">PI</text>
+<text class="ts" x="637.0" y="46">States</text>
+<text class="ts" x="721.0" y="46">Keywords</text>
+<text class="ts" x="805.0" y="46">Industries</text>
+<text class="ts" x="889.0" y="46">Coalition</text>
+<text class="ts" x="973.0" y="46">Abstract</text>
+<text class="ts" x="1057.0" y="46">Team, partners</text>
+<text class="s" x="766.0" y="22">published by NSF at this stage</text>
+<a href="https://tableau.external.nsf.gov/views/NSFEnginesLOI/MapOverview?%3Aembed=y&amp;%3AisGuestRedirectFromVizportal=y" target="_blank">
+<rect class="box" x="40.0" y="58" width="300" height="68" />
+<text class="t" x="190.0" y="80">Letters of intent</text>
+<text class="s" x="190.0" y="98">2024</text>
+<text class="n" x="190.0" y="114">N = 294</text> </a>
+<path class="ln" d="M190,126 V156" marker-end="url(#a)" />
+<path class="ln" d="M340.0,92.0 H424" />
+<rect class="on" x="430" y="74.0" width="78" height="36" />
+<rect class="on" x="514" y="74.0" width="78" height="36" />
+<rect class="on" x="598" y="74.0" width="78" height="36" />
+<rect class="on" x="682" y="74.0" width="78" height="36" />
+<rect class="on" x="766" y="74.0" width="78" height="36" />
+<rect class="off" x="850" y="74.0" width="78" height="36" />
+<rect class="off" x="934" y="74.0" width="78" height="36" />
+<rect class="off" x="1018" y="74.0" width="78" height="36" />
+<a href="https://tableau.external.nsf.gov/views/NSFEnginesFullProposalInvitations/MapOverview?%3Aembed=y&amp;%3AisGuestRedirectFromVizportal=y" target="_blank">
+<rect class="box" x="55.0" y="158" width="270" height="68" />
+<text class="t" x="190.0" y="180">Invited to full proposal</text>
+<text class="s" x="190.0" y="198">October 2024</text>
+<text class="n" x="190.0" y="214">N = 71</text> </a>
+<path class="ln" d="M190,226 V256" marker-end="url(#a)" />
+<path class="ln" d="M325.0,192.0 H424" />
+<rect class="on" x="430" y="174.0" width="78" height="36" />
+<rect class="on" x="514" y="174.0" width="78" height="36" />
+<rect class="on" x="598" y="174.0" width="78" height="36" />
+<rect class="on" x="682" y="174.0" width="78" height="36" />
+<rect class="off" x="766" y="174.0" width="78" height="36" />
+<rect class="on" x="850" y="174.0" width="78" height="36" />
+<text class="ons" x="889.0" y="196.0">1,644 orgs</text>
+<rect class="off" x="934" y="174.0" width="78" height="36" />
+<rect class="off" x="1018" y="174.0" width="78" height="36" />
+<a href="https://tableau.external.nsf.gov/views/NSFEnginesFullProposalSemifinalists/MapOverview?%3Aembed=y&amp;%3AisGuestRedirectFromVizportal=y" target="_blank">
+<rect class="box" x="70.0" y="258" width="240" height="68" />
+<text class="t" x="190.0" y="280">Semifinalists</text>
+<text class="s" x="190.0" y="298">July 2025</text>
+<text class="n" x="190.0" y="314">N = 29</text> </a>
+<path class="ln" d="M190,326 V356" marker-end="url(#a)" />
+<path class="ln" d="M310.0,292.0 H424" />
+<rect class="on" x="430" y="274.0" width="78" height="36" />
+<rect class="on" x="514" y="274.0" width="78" height="36" />
+<rect class="on" x="598" y="274.0" width="78" height="36" />
+<rect class="on" x="682" y="274.0" width="78" height="36" />
+<rect class="off" x="766" y="274.0" width="78" height="36" />
+<rect class="on" x="850" y="274.0" width="78" height="36" />
+<text class="ons" x="889.0" y="296.0">full proposal</text>
+<rect class="off" x="934" y="274.0" width="78" height="36" />
+<rect class="off" x="1018" y="274.0" width="78" height="36" />
+<a href="https://tableau.external.nsf.gov/views/NSFEngines2025Finalists/MapOverview?%3Aembed=y&amp;%3AisGuestRedirectFromVizportal=y" target="_blank">
+<rect class="box" x="85.0" y="358" width="210" height="68" />
+<text class="t" x="190.0" y="380">Finalists</text>
+<text class="s" x="190.0" y="398">September 2025</text>
+<text class="n" x="190.0" y="414">N = 15</text> </a>
+<path class="ln" d="M190,426 V456" marker-end="url(#a)" />
+<path class="ln" d="M295.0,392.0 H424" />
+<rect class="on" x="430" y="374.0" width="78" height="36" />
+<rect class="on" x="514" y="374.0" width="78" height="36" />
+<rect class="on" x="598" y="374.0" width="78" height="36" />
+<rect class="on" x="682" y="374.0" width="78" height="36" />
+<text class="ons" x="721.0" y="396.0">+ tech areas</text>
+<rect class="off" x="766" y="374.0" width="78" height="36" />
+<rect class="off" x="850" y="374.0" width="78" height="36" />
+<rect class="off" x="934" y="374.0" width="78" height="36" />
+<rect class="off" x="1018" y="374.0" width="78" height="36" />
+<a href="https://tableau.external.nsf.gov/views/NSFEnginesPortfolioRevised/MapOverview?%3Aembed=y&amp;%3AisGuestRedirectFromVizportal=y" target="_blank">
+<rect class="kb" x="100.0" y="458" width="180" height="68" />
+<text class="t" x="190.0" y="480">NSF Engines</text>
+<text class="s" x="190.0" y="498">2026</text>
+<text class="n" x="190.0" y="514">N = 12</text> </a>
+<path class="ln" d="M280.0,492.0 H424" />
+<rect class="on" x="430" y="474.0" width="78" height="36" />
+<rect class="on" x="514" y="474.0" width="78" height="36" />
+<text class="ons" x="553.0" y="496.0">+ co-PIs</text>
+<rect class="on" x="598" y="474.0" width="78" height="36" />
+<rect class="off" x="682" y="474.0" width="78" height="36" />
+<rect class="off" x="766" y="474.0" width="78" height="36" />
+<rect class="off" x="850" y="474.0" width="78" height="36" />
+<rect class="on" x="934" y="474.0" width="78" height="36" />
+<rect class="on" x="1018" y="474.0" width="78" height="36" />
+<text class="ons" x="1057.0" y="496.0">websites</text>
 </svg>
 </div>
+<p>Each stage opens NSF’s map of the teams at that stage. The grid shows
+what NSF published about the teams at each stage (blue: published); for
+the 12 Engines, the NSF award and the Engines’ own websites.</p>
 <p>Before this competition, NSF gave 58 smaller planning grants (NSF
 Engines Development Awards, up to $1 million for two years) in
 2023-2024; many of the teams above held one. An NSF Engine award is up
 to $160 million for up to 10 years.</p>
 <div id="sources" class="section level2">
 <h2>Sources</h2>
-<p>NSF published these lists to help teams find partners:</p>
+<p>NSF published these lists to help teams find partners. Maps of the
+teams at each stage (NSF Tableau): <a href="https://tableau.external.nsf.gov/views/NSFEnginesLOI/MapOverview?%3Aembed=y&amp;%3AisGuestRedirectFromVizportal=y">294
+letters of intent</a>, <a href="https://tableau.external.nsf.gov/views/NSFEnginesFullProposalInvitations/MapOverview?%3Aembed=y&amp;%3AisGuestRedirectFromVizportal=y">71
+invited to full proposal</a>, <a href="https://tableau.external.nsf.gov/views/NSFEnginesFullProposalSemifinalists/MapOverview?%3Aembed=y&amp;%3AisGuestRedirectFromVizportal=y">29
+semifinalists</a>, <a href="https://tableau.external.nsf.gov/views/NSFEngines2025Finalists/MapOverview?%3Aembed=y&amp;%3AisGuestRedirectFromVizportal=y">15
+finalists</a>, <a href="https://tableau.external.nsf.gov/views/NSFEnginesPortfolioRevised/MapOverview?%3Aembed=y&amp;%3AisGuestRedirectFromVizportal=y">12
+NSF Engines</a>. Announcements:</p>
 <ul>
 <li><a href="https://new.nsf.gov/funding/initiatives/regional-innovation-engines/updates/nsf-publishes-data-letters-intent-submitted-rie">Letters
 of intent</a> (July 2024)</li>
