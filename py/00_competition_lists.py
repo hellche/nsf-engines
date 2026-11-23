@@ -31,8 +31,9 @@ Output: data/manual/nsf_engines_c2_proposals.csv    one row per team (71): lead 
         data/manual/nsf_engines_c2_coalitions.csv   coalition members by team and stage (preliminary, full)
         data/manual/nsf_engines_c2_lois.csv         one row per LOI (294), team_id if it went on to a preliminary
                                                     proposal, and how it was linked
-Run:    python3 py/00_competition_lists.py <preliminary.xlsx> <semifinalists.xlsx> <finalists.csv> [<loi.csv>]
-        (pandas, openpyxl)
+Run:    python3 py/00_competition_lists.py        (reads the four files from data/raw/nsf_competition_c2/,
+        numbered 1-4 by stage: 1_letters_of_intent_..., 2_invited_..., 3_semifinalists_..., 4_finalists_...)
+        or with the paths: <invited.xlsx> <semifinalists.xlsx> <finalists.csv> [<loi.csv>]   (pandas, openpyxl)
 """
 
 import re
@@ -42,11 +43,17 @@ from pathlib import Path
 import pandas as pd
 
 ROOT = Path(__file__).resolve().parent.parent
-pre = pd.read_excel(sys.argv[1], sheet_name=0)
-pre_c = pd.read_excel(sys.argv[1], sheet_name=1)
-semi = pd.read_excel(sys.argv[2], sheet_name=0)
-semi_c = pd.read_excel(sys.argv[2], sheet_name=1)
-fin = pd.read_csv(sys.argv[3], sep="\t", encoding="utf-16")
+RAW = ROOT / "data" / "raw" / "nsf_competition_c2"          # the original NSF files (not in git: PI emails)
+DEFAULT = [RAW / "2_invited_Nov2024_NSF_Engines_Preliminary_Proposal_Data_0.xlsx",
+           RAW / "3_semifinalists_data_fullproposals_semifinalists_public_07082.xlsx",
+           RAW / "4_finalists_Download_-_Proposal_Details.csv",
+           RAW / "1_letters_of_intent_Data_Table.csv"]
+FILES = [Path(a) for a in sys.argv[1:]] or DEFAULT
+pre = pd.read_excel(FILES[0], sheet_name=0)
+pre_c = pd.read_excel(FILES[0], sheet_name=1)
+semi = pd.read_excel(FILES[1], sheet_name=0)
+semi_c = pd.read_excel(FILES[1], sheet_name=1)
+fin = pd.read_csv(FILES[2], sep="\t", encoding="utf-16")
 fin.columns = [c.strip() for c in fin.columns]
 fin = fin.dropna(subset=["Lead Organization"])
 for c in (pre_c, semi_c):
@@ -97,8 +104,8 @@ stage_order = ["loi", "preliminary", "semifinalist", "finalist", "engine"]
 MANUAL_LOI = {   # preliminary lead organisation -> LOI ID, decided by hand: same topic and state, other lead org
     "Virginia Commonwealth University": "L02622923",   # RAMP-CV <- "Advanced Pharmaceutical Manufacturing and R&D"
 }
-if len(sys.argv) > 4:
-    t = pd.read_csv(sys.argv[4], encoding="utf-16", sep="\t", header=None, dtype=str)
+if len(FILES) > 3 and FILES[3].exists():
+    t = pd.read_csv(FILES[3], encoding="utf-16", sep="\t", header=None, dtype=str)
     names = t.iloc[1, 8:].tolist()
     body = t.iloc[2:].reset_index(drop=True)
     loi = body.iloc[:, :8].copy()

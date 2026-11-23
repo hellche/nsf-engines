@@ -31,7 +31,7 @@ was still in the competition, so every team can be followed from its letter of i
 stage where it stopped.
 
 <style>
-  .funnel-svg svg { width: 100%; max-width: 640px; height: auto; display: block; margin: 0 auto; }
+  .funnel-svg svg { width: 100%; height: auto; display: block; }
   .funnel-svg a text.t { fill: #1a5fb4; text-decoration: underline; }
   .funnel-svg a:hover text.t { fill: #0b3d7a; }
 </style>
@@ -42,7 +42,8 @@ inline_svg("nsf_engines_funnel.svg")
 ```
 </div>
 
-Each stage opens NSF's map of the teams at that stage.
+Each stage opens NSF's map of the teams at that stage. The grid shows what NSF published about the teams at
+each stage (blue: published); for the 12 Engines, the NSF award and the Engines' own websites.
 
 Before this competition, NSF gave 58 smaller planning grants (NSF Engines Development Awards, up to $1 million
 for two years) in 2023-2024; many of the teams above held one. An NSF Engine award is up to $160 million for up

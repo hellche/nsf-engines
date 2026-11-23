@@ -447,6 +447,12 @@ adapters 1.3, pandas, matplotlib; ускорение Apple MPS. `.venv/` доб�
   отрасли NAICS, фамилии PI). 70 из 71 предварительной заявки нашли свой LOI (68 по организации, 1 по названию,
   1 вручную: RAMP-CV ← LOI Virginia Biotechnology Research Park, словарь `MANUAL_LOI`); у Utah Electrification Engine
   LOI нет. Воронка: 294 → 71 → 29 → 15 → 12. Из 42 LOI с ведущей организацией-компанией дальше прошла 1.
+  **Исходные файлы NSF** лежат в `data/raw/nsf_competition_c2/` (не в git: email PI), пронумерованы по этапу:
+  `1_letters_of_intent_Data_Table.csv`, `2_invited_…xlsx`, `3_semifinalists_…xlsx`, `4_finalists_…csv`;
+  `py/00_competition_lists.py` без аргументов читает их оттуда. Пользователю отправлен архив этой папки.
+  Страница сайта «Competition funnel» (`reports/funnel.Rmd`, схема `nsf_engines_funnel.svg` из
+  `reports/pipeline_diagrams.py`, раздел 3): воронка со ссылками на карты Tableau и таблица «что NSF публикует
+  на каждом этапе».
   Источники и сверка с цифрами NSF — в шапке `py/00_competition_lists.py` (страница NSF от 14.11.2024 «Explore data
   and collaborate with the 71…»: 1 644 разных организации в коалициях у нас против «более 1 600» у NSF; неакадемических
   ведущих организаций 20 у нас против 23 у NSF — вероятно, NSF считает исследовательские фонды и корпорации

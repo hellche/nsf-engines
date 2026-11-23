@@ -247,16 +247,30 @@ a.box(1065, G + GH / 2 - 42, 205, 84, "Competition funnel", [("wip", "available?
 a.path("ln", f"M1065,{G + GH / 2} H1032", "a")
 a.save("nsf_engines_pipeline_analysis.svg", 1290, G + GH + 30, "NSF Engines: metrics and comparison groups (in development)")
 # ---- 3. Competition funnel (shown on reports/funnel.Rmd) ------------------------------------------------------
-# the second NSF Engines competition; each stage links to NSF's Tableau map of the teams at that stage
+# the second NSF Engines competition; each stage links to NSF's Tableau map of the teams at that stage, and the
+# grid on the right shows what NSF published about the teams at that stage (blue = published, grey = not)
 TAB = "https://tableau.external.nsf.gov/views/{}/MapOverview?%3Aembed=y&%3AisGuestRedirectFromVizportal=y"
 FUNNEL = [("Letters of intent", 294, "2024", "NSFEnginesLOI"),
           ("Invited to full proposal", 71, "October 2024", "NSFEnginesFullProposalInvitations"),
           ("Semifinalists", 29, "July 2025", "NSFEnginesFullProposalSemifinalists"),
           ("Finalists", 15, "September 2025", "NSFEngines2025Finalists"),
           ("NSF Engines", 12, "2026", "NSFEnginesPortfolioRevised")]
+INFO = ["Lead org.", "PI", "States", "Keywords", "Industries", "Coalition", "Abstract", "Team, partners"]
+HAS = [  # per stage: what is published (1) or not (0), in the order of INFO
+    [1, 1, 1, 1, 1, 0, 0, 0],   # LOI: lead organisation and its type, PI last name, states, keywords, NAICS sectors
+    [1, 1, 1, 1, 0, 1, 0, 0],   # invited: + coalition members
+    [1, 1, 1, 1, 0, 1, 0, 0],   # semifinalists: full proposal, larger coalition
+    [1, 1, 1, 1, 0, 0, 0, 0],   # finalists: + NSF key technology areas
+    [1, 1, 1, 0, 0, 0, 1, 1]]   # Engines: NSF award (abstract, PI and co-PIs) + Engine websites (team, partners)
+NOTE = {(1, 5): "1,644 orgs", (2, 5): "full proposal", (3, 3): "+ tech areas", (4, 1): "+ co-PIs",
+        (4, 7): "websites"}
 f = Svg()
-FW, FX, FH_, FG, FY = 640, 0, 72, 30, 20        # widest cell, centre set below, cell height, gap, top
-CX = 380
+FW, FH_, FG, FY = 640, 72, 30, 58               # widest cell, cell height, gap, top (room for the grid header)
+CX = 340
+GX, GW, GC = 2 * CX + 40, 92, 4                 # grid: left edge, column width, gap between cells
+for j, lab in enumerate(INFO):
+    f.text("ts", GX + j * GW + (GW - GC) / 2, FY - 12, lab)
+f.text("s", GX + len(INFO) * GW / 2, FY - 36, "published by NSF at this stage")
 for i, (title, n, when, view) in enumerate(FUNNEL):
     w = FW * (1 - 0.13 * i)                       # each stage a little narrower: a funnel
     y = FY + i * (FH_ + FG)
@@ -266,6 +280,13 @@ for i, (title, n, when, view) in enumerate(FUNNEL):
     f.o.append('</a>')
     if i < len(FUNNEL) - 1:
         f.path("LN", f"M{CX},{y + FH_} V{y + FH_ + FG - 2}", "A")
-f.save("nsf_engines_funnel.svg", 2 * CX, FY + len(FUNNEL) * (FH_ + FG) - FG + 20, "NSF Engines: the second competition")
+    f.path("ln", f"M{CX + w / 2},{y + FH_ / 2} H{GX - 6}")              # the stage's row of the grid
+    for j, on in enumerate(HAS[i]):
+        x = GX + j * GW
+        f.rect("on" if on else "off", x, y + 6, GW - GC, FH_ - 12)
+        if (i, j) in NOTE:
+            f.text("ons" if on else "offs", x + (GW - GC) / 2, y + FH_ / 2 + 4, NOTE[(i, j)])
+f.save("nsf_engines_funnel.svg", GX + len(INFO) * GW + 40, FY + len(FUNNEL) * (FH_ + FG) - FG + 20,
+       "NSF Engines: the second competition")
 
 print("written: nsf_engines_pipeline_kb.svg, nsf_engines_pipeline_analysis.svg, nsf_engines_funnel.svg")
