@@ -4,15 +4,23 @@ Three files published by NSF (downloaded by hand; not kept in the repository bec
   1. Nov2024_NSF_Engines_Preliminary_Proposal_Data_0.xlsx       71 preliminary proposals (Nov 2024) + coalitions
   2. data_fullproposals_semifinalists_public_07082.xlsx          29 semifinalists: full proposals (Jul 2025) + coalitions
   3. Download - Proposal Details.csv (UTF-16, tab-separated)      15 finalists (Sep 2025): keywords, key technology areas
+  4. Data_Table.csv (UTF-16, tab-separated; optional)             294 letters of intent (LOI): lead organisation and its
+                                                                  type, states, keywords, NAICS sectors, PI last names
+                                                                  (a crosstab: one column per last name)
 Awarded Engines: data/processed/engines.csv (12, Cohort 2), matched by lead organisation.
 
 Stages are linked by lead organisation, or, where it changed, by at least 3 shared words of the proposal title
-(one case: Seafood, University of New Hampshire -> NERACOOS). The PI email column is dropped.
+(one case: Seafood, University of New Hampshire -> NERACOOS). LOIs are linked to the preliminary proposals the
+same way; where neither works, MANUAL_LOI holds a link decided by hand (marked link = "manual"). The PI email
+column is dropped.
 
 Output: data/manual/nsf_engines_c2_proposals.csv    one row per team (71): lead organisation and title at each
                                                     stage, states, PI, keywords, furthest stage, engine_name
         data/manual/nsf_engines_c2_coalitions.csv   coalition members by team and stage (preliminary, full)
-Run:    python3 py/00_competition_lists.py <preliminary.xlsx> <semifinalists.xlsx> <finalists.csv>   (pandas, openpyxl)
+        data/manual/nsf_engines_c2_lois.csv         one row per LOI (294), team_id if it went on to a preliminary
+                                                    proposal, and how it was linked
+Run:    python3 py/00_competition_lists.py <preliminary.xlsx> <semifinalists.xlsx> <finalists.csv> [<loi.csv>]
+        (pandas, openpyxl)
 """
 
 import re
@@ -71,9 +79,37 @@ for _, r in fin.iterrows():
     e = eng_of.get(norm(r["Lead Organization"]))
     if e:
         out.loc[i, ["stage", "engine_name"]] = ["engine", e]
-stage_order = ["preliminary", "semifinalist", "finalist", "engine"]
+stage_order = ["loi", "preliminary", "semifinalist", "finalist", "engine"]
+
+# letters of intent (optional 4th file)
+MANUAL_LOI = {   # preliminary lead organisation -> LOI ID, decided by hand: same topic and state, other lead org
+    "Virginia Commonwealth University": "L02622923",   # RAMP-CV <- "Advanced Pharmaceutical Manufacturing and R&D"
+}
+if len(sys.argv) > 4:
+    t = pd.read_csv(sys.argv[4], encoding="utf-16", sep="\t", header=None, dtype=str)
+    names = t.iloc[1, 8:].tolist()
+    body = t.iloc[2:].reset_index(drop=True)
+    loi = body.iloc[:, :8].copy()
+    loi.columns = ["loi_id", "title", "lead_org", "lead_org_type", "lead_org_state", "states", "keywords", "naics"]
+    loi["pi_last_names"] = ["; ".join(n for n, v in zip(names, r) if pd.notna(v)) for r in body.iloc[:, 8:].values]
+    loi["team_id"], loi["link"] = pd.NA, pd.NA
+    for _, r in out.iterrows():
+        same = loi[loi.lead_org.map(norm) == norm(r.lead_org_preliminary)]
+        if len(same) == 1:
+            i, how = same.index[0], "lead organisation"
+        else:
+            cand = same if len(same) > 1 else loi
+            i = max(cand.index, key=lambda j: len(words(r.title_preliminary) & words(loi.at[j, "title"])))
+            how = "title" if len(words(r.title_preliminary) & words(loi.at[i, "title"])) >= 3 else None
+        if how is None and r.lead_org_preliminary in MANUAL_LOI:
+            i, how = loi.index[loi.loi_id == MANUAL_LOI[r.lead_org_preliminary]][0], "manual"
+        if how:
+            loi.loc[i, ["team_id", "link"]] = [r.team_id, how]
+            out.loc[out.team_id == r.team_id, "loi_id"] = loi.at[i, "loi_id"]
+    loi.to_csv(ROOT / "data" / "manual" / "nsf_engines_c2_lois.csv", index=False)
+    print(f"LOIs: {len(loi)}; went on to a preliminary proposal: {loi.team_id.notna().sum()} "
+          f"({loi.link.value_counts().to_dict()}); preliminary proposals without an LOI: {out.loi_id.isna().sum()}")
 out["stage"] = pd.Categorical(out.stage, stage_order, ordered=True)
-out.to_csv(ROOT / "data" / "manual" / "nsf_engines_c2_proposals.csv", index=False)
 
 # coalitions, keyed by team_id
 team_of_pre = {t: i for i, t in zip(out.team_id, pre["Proposal Title"])}
@@ -87,6 +123,7 @@ assert co.team_id.notna().all()
 co[["team_id", "stage", "lead_org", "member"]].to_csv(ROOT / "data" / "manual" / "nsf_engines_c2_coalitions.csv",
                                                      index=False)
 
+out.to_csv(ROOT / "data" / "manual" / "nsf_engines_c2_proposals.csv", index=False)
 print(out.stage.value_counts().reindex(stage_order).to_string())
 print(f"engines matched: {out.engine_name.notna().sum()} of {len(eng)}; coalition rows: "
       f"{(co.stage == 'preliminary').sum()} preliminary, {(co.stage == 'full').sum()} full")

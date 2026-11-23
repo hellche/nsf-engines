@@ -442,6 +442,11 @@ adapters 1.3, pandas, matplotlib; ускорение Apple MPS. `.venv/` доб�
   3 finalist — Northern Forest Center NNE-PROMISE, Princeton Photonics, Chicago Quantum Connected — и 12 engine;
   без email) и `data/manual/nsf_engines_c2_coalitions.csv` (1 813 строк предварительных + 2 458 полных коалиций).
   Все этапы связались; ведущая организация сменилась только у Seafood (UNH → NERACOOS).
+  **+ LOI (письма о намерении):** 4-й файл `Data_Table.csv` (UTF-16, перекрёстная таблица из Tableau: фамилии PI —
+  колонками) → `data/manual/nsf_engines_c2_lois.csv`: 294 LOI (тип ведущей организации, штаты, ключевые слова,
+  отрасли NAICS, фамилии PI). 70 из 71 предварительной заявки нашли свой LOI (68 по организации, 1 по названию,
+  1 вручную: RAMP-CV ← LOI Virginia Biotechnology Research Park, словарь `MANUAL_LOI`); у Utah Electrification Engine
+  LOI нет. Воронка: 294 → 71 → 29 → 15 → 12. Из 42 LOI с ведущей организацией-компанией дальше прошла 1.
   **Сделать:** (1) коалиции полных заявок как источник партнёров в шаге 04 (у IMPACT 96 против 1 с сайта, у Grid 127
   против 3, у RuralSTAMINA 100 против 8, у BRIDGES 99 против 11); (2) 58 грантов Type-1 из NSF Award API с аннотациями
   и сопоставление с командами (организация, PI, штаты, тема, пересечение коалиций; помечать «вручную»), таблица
