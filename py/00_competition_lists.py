@@ -9,6 +9,18 @@ Three files published by NSF (downloaded by hand; not kept in the repository bec
                                                                   (a crosstab: one column per last name)
 Awarded Engines: data/processed/engines.csv (12, Cohort 2), matched by lead organisation.
 
+Sources (NSF published these data to help teams find partners):
+  - LOI data, July 2024: https://new.nsf.gov/funding/initiatives/regional-innovation-engines/updates/nsf-publishes-data-letters-intent-submitted-rie
+  - the 71 teams invited to full proposals and their coalitions, Nov 2024:
+    https://www.nsf.gov/tip/updates/explore-data-collaborate-71-nsf-regional-innovation-engines
+    (Tableau: https://tableau.external.nsf.gov/views/NSFEnginesFullProposalInvitations/MapOverview)
+  - 29 semifinalists, Jul 2025: https://www.nsf.gov/tip/updates/nsf-advances-29-semifinalists-second-nsf-regional-innovation
+  - 15 finalists, Sep 2025: https://www.nsf.gov/news/nsf-selects-15-finalists-advance-next-round-its-second
+Checks against NSF's own counts (Nov 2024 page): coalition members of the 71 preliminary proposals, 1,644
+distinct names here vs "more than 1,600"; teams led by non-academic organisations, 20 here by the LOI's
+organisation type (one team has no LOI) vs NSF's 23 (NSF may count university research foundations and
+corporations, which the LOIs type as academic, as non-academic).
+
 Stages are linked by lead organisation, or, where it changed, by at least 3 shared words of the proposal title
 (one case: Seafood, University of New Hampshire -> NERACOOS). LOIs are linked to the preliminary proposals the
 same way; where neither works, MANUAL_LOI holds a link decided by hand (marked link = "manual"). The PI email
