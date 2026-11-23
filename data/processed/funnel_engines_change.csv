@@ -1,0 +1,13 @@
+engine_name,lead_org_same,lead_org_loi,lead_org_award,states_same,states_loi,states_preliminary,pi_same,pi_loi,pi_preliminary,pi_full,pi_award_now,keywords_loi_vs_preliminary,keywords_preliminary_vs_full,coalition_preliminary,coalition_full,coalition_kept
+NEO-SMART,True,Case Western Reserve University,Case Western Reserve University,True,Ohio,Ohio,False,oakes,barendt,barendt,barendt,1.0,0.5,15,67,1.0
+BRIDGES,True,HudsonAlpha Institute for Biotechnology,HudsonAlpha Institute for Biotechnology,True,Alabama; Tennessee,Alabama; Tennessee,True,jackson,jackson,jackson,jackson,1.0,0.44,63,99,0.87
+IMPACT,True,Indiana University,Indiana University,False,District of Columbia; Indiana; Massachusetts; Virginia; Washington,Indiana,False,kacena,kacena,kacena,lancaster,1.0,1.0,21,96,0.57
+RuralSTAMINA Biomanufacturing,True,Iowa State University,Iowa State University,False,Iowa,Iowa; Nebraska,False,dorhout,dorhout,dorhout,moore,1.0,0.43,50,100,0.66
+FAST,True,Oregon State University,Oregon State University,True,Oregon,Oregon,False,weller,weller,weller,stone,0.29,1.0,69,107,0.64
+Critical Mineral Accelerator,True,University of Alaska Fairbanks Campus,University of Alaska Fairbanks Campus,True,Alaska,Alaska,False,masterman,munk,munk,munk,1.0,0.67,20,37,0.6
+Quantum Technologies,True,University of Connecticut,University of Connecticut,True,Connecticut,Connecticut,True,alpay,alpay,alpay,alpay,1.0,1.0,12,51,0.17
+Critical Materials Crossroads,True,University of Missouri-Kansas City,University of Missouri-Kansas City,True,Kansas; Missouri,Kansas; Missouri,True,caruso,caruso,caruso,caruso,1.0,0.2,96,202,0.73
+Seafood,False,University of New Hampshire,Northeastern Regional Association of Coastal Ocean Observing Sys,True,Maine; Massachusetts; New Hampshire; Rhode Island,Maine; Massachusetts; New Hampshire; Rhode Island,False,foster,foster,kritzer,kritzer,0.43,0.67,19,59,0.74
+Grid Modernization,True,University of North Carolina at Charlotte,University of North Carolina at Charlotte,True,North Carolina; South Carolina,North Carolina; South Carolina,False,mazzola,daniels,daniels,daniels,0.12,0.8,13,127,0.77
+STELLAR,True,University of Rochester,University of Rochester,True,New York,New York,True,brown,brown,brown,brown,1.0,1.0,16,70,0.56
+RETI,True,West Virginia University Research Corporation,West Virginia University Research Corporation,True,Pennsylvania; West Virginia,Pennsylvania; West Virginia,True,olesh,olesh,olesh,olesh,1.0,1.0,11,94,0.55

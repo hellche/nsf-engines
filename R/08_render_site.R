@@ -43,7 +43,7 @@ for (v in versions) {
   }
 }
 Sys.setenv(PROFILE_VERSION = "v1")
-if (!nzchar(only_v)) for (page in c("pipeline", "analysis", "methodology", "neighbours", "compare")) {
+if (!nzchar(only_v)) for (page in c("pipeline", "analysis", "methodology", "neighbours", "compare", "funnel")) {
   message("Rendering ", page)
   render_page(paste0(page, ".Rmd"), paste0(page, ".html"), here("docs"))
 }
