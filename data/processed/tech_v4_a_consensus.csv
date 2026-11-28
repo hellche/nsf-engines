@@ -3,12 +3,9 @@ NEO-SMART,1,cpc,B21B,Rolling of metal,whole,3,3,whole,whole,whole,rolling of met
 NEO-SMART,1,cpc,B21C,"Manufacture of metal sheets, wire, rods, tubes, profiles or like semi-manufactured products otherwise than by rolling; auxiliary operations used in connection with metal-working without essentially removing material",whole,3,3,whole,whole,whole,metal semi-products,metal wire/tube/profile making,metal sheet wire tube manufacture
 NEO-SMART,1,cpc,B21D,"Working or processing of sheet metal or metal tubes, rods or profiles without essentially removing material; punching metal",whole,3,3,whole,whole,whole,sheet metal working,sheet metal working,sheet metal working
 NEO-SMART,1,cpc,B21F,Working or processing of metal wire,whole,3,3,whole,whole,whole,metal wire working,metal wire working,metal wire working
-NEO-SMART,1,cpc,B21G,"Making needles, pins or nails of metal",whole,3,2,part,whole,whole,small metal articles,"metal needles, pins, nails",metal needles pins nails
 NEO-SMART,1,cpc,B21H,"Making particular metal objects by rolling, e.g. screws, wheels, rings, barrels, balls",whole,3,3,whole,whole,whole,rolling metal objects,metal objects by rolling,rolling metal objects
 NEO-SMART,1,cpc,B21J,Forging; hammering; pressing metal; riveting; forge furnaces,whole,3,3,whole,whole,whole,forging metal,forging metal,forging metal
 NEO-SMART,1,cpc,B21K,"Making forged or pressed metal products, e.g. horse-shoes, rivets, bolts or wheels",whole,3,3,whole,whole,whole,forged metal products,forged/pressed metal products,forged metal products
-NEO-SMART,1,cpc,B21L,Making metal chains,whole,3,2,part,whole,whole,metal chains,metal chains,metal chains
-NEO-SMART,1,cpc,B22C,Foundry moulding,whole,3,2,part,whole,whole,foundry moulds for metal casting,foundry moulding for metal casting,foundry moulding for metal casting
 NEO-SMART,1,cpc,B22D,Casting of metals; casting of other substances by the same processes or devices,whole,3,3,whole,whole,whole,casting of metals,casting of metals,metal casting
 NEO-SMART,1,cpc,B22F,Working metallic powder; manufacture of articles from metallic powder; making metallic powder; apparatus or devices specially adapted for metallic powder,whole,3,3,whole,whole,whole,metal powder and powder metallurgy,"metal powders, powder metallurgy",metal powder and powder metallurgy
 NEO-SMART,1,cpc,C21B,Manufacture of iron or steel,whole,3,3,whole,whole,whole,iron and steel making,iron and steel making,iron and steel making
@@ -18,6 +15,9 @@ NEO-SMART,1,cpc,C22B,Production and refining of metals; pretreatment of raw mate
 NEO-SMART,1,cpc,C22C,Alloys,whole,3,3,whole,whole,whole,alloy compositions,alloys,alloy compositions
 NEO-SMART,1,cpc,C22F,Changing the physical structure of non-ferrous metals and non-ferrous alloys,whole,3,3,whole,whole,whole,structure of non-ferrous metals,structure of non-ferrous metals,physical structure of non-ferrous metals
 NEO-SMART,1,cpc,C25C,"Processes for the electrolytic production, recovery or refining of metals; apparatus therefor",whole,3,3,whole,whole,whole,electrolytic metal production,electrolytic metal production,electrolytic metal production and refining
+NEO-SMART,1,cpc,B21G,"Making needles, pins or nails of metal",part,3,2,part,whole,whole,small metal articles,"metal needles, pins, nails",metal needles pins nails
+NEO-SMART,1,cpc,B21L,Making metal chains,part,3,2,part,whole,whole,metal chains,metal chains,metal chains
+NEO-SMART,1,cpc,B22C,Foundry moulding,part,3,2,part,whole,whole,foundry moulds for metal casting,foundry moulding for metal casting,foundry moulding for metal casting
 NEO-SMART,1,cpc,B23B,Turning; boring,part,3,0,part,part,part,metal machining turning,turning/boring mostly of metal,machining mostly metals
 NEO-SMART,1,cpc,B23C,Milling,part,3,0,part,part,part,metal machining milling,milling mostly of metal,milling mostly metals
 NEO-SMART,1,cpc,B23D,"Planing; slotting; shearing; broaching; sawing; filing; scraping; like operations for working metal by removing material, not otherwise provided for",part,2,0,,part,part,,metal removal operations,metal cutting and sawing
@@ -116,11 +116,10 @@ NEO-SMART,3,oa,organic_chemistry,Physical Sciences > Chemistry > Organic Chemist
 NEO-SMART,3,oa,process_chemistry_and_technology,Physical Sciences > Chemical Engineering > Process Chemistry and Technology,part,3,0,part,part,part,chemical process technology,chemical process technology,chemical process technology
 NEO-SMART,3,oa,chemical_health_and_safety,Physical Sciences > Chemical Engineering > Chemical Health and Safety,dropped,1,0,,,part,,,chemical process safety
 NEO-SMART,3,oa,physical_and_theoretical_chemistry,Physical and Theoretical Chemistry,dropped,1,0,,part,,,"surfactants, ionic liquids, thermodynamics",
-NEO-SMART,4,cpc,B05D,"Processes for applying fluent materials to surfaces, in general",whole,3,2,whole,part,whole,coating processes,processes for applying coatings,coating processes
 NEO-SMART,4,cpc,C09D,"Coating compositions, e.g. paints, varnishes or lacquers; filling pastes; chemical paint or ink removers; inks; correcting fluids; woodstains; pastes or solids for colouring or printing; use of materials therefor",whole,3,3,whole,whole,whole,coating compositions,coating compositions,coating compositions
-NEO-SMART,4,cpc,C23D,"Enamelling of, or applying a vitreous layer to, metals",whole,3,2,whole,part,whole,enamelling of metals,vitreous enamel coatings,enamelling coatings
 NEO-SMART,4,cpc,B05B,Spraying apparatus; atomising apparatus; nozzles,part,3,0,part,part,part,spray coating apparatus,spraying incl. paint,spray coating
 NEO-SMART,4,cpc,B05C,"Apparatus for applying fluent materials to surfaces, in general",part,3,0,part,part,part,coating apparatus,coating apparatus,coating apparatus
+NEO-SMART,4,cpc,B05D,"Processes for applying fluent materials to surfaces, in general",part,3,2,whole,part,whole,coating processes,processes for applying coatings,coating processes
 NEO-SMART,4,cpc,B32B,"Layered products, i.e. products built-up of strata of flat or non-flat, e.g. cellular or honeycomb, form",part,3,0,part,part,part,coated layered products,coated laminates,coated layered products
 NEO-SMART,4,cpc,B44D,"Painting or artistic drawing, not otherwise provided for; preserving paintings; surface treatment to obtain special artistic surface effects or finishes",part,3,0,part,part,part,painting surface finishes,"painting, surface finishes",painting
 NEO-SMART,4,cpc,C03C,"Chemical composition of glasses, glazes or vitreous enamels; surface treatment of glass; surface treatment of fibres or filaments made from glass, minerals or slags; joining glass to glass or other materials",part,3,0,part,part,part,glazes and enamels,"glazes, glass surface coatings",glazes and glass coatings
@@ -128,6 +127,7 @@ NEO-SMART,4,cpc,C08J,"Working-up; general processes of compounding; after-treatm
 NEO-SMART,4,cpc,C09C,"Treatment of inorganic materials, other than fibrous fillers, to enhance their pigmenting or filling properties; preparation of carbon black ; preparation of inorganic materials which are no single chemical compounds and which are mainly used as pigments or fillers",part,2,0,part,part,,pigments for coatings,pigments for paints,
 NEO-SMART,4,cpc,C09F,"Natural resins; french polish; drying-oils; oil drying agents, i.e. siccatives; turpentine",part,2,0,part,,part,varnish resins and drying oils,,drying oils and resins for varnish
 NEO-SMART,4,cpc,C23C,"Coating metallic material; coating material with metallic material; surface treatment of metallic material by diffusion into the surface, by chemical conversion or substitution; coating by vacuum evaporation, by sputtering, by ion implantation or by chemical vapour deposition, in general",part,3,0,part,part,part,coating metallic material,"metal coating, also electronics deposition",metallic coating and surface treatment
+NEO-SMART,4,cpc,C23D,"Enamelling of, or applying a vitreous layer to, metals",part,3,2,whole,part,whole,enamelling of metals,vitreous enamel coatings,enamelling coatings
 NEO-SMART,4,cpc,C23F,Non-mechanical removal of metallic material from surface; inhibiting corrosion of metallic material or incrustation in general; multi-step processes for surface treatment of metallic material involving at least one process provided for in class c23 and at least one process covered by subclass c21d or c22f or class c25,part,3,0,part,part,part,corrosion protection,corrosion protection,corrosion protection
 NEO-SMART,4,cpc,C25D,Processes for the electrolytic or electrophoretic production of coatings; electroforming; apparatus therefor,part,3,0,part,part,part,electrolytic coatings,"electrolytic coatings, also electroforming",electrodeposited coatings
 NEO-SMART,4,cpc,D06N,"Wall, floor, or like covering materials, e.g. linoleum, oilcloth, artificial leather, roofing felt, consisting of a fibrous web coated with a layer of macromolecular material; flexible sheet material not otherwise provided for",part,2,0,part,part,,coated sheet materials,coated fabrics,
@@ -167,9 +167,9 @@ NEO-SMART,5,oa,waste_management_and_disposal,Physical Sciences > Environmental S
 NEO-SMART,5,oa,materials_chemistry,Materials Chemistry,dropped,1,0,,part,,,corrosion and degradation,
 NEO-SMART,5,oa,metals_and_alloys,Metals and Alloys,dropped,1,0,,part,,,metal extraction and recovery,
 NEO-SMART,5,oa,process_chemistry_and_technology,Physical Sciences > Chemical Engineering > Process Chemistry and Technology,dropped,1,0,,,part,,,feedstock processing
-NEO-SMART,6,cpc,G16C,Computational chemistry; chemoinformatics; computational materials science,whole,3,2,part,whole,whole,computational materials science,computational chemistry and materials science,computational materials science
 NEO-SMART,6,cpc,G06F,Electric digital data processing,part,3,0,part,part,part,simulation and design computing,computer-aided design and simulation,computer-aided design and simulation
 NEO-SMART,6,cpc,G06N,Computing arrangements based on specific computational models,part,3,0,part,part,part,machine learning models,machine learning models,machine learning models
+NEO-SMART,6,cpc,G16C,Computational chemistry; chemoinformatics; computational materials science,part,3,2,part,whole,whole,computational materials science,computational chemistry and materials science,computational materials science
 NEO-SMART,6,cpc,C40B,"Combinatorial chemistry; libraries, e.g. chemical libraries",dropped,1,0,,,part,,,high-throughput materials libraries
 NEO-SMART,6,oa,artificial_intelligence,Physical Sciences > Computer Science > Artificial Intelligence,part,3,0,part,part,part,machine learning methods,AI/ML methods,machine learning
 NEO-SMART,6,oa,computational_mechanics,Physical Sciences > Engineering > Computational Mechanics,part,3,0,part,part,part,computational materials modelling,computational simulation,computational materials modelling

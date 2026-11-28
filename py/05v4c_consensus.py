@@ -2,7 +2,7 @@
 
 Stage A (coarse):  data/manual/tech_v4_a_run{1,2,3}.csv -> data/processed/tech_v4_a_consensus.csv
   one row per Engine x technology x category marked by any run: n_marked (runs that marked it), n_whole,
-  status = whole (>= 2 runs say whole) | part (>= 2 runs mark it, fewer than 2 say whole) | dropped (1 run),
+  status = whole (all 3 runs say whole) | part (>= 2 runs mark it, not all 3 say whole) | dropped (1 run),
   the three marks and reasons side by side.
 Stage B (fine), once its runs exist: data/manual/tech_v4_b_run{1,2,3}.csv -> data/processed/tech_profile_v4.csv
   (written by the stage B part below).
@@ -41,7 +41,7 @@ cons["n_marked"] = marks.notna().sum(axis=1)
 cons["n_whole"] = (marks == "whole").sum(axis=1)
 cons["status"] = "dropped"
 cons.loc[cons.n_marked >= 2, "status"] = "part"
-cons.loc[cons.n_whole >= 2, "status"] = "whole"
+cons.loc[cons.n_whole == 3, "status"] = "whole"   # stricter than ">= 2": decided 2026-11-28
 cons["tech_id"] = cons.tech_id.astype(int)
 cons = cons.sort_values(["engine_name", "tech_id", "kind", "status", "code"],
                         key=lambda s: s.map({"whole": 0, "part": 1, "dropped": 2}) if s.name == "status" else s)

@@ -9,7 +9,9 @@ and the 250 OpenAlex subfields (files made by `py/05v4a_inputs.py`). No embeddin
 
 Three independent runs (separate model sessions, as subagents in a chat, not through the API: the prompt and
 the input files are reproducible, the answers are not). Consensus (`py/05v4c_consensus.py`): a category is
-kept if at least 2 runs mark it; it is `whole` if at least 2 runs mark it `whole`, otherwise `part`.
+kept if at least 2 runs mark it; it is `whole` only if all 3 runs mark it `whole`, otherwise `part`
+(decided 2026-11-28 after the first NEO-SMART runs: with "2 of 3" metal wire, needles, nails and chains entered
+"metals" whole; a disputed category now goes to stage B, where the judge scores the groups inside).
 Stage B (`v4_stage_b_fine.md`) scores the groups and topics inside every `part` category.
 
 ---
