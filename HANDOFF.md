@@ -463,3 +463,105 @@ adapters 1.3, pandas, matplotlib; ускорение Apple MPS. `.venv/` доб�
   и сопоставление с командами (организация, PI, штаты, тема, пересечение коалиций; помечать «вручную»), таблица
   «команда → Type-1 → дальний этап → итог», как предложил профессор; (3) группа сравнения: 59 команд без Engine
   (у всех — ключевые слова и коалиции; текст только у тех, у кого был Type-1).
+
+## 9. NEO-SMART: детальный отчёт по одному Engine, потом масштабировать (2026-11-28, облако) — читать первым
+
+Ветка `claude/eloquent-albattani-b1bjqy`. Цель: вычистить пайплайн на NEO-SMART, собрать все результаты аккуратно, затем
+повторить для остальных 11. В отчёте три профиля: **v1, v3.1, v4** (v4 разрабатываем сейчас).
+
+### Важное несоответствие (найдено)
+Метрики на сайте посчитаны **не по тем профилям, что на схеме Technology profile**:
+- схема v1 = выбор LLM по уровням (`tech_profile_v1_levels.csv`, 162 пункта), а метрики — по старому v1
+  (`tech_profile.csv`, 3–5 утверждений, подклассы CPC);
+- схема v3.1 = эмбеддинги + судья ×3 («простая», `tech_profile_v3_1s.csv`), а метрики — по старому v3.1 core
+  (`tech_profile_v3_1_core.csv`). Читают старые файлы: `R/profile.R`, `R/06a_openalex_works.R`, `reports/engine_report.Rmd`.
+Все цифры, обсуждавшиеся для слайдов (402 патента, 1 342 статьи, LQ 3,3), — по старому v1. Решено: v3.1 = простая
+версия (`v3_1s`); добавить в `R/profile.R` версии `v1_levels` и `v3_1s`, старые оставить для сверки.
+
+### v3.1 по NEO-SMART глазами (все 400 кандидатов)
+Судья работает хорошо; плохи вход и правило отбора:
+1. **Лимит «2 на технологию» + ничьи по эмбеддингам.** Metals CPC: судья дал 3/3/3 18 группам (почти весь C22C), в
+   профиль попали магний и никель, а сталь C22C38 и алюминий C22C21 — нет. Coatings CPC: все 50 кандидатов ≥2 (47 — C09D),
+   в профиле 2 группы. Отсюда 43 патента v3.1 против 402 у старого v1.
+2. **Вход — одно слово** («metals», «polymers», «chemicals and coatings»): эмбеддинги тянут шум (тяжёлые металлы в
+   растениях, приводные ремни); не дотягиваются до C22B, C21, B22F, C08K, C08J, B29, C10M — их нет среди 50 кандидатов.
+3. **Общий шаг потерял жизненный цикл**: фраза гранта «full materials life cycle … recovery» не стала технологией.
+
+### Решения пользователя
+- Жизненный цикл / переработка — **отдельная технология**.
+- Chemicals и coatings — **разделить** (сам Engine везде называет это одним кластером — оговорить в отчёте, метрики
+  показать и раздельно, и вместе).
+- Открыт вопрос: включать ли «green steel» и «bio-based plastics» из Type-1 как подтемы (рекомендация: нет, профиль —
+  по гранту 2026, Type-1 — в отчёт как история).
+
+### Предлагаемый общий шаг NEO-SMART (6 технологий)
+1 Metals; 2 Polymers; 3 Specialty chemicals (+ «low-cost natural gas feedstocks»); 4 Coatings («product durability»);
+5 Materials life cycle & advanced recycling (грант: «full materials life cycle … recovery»; отчёт Type-1: «advanced
+recycling … recycled content … making materials last longer»; полная заявка: keyword Circular Economy);
+6 AI/ML for materials design. Вход — полное предложение гранта, не одно слово.
+
+### v4 (черновик, согласовать)
+Технологии общего шага → кандидаты: всё из v1/v3.1 + темы 200 лучших статей OpenAlex по фразам технологии (здесь) +
+CPC патентов США 2021–25 по тексту, по всей стране (Мак) → **иерархия**: судья решает «весь подкласс / часть / нет»,
+без лимита 2; если признано ≥2 группы подкласса — судье и остальные группы подкласса и соседние подклассы → судья ×3,
+≥2 из 3. Отраслевые CPC партнёров (C10M Lubrizol, B60C шины, B23K Lincoln) — отдельной строкой «контекст», не в профиль.
+Сравнение v1/v3.1/v4 по каждой технологии: пункты, патенты США/региона, LQ, статьи партнёров, **точность** (выборка
+30 статей + 30 патентов, судья «про технологию / нет»). Судью не запускать без явной команды (дорого).
+
+### Воронка NEO-SMART (`data/manual/nsf_engines_c2_*`, `data/manual/type1_awards.csv`)
+- **Type-1 2302943** (май 2023 – апр 2025, $995 904, PI J. Michael Oakes): аннотация про «sustainable manufacturing» —
+  energy science, electrochemistry, green steel, chips, CCUS, альтернативы нефтяным пластикам, material circularity,
+  electrification. Отчёт о результатах (авг 2025): сошлись к 3 кластерам Polymers, Chemicals & Coatings, Metals +
+  сквозное advanced recycling; события с REMADE (Nabil Nasr), обучение в MIT (объясняет ReMADE и MIT Martin Trust в
+  партнёрах). Файл сохранён из PDF страницы NSF (из облака nsf.gov закрыт).
+- **LOI** L02622880: «Northeast Ohio **Sustainable** Manufacturing Technologies», PI **Oakes**, keywords Advanced
+  Manufacturing, Advanced Materials; NAICS **3100, 3251 (Basic Chemical), 3261 (Plastic Product)** — металлов нет.
+- **Предварительная** (авг/ноя 2024): PI Barendt, коалиция 15.
+- **Полная** (апр 2025): название сменилось на «Strengthening Manufacturing for American **Resilience**»; keywords +
+  **Circular Economy**, + **Artificial Intelligence**; Key technology areas: Robotics and Advanced Manufacturing, Advanced
+  Materials, Disaster Prevention and Mitigation (робототехники в аннотации гранта нет — показать как заявленную, не
+  делать технологией); коалиция 67 (новые vs сайт: RIT, SSTI, ReNEW, Southwest Sustainability Engine, 55T1).
+- Финал (сен 2025), визит NSF (янв 2026), Engine 2532460 (старт 2026-08-01).
+
+### Аудит данных NEO-SMART по вопросам пользователя (что править)
+1. **Партнёры.** Сайт 74, в данных 76: лишние — сам «NEO-SMART» (место работы двух людей) и «The Lubrizol Corporation»
+   (дубль «Lubrizol Corporation»); ещё дубль TeamNEO / Team NEO. CWRU и CSU не лишние. **«Только 2 инвестора» неверно**:
+   investor = Fund for Our Economic Future (скорее philanthropy) и Site Readiness Fund (госпрограмма площадок), а
+   JumpStart (венчурный инвестор) помечен intermediary. Флага «в регионе» у партнёра нет; для статей регион = штат Ohio,
+   не 18 округов; Kent State (округ Portage) без страны в ROR → считается вне региона; HAMMER-ERC = Ohio State (Columbus,
+   не NE Ohio), TARDISS-ERC не сопоставлены; у компаний нет ROR/OpenAlex. Вне региона: Argonne, RTI, ReMADE, MIT Martin
+   Trust, NVIDIA, Rockwell, вероятно Elmet; проверить Galvanix, Aeris, Octet, Tillerline, Technology Greenhouse.
+   План: ручной `data/manual/partner_types.csv` (тип, инвестор, округ / вне региона, источник), склейка дублей,
+   исключить сам Engine.
+2. **Люди.** 10: PI Barendt; co-PI Shah, Burke, Ballinger, Dolan; COO Tkachyk; board Edgar (CTO Lubrizol — единственная
+   компания среди названных), Millard, Oakes; steering chair Sridhar (остальные члены не названы). Ложные OpenAlex:
+   Shah (диабетолог, Торонто), Millard (бетон, Ливерпуль), Oakes (NLP, Бирмингем), Dolan (ВИЧ) — отклонить явно в
+   `openalex_rejects.csv`; найти верный профиль Oakes (EVP Research CWRU, PI LOI и Type-1). Barendt: 7 работ, все до 2021.
+3. **Профиль** — см. выше; старый v1 не содержит C10M, C08K/C08L, B60C, B23K, C08F.
+4. **Патенты.** 402 = C09D 173, C08J 127, C22C 86, C22B 22, C23F 11, B29B17 5. 2025 год полный (выдачи до 30 дек), но все
+   патенты региона тоже упали 422 → 342 — сравнить с США (Мак), лучше по году заявки. **Доля партнёров 20% занижена**:
+   SWIMC LLC 27 (Sherwin-Williams), Lubrizol Advanced Materials 7, «United States of America represented by NASA» 4 →
+   ≈30%; Lincoln Electric сопоставлен 2 раза на всю страну (вероятно Lincoln Global, Inc.); проверить PolyOne (Avient),
+   AK Steel (Cleveland-Cliffs). Нужен `data/manual/assignee_aliases.csv`. G16C60: в США всего 101 патент за 2024–25,
+   ожидание для региона ≈4 → ноль слабый вывод.
+5. **Статьи.** Argonne на 884 из 1 342 (66%); без Argonne 458, из них 441 региональная. В 1 342 входят 2026 год (309,
+   после старта гранта) и препринты/тезисы/датасеты (~280). Без Argonne, только article/review/conference-paper/
+   book-chapter, ≤2025: 327. Показывать обе цифры. Ведущие исследователи (Bastidas, Manas-Zloczower, Wnek, Akolkar,
+   French…) правдоподобны, никого нет в команде.
+6. **Экономика.** 18 округов верны; NAICS 325, 3255, 326, 331, 332 (LQ 1,7–4,2); добавить 3251 и 3261 (из LOI) и,
+   возможно, 3252 и 3262 (шины); у каждого кода указать источник.
+7. **Конкуренция** — прямые выгрузки; оговорить, что доли стран при соавторстве могут давать >100%.
+8. **Когорта.** Нули Grid (3 партнёра) и IMPACT (1) — артефакт. Коалиции полных заявок: Grid 127, IMPACT 96, BRIDGES 99,
+   RuralSTAMINA 100, Quantum 51, Seafood 59 → использовать коалицию полной заявки как единый источник партнёров для всех 12.
+9. Exercise 3 — не трогаем.
+
+### Порядок работ
+1. Общий шаг NEO-SMART (6 технологий) → v4 (рубрика и кандидаты показать пользователю до запуска судьи).
+2. Партнёры и люди (не зависят от профиля) — в облаке.
+3. Статьи (06a, 06c, 06e) для v1_levels, v3_1s, v4 — в облаке (OpenAlex доступен).
+4. Патенты и метрики (06b, 06d, 07, 07b) — на Маке (parquet только там; PatentsView, nsf.gov, case.edu из облака закрыты).
+5. Отчёт `reports/engine_report.Rmd` (NEO-SMART по умолчанию), затем масштабирование.
+
+### Окружение
+Облако: доступен api.openalex.org (ключ подставляется прокси). Remote Control к Маку (MacBook-Air-Elena-3, папка
+nsf-engines добавлена) пока не отдаёт папки облачной сессии — вероятно, нужно обновить приложение Claude на Маке.
