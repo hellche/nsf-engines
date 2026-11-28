@@ -53,3 +53,53 @@ print(cons.groupby(["engine_name", "tech_id", "kind", "status"]).size().unstack(
 kept = cons[cons.status != "dropped"]
 agree = (cons.n_marked == 3).sum() / len(cons)
 print(f"\ncategories marked by any run: {len(cons)}, kept: {len(kept)}, marked by all 3 runs: {agree:.0%}")
+
+# ---- stage B ------------------------------------------------------------------------------------------------
+# Runs are split in parts by technology (data/manual/tech_v4_b_run<r>_part<p>.csv); a run = all its parts.
+# Profile v4 (data/processed/tech_profile_v4.csv), one row per Engine x technology x item:
+#   level  subclass (CPC subclass kept `whole` in stage A: every group in it counts),
+#          topic    (OpenAlex topic: of a subfield kept `whole`, or scored in stage B),
+#          group    (CPC main group scored in stage B)
+#   basis  "stage A: whole (3 of 3 runs)" or "stage B: score >= 2 in k of 3 runs"
+# data/processed/tech_v4_b_scores.csv keeps every candidate with its three scores, kept or not.
+bfiles = sorted(MAN.glob("tech_v4_b_run*_part*.csv"))
+runs_b = sorted({int(f.name.split("_run")[1].split("_")[0]) for f in bfiles})
+if runs_b != [1, 2, 3]:
+    raise SystemExit(f"stage B: runs found {runs_b}, need 1-3; profile not written")
+cand = pd.read_csv(PROC / "tech_v4_b_candidates.csv", dtype={"tech_id": int})
+BK = ["engine_name", "tech_id", "kind", "item_id"]
+sc = cand[BK + ["item_title", "via"]].copy()
+for r in (1, 2, 3):
+    d = pd.concat([pd.read_csv(f, dtype={"tech_id": int}) for f in bfiles if f"_run{r}_" in f.name])
+    d = d.drop_duplicates(BK)
+    miss = len(sc.merge(d[BK], on=BK, how="left", indicator=True).query("_merge == 'left_only'"))
+    if miss:
+        raise SystemExit(f"stage B run {r}: {miss} candidates without a score")
+    sc = sc.merge(d[BK + ["score", "reason"]].rename(columns={"score": f"score{r}", "reason": f"reason{r}"}),
+                  on=BK, how="left")
+s3 = sc[[f"score{r}" for r in (1, 2, 3)]]
+sc["n_ge2"] = (s3 >= 2).sum(axis=1)
+sc["mean_score"] = s3.mean(axis=1).round(2)
+sc["in_profile"] = sc.n_ge2 >= 2
+sc.to_csv(PROC / "tech_v4_b_scores.csv", index=False)
+
+tech = pd.read_csv(MAN / "tech_v4_technologies.csv", dtype={"tech_id": int})[["engine_name", "tech_id", "tech_label"]]
+topics = pd.read_csv(ROOT / "data" / "reference" / "openalex_topics.csv", keep_default_na=False)
+topics["sf"] = topics.subfield.str.lower().str.replace(r"[^a-z0-9]+", "_", regex=True).str.strip("_")
+whole = cons[cons.status == "whole"]
+prof = [whole[whole.kind == "cpc"].assign(item_id=lambda d: d.code, item_title=lambda d: d.title,
+                                          level="subclass", basis="stage A: whole (3 of 3 runs)")]
+wo = whole[whole.kind == "oa"].merge(topics[["topic_id", "topic", "sf"]], left_on="code", right_on="sf")
+prof.append(wo.assign(item_id=wo.topic_id, item_title=wo.topic, level="topic",
+                      basis="stage A: whole subfield " + wo.code + " (3 of 3 runs)"))
+kept = sc[sc.in_profile]
+prof.append(kept.assign(level=kept.kind.map({"cpc": "group", "oa": "topic"}),
+                        basis="stage B: score >= 2 in " + kept.n_ge2.astype(str) + " of 3 runs"))
+prof = pd.concat(prof, ignore_index=True).merge(tech, on=["engine_name", "tech_id"])
+cols = ["engine_name", "tech_id", "tech_label", "kind", "level", "item_id", "item_title", "basis", "mean_score",
+        "score1", "score2", "score3", "reason1"]
+prof = prof[cols].sort_values(["engine_name", "tech_id", "kind", "level", "item_id"])
+prof.to_csv(PROC / "tech_profile_v4.csv", index=False)
+agree_b = (s3.nunique(axis=1) == 1).mean()
+print(f"\nstage B: {len(sc)} candidates, {sc.in_profile.sum()} kept; identical score in all 3 runs: {agree_b:.0%}")
+print(prof.groupby(["engine_name", "tech_id", "tech_label", "kind", "level"]).size().unstack(fill_value=0))
